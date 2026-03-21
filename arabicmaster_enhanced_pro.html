@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArabicMaster Pro — Professional Arabic Learning Platform</title>
+    
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cream: #F8F3EA;
+            --cream-light: #FAF7F2;
+            --cream-dark: #F0EAE0;
+            --navy: #1A1A2E;
+            --navy-light: #2D2D44;
+            --gold: #C9A85C;
+            --gold-dark: #8B6914;
+            --gold-light: #E8D5A3;
+            --white: #FFFFFF;
+            --border: #E8E3D6;
+            --text-secondary: #666666;
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --info: #3B82F6;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--cream);
+            color: var(--navy);
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+        
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 800; margin-bottom: 0.3em; color: var(--navy); }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.4em; color: var(--navy); }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5em; color: var(--navy); }
+        h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6em; color: var(--navy); }
+        h5 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--navy); }
+        
+        .arabic { font-family: 'Amiri', serif; direction: rtl; text-align: right; color: var(--gold); font-size: 1.2em; }
+        .arabic-display { font-family: 'Amiri', serif; direction: rtl; text-align: right; color: var(--gold); font-size: 2em; line-height: 2.2; }
+        .arabic-body { font-family: 'Amiri', serif; direction: rtl; text-align: right; }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-family: 'Crimson Pro', serif;
+            font-size: 15px;
+            transition: all 0.3s;
+            box-shadow: var(--shadow);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-primary:active { transform: translateY(0); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 26px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Crimson Pro', serif;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover { background: var(--cream-dark); }
+        
+        .btn-small { padding: 8px 16px; font-size: 14px; }
+        
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        .card:hover { box-shadow: var(--shadow-lg); border-color: var(--gold); transform: translateY(-2px); }
+        .card-accent { border-left: 5px solid var(--gold); }
+        
+        .phase-header {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .phase-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(201,168,92,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .phase-header-content { position: relative; z-index: 1; }
+        .phase-numeral { 
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            font-weight: 800;
+            color: var(--gold-light);
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        .phase-title { font-size: 2.2em; margin-bottom: 0.2em; font-weight: 700; }
+        .phase-subtitle { font-size: 1.1em; opacity: 0.9; margin-bottom: 20px; }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-number { font-size: 1.8em; font-weight: 700; color: var(--gold-light); }
+        .stat-label { font-size: 0.9em; opacity: 0.9; margin-top: 4px; }
+        
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-gold { background: rgba(201, 168, 92, 0.15); color: var(--gold-dark); }
+        .badge-success { background: rgba(34, 197, 94, 0.15); color: #16a34a; }
+        .badge-warning { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+        .badge-error { background: rgba(239, 68, 68, 0.15); color: #dc2626; }
+        .badge-info { background: rgba(59, 130, 246, 0.15); color: #2563eb; }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+            transition: width 0.4s ease;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 24px;
+            overflow-x: auto;
+        }
+        .tab {
+            padding: 16px 20px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            background: transparent;
+            color: var(--text-secondary);
+            font-family: 'Crimson Pro', serif;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .tab:hover { color: var(--gold); }
+        .tab.active {
+            color: var(--navy);
+            border-bottom-color: var(--gold);
+        }
+        
+        .theory-section {
+            background: var(--cream-light);
+            padding: 24px;
+            border-radius: 10px;
+            border-left: 5px solid var(--gold);
+            margin: 20px 0;
+        }
+        .theory-section h4 { margin-top: 0; }
+        .theory-section p { margin-bottom: 16px; line-height: 1.8; }
+        .theory-section ul, .theory-section ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+        .theory-section li { margin-bottom: 10px; }
+        
+        .example-box {
+            background: white;
+            border: 2px solid var(--gold-light);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            font-family: 'Amiri', serif;
+        }
+        .example-label { font-weight: 600; color: var(--gold-dark); margin-bottom: 8px; }
+        
+        .planning-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin: 20px 0;
+            box-shadow: var(--shadow);
+        }
+        .planning-table thead {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: white;
+        }
+        .planning-table th {
+            padding: 14px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .planning-table td {
+            padding: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+        .planning-table tbody tr:hover { background: var(--cream-light); }
+        .planning-table .type-badge { color: var(--gold); font-weight: 600; font-size: 13px; }
+        
+        .exercise-card {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        .exercise-card:hover { border-color: var(--gold); box-shadow: var(--shadow-lg); }
+        .exercise-card.answered { background: var(--cream-light); border-color: var(--gold); }
+        
+        .exercise-difficulty {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .diff-easy { background: rgba(34, 197, 94, 0.15); color: #16a34a; }
+        .diff-medium { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+        .diff-hard { background: rgba(239, 68, 68, 0.15); color: #dc2626; }
+        
+        .option {
+            background: var(--cream-light);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option:hover { border-color: var(--gold); background: var(--cream-dark); }
+        .option.selected { border-color: var(--gold); background: rgba(201, 168, 92, 0.1); }
+        .option.correct { border-color: var(--success); background: rgba(34, 197, 94, 0.1); }
+        .option.incorrect { border-color: var(--error); background: rgba(239, 68, 68, 0.1); }
+        
+        .explanation-box {
+            background: var(--cream-light);
+            border-left: 4px solid var(--gold);
+            border-radius: 6px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        .explanation-label { font-weight: 700; color: var(--gold-dark); margin-bottom: 8px; }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .resource-card {
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .resource-card:hover { border-color: var(--gold); box-shadow: var(--shadow-lg); }
+        .resource-icon { font-size: 2em; margin-bottom: 12px; }
+        .resource-title { font-weight: 600; margin-bottom: 8px; }
+        .resource-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+        
+        .content-section {
+            margin-bottom: 40px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+        
+        .objectives-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .objectives-list li {
+            list-style: none;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.8;
+        }
+        .objectives-list li:before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .competency-item {
+            background: rgba(201, 168, 92, 0.08);
+            border: 1px solid rgba(201, 168, 92, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gold-dark);
+        }
+        
+        .quiz-progress {
+            display: flex;
+            gap: 8px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+        .question-indicator {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            background: var(--border);
+            color: var(--text-secondary);
+        }
+        .question-indicator.answered { background: var(--success); color: white; }
+        .question-indicator.current { background: var(--gold); color: white; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .phase-header { padding: 24px; }
+            .phase-numeral { font-size: 2.5em; }
+            .phase-title { font-size: 1.6em; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .objectives-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const React = window.React;
+        const ReactDOM = window.ReactDOM;
+        
+        // ============================================
+        // CURRICULUM DATA
+        // ============================================
+        
+        const CURRICULUM = {
+            phases: [
+                // =====================================================
+                // PHASE 1: FOUNDATIONS - 4 LESSONS
+                // =====================================================
+                {
+                    id: 1,
+                    title: "Phase 1: Foundations",
+                    titleAr: "المرحلة الأولى: الأساسيات",
+                    numeral: "I",
+                    duration: "4 weeks",
+                    level: "Absolute Beginner",
+                    objectives: [
+                        "Master the Arabic alphabet and letter forms",
+                        "Understand vowel marks and diacritical marks",
+                        "Learn to connect letters in words",
+                        "Count numbers 0-100 in Arabic",
+                        "Understand gender and number basics",
+                        "Recognize definite article (AL-)",
+                        "Learn personal pronouns",
+                        "Form basic simple sentences"
+                    ],
+                    competencies: [
+                        "Letter recognition", "Vowel marks", "Letter connection",
+                        "Number reading", "Gender/Number", "Definite article",
+                        "Pronouns", "Basic sentences"
+                    ],
+                    methods: [
+                        "Visual alphabet cards with examples",
+                        "Audio pronunciation guides",
+                        "Writing practice exercises",
+                        "Tiered difficulty questions"
+                    ],
+                    lessons: [
+                        {
+                            id: "1-1",
+                            number: 1,
+                            title: "The 28 Arabic Letters",
+                            titleAr: "الحروف العربية الثمانية والعشرون",
+                            duration: "60 min",
+                            objectives: [
+                                "Learn all 28 Arabic letters",
+                                "Distinguish between similar-looking letters",
+                                "Understand letter position variations",
+                                "Practice pronunciation of each letter"
+                            ],
+                            theory: `
+<h3>Introduction to Arabic Letters</h3>
+<p>The Arabic alphabet consists of 28 letters, written from right to left. Each letter has distinct characteristics that make it unique. Unlike English, each Arabic letter:</p>
+<ul>
+<li><strong>Changes form</strong> depending on its position in a word (initial, medial, final, or standalone)</li>
+<li><strong>Has specific pronunciation rules</strong> that must be mastered for proper reading</li>
+<li><strong>Connects to adjacent letters</strong> in most positions (some letters only connect on one side)</li>
+<li><strong>Has a name</strong> that often reflects its shape or sound</li>
+</ul>
+
+<h4>The 28 Letters (in alphabetical order):</h4>
+<p class="arabic-display">ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي</p>
+
+<div class="theory-section">
+<h4>Letter Characteristics You Must Learn:</h4>
+<ol>
+<li><strong>Aleph (ا)</strong> - Cannot connect to letters after it; highest frequency in Arabic</li>
+<li><strong>Ba (ب)</strong> - Connects on both sides; has 3 dots underneath</li>
+<li><strong>Ta (ت)</strong> - Very similar to Ba but has 2 dots on top</li>
+<li><strong>Tha (ث)</strong> - Similar to Ta but has 3 dots on top</li>
+<li><strong>Jim (ج)</strong> - Pronounced like 'j' in 'jet'; connects on both sides</li>
+<li><strong>Ha (ح)</strong> - Guttural sound; looks like empty Ba</li>
+<li><strong>Kha (خ)</strong> - Similar to Ha with one dot; kh sound</li>
+<li><strong>Dal (د)</strong> - Cannot connect to letters after; sounds like 'd'</li>
+<li><strong>Dhal (ذ)</strong> - Similar to Dal but with dot; sounds like 'th'</li>
+<li><strong>Ra (ر)</strong> - Cannot connect to letters after; rolled 'r' sound</li>
+<li><strong>Zay (ز)</strong> - Cannot connect to letters after; sounds like 'z'</li>
+<li><strong>Sin (س)</strong> - Hissing sound; connects on both sides</li>
+<li><strong>Shin (ش)</strong> - Similar to Sin but sounds like 'sh'</li>
+<li><strong>Sad (ص)</strong> - Emphasized 's'; connects on both sides</li>
+<li><strong>Dad (ض)</strong> - Emphasized 'd'; connects on both sides</li>
+<li><strong>Tah (ط)</strong> - Emphasized 't'; connects on both sides</li>
+<li><strong>Zah (ظ)</strong> - Emphasized 'z'; connects on both sides</li>
+<li><strong>Ayn (ع)</strong> - Very important guttural sound; connects on both sides</li>
+<li><strong>Ghayn (غ)</strong> - Guttural 'gh' sound; connects on both sides</li>
+<li><strong>Fa (ف)</strong> - Like 'f'; connects on both sides</li>
+<li><strong>Qaf (ق)</strong> - Emphasized 'q'; connects on both sides</li>
+<li><strong>Kaf (ك)</strong> - Like 'k'; connects on both sides</li>
+<li><strong>Lam (ل)</strong> - Like 'l'; connects on both sides</li>
+<li><strong>Mim (م)</strong> - Like 'm'; connects on both sides</li>
+<li><strong>Nun (ن)</strong> - Like 'n'; connects on both sides</li>
+<li><strong>Ha (ه)</strong> - Like 'h'; connects on both sides (different from the other Ha)</li>
+<li><strong>Waw (و)</strong> - Like 'w' or 'u'; cannot connect after; very important</li>
+<li><strong>Ya (ي)</strong> - Like 'y' or 'i'; connects on both sides</li>
+</ol>
+</div>
+
+<div class="theory-section">
+<h4>Letter Position Variations (Essential!)</h4>
+<p>Each letter has up to 4 forms depending on its position:</p>
+<ul>
+<li><strong>Initial (beginning of word)</strong> - أول الكلمة</li>
+<li><strong>Medial (middle of word)</strong> - وسط الكلمة</li>
+<li><strong>Final (end of word)</strong> - آخر الكلمة</li>
+<li><strong>Isolated (standalone)</strong> - منفصل</li>
+</ul>
+<p>Some letters like Aleph, Dal, Dhal, Ra, and Zay only have 2 forms (isolated and final) because they don't connect to letters after them.</p>
+</div>
+
+<div class="example-box">
+<div class="example-label">Example: How Letter 'Ba' (ب) Changes Position:</div>
+<div class="arabic" style="font-size: 1.8em;">
+بـ (initial) | ـبـ (medial) | ـب (final) | ب (isolated)
+</div>
+</div>
+                            `,
+                            weeklyPlan: [
+                                { day: "Day 1", activity: "Watch alphabet introduction & learn Aleph-Jim (8 letters)", type: "📺 Video", duration: "30 min" },
+                                { day: "Day 2", activity: "Practice writing Aleph-Jim; complete 10 recognition questions", type: "✍️ Writing", duration: "45 min" },
+                                { day: "Day 3", activity: "Learn Ha-Ra (8 letters); listen to native pronunciation", type: "🔊 Audio", duration: "40 min" },
+                                { day: "Day 4", activity: "Writing practice & 15 matching questions (all 16 letters)", type: "📝 Quiz", duration: "50 min" },
+                                { day: "Day 5", activity: "Learn Sin-Zah (8 letters); compare similar letters", type: "📖 Reading", duration: "35 min" },
+                                { day: "Day 6", activity: "Complete exercises for Sin-Zah group; practice pronunciaton", type: "🎯 Practice", duration: "45 min" },
+                                { day: "Day 7", activity: "Learn Ayn-Ya (12 letters); comprehensive review of all 28", type: "📚 Review", duration: "60 min" }
+                            ],
+                            exercises: {
+                                easy: [
+                                    { q: "Which of these is the letter 'Ba' (ب)?", options: ["ب", "ت", "ث", "ج"], ans: 0, exp: "Ba (ب) has a single dot underneath the letter body. Ta (ت) has two dots, and Tha (ث) has three dots on top." },
+                                    { q: "How many letters are in the Arabic alphabet?", options: ["24", "26", "28", "30"], ans: 2, exp: "The Arabic alphabet has exactly 28 letters. This is more than English (26) but fewer than some other languages." },
+                                    { q: "Which letter cannot connect to letters after it?", options: ["Ba", "Sin", "Dal", "Lam"], ans: 2, exp: "Dal (د) is a non-connecting letter. It only connects to letters before it, not after. Similar letters include Ra, Zay, and Aleph." },
+                                    { q: "What does the letter 'Lam' (ل) sound like in English?", options: ["L", "R", "N", "M"], ans: 0, exp: "Lam is pronounced like the English 'L'. It's one of the most common letters in Arabic." },
+                                    { q: "The letter 'Jim' (ج) sounds like...", options: ["J in 'judge'", "H in 'hat'", "G in 'go'", "K in 'king'"], ans: 0, exp: "Jim is pronounced like 'J' in English 'judge' or French 'je'. It's a soft sound." },
+                                    { q: "Which letter looks like a small cup or bowl?", options: ["ب", "ت", "ص", "ن"], ans: 0, exp: "Ba (ب) looks like a small cup or bowl shape with a single dot below. This visual helps remember its form." },
+                                    { q: "The letter 'Aleph' (ا) is special because it...", options: ["Is always silent", "Never connects after itself", "Has 5 forms", "Is the rarest letter"], ans: 1, exp: "Aleph (ا) cannot connect to letters after it. It only connects to letters before it." },
+                                    { q: "How many letters have dots?", options: ["10", "15", "20", "12"], ans: 1, exp: "15 of the 28 Arabic letters have dots (nuqat). The dots are crucial for distinguishing similar letters." },
+                                    { q: "The letter 'Waw' (و) sounds like...", options: ["W or long U", "B or P", "T or D", "S or Z"], ans: 0, exp: "Waw (و) sounds like 'W' as a consonant or a long 'U' as a vowel. It's a versatile letter." },
+                                    { q: "Which letter group shares the same base shape?", options: ["ب ت ث", "ا و ي", "ك ل م", "ص ض ط"], ans: 0, exp: "Ba (ب), Ta (ت), and Tha (ث) all share the same base shape—the difference is in the dots." }
+                                ],
+                                medium: [
+                                    { q: "Which of these letters has the most connections?", options: ["Aleph", "Sin", "Ra", "Dal"], ans: 1, exp: "Sin (س) connects on both sides to adjacent letters. Aleph and the non-connecting letters don't have these connections." },
+                                    { q: "Identify the letter Kha (خ): What distinguishes it from Ha (ح)?", options: ["Has a dot on top", "Has a dot underneath", "Cannot connect after", "Larger size"], ans: 0, exp: "Kha (خ) has one dot on top, while Ha (ح) has no dots. Both look similar but this dot is the key difference." },
+                                    { q: "Which 6 letters CANNOT connect to the following letter?", options: ["ا د ذ ر ز و", "ب ت ث ج ح خ", "س ش ص ض ط ظ", "ع غ ف ق ك ل"], ans: 0, exp: "Aleph, Dal, Dhal, Ra, Zay, and Waw cannot connect to the letter after them. They're called non-connecting letters." },
+                                    { q: "The 'emphatic' consonants in Arabic include...", options: ["ص ض ط ظ", "ب ت ث ج", "ك ل م ن", "ا و ي"], ans: 0, exp: "Sad, Dad, Ta, and Zah are emphatic consonants pronounced with the back of the tongue raised." },
+                                    { q: "What makes 'Ayn' (ع) difficult for English speakers?", options: ["It's silent", "No English equivalent sound", "It changes color", "Too many forms"], ans: 1, exp: "Ayn (ع) has no English equivalent—it's a deep guttural sound from the throat." }
+                                ],
+                                hard: [
+                                    { q: "In word-final position, which letter form changes the most dramatically from its isolated form?", options: ["Ba", "Ya", "Mim", "Nun"], ans: 3, exp: "Nun changes significantly: isolated (ن) vs final (ـن). The final form loses the vertical part." },
+                                    { q: "Which pair of letters are most commonly confused by beginners because of their similarity?", options: ["Sin/Shin", "Ba/Ta/Tha", "Ra/Zay", "Lam/Ha"], ans: 1, exp: "Ba, Ta, and Tha are extremely similar—the only difference is the number of dots (1, 2, or 3 respectively)." },
+                                    { q: "Why is the letter 'Dad' (ض) called 'the Arabic letter'?", options: ["Most common", "Unique to Arabic language", "Oldest letter", "Easiest to write"], ans: 1, exp: "Dad (ض) is called the 'Arabic letter' because its sound is unique to Arabic and doesn't exist in other Semitic languages." },
+                                    { q: "In the word 'كتاب' (book), how many letter connections are there?", options: ["1", "2", "3", "4"], ans: 2, exp: "Three connections: Kaf-Ta, Ta-Aleph, Aleph-Ba. Aleph doesn't connect after itself but connects to Ba before it." }
+                                ]
+                            },
+                            resources: [
+                                { icon: "🎬", title: "Arabic Alphabet Song", desc: "Memorable tune to learn all 28 letters in order (YouTube: 'Arabic Alphabet Song Nasheed')" },
+                                { icon: "📱", title: "Duolingo Arabic", desc: "Gamified alphabet lessons with immediate feedback and pronunciation guides" },
+                                { icon: "🔊", title: "Forvo Arabic", desc: "Hear native speakers pronounce each letter and common words" },
+                                { icon: "✏️", title: "Arabic Alphabet Worksheet", desc: "Printable PDF with letter forms and practice lines for handwriting" },
+                                { icon: "📚", title: "Maqsoud.net", desc: "Comprehensive Arabic learning resource with alphabet section and exercises" }
+                            ]
+                        },
+                        {
+                            id: "1-2",
+                            number: 2,
+                            title: "Vowel Marks & Diacritical Marks",
+                            titleAr: "الحركات والتشكيل",
+                            duration: "45 min",
+                            objectives: [
+                                "Learn the 3 main vowel marks (harakat)",
+                                "Understand diacritical marks and their functions",
+                                "Apply vowel marks to letters and words",
+                                "Distinguish between similar-sounding vowels"
+                            ],
+                            theory: `
+<h3>Understanding Vowel Marks (الحركات)</h3>
+<p>Arabic vowel marks, called "harakat," are small symbols placed above or below letters to indicate pronunciation. Unlike English, Arabic vowels are not letters but marks. Standard Arabic text is often written without harakat, but they are essential for beginners and children.</p>
+
+<div class="theory-section">
+<h4>The Three Main Vowel Marks:</h4>
+<p><strong>1. Fatha (َ) - The 'A' Sound</strong></p>
+<p>Looks like a small diagonal line above the letter. Pronounced like 'a' in "cat" or "father".</p>
+<div class="example-box">
+<div class="example-label">Examples:</div>
+<div class="arabic" style="font-size: 1.6em;">كَـ (ka) | فَـ (fa) | بَـ (ba)</div>
+</div>
+
+<p><strong>2. Damma (ُ) - The 'U' Sound</strong></p>
+<p>Looks like a small 'w' or curved mark above the letter. Pronounced like 'u' in "put" or "blue".</p>
+<div class="example-box">
+<div class="example-label">Examples:</div>
+<div class="arabic" style="font-size: 1.6em;">كُـ (ku) | نُـ (nu) | دُـ (du)</div>
+</div>
+
+<p><strong>3. Kasra (ِ) - The 'I' Sound</strong></p>
+<p>Looks like a small line below the letter. Pronounced like 'i' in "sit" or "feet".</p>
+<div class="example-box">
+<div class="example-label">Examples:</div>
+<div class="arabic" style="font-size: 1.6em;">كِـ (ki) | سِـ (si) | فِـ (fi)</div>
+</div>
+</div>
+
+<div class="theory-section">
+<h4>Other Important Diacritical Marks:</h4>
+<ul>
+<li><strong>Sukun (ْ)</strong> - A circle mark meaning no vowel sound; letter is pronounced with no vowel</li>
+<li><strong>Shadda (ّ)</strong> - A double mark meaning the letter is doubled/emphasized</li>
+<li><strong>Tanwin (Nunation)</strong> - Three types of double marks (ً, ٌ, ٍ) added to indefinite nouns</li>
+<li><strong>Hamza (ء)</strong> - Glottal stop; crucial for proper pronunciation</li>
+</ul>
+</div>
+            `,
+                            weeklyPlan: [
+                                { day: "Day 1", activity: "Learn the 3 main vowel marks (Fatha, Damma, Kasra) with audio examples", type: "🔊 Audio", duration: "30 min" },
+                                { day: "Day 2", activity: "Practice writing vowel marks on 20 different letters", type: "✍️ Writing", duration: "40 min" },
+                                { day: "Day 3", activity: "Identify vowel marks in sample words; complete 15 recognition exercises", type: "📝 Quiz", duration: "35 min" },
+                                { day: "Day 4", activity: "Learn Sukun and Shadda marks; understand their pronunciation effect", type: "📖 Reading", duration: "30 min" },
+                                { day: "Day 5", activity: "Apply all marks to simple words; practice pronunciation with native audio", type: "🎯 Practice", duration: "45 min" },
+                                { day: "Day 6", activity: "Review all diacritical marks; complete comprehensive exercise set", type: "📚 Review", duration: "50 min" }
+                            ],
+                            exercises: {
+                                easy: [
+                                    { q: "What vowel mark makes the 'a' sound?", options: ["Damma", "Fatha", "Kasra", "Sukun"], ans: 1, exp: "Fatha (َ) produces the 'a' sound. It's marked above the letter like a small diagonal line." },
+                                    { q: "How many main vowel marks are there in Arabic?", options: ["2", "3", "4", "5"], ans: 1, exp: "There are 3 main vowel marks: Fatha (a), Damma (u), and Kasra (i)." },
+                                    { q: "The 'u' sound is marked with...", options: ["A line below", "A curve above", "Two dots", "No mark"], ans: 1, exp: "Damma (ُ) looks like a small 'w' or curved mark placed above the letter for the 'u' sound." },
+                                    { q: "Which mark shows a letter has no vowel sound?", options: ["Fatha", "Damma", "Kasra", "Sukun"], ans: 3, exp: "Sukun (ْ) is a circle mark placed above a letter meaning it has no vowel sound attached." },
+                                    { q: "Arabic without vowel marks is called...", options: ["Harkah", "Sukun", "Quran text", "Undiacriticized"], ans: 3, exp: "Adult Arabic texts are typically written without harakat. This is why learning to read without marks is important for advanced learners." },
+                                    { q: "Where is Kasra placed on a letter?", options: ["Above", "Below", "To the right", "To the left"], ans: 1, exp: "Kasra (ِ) is placed below the letter, unlike Fatha and Damma which are placed above." },
+                                    { q: "What sound does 'بَ' make?", options: ["Ba", "Bu", "Bi", "B (no vowel)"], ans: 0, exp: "The letter Ba with Fatha (بَ) makes the sound 'Ba'. Fatha always produces the 'a' sound." },
+                                    { q: "What is Tanwin?", options: ["A letter", "Doubled vowel marks", "A consonant", "A punctuation mark"], ans: 1, exp: "Tanwin is the doubling of vowel marks (ً, ٌ, ٍ) that adds an 'n' sound to indefinite nouns." },
+                                    { q: "Which mark doubles a consonant's pronunciation?", options: ["Sukun", "Shadda", "Fatha", "Kasra"], ans: 1, exp: "Shadda (ّ) indicates that a consonant is doubled, making it pronounced twice as long." },
+                                    { q: "The Quran is typically written...", options: ["Without any marks", "With full harakat", "Only with dots", "Without letters"], ans: 1, exp: "The Quran is written with full harakat (vowel marks) to ensure correct pronunciation for all readers." }
+                                ],
+                                medium: [
+                                    { q: "What does the Shadda mark indicate?", options: ["A long vowel", "A double letter", "No vowel", "A glottal stop"], ans: 1, exp: "Shadda (ّ) indicates the letter is doubled, affecting both pronunciation and meaning." },
+                                    { q: "Reading Arabic text without vowel marks is challenging because...", options: ["Too many letters", "Same letters look different", "Same letter can sound different without marks", "No standard writing"], ans: 2, exp: "Without marks, the reader must rely on context and vocabulary knowledge to determine pronunciation." },
+                                    { q: "What is the difference between 'كِتَاب' and 'كُتُب'?", options: ["Same word", "Singular vs plural", "Past vs present", "Noun vs verb"], ans: 1, exp: "كِتَاب (kitaab) means 'book' (singular) while كُتُب (kutub) means 'books' (plural). Vowels change meaning!" },
+                                    { q: "When you see Tanwin Fatha (ً), how do you pronounce the ending?", options: ["Just 'a'", "'an' sound", "'un' sound", "Silent"], ans: 1, exp: "Tanwin Fatha (ً) adds an 'an' sound to the end of the word, like 'kitaaban' (كِتَابًا)." },
+                                    { q: "Why are children's books in Arabic usually fully voweled?", options: ["Look prettier", "Help with pronunciation learning", "Required by law", "Saves space"], ans: 1, exp: "Children's books use full harakat to help young readers learn correct pronunciation before they can recognize words by context." }
+                                ],
+                                hard: [
+                                    { q: "In classical Arabic texts, why are harakat often omitted?", options: ["Space constraints", "Assumes reader knowledge", "Improves reading speed", "Both B and C"], ans: 3, exp: "Harakat are omitted to save space and because educated readers should recognize words from context. This challenges learners to develop deeper vocabulary knowledge." },
+                                    { q: "Which vowel mark pair sounds most similar to English speakers?", options: ["Fatha and Kasra", "Damma and Kasra", "Fatha and Damma", "None are similar"], ans: 1, exp: "Fatha ('a') and Kasra ('i') can be confused by English speakers because English vowels are often affected by surrounding consonants." },
+                                    { q: "In the word 'مُحَمَّد', why is there both Shadda and Fatha on the Mim?", options: ["Writing error", "The Mim is doubled AND has 'a' sound", "Decoration", "Optional marks"], ans: 1, exp: "When Shadda and a vowel appear together, the letter is doubled AND carries that vowel sound. So 'mam-mad' not 'muh-mad'." },
+                                    { q: "What happens when Sukun appears after a long vowel letter?", options: ["Impossible combination", "Creates a diphthong", "Shortens the vowel", "Adds emphasis"], ans: 1, exp: "When Sukun follows a long vowel letter (like و or ي), it can create a diphthong sound like 'aw' or 'ay'." }
+                                ]
+                            },
+                            resources: [
+                                { icon: "📖", title: "Vowels & Diacritics Guide", desc: "Interactive guide with audio pronunciation of each mark combination" },
+                                { icon: "🎙️", title: "Quran Audio (Fully Haraka'd)", desc: "Listen to beautiful Quranic recitation with perfect vowel pronunciation" },
+                                { icon: "✏️", title: "Harakat Practice Sheet", desc: "PDF worksheet for writing and recognizing vowel marks on words" },
+                                { icon: "🔊", title: "Native Speaker Pronunciation", desc: "Forvo.com recordings showing how marks affect meaning" },
+                                { icon: "📚", title: "Arabic Grammar Section", desc: "Comprehensive reference on all diacritical marks and their functions" }
+                            ]
+                        },
+                        {
+                            id: "1-3",
+                            number: 3,
+                            title: "Letter Connections & Word Formation",
+                            titleAr: "ربط الحروف وتكوين الكلمات",
+                            duration: "50 min",
+                            theory: `<h3>How Letters Connect in Words</h3>
+<p>One of the most important features of Arabic is that most letters connect to each other. Understanding connection rules is essential for reading and writing.</p>`,
+                            weeklyPlan: [
+                                { day: "Day 1", activity: "Learn which letters connect on both sides, left only, or don't connect", type: "📖 Reading", duration: "40 min" },
+                                { day: "Day 2", activity: "Practice forming 30 simple words by connecting letters", type: "✍️ Writing", duration: "50 min" },
+                                { day: "Day 3", activity: "Complete 20 word formation exercises", type: "📝 Quiz", duration: "45 min" }
+                            ],
+                            exercises: {
+                                easy: [
+                                    { q: "How many forms can most Arabic letters have?", options: ["1", "2", "3", "4"], ans: 3, exp: "Most letters have 4 forms: initial, medial, final, and isolated." }
+                                ],
+                                medium: [],
+                                hard: []
+                            },
+                            resources: [
+                                { icon: "📚", title: "Letter Connection Chart", desc: "Visual guide showing all letters and their connection possibilities" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Phase 2: Essential Vocabulary",
+                    titleAr: "المرحلة الثانية: المفردات الأساسية",
+                    numeral: "II",
+                    duration: "4 weeks",
+                    level: "Débutant",
+                    objectives: [
+                        "Learn 200+ essential vocabulary words",
+                        "Master greetings and polite expressions",
+                        "Understand common noun categories",
+                        "Form basic phrases and sentences"
+                    ],
+                    competencies: [
+                        "Greetings", "Politeness", "Common nouns", "Adjectives",
+                        "Numbers", "Days & time", "Food & animals", "Family terms"
+                    ],
+                    methods: [
+                        "Thematic vocabulary grouping",
+                        "Conversation practice",
+                        "Context-based learning",
+                        "Spaced repetition"
+                    ],
+                    lessons: [
+                        {
+                            id: "2-1",
+                            number: 1,
+                            title: "Essential Greetings & Polite Expressions",
+                            titleAr: "التحيات والتعبيرات المهذبة",
+                            duration: "40 min",
+                            objectives: [
+                                "Master common Arabic greetings",
+                                "Learn appropriate responses",
+                                "Understand formal vs. informal contexts",
+                                "Practice conversation openings"
+                            ],
+                            theory: `<h3>Arabic Greetings - Master These First!</h3>
+<p>Greetings are the foundation of any language. In Arabic culture, greetings are more elaborate than in English and carry social importance.</p>
+
+<div class="example-box">
+<div class="example-label">Most Important Greetings:</div>
+<div class="arabic" style="font-size: 1.4em;">
+السلام عليكم ورحمة الله وبركاته<br/>
+(As-salamu alaikum wa rahmatullahi wa barakatuh)<br/>
+"Peace be upon you and God's mercy and blessings"<br/><br/>
+وعليكم السلام ورحمة الله وبركاته<br/>
+(Wa alaikum as-salam wa rahmatullahi wa barakatuh)<br/>
+"And upon you be peace, God's mercy and blessings"
+</div>
+</div>`,
+                            weeklyPlan: [
+                                { day: "Day 1", activity: "Learn and memorize 10 essential greetings with audio", type: "🔊 Audio", duration: "30 min" },
+                                { day: "Day 2", activity: "Practice responses to greetings; understand context usage", type: "🎯 Practice", duration: "40 min" },
+                                { day: "Day 3", activity: "Complete 15 matching exercises for greeting-response pairs", type: "📝 Quiz", duration: "35 min" }
+                            ],
+                            exercises: {
+                                easy: [
+                                    { q: "How do you greet someone in the morning?", options: ["صباح الخير", "مساء الخير", "أهلا", "وداعا"], ans: 0, exp: "Sabah al-khair (Good morning). The response is Sabah an-noor (Morning light)." }
+                                ],
+                                medium: [
+                                    { q: "When would you use 'As-salamu alaikum'?", options: ["Saying goodbye", "Greeting anyone anytime", "Only in mosques", "Before meals"], ans: 1, exp: "As-salamu alaikum is the universal Islamic greeting used anytime with anyone." }
+                                ],
+                                hard: [
+                                    { q: "What cultural significance does 'As-salamu alaikum' carry?", options: ["It's just a greeting", "It invokes God's peace and protection", "It shows respect to elders only", "It's used only on Fridays"], ans: 1, exp: "This greeting invokes God's peace, mercy, and blessings—it's deeply rooted in Islamic culture." }
+                                ]
+                            },
+                            resources: [
+                                { icon: "🔊", title: "Greeting Audio Guide", desc: "Native speaker recordings of all greetings and responses" },
+                                { icon: "🎬", title: "Cultural Context Video", desc: "Learn when and how to use each greeting appropriately" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+        
+        // ============================================
+        // STORAGE MANAGEMENT
+        // ============================================
+        
+        const Storage = {
+            init() {
+                try {
+                    const existing = localStorage.getItem("arabicmaster_pro");
+                    if (!existing) {
+                        const initial = {
+                            user: { name: "Learner", startDate: new Date().toISOString(), level: 0, xp: 0 },
+                            progress: {},
+                            completedLessons: [],
+                            currentLesson: "1-1"
+                        };
+                        localStorage.setItem("arabicmaster_pro", JSON.stringify(initial));
+                        return initial;
+                    }
+                    return JSON.parse(existing);
+                } catch (e) {
+                    console.error("Storage init error:", e);
+                    return { user: {}, progress: {}, completedLessons: [], currentLesson: "1-1" };
+                }
+            },
+            
+            save(data) {
+                try {
+                    localStorage.setItem("arabicmaster_pro", JSON.stringify(data));
+                } catch (e) {
+                    console.error("Storage save error:", e);
+                }
+            },
+            
+            get() {
+                try {
+                    return JSON.parse(localStorage.getItem("arabicmaster_pro")) || {};
+                } catch (e) {
+                    return {};
+                }
+            }
+        };
+        
+        // ============================================
+        // REACT COMPONENTS
+        // ============================================
+        
+        function ExercisePanel({ exercises, difficulty, onComplete }) {
+            const [currentQ, setCurrentQ] = React.useState(0);
+            const [selected, setSelected] = React.useState(null);
+            const [answered, setAnswered] = React.useState(false);
+            const [correct, setCorrect] = React.useState(null);
+            
+            const difficulty_level = difficulty || "easy";
+            const questions = exercises[difficulty_level] || [];
+            const q = questions[currentQ];
+            
+            if (!q || questions.length === 0) {
+                return <div className="card" style={{textAlign: "center", padding: "40px"}}>
+                    <p style={{fontSize: "1.1em", color: "#666"}}>No exercises available for this difficulty level yet.</p>
+                </div>;
+            }
+            
+            const handleCheckAnswer = () => {
+                const isCorrect = selected === q.ans;
+                setCorrect(isCorrect);
+                setAnswered(true);
+            };
+            
+            const handleNext = () => {
+                if (currentQ < questions.length - 1) {
+                    setCurrentQ(currentQ + 1);
+                    setSelected(null);
+                    setAnswered(false);
+                    setCorrect(null);
+                } else {
+                    if (onComplete) onComplete({ score: correct ? 100 : 0, level: difficulty_level });
+                }
+            };
+            
+            const difficultyBadge = {
+                easy: "diff-easy",
+                medium: "diff-medium",
+                hard: "diff-hard"
+            };
+            
+            return (
+                <div className="exercise-card">
+                    <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px"}}>
+                        <span className={`exercise-difficulty ${difficultyBadge[difficulty_level]}`}>
+                            {difficulty_level === "easy" ? "🟢 Easy" : difficulty_level === "medium" ? "🟡 Medium" : "🔴 Hard"}
+                        </span>
+                        <span style={{fontSize: "13px", color: "#999"}}>Question {currentQ + 1} of {questions.length}</span>
+                    </div>
+                    
+                    <div className="quiz-progress">
+                        {questions.map((_, i) => (
+                            <div
+                                key={i}
+                                className={`question-indicator ${i === currentQ ? "current" : answered && i < currentQ ? "answered" : ""}`}
+                                style={{opacity: i === currentQ || i < currentQ ? 1 : 0.5}}
+                            >
+                                {i + 1}
+                            </div>
+                        ))}
+                    </div>
+                    
+                    <h4 style={{marginTop: "24px", marginBottom: "20px"}}>{q.q}</h4>
+                    
+                    <div>
+                        {q.options && q.options.map((opt, i) => (
+                            <div
+                                key={i}
+                                className={`option ${selected === i ? "selected" : ""} ${answered ? (i === q.ans ? "correct" : i === selected ? "incorrect" : "") : ""}`}
+                                onClick={() => !answered && setSelected(i)}
+                                style={{cursor: answered ? "default" : "pointer"}}
+                            >
+                                <div style={{display: "flex", alignItems: "center"}}>
+                                    <span style={{
+                                        width: "24px",
+                                        height: "24px",
+                                        borderRadius: "50%",
+                                        border: "2px solid currentColor",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        marginRight: "12px",
+                                        fontSize: "12px",
+                                        fontWeight: "bold"
+                                    }}>
+                                        {answered && i === q.ans ? "✓" : answered && i === selected && i !== q.ans ? "✗" : ""}
+                                    </span>
+                                    <span>{opt}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    
+                    {answered && (
+                        <div className="explanation-box">
+                            <div className="explanation-label">
+                                {correct ? "✓ Correct!" : "✗ Incorrect — Here's the explanation:"}
+                            </div>
+                            <p>{q.exp}</p>
+                        </div>
+                    )}
+                    
+                    <div style={{display: "flex", gap: "12px", marginTop: "24px", justifyContent: "flex-end"}}>
+                        {!answered ? (
+                            <button className="btn-primary" onClick={handleCheckAnswer} disabled={selected === null}>
+                                Check Answer
+                            </button>
+                        ) : (
+                            <button className="btn-primary" onClick={handleNext}>
+                                {currentQ < questions.length - 1 ? "Next Question" : "Finish"}
+                            </button>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+        
+        function LessonView({ lesson, onBack }) {
+            const [tab, setTab] = React.useState("theory");
+            const [difficulty, setDifficulty] = React.useState("easy");
+            
+            return (
+                <div style={{maxWidth: "900px", margin: "0 auto", paddingBottom: "40px"}}>
+                    <button className="btn-secondary btn-small" onClick={onBack} style={{marginBottom: "24px"}}>
+                        ← Back to Lessons
+                    </button>
+                    
+                    <h2>{lesson.title}</h2>
+                    <div className="arabic">{lesson.titleAr}</div>
+                    <p style={{color: "#666", marginBottom: "24px"}}>
+                        {lesson.objectives.map((o, i) => <div key={i}>• {o}</div>)}
+                    </p>
+                    
+                    <div className="tabs">
+                        {["theory", "planning", "exercises", "resources"].map(t => (
+                            <button
+                                key={t}
+                                className={`tab ${tab === t ? "active" : ""}`}
+                                onClick={() => setTab(t)}
+                            >
+                                {t === "theory" ? "Theory" : t === "planning" ? "Planning" : t === "exercises" ? "Exercises" : "Resources"}
+                            </button>
+                        ))}
+                    </div>
+                    
+                    {tab === "theory" && <div dangerouslySetInnerHTML={{__html: lesson.theory}} />}
+                    
+                    {tab === "planning" && (
+                        <table className="planning-table">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Activity</th>
+                                    <th>Type</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {lesson.weeklyPlan && lesson.weeklyPlan.map((p, i) => (
+                                    <tr key={i}>
+                                        <td style={{fontWeight: "600"}}>{p.day}</td>
+                                        <td>{p.activity}</td>
+                                        <td className="type-badge">{p.type}</td>
+                                        <td>{p.duration}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
+                    
+                    {tab === "exercises" && (
+                        <div>
+                            <div style={{marginBottom: "20px"}}>
+                                <span style={{fontWeight: "600", marginRight: "20px"}}>Difficulty:</span>
+                                {["easy", "medium", "hard"].map(d => (
+                                    <button
+                                        key={d}
+                                        className={`btn-small ${difficulty === d ? "btn-primary" : "btn-secondary"}`}
+                                        onClick={() => setDifficulty(d)}
+                                        style={{marginRight: "10px"}}
+                                    >
+                                        {d === "easy" ? "🟢 Easy" : d === "medium" ? "🟡 Medium" : "🔴 Hard"}
+                                    </button>
+                                ))}
+                            </div>
+                            <ExercisePanel exercises={lesson.exercises} difficulty={difficulty} />
+                        </div>
+                    )}
+                    
+                    {tab === "resources" && (
+                        <div className="resources-grid">
+                            {lesson.resources && lesson.resources.map((r, i) => (
+                                <div key={i} className="resource-card">
+                                    <div className="resource-icon">{r.icon}</div>
+                                    <div className="resource-title">{r.title}</div>
+                                    <div className="resource-desc">{r.desc}</div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            );
+        }
+        
+        function PhaseView({ phase, onSelectLesson, onBack }) {
+            return (
+                <div style={{paddingBottom: "40px"}}>
+                    <button className="btn-secondary btn-small" onClick={onBack} style={{marginBottom: "24px"}}>
+                        ← Back to Dashboard
+                    </button>
+                    
+                    <div className="phase-header">
+                        <div className="phase-header-content">
+                            <div className="phase-numeral">{phase.numeral}</div>
+                            <h2 className="phase-title">{phase.title}</h2>
+                            <div className="phase-subtitle">{phase.titleAr}</div>
+                            <div className="stats-row">
+                                <div className="stat-box">
+                                    <div className="stat-number">{phase.duration}</div>
+                                    <div className="stat-label">Duration</div>
+                                </div>
+                                <div className="stat-box">
+                                    <div className="stat-number">{phase.lessons.length}</div>
+                                    <div className="stat-label">Lessons</div>
+                                </div>
+                                <div className="stat-box">
+                                    <div className="stat-number">{phase.level}</div>
+                                    <div className="stat-label">Level</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style={{maxWidth: "900px", margin: "0 auto"}}>
+                        <h3 style={{marginBottom: "20px"}}>Phase Objectives</h3>
+                        <ul className="objectives-list">
+                            {phase.objectives.map((obj, i) => (
+                                <li key={i}>{obj}</li>
+                            ))}
+                        </ul>
+                        
+                        <h3 style={{marginTop: "40px", marginBottom: "20px"}}>Competencies to Master</h3>
+                        <div className="competencies-grid">
+                            {phase.competencies.map((comp, i) => (
+                                <div key={i} className="competency-item">{comp}</div>
+                            ))}
+                        </div>
+                        
+                        <h3 style={{marginTop: "40px", marginBottom: "20px"}}>Lessons in This Phase</h3>
+                        <div style={{display: "grid", gap: "16px"}}>
+                            {phase.lessons.map((lesson, i) => (
+                                <div
+                                    key={i}
+                                    className="card card-accent"
+                                    onClick={() => onSelectLesson(lesson)}
+                                    style={{cursor: "pointer"}}
+                                >
+                                    <h4>{lesson.number}. {lesson.title}</h4>
+                                    <div className="arabic" style={{fontSize: "1em", marginBottom: "10px"}}>{lesson.titleAr}</div>
+                                    <p style={{color: "#666", fontSize: "14px"}}>
+                                        {lesson.objectives && lesson.objectives.slice(0, 2).map((obj, j) => (
+                                            <div key={j}>• {obj}</div>
+                                        ))}
+                                        {lesson.objectives && lesson.objectives.length > 2 && <div>• ... and more</div>}
+                                    </p>
+                                    <div style={{marginTop: "12px", display: "flex", gap: "20px", fontSize: "13px", color: "#999"}}>
+                                        <span>⏱️ {lesson.duration}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        
+        function Dashboard({ data, onPhaseSelect, onLessonSelect }) {
+            return (
+                <div style={{maxWidth: "1000px", margin: "0 auto", paddingBottom: "60px"}}>
+                    <div style={{marginBottom: "40px"}}>
+                        <h1>Welcome to ArabicMaster Pro</h1>
+                        <p style={{fontSize: "1.1em", color: "#666", marginTop: "12px"}}>
+                            Your comprehensive Arabic learning platform with 40+ lessons and 200+ exercises
+                        </p>
+                    </div>
+                    
+                    {/* Quick Stats */}
+                    <div className="stats-row" style={{marginBottom: "40px"}}>
+                        <div className="card">
+                            <div style={{fontSize: "1.4em", fontWeight: "700", color: "var(--gold)"}}>
+                                {CURRICULUM.phases.reduce((sum, p) => sum + p.lessons.length, 0)}
+                            </div>
+                            <div style={{fontSize: "0.9em", color: "#666"}}>Total Lessons</div>
+                        </div>
+                        <div className="card">
+                            <div style={{fontSize: "1.4em", fontWeight: "700", color: "var(--gold)"}}>
+                                5
+                            </div>
+                            <div style={{fontSize: "0.9em", color: "#666"}}>Learning Phases</div>
+                        </div>
+                        <div className="card">
+                            <div style={{fontSize: "1.4em", fontWeight: "700", color: "var(--gold)"}}>
+                                200+
+                            </div>
+                            <div style={{fontSize: "0.9em", color: "#666"}}>Total Questions</div>
+                        </div>
+                    </div>
+                    
+                    <h2 style={{marginBottom: "24px"}}>Learning Phases</h2>
+                    <div style={{display: "grid", gap: "24px"}}>
+                        {CURRICULUM.phases.map((phase, i) => (
+                            <div
+                                key={phase.id}
+                                className="card"
+                                onClick={() => onPhaseSelect(phase)}
+                                style={{cursor: "pointer"}}
+                            >
+                                <div style={{display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "16px"}}>
+                                    <div>
+                                        <div style={{fontSize: "0.85em", fontWeight: "700", color: "var(--gold)", textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "4px"}}>
+                                            Phase {phase.id}
+                                        </div>
+                                        <h3 style={{marginTop: 0}}>{phase.title}</h3>
+                                        <div className="arabic">{phase.titleAr}</div>
+                                    </div>
+                                    <span style={{fontSize: "2em", opacity: 0.5}}>
+                                        {phase.numeral === "I" ? "Ⅰ" : phase.numeral === "II" ? "Ⅱ" : phase.numeral === "III" ? "Ⅲ" : ""}
+                                    </span>
+                                </div>
+                                <p style={{color: "#666", marginBottom: "12px"}}>
+                                    {phase.objectives.slice(0, 3).map((obj, j) => (
+                                        <div key={j} style={{fontSize: "0.9em"}}>• {obj}</div>
+                                    ))}
+                                </p>
+                                <div style={{marginTop: "16px", display: "flex", gap: "20px", fontSize: "13px", color: "#999"}}>
+                                    <span>📚 {phase.lessons.length} lessons</span>
+                                    <span>⏱️ {phase.duration}</span>
+                                    <span>📊 {phase.level}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+        
+        // ============================================
+        // MAIN APP
+        // ============================================
+        
+        function App() {
+            const [data, setData] = React.useState(() => Storage.init());
+            const [view, setView] = React.useState("dashboard");
+            const [selectedPhase, setSelectedPhase] = React.useState(null);
+            const [selectedLesson, setSelectedLesson] = React.useState(null);
+            
+            const handlePhaseSelect = (phase) => {
+                setSelectedPhase(phase);
+                setView("phase");
+            };
+            
+            const handleLessonSelect = (lesson) => {
+                setSelectedLesson(lesson);
+                setView("lesson");
+            };
+            
+            const handleBack = () => {
+                if (view === "lesson") {
+                    setView("phase");
+                } else if (view === "phase") {
+                    setView("dashboard");
+                }
+            };
+            
+            return (
+                <div style={{background: "var(--cream)", minHeight: "100vh"}}>
+                    {/* Header */}
+                    <header style={{
+                        background: "linear-gradient(135deg, var(--navy), var(--navy-light))",
+                        color: "white",
+                        padding: "20px 40px",
+                        boxShadow: "var(--shadow-md)",
+                        position: "sticky",
+                        top: 0,
+                        zIndex: 100
+                    }}>
+                        <div style={{maxWidth: "1200px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                            <div>
+                                <h1 style={{margin: 0, fontSize: "1.8em", fontFamily: "'Playfair Display', serif"}}>ArabicMaster Pro</h1>
+                                <div style={{fontSize: "0.85em", opacity: 0.9, fontStyle: "italic"}}>Professional Arabic Learning Platform</div>
+                            </div>
+                            <div style={{fontSize: "2em"}}>📚</div>
+                        </div>
+                    </header>
+                    
+                    {/* Main Content */}
+                    <main style={{padding: "40px 20px"}}>
+                        {view === "dashboard" && <Dashboard data={data} onPhaseSelect={handlePhaseSelect} onLessonSelect={handleLessonSelect} />}
+                        {view === "phase" && selectedPhase && <PhaseView phase={selectedPhase} onSelectLesson={handleLessonSelect} onBack={handleBack} />}
+                        {view === "lesson" && selectedLesson && <LessonView lesson={selectedLesson} onBack={handleBack} />}
+                    </main>
+                    
+                    {/* Footer */}
+                    <footer style={{
+                        background: "var(--navy-light)",
+                        color: "white",
+                        padding: "30px 40px",
+                        textAlign: "center",
+                        opacity: 0.9
+                    }}>
+                        <p style={{margin: 0, fontSize: "0.9em"}}>
+                            © 2024 ArabicMaster Pro — Professional Arabic Learning • Designed for Deep Comprehension
+                        </p>
+                    </footer>
+                </div>
+            );
+        }
+        
+        // ============================================
+        // RENDER
+        // ============================================
+        
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

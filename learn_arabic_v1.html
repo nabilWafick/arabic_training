@@ -1,0 +1,2801 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feuille de Route — Apprendre l'Arabe</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gold: #c9a85c;
+        --gold-light: #e8d5a3;
+        --gold-dark: #8b6914;
+        --ink: #1a1208;
+        --navy: #0d1b2a;
+        --cream: #f8f3ea;
+        --cream-dark: #ede4d0;
+        --rust: #8b3a2a;
+        --sage: #4a6741;
+        --teal: #2c6e6a;
+        --white: #fffdf7;
+        --shadow: rgba(26, 18, 8, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--cream);
+        color: var(--ink);
+        font-family: "Crimson Pro", Georgia, serif;
+        font-size: 17px;
+        line-height: 1.75;
+        overflow-x: hidden;
+      }
+
+      /* ═══════════════ HERO ═══════════════ */
+      .hero {
+        background: linear-gradient(
+          160deg,
+          var(--navy) 0%,
+          #1e2d1a 50%,
+          #0d1b2a 100%
+        );
+        color: var(--cream);
+        text-align: center;
+        padding: 90px 40px 80px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "العَرَبِيَّة";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Amiri", serif;
+        font-size: clamp(120px, 22vw, 280px);
+        color: rgba(201, 168, 92, 0.06);
+        white-space: nowrap;
+        pointer-events: none;
+        letter-spacing: 10px;
+      }
+      .hero-badge {
+        display: inline-block;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-family: "Crimson Pro", serif;
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 6px 18px;
+        border-radius: 2px;
+        margin-bottom: 30px;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(36px, 5vw, 68px);
+        font-weight: 800;
+        line-height: 1.1;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+      .hero h1 span {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .hero-arabic {
+        font-family: "Amiri", serif;
+        font-size: clamp(22px, 3.5vw, 38px);
+        color: var(--gold-light);
+        margin-bottom: 24px;
+        direction: rtl;
+      }
+      .hero p {
+        max-width: 620px;
+        margin: 0 auto 40px;
+        font-size: 18px;
+        color: rgba(248, 243, 234, 0.75);
+        font-style: italic;
+      }
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        padding-top: 40px;
+        border-top: 1px solid rgba(201, 168, 92, 0.25);
+      }
+      .stat {
+        text-align: center;
+      }
+      .stat-num {
+        display: block;
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--gold);
+      }
+      .stat-label {
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(248, 243, 234, 0.55);
+      }
+
+      /* ═══════════════ ORNAMENT ═══════════════ */
+      .ornament {
+        text-align: center;
+        color: var(--gold);
+        font-size: 22px;
+        letter-spacing: 8px;
+        padding: 18px 0 6px;
+        opacity: 0.65;
+      }
+
+      /* ═══════════════ LAYOUT ═══════════════ */
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 30px;
+      }
+
+      /* ═══════════════ SECTION TITLES ═══════════════ */
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(28px, 3.5vw, 42px);
+        font-weight: 800;
+        color: var(--navy);
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .section-title span {
+        color: var(--gold-dark);
+        font-style: italic;
+      }
+      .section-subtitle {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        font-size: 17px;
+        margin-bottom: 50px;
+      }
+      .section {
+        padding: 70px 0;
+      }
+      .section:nth-child(even) {
+        background: var(--cream-dark);
+        margin: 0 -9999px;
+        padding: 70px 9999px;
+      }
+
+      /* ═══════════════ INTRO BLOCK ═══════════════ */
+      .intro-card {
+        background: var(--white);
+        border-left: 4px solid var(--gold);
+        padding: 30px 35px;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 4px 20px var(--shadow);
+        margin-bottom: 50px;
+      }
+      .intro-card h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        color: var(--navy);
+        margin-bottom: 12px;
+      }
+
+      /* ═══════════════ PHASE CARDS ═══════════════ */
+      .phase-card {
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 6px 30px var(--shadow);
+        margin-bottom: 45px;
+        overflow: hidden;
+        transition: transform 0.2s;
+      }
+      .phase-card:hover {
+        transform: translateY(-3px);
+      }
+      .phase-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 28px 35px;
+        position: relative;
+        overflow: hidden;
+      }
+      .phase-header::after {
+        content: attr(data-arabic);
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: "Amiri", serif;
+        font-size: 52px;
+        opacity: 0.12;
+        color: var(--white);
+        direction: rtl;
+        pointer-events: none;
+      }
+      .ph-1 {
+        background: linear-gradient(135deg, #0d1b2a, #1a3a4a);
+      }
+      .ph-2 {
+        background: linear-gradient(135deg, #4a2c1a, #7a4a2a);
+      }
+      .ph-3 {
+        background: linear-gradient(135deg, #1a3a2a, #2c6e4a);
+      }
+      .ph-4 {
+        background: linear-gradient(135deg, #2a1a3a, #4a2c6a);
+      }
+      .ph-5 {
+        background: linear-gradient(135deg, #1a2a1a, var(--gold-dark));
+      }
+
+      .phase-num {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--white);
+        flex-shrink: 0;
+      }
+      .phase-info {
+        flex: 1;
+      }
+      .phase-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 4px;
+      }
+      .phase-meta {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-tag {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.65);
+        background: rgba(255, 255, 255, 0.1);
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+
+      .phase-body {
+        padding: 30px 35px;
+      }
+
+      .phase-objective {
+        background: linear-gradient(135deg, var(--cream), var(--cream-dark));
+        border-radius: 8px;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-style: italic;
+        color: var(--navy);
+        border-left: 3px solid var(--gold);
+      }
+
+      .phase-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 640px) {
+        .phase-cols {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .col-block h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--gold-dark);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--gold-light);
+      }
+      .col-block ul {
+        list-style: none;
+      }
+      .col-block ul li {
+        padding: 5px 0 5px 18px;
+        position: relative;
+        font-size: 15.5px;
+        color: #333;
+        border-bottom: 1px dashed rgba(201, 168, 92, 0.2);
+      }
+      .col-block ul li:last-child {
+        border-bottom: none;
+      }
+      .col-block ul li::before {
+        content: "◈";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-size: 11px;
+        top: 7px;
+      }
+
+      /* Resources in phase */
+      .res-block {
+        background: #f0f6ff;
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin-top: 18px;
+      }
+      .res-block h4 {
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 10px;
+        font-family: "Crimson Pro", serif;
+        font-weight: 600;
+      }
+      .res-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 6px;
+        font-size: 15px;
+      }
+      .res-icon {
+        color: var(--teal);
+        font-size: 15px;
+        margin-top: 2px;
+      }
+      .res-item a {
+        color: var(--teal);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .res-item a:hover {
+        text-decoration: underline;
+      }
+      .res-note {
+        font-size: 13px;
+        color: #666;
+        font-style: italic;
+      }
+
+      .time-bar {
+        background: var(--cream-dark);
+        border-radius: 6px;
+        height: 8px;
+        margin-top: 20px;
+        overflow: hidden;
+      }
+      .time-bar-fill {
+        height: 100%;
+        border-radius: 6px;
+        background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      }
+      .time-label {
+        font-size: 12px;
+        color: #999;
+        text-align: right;
+        margin-top: 4px;
+        letter-spacing: 1px;
+      }
+
+      /* ═══════════════ RESOURCES TABLE ═══════════════ */
+      .res-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 22px;
+        margin-top: 20px;
+      }
+      .res-card {
+        background: var(--white);
+        border-radius: 10px;
+        padding: 22px;
+        box-shadow: 0 4px 16px var(--shadow);
+        border-top: 3px solid var(--gold);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .res-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px var(--shadow);
+      }
+      .res-card-icon {
+        font-size: 28px;
+        margin-bottom: 12px;
+      }
+      .res-card-title {
+        font-family: "Playfair Display", serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 6px;
+      }
+      .res-card-url {
+        font-size: 13px;
+        color: var(--teal);
+        font-style: italic;
+        margin-bottom: 8px;
+      }
+      .res-card p {
+        font-size: 14.5px;
+        color: #555;
+        line-height: 1.55;
+      }
+      .res-card-level {
+        display: inline-block;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        background: var(--cream-dark);
+        color: var(--gold-dark);
+        padding: 2px 8px;
+        border-radius: 3px;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      /* ═══════════════ EXERCISES ═══════════════ */
+      .exo-set {
+        margin-bottom: 45px;
+      }
+      .exo-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+      .exo-num {
+        width: 46px;
+        height: 46px;
+        background: var(--gold);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .exo-header h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        color: var(--navy);
+      }
+      .exo-header h3 small {
+        display: block;
+        font-family: "Crimson Pro", serif;
+        font-size: 14px;
+        font-weight: 300;
+        font-style: italic;
+        color: #888;
+        letter-spacing: 1px;
+      }
+
+      .exo-box {
+        background: var(--white);
+        border-radius: 10px;
+        padding: 28px 32px;
+        box-shadow: 0 4px 18px var(--shadow);
+        margin-bottom: 18px;
+        border-left: 4px solid var(--gold);
+      }
+      .exo-box h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 17px;
+        color: var(--navy);
+        margin-bottom: 14px;
+      }
+      .exo-instructions {
+        font-style: italic;
+        color: #555;
+        font-size: 15px;
+        margin-bottom: 18px;
+        padding: 10px 14px;
+        background: var(--cream);
+        border-radius: 6px;
+      }
+
+      /* Arabic text styling */
+      .ar {
+        font-family: "Amiri", serif;
+        direction: rtl;
+        text-align: right;
+        font-size: 1.3em;
+        color: var(--navy);
+        line-height: 2;
+      }
+      .ar-inline {
+        font-family: "Amiri", serif;
+        direction: rtl;
+        font-size: 1.2em;
+        color: #1a3a2a;
+        font-weight: 700;
+      }
+
+      /* Exercise items */
+      .exo-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--cream-dark);
+      }
+      .exo-item:last-child {
+        border-bottom: none;
+      }
+      .exo-letter {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        color: var(--gold);
+        font-size: 14px;
+        min-width: 22px;
+        margin-top: 2px;
+      }
+      .exo-content {
+        flex: 1;
+      }
+      .exo-arabic {
+        font-family: "Amiri", serif;
+        font-size: 22px;
+        direction: rtl;
+        text-align: right;
+        color: var(--navy);
+        margin-bottom: 4px;
+        display: block;
+      }
+      .exo-trans {
+        font-size: 14px;
+        color: #777;
+        font-style: italic;
+      }
+      .exo-answer {
+        background: var(--cream);
+        border: 1px dashed var(--gold);
+        border-radius: 6px;
+        padding: 8px 14px;
+        margin-top: 8px;
+        font-size: 14px;
+        color: var(--rust);
+      }
+      .exo-answer span {
+        font-weight: 700;
+      }
+
+      /* Alphabet table */
+      .alpha-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+        margin-top: 14px;
+      }
+      .alpha-table th {
+        background: var(--navy);
+        color: var(--gold-light);
+        padding: 10px 14px;
+        text-align: center;
+        font-family: "Crimson Pro", serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+      .alpha-table td {
+        padding: 10px 14px;
+        text-align: center;
+        border-bottom: 1px solid var(--cream-dark);
+      }
+      .alpha-table tr:nth-child(even) {
+        background: var(--cream);
+      }
+      .alpha-table tr:hover {
+        background: #fff8eb;
+      }
+      .alpha-table .ar-cell {
+        font-family: "Amiri", serif;
+        font-size: 24px;
+        color: var(--navy);
+        font-weight: 700;
+      }
+
+      /* Multiple choice */
+      .mcq-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .mcq-opt {
+        padding: 10px 16px;
+        border: 1.5px solid var(--cream-dark);
+        border-radius: 7px;
+        font-size: 15px;
+        cursor: default;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .mcq-opt .opt-letter {
+        width: 26px;
+        height: 26px;
+        background: var(--cream-dark);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--navy);
+        flex-shrink: 0;
+      }
+      .mcq-opt.correct {
+        border-color: var(--sage);
+        background: #eef5ec;
+      }
+      .mcq-opt.correct .opt-letter {
+        background: var(--sage);
+        color: white;
+      }
+
+      /* Tips box */
+      .tip-box {
+        background: linear-gradient(135deg, #fff8ec, var(--cream-dark));
+        border: 1px solid var(--gold-light);
+        border-radius: 10px;
+        padding: 20px 24px;
+        margin: 20px 0;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .tip-icon {
+        font-size: 24px;
+        flex-shrink: 0;
+      }
+      .tip-box p {
+        font-size: 15px;
+        color: #444;
+        margin: 0;
+      }
+      .tip-box strong {
+        color: var(--gold-dark);
+      }
+
+      /* ═══════════════ PLANNING TABLE ═══════════════ */
+      .plan-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+        box-shadow: 0 4px 20px var(--shadow);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .plan-table th {
+        background: var(--navy);
+        color: var(--gold-light);
+        padding: 14px 18px;
+        text-align: left;
+        font-family: "Crimson Pro", serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+      .plan-table td {
+        padding: 13px 18px;
+        border-bottom: 1px solid var(--cream-dark);
+        background: var(--white);
+        vertical-align: top;
+      }
+      .plan-table tr:last-child td {
+        border-bottom: none;
+      }
+      .plan-table tr:hover td {
+        background: #fff8eb;
+      }
+      .day-label {
+        font-weight: 600;
+        color: var(--navy);
+        font-family: "Playfair Display", serif;
+      }
+      .tag-green {
+        background: #eef5ec;
+        color: var(--sage);
+        padding: 2px 9px;
+        border-radius: 12px;
+        font-size: 13px;
+      }
+      .tag-blue {
+        background: #e8f0ff;
+        color: #2244aa;
+        padding: 2px 9px;
+        border-radius: 12px;
+        font-size: 13px;
+      }
+      .tag-orange {
+        background: #fff2e0;
+        color: var(--rust);
+        padding: 2px 9px;
+        border-radius: 12px;
+        font-size: 13px;
+      }
+
+      /* ═══════════════ FOOTER ═══════════════ */
+      .footer {
+        background: var(--navy);
+        color: rgba(248, 243, 234, 0.6);
+        text-align: center;
+        padding: 50px 30px;
+      }
+      .footer-arabic {
+        font-family: "Amiri", serif;
+        font-size: 36px;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 12px;
+        direction: rtl;
+      }
+      .footer p {
+        font-size: 14px;
+      }
+      .footer strong {
+        color: var(--gold-light);
+      }
+
+      /* ═══════════════ DIVIDER ═══════════════ */
+      .divider {
+        text-align: center;
+        padding: 20px 0;
+        color: var(--gold-light);
+        font-size: 20px;
+        letter-spacing: 12px;
+        opacity: 0.6;
+      }
+
+      /* Print */
+      @media print {
+        .hero::before {
+          display: none;
+        }
+        .phase-card {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ═══ HERO ═══ -->
+    <div class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          Feuille de Route Complète • De Débutant à Expert
+        </div>
+        <h1>Maîtriser la <span>Langue Arabe</span></h1>
+        <div class="hero-arabic">مِن البِدايَة إلى الاحْتِرَاف</div>
+        <p>
+          Un programme structuré, progressif et complet pour passer de zéro à la
+          maîtrise complète de l'arabe littéraire.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Phases</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">24+</span>
+            <span class="stat-label">Mois</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Ressources Gratuites</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">40+</span>
+            <span class="stat-label">Exercices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ INTRO ═══ -->
+    <div class="section">
+      <div class="container">
+        <div class="ornament">✦ ✦ ✦</div>
+        <h2 class="section-title" style="margin-top: 20px">
+          Avant de Commencer
+        </h2>
+        <p class="section-subtitle">
+          Quelques principes fondamentaux pour réussir votre apprentissage
+        </p>
+
+        <div class="intro-card">
+          <h3>📌 À propos de cette feuille de route</h3>
+          <p>
+            Ce programme est conçu pour l'apprentissage de
+            <strong>l'arabe classique / littéraire (الفصحى — al-fuṣḥā)</strong>,
+            la langue du Coran, de la littérature, de la presse et des échanges
+            formels dans le monde arabe. C'est la base solide à partir de
+            laquelle vous pourrez ensuite comprendre les dialectes régionaux.
+          </p>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+          "
+        >
+          <div class="intro-card" style="border-color: var(--teal)">
+            <h3>🕐 Temps quotidien recommandé</h3>
+            <p>
+              Minimum <strong>30–45 min/jour</strong> pour des progrès
+              constants. L'idéal est <strong>1h–1h30</strong> répartis sur la
+              journée. La régularité prime sur l'intensité.
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: var(--sage)">
+            <h3>🧠 Méthode d'apprentissage</h3>
+            <p>
+              Suivre la méthode <strong>TPR + immersion</strong> : combiner
+              règles de grammaire + exposition massive à la langue + pratique
+              active orale et écrite.
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: var(--rust)">
+            <h3>📖 Quelle variété d'arabe ?</h3>
+            <p>
+              Ce programme cible
+              <strong>l'arabe moderne standard (MSA)</strong>. Après le niveau
+              intermédiaire, vous pouvez choisir d'ajouter un dialecte
+              (égyptien, levantin, maghrébin…).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ PHASES ═══ -->
+    <div class="section">
+      <div class="container">
+        <h2 class="section-title">La Feuille de <span>Route</span></h2>
+        <p class="section-subtitle">
+          5 phases progressives • Du premier contact à la maîtrise experte
+        </p>
+
+        <!-- PHASE 1 -->
+        <div class="phase-card">
+          <div class="phase-header ph-1" data-arabic="الحروف">
+            <div class="phase-num">1</div>
+            <div class="phase-info">
+              <div class="phase-title">Fondations — L'Alphabet et les Sons</div>
+              <div class="phase-meta">
+                <span class="meta-tag">Durée : 4–6 semaines</span>
+                <span class="meta-tag">Niveau : Absolu débutant</span>
+                <span class="meta-tag">Mois 1</span>
+              </div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <div class="phase-objective">
+              🎯 <strong>Objectif :</strong> Lire et écrire les 28 lettres de
+              l'alphabet arabe, comprendre les voyelles courtes et longues,
+              maîtriser les règles d'écriture de base (connexion des lettres),
+              et prononcer correctement les sons spécifiques à l'arabe.
+            </div>
+
+            <div class="phase-cols">
+              <div class="col-block">
+                <h4>📚 Compétences à acquérir</h4>
+                <ul>
+                  <li>
+                    Les 28 lettres : formes initiale, médiane, finale et isolée
+                  </li>
+                  <li>Voyelles courtes (Fatha, Kasra, Damma) — الحركات</li>
+                  <li>Voyelles longues (ا، و، ي)</li>
+                  <li>Le Sukun (سُكُون) — consonne sans voyelle</li>
+                  <li>Le Shadda (شَدَّة) — doublement de consonne</li>
+                  <li>Le Tanwin — nunation (ً ٍ ٌ)</li>
+                  <li>La Hamza et ses formes (ء، أ، إ، ئ، ؤ)</li>
+                  <li>L'article défini (ال) — al Qamariyya / Shamsiyya</li>
+                  <li>Les sons spéciaux : خ، غ، ح، ع، ص، ض، ط، ظ</li>
+                </ul>
+              </div>
+              <div class="col-block">
+                <h4>⚡ Méthode recommandée</h4>
+                <ul>
+                  <li>
+                    Semaine 1–2 : Apprendre 4–5 lettres/jour avec leur son
+                  </li>
+                  <li>Écrire chaque lettre à la main 20–30 fois</li>
+                  <li>Utiliser des flashcards (Anki ou papier)</li>
+                  <li>Écouter et répéter immédiatement</li>
+                  <li>Semaine 3 : Revoir toutes les lettres + voyelles</li>
+                  <li>Semaine 4–5 : Exercices de lecture de syllabes</li>
+                  <li>Semaine 6 : Lecture de mots simples complets</li>
+                  <li>Pratique quotidienne d'écriture manuscrite</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="res-block">
+              <h4>📖 Ressources — Phase 1</h4>
+              <div class="res-item">
+                <span class="res-icon">📘</span>
+                <div>
+                  <a
+                    href="https://www.maqsoud.net/livres-pour-apprendre-arabe.php"
+                    target="_blank"
+                    >Maqsoud.net</a
+                  >
+                  — "Préparation aux Livres de Médine" : exercices préparatoires
+                  à l'alphabet
+                  <span class="res-note">(gratuit, PDF téléchargeable)</span>
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🎥</span>
+                <div>
+                  <a
+                    href="https://www.youtube.com/@LearnArabicwithMaha"
+                    target="_blank"
+                    >Learn Arabic with Maha</a
+                  >
+                  (YouTube) — Série "Alphabet arabe" : prononciation très
+                  claire, recommandé aux débutants
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🎥</span>
+                <div>
+                  <a
+                    href="https://www.youtube.com/@ArabicwithSam"
+                    target="_blank"
+                    >Arabic with Sam</a
+                  >
+                  (YouTube) — Playlist alphabet, explications pédagogiques en
+                  français
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🃏</span>
+                <div>
+                  <a href="https://apps.ankiweb.net/" target="_blank">Anki</a> —
+                  Deck gratuit "Alphabet Arabe" pour mémorisation par répétition
+                  espacée
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📱</span>
+                <div>
+                  <a
+                    href="https://www.duolingo.com/course/ar/fr"
+                    target="_blank"
+                    >Duolingo Arabe</a
+                  >
+                  — Complément visuel et gamifié pour l'alphabet (gratuit)
+                </div>
+              </div>
+            </div>
+
+            <div class="time-bar">
+              <div class="time-bar-fill" style="width: 20%"></div>
+            </div>
+            <div class="time-label">Progression vers la maîtrise : 20%</div>
+          </div>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="phase-card">
+          <div class="phase-header ph-2" data-arabic="المُفردات">
+            <div class="phase-num">2</div>
+            <div class="phase-info">
+              <div class="phase-title">
+                Débutant Confirmé — Vocabulaire & Grammaire de Base
+              </div>
+              <div class="phase-meta">
+                <span class="meta-tag">Durée : 2–3 mois</span>
+                <span class="meta-tag">Niveau : Débutant A1–A2</span>
+                <span class="meta-tag">Mois 2–4</span>
+              </div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <div class="phase-objective">
+              🎯 <strong>Objectif :</strong> Construire un vocabulaire de
+              500–800 mots essentiels, comprendre la structure de base de la
+              phrase arabe (sujet–verbe–objet et VSO), maîtriser les pronoms,
+              les nombres et les phrases de salutation. Être capable de se
+              présenter et d'avoir une conversation très simple.
+            </div>
+
+            <div class="phase-cols">
+              <div class="col-block">
+                <h4>📚 Grammaire à maîtriser</h4>
+                <ul>
+                  <li>La phrase nominale (المبتدأ والخبر)</li>
+                  <li>Le genre (masculin / féminin) — المذكر والمؤنث</li>
+                  <li>Le nombre : singulier, duel, pluriel</li>
+                  <li>Les pronoms personnels (أنا، أنتَ، هو…)</li>
+                  <li>Les pronoms possessifs suffixés (ي، كَ، هُ…)</li>
+                  <li>La phrase verbale — الجملة الفعلية</li>
+                  <li>Verbes au présent et passé, forme de base</li>
+                  <li>Les prépositions (في، على، من، إلى…)</li>
+                  <li>Les démonstratifs (هذا، هذه، ذلك…)</li>
+                  <li>Les nombres 1–100 — الأرقام</li>
+                </ul>
+              </div>
+              <div class="col-block">
+                <h4>🗣️ Vocabulaire thématique</h4>
+                <ul>
+                  <li>Salutations et expressions courantes</li>
+                  <li>La famille — العائلة</li>
+                  <li>Les couleurs — الألوان</li>
+                  <li>Le corps humain — جسم الإنسان</li>
+                  <li>La maison et les pièces — المنزل</li>
+                  <li>Les aliments et boissons — الطعام</li>
+                  <li>Les jours et les mois — الأيام والأشهر</li>
+                  <li>Les métiers — المهن</li>
+                  <li>Les animaux — الحيوانات</li>
+                  <li>Vocabulaire du temps (hier, aujourd'hui…)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="res-block">
+              <h4>📖 Ressources — Phase 2</h4>
+              <div class="res-item">
+                <span class="res-icon">📘</span>
+                <div>
+                  <a
+                    href="https://www.maqsoud.net/livres-pour-apprendre-arabe.php"
+                    target="_blank"
+                    >Maqsoud.net</a
+                  >
+                  — <strong>Tome de Médine 1 (الجزء الأول)</strong> : livre de
+                  référence absolue pour les débutants, structure progressive,
+                  vocabulaire et grammaire
+                  <span class="res-note">(PDF gratuit)</span>
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🌐</span>
+                <div>
+                  <a href="https://www.madinaharabic.com/" target="_blank"
+                    >Madinah Arabic</a
+                  >
+                  — Cours en ligne gratuit basé sur les livres de Médine, avec
+                  exercices et audio intégrés
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🎥</span>
+                <div>
+                  <a
+                    href="https://www.youtube.com/@ArabicPod101"
+                    target="_blank"
+                    >ArabicPod101</a
+                  >
+                  (YouTube) — Leçons thématiques A1/A2 gratuites avec
+                  vocabulaire en contexte
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🃏</span>
+                <div>
+                  <a
+                    href="https://www.memrise.com/courses/arabic/"
+                    target="_blank"
+                    >Memrise</a
+                  >
+                  — Cours gratuit "Arabe 1 & 2" avec audio natif et répétition
+                  espacée
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🔊</span>
+                <div>
+                  <a href="https://forvo.com/languages/ar/" target="_blank"
+                    >Forvo Arabe</a
+                  >
+                  — Prononciation de mots par des locuteurs natifs (gratuit)
+                </div>
+              </div>
+            </div>
+
+            <div class="time-bar">
+              <div class="time-bar-fill" style="width: 40%"></div>
+            </div>
+            <div class="time-label">Progression vers la maîtrise : 40%</div>
+          </div>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="phase-card">
+          <div class="phase-header ph-3" data-arabic="النحو">
+            <div class="phase-num">3</div>
+            <div class="phase-info">
+              <div class="phase-title">
+                Intermédiaire — Grammaire Approfondie & Lecture
+              </div>
+              <div class="phase-meta">
+                <span class="meta-tag">Durée : 4–6 mois</span>
+                <span class="meta-tag">Niveau : B1</span>
+                <span class="meta-tag">Mois 5–10</span>
+              </div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <div class="phase-objective">
+              🎯 <strong>Objectif :</strong> Maîtriser la grammaire arabe
+              classique (نحو — naḥw), lire des textes courts authentiques
+              (articles, extraits), comprendre des discours simples, rédiger des
+              paragraphes cohérents et atteindre 1 500–2 000 mots de
+              vocabulaire.
+            </div>
+
+            <div class="phase-cols">
+              <div class="col-block">
+                <h4>📚 Grammaire avancée</h4>
+                <ul>
+                  <li>
+                    La déclinaison (الإعراب) — nominatif, accusatif, génitif
+                  </li>
+                  <li>Les cas et leurs marques (الحركات الإعرابية)</li>
+                  <li>Les verbes faibles (الأفعال المعتلة)</li>
+                  <li>Les verbes dérivés — mesures II à X</li>
+                  <li>Le passif (المبني للمجهول)</li>
+                  <li>Les noms d'action (المصادر)</li>
+                  <li>La concordance sujet–verbe</li>
+                  <li>L'état construit (الإضافة)</li>
+                  <li>Les circonstancielles de temps, lieu, cause</li>
+                  <li>Les particules de négation (لا، لم، لن، ليس)</li>
+                </ul>
+              </div>
+              <div class="col-block">
+                <h4>✍️ Compétences à développer</h4>
+                <ul>
+                  <li>Lire des textes courts sans voyelles</li>
+                  <li>Comprendre la radio arabe lente</li>
+                  <li>Rédiger une lettre formelle simple</li>
+                  <li>Raconter un événement passé</li>
+                  <li>Comprendre les titres de journaux arabes</li>
+                  <li>Apprendre 15–20 mots nouveaux/jour avec Anki</li>
+                  <li>Analyser grammaticalement (إعراب) des phrases</li>
+                  <li>Comprendre du Coran avec aide du dictionnaire</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="res-block">
+              <h4>📖 Ressources — Phase 3</h4>
+              <div class="res-item">
+                <span class="res-icon">📘</span>
+                <div>
+                  <a
+                    href="https://www.maqsoud.net/livres-pour-apprendre-arabe.php"
+                    target="_blank"
+                    >Maqsoud.net</a
+                  >
+                  — <strong>Tome de Médine 2 & 3</strong> : continuation
+                  indispensable avec grammaire structurée et textes plus
+                  complexes <span class="res-note">(PDF gratuits)</span>
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📘</span>
+                <div>
+                  <a
+                    href="https://www.maqsoud.net/livres-pour-apprendre-arabe.php"
+                    target="_blank"
+                    >Maqsoud.net</a
+                  >
+                  — <strong>Kitab al Assaassi (الكتاب الأساسي)</strong> :
+                  référence pour le niveau intermédiaire, très complet
+                  <span class="res-note">(PDF gratuit)</span>
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🌐</span>
+                <div>
+                  <a href="https://www.arabicreadingcourse.com/" target="_blank"
+                    >Arabic Reading Course</a
+                  >
+                  — Entraînement à la lecture sans voyelles, gratuit en ligne
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🎥</span>
+                <div>
+                  <a href="https://www.youtube.com/@Bayyinah" target="_blank"
+                    >Bayyinah Institute</a
+                  >
+                  (YouTube) — Cours de grammaire "Arabic with Purpose" (Ustaadh
+                  Nouman Ali Khan), niveau intermédiaire
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🎥</span>
+                <div>
+                  <a
+                    href="https://www.youtube.com/@arabiyyabaynay"
+                    target="_blank"
+                    >Al Arabiyya Bayna Yadayk</a
+                  >
+                  (YouTube) — Série intermédiaire, textes authentiques commentés
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📰</span>
+                <div>
+                  <a href="https://www.bbc.com/arabic" target="_blank"
+                    >BBC Arabic</a
+                  >
+                  — Lecture d'articles pour s'exposer à l'arabe journalistique
+                  (gratuit)
+                </div>
+              </div>
+            </div>
+
+            <div class="time-bar">
+              <div class="time-bar-fill" style="width: 60%"></div>
+            </div>
+            <div class="time-label">Progression vers la maîtrise : 60%</div>
+          </div>
+        </div>
+
+        <!-- PHASE 4 -->
+        <div class="phase-card">
+          <div class="phase-header ph-4" data-arabic="البلاغة">
+            <div class="phase-num">4</div>
+            <div class="phase-info">
+              <div class="phase-title">
+                Avancé — Expression Authentique & Textes Complexes
+              </div>
+              <div class="phase-meta">
+                <span class="meta-tag">Durée : 6–12 mois</span>
+                <span class="meta-tag">Niveau : B2–C1</span>
+                <span class="meta-tag">Mois 11–22</span>
+              </div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <div class="phase-objective">
+              🎯 <strong>Objectif :</strong> Lire des textes littéraires et
+              journalistiques courants, participer à des discussions en arabe,
+              rédiger des essais, comprendre des médias arabes, maîtriser 4
+              000–5 000 mots et débuter la rhétorique (بلاغة).
+            </div>
+
+            <div class="phase-cols">
+              <div class="col-block">
+                <h4>📚 Contenus à étudier</h4>
+                <ul>
+                  <li>Rhétorique arabe — علم البلاغة (tashabih, isti'ara…)</li>
+                  <li>Grammaire des subordonnées complexes</li>
+                  <li>Le style médiatique arabe (لغة الإعلام)</li>
+                  <li>Les textes coraniques avec tafsir simple</li>
+                  <li>La poésie classique accessible</li>
+                  <li>Les locutions et expressions figées</li>
+                  <li>Les particules de liaison rhétoriques</li>
+                </ul>
+              </div>
+              <div class="col-block">
+                <h4>🎯 Pratique intensive</h4>
+                <ul>
+                  <li>Regarder Al Jazeera, Al Arabiya en arabe</li>
+                  <li>Lire des romans arabes modernes simplifiés</li>
+                  <li>Rédiger un journal personnel en arabe</li>
+                  <li>Trouver un partenaire de langue (tandem)</li>
+                  <li>Écouter des podcasts en arabe standard</li>
+                  <li>Pratiquer la dictée (إملاء) régulièrement</li>
+                  <li>Analyser des discours et textes authentiques</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="res-block">
+              <h4>📖 Ressources — Phase 4</h4>
+              <div class="res-item">
+                <span class="res-icon">📘</span>
+                <div>
+                  <a
+                    href="https://www.maqsoud.net/livres-pour-apprendre-arabe.php"
+                    target="_blank"
+                    >Maqsoud.net</a
+                  >
+                  — <strong>Tomes de Mecque</strong> : niveau avancé de la série
+                  Médine, textes et grammaire complexe
+                  <span class="res-note">(PDF gratuit)</span>
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📺</span>
+                <div>
+                  <a
+                    href="https://www.youtube.com/@ajplus_arabic"
+                    target="_blank"
+                    >AJ+ عربي</a
+                  >
+                  (YouTube) — Vidéos d'actualité en arabe moderne standard,
+                  sous-titres disponibles
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📻</span>
+                <div>
+                  <a href="https://www.rfi.fr/ar/" target="_blank">RFI Arabe</a>
+                  — Émissions de radio et articles en arabe journalistique,
+                  accessible gratuitement
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🌐</span>
+                <div>
+                  <a href="https://www.aljazeera.net/" target="_blank"
+                    >Al Jazeera</a
+                  >
+                  — Lecture quotidienne d'articles en arabe MSA (niveau avancé)
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📖</span>
+                <div>
+                  <a href="https://www.hindawi.org/" target="_blank"
+                    >Hindawi.org</a
+                  >
+                  — Bibliothèque numérique gratuite de livres arabes (romans,
+                  essais, classiques)
+                </div>
+              </div>
+            </div>
+
+            <div class="time-bar">
+              <div class="time-bar-fill" style="width: 80%"></div>
+            </div>
+            <div class="time-label">Progression vers la maîtrise : 80%</div>
+          </div>
+        </div>
+
+        <!-- PHASE 5 -->
+        <div class="phase-card">
+          <div class="phase-header ph-5" data-arabic="الإتقان">
+            <div class="phase-num">5</div>
+            <div class="phase-info">
+              <div class="phase-title">
+                Expert — Maîtrise & Immersion Totale
+              </div>
+              <div class="phase-meta">
+                <span class="meta-tag">Durée : 12–24 mois</span>
+                <span class="meta-tag">Niveau : C1–C2</span>
+                <span class="meta-tag">Mois 23+</span>
+              </div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <div class="phase-objective">
+              🎯 <strong>Objectif :</strong> Lire et comprendre la littérature
+              classique (Al-Jahiz, Ibn Khaldoun, Al-Mutanabbi), écrire des
+              textes de haute qualité, comprendre les discours religieux et
+              politiques, enseigner éventuellement la langue et posséder un
+              vocabulaire actif de 8 000+ mots.
+            </div>
+
+            <div class="phase-cols">
+              <div class="col-block">
+                <h4>📚 Étude de la littérature classique</h4>
+                <ul>
+                  <li>Poésie classique : المتنبي، أبو العلاء المعري</li>
+                  <li>Prose médiévale : ابن خلدون، الجاحظ</li>
+                  <li>Textes coraniques sans aide lexicale</li>
+                  <li>Hadith — textes de la Sunnah</li>
+                  <li>Maqamat de Hariri — le sommet stylistique</li>
+                  <li>Maîtrise du dictionnaire classique (لسان العرب)</li>
+                </ul>
+              </div>
+              <div class="col-block">
+                <h4>🏆 Objectifs d'expertise</h4>
+                <ul>
+                  <li>
+                    Passer une certification officielle (DALF arabe, CELA)
+                  </li>
+                  <li>Écrire des articles académiques en arabe</li>
+                  <li>Interpréter et traduire vers/depuis l'arabe</li>
+                  <li>Comprendre les dialectes arabes régionaux</li>
+                  <li>Enseigner ou tutorer des débutants</li>
+                  <li>Participer à des débats formels en arabe</li>
+                  <li>Lire la presse arabe à vitesse native</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="res-block">
+              <h4>📖 Ressources — Phase 5</h4>
+              <div class="res-item">
+                <span class="res-icon">📖</span>
+                <div>
+                  <a href="https://www.hindawi.org/" target="_blank"
+                    >Hindawi.org</a
+                  >
+                  — Littérature arabe classique intégrale numérisée, accès
+                  gratuit
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">🌐</span>
+                <div>
+                  <a href="https://www.alwaraq.net/" target="_blank"
+                    >Al-Waraq</a
+                  >
+                  — Bibliothèque de manuscrits et textes classiques arabes
+                  numérisés
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📖</span>
+                <div>
+                  <a href="https://shamela.ws/" target="_blank"
+                    >Al-Maktaba Al-Shamela</a
+                  >
+                  — La plus grande bibliothèque islamique numérique gratuite
+                  (milliers d'ouvrages classiques)
+                </div>
+              </div>
+              <div class="res-item">
+                <span class="res-icon">📚</span>
+                <div>
+                  <a href="https://www.almaany.com/" target="_blank"
+                    >Almaany.com</a
+                  >
+                  — Dictionnaire arabe–arabe et arabe–français en ligne, le
+                  meilleur pour ce niveau
+                </div>
+              </div>
+            </div>
+
+            <div class="time-bar">
+              <div class="time-bar-fill" style="width: 100%"></div>
+            </div>
+            <div class="time-label">Progression vers la maîtrise : 100% ✦</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ PLANNING HEBDOMADAIRE ═══ -->
+    <div class="section">
+      <div class="container">
+        <h2 class="section-title">Planning <span>Hebdomadaire</span> Type</h2>
+        <p class="section-subtitle">
+          Exemple d'organisation pour la Phase 2 (applicable et adaptable à
+          toutes les phases)
+        </p>
+
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>Jour</th>
+              <th>Activité principale (30–45 min)</th>
+              <th>Activité secondaire (20 min)</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="day-label">Samedi</td>
+              <td>Nouvelle leçon de grammaire (Médine Tome 1)</td>
+              <td>Flashcards Anki — vocabulaire</td>
+              <td><span class="tag-blue">Grammaire</span></td>
+            </tr>
+            <tr>
+              <td class="day-label">Dimanche</td>
+              <td>Écoute + répétition (ArabicPod101 ou Maha)</td>
+              <td>Exercices écrits sur la leçon de la veille</td>
+              <td><span class="tag-green">Oral</span></td>
+            </tr>
+            <tr>
+              <td class="day-label">Lundi</td>
+              <td>Lecture de texte courte (Médine Tome 1)</td>
+              <td>Anki + révision du vocabulaire de la semaine</td>
+              <td><span class="tag-orange">Lecture</span></td>
+            </tr>
+            <tr>
+              <td class="day-label">Mardi</td>
+              <td>Nouvelle leçon de grammaire / révision</td>
+              <td>Exercices de conjugaison (présent et passé)</td>
+              <td><span class="tag-blue">Grammaire</span></td>
+            </tr>
+            <tr>
+              <td class="day-label">Mercredi</td>
+              <td>Dictée et écriture libre (10 phrases)</td>
+              <td>Écoute de contenu arabophone (YouTube/radio)</td>
+              <td><span class="tag-orange">Écriture</span></td>
+            </tr>
+            <tr>
+              <td class="day-label">Jeudi</td>
+              <td>Révision globale de la semaine (grammaire + vocab)</td>
+              <td>Test personnel : QCM, exercices de traduction</td>
+              <td><span class="tag-green">Révision</span></td>
+            </tr>
+            <tr>
+              <td class="day-label">Vendredi</td>
+              <td>Pratique libre : regarder une vidéo en arabe, lire</td>
+              <td>Bilan écrit : qu'ai-je appris cette semaine ?</td>
+              <td><span class="tag-green">Immersion</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ═══ RESSOURCES GRATUITES ═══ -->
+    <div class="section">
+      <div class="container">
+        <h2 class="section-title">
+          Toutes les <span>Ressources Gratuites</span>
+        </h2>
+        <p class="section-subtitle">
+          Sélection des meilleures plateformes et outils pour chaque besoin
+        </p>
+
+        <div class="res-grid">
+          <div class="res-card">
+            <div class="res-card-icon">📘</div>
+            <div class="res-card-title">Maqsoud.net</div>
+            <div class="res-card-url">maqsoud.net</div>
+            <p>
+              Livres de Médine (tomes 1, 2, 3), livres de Mecque, Kitab al
+              Assaassi, livres pour enfants. La bibliothèque de référence pour
+              l'arabe classique.
+            </p>
+            <span class="res-card-level">Tous niveaux</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">🌐</div>
+            <div class="res-card-title">Madinah Arabic</div>
+            <div class="res-card-url">madinaharabic.com</div>
+            <p>
+              Cours en ligne complet basé sur les livres de Médine. Exercices
+              interactifs, audio, lexiques. Entièrement gratuit.
+            </p>
+            <span class="res-card-level">Débutant → Intermédiaire</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">🎥</div>
+            <div class="res-card-title">Learn Arabic with Maha</div>
+            <div class="res-card-url">YouTube</div>
+            <p>
+              Professeure native, plus de 300 leçons gratuites. Idéale pour la
+              prononciation, le vocabulaire et la grammaire. Très pédagogique.
+            </p>
+            <span class="res-card-level">Débutant → Intermédiaire</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">🎓</div>
+            <div class="res-card-title">Bayyinah Institute</div>
+            <div class="res-card-url">YouTube</div>
+            <p>
+              Cours de grammaire arabe approfondis par Nouman Ali Khan. "Arabic
+              with Purpose" est une référence absolue pour la grammaire.
+            </p>
+            <span class="res-card-level">Intermédiaire → Avancé</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">🃏</div>
+            <div class="res-card-title">Anki</div>
+            <div class="res-card-url">apps.ankiweb.net</div>
+            <p>
+              Logiciel de flashcards avec répétition espacée. Decks gratuits
+              pour le vocabulaire arabe, l'alphabet, les racines. Indispensable.
+            </p>
+            <span class="res-card-level">Tous niveaux</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">📱</div>
+            <div class="res-card-title">Duolingo Arabe</div>
+            <div class="res-card-url">duolingo.com</div>
+            <p>
+              Idéal pour débuter et maintenir une habitude quotidienne. Gamifié,
+              accessible. À utiliser en complément d'autres ressources.
+            </p>
+            <span class="res-card-level">Débutant</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">🔊</div>
+            <div class="res-card-title">Forvo</div>
+            <div class="res-card-url">forvo.com/languages/ar</div>
+            <p>
+              Dictionnaire de prononciation par des locuteurs natifs
+              arabophones. Essentiel pour corriger et valider sa prononciation.
+            </p>
+            <span class="res-card-level">Tous niveaux</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">📚</div>
+            <div class="res-card-title">Almaany</div>
+            <div class="res-card-url">almaany.com</div>
+            <p>
+              Le meilleur dictionnaire arabe en ligne. Arabe–français,
+              arabe–arabe, contextes d'usage, expressions. Incontournable.
+            </p>
+            <span class="res-card-level">Tous niveaux</span>
+          </div>
+          <div class="res-card">
+            <div class="res-card-icon">📖</div>
+            <div class="res-card-title">Hindawi</div>
+            <div class="res-card-url">hindawi.org</div>
+            <p>
+              Bibliothèque numérique arabe gratuite avec plus de 12 000 ouvrages
+              : romans, essais, poésie, sciences.
+            </p>
+            <span class="res-card-level">Avancé → Expert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ EXERCICES ═══ -->
+    <div class="section" style="background: var(--cream-dark)">
+      <div class="container">
+        <div class="ornament">✦ ✦ ✦</div>
+        <h2 class="section-title" style="margin-top: 20px">
+          Exercices <span>Pratiques</span>
+        </h2>
+        <p class="section-subtitle">
+          40+ exercices gradués — Du débutant à l'intermédiaire
+        </p>
+
+        <!-- ══ EXO 1 : ALPHABET ══ -->
+        <div class="exo-set">
+          <div class="exo-header">
+            <div class="exo-num">1</div>
+            <h3>
+              L'Alphabet Arabe — Identification et Formes
+              <small>Phase 1 • Niveau : Absolu débutant</small>
+            </h3>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 1.1 — Mémorisation des lettres isolées</h4>
+            <div class="exo-instructions">
+              📌 Étudiez ce tableau. Pour chaque lettre, entraînez-vous à
+              l'écrire 10 fois de suite en suivant l'ordre des traits. Puis
+              cachez la colonne "Translittération" et testez-vous.
+            </div>
+            <table class="alpha-table">
+              <thead>
+                <tr>
+                  <th>Lettre Isolée</th>
+                  <th>Nom de la lettre</th>
+                  <th>Translittération</th>
+                  <th>Forme initiale</th>
+                  <th>Forme médiane</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ar-cell">ا</td>
+                  <td>Alif</td>
+                  <td>ā / ʾ</td>
+                  <td class="ar-cell">أَـ</td>
+                  <td class="ar-cell">ـأـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ب</td>
+                  <td>Bāʾ</td>
+                  <td>b</td>
+                  <td class="ar-cell">بـ</td>
+                  <td class="ar-cell">ـبـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ت</td>
+                  <td>Tāʾ</td>
+                  <td>t</td>
+                  <td class="ar-cell">تـ</td>
+                  <td class="ar-cell">ـتـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ث</td>
+                  <td>Thāʾ</td>
+                  <td>th</td>
+                  <td class="ar-cell">ثـ</td>
+                  <td class="ar-cell">ـثـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ج</td>
+                  <td>Jīm</td>
+                  <td>j</td>
+                  <td class="ar-cell">جـ</td>
+                  <td class="ar-cell">ـجـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ح</td>
+                  <td>Ḥāʾ</td>
+                  <td>ḥ</td>
+                  <td class="ar-cell">حـ</td>
+                  <td class="ar-cell">ـحـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">خ</td>
+                  <td>Khāʾ</td>
+                  <td>kh</td>
+                  <td class="ar-cell">خـ</td>
+                  <td class="ar-cell">ـخـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">د</td>
+                  <td>Dāl</td>
+                  <td>d</td>
+                  <td class="ar-cell">دـ</td>
+                  <td class="ar-cell">ـد</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ذ</td>
+                  <td>Dhāl</td>
+                  <td>dh</td>
+                  <td class="ar-cell">ذـ</td>
+                  <td class="ar-cell">ـذ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ر</td>
+                  <td>Rāʾ</td>
+                  <td>r</td>
+                  <td class="ar-cell">رـ</td>
+                  <td class="ar-cell">ـر</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ز</td>
+                  <td>Zāy</td>
+                  <td>z</td>
+                  <td class="ar-cell">زـ</td>
+                  <td class="ar-cell">ـز</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">س</td>
+                  <td>Sīn</td>
+                  <td>s</td>
+                  <td class="ar-cell">سـ</td>
+                  <td class="ar-cell">ـسـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ش</td>
+                  <td>Shīn</td>
+                  <td>sh</td>
+                  <td class="ar-cell">شـ</td>
+                  <td class="ar-cell">ـشـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ص</td>
+                  <td>Ṣād</td>
+                  <td>ṣ</td>
+                  <td class="ar-cell">صـ</td>
+                  <td class="ar-cell">ـصـ</td>
+                </tr>
+                <tr>
+                  <td class="ar-cell">ض</td>
+                  <td>Ḍād</td>
+                  <td>ḍ</td>
+                  <td class="ar-cell">ضـ</td>
+                  <td class="ar-cell">ـضـ</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="tip-box" style="margin-top: 16px">
+              <span class="tip-icon">💡</span>
+              <p>
+                <strong>Astuce :</strong> Les lettres ر، ز، د، ذ، و، ا ne se
+                connectent qu'à la lettre qui les précède (jamais à la
+                suivante). Ces 6 lettres sont appelées les "lettres solaires
+                isolées". Mémorisez-les ensemble.
+              </p>
+            </div>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 1.2 — Identifiez la lettre correspondante</h4>
+            <div class="exo-instructions">
+              📌 Pour chaque son donné, écrivez la lettre arabe correspondante
+              sur papier. Ensuite vérifiez avec les réponses ci-dessous.
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                Quelle lettre produit le son <strong>"kh"</strong> (comme "Bach"
+                en allemand) ?
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">خ</span> — Khāʾ
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                Quelle lettre produit le son <strong>"ḥ"</strong> (h expiré très
+                fort, venant de la gorge) ?
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">ح</span> — Ḥāʾ (à ne pas
+                  confondre avec ه)
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                Quelle lettre représente le <strong>ʿayn (ع)</strong> ? Décrivez
+                brièvement sa forme.
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">ع</span> — Ressemble à un
+                  "3" renversé. Son unique à l'arabe, produit par la
+                  constriction du pharynx.
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">4.</span>
+              <div class="exo-content">
+                Les lettres <span class="ar-inline">س</span> et
+                <span class="ar-inline">ش</span> se distinguent par quoi ?
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">ش</span> possède 3 points
+                  au-dessus. س = "s", ش = "sh"
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">5.</span>
+              <div class="exo-content">
+                Écrivez la suite des lettres qui se ressemblent par leur forme
+                de base (sans points) : <strong>ب، ت، ث، ن، ي</strong> —
+                Qu'ont-elles en commun ?
+                <div class="exo-answer">
+                  Réponse : Elles partagent toutes la même base graphique (une
+                  courbe allongée). Seuls les <strong>points</strong> les
+                  distinguent : ب = 1 point dessous, ت = 2 dessus, ث = 3 dessus,
+                  ن = 1 dessus, ي = 2 dessous.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ EXO 2 : VOYELLES ══ -->
+        <div class="exo-set">
+          <div class="exo-header">
+            <div class="exo-num">2</div>
+            <h3>
+              Les Voyelles et la Lecture Vocalisée
+              <small>Phase 1 → Phase 2 • Niveau : Débutant</small>
+            </h3>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 2.1 — Lecture de syllabes vocalisées</h4>
+            <div class="exo-instructions">
+              📌 Lisez les syllabes ci-dessous à voix haute. Chaque syllabe est
+              écrite en arabe vocalisé (avec les voyelles courtes).
+              Translittérez chacune en alphabet latin.
+            </div>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+                margin: 16px 0;
+              "
+            >
+              <div
+                style="
+                  text-align: center;
+                  background: var(--cream);
+                  padding: 18px;
+                  border-radius: 8px;
+                "
+              >
+                <div class="ar" style="font-size: 30px; text-align: center">
+                  بَ
+                </div>
+                <div class="exo-answer" style="margin-top: 8px">
+                  ba (b + fatha)
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  background: var(--cream);
+                  padding: 18px;
+                  border-radius: 8px;
+                "
+              >
+                <div class="ar" style="font-size: 30px; text-align: center">
+                  بِ
+                </div>
+                <div class="exo-answer" style="margin-top: 8px">
+                  bi (b + kasra)
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  background: var(--cream);
+                  padding: 18px;
+                  border-radius: 8px;
+                "
+              >
+                <div class="ar" style="font-size: 30px; text-align: center">
+                  بُ
+                </div>
+                <div class="exo-answer" style="margin-top: 8px">
+                  bu (b + damma)
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  background: var(--cream);
+                  padding: 18px;
+                  border-radius: 8px;
+                "
+              >
+                <div class="ar" style="font-size: 30px; text-align: center">
+                  كَتَبَ
+                </div>
+                <div class="exo-answer" style="margin-top: 8px">
+                  kataba (il a écrit)
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  background: var(--cream);
+                  padding: 18px;
+                  border-radius: 8px;
+                "
+              >
+                <div class="ar" style="font-size: 30px; text-align: center">
+                  بَيْتٌ
+                </div>
+                <div class="exo-answer" style="margin-top: 8px">
+                  baytun (une maison)
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  background: var(--cream);
+                  padding: 18px;
+                  border-radius: 8px;
+                "
+              >
+                <div class="ar" style="font-size: 30px; text-align: center">
+                  كِتَابٌ
+                </div>
+                <div class="exo-answer" style="margin-top: 8px">
+                  kitābun (un livre)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 2.2 — Ajoutez les voyelles manquantes</h4>
+            <div class="exo-instructions">
+              📌 Ces mots sont écrits sans voyelles. Réécrivez-les en ajoutant
+              les voyelles courtes correctes (consultez un dictionnaire arabe
+              comme Almaany.com si nécessaire).
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                <span class="exo-arabic">كتب</span>
+                <div class="exo-trans">
+                  Indice : verbe "il a écrit" au passé
+                </div>
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">كَتَبَ</span> — kataba
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                <span class="exo-arabic">مدرسة</span>
+                <div class="exo-trans">Indice : lieu d'enseignement</div>
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">مَدْرَسَةٌ</span> —
+                  madrasatun (une école)
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                <span class="exo-arabic">طالب</span>
+                <div class="exo-trans">Indice : personne qui apprend</div>
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">طَالِبٌ</span> — ṭālibun (un
+                  étudiant)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ EXO 3 : VOCABULAIRE ══ -->
+        <div class="exo-set">
+          <div class="exo-header">
+            <div class="exo-num">3</div>
+            <h3>
+              Vocabulaire Essentiel — Thèmes de Base
+              <small>Phase 2 • Niveau : A1–A2</small>
+            </h3>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 3.1 — La famille (العائلة)</h4>
+            <div class="exo-instructions">
+              📌 Associez chaque mot arabe à sa traduction française. Puis
+              rédigez 3 phrases simples en arabe présentant votre famille.
+            </div>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin: 14px 0;
+              "
+            >
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">A.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px">أَبٌ</span> =
+                  <strong>père</strong> | <em>ʾabun</em>
+                </div>
+              </div>
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">B.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px">أُمٌّ</span>
+                  = <strong>mère</strong> | <em>ʾummun</em>
+                </div>
+              </div>
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">C.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px">أَخٌ</span> =
+                  <strong>frère</strong> | <em>ʾakhun</em>
+                </div>
+              </div>
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">D.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px">أُخْتٌ</span>
+                  = <strong>sœur</strong> | <em>ʾukhtun</em>
+                </div>
+              </div>
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">E.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px">جَدٌّ</span>
+                  = <strong>grand-père</strong> | <em>jaddun</em>
+                </div>
+              </div>
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">F.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px"
+                    >جَدَّةٌ</span
+                  >
+                  = <strong>grand-mère</strong> | <em>jaddatun</em>
+                </div>
+              </div>
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">G.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px">ابْنٌ</span>
+                  = <strong>fils</strong> | <em>ibnun</em>
+                </div>
+              </div>
+              <div
+                class="exo-item"
+                style="
+                  border: 1px solid var(--cream-dark);
+                  border-radius: 8px;
+                  padding: 12px 14px;
+                  margin: 0;
+                "
+              >
+                <span class="exo-letter">H.</span>
+                <div class="exo-content">
+                  <span class="exo-arabic" style="font-size: 20px">بِنْتٌ</span>
+                  = <strong>fille</strong> | <em>bintun</em>
+                </div>
+              </div>
+            </div>
+
+            <div class="tip-box">
+              <span class="tip-icon">✍️</span>
+              <p>
+                <strong>Exercice à faire :</strong> Rédigez sur papier 3 phrases
+                du type : <br />
+                <span class="ar-inline">أَبِي اسْمُهُ...</span> (Mon père
+                s'appelle…) |
+                <span class="ar-inline">لِي أَخٌ وَاحِدٌ</span> (J'ai un seul
+                frère) | <span class="ar-inline">أُمِّي مُعَلِّمَةٌ</span> (Ma
+                mère est enseignante)
+              </p>
+            </div>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 3.2 — QCM Vocabulaire</h4>
+            <div class="exo-instructions">
+              📌 Pour chaque mot arabe, sélectionnez la bonne traduction (la
+              réponse correcte est marquée en vert).
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                <strong
+                  >Que signifie <span class="ar-inline">مَاءٌ</span> ?</strong
+                >
+                <div class="mcq-options">
+                  <div class="mcq-opt">
+                    <span class="opt-letter">A</span> Pain
+                  </div>
+                  <div class="mcq-opt correct">
+                    <span
+                      class="opt-letter"
+                      style="background: var(--sage); color: white"
+                      >B</span
+                    >
+                    Eau
+                  </div>
+                  <div class="mcq-opt">
+                    <span class="opt-letter">C</span> Lait
+                  </div>
+                  <div class="mcq-opt">
+                    <span class="opt-letter">D</span> Jus
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                <strong
+                  >Que signifie
+                  <span class="ar-inline">مَدِينَةٌ</span> ?</strong
+                >
+                <div class="mcq-options">
+                  <div class="mcq-opt">
+                    <span class="opt-letter">A</span> Village
+                  </div>
+                  <div class="mcq-opt">
+                    <span class="opt-letter">B</span> Pays
+                  </div>
+                  <div class="mcq-opt correct">
+                    <span
+                      class="opt-letter"
+                      style="background: var(--sage); color: white"
+                      >C</span
+                    >
+                    Ville
+                  </div>
+                  <div class="mcq-opt">
+                    <span class="opt-letter">D</span> Quartier
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                <strong
+                  >Que signifie <span class="ar-inline">يَوْمٌ</span> ?</strong
+                >
+                <div class="mcq-options">
+                  <div class="mcq-opt">
+                    <span class="opt-letter">A</span> Année
+                  </div>
+                  <div class="mcq-opt correct">
+                    <span
+                      class="opt-letter"
+                      style="background: var(--sage); color: white"
+                      >B</span
+                    >
+                    Jour
+                  </div>
+                  <div class="mcq-opt">
+                    <span class="opt-letter">C</span> Semaine
+                  </div>
+                  <div class="mcq-opt">
+                    <span class="opt-letter">D</span> Mois
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ EXO 4 : GRAMMAIRE ══ -->
+        <div class="exo-set">
+          <div class="exo-header">
+            <div class="exo-num">4</div>
+            <h3>
+              Grammaire — La Phrase Nominale et le Genre
+              <small>Phase 2 → Phase 3 • Niveau : A2–B1</small>
+            </h3>
+          </div>
+
+          <div class="exo-box">
+            <h4>
+              Exercice 4.1 — Construisez des phrases nominales (المبتدأ والخبر)
+            </h4>
+            <div class="exo-instructions">
+              📌 En arabe, une phrase nominale simple = Sujet (مبتدأ) + Attribut
+              (خبر). Il n'y a pas de verbe "être" au présent. Traduisez en arabe
+              les phrases suivantes en utilisant le vocabulaire donné.
+            </div>
+
+            <div class="tip-box">
+              <span class="tip-icon">📖</span>
+              <p>
+                <strong>Rappel de structure :</strong> الكتابُ جديدٌ (Le livre
+                est nouveau) → مبتدأ + خبر. Le sujet défini (avec ال) + attribut
+                indéfini (avec tanwin ٌ).
+              </p>
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                <strong>Traduire : "L'étudiant est intelligent."</strong><br />
+                <em
+                  >Vocabulaire : طَالِبٌ (étudiant) | ذَكِيٌّ (intelligent)</em
+                >
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">اَلطَّالِبُ ذَكِيٌّ</span>
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                <strong>Traduire : "La maison est grande."</strong><br />
+                <em>Vocabulaire : بَيْتٌ (maison, masc.) | كَبِيرٌ (grand)</em>
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">اَلْبَيْتُ كَبِيرٌ</span>
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                <strong>Traduire : "La voiture est rapide."</strong><br />
+                <em
+                  >Vocabulaire : سَيَّارَةٌ (voiture, fém.) | سَرِيعَةٌ (rapide,
+                  fém.)</em
+                >
+                <div class="exo-answer">
+                  Réponse :
+                  <span class="ar-inline">اَلسَّيَّارَةُ سَرِيعَةٌ</span>
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">4.</span>
+              <div class="exo-content">
+                <strong>Traduire : "Muhammad est un professeur."</strong><br />
+                <em
+                  >Vocabulaire : مُحَمَّدٌ (Muhammad) | مُدَرِّسٌ
+                  (professeur)</em
+                >
+                <div class="exo-answer">
+                  Réponse :
+                  <span class="ar-inline">مُحَمَّدٌ مُدَرِّسٌ</span> (pas
+                  d'article ici car sujet propre)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 4.2 — Accord en genre : masculin ↔ féminin</h4>
+            <div class="exo-instructions">
+              📌 En arabe, les adjectifs s'accordent en genre avec le nom. Le
+              féminin se forme généralement en ajoutant le ة (ta marbuta).
+              Mettez les adjectifs au féminin.
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                <span class="ar-inline">كَبِيرٌ</span> (grand, masc.) → féminin
+                ?
+                <div class="exo-answer">
+                  <span class="ar-inline">كَبِيرَةٌ</span> — kabīratun (grande)
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                <span class="ar-inline">جَمِيلٌ</span> (beau, masc.) → féminin ?
+                <div class="exo-answer">
+                  <span class="ar-inline">جَمِيلَةٌ</span> — jamīlatun (belle)
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                <span class="ar-inline">مُعَلِّمٌ</span> (enseignant, masc.) →
+                féminin ?
+                <div class="exo-answer">
+                  <span class="ar-inline">مُعَلِّمَةٌ</span> — muʿallimatun
+                  (enseignante)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 4.3 — Les pronoms personnels et leur usage</h4>
+            <div class="exo-instructions">
+              📌 Complétez les phrases avec le pronom personnel correct.
+              Choisissez parmi : أنا / أنتَ / أنتِ / هو / هي / نحن / هم
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                <span class="exo-arabic">_____ طَالِبٌ.</span>
+                <em class="exo-trans"
+                  >Indice : vous parlez de vous-même (masc.)</em
+                >
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">أَنَا طَالِبٌ</span> — Je
+                  suis un étudiant.
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                <span class="exo-arabic">_____ مِنْ أَيْنَ؟</span>
+                <em class="exo-trans"
+                  >Indice : vous vous adressez à un homme</em
+                >
+                <div class="exo-answer">
+                  Réponse : <span class="ar-inline">أَنْتَ مِنْ أَيْنَ؟</span> —
+                  D'où es-tu ? (à un homme)
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                <span class="exo-arabic"
+                  >_____ مُدَرِّسَةٌ فِي الْمَدْرَسَةِ.</span
+                >
+                <em class="exo-trans">Indice : on parle d'une femme absente</em>
+                <div class="exo-answer">
+                  Réponse :
+                  <span class="ar-inline"
+                    >هِيَ مُدَرِّسَةٌ فِي الْمَدْرَسَةِ</span
+                  >
+                  — Elle est enseignante à l'école.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ EXO 5 : CONJUGAISON ══ -->
+        <div class="exo-set">
+          <div class="exo-header">
+            <div class="exo-num">5</div>
+            <h3>
+              Conjugaison — Passé & Présent
+              <small>Phase 2 → Phase 3 • Niveau : A2–B1</small>
+            </h3>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 5.1 — Conjuguez le verbe كَتَبَ (écrire) au passé</h4>
+            <div class="exo-instructions">
+              📌 Le verbe arabe se conjugue au passé en ajoutant des suffixes à
+              la racine. Complétez le tableau suivant et entraînez-vous à lire
+              chaque forme à voix haute.
+            </div>
+
+            <table class="alpha-table">
+              <thead>
+                <tr>
+                  <th>Pronom</th>
+                  <th>Forme conjuguée</th>
+                  <th>Translittération</th>
+                  <th>Traduction</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>هو (il)</td>
+                  <td class="ar-cell">كَتَبَ</td>
+                  <td>kataba</td>
+                  <td>il a écrit</td>
+                </tr>
+                <tr>
+                  <td>هي (elle)</td>
+                  <td class="ar-cell">كَتَبَتْ</td>
+                  <td>katabat</td>
+                  <td>elle a écrit</td>
+                </tr>
+                <tr>
+                  <td>أنتَ (tu, masc.)</td>
+                  <td class="ar-cell">كَتَبْتَ</td>
+                  <td>katabta</td>
+                  <td>tu as écrit</td>
+                </tr>
+                <tr>
+                  <td>أنتِ (tu, fém.)</td>
+                  <td class="ar-cell">كَتَبْتِ</td>
+                  <td>katabti</td>
+                  <td>tu as écrit</td>
+                </tr>
+                <tr>
+                  <td>أنا (je)</td>
+                  <td class="ar-cell">كَتَبْتُ</td>
+                  <td>katabtu</td>
+                  <td>j'ai écrit</td>
+                </tr>
+                <tr>
+                  <td>نحن (nous)</td>
+                  <td class="ar-cell">كَتَبْنَا</td>
+                  <td>katabnā</td>
+                  <td>nous avons écrit</td>
+                </tr>
+                <tr>
+                  <td>هم (ils)</td>
+                  <td class="ar-cell">كَتَبُوا</td>
+                  <td>katabū</td>
+                  <td>ils ont écrit</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="tip-box" style="margin-top: 14px">
+              <span class="tip-icon">💡</span>
+              <p>
+                <strong>Méthode :</strong> Copiez ce tableau, puis cachez les
+                colonnes "Forme conjuguée" et "Translittération".
+                Reconstituez-les de mémoire. Répétez cet exercice avec les
+                verbes : <span class="ar-inline">ذَهَبَ</span> (aller),
+                <span class="ar-inline">قَرَأَ</span> (lire),
+                <span class="ar-inline">أَكَلَ</span> (manger).
+              </p>
+            </div>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 5.2 — Complétez les phrases en conjuguant le verbe</h4>
+            <div class="exo-instructions">
+              📌 Conjuguez le verbe entre parenthèses au passé en accord avec le
+              sujet de la phrase.
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                <span class="exo-arabic">الطَّالِبُ _____ الدَّرْسَ.</span>
+                <em class="exo-trans"
+                  >Verbe : (فَهِمَ — comprendre) | Sujet : étudiant (masc.
+                  sing.)</em
+                >
+                <div class="exo-answer">
+                  Réponse :
+                  <span class="ar-inline">الطَّالِبُ فَهِمَ الدَّرْسَ</span> —
+                  L'étudiant a compris la leçon.
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                <span class="exo-arabic">الأُمُّ _____ الطَّعَامَ.</span>
+                <em class="exo-trans"
+                  >Verbe : (طَبَخَ — cuisiner) | Sujet : la mère (fém.
+                  sing.)</em
+                >
+                <div class="exo-answer">
+                  Réponse :
+                  <span class="ar-inline">الأُمُّ طَبَخَتِ الطَّعَامَ</span> —
+                  La mère a cuisiné le repas.
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                <span class="exo-arabic"
+                  >نَحْنُ _____ إِلَى الْمَدْرَسَةِ.</span
+                >
+                <em class="exo-trans"
+                  >Verbe : (ذَهَبَ — aller) | Sujet : nous</em
+                >
+                <div class="exo-answer">
+                  Réponse :
+                  <span class="ar-inline"
+                    >نَحْنُ ذَهَبْنَا إِلَى الْمَدْرَسَةِ</span
+                  >
+                  — Nous sommes allés à l'école.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ EXO 6 : TRADUCTION ══ -->
+        <div class="exo-set">
+          <div class="exo-header">
+            <div class="exo-num">6</div>
+            <h3>
+              Traduction et Expression Écrite
+              <small>Phase 3 • Niveau : B1</small>
+            </h3>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 6.1 — Traduisez de l'arabe vers le français</h4>
+            <div class="exo-instructions">
+              📌 Lisez les phrases suivantes et traduisez-les en français. Elles
+              contiennent des structures grammaticales des phases 1 et 2.
+            </div>
+
+            <div class="exo-item">
+              <span class="exo-letter">1.</span>
+              <div class="exo-content">
+                <span class="exo-arabic"
+                  >اَلْوَلَدُ يَقْرَأُ كِتَابًا فِي الْغُرْفَةِ.</span
+                >
+                <div class="exo-answer">
+                  Réponse : Le garçon lit un livre dans la chambre.
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">2.</span>
+              <div class="exo-content">
+                <span class="exo-arabic"
+                  >ذَهَبَتِ الْبِنْتُ إِلَى السُّوقِ مَعَ أُمِّهَا.</span
+                >
+                <div class="exo-answer">
+                  Réponse : La fille est allée au marché avec sa mère.
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">3.</span>
+              <div class="exo-content">
+                <span class="exo-arabic"
+                  >هَذَا الْبَيْتُ كَبِيرٌ وَجَمِيلٌ جِدًّا.</span
+                >
+                <div class="exo-answer">
+                  Réponse : Cette maison est très grande et très belle.
+                </div>
+              </div>
+            </div>
+            <div class="exo-item">
+              <span class="exo-letter">4.</span>
+              <div class="exo-content">
+                <span class="exo-arabic"
+                  >هَلْ أَنْتَ مِنَ الْمَغْرِبِ أَمْ مِنَ السَّنِيغَالِ؟</span
+                >
+                <div class="exo-answer">
+                  Réponse : Es-tu du Maroc ou du Sénégal ?
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exo-box">
+            <h4>Exercice 6.2 — Rédaction libre (Devoir à faire)</h4>
+            <div class="exo-instructions">
+              📌 Rédigez un court texte arabe de 5 à 8 phrases sur le sujet
+              suivant. Utilisez les structures étudiées.
+            </div>
+            <div class="tip-box">
+              <span class="tip-icon">📝</span>
+              <p>
+                <strong>Sujet :</strong> Présentez-vous en arabe. Incluez :
+                votre nom, votre pays, votre métier ou vos études, votre famille
+                (brièvement), vos hobbies, et une phrase sur votre apprentissage
+                de l'arabe.<br /><br />
+                <strong>Exemple de début :</strong>
+                <span class="ar-inline"
+                  >اِسْمِي ... وَأَنَا مِنْ ... أَسْكُنُ فِي ...</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CONSEILS FINAUX ═══ -->
+    <div class="section">
+      <div class="container">
+        <h2 class="section-title">Conseils <span>d'Expert</span></h2>
+        <p class="section-subtitle">
+          Les 7 habitudes des apprenants d'arabe qui réussissent
+        </p>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 22px;
+          "
+        >
+          <div class="intro-card" style="border-color: #0d1b2a">
+            <h3>1️⃣ La constance avant tout</h3>
+            <p>
+              30 minutes par jour vaut mieux que 3 heures une fois par semaine.
+              Créez un rituel quotidien. L'arabe se construit dans la durée.
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: var(--teal)">
+            <h3>2️⃣ Apprenez les racines (الجذور)</h3>
+            <p>
+              L'arabe est une langue à racines trilitères. Chaque groupe de 3
+              consonnes génère une famille de mots. Ex : ك-ت-ب → كتاب، مكتبة،
+              كاتب، مكتب…
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: var(--sage)">
+            <h3>3️⃣ Écrivez à la main</h3>
+            <p>
+              L'écriture manuscrite ancre les lettres dans la mémoire motrice.
+              Copiez chaque nouveau texte. N'utilisez pas que le clavier.
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: var(--gold-dark)">
+            <h3>4️⃣ Exposez-vous à l'audio</h3>
+            <p>
+              Écoutez de l'arabe tous les jours, même passif (radio, podcasts).
+              L'oreille doit s'habituer avant la bouche. Utilisez Al Jazeera et
+              les podcasts arabes.
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: var(--rust)">
+            <h3>5️⃣ Utilisez Anki sérieusement</h3>
+            <p>
+              Faites vos révisions Anki CHAQUE JOUR sans exception. 15–20
+              minutes d'Anki quotidiennes sur 2 ans vous donnent un vocabulaire
+              de 5 000+ mots.
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: #4a2c6a">
+            <h3>6️⃣ Trouvez un locuteur natif</h3>
+            <p>
+              Dès le niveau A2, cherchez un partenaire sur HelloTalk, Tandem ou
+              iTalki (cours gratuits avec professeurs natifs volontaires).
+            </p>
+          </div>
+          <div class="intro-card" style="border-color: #1a3a4a">
+            <h3>7️⃣ Ne sautez pas la grammaire</h3>
+            <p>
+              L'arabe a une grammaire riche et précise (إعراب). Ne la négligez
+              pas au profit du seul vocabulaire. Un solide socle grammatical
+              accélère tout le reste.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <div class="footer">
+      <div class="container">
+        <span class="footer-arabic">طَلَبُ الْعِلْمِ فَرِيضَةٌ</span>
+        <p><em>"La recherche du savoir est une obligation."</em></p>
+        <br />
+        <p>
+          Feuille de route conçue par
+          <strong>votre expert en pédagogie de l'arabe</strong> • Programme
+          progressif vers la maîtrise complète
+        </p>
+        <p style="margin-top: 8px; font-size: 13px">
+          Ressources : maqsoud.net • madinaharabic.com • hindawi.org •
+          almaany.com • ankiweb.net • et plus
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
