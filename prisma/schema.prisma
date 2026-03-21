@@ -1,0 +1,218 @@
+// Prisma schema for ArabicMaster Pro
+// PostgreSQL database with NextAuth integration
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// AUTHENTICATION MODELS (NextAuth)
+// ============================================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  name          String?
+  image         String?
+  password      String?   // For email/password auth (hashed with bcrypt)
+  role          Role      @default(USER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // NextAuth relations
+  accounts Account[]
+  sessions Session[]
+
+  // App relations
+  progress     Progress[]
+  achievements UserAchievement[]
+  stats        UserStats?
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// ============================================
+// LEARNING PROGRESS MODELS
+// ============================================
+
+model Progress {
+  id            String    @id @default(cuid())
+  userId        String
+  phaseId       Int
+  lessonId      String
+  exerciseId    String?
+  completed     Boolean   @default(false)
+  score         Int?      // Score 0-100
+  timeSpent     Int?      // Time spent in seconds
+  attempts      Int       @default(0)
+  lastAttemptAt DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId, exerciseId])
+  @@index([userId, phaseId])
+  @@index([userId, lessonId])
+  @@map("progress")
+}
+
+// ============================================
+// GAMIFICATION MODELS
+// ============================================
+
+model UserStats {
+  id                 String    @id @default(cuid())
+  userId             String    @unique
+  xp                 Int       @default(0)
+  level              Int       @default(1)
+  streak             Int       @default(0)
+  longestStreak      Int       @default(0)
+  lastActiveDate     DateTime?
+  totalTimeSpent     Int       @default(0) // Total time in seconds
+  lessonsCompleted   Int       @default(0)
+  exercisesCompleted Int       @default(0)
+  perfectScores      Int       @default(0)
+  wordsLearned       Int       @default(0)
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_stats")
+}
+
+model UserAchievement {
+  id            String   @id @default(cuid())
+  userId        String
+  achievementId String
+  unlockedAt    DateTime @default(now())
+  notified      Boolean  @default(false)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@map("user_achievements")
+}
+
+// ============================================
+// CONTENT MODELS (for admin management)
+// ============================================
+
+model Lesson {
+  id          String   @id @default(cuid())
+  phaseId     Int
+  order       Int
+  slug        String   @unique
+  titleEn     String
+  titleFr     String
+  titleAr     String
+  descEn      String?  @db.Text
+  descFr      String?  @db.Text
+  descAr      String?  @db.Text
+  duration    Int      @default(30) // Estimated duration in minutes
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  exercises Exercise[]
+
+  @@index([phaseId, order])
+  @@map("lessons")
+}
+
+model Exercise {
+  id           String         @id @default(cuid())
+  lessonId     String
+  order        Int
+  type         ExerciseType
+  difficulty   Difficulty
+  questionEn   String         @db.Text
+  questionFr   String         @db.Text
+  questionAr   String?        @db.Text
+  options      Json?          // For multiple choice
+  correctAnswer String        @db.Text
+  explanationEn String?       @db.Text
+  explanationFr String?       @db.Text
+  explanationAr String?       @db.Text
+  audioText    String?        @db.Text // Text for TTS
+  isAIGenerated Boolean       @default(false)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@index([lessonId, order])
+  @@map("exercises")
+}
+
+// ============================================
+// ENUMS
+// ============================================
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum ExerciseType {
+  MULTIPLE_CHOICE
+  WRITING
+  LISTENING
+  ORAL
+  MATCHING
+  FILL_BLANK
+  TRANSLATION
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
