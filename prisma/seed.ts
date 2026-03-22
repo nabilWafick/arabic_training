@@ -12,7 +12,7 @@
  * Run with: pnpm db:seed
  */
 
-import { PrismaClient, Role, ExerciseType, Difficulty } from "@/prisma/generated/prisma/client";
+import { PrismaClient, Role, ExerciseType, Difficulty } from "./generated/prisma/client/client.ts";
 import { PrismaPg } from "@prisma/adapter-pg";
 import * as argon2 from "argon2";
 import "dotenv/config";

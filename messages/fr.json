@@ -1,0 +1,89 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "learn": "Apprendre",
+    "practice": "Pratiquer",
+    "achievements": "Accomplissements",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "profile": "Profil",
+    "settings": "Paramètres"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "continue": "Continuer",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "retry": "Réessayer",
+    "confirm": "Confirmer",
+    "skip": "Sauter",
+    "done": "Terminé"
+  },
+  "learning": {
+    "phase": "Phase",
+    "lesson": "Leçon",
+    "exercise": "Exercice",
+    "score": "Score",
+    "xp": "XP",
+    "level": "Niveau",
+    "streak": "Série",
+    "progress": "Progrès",
+    "complete": "Complété",
+    "incomplete": "Incomplet",
+    "startLesson": "Commencer la leçon",
+    "resumeLesson": "Reprendre la leçon",
+    "completeLesson": "Terminer la leçon",
+    "viewDetails": "Voir les détails",
+    "practiceMore": "Pratiquer plus"
+  },
+  "gamification": {
+    "achievementUnlocked": "Accomplissement débloqué!",
+    "levelUp": "Montée de niveau!",
+    "streakBonus": "Bonus de série",
+    "congratulations": "Félicitations!",
+    "keepItUp": "Continuez comme ça!",
+    "brilliantWork": "Travail brillant!",
+    "excellentProgress": "Progrès excellent!"
+  },
+  "arabic": {
+    "letters": "Lettres",
+    "vowels": "Voyelles",
+    "numbers": "Nombres",
+    "grammar": "Grammaire",
+    "vocabulary": "Vocabulaire",
+    "alphabet": "Alphabet",
+    "pronunciation": "Prononciation",
+    "writing": "Écriture",
+    "reading": "Lecture",
+    "listening": "Écoute",
+    "conversation": "Conversation",
+    "modernStandardArabic": "Arabe standard moderne",
+    "colloquialArabic": "Arabe colloquial"
+  },
+  "errors": {
+    "notFound": "Page non trouvée",
+    "unauthorized": "Accès non autorisé",
+    "forbidden": "Accès interdit",
+    "serverError": "Une erreur serveur s'est produite",
+    "invalidInput": "Entrée invalide",
+    "sessionExpired": "Votre session a expiré",
+    "tryAgain": "Veuillez réessayer",
+    "contactSupport": "Contactez l'assistance pour obtenir de l'aide"
+  },
+  "messages": {
+    "welcomeBack": "Bienvenue!",
+    "selectLanguage": "Sélectionnez votre langue préférée",
+    "noLessonsAvailable": "Aucune leçon disponible",
+    "completeToUnlock": "Complétez les leçons précédentes pour déverrouiller celle-ci"
+  }
+}

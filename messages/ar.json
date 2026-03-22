@@ -1,0 +1,89 @@
+{
+  "navigation": {
+    "home": "الرئيسية",
+    "dashboard": "لوحة التحكم",
+    "learn": "تعلم",
+    "practice": "تدرب",
+    "achievements": "الإنجازات",
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "settings": "الإعدادات"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "continue": "متابعة",
+    "back": "رجوع",
+    "next": "التالي",
+    "submit": "إرسال",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق",
+    "retry": "إعادة محاولة",
+    "confirm": "تأكيد",
+    "skip": "تخطي",
+    "done": "تم"
+  },
+  "learning": {
+    "phase": "المرحلة",
+    "lesson": "الدرس",
+    "exercise": "التمرين",
+    "score": "النتيجة",
+    "xp": "نقاط الخبرة",
+    "level": "المستوى",
+    "streak": "السلسلة",
+    "progress": "التقدم",
+    "complete": "مكتمل",
+    "incomplete": "غير مكتمل",
+    "startLesson": "ابدأ الدرس",
+    "resumeLesson": "استئناف الدرس",
+    "completeLesson": "إكمال الدرس",
+    "viewDetails": "عرض التفاصيل",
+    "practiceMore": "تدرب أكثر"
+  },
+  "gamification": {
+    "achievementUnlocked": "تم فتح إنجاز!",
+    "levelUp": "ارتقاء في المستوى!",
+    "streakBonus": "مكافأة السلسلة",
+    "congratulations": "تهانينا!",
+    "keepItUp": "استمر في المحاولة!",
+    "brilliantWork": "عمل رائع!",
+    "excellentProgress": "تقدم ممتاز!"
+  },
+  "arabic": {
+    "letters": "الأحرف",
+    "vowels": "الحركات",
+    "numbers": "الأرقام",
+    "grammar": "القواعد",
+    "vocabulary": "المفردات",
+    "alphabet": "الأبجدية",
+    "pronunciation": "النطق",
+    "writing": "الكتابة",
+    "reading": "القراءة",
+    "listening": "الاستماع",
+    "conversation": "المحادثة",
+    "modernStandardArabic": "الفصحى الحديثة",
+    "colloquialArabic": "اللهجة العامية"
+  },
+  "errors": {
+    "notFound": "الصفحة غير موجودة",
+    "unauthorized": "لا يوجد تفويض للوصول",
+    "forbidden": "الوصول مرفوع",
+    "serverError": "حدث خطأ في الخادم",
+    "invalidInput": "إدخال غير صحيح",
+    "sessionExpired": "انتهت جلستك",
+    "tryAgain": "يرجى المحاولة مرة أخرى",
+    "contactSupport": "اتصل بالدعم للحصول على المساعدة"
+  },
+  "messages": {
+    "welcomeBack": "مرحبا بعودتك!",
+    "selectLanguage": "اختر اللغة المفضلة لديك",
+    "noLessonsAvailable": "لا توجد دروس متاحة",
+    "completeToUnlock": "أكمل الدروس السابقة لفتح هذا الدرس"
+  }
+}

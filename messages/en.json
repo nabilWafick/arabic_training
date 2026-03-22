@@ -1,0 +1,89 @@
+{
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "learn": "Learn",
+    "practice": "Practice",
+    "achievements": "Achievements",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "retry": "Retry",
+    "confirm": "Confirm",
+    "skip": "Skip",
+    "done": "Done"
+  },
+  "learning": {
+    "phase": "Phase",
+    "lesson": "Lesson",
+    "exercise": "Exercise",
+    "score": "Score",
+    "xp": "XP",
+    "level": "Level",
+    "streak": "Streak",
+    "progress": "Progress",
+    "complete": "Complete",
+    "incomplete": "Incomplete",
+    "startLesson": "Start Lesson",
+    "resumeLesson": "Resume Lesson",
+    "completeLesson": "Complete Lesson",
+    "viewDetails": "View Details",
+    "practiceMore": "Practice More"
+  },
+  "gamification": {
+    "achievementUnlocked": "Achievement Unlocked!",
+    "levelUp": "Level Up!",
+    "streakBonus": "Streak Bonus",
+    "congratulations": "Congratulations!",
+    "keepItUp": "Keep it up!",
+    "brilliantWork": "Brilliant work!",
+    "excellentProgress": "Excellent progress!"
+  },
+  "arabic": {
+    "letters": "Letters",
+    "vowels": "Vowels",
+    "numbers": "Numbers",
+    "grammar": "Grammar",
+    "vocabulary": "Vocabulary",
+    "alphabet": "Alphabet",
+    "pronunciation": "Pronunciation",
+    "writing": "Writing",
+    "reading": "Reading",
+    "listening": "Listening",
+    "conversation": "Conversation",
+    "modernStandardArabic": "Modern Standard Arabic",
+    "colloquialArabic": "Colloquial Arabic"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "serverError": "Server error occurred",
+    "invalidInput": "Invalid input",
+    "sessionExpired": "Your session has expired",
+    "tryAgain": "Please try again",
+    "contactSupport": "Contact support for help"
+  },
+  "messages": {
+    "welcomeBack": "Welcome back!",
+    "selectLanguage": "Select your preferred language",
+    "noLessonsAvailable": "No lessons available",
+    "completeToUnlock": "Complete previous lessons to unlock this one"
+  }
+}
