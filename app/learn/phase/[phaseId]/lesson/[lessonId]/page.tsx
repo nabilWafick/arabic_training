@@ -26,6 +26,7 @@ import { Separator } from "@/components/ui/separator";
 import { Navbar, Footer } from "@/components/layout";
 import { LetterDisplay, VowelMarks, PronunciationPlayer } from "@/components/arabic";
 import { MultipleChoice, WritingExercise, MatchingExercise, ListeningExercise } from "@/components/exercises";
+import { AILearningAssistant } from "@/components/ai";
 import { useProgressStore } from "@/stores/useProgressStore";
 import { useGamificationStore } from "@/stores/useGamificationStore";
 import { useAudioStore } from "@/stores/useAudioStore";
@@ -674,6 +675,15 @@ export default function LessonPage({ params }: LessonPageProps) {
           </div>
         </div>
       </main>
+
+      {/* AI Learning Assistant - Floating helper */}
+      <AILearningAssistant
+        lessonId={lessonIdFull}
+        lessonTitle={lesson.title}
+        lessonTitleAr={lesson.titleAr}
+        lessonContent={lesson.content.theory.map(t => `${t.title}: ${t.content}`).join('\n')}
+        phaseLevel={phaseIdNum}
+      />
 
       <Footer />
     </div>
