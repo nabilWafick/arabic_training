@@ -43,6 +43,7 @@ export function ListeningExercise({
   const [isPlaying, setIsPlaying] = useState(false);
   const [playCount, setPlayCount] = useState(0);
   const [hasPlayedOnce, setHasPlayedOnce] = useState(false);
+  const [attempts, setAttempts] = useState(1);
   const [startTime] = useState(Date.now());
   
   const { speak, stop, rate, setRate, isEnabled } = useAudioStore();
@@ -133,8 +134,9 @@ export function ListeningExercise({
       timeSpent,
       answer: selectedOption.toString(),
       xpEarned,
+      attempts,
     });
-  }, [selectedOption, exercise, startTime, playCount, maxPlays, addXP, onComplete]);
+  }, [selectedOption, exercise, startTime, playCount, maxPlays, addXP, onComplete, attempts]);
   
   /**
    * Reset the exercise
@@ -145,6 +147,7 @@ export function ListeningExercise({
     setIsCorrect(false);
     setPlayCount(0);
     setHasPlayedOnce(false);
+    setAttempts((prev) => prev + 1);
     handleStop();
   };
   

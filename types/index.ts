@@ -143,10 +143,10 @@ export interface ExerciseResult {
   correct: boolean;
   score: number;
   timeSpent: number;
-  attempts?: number; // Optional for backward compatibility
-  userAnswer?: string | number | string[]; // Optional for backward compatibility
-  answer?: string | number | string[]; // Alias for userAnswer
-  xpEarned?: number; // XP earned for this exercise
+  answer: string | number | string[]; // User's answer (required for review/analytics)
+  xpEarned: number; // XP earned for this exercise (required for gamification)
+  attempts?: number; // Number of attempts on this exercise (optional, defaults to 1)
+  userAnswer?: string | number | string[]; // Alias for answer (for backward compatibility)
 }
 
 // ============================================

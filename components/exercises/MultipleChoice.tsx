@@ -43,6 +43,7 @@ export function MultipleChoice({
   const [isCorrect, setIsCorrect] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState(timeLimit);
+  const [attempts, setAttempts] = useState(1);
   const [startTime] = useState(Date.now());
   
   const { speak, isEnabled: audioEnabled } = useAudioStore();
@@ -104,8 +105,9 @@ export function MultipleChoice({
       timeSpent,
       answer: selectedOption?.toString() || "",
       xpEarned,
+      attempts,
     });
-  }, [selectedOption, exercise, startTime, addXP, onComplete, timeRemaining]);
+  }, [selectedOption, exercise, startTime, addXP, onComplete, timeRemaining, attempts]);
   
   /**
    * Reset the exercise
@@ -116,6 +118,7 @@ export function MultipleChoice({
     setIsCorrect(false);
     setShowHint(false);
     setTimeRemaining(timeLimit);
+    setAttempts((prev) => prev + 1);
   };
   
   /**

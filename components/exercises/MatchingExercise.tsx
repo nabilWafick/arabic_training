@@ -69,6 +69,7 @@ export function MatchingExercise({
   const [selectedLeft, setSelectedLeft] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [results, setResults] = useState<Record<string, boolean>>({});
+  const [attempts, setAttempts] = useState(1);
   const [startTime] = useState(Date.now());
   
   const { addXP } = useGamificationStore();
@@ -168,8 +169,9 @@ export function MatchingExercise({
       timeSpent,
       answer: JSON.stringify(matches),
       xpEarned,
+      attempts,
     });
-  }, [allMatched, pairs, matches, correctCount, startTime, exercise, addXP, onComplete]);
+  }, [allMatched, pairs, matches, correctCount, startTime, exercise, addXP, onComplete, attempts]);
   
   /**
    * Reset the exercise
@@ -179,6 +181,7 @@ export function MatchingExercise({
     setSelectedLeft(null);
     setIsAnswered(false);
     setResults({});
+    setAttempts((prev) => prev + 1);
     handleShuffle();
   };
   

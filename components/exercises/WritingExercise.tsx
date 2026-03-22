@@ -56,6 +56,7 @@ export function WritingExercise({
   const [answer, setAnswer] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
+  const [attempts, setAttempts] = useState(1);
   const [feedback, setFeedback] = useState<{
     correct: boolean;
     score: number;
@@ -181,6 +182,7 @@ export function WritingExercise({
         timeSpent,
         answer,
         xpEarned,
+        attempts,
       });
     } catch (error) {
       console.error("Error verifying answer:", error);
@@ -201,6 +203,7 @@ export function WritingExercise({
     setAnswer("");
     setIsAnswered(false);
     setFeedback(null);
+    setAttempts((prev) => prev + 1);
     textareaRef.current?.focus();
   };
   

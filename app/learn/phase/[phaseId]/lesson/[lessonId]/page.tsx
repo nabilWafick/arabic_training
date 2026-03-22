@@ -45,9 +45,7 @@ export default function LessonPage({ params }: LessonPageProps) {
   const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState<"theory" | "practice">("theory");
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
-  const [exerciseResults, setExerciseResults] = useState<
-    Array<{ correct: boolean; score?: number }>
-  >([]);
+  const [exerciseResults, setExerciseResults] = useState<ExerciseResult[]>([]);
   const [showCompletion, setShowCompletion] = useState(false);
 
   const { getLessonProgress, updateProgress, completeLesson } = useProgressStore();
@@ -81,21 +79,16 @@ export default function LessonPage({ params }: LessonPageProps) {
   // Generate exercises based on lesson content - empty for now, exercises will be generated dynamically
   const exercises: Exercise[] = [];
 
-  // Handle exercise completion
+  // Handle exercise completion - receives full ExerciseResult for tracking
   const handleExerciseComplete = useCallback(
-    (correct: boolean, score?: number) => {
-      const newResults = [...exerciseResults, { correct, score }];
+    (result: ExerciseResult) => {
+      const newResults = [...exerciseResults, result];
       setExerciseResults(newResults);
 
-      // Award XP based on difficulty
-      const xpEarned = correct
-        ? lesson.difficulty === "easy"
-          ? 10
-          : lesson.difficulty === "medium"
-          ? 20
-          : 30
-        : 5;
-      addXP(xpEarned, `Exercise ${correct ? 'completed' : 'attempted'}`);
+      // XP is already earned in the exercise component, just update streak
+      if (result.correct) {
+        updateStreak();
+      }
 
       // Check for next exercise or completion
       if (currentExerciseIndex < exercises.length - 1) {
@@ -103,12 +96,14 @@ export default function LessonPage({ params }: LessonPageProps) {
           setCurrentExerciseIndex((prev) => prev + 1);
         }, 1500);
       } else {
-        // Lesson complete
+        // Lesson complete - calculate total score and save progress
+        const correctCount = newResults.filter((r) => r.correct).length;
         const totalScore = newResults.length > 0 
-          ? Math.round((newResults.filter((r) => r.correct).length / newResults.length) * 100)
+          ? Math.round((correctCount / newResults.length) * 100)
           : 100;
-        completeLesson(lessonIdFull, totalScore, 0);
-        updateStreak();
+        const totalTimeSpent = newResults.reduce((sum, r) => sum + r.timeSpent, 0);
+        
+        completeLesson(lessonIdFull, totalScore, totalTimeSpent);
         setShowCompletion(true);
       }
     },
@@ -116,8 +111,6 @@ export default function LessonPage({ params }: LessonPageProps) {
       exerciseResults,
       currentExerciseIndex,
       exercises.length,
-      lesson.difficulty,
-      addXP,
       completeLesson,
       updateStreak,
       lessonIdFull,
@@ -381,37 +374,33 @@ export default function LessonPage({ params }: LessonPageProps) {
 
   // Render exercise component based on type
   const renderExercise = (exercise: Exercise) => {
-    const handleComplete = (result: ExerciseResult) => {
-      handleExerciseComplete(result.correct, result.score);
-    };
-
     switch (exercise.type) {
       case "MULTIPLE_CHOICE":
         return (
           <MultipleChoice
             exercise={exercise}
-            onComplete={handleComplete}
+            onComplete={handleExerciseComplete}
           />
         );
       case "WRITING":
         return (
           <WritingExercise
             exercise={exercise}
-            onComplete={handleComplete}
+            onComplete={handleExerciseComplete}
           />
         );
       case "MATCHING":
         return (
           <MatchingExercise
             exercise={exercise}
-            onComplete={handleComplete}
+            onComplete={handleExerciseComplete}
           />
         );
       case "LISTENING":
         return (
           <ListeningExercise
             exercise={exercise}
-            onComplete={handleComplete}
+            onComplete={handleExerciseComplete}
           />
         );
       default:
