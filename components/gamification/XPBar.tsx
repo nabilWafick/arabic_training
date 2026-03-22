@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useGamificationStore } from "@/stores/useGamificationStore";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 /**
@@ -40,6 +41,7 @@ export function XPBar({
   className,
 }: XPBarProps) {
   const { stats, getLevelInfo } = useGamificationStore();
+  const t = useTranslations();
   
   // Safe defaults for SSR
   const xp = stats?.xp ?? 0;
@@ -110,7 +112,7 @@ export function XPBar({
             </div>
           </TooltipTrigger>
           <TooltipContent>
-            <p className="font-medium">Level {level}</p>
+            <p className="font-medium">{t('learning.level')} {level}</p>
             <p className="text-xs text-muted-foreground">
               {currentLevelProgress.toLocaleString()} / {levelXPRequired.toLocaleString()} XP
             </p>
@@ -135,11 +137,11 @@ export function XPBar({
               {level}
             </div>
             <div>
-              <p className="text-sm font-medium">Level {level}</p>
+              <p className="text-sm font-medium">{t('learning.level')} {level}</p>
               <p className="text-xs text-muted-foreground">
                 {xpForNextLevel - xp > 0
-                  ? `${(xpForNextLevel - xp).toLocaleString()} XP to next level`
-                  : "Max level reached!"}
+                  ? `${(xpForNextLevel - xp).toLocaleString()} XP ${t('dashboard.xpToNextLevel')}`
+                  : t('gamification.maxLevelReached')}
               </p>
             </div>
           </div>

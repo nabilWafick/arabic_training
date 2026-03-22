@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useGamificationStore } from "@/stores/useGamificationStore";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 /**
@@ -50,6 +51,7 @@ export function StreakTracker({
   className,
 }: StreakTrackerProps) {
   const { stats, streakActive } = useGamificationStore();
+  const t = useTranslations();
   
   // Extract stats with safe defaults
   const streak = stats?.streak ?? 0;
@@ -124,10 +126,10 @@ export function StreakTracker({
             </div>
           </TooltipTrigger>
           <TooltipContent>
-            <p className="font-medium">{streak} day streak</p>
+            <p className="font-medium">{streak} {t('common.days')} {t('gamification.streak')}</p>
             {nextMilestone && (
               <p className="text-xs text-muted-foreground">
-                {nextMilestone.days - streak} days to {nextMilestone.label}
+                {nextMilestone.days - streak} {t('common.days')} {t('dashboard.daysAway')} {nextMilestone.label}
               </p>
             )}
           </TooltipContent>
@@ -147,7 +149,7 @@ export function StreakTracker({
                 streak > 0 ? "text-orange-500 streak-flame" : "text-muted-foreground"
               )}
             />
-            <span>Streak</span>
+            <span>{t('dashboard.dailyStreak')}</span>
           </div>
           <div className="flex items-center gap-2">
             <span
@@ -158,7 +160,7 @@ export function StreakTracker({
             >
               {streak}
             </span>
-            <span className="text-sm text-muted-foreground">days</span>
+            <span className="text-sm text-muted-foreground">{t('common.days')}</span>
           </div>
         </CardTitle>
       </CardHeader>
@@ -169,12 +171,12 @@ export function StreakTracker({
           <div>
             {streakActive ? (
               <Badge className="bg-green-500/10 text-green-600 dark:text-green-400">
-                Active
+                {t('gamification.active')}
               </Badge>
             ) : streak > 0 ? (
-              <Badge variant="destructive">At Risk!</Badge>
+              <Badge variant="destructive">{t('gamification.atRisk')}</Badge>
             ) : (
-              <Badge variant="secondary">Start Today</Badge>
+              <Badge variant="secondary">{t('dashboard.startToday')}</Badge>
             )}
           </div>
           
@@ -225,7 +227,7 @@ export function StreakTracker({
                     })}
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    {day.isActive ? "Practiced" : "No activity"}
+                    {day.isActive ? t('gamification.practiced') : t('gamification.noActivity')}
                   </p>
                 </TooltipContent>
               </Tooltip>
@@ -266,9 +268,9 @@ export function StreakTracker({
         <div className="flex items-center justify-between border-t border-border pt-3">
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4 text-muted-foreground" />
-            <span className="text-sm text-muted-foreground">Longest streak</span>
+            <span className="text-sm text-muted-foreground">{t('dashboard.longestStreak')}</span>
           </div>
-          <span className="font-semibold">{longestStreak} days</span>
+          <span className="font-semibold">{longestStreak} {t('common.days')}</span>
         </div>
       </CardContent>
     </Card>

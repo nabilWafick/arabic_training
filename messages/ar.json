@@ -102,7 +102,13 @@
     "excellentProgress": "تقدم ممتاز!",
     "achievements": "الإنجازات",
     "completeToEarn": "أكمل الدروس لكسب الإنجازات!",
-    "xpBonus": "مكافأة نقاط نشطة"
+    "xpBonus": "مكافأة نقاط نشطة",
+    "maxLevelReached": "تم الوصول إلى أقصى مستوى!",
+    "streak": "سلسلة",
+    "active": "نشط",
+    "atRisk": "في خطر!",
+    "practiced": "تمرن",
+    "noActivity": "لا توجد نشاطات"
   },
   "arabic": {
     "letters": "الأحرف",

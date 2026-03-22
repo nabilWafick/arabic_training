@@ -102,7 +102,13 @@
     "excellentProgress": "Progrès excellent!",
     "achievements": "Accomplissements",
     "completeToEarn": "Terminez des leçons pour gagner des accomplissements!",
-    "xpBonus": "Bonus XP actif"
+    "xpBonus": "Bonus XP actif",
+    "maxLevelReached": "Niveau maximum atteint!",
+    "streak": "série",
+    "active": "Actif",
+    "atRisk": "À risque!",
+    "practiced": "Pratiqué",
+    "noActivity": "Pas d'activité"
   },
   "arabic": {
     "letters": "Lettres",
