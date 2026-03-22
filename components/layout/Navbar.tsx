@@ -282,7 +282,7 @@ export function Navbar() {
                     <div className="mt-3">
                       <div className="flex justify-between text-xs text-muted-foreground">
                         <span>{xp} XP</span>
-                        <span>{xpForNextLevel} XP</span>
+                        <span>{levelInfo.requiredXP} XP</span>
                       </div>
                       <div className="mt-1 h-2 overflow-hidden rounded-full bg-muted">
                         <div
