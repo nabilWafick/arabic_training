@@ -48,6 +48,16 @@ export default function DashboardPage() {
     setMounted(true);
   }, []);
 
+  // Helper function to translate difficulty level
+  const getDifficultyKey = (difficulty: string): string => {
+    const difficultyMap: Record<string, string> = {
+      'easy': 'common.easy',
+      'medium': 'common.medium',
+      'hard': 'common.hard',
+    };
+    return difficultyMap[difficulty.toLowerCase()] || 'common.easy';
+  };
+
   // Calculate flattened progress for completed lessons
   const progress = useMemo(() => {
     if (!phases) return {};
@@ -259,7 +269,7 @@ export default function DashboardPage() {
                         <Target className="h-4 w-4" />
                         {currentLesson.exercises?.length || 0} {t('common.exercises')}
                       </span>
-                      <Badge variant="outline">{currentLesson.difficulty}</Badge>
+                      <Badge variant="outline">{t(getDifficultyKey(currentLesson.difficulty))}</Badge>
                     </div>
                     <Button
                       className="mt-6 w-full gap-2 bg-gold text-background hover:bg-gold-dark"
@@ -307,7 +317,7 @@ export default function DashboardPage() {
                                     {t('learning.phase')} {phase.id}: {phase.title}
                                   </p>
                                   <p className="text-xs text-muted-foreground">
-                                    {phase.totalLessons} lessons
+                                    {phase.totalLessons} {t('common.lessons')}
                                   </p>
                                 </div>
                               </div>

@@ -135,5 +135,29 @@
     "selectLanguage": "Sélectionnez votre langue préférée",
     "noLessonsAvailable": "Aucune leçon disponible",
     "completeToUnlock": "Complétez les leçons précédentes pour déverrouiller celle-ci"
+  },
+  "footer": {
+    "learn": "Apprendre",
+    "resources": "Ressources",
+    "support": "Support",
+    "foundations": "Fondations",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé",
+    "expert": "Expert",
+    "practice": "Pratique",
+    "vocabulary": "Vocabulaire",
+    "grammarReference": "Référence Grammaticale",
+    "alphabetGuide": "Guide de l'Alphabet",
+    "helpCenter": "Centre d'Aide",
+    "faq": "FAQ",
+    "contactUs": "Nous Contacter",
+    "feedback": "Commentaires",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions de Service",
+    "cookiePolicy": "Politique de Cookies",
+    "description": "Maîtrisez la langue arabe avec notre plateforme d'apprentissage complète et alimentée par l'IA. De l'alphabet à la littérature avancée.",
+    "copyright": "ArabicMaster Pro. Créé avec",
+    "forArabicLearners": "pour les apprenants de l'arabe."
   }
 }

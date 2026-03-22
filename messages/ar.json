@@ -135,5 +135,29 @@
     "selectLanguage": "اختر اللغة المفضلة لديك",
     "noLessonsAvailable": "لا توجد دروس متاحة",
     "completeToUnlock": "أكمل الدروس السابقة لفتح هذا الدرس"
+  },
+  "footer": {
+    "learn": "تعلم",
+    "resources": "الموارد",
+    "support": "الدعم",
+    "foundations": "الأساسيات",
+    "beginner": "مبتدئ",
+    "intermediate": "متوسط",
+    "advanced": "متقدم",
+    "expert": "خبير",
+    "practice": "التمرين",
+    "vocabulary": "المفردات",
+    "grammarReference": "مرجع النحو",
+    "alphabetGuide": "دليل الأبجدية",
+    "helpCenter": "مركز المساعدة",
+    "faq": "الأسئلة الشائعة",
+    "contactUs": "تواصل معنا",
+    "feedback": "الملاحظات",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "cookiePolicy": "سياسة ملفات تعريف الارتباط",
+    "description": "أتقن اللغة العربية من خلال منصتنا التعليمية الشاملة المدعومة بالذكاء الاصطناعي. من الأبجدية إلى الأدب المتقدم.",
+    "copyright": "ArabicMaster Pro. تم الإنشاء بـ",
+    "forArabicLearners": "لمتعلمي اللغة العربية."
   }
 }
