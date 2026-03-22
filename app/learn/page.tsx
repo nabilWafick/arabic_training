@@ -107,10 +107,12 @@ export default function LearnPage() {
             {/* Phases */}
             <div className="space-y-8">
               {CURRICULUM.map((phase, phaseIndex) => {
-                const phaseProgress = getPhaseProgress(phase.id);
-                const isLocked =
-                  phaseIndex > 0 &&
-                  getPhaseProgress(CURRICULUM[phaseIndex - 1].id) < 80;
+                const phaseProgressData = getPhaseProgress(phase.id);
+                const phaseProgress = phaseProgressData?.overallProgress ?? 0;
+                const prevPhaseProgress = phaseIndex > 0 
+                  ? (getPhaseProgress(CURRICULUM[phaseIndex - 1].id)?.overallProgress ?? 0)
+                  : 100;
+                const isLocked = phaseIndex > 0 && prevPhaseProgress < 80;
 
                 return (
                   <Card

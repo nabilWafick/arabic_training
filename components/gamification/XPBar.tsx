@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Star, TrendingUp, Zap } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
@@ -39,13 +39,23 @@ export function XPBar({
   animate = true,
   className,
 }: XPBarProps) {
-  const { xp, level, xpForNextLevel, xpForCurrentLevel } = useGamificationStore();
+  const { stats, getLevelInfo } = useGamificationStore();
+  
+  // Safe defaults for SSR
+  const xp = stats?.xp ?? 0;
+  const level = stats?.level ?? 1;
+  
+  // Calculate level info
+  const levelInfo = useMemo(() => getLevelInfo(), [stats?.xp, stats?.level, getLevelInfo]);
+  const xpForCurrentLevel = levelInfo.currentXP !== undefined ? (xp - levelInfo.currentXP) : 0;
+  const xpForNextLevel = xpForCurrentLevel + (levelInfo.requiredXP ?? 100);
+  
   const [displayXP, setDisplayXP] = useState(xp);
   const [isAnimating, setIsAnimating] = useState(false);
   
   // Current progress within level
-  const currentLevelProgress = xp - xpForCurrentLevel;
-  const levelXPRequired = xpForNextLevel - xpForCurrentLevel;
+  const currentLevelProgress = levelInfo.currentXP ?? 0;
+  const levelXPRequired = levelInfo.requiredXP ?? 100;
   const progressPercent = levelXPRequired > 0 
     ? Math.min((currentLevelProgress / levelXPRequired) * 100, 100) 
     : 0;

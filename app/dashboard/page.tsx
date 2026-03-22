@@ -284,7 +284,8 @@ export default function DashboardPage() {
                   <CardContent>
                     <div className="space-y-4">
                       {CURRICULUM.map((phase) => {
-                        const phaseProgress = getPhaseProgress(phase.id);
+                        const phaseProgressData = getPhaseProgress(phase.id);
+                        const progressPercent = phaseProgressData?.overallProgress ?? 0;
                         return (
                           <Link
                             key={phase.id}
@@ -311,12 +312,12 @@ export default function DashboardPage() {
                               <div className="flex items-center gap-3">
                                 <div className="w-24">
                                   <Progress
-                                    value={phaseProgress}
+                                    value={progressPercent}
                                     className="h-2"
                                   />
                                 </div>
                                 <span className="w-12 text-right text-sm text-muted-foreground">
-                                  {phaseProgress}%
+                                  {progressPercent}%
                                 </span>
                                 <ChevronRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-1" />
                               </div>

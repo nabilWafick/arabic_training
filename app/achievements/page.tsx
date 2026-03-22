@@ -229,7 +229,7 @@ const RARITY_LABELS = {
 export default function AchievementsPage() {
   const [mounted, setMounted] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const { achievements } = useGamificationStore();
+  const { unlockedAchievements, stats } = useGamificationStore();
 
   useEffect(() => {
     setMounted(true);
@@ -243,10 +243,8 @@ export default function AchievementsPage() {
     );
   }
 
-  // Get unlocked achievement IDs
-  const unlockedIds = new Set(
-    achievements.filter((a) => a.unlockedAt).map((a) => a.id)
-  );
+  // Get unlocked achievement IDs from store
+  const unlockedIds = new Set(unlockedAchievements || []);
 
   // Filter achievements by category
   const filteredAchievements =
@@ -254,11 +252,11 @@ export default function AchievementsPage() {
       ? ALL_ACHIEVEMENTS
       : ALL_ACHIEVEMENTS.filter((a) => a.category === selectedCategory);
 
-  // Stats
+  // Stats - Calculate based on unlocked achievements
   const totalAchievements = ALL_ACHIEVEMENTS.length;
   const unlockedCount = unlockedIds.size;
-  const totalXPFromAchievements = achievements
-    .filter((a) => a.unlockedAt)
+  const totalXPFromAchievements = ALL_ACHIEVEMENTS
+    .filter((a) => unlockedIds.has(a.id))
     .reduce((sum, a) => sum + (a.xpReward || 0), 0);
 
   return (

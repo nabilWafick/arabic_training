@@ -56,7 +56,8 @@ export default function PhasePage({ params }: PhasePageProps) {
     );
   }
 
-  const phaseProgress = getPhaseProgress(phase.id);
+  const phaseProgressData = getPhaseProgress(phase.id);
+  const phaseProgress = phaseProgressData?.overallProgress ?? 0;
   const completedLessons = phase.lessons.filter(
     (l) => getLessonProgress(phase.id, l.id)?.completed
   ).length;

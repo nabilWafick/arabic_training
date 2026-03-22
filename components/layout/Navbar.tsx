@@ -46,11 +46,21 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   
-  const { user, isAuthenticated, settings, setTheme, setLanguage, logout } = useUserStore();
-  const { level, xp, streak, xpForNextLevel } = useGamificationStore();
+  const { user, isAuthenticated, settings, setTheme, setLocale, logout } = useUserStore();
+  const { stats, getLevelInfo } = useGamificationStore();
   
-  const currentLanguage = languages.find((l) => l.code === settings.language) || languages[0];
-  const xpProgress = xpForNextLevel > 0 ? (xp / xpForNextLevel) * 100 : 0;
+  // Extract stats with safe defaults
+  const level = stats?.level ?? 1;
+  const xp = stats?.xp ?? 0;
+  const streak = stats?.streak ?? 0;
+  
+  // Calculate level info for XP progress
+  const levelInfo = getLevelInfo();
+  const xpProgress = levelInfo.requiredXP && levelInfo.requiredXP > 0 
+    ? Math.min((levelInfo.currentXP / levelInfo.requiredXP) * 100, 100)
+    : 0;
+  
+  const currentLanguage = languages.find((l) => l.code === settings.locale) || languages[0];
   
   /**
    * Toggle between light and dark theme
@@ -96,7 +106,7 @@ export function Navbar() {
                   : "text-muted-foreground"
               )}
             >
-              {settings.language === "fr" ? item.labelFr : item.label}
+              {settings.locale === "fr" ? item.labelFr : item.label}
             </Link>
           ))}
         </div>
@@ -142,10 +152,10 @@ export function Navbar() {
               {languages.map((lang) => (
                 <DropdownMenuItem
                   key={lang.code}
-                  onClick={() => setLanguage(lang.code as "en" | "fr" | "ar")}
+                  onClick={() => setLocale(lang.code as "en" | "fr" | "ar")}
                   className={cn(
                     "cursor-pointer",
-                    settings.language === lang.code && "bg-gold/10"
+                    settings.locale === lang.code && "bg-gold/10"
                   )}
                 >
                   <span className="mr-2">{lang.flag}</span>
@@ -247,7 +257,7 @@ export function Navbar() {
                           : "text-muted-foreground hover:bg-muted hover:text-foreground"
                       )}
                     >
-                      {settings.language === "fr" ? item.labelFr : item.label}
+                      {settings.locale === "fr" ? item.labelFr : item.label}
                     </Link>
                   ))}
                 </nav>

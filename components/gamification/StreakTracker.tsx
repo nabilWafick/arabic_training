@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Flame, Calendar, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -49,8 +49,27 @@ export function StreakTracker({
   showMilestones = true,
   className,
 }: StreakTrackerProps) {
-  const { streak, longestStreak, lastActivityDate, streakMultiplier, isStreakActive } = useGamificationStore();
+  const { stats, streakActive } = useGamificationStore();
+  
+  // Extract stats with safe defaults
+  const streak = stats?.streak ?? 0;
+  const longestStreak = stats?.longestStreak ?? 0;
+  const lastActivityDate = stats?.lastActiveDate ?? null;
+  
+  // Calculate streak multiplier based on streak length
+  const streakMultiplier = useMemo(() => {
+    if (streak >= 365) return 3.0;
+    if (streak >= 100) return 2.5;
+    if (streak >= 60) return 2.25;
+    if (streak >= 30) return 2.0;
+    if (streak >= 14) return 1.75;
+    if (streak >= 7) return 1.5;
+    if (streak >= 3) return 1.2;
+    return 1.0;
+  }, [streak]);
+  
   const [weekDays, setWeekDays] = useState<{ date: Date; isActive: boolean }[]>([]);
+  
   
   // Generate week calendar
   useEffect(() => {
@@ -148,7 +167,7 @@ export function StreakTracker({
         {/* Streak status */}
         <div className="flex items-center justify-between">
           <div>
-            {isStreakActive() ? (
+            {streakActive ? (
               <Badge className="bg-green-500/10 text-green-600 dark:text-green-400">
                 Active
               </Badge>
