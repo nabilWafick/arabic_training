@@ -4,7 +4,7 @@ import Google from "next-auth/providers/google";
 import GitHub from "next-auth/providers/github";
 import Credentials from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import bcrypt from "bcryptjs";
+import * as argon2 from "argon2";
 import { z } from "zod";
 
 // Lazy import prisma to avoid initialization issues
@@ -61,9 +61,14 @@ export const authConfig: NextAuthConfig = {
           return null;
         }
 
-        // Verify password
-        const isPasswordValid = await bcrypt.compare(password, user.password);
-        if (!isPasswordValid) {
+        // Verify password using argon2
+        try {
+          const isPasswordValid = await argon2.verify(user.password, password);
+          if (!isPasswordValid) {
+            return null;
+          }
+        } catch (error) {
+          console.error("Password verification error:", error);
           return null;
         }
 

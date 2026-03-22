@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import bcrypt from "bcryptjs";
+import * as argon2 from "argon2";
 import { prisma } from "@/lib/db/prisma";
 
 // Registration schema
@@ -47,8 +47,17 @@ export async function POST(request: Request) {
       );
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 12);
+    // Hash password using argon2
+    let hashedPassword: string;
+    try {
+      hashedPassword = await argon2.hash(password);
+    } catch (error) {
+      console.error("Password hashing error:", error);
+      return NextResponse.json(
+        { error: "An error occurred while processing your password" },
+        { status: 500 }
+      );
+    }
 
     // Create user
     const user = await prisma.user.create({

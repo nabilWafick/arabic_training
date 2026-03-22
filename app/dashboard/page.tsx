@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import {
   BookOpen,
@@ -22,7 +22,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
-import { XPBar, StreakTracker, AchievementBadge } from "@/components/gamification";
+import { XPBar, StreakTracker } from "@/components/gamification";
 import { useGamificationStore } from "@/stores/useGamificationStore";
 import { useProgressStore } from "@/stores/useProgressStore";
 import { CURRICULUM } from "@/data/curriculum";
@@ -33,14 +33,32 @@ import { CURRICULUM } from "@/data/curriculum";
  */
 export default function DashboardPage() {
   const [mounted, setMounted] = useState(false);
-  const { xp, level, streak, achievements, getXPForNextLevel, getXPProgress } =
-    useGamificationStore();
-  const { progress, getPhaseProgress, getLessonProgress } = useProgressStore();
+  const { stats, unlockedAchievements, getLevelInfo } = useGamificationStore();
+  const { phases, getPhaseProgress, getLessonProgress } = useProgressStore();
+  
+  // Extract stats with safe defaults
+  const xp = stats?.xp ?? 0;
+  const level = stats?.level ?? 1;
+  const streak = stats?.streak ?? 0;
 
   // Handle hydration
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Calculate flattened progress for completed lessons
+  const progress = useMemo(() => {
+    if (!phases) return {};
+    const result: Record<string, { completed: boolean }> = {};
+    Object.values(phases).forEach((phase) => {
+      if (phase?.lessonsProgress) {
+        Object.entries(phase.lessonsProgress).forEach(([lessonId, lessonProgress]) => {
+          result[lessonId] = { completed: lessonProgress.completed };
+        });
+      }
+    });
+    return result;
+  }, [phases]);
 
   if (!mounted) {
     return (
@@ -62,7 +80,7 @@ export default function DashboardPage() {
   // Get current phase (first incomplete)
   const currentPhase = CURRICULUM.find((phase) => {
     const phaseProgress = getPhaseProgress(phase.id);
-    return phaseProgress < 100;
+    return !phaseProgress?.completed;
   }) || CURRICULUM[0];
 
   // Get current lesson (first incomplete in current phase)
@@ -71,14 +89,28 @@ export default function DashboardPage() {
     return !lessonProgress?.completed;
   }) || currentPhase.lessons[0];
 
-  // Recent achievements (last 4)
-  const recentAchievements = achievements
-    .filter((a) => a.unlockedAt)
-    .sort((a, b) => {
-      if (!a.unlockedAt || !b.unlockedAt) return 0;
-      return new Date(b.unlockedAt).getTime() - new Date(a.unlockedAt).getTime();
-    })
-    .slice(0, 4);
+  // Recent achievements (last 4) - convert IDs to simple display objects
+  const achievementEmojis: Record<string, string> = {
+    'first-lesson': '🎓',
+    'streak-3': '🔥',
+    'streak-7': '⚡',
+    'streak-30': '💎',
+    'phase-1': '✨',
+    'phase-2': '🌱',
+    'phase-3': '📚',
+    'phase-4': '🎯',
+    'phase-5': '👑',
+    'perfect-10': '🌟',
+    'words-100': '📖',
+    'time-10h': '⏰',
+  };
+  
+  const recentAchievements = (unlockedAchievements || []).slice(0, 4).map(id => ({
+    id,
+    name: id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    icon: achievementEmojis[id] || '🏆',
+    unlockedAt: new Date().toISOString(),
+  }));
 
   // Stats cards data
   const statsCards = [
@@ -383,11 +415,15 @@ export default function DashboardPage() {
                     {recentAchievements.length > 0 ? (
                       <div className="grid grid-cols-2 gap-3">
                         {recentAchievements.map((achievement) => (
-                          <AchievementBadge
+                          <div
                             key={achievement.id}
-                            achievement={achievement}
-                            size="sm"
-                          />
+                            className="flex items-center gap-2 rounded-lg bg-gold/10 p-3"
+                          >
+                            <span className="text-2xl">{achievement.icon}</span>
+                            <span className="text-sm font-medium truncate">
+                              {achievement.name}
+                            </span>
+                          </div>
                         ))}
                       </div>
                     ) : (
