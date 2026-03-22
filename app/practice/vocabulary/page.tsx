@@ -13,6 +13,8 @@ import {
   Shuffle,
   Filter,
   Star,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,6 +23,7 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { useGamificationStore } from "@/stores/useGamificationStore";
+import { useAudioStore } from "@/stores/useAudioStore";
 import { useTranslations } from "next-intl";
 
 // Sample vocabulary data
@@ -65,7 +68,9 @@ export default function VocabularyPracticePage() {
   const [category, setCategory] = useState("all");
   const [knownWords, setKnownWords] = useState<Set<number>>(new Set());
   const [learningWords, setLearningWords] = useState<Set<number>>(new Set());
+  const [showAllWords, setShowAllWords] = useState(false);
   const { addXP } = useGamificationStore();
+  const { speak, loadVoices, isPlaying } = useAudioStore();
   const t = useTranslations();
 
   // Filter vocabulary by category
@@ -76,9 +81,21 @@ export default function VocabularyPracticePage() {
 
   const currentWord = filteredVocab[currentIndex];
 
+  // Number of words to show initially
+  const WORDS_TO_SHOW = 12;
+  const displayedWords = showAllWords ? filteredVocab : filteredVocab.slice(0, WORDS_TO_SHOW);
+  const hasMoreWords = filteredVocab.length > WORDS_TO_SHOW;
+
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Load voices on mount
+    loadVoices();
+  }, [loadVoices]);
+
+  // Play pronunciation for a word
+  const playPronunciation = (text: string) => {
+    speak(text, "ar-SA");
+  };
 
   const nextCard = () => {
     if (currentIndex < filteredVocab.length - 1) {
@@ -245,8 +262,17 @@ export default function VocabularyPracticePage() {
                         <p className="text-muted-foreground">
                           {currentWord.transliteration}
                         </p>
-                        <Button variant="ghost" size="sm" className="mt-2">
-                          <Volume2 className="mr-2 h-4 w-4" />
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          className="mt-2"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            playPronunciation(currentWord.arabic);
+                          }}
+                          disabled={isPlaying}
+                        >
+                          <Volume2 className={`mr-2 h-4 w-4 ${isPlaying ? "animate-pulse text-gold" : ""}`} />
                           {t("learning.playPronunciation")}
                         </Button>
                       </CardContent>
@@ -325,34 +351,62 @@ export default function VocabularyPracticePage() {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
-                  {filteredVocab.slice(0, 12).map((word, index) => (
-                    <button
-                      key={word.id}
-                      onClick={() => {
-                        setCurrentIndex(index);
-                        setIsFlipped(false);
-                      }}
-                      className={`rounded-lg border p-2 text-center transition-all ${
-                        index === currentIndex
-                          ? "border-gold bg-gold/10"
-                          : knownWords.has(word.id)
-                          ? "border-green-500/50 bg-green-500/10"
-                          : learningWords.has(word.id)
-                          ? "border-yellow-500/50 bg-yellow-500/10"
-                          : "border-border/50 hover:border-gold/50"
-                      }`}
-                    >
-                      <span className="font-arabic text-lg">{word.arabic}</span>
-                      <p className="text-xs text-muted-foreground truncate">
-                        {word.english}
-                      </p>
-                    </button>
-                  ))}
+                  {displayedWords.map((word, index) => {
+                    // Find actual index in filtered vocab for proper card selection
+                    const actualIndex = showAllWords ? index : index;
+                    return (
+                      <button
+                        key={word.id}
+                        onClick={() => {
+                          setCurrentIndex(actualIndex);
+                          setIsFlipped(false);
+                        }}
+                        className={`group relative rounded-lg border p-2 text-center transition-all ${
+                          actualIndex === currentIndex
+                            ? "border-gold bg-gold/10"
+                            : knownWords.has(word.id)
+                            ? "border-green-500/50 bg-green-500/10"
+                            : learningWords.has(word.id)
+                            ? "border-yellow-500/50 bg-yellow-500/10"
+                            : "border-border/50 hover:border-gold/50"
+                        }`}
+                      >
+                        <span className="font-arabic text-lg">{word.arabic}</span>
+                        <p className="text-xs text-muted-foreground truncate">
+                          {word.english}
+                        </p>
+                        {/* Quick play button */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            playPronunciation(word.arabic);
+                          }}
+                          className="absolute right-1 top-1 opacity-0 group-hover:opacity-100 transition-opacity p-1 rounded-full hover:bg-gold/20"
+                          title={t("learning.playPronunciation")}
+                        >
+                          <Volume2 className="h-3 w-3 text-gold" />
+                        </button>
+                      </button>
+                    );
+                  })}
                 </div>
-                {filteredVocab.length > 12 && (
-                  <p className="mt-4 text-center text-sm text-muted-foreground">
-                    + {filteredVocab.length - 12} {t("common.more")}
-                  </p>
+                {hasMoreWords && (
+                  <button
+                    onClick={() => setShowAllWords(!showAllWords)}
+                    className="mt-4 w-full flex items-center justify-center gap-2 text-sm text-gold hover:text-gold-dark transition-colors py-2 rounded-lg hover:bg-gold/5"
+                  >
+                    {showAllWords ? (
+                      <>
+                        <ChevronUp className="h-4 w-4" />
+                        {t("common.showLess")}
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown className="h-4 w-4" />
+                        {t("common.showMore")} (+{filteredVocab.length - WORDS_TO_SHOW} {t("common.more")})
+                      </>
+                    )}
+                  </button>
                 )}
               </CardContent>
             </Card>

@@ -12,7 +12,4 @@ export default defineConfig({
   datasource: {
     url: process.env.DATABASE_URL || "postgresql://arabicmaster:arabicmaster_secret@localhost:5437/arabicmaster?schema=public",
   },
-  seed: {
-    script: "prisma/seed.ts",
-  },
 });

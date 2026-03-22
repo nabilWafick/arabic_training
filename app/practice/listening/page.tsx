@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { useGamificationStore } from "@/stores/useGamificationStore";
+import { useAudioStore } from "@/stores/useAudioStore";
 import { useTranslations } from "next-intl";
 import { ARABIC_ALPHABET } from "@/data/curriculum";
 
@@ -33,8 +34,8 @@ export default function ListeningPracticePage() {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
   const { addXP } = useGamificationStore();
+  const { speak, isPlaying, loadVoices } = useAudioStore();
   const t = useTranslations();
 
   // Generate questions from alphabet
@@ -57,12 +58,13 @@ export default function ListeningPracticePage() {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Initialize speech synthesis voices
+    loadVoices();
+  }, [loadVoices]);
 
   const playSound = () => {
-    setIsPlaying(true);
-    // Simulate playing sound (would use Web Audio API in production)
-    setTimeout(() => setIsPlaying(false), 1000);
+    // Use Web Speech API to pronounce the Arabic letter
+    speak(currentQuestion.correctLetter.letter, 'ar-SA');
   };
 
   const handleAnswer = (letter: string) => {

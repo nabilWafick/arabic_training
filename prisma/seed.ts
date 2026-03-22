@@ -12,7 +12,7 @@
  * Run with: pnpm db:seed
  */
 
-import { PrismaClient, Role, ExerciseType, Difficulty } from "./generated/prisma/client/client.ts";
+import { PrismaClient, Role, ExerciseType, Difficulty } from "./generated/prisma/client/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import * as argon2 from "argon2";
 import "dotenv/config";
@@ -464,7 +464,7 @@ async function main() {
         questionEn: exerciseData.questionEn,
         questionFr: exerciseData.questionFr,
         questionAr: exerciseData.questionAr || null,
-        options: exerciseData.options ? JSON.stringify(exerciseData.options) : null,
+        options: exerciseData.options ? JSON.stringify(exerciseData.options) : undefined,
         correctAnswer: exerciseData.correctAnswer,
         explanationEn: exerciseData.explanationEn || null,
         explanationFr: exerciseData.explanationFr || null,

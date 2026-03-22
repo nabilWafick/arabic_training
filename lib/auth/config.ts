@@ -6,6 +6,7 @@ import Credentials from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import * as argon2 from "argon2";
 import { z } from "zod";
+import "@/lib/auth/types"; // Import type extensions
 
 // Lazy import prisma to avoid initialization issues
 const getPrisma = async () => {
@@ -134,7 +135,7 @@ const initAuth = async () => {
   const prisma = await getPrisma();
   return NextAuth({
     ...authConfig,
-    adapter: PrismaAdapter(prisma),
+    adapter: PrismaAdapter(prisma as any),
   });
 };
 

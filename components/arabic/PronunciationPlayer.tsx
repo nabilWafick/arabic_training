@@ -105,7 +105,7 @@ export function PronunciationPlayer({
     // Find Arabic voice
     const voices = speechSynthesis.getVoices();
     const arabicVoice = voices.find(
-      (v) => v.lang.startsWith("ar") && (selectedVoice ? v.name === selectedVoice : true)
+      (v) => v.lang.startsWith("ar") && (selectedVoice ? v.name === selectedVoice.name : true)
     );
     if (arabicVoice) {
       utterance.voice = arabicVoice;

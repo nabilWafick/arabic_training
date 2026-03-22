@@ -12,8 +12,10 @@ interface AudioState {
   pitch: number; // 0 to 2, default 1
   volume: number; // 0 to 1, default 1
   voice: SpeechSynthesisVoice | null;
+  selectedVoice: SpeechSynthesisVoice | null;
   availableVoices: SpeechSynthesisVoice[];
   arabicVoices: SpeechSynthesisVoice[];
+  isEnabled: boolean; // Global toggle for audio
   
   // Actions
   speak: (text: string, lang?: string) => void;
@@ -25,6 +27,7 @@ interface AudioState {
   setVolume: (volume: number) => void;
   setVoice: (voice: SpeechSynthesisVoice | null) => void;
   loadVoices: () => void;
+  toggleEnabled: () => void;
 }
 
 export const useAudioStore = create<AudioState>((set, get) => ({
@@ -35,11 +38,29 @@ export const useAudioStore = create<AudioState>((set, get) => ({
   pitch: 1,
   volume: 1,
   voice: null,
+  selectedVoice: null,
   availableVoices: [],
   arabicVoices: [],
+  isEnabled: true,
+
+  // Toggle audio on/off
+  toggleEnabled: () => {
+    const { isEnabled, stop } = get();
+    if (isEnabled) {
+      stop(); // Stop any playing audio when disabling
+    }
+    set({ isEnabled: !isEnabled });
+  },
 
   // Speak text
   speak: (text: string, lang: string = 'ar-SA') => {
+    const { isEnabled } = get();
+    
+    if (!isEnabled) {
+      console.warn('Audio is disabled');
+      return;
+    }
+    
     if (typeof window === 'undefined' || !window.speechSynthesis) {
       console.warn('Speech synthesis not supported');
       return;
@@ -120,7 +141,7 @@ export const useAudioStore = create<AudioState>((set, get) => ({
 
   // Set specific voice
   setVoice: (voice: SpeechSynthesisVoice | null) => {
-    set({ voice });
+    set({ voice, selectedVoice: voice });
   },
 
   // Load available voices
@@ -137,10 +158,12 @@ export const useAudioStore = create<AudioState>((set, get) => ({
           voice.name.toLowerCase().includes('arabic')
       );
 
+      const defaultVoice = arabicVoices.length > 0 ? arabicVoices[0] : null;
       set({
         availableVoices: voices,
         arabicVoices,
-        voice: arabicVoices.length > 0 ? arabicVoices[0] : null,
+        voice: defaultVoice,
+        selectedVoice: defaultVoice,
       });
     };
 

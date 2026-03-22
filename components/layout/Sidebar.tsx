@@ -84,7 +84,7 @@ const secondaryNavItems: NavItem[] = [
 export function Sidebar() {
   const pathname = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const { currentPhase } = useProgressStore();
+  const { currentPhase = 1 } = useProgressStore();
   const t = useTranslations('navigation');
   
   /**

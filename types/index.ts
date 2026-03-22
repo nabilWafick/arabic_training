@@ -102,7 +102,7 @@ export type ExerciseType =
   | 'FILL_BLANK'
   | 'TRANSLATION';
 
-export type Difficulty = 'EASY' | 'MEDIUM' | 'HARD' | 'easy' | 'medium' | 'hard';
+export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface ExerciseSet {
   easy: Exercise[];
@@ -117,17 +117,23 @@ export interface Exercise {
   questionEn: string;
   questionFr: string;
   questionAr?: string;
+  // Convenience aliases
+  question?: string; // Alias for questionEn
   options?: string[];
   correctAnswer: string | number;
   explanationEn: string;
   explanationFr: string;
   explanationAr?: string;
+  // Convenience alias
+  explanation?: string; // Alias for explanationEn
+  hint?: string;
   audioText?: string;
   imageUrl?: string;
   matchPairs?: MatchPair[];
 }
 
 export interface MatchPair {
+  id?: string;
   left: string;
   right: string;
 }
@@ -137,8 +143,10 @@ export interface ExerciseResult {
   correct: boolean;
   score: number;
   timeSpent: number;
-  attempts: number;
-  userAnswer: string | number | string[];
+  attempts?: number; // Optional for backward compatibility
+  userAnswer?: string | number | string[]; // Optional for backward compatibility
+  answer?: string | number | string[]; // Alias for userAnswer
+  xpEarned?: number; // XP earned for this exercise
 }
 
 // ============================================
@@ -151,6 +159,7 @@ export interface PhaseProgress {
   completed: boolean;
   lessonsProgress: Record<string, LessonProgress>;
   overallProgress: number; // 0-100
+  completedLessons?: number; // Number of completed lessons in this phase
 }
 
 export interface LessonProgress {
@@ -182,13 +191,16 @@ export interface Achievement {
   nameEn: string;
   nameFr: string;
   nameAr: string;
+  name?: string; // Convenience alias, defaults to nameEn
   descriptionEn: string;
   descriptionFr: string;
   descriptionAr: string;
+  description?: string; // Convenience alias, defaults to descriptionEn
   icon: string;
   xpReward: number;
   rarity: 'common' | 'rare' | 'epic' | 'legendary';
   condition: AchievementCondition;
+  unlockedAt?: Date; // When the achievement was unlocked
 }
 
 export interface AchievementCondition {

@@ -19,6 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { useGamificationStore } from "@/stores/useGamificationStore";
+import { useAudioStore } from "@/stores/useAudioStore";
 import { useTranslations } from "next-intl";
 import { ARABIC_ALPHABET } from "@/data/curriculum";
 
@@ -31,23 +32,24 @@ export default function SpeakingPracticePage() {
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
   const [hasRecording, setHasRecording] = useState(false);
-  const [isPlayingReference, setIsPlayingReference] = useState(false);
   const [isPlayingRecording, setIsPlayingRecording] = useState(false);
   const [score, setScore] = useState(0);
   const [showFeedback, setShowFeedback] = useState(false);
   const { addXP } = useGamificationStore();
+  const { speak, isPlaying: isPlayingReference, loadVoices } = useAudioStore();
   const t = useTranslations();
 
   const currentLetter = ARABIC_ALPHABET[currentLetterIndex];
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Initialize speech synthesis voices
+    loadVoices();
+  }, [loadVoices]);
 
   const playReference = () => {
-    setIsPlayingReference(true);
-    // Simulate playing reference audio
-    setTimeout(() => setIsPlayingReference(false), 1000);
+    // Use Web Speech API to pronounce the Arabic letter
+    speak(currentLetter.letter, 'ar-SA');
   };
 
   const startRecording = () => {
@@ -67,9 +69,9 @@ export default function SpeakingPracticePage() {
       const randomScore = Math.floor(Math.random() * 31) + 70;
       setScore(randomScore);
       if (randomScore >= 80) {
-        addXP(15);
+        addXP(15, "Great pronunciation!");
       } else {
-        addXP(5);
+        addXP(5, "Pronunciation practice");
       }
     }, 1500);
   };

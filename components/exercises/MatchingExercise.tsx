@@ -41,18 +41,21 @@ export function MatchingExercise({
 }: MatchingExerciseProps) {
   // Parse match pairs from exercise data
   const pairs: MatchPair[] = useMemo(() => {
-    if (exercise.matchPairs) {
-      return exercise.matchPairs;
-    }
-    // Fallback: create pairs from options
-    if (exercise.options && exercise.options.length >= 2) {
-      return exercise.options.slice(0, Math.floor(exercise.options.length / 2)).map((item, i) => ({
-        id: `pair-${i}`,
+    let pairsData = exercise.matchPairs || [];
+    
+    // If no pairs, try to create from options
+    if (pairsData.length === 0 && exercise.options && exercise.options.length >= 2) {
+      pairsData = exercise.options.slice(0, Math.floor(exercise.options.length / 2)).map((item, i) => ({
         left: String(item),
         right: String(exercise.options![i + Math.floor(exercise.options!.length / 2)]),
       }));
     }
-    return [];
+    
+    // Ensure all pairs have ids
+    return pairsData.map((p, i) => ({
+      ...p,
+      id: p.id || `pair-${i}`,
+    }));
   }, [exercise]);
   
   // Shuffle right column

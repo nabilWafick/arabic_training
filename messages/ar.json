@@ -60,7 +60,9 @@
     "all": "الكل",
     "words": "كلمات",
     "more": "المزيد",
-    "minutes": "دقائق"
+    "minutes": "دقائق",
+    "showMore": "عرض المزيد",
+    "showLess": "عرض أقل"
   },
   "dashboard": {
     "title": "لوحة التحكم",

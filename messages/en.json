@@ -60,7 +60,9 @@
     "all": "All",
     "words": "words",
     "more": "more",
-    "minutes": "minutes"
+    "minutes": "minutes",
+    "showMore": "Show More",
+    "showLess": "Show Less"
   },
   "dashboard": {
     "title": "Dashboard",

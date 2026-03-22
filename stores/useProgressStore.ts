@@ -16,6 +16,7 @@ interface ProgressState {
   // State
   phases: Record<number, PhaseProgress>;
   currentPhaseId: number;
+  currentPhase?: number; // Convenience alias for currentPhaseId
   currentLessonId: string | null;
   isLoading: boolean;
   lastSynced: string | null;
@@ -47,6 +48,7 @@ const defaultLessonProgress = (lessonId: string): LessonProgress => ({
   started: false,
   completed: false,
   score: 0,
+  progress: 0,
   timeSpent: 0,
   exercisesCompleted: 0,
   totalExercises: 0,
@@ -65,6 +67,7 @@ export const useProgressStore = create<ProgressState>()(
         5: defaultPhaseProgress(5),
       },
       currentPhaseId: 1,
+      currentPhase: 1,
       currentLessonId: null,
       isLoading: false,
       lastSynced: null,
@@ -177,7 +180,7 @@ export const useProgressStore = create<ProgressState>()(
 
       // Set current phase
       setCurrentPhase: (phaseId: number) => {
-        set({ currentPhaseId: phaseId });
+        set({ currentPhaseId: phaseId, currentPhase: phaseId });
       },
 
       // Get phase progress

@@ -60,7 +60,9 @@
     "all": "Tout",
     "words": "mots",
     "more": "plus",
-    "minutes": "minutes"
+    "minutes": "minutes",
+    "showMore": "Afficher plus",
+    "showLess": "Afficher moins"
   },
   "dashboard": {
     "title": "Tableau de bord",

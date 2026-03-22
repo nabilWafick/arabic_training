@@ -19,6 +19,7 @@ interface GamificationState {
   stats: UserStats;
   
   // Achievements
+  achievements: Achievement[]; // All available achievements
   unlockedAchievements: string[];
   recentAchievement: Achievement | null;
   
@@ -29,7 +30,7 @@ interface GamificationState {
   streakActive: boolean;
   
   // Actions
-  addXP: (amount: number, reason: string) => void;
+  addXP: (amount: number, reason?: string) => void;
   checkStreak: () => void;
   updateStreak: () => void;
   unlockAchievement: (achievement: Achievement) => void;
@@ -58,20 +59,21 @@ export const useGamificationStore = create<GamificationState>()(
     (set, get) => ({
       // Initial state
       stats: defaultStats,
+      achievements: [], // Will be populated from data/achievements.ts
       unlockedAchievements: [],
       recentAchievement: null,
       xpHistory: [],
       streakActive: false,
 
       // Add XP
-      addXP: (amount: number, reason: string) => {
+      addXP: (amount: number, reason?: string) => {
         const { stats, xpHistory } = get();
         const newXP = stats.xp + amount;
         const newLevel = calculateLevel(newXP);
         
         const xpGain: XPGain = {
           amount,
-          reason,
+          reason: reason || "XP earned",
           timestamp: new Date(),
         };
 

@@ -26,6 +26,7 @@ import { useGamificationStore } from "@/stores/useGamificationStore";
 import { useProgressStore } from "@/stores/useProgressStore";
 import { useTranslations } from "next-intl";
 import { CURRICULUM } from "@/data/curriculum";
+import { ALL_ACHIEVEMENTS, getAchievementById } from "@/data/achievements";
 
 /**
  * Progress page - Comprehensive view of user's learning journey
@@ -43,6 +44,13 @@ export default function ProgressPage() {
   const streak = stats?.streak ?? 0;
   const longestStreak = stats?.longestStreak ?? 0;
   const lessonsCompleted = stats?.lessonsCompleted ?? 0;
+
+  // Resolve achievement IDs to full achievement objects
+  const resolvedAchievements = useMemo(() => {
+    return unlockedAchievements
+      .map(id => getAchievementById(id))
+      .filter((a): a is NonNullable<typeof a> => a !== undefined);
+  }, [unlockedAchievements]);
 
   useEffect(() => {
     setMounted(true);
@@ -180,7 +188,10 @@ export default function ProgressPage() {
                       {CURRICULUM.map((phase) => {
                         const phaseProgress = getPhaseProgress(phase.id);
                         const progressPercent = phaseProgress?.overallProgress ?? 0;
-                        const completedLessons = phaseProgress?.completedLessons ?? 0;
+                        // Compute completed lessons from lessonsProgress
+                        const completedLessons = phaseProgress?.lessonsProgress
+                          ? Object.values(phaseProgress.lessonsProgress).filter(lp => lp.completed).length
+                          : 0;
 
                         return (
                           <Link
@@ -294,9 +305,9 @@ export default function ProgressPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    {unlockedAchievements.length > 0 ? (
+                    {resolvedAchievements.length > 0 ? (
                       <div className="space-y-3">
-                        {unlockedAchievements.slice(0, 5).map((achievement) => (
+                        {resolvedAchievements.slice(0, 5).map((achievement) => (
                           <div
                             key={achievement.id}
                             className="flex items-center gap-3 rounded-lg bg-gold/5 p-3"

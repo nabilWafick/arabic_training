@@ -23,6 +23,10 @@ import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { LetterDisplay } from "@/components/arabic";
 import { useGamificationStore } from "@/stores/useGamificationStore";
 import { ARABIC_ALPHABET, ARABIC_HARAKAT, ARABIC_NUMBERS } from "@/data/curriculum";
+import { cn } from "@/lib/utils";
+
+// Type for letter from ARABIC_ALPHABET
+type ArabicLetter = (typeof ARABIC_ALPHABET)[number];
 
 // Practice modes
 const PRACTICE_MODES = [
@@ -88,9 +92,7 @@ const PRACTICE_MODES = [
 export default function PracticePage() {
   const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState("alphabet");
-  const [selectedLetter, setSelectedLetter] = useState<
-    (typeof ARABIC_ALPHABET)[0] | null
-  >(null);
+  const [selectedLetter, setSelectedLetter] = useState<ArabicLetter | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -298,18 +300,18 @@ export default function PracticePage() {
                     <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
                       {ARABIC_NUMBERS.map((num) => (
                         <div
-                          key={num.value}
+                          key={num.number}
                           className="rounded-lg border border-border/50 p-4 text-center transition-colors hover:border-gold/50"
                         >
                           <span className="font-arabic text-4xl text-gold">
                             {num.arabic}
                           </span>
-                          <p className="mt-2 text-xl text-foreground">{num.value}</p>
-                          <p className="mt-1 text-sm text-muted-foreground">
-                            {num.name}
-                          </p>
+                          <p className="mt-2 text-xl text-foreground">{num.number}</p>
                           <p className="font-arabic text-sm text-gold/80">
-                            {num.nameAr}
+                            {num.word}
+                          </p>
+                          <p className="mt-1 text-xs text-muted-foreground">
+                            {num.transliteration}
                           </p>
                         </div>
                       ))}
