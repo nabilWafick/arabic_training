@@ -26,6 +26,7 @@ import { XPBar, StreakTracker } from "@/components/gamification";
 import { useGamificationStore } from "@/stores/useGamificationStore";
 import { useProgressStore } from "@/stores/useProgressStore";
 import { CURRICULUM } from "@/data/curriculum";
+import { useTranslations } from "next-intl";
 
 /**
  * Dashboard page - User's main learning hub
@@ -35,6 +36,7 @@ export default function DashboardPage() {
   const [mounted, setMounted] = useState(false);
   const { stats, unlockedAchievements, getLevelInfo } = useGamificationStore();
   const { phases, getPhaseProgress, getLessonProgress } = useProgressStore();
+  const t = useTranslations();
   
   // Extract stats with safe defaults
   const xp = stats?.xp ?? 0;
@@ -116,28 +118,28 @@ export default function DashboardPage() {
   const statsCards = [
     {
       icon: Star,
-      label: "Total XP",
+      label: t('dashboard.totalXP'),
       value: xp.toLocaleString(),
       color: "text-gold",
       bgColor: "bg-gold/10",
     },
     {
       icon: TrendingUp,
-      label: "Level",
+      label: t('learning.level'),
       value: level.toString(),
       color: "text-purple-500",
       bgColor: "bg-purple-500/10",
     },
     {
       icon: Flame,
-      label: "Day Streak",
+      label: t('dashboard.dayStreak'),
       value: streak.toString(),
       color: "text-orange-500",
       bgColor: "bg-orange-500/10",
     },
     {
       icon: BookOpen,
-      label: "Lessons Done",
+      label: t('dashboard.lessonsDone'),
       value: completedLessons.toString(),
       color: "text-teal",
       bgColor: "bg-teal/10",
@@ -157,10 +159,10 @@ export default function DashboardPage() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h1 className="font-heading text-3xl font-bold text-foreground">
-                  Dashboard
+                  {t('dashboard.title')}
                 </h1>
                 <p className="text-muted-foreground">
-                  Welcome back! Continue your Arabic learning journey.
+                  {t('dashboard.welcomeMessage')}
                 </p>
               </div>
               <Button
@@ -169,7 +171,7 @@ export default function DashboardPage() {
               >
                 <Link href={`/learn/phase/${currentPhase.id}/lesson/${currentLesson.id}`}>
                   <Play className="h-4 w-4" />
-                  Continue Learning
+                  {t('dashboard.continueLearning')}
                 </Link>
               </Button>
             </div>
@@ -206,10 +208,10 @@ export default function DashboardPage() {
                 <Card className="border-border/50">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
-                      <CardTitle className="text-lg">Level Progress</CardTitle>
+                      <CardTitle className="text-lg">{t('dashboard.levelProgress')}</CardTitle>
                       <Badge variant="secondary" className="gap-1">
                         <Zap className="h-3 w-3" />
-                        Level {level}
+                        {t('learning.level')} {level}
                       </Badge>
                     </div>
                   </CardHeader>
@@ -234,7 +236,7 @@ export default function DashboardPage() {
                             color: currentPhase.color,
                           }}
                         >
-                          Phase {currentPhase.id}: {currentPhase.title}
+                          {t('learning.phase')} {currentPhase.id}: {currentPhase.title}
                         </Badge>
                         <CardTitle>{currentLesson.title}</CardTitle>
                         <p className="mt-1 font-arabic text-lg text-gold">
@@ -255,7 +257,7 @@ export default function DashboardPage() {
                       </span>
                       <span className="flex items-center gap-1">
                         <Target className="h-4 w-4" />
-                        {currentLesson.exercises?.length || 0} exercises
+                        {currentLesson.exercises?.length || 0} {t('common.exercises')}
                       </span>
                       <Badge variant="outline">{currentLesson.difficulty}</Badge>
                     </div>
@@ -266,7 +268,7 @@ export default function DashboardPage() {
                       <Link
                         href={`/learn/phase/${currentPhase.id}/lesson/${currentLesson.id}`}
                       >
-                        Start Lesson
+                        {t('learning.startLesson')}
                         <ChevronRight className="h-4 w-4" />
                       </Link>
                     </Button>
@@ -278,7 +280,7 @@ export default function DashboardPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <BarChart3 className="h-5 w-5 text-gold" />
-                      Learning Progress
+                      {t('dashboard.learningProgress')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -302,7 +304,7 @@ export default function DashboardPage() {
                                 </div>
                                 <div>
                                   <p className="font-medium text-foreground group-hover:text-gold">
-                                    Phase {phase.id}: {phase.title}
+                                    {t('learning.phase')} {phase.id}: {phase.title}
                                   </p>
                                   <p className="text-xs text-muted-foreground">
                                     {phase.totalLessons} lessons
@@ -337,7 +339,7 @@ export default function DashboardPage() {
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-lg">
                       <Flame className="h-5 w-5 text-orange-500" />
-                      Daily Streak
+                      {t('dashboard.dailyStreak')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -350,7 +352,7 @@ export default function DashboardPage() {
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-lg">
                       <Zap className="h-5 w-5 text-gold" />
-                      Quick Practice
+                      {t('dashboard.quickPractice')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -361,7 +363,7 @@ export default function DashboardPage() {
                     >
                       <Link href="/practice/alphabet">
                         <span className="text-xl">أ</span>
-                        Arabic Alphabet
+                        {t('arabic.arabicAlphabet')}
                       </Link>
                     </Button>
                     <Button
@@ -371,7 +373,7 @@ export default function DashboardPage() {
                     >
                       <Link href="/practice/vocabulary">
                         <BookOpen className="h-5 w-5" />
-                        Vocabulary
+                        {t('navigation.vocabulary')}
                       </Link>
                     </Button>
                     <Button
@@ -381,7 +383,7 @@ export default function DashboardPage() {
                     >
                       <Link href="/practice/listening">
                         <Target className="h-5 w-5" />
-                        Listening
+                        {t('navigation.listening')}
                       </Link>
                     </Button>
                     <Button
@@ -390,7 +392,7 @@ export default function DashboardPage() {
                     >
                       <Link href="/practice/daily-challenge">
                         <Star className="h-4 w-4" />
-                        Daily Challenge
+                        {t('learning.dailyChallenge')}
                       </Link>
                     </Button>
                   </CardContent>
@@ -402,13 +404,13 @@ export default function DashboardPage() {
                     <div className="flex items-center justify-between">
                       <CardTitle className="flex items-center gap-2 text-lg">
                         <Trophy className="h-5 w-5 text-gold" />
-                        Achievements
+                        {t('gamification.achievements')}
                       </CardTitle>
                       <Link
                         href="/achievements"
                         className="text-sm text-gold hover:underline"
                       >
-                        View All
+                        {t('common.viewAll')}
                       </Link>
                     </div>
                   </CardHeader>
@@ -431,7 +433,7 @@ export default function DashboardPage() {
                       <div className="rounded-lg border border-dashed border-border p-6 text-center">
                         <Trophy className="mx-auto h-8 w-8 text-muted-foreground/50" />
                         <p className="mt-2 text-sm text-muted-foreground">
-                          Complete lessons to earn achievements!
+                          {t('gamification.completeToEarn')}
                         </p>
                       </div>
                     )}
@@ -443,7 +445,7 @@ export default function DashboardPage() {
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-lg">
                       <Calendar className="h-5 w-5 text-gold" />
-                      This Week
+                      {t('dashboard.thisWeek')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -468,7 +470,7 @@ export default function DashboardPage() {
                       })}
                     </div>
                     <p className="mt-4 text-center text-sm text-muted-foreground">
-                      5 days active this week
+                      5 {t('dashboard.daysActiveThisWeek')}
                     </p>
                   </CardContent>
                 </Card>

@@ -41,7 +41,36 @@
     "retry": "Réessayer",
     "confirm": "Confirmer",
     "skip": "Sauter",
-    "done": "Terminé"
+    "done": "Terminé",
+    "viewAll": "Tout voir",
+    "day": "Jour",
+    "days": "jours",
+    "week": "semaine",
+    "month": "mois",
+    "year": "an",
+    "easy": "facile",
+    "medium": "moyen",
+    "hard": "difficile",
+    "lessons": "leçons",
+    "exercises": "exercices"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcomeMessage": "Bienvenue! Continuez votre apprentissage de l'arabe",
+    "continueLearning": "Continuer l'apprentissage",
+    "totalXP": "XP Total",
+    "lessonsDone": "Leçons terminées",
+    "dayStreak": "Série de jours",
+    "levelProgress": "Progression de niveau",
+    "dailyStreak": "Série quotidienne",
+    "startToday": "Commencer aujourd'hui",
+    "longestStreak": "Plus longue série",
+    "daysAway": "jours restants",
+    "xpToNextLevel": "XP pour le prochain niveau",
+    "quickPractice": "Pratique rapide",
+    "learningProgress": "Progression d'apprentissage",
+    "thisWeek": "Cette semaine",
+    "daysActiveThisWeek": "jours actifs cette semaine"
   },
   "learning": {
     "phase": "Phase",
@@ -58,7 +87,10 @@
     "resumeLesson": "Reprendre la leçon",
     "completeLesson": "Terminer la leçon",
     "viewDetails": "Voir les détails",
-    "practiceMore": "Pratiquer plus"
+    "practiceMore": "Pratiquer plus",
+    "the28ArabicLetters": "Les 28 lettres arabes",
+    "learnAllLetters": "Apprenez les 28 lettres de l'alphabet arabe avec leurs sons et formes",
+    "dailyChallenge": "Défi quotidien"
   },
   "gamification": {
     "achievementUnlocked": "Accomplissement débloqué!",
@@ -67,7 +99,10 @@
     "congratulations": "Félicitations!",
     "keepItUp": "Continuez comme ça!",
     "brilliantWork": "Travail brillant!",
-    "excellentProgress": "Progrès excellent!"
+    "excellentProgress": "Progrès excellent!",
+    "achievements": "Accomplissements",
+    "completeToEarn": "Terminez des leçons pour gagner des accomplissements!",
+    "xpBonus": "Bonus XP actif"
   },
   "arabic": {
     "letters": "Lettres",
@@ -82,7 +117,8 @@
     "listening": "Écoute",
     "conversation": "Conversation",
     "modernStandardArabic": "Arabe standard moderne",
-    "colloquialArabic": "Arabe colloquial"
+    "colloquialArabic": "Arabe colloquial",
+    "arabicAlphabet": "Alphabet arabe"
   },
   "errors": {
     "notFound": "Page non trouvée",

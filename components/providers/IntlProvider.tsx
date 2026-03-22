@@ -4,42 +4,38 @@ import { NextIntlClientProvider } from 'next-intl';
 import { useUserStore } from '@/stores/useUserStore';
 import { useEffect, useState } from 'react';
 
+// Import default messages
+import enMessages from '@/messages/en.json';
+import frMessages from '@/messages/fr.json';
+import arMessages from '@/messages/ar.json';
+
+const messages: Record<string, any> = {
+  en: enMessages,
+  fr: frMessages,
+  ar: arMessages,
+};
+
 export function IntlProvider({ children }: { children: React.ReactNode }) {
   const { settings } = useUserStore();
-  const [messages, setMessages] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [locale, setLocale] = useState<'en' | 'fr' | 'ar'>('fr');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    async function loadMessages() {
-      try {
-        const locale = settings.locale || 'fr';
-        const msgs = await import(`@/messages/${locale}.json`);
-        setMessages(msgs.default);
-        setIsLoading(false);
-        
-        // Update HTML dir and lang attributes
-        document.documentElement.setAttribute('lang', locale);
-        document.documentElement.setAttribute('dir', locale === 'ar' ? 'rtl' : 'ltr');
-      } catch (error) {
-        console.error('Failed to load messages:', error);
-        // Fallback to French
-        const msgs = await import(`@/messages/fr.json`);
-        setMessages(msgs.default);
-        setIsLoading(false);
-        document.documentElement.setAttribute('lang', 'fr');
-        document.documentElement.setAttribute('dir', 'ltr');
-      }
-    }
+    const currentLocale = (settings.locale || 'fr') as 'en' | 'fr' | 'ar';
+    setLocale(currentLocale);
     
-    loadMessages();
+    // Update HTML dir and lang attributes
+    document.documentElement.setAttribute('lang', currentLocale);
+    document.documentElement.setAttribute('dir', currentLocale === 'ar' ? 'rtl' : 'ltr');
+    
+    setMounted(true);
   }, [settings.locale]);
 
-  if (isLoading || !messages) {
-    return <>{children}</>;
-  }
+  // Use static messages for the current locale
+  const currentMessages = messages[locale] || messages.fr;
 
   return (
-    <NextIntlClientProvider locale={settings.locale || 'fr'} messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={currentMessages}>
       {children}
     </NextIntlClientProvider>
   );

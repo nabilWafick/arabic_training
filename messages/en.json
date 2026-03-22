@@ -41,7 +41,36 @@
     "retry": "Retry",
     "confirm": "Confirm",
     "skip": "Skip",
-    "done": "Done"
+    "done": "Done",
+    "viewAll": "View All",
+    "day": "Day",
+    "days": "days",
+    "week": "week",
+    "month": "month",
+    "year": "year",
+    "easy": "easy",
+    "medium": "medium",
+    "hard": "hard",
+    "lessons": "lessons",
+    "exercises": "exercises"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcomeMessage": "Welcome back! Continue your Arabic learning journey",
+    "continueLearning": "Continue Learning",
+    "totalXP": "Total XP",
+    "lessonsDone": "Lessons Done",
+    "dayStreak": "Day Streak",
+    "levelProgress": "Level Progress",
+    "dailyStreak": "Daily Streak",
+    "startToday": "Start Today",
+    "longestStreak": "Longest streak",
+    "daysAway": "days away",
+    "xpToNextLevel": "XP to next level",
+    "quickPractice": "Quick Practice",
+    "learningProgress": "Learning Progress",
+    "thisWeek": "This Week",
+    "daysActiveThisWeek": "days active this week"
   },
   "learning": {
     "phase": "Phase",
@@ -58,7 +87,10 @@
     "resumeLesson": "Resume Lesson",
     "completeLesson": "Complete Lesson",
     "viewDetails": "View Details",
-    "practiceMore": "Practice More"
+    "practiceMore": "Practice More",
+    "the28ArabicLetters": "The 28 Arabic Letters",
+    "learnAllLetters": "Learn all 28 letters of the Arabic alphabet with their sounds and forms",
+    "dailyChallenge": "Daily Challenge"
   },
   "gamification": {
     "achievementUnlocked": "Achievement Unlocked!",
@@ -67,7 +99,10 @@
     "congratulations": "Congratulations!",
     "keepItUp": "Keep it up!",
     "brilliantWork": "Brilliant work!",
-    "excellentProgress": "Excellent progress!"
+    "excellentProgress": "Excellent progress!",
+    "achievements": "Achievements",
+    "completeToEarn": "Complete lessons to earn achievements!",
+    "xpBonus": "XP Bonus Active"
   },
   "arabic": {
     "letters": "Letters",
@@ -82,7 +117,8 @@
     "listening": "Listening",
     "conversation": "Conversation",
     "modernStandardArabic": "Modern Standard Arabic",
-    "colloquialArabic": "Colloquial Arabic"
+    "colloquialArabic": "Colloquial Arabic",
+    "arabicAlphabet": "Arabic Alphabet"
   },
   "errors": {
     "notFound": "Page not found",

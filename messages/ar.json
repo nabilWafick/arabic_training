@@ -41,7 +41,36 @@
     "retry": "إعادة محاولة",
     "confirm": "تأكيد",
     "skip": "تخطي",
-    "done": "تم"
+    "done": "تم",
+    "viewAll": "عرض الكل",
+    "day": "يوم",
+    "days": "أيام",
+    "week": "أسبوع",
+    "month": "شهر",
+    "year": "سنة",
+    "easy": "سهل",
+    "medium": "متوسط",
+    "hard": "صعب",
+    "lessons": "دروس",
+    "exercises": "تمارين"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "welcomeMessage": "مرحبا بعودتك! تابع رحلتك في تعلم اللغة العربية",
+    "continueLearning": "متابعة التعلم",
+    "totalXP": "مجموع النقاط",
+    "lessonsDone": "الدروس المكتملة",
+    "dayStreak": "سلسلة الأيام",
+    "levelProgress": "تقدم المستوى",
+    "dailyStreak": "السلسلة اليومية",
+    "startToday": "ابدأ اليوم",
+    "longestStreak": "أطول سلسلة",
+    "daysAway": "أيام متبقية",
+    "xpToNextLevel": "نقاط للمستوى التالي",
+    "quickPractice": "تمرين سريع",
+    "learningProgress": "تقدم التعلم",
+    "thisWeek": "هذا الأسبوع",
+    "daysActiveThisWeek": "أيام نشطة هذا الأسبوع"
   },
   "learning": {
     "phase": "المرحلة",
@@ -58,7 +87,10 @@
     "resumeLesson": "استئناف الدرس",
     "completeLesson": "إكمال الدرس",
     "viewDetails": "عرض التفاصيل",
-    "practiceMore": "تدرب أكثر"
+    "practiceMore": "تدرب أكثر",
+    "the28ArabicLetters": "الحروف العربية الثمانية والعشرون",
+    "learnAllLetters": "تعلم جميع الحروف العربية الـ 28 مع أصواتها وأشكالها",
+    "dailyChallenge": "التحدي اليومي"
   },
   "gamification": {
     "achievementUnlocked": "تم فتح إنجاز!",
@@ -67,7 +99,10 @@
     "congratulations": "تهانينا!",
     "keepItUp": "استمر في المحاولة!",
     "brilliantWork": "عمل رائع!",
-    "excellentProgress": "تقدم ممتاز!"
+    "excellentProgress": "تقدم ممتاز!",
+    "achievements": "الإنجازات",
+    "completeToEarn": "أكمل الدروس لكسب الإنجازات!",
+    "xpBonus": "مكافأة نقاط نشطة"
   },
   "arabic": {
     "letters": "الأحرف",
@@ -82,7 +117,8 @@
     "listening": "الاستماع",
     "conversation": "المحادثة",
     "modernStandardArabic": "الفصحى الحديثة",
-    "colloquialArabic": "اللهجة العامية"
+    "colloquialArabic": "اللهجة العامية",
+    "arabicAlphabet": "الأبجدية العربية"
   },
   "errors": {
     "notFound": "الصفحة غير موجودة",
