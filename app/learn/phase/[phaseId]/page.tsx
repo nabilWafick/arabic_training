@@ -172,30 +172,19 @@ export default function PhasePage({ params }: PhasePageProps) {
               </div>
             </div>
 
-            {/* Objectives */}
-            {phase.objectives && phase.objectives.length > 0 && (
-              <Card className="border-border/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Target className="h-5 w-5 text-gold" />
-                    Learning Objectives
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="grid gap-2 sm:grid-cols-2">
-                    {phase.objectives.map((objective, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start gap-2 text-muted-foreground"
-                      >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
-                        {objective}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            )}
+            {/* Phase Description */}
+            <Card className="border-border/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Target className="h-5 w-5 text-gold" />
+                  About This Phase
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">{phase.description}</p>
+                <p className="mt-2 font-arabic text-lg text-gold">{phase.descriptionAr}</p>
+              </CardContent>
+            </Card>
 
             {/* Lessons List */}
             <div className="space-y-4">
@@ -268,11 +257,11 @@ export default function PhasePage({ params }: PhasePageProps) {
                             <div className="mt-1 flex items-center gap-4 text-xs text-muted-foreground">
                               <span className="flex items-center gap-1">
                                 <Clock className="h-3 w-3" />
-                                {lesson.duration}
+                                {lesson.estimatedTime} min
                               </span>
                               <span className="flex items-center gap-1">
                                 <BookOpen className="h-3 w-3" />
-                                {lesson.exercises?.length || 0} exercises
+                                {lesson.exerciseCount || 0} exercises
                               </span>
                             </div>
 

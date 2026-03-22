@@ -39,68 +39,54 @@ export interface GuestProgress {
 
 export interface Phase {
   id: number;
-  slug: string;
-  titleEn: string;
-  titleFr: string;
+  title: string;
   titleAr: string;
-  numeral: string;
+  description: string;
+  descriptionAr: string;
   duration: string;
-  level: string;
-  objectives: string[];
-  competencies: string[];
   color: string;
-  gradientFrom: string;
-  gradientTo: string;
+  icon: string;
+  totalLessons: number;
   lessons: Lesson[];
 }
 
 export interface Lesson {
   id: string;
   phaseId: number;
-  number: number;
-  slug: string;
-  titleEn: string;
-  titleFr: string;
+  order: number;
+  title: string;
   titleAr: string;
-  duration: number; // in minutes
+  description: string;
   objectives: string[];
-  theory: TheorySection[];
-  weeklyPlan: WeeklyPlanItem[];
-  exercises: ExerciseSet;
-  resources: Resource[];
+  estimatedTime: number; // in minutes
+  difficulty: 'easy' | 'medium' | 'hard';
+  xpReward: number;
+  content: LessonContent;
+  exerciseCount: number;
+  prerequisites?: string[];
 }
 
-export interface TheorySection {
-  id: string;
-  titleEn: string;
-  titleFr: string;
-  titleAr?: string;
-  contentEn: string;
-  contentFr: string;
-  contentAr?: string;
-  examples?: Example[];
+export interface LessonContent {
+  theory: TheoryItem[];
+  vocabulary?: VocabularyItem[];
+  examples?: ContentExample[];
 }
 
-export interface Example {
+export interface TheoryItem {
+  title: string;
+  content: string;
+}
+
+export interface VocabularyItem {
+  arabic: string;
+  transliteration: string;
+  meaning: string;
+}
+
+export interface ContentExample {
   arabic: string;
   transliteration: string;
   translation: string;
-  audio?: string;
-}
-
-export interface WeeklyPlanItem {
-  day: string;
-  activity: string;
-  type: string;
-  duration: string;
-}
-
-export interface Resource {
-  icon: string;
-  title: string;
-  description: string;
-  url?: string;
-  type: 'video' | 'audio' | 'book' | 'website' | 'app' | 'worksheet';
 }
 
 // ============================================
@@ -116,7 +102,7 @@ export type ExerciseType =
   | 'FILL_BLANK'
   | 'TRANSLATION';
 
-export type Difficulty = 'EASY' | 'MEDIUM' | 'HARD';
+export type Difficulty = 'EASY' | 'MEDIUM' | 'HARD' | 'easy' | 'medium' | 'hard';
 
 export interface ExerciseSet {
   easy: Exercise[];
@@ -172,6 +158,7 @@ export interface LessonProgress {
   started: boolean;
   completed: boolean;
   score: number;
+  progress: number; // 0-100 completion percentage
   timeSpent: number;
   exercisesCompleted: number;
   totalExercises: number;
@@ -286,6 +273,17 @@ export interface VowelMark {
   symbol: string;
   sound: string;
   position: 'above' | 'below';
+  description: string;
+}
+
+/**
+ * Haraka type used by VowelMarks component
+ */
+export interface Haraka {
+  mark: string;
+  name: string;
+  nameAr: string;
+  sound: string;
   description: string;
 }
 

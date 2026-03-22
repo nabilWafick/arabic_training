@@ -263,11 +263,11 @@ export default function DashboardPage() {
                     <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                       <span className="flex items-center gap-1">
                         <Clock className="h-4 w-4" />
-                        {currentLesson.duration}
+                        {currentLesson.estimatedTime} min
                       </span>
                       <span className="flex items-center gap-1">
                         <Target className="h-4 w-4" />
-                        {currentLesson.exercises?.length || 0} {t('common.exercises')}
+                        {currentLesson.exerciseCount || 0} {t('common.exercises')}
                       </span>
                       <Badge variant="outline">{t(getDifficultyKey(currentLesson.difficulty))}</Badge>
                     </div>

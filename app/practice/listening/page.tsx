@@ -73,7 +73,7 @@ export default function ListeningPracticePage() {
 
     if (letter === currentQuestion.correctLetter.letter) {
       setScore((prev) => prev + 1);
-      addXP(10);
+      addXP(10, "Listening exercise completed");
     }
   };
 

@@ -71,7 +71,6 @@ export async function POST(request: NextRequest) {
       model: MISTRAL_MODELS.large,
       system: ARABIC_TEACHER_SYSTEM_PROMPT,
       prompt,
-      maxTokens: AI_CONFIG.maxTokens,
       temperature: AI_CONFIG.temperature,
     });
     

@@ -194,16 +194,17 @@ export default function PracticePage() {
                     {/* Letter grid */}
                     <div className="grid grid-cols-4 gap-4 sm:grid-cols-7">
                       {ARABIC_ALPHABET.map((letter) => (
-                        <LetterDisplay
+                        <div
                           key={letter.letter}
-                          letter={letter.letter}
-                          name={letter.name}
-                          transliteration={letter.transliteration}
-                          forms={letter.forms}
-                          audioExample={letter.letter}
+                          className={cn(
+                            "cursor-pointer rounded-lg border p-4 text-center transition-all hover:border-gold",
+                            selectedLetter?.letter === letter.letter && "border-gold bg-gold/10"
+                          )}
                           onClick={() => setSelectedLetter(letter)}
-                          selected={selectedLetter?.letter === letter.letter}
-                        />
+                        >
+                          <span className="font-arabic text-3xl">{letter.letter}</span>
+                          <p className="mt-1 text-xs text-muted-foreground">{letter.name}</p>
+                        </div>
                       ))}
                     </div>
 
@@ -228,10 +229,10 @@ export default function PracticePage() {
                               </p>
                               <div className="flex flex-wrap justify-center gap-4 sm:justify-start">
                                 {[
-                                  { label: "Isolated", value: selectedLetter.forms.isolated },
-                                  { label: "Initial", value: selectedLetter.forms.initial },
-                                  { label: "Medial", value: selectedLetter.forms.medial },
-                                  { label: "Final", value: selectedLetter.forms.final },
+                                  { label: "Isolated", value: selectedLetter.isolated },
+                                  { label: "Initial", value: selectedLetter.initial },
+                                  { label: "Medial", value: selectedLetter.medial },
+                                  { label: "Final", value: selectedLetter.final },
                                 ].map((form) => (
                                   <div
                                     key={form.label}

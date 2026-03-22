@@ -187,15 +187,6 @@ export default function LearnPage() {
                           <Clock className="h-4 w-4" />
                           {phase.duration}
                         </span>
-                        <Badge
-                          variant="outline"
-                          style={{
-                            borderColor: phase.color,
-                            color: phase.color,
-                          }}
-                        >
-                          {phase.difficulty}
-                        </Badge>
                       </div>
                     </CardHeader>
 
@@ -279,7 +270,7 @@ export default function LearnPage() {
                                   <div className="mt-3 flex items-center justify-between">
                                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                       <Clock className="h-3 w-3" />
-                                      {lesson.duration}
+                                      {lesson.estimatedTime} min
                                     </div>
                                     {!isLessonLocked && !isCompleted && (
                                       <Badge

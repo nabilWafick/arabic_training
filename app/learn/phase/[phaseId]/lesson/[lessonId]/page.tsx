@@ -30,7 +30,7 @@ import { useProgressStore } from "@/stores/useProgressStore";
 import { useGamificationStore } from "@/stores/useGamificationStore";
 import { useAudioStore } from "@/stores/useAudioStore";
 import { CURRICULUM, getPhase, getLesson, ARABIC_ALPHABET, ARABIC_HARAKAT, ARABIC_NUMBERS } from "@/data/curriculum";
-import type { Exercise, ExerciseType } from "@/types";
+import type { Exercise, ExerciseType, ExerciseResult } from "@/types";
 
 interface LessonPageProps {
   params: Promise<{ phaseId: string; lessonId: string }>;
@@ -51,24 +51,26 @@ export default function LessonPage({ params }: LessonPageProps) {
   const [showCompletion, setShowCompletion] = useState(false);
 
   const { getLessonProgress, updateProgress, completeLesson } = useProgressStore();
-  const { addXP, checkAndUnlockAchievements } = useGamificationStore();
+  const { addXP, updateStreak } = useGamificationStore();
   const { speak } = useAudioStore();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  // Construct lesson ID in the format "phaseId-lessonId" (e.g., "1-1")
+  const lessonIdFull = `${phaseId}-${lessonId}`;
   const phaseIdNum = parseInt(phaseId);
   const lessonIdNum = parseInt(lessonId);
   const phase = getPhase(phaseIdNum);
-  const lesson = phase ? getLesson(phaseIdNum, lessonIdNum) : null;
+  const lesson = phase ? getLesson(lessonIdFull) : null;
 
   if (!phase || !lesson) {
     notFound();
   }
 
   // Find prev/next lessons
-  const lessonIndex = phase.lessons.findIndex((l) => l.id === lessonIdNum);
+  const lessonIndex = phase.lessons.findIndex((l) => l.id === lessonIdFull);
   const prevLesson = lessonIndex > 0 ? phase.lessons[lessonIndex - 1] : null;
   const nextLesson =
     lessonIndex < phase.lessons.length - 1
@@ -76,8 +78,8 @@ export default function LessonPage({ params }: LessonPageProps) {
       : null;
   const nextPhase = !nextLesson && phaseIdNum < 5 ? getPhase(phaseIdNum + 1) : null;
 
-  // Generate exercises based on lesson content
-  const exercises: Exercise[] = lesson.exercises || [];
+  // Generate exercises based on lesson content - empty for now, exercises will be generated dynamically
+  const exercises: Exercise[] = [];
 
   // Handle exercise completion
   const handleExerciseComplete = useCallback(
@@ -85,15 +87,15 @@ export default function LessonPage({ params }: LessonPageProps) {
       const newResults = [...exerciseResults, { correct, score }];
       setExerciseResults(newResults);
 
-      // Award XP
+      // Award XP based on difficulty
       const xpEarned = correct
-        ? lesson.difficulty === "Beginner"
+        ? lesson.difficulty === "easy"
           ? 10
-          : lesson.difficulty === "Intermediate"
+          : lesson.difficulty === "medium"
           ? 20
           : 30
         : 5;
-      addXP(xpEarned);
+      addXP(xpEarned, `Exercise ${correct ? 'completed' : 'attempted'}`);
 
       // Check for next exercise or completion
       if (currentExerciseIndex < exercises.length - 1) {
@@ -102,11 +104,11 @@ export default function LessonPage({ params }: LessonPageProps) {
         }, 1500);
       } else {
         // Lesson complete
-        const totalScore = Math.round(
-          (newResults.filter((r) => r.correct).length / newResults.length) * 100
-        );
-        completeLesson(phaseIdNum, lessonIdNum, totalScore);
-        checkAndUnlockAchievements();
+        const totalScore = newResults.length > 0 
+          ? Math.round((newResults.filter((r) => r.correct).length / newResults.length) * 100)
+          : 100;
+        completeLesson(lessonIdFull, totalScore, 0);
+        updateStreak();
         setShowCompletion(true);
       }
     },
@@ -117,9 +119,8 @@ export default function LessonPage({ params }: LessonPageProps) {
       lesson.difficulty,
       addXP,
       completeLesson,
-      checkAndUnlockAchievements,
-      phaseIdNum,
-      lessonIdNum,
+      updateStreak,
+      lessonIdFull,
     ]
   );
 
@@ -131,7 +132,7 @@ export default function LessonPage({ params }: LessonPageProps) {
     );
   }
 
-  const lessonProgress = getLessonProgress(phaseIdNum, lessonIdNum);
+  const lessonProgress = getLessonProgress(phaseIdNum, lessonIdFull);
   const currentExercise = exercises[currentExerciseIndex];
 
   // Render theory content based on lesson type
@@ -179,8 +180,11 @@ export default function LessonPage({ params }: LessonPageProps) {
                     letter={letter.letter}
                     name={letter.name}
                     transliteration={letter.transliteration}
-                    forms={letter.forms}
-                    audioExample={letter.letter}
+                    isolated={letter.isolated}
+                    initial={letter.initial}
+                    medial={letter.medial}
+                    final={letter.final}
+                    type={letter.type}
                     showForms
                   />
                 ))}
@@ -267,8 +271,8 @@ export default function LessonPage({ params }: LessonPageProps) {
             </CardHeader>
             <CardContent>
               <VowelMarks
-                harakat={ARABIC_HARAKAT}
-                exampleLetter="ب"
+                harakat={[...ARABIC_HARAKAT]}
+                baseLetter="ب"
                 interactive
               />
             </CardContent>
@@ -306,26 +310,26 @@ export default function LessonPage({ params }: LessonPageProps) {
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6">
                 {ARABIC_NUMBERS.map((num) => (
                   <div
-                    key={num.value}
+                    key={num.number}
                     className="flex flex-col items-center rounded-lg border border-border/50 p-4 text-center transition-colors hover:border-gold/50 hover:bg-gold/5"
                   >
                     <span className="font-arabic text-4xl text-gold">
                       {num.arabic}
                     </span>
                     <span className="mt-2 text-2xl text-foreground">
-                      {num.value}
+                      {num.number}
                     </span>
                     <span className="mt-1 text-sm text-muted-foreground">
-                      {num.name}
+                      {num.transliteration}
                     </span>
                     <span className="font-arabic text-sm text-gold/70">
-                      {num.nameAr}
+                      {num.word}
                     </span>
                     <Button
                       variant="ghost"
                       size="sm"
                       className="mt-2"
-                      onClick={() => speak(num.nameAr)}
+                      onClick={() => speak(num.word)}
                     >
                       <Volume2 className="h-4 w-4" />
                     </Button>
@@ -377,43 +381,37 @@ export default function LessonPage({ params }: LessonPageProps) {
 
   // Render exercise component based on type
   const renderExercise = (exercise: Exercise) => {
+    const handleComplete = (result: ExerciseResult) => {
+      handleExerciseComplete(result.correct, result.score);
+    };
+
     switch (exercise.type) {
       case "MULTIPLE_CHOICE":
         return (
           <MultipleChoice
-            question={exercise.question}
-            questionAr={exercise.questionAr}
-            options={exercise.options || []}
-            correctAnswer={exercise.correctAnswer as number}
-            explanation={exercise.explanation}
-            onComplete={handleExerciseComplete}
+            exercise={exercise}
+            onComplete={handleComplete}
           />
         );
       case "WRITING":
         return (
           <WritingExercise
-            prompt={exercise.question}
-            promptAr={exercise.questionAr}
-            expectedAnswer={exercise.correctAnswer as string}
-            hint={exercise.hint}
-            onComplete={handleExerciseComplete}
+            exercise={exercise}
+            onComplete={handleComplete}
           />
         );
       case "MATCHING":
         return (
           <MatchingExercise
-            pairs={exercise.matchingPairs || []}
-            onComplete={handleExerciseComplete}
+            exercise={exercise}
+            onComplete={handleComplete}
           />
         );
       case "LISTENING":
         return (
           <ListeningExercise
-            audioText={exercise.audioText || exercise.questionAr || ""}
-            question={exercise.question}
-            options={exercise.options || []}
-            correctAnswer={exercise.correctAnswer as number}
-            onComplete={handleExerciseComplete}
+            exercise={exercise}
+            onComplete={handleComplete}
           />
         );
       default:
@@ -428,12 +426,14 @@ export default function LessonPage({ params }: LessonPageProps) {
   // Completion screen
   if (showCompletion) {
     const totalCorrect = exerciseResults.filter((r) => r.correct).length;
-    const totalScore = Math.round((totalCorrect / exerciseResults.length) * 100);
+    const totalScore = exerciseResults.length > 0 
+      ? Math.round((totalCorrect / exerciseResults.length) * 100)
+      : 100;
     const xpEarned =
       totalCorrect *
-      (lesson.difficulty === "Beginner"
+      (lesson.difficulty === "easy"
         ? 10
-        : lesson.difficulty === "Intermediate"
+        : lesson.difficulty === "medium"
         ? 20
         : 30);
 
