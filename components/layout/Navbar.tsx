@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Moon, Sun, Globe, User, LogOut, Settings, Flame, Star, ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -23,10 +24,10 @@ import { cn } from "@/lib/utils";
  * Navigation items configuration
  */
 const navItems = [
-  { href: "/dashboard", label: "Dashboard", labelFr: "Tableau de bord" },
-  { href: "/learn", label: "Learn", labelFr: "Apprendre" },
-  { href: "/practice", label: "Practice", labelFr: "Pratiquer" },
-  { href: "/achievements", label: "Achievements", labelFr: "Succès" },
+  { href: "/dashboard", key: "dashboard" },
+  { href: "/learn", key: "learn" },
+  { href: "/practice", key: "practice" },
+  { href: "/achievements", key: "achievements" },
 ];
 
 /**
@@ -43,6 +44,7 @@ const languages = [
  * theme toggle, language switcher, and user menu
  */
 export function Navbar() {
+  const t = useTranslations('navigation');
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   
@@ -106,7 +108,7 @@ export function Navbar() {
                   : "text-muted-foreground"
               )}
             >
-              {settings.locale === "fr" ? item.labelFr : item.label}
+              {t(item.key)}
             </Link>
           ))}
         </div>
@@ -203,13 +205,13 @@ export function Navbar() {
                 <DropdownMenuItem asChild>
                   <Link href="/profile" className="cursor-pointer">
                     <User className="mr-2 h-4 w-4" />
-                    Profile
+                    {t('profile')}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/settings" className="cursor-pointer">
                     <Settings className="mr-2 h-4 w-4" />
-                    Settings
+                    {t('settings')}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
@@ -218,17 +220,17 @@ export function Navbar() {
                   className="cursor-pointer text-destructive focus:text-destructive"
                 >
                   <LogOut className="mr-2 h-4 w-4" />
-                  Logout
+                  {t('logout')}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
             <div className="hidden items-center gap-2 sm:flex">
               <Button variant="ghost" size="sm" asChild>
-                <Link href="/login">Login</Link>
+                <Link href="/login">{t('login')}</Link>
               </Button>
               <Button size="sm" className="bg-gold hover:bg-gold-dark text-background" asChild>
-                <Link href="/register">Sign up</Link>
+                <Link href="/register">{t('register')}</Link>
               </Button>
             </div>
           )}
@@ -257,7 +259,7 @@ export function Navbar() {
                           : "text-muted-foreground hover:bg-muted hover:text-foreground"
                       )}
                     >
-                      {settings.locale === "fr" ? item.labelFr : item.label}
+                      {t(item.key)}
                     </Link>
                   ))}
                 </nav>

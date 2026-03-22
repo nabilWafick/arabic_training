@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Crimson_Pro, Amiri } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { IntlProvider } from "@/components/providers/IntlProvider";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -82,9 +83,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col font-sans">
-        <TooltipProvider delayDuration={300}>
-          {children}
-        </TooltipProvider>
+        <IntlProvider>
+          <TooltipProvider delayDuration={300}>
+            {children}
+          </TooltipProvider>
+        </IntlProvider>
       </body>
     </html>
   );

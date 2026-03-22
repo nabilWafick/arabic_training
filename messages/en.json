@@ -9,7 +9,21 @@
     "register": "Register",
     "logout": "Logout",
     "profile": "Profile",
-    "settings": "Settings"
+    "settings": "Settings",
+    "progress": "Progress",
+    "help": "Help",
+    "writing": "Writing",
+    "listening": "Listening",
+    "speaking": "Speaking",
+    "vocabulary": "Vocabulary",
+    "learningPhases": "Learning Phases",
+    "practiceSection": "Practice",
+    "current": "Current",
+    "phase1": "Foundations",
+    "phase2": "Beginner",
+    "phase3": "Intermediate",
+    "phase4": "Advanced",
+    "phase5": "Expert"
   },
   "common": {
     "loading": "Loading...",

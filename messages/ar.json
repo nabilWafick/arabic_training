@@ -9,7 +9,21 @@
     "register": "إنشاء حساب",
     "logout": "تسجيل الخروج",
     "profile": "الملف الشخصي",
-    "settings": "الإعدادات"
+    "settings": "الإعدادات",
+    "progress": "التقدم",
+    "help": "المساعدة",
+    "writing": "الكتابة",
+    "listening": "الاستماع",
+    "speaking": "التحدث",
+    "vocabulary": "المفردات",
+    "learningPhases": "مراحل التعلم",
+    "practiceSection": "التدريب",
+    "current": "الحالي",
+    "phase1": "الأساسيات",
+    "phase2": "المبتدئ",
+    "phase3": "المتوسط",
+    "phase4": "المتقدم",
+    "phase5": "الخبير"
   },
   "common": {
     "loading": "جاري التحميل...",

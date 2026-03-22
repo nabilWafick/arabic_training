@@ -24,6 +24,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import { useProgressStore } from "@/stores/useProgressStore";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 /**
@@ -31,7 +32,7 @@ import { cn } from "@/lib/utils";
  */
 interface NavItem {
   href: string;
-  label: string;
+  key: string;
   icon: React.ComponentType<{ className?: string }>;
   badge?: string | number;
 }
@@ -40,40 +41,40 @@ interface NavItem {
  * Learning phases for navigation
  */
 const phases = [
-  { id: 1, name: "Foundations", nameAr: "الأساسيات", color: "phase-1" },
-  { id: 2, name: "Beginner", nameAr: "المبتدئ", color: "phase-2" },
-  { id: 3, name: "Intermediate", nameAr: "المتوسط", color: "phase-3" },
-  { id: 4, name: "Advanced", nameAr: "المتقدم", color: "phase-4" },
-  { id: 5, name: "Expert", nameAr: "الخبير", color: "phase-5" },
+  { id: 1, key: "phase1", nameAr: "الأساسيات", color: "phase-1" },
+  { id: 2, key: "phase2", nameAr: "المبتدئ", color: "phase-2" },
+  { id: 3, key: "phase3", nameAr: "المتوسط", color: "phase-3" },
+  { id: 4, key: "phase4", nameAr: "المتقدم", color: "phase-4" },
+  { id: 5, key: "phase5", nameAr: "الخبير", color: "phase-5" },
 ];
 
 /**
  * Main navigation items
  */
 const mainNavItems: NavItem[] = [
-  { href: "/dashboard", label: "Dashboard", icon: Home },
-  { href: "/learn", label: "Learn", icon: BookOpen },
-  { href: "/practice", label: "Practice", icon: Target },
-  { href: "/achievements", label: "Achievements", icon: Trophy },
-  { href: "/progress", label: "Progress", icon: BarChart3 },
+  { href: "/dashboard", key: "dashboard", icon: Home },
+  { href: "/learn", key: "learn", icon: BookOpen },
+  { href: "/practice", key: "practice", icon: Target },
+  { href: "/achievements", key: "achievements", icon: Trophy },
+  { href: "/progress", key: "progress", icon: BarChart3 },
 ];
 
 /**
  * Practice mode items
  */
 const practiceItems: NavItem[] = [
-  { href: "/practice/writing", label: "Writing", icon: PenTool },
-  { href: "/practice/listening", label: "Listening", icon: Headphones },
-  { href: "/practice/speaking", label: "Speaking", icon: Mic },
-  { href: "/practice/vocabulary", label: "Vocabulary", icon: Layers },
+  { href: "/practice/writing", key: "writing", icon: PenTool },
+  { href: "/practice/listening", key: "listening", icon: Headphones },
+  { href: "/practice/speaking", key: "speaking", icon: Mic },
+  { href: "/practice/vocabulary", key: "vocabulary", icon: Layers },
 ];
 
 /**
  * Secondary navigation items
  */
 const secondaryNavItems: NavItem[] = [
-  { href: "/settings", label: "Settings", icon: Settings },
-  { href: "/help", label: "Help", icon: HelpCircle },
+  { href: "/settings", key: "settings", icon: Settings },
+  { href: "/help", key: "help", icon: HelpCircle },
 ];
 
 /**
@@ -84,6 +85,7 @@ export function Sidebar() {
   const pathname = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const { currentPhase } = useProgressStore();
+  const t = useTranslations('navigation');
   
   /**
    * Render a navigation item with optional tooltip when collapsed
@@ -106,7 +108,7 @@ export function Sidebar() {
         <Icon className="h-4 w-4 shrink-0" />
         {!isCollapsed && (
           <>
-            <span className="flex-1">{item.label}</span>
+            <span className="flex-1">{t(item.key)}</span>
             {item.badge && (
               <Badge variant="secondary" className="h-5 min-w-[20px] px-1.5 text-xs">
                 {item.badge}
@@ -122,7 +124,7 @@ export function Sidebar() {
         <Tooltip key={item.href} delayDuration={0}>
           <TooltipTrigger asChild>{linkContent}</TooltipTrigger>
           <TooltipContent side="right" className="flex items-center gap-2">
-            {item.label}
+            {t(item.key)}
             {item.badge && (
               <Badge variant="secondary" className="h-5 px-1.5 text-xs">
                 {item.badge}
@@ -170,7 +172,7 @@ export function Sidebar() {
           {!isCollapsed && (
             <div className="mt-6">
               <h3 className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-sidebar-foreground/50">
-                Learning Phases
+                {t('learningPhases')}
               </h3>
               <div className="space-y-1">
                 {phases.map((phase) => {
@@ -199,11 +201,11 @@ export function Sidebar() {
                         {phase.id}
                       </span>
                       <span className="flex-1 text-sidebar-foreground/80">
-                        {phase.name}
+                        {t(phase.key)}
                       </span>
                       {isCurrent && (
                         <Badge className="h-5 bg-gold text-[10px] text-background">
-                          Current
+                          {t('current')}
                         </Badge>
                       )}
                     </Link>
@@ -217,7 +219,7 @@ export function Sidebar() {
           {!isCollapsed && (
             <div className="mt-6">
               <h3 className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-sidebar-foreground/50">
-                Practice
+                {t('practiceSection')}
               </h3>
               <div className="space-y-1">
                 {practiceItems.map(renderNavItem)}
@@ -253,7 +255,7 @@ export function Sidebar() {
                     </TooltipTrigger>
                     <TooltipContent side="right">
                       <span className="font-arabic text-xs">{phase.nameAr}</span>
-                      <span className="ml-1">{phase.name}</span>
+                      <span className="ml-1">{t(phase.key)}</span>
                     </TooltipContent>
                   </Tooltip>
                 );
