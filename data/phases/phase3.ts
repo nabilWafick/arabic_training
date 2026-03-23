@@ -11,7 +11,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-1", phaseId: 3, order: 1,
     title: "Verb Form II (فَعَّلَ)",
     titleAr: "الفعل المزيد - فَعَّلَ",
+    titleFr: "Forme verbale II (فَعَّلَ)",
     description: "Learn Form II verbs with doubled middle radical for intensification",
+    descriptionFr: "Apprenez les verbes de forme II avec redoublement de la consonne médiane pour l'intensification",
     objectives: ["Understand Form II pattern", "Recognize doubled consonant", "Form causative verbs", "Practice common Form II verbs"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -34,7 +36,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-2", phaseId: 3, order: 2,
     title: "Verb Form III (فَاعَلَ)",
     titleAr: "الفعل المزيد - فَاعَلَ",
+    titleFr: "Forme verbale III (فَاعَلَ)",
     description: "Learn Form III verbs with alif after first radical for reciprocal actions",
+    descriptionFr: "Apprenez les verbes de forme III avec alif après la première radicale pour les actions réciproques",
     objectives: ["Understand Form III pattern", "Recognize reciprocal meaning", "Form interaction verbs", "Use in conversations"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -57,7 +61,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-3", phaseId: 3, order: 3,
     title: "Verb Form IV (أَفْعَلَ)",
     titleAr: "الفعل المزيد - أَفْعَلَ",
+    titleFr: "Forme verbale IV (أَفْعَلَ)",
     description: "Learn Form IV verbs with hamza prefix for causative meaning",
+    descriptionFr: "Apprenez les verbes de forme IV avec préfixe hamza pour le sens causatif",
     objectives: ["Understand Form IV pattern", "Recognize hamza prefix", "Form causative verbs", "Distinguish from Form II"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -80,7 +86,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-4", phaseId: 3, order: 4,
     title: "Verb Form V (تَفَعَّلَ)",
     titleAr: "الفعل المزيد - تَفَعَّلَ",
+    titleFr: "Forme verbale V (تَفَعَّلَ)",
     description: "Learn Form V verbs - reflexive of Form II",
+    descriptionFr: "Apprenez les verbes de forme V - réfléchi de la forme II",
     objectives: ["Understand Form V pattern", "Recognize ta- prefix with shadda", "Form reflexive verbs", "Connect to Form II"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -103,7 +111,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-5", phaseId: 3, order: 5,
     title: "Verb Form VI (تَفَاعَلَ)",
     titleAr: "الفعل المزيد - تَفَاعَلَ",
+    titleFr: "Forme verbale VI (تَفَاعَلَ)",
     description: "Learn Form VI verbs - mutual/reciprocal reflexive",
+    descriptionFr: "Apprenez les verbes de forme VI - réfléchi mutuel et réciproque",
     objectives: ["Understand Form VI pattern", "Recognize mutual actions", "Form reciprocal verbs", "Connect to Form III"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -126,7 +136,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-6", phaseId: 3, order: 6,
     title: "Verb Forms VII-X Overview",
     titleAr: "نظرة عامة على الأوزان السابع إلى العاشر",
+    titleFr: "Vue d'ensemble des formes verbales VII-X",
     description: "Overview of Forms VII, VIII, IX, and X with key examples",
+    descriptionFr: "Vue d'ensemble des formes VII, VIII, IX et X avec des exemples clés",
     objectives: ["Understand Forms VII-X patterns", "Recognize passive/reflexive meanings", "Learn common verbs from each form", "Master form recognition"],
     estimatedTime: 55, difficulty: "hard", xpReward: 70,
     content: {
@@ -151,7 +163,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-7", phaseId: 3, order: 7,
     title: "The Subjunctive Mood (المُضارع المنصوب)",
     titleAr: "المُضارع المنصوب",
+    titleFr: "Le mode subjonctif (المُضارع المنصوب)",
     description: "Learn the subjunctive mood and particles that trigger it",
+    descriptionFr: "Apprenez le mode subjonctif et les particules qui le déclenchent",
     objectives: ["Understand subjunctive concept", "Recognize nasb particles", "Apply fatha ending", "Form complex sentences"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -174,7 +188,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-8", phaseId: 3, order: 8,
     title: "The Jussive Mood (المُضارع المجزوم)",
     titleAr: "المُضارع المجزوم",
+    titleFr: "Le mode jussif (المُضارع المجزوم)",
     description: "Learn the jussive mood for commands and negation",
+    descriptionFr: "Apprenez le mode jussif pour les ordres et la négation",
     objectives: ["Understand jussive concept", "Recognize jazm particles", "Apply sukun ending", "Use لَمْ for negation"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -197,7 +213,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-9", phaseId: 3, order: 9,
     title: "The Imperative (الأمر)",
     titleAr: "فعل الأمر",
+    titleFr: "L'impératif (الأمر)",
     description: "Master command forms for all persons",
+    descriptionFr: "Maîtrisez les formes de l'impératif pour toutes les personnes",
     objectives: ["Form imperatives from present tense", "Apply hamzat al-wasl rules", "Use negative commands", "Practice polite requests"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -220,7 +238,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-10", phaseId: 3, order: 10,
     title: "Conditional Sentences (الجمل الشرطية)",
     titleAr: "الجمل الشرطية",
+    titleFr: "Les phrases conditionnelles (الجمل الشرطية)",
     description: "Learn to form if-then conditional sentences",
+    descriptionFr: "Apprenez à former des phrases conditionnelles si-alors",
     objectives: ["Understand condition and response", "Use إِنْ and إِذَا", "Apply correct verb moods", "Form real and unreal conditions"],
     estimatedTime: 55, difficulty: "hard", xpReward: 70,
     content: {
@@ -243,7 +263,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-11", phaseId: 3, order: 11,
     title: "Passive Voice (المبني للمجهول)",
     titleAr: "المبني للمجهول",
+    titleFr: "La voix passive (المبني للمجهول)",
     description: "Learn to form and use passive voice in Arabic",
+    descriptionFr: "Apprenez à former et utiliser la voix passive en arabe",
     objectives: ["Change active to passive", "Apply vowel patterns", "Use passive in different tenses", "Identify passive in texts"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -266,7 +288,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-12", phaseId: 3, order: 12,
     title: "Verb Moods Review & Practice",
     titleAr: "مراجعة الأفعال وتطبيقات",
+    titleFr: "Révision et pratique des modes verbaux",
     description: "Comprehensive review of all verb moods with practice",
+    descriptionFr: "Révision complète de tous les modes verbaux avec exercices pratiques",
     objectives: ["Distinguish all verb moods", "Apply correct particles", "Form complex sentences", "Translate between moods"],
     estimatedTime: 55, difficulty: "hard", xpReward: 70,
     content: {
@@ -290,7 +314,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-13", phaseId: 3, order: 13,
     title: "Relative Clauses (الجمل الموصولة)",
     titleAr: "الجمل الموصولة",
+    titleFr: "Les propositions relatives (الجمل الموصولة)",
     description: "Learn to form relative clauses with الَّذِي and its variants",
+    descriptionFr: "Apprenez à former des propositions relatives avec الَّذِي et ses variantes",
     objectives: ["Use relative pronouns", "Match gender and number", "Form defining clauses", "Build complex descriptions"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -313,7 +339,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-14", phaseId: 3, order: 14,
     title: "Subordinate Clauses",
     titleAr: "الجمل التابعة",
+    titleFr: "Les propositions subordonnées",
     description: "Learn various types of subordinate clauses",
+    descriptionFr: "Apprenez les différents types de propositions subordonnées",
     objectives: ["Form temporal clauses", "Use causal connectors", "Build purpose clauses", "Connect ideas smoothly"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -336,7 +364,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-15", phaseId: 3, order: 15,
     title: "Nominal Sentences & Predication",
     titleAr: "الجملة الاسمية والإسناد",
+    titleFr: "Les phrases nominales et la prédication",
     description: "Master nominal sentence structure and predication rules",
+    descriptionFr: "Maîtrisez la structure des phrases nominales et les règles de prédication",
     objectives: ["Understand المبتدأ والخبر", "Apply agreement rules", "Use different predicate types", "Form complex descriptions"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -359,7 +389,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-16", phaseId: 3, order: 16,
     title: "إِنَّ and Its Sisters",
     titleAr: "إِنَّ وأخواتها",
+    titleFr: "إِنَّ et ses sœurs",
     description: "Learn particles that modify nominal sentences",
+    descriptionFr: "Apprenez les particules qui modifient les phrases nominales",
     objectives: ["Understand إِنَّ particles", "Apply accusative to subject", "Use for emphasis", "Form nuanced statements"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -382,7 +414,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-17", phaseId: 3, order: 17,
     title: "Exceptions (الاستثناء)",
     titleAr: "أسلوب الاستثناء",
+    titleFr: "Les exceptions (الاستثناء)",
     description: "Learn to express exceptions using إِلَّا and other particles",
+    descriptionFr: "Apprenez à exprimer les exceptions avec إِلَّا et d'autres particules",
     objectives: ["Use إِلَّا correctly", "Apply case rules for exceptions", "Use other exception words", "Form complete exception statements"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -405,7 +439,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-18", phaseId: 3, order: 18,
     title: "Emphasis & Assertion",
     titleAr: "أسلوب التوكيد",
+    titleFr: "L'emphase et l'affirmation",
     description: "Learn emphatic constructions in Arabic",
+    descriptionFr: "Apprenez les constructions emphatiques en arabe",
     objectives: ["Use لَ for emphasis", "Apply قَدْ correctly", "Use repetition for emphasis", "Form strong assertions"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
@@ -429,7 +465,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-19", phaseId: 3, order: 19,
     title: "Work & Professions",
     titleAr: "العمل والمهن",
+    titleFr: "Le travail et les professions",
     description: "Learn vocabulary for workplace and professions",
+    descriptionFr: "Apprenez le vocabulaire du lieu de travail et des professions",
     objectives: ["Name common professions", "Describe work activities", "Discuss career topics", "Use professional vocabulary"],
     estimatedTime: 45, difficulty: "medium", xpReward: 60,
     content: {
@@ -452,7 +490,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-20", phaseId: 3, order: 20,
     title: "Education & Learning",
     titleAr: "التعليم والتعلم",
+    titleFr: "L'éducation et l'apprentissage",
     description: "Vocabulary for academic and educational contexts",
+    descriptionFr: "Vocabulaire pour les contextes académiques et éducatifs",
     objectives: ["Describe educational systems", "Discuss studies and exams", "Talk about school life", "Use academic vocabulary"],
     estimatedTime: 45, difficulty: "medium", xpReward: 60,
     content: {
@@ -475,7 +515,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-21", phaseId: 3, order: 21,
     title: "Travel & Tourism",
     titleAr: "السفر والسياحة",
+    titleFr: "Les voyages et le tourisme",
     description: "Essential vocabulary for traveling",
+    descriptionFr: "Vocabulaire essentiel pour les voyages",
     objectives: ["Book travel arrangements", "Navigate airports", "Describe destinations", "Handle travel situations"],
     estimatedTime: 45, difficulty: "medium", xpReward: 60,
     content: {
@@ -498,7 +540,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-22", phaseId: 3, order: 22,
     title: "Health & Medicine",
     titleAr: "الصحة والطب",
+    titleFr: "La santé et la médecine",
     description: "Medical vocabulary and health expressions",
+    descriptionFr: "Vocabulaire médical et expressions liées à la santé",
     objectives: ["Describe symptoms", "Understand medical terms", "Visit a doctor", "Discuss health topics"],
     estimatedTime: 45, difficulty: "medium", xpReward: 60,
     content: {
@@ -521,7 +565,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-23", phaseId: 3, order: 23,
     title: "Technology & Internet",
     titleAr: "التكنولوجيا والإنترنت",
+    titleFr: "La technologie et Internet",
     description: "Modern technology vocabulary",
+    descriptionFr: "Vocabulaire de la technologie moderne",
     objectives: ["Discuss technology topics", "Use internet terminology", "Describe devices", "Navigate digital world"],
     estimatedTime: 45, difficulty: "medium", xpReward: 60,
     content: {
@@ -544,7 +590,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-24", phaseId: 3, order: 24,
     title: "Environment & Nature",
     titleAr: "البيئة والطبيعة",
+    titleFr: "L'environnement et la nature",
     description: "Environmental and nature vocabulary",
+    descriptionFr: "Vocabulaire de l'environnement et de la nature",
     objectives: ["Describe natural features", "Discuss environmental issues", "Talk about weather", "Use nature vocabulary"],
     estimatedTime: 45, difficulty: "medium", xpReward: 60,
     content: {
@@ -568,7 +616,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-25", phaseId: 3, order: 25,
     title: "Reading News Articles",
     titleAr: "قراءة المقالات الإخبارية",
+    titleFr: "Lire des articles de presse",
     description: "Learn to read and understand Arabic news",
+    descriptionFr: "Apprenez à lire et comprendre les actualités en arabe",
     objectives: ["Understand news structure", "Recognize journalistic vocabulary", "Extract main ideas", "Summarize articles"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -591,7 +641,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-26", phaseId: 3, order: 26,
     title: "Reading Short Stories",
     titleAr: "قراءة القصص القصيرة",
+    titleFr: "Lire des nouvelles",
     description: "Develop skills for reading Arabic fiction",
+    descriptionFr: "Développez vos compétences en lecture de fiction arabe",
     objectives: ["Understand narrative structure", "Identify literary devices", "Analyze characters", "Appreciate style"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -614,7 +666,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-27", phaseId: 3, order: 27,
     title: "Writing Paragraphs",
     titleAr: "كتابة الفقرات",
+    titleFr: "Rédiger des paragraphes",
     description: "Learn to write coherent paragraphs in Arabic",
+    descriptionFr: "Apprenez à rédiger des paragraphes cohérents en arabe",
     objectives: ["Structure paragraphs properly", "Use topic sentences", "Develop supporting ideas", "Write conclusions"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -637,7 +691,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-28", phaseId: 3, order: 28,
     title: "Writing Formal Letters",
     titleAr: "كتابة الرسائل الرسمية",
+    titleFr: "Rédiger des lettres formelles",
     description: "Master formal letter writing in Arabic",
+    descriptionFr: "Maîtrisez la rédaction de lettres formelles en arabe",
     objectives: ["Use formal greetings", "Structure letters properly", "Use appropriate register", "Write professional emails"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -660,7 +716,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-29", phaseId: 3, order: 29,
     title: "Writing Essays",
     titleAr: "كتابة المقالات",
+    titleFr: "Rédiger des essais",
     description: "Learn to write structured essays",
+    descriptionFr: "Apprenez à rédiger des essais structurés",
     objectives: ["Plan essay structure", "Develop arguments", "Use evidence", "Write introductions and conclusions"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -683,7 +741,9 @@ export const PHASE_3_LESSONS: Lesson[] = [
     id: "3-30", phaseId: 3, order: 30,
     title: "Phase 3 Review & Assessment",
     titleAr: "مراجعة وتقييم المرحلة الثالثة",
+    titleFr: "Révision et évaluation de la phase 3",
     description: "Comprehensive review of all Phase 3 material",
+    descriptionFr: "Révision complète de tout le contenu de la phase 3",
     objectives: ["Review all verb forms", "Practice complex sentences", "Apply vocabulary in context", "Demonstrate reading and writing skills"],
     estimatedTime: 60, difficulty: "hard", xpReward: 100,
     content: {

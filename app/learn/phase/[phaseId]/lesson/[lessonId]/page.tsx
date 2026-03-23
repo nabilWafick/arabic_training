@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use, useCallback } from "react";
+import { useState, useEffect, use, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { notFound, useRouter } from "next/navigation";
 import {
@@ -30,8 +30,86 @@ import { AILearningAssistant } from "@/components/ai";
 import { useProgressStore } from "@/stores/useProgressStore";
 import { useGamificationStore } from "@/stores/useGamificationStore";
 import { useAudioStore } from "@/stores/useAudioStore";
+import { useUserStore } from "@/stores/useUserStore";
 import { CURRICULUM, getPhase, getLesson, ARABIC_ALPHABET, ARABIC_HARAKAT, ARABIC_NUMBERS } from "@/data/curriculum";
-import type { Exercise, ExerciseType, ExerciseResult } from "@/types";
+import type { Exercise, ExerciseType, ExerciseResult, Locale } from "@/types";
+
+/**
+ * Localized strings for the lesson page UI
+ */
+const i18nLessonPage: Record<Locale, {
+  learn: string;
+  phase: string;
+  lesson: string;
+  theory: string;
+  practice: string;
+  objectives: string;
+  nextLesson: string;
+  prevLesson: string;
+  complete: string;
+  score: string;
+  xpEarned: string;
+  viewPhase: string;
+  backToDashboard: string;
+  lessonComplete: string;
+  excellent: string;
+  continueTo: string;
+}> = {
+  en: {
+    learn: "Learn",
+    phase: "Phase",
+    lesson: "Lesson",
+    theory: "Theory",
+    practice: "Practice",
+    objectives: "Learning Objectives",
+    nextLesson: "Next Lesson",
+    prevLesson: "Previous Lesson",
+    complete: "Complete",
+    score: "Score",
+    xpEarned: "XP Earned",
+    viewPhase: "View Phase Overview",
+    backToDashboard: "Back to Dashboard",
+    lessonComplete: "Lesson Complete!",
+    excellent: "Excellent!",
+    continueTo: "Continue to Phase",
+  },
+  fr: {
+    learn: "Apprendre",
+    phase: "Phase",
+    lesson: "Leçon",
+    theory: "Théorie",
+    practice: "Pratique",
+    objectives: "Objectifs d'apprentissage",
+    nextLesson: "Leçon suivante",
+    prevLesson: "Leçon précédente",
+    complete: "Terminé",
+    score: "Score",
+    xpEarned: "XP gagnés",
+    viewPhase: "Voir l'aperçu de la phase",
+    backToDashboard: "Retour au tableau de bord",
+    lessonComplete: "Leçon terminée !",
+    excellent: "Excellent !",
+    continueTo: "Continuer vers la Phase",
+  },
+  ar: {
+    learn: "تعلم",
+    phase: "المرحلة",
+    lesson: "الدرس",
+    theory: "النظرية",
+    practice: "التطبيق",
+    objectives: "أهداف التعلم",
+    nextLesson: "الدرس التالي",
+    prevLesson: "الدرس السابق",
+    complete: "مكتمل",
+    score: "النتيجة",
+    xpEarned: "نقاط الخبرة المكتسبة",
+    viewPhase: "عرض نظرة عامة على المرحلة",
+    backToDashboard: "العودة إلى لوحة القيادة",
+    lessonComplete: "اكتمل الدرس!",
+    excellent: "ممتاز!",
+    continueTo: "المتابعة إلى المرحلة",
+  },
+};
 
 interface LessonPageProps {
   params: Promise<{ phaseId: string; lessonId: string }>;
@@ -52,6 +130,9 @@ export default function LessonPage({ params }: LessonPageProps) {
   const { getLessonProgress, updateProgress, completeLesson } = useProgressStore();
   const { addXP, updateStreak } = useGamificationStore();
   const { speak } = useAudioStore();
+  const { settings } = useUserStore();
+  const locale = settings.locale;
+  const t = i18nLessonPage[locale];
 
   useEffect(() => {
     setMounted(true);
@@ -67,6 +148,25 @@ export default function LessonPage({ params }: LessonPageProps) {
   if (!phase || !lesson) {
     notFound();
   }
+
+  // Get localized content
+  const localizedTitle = useMemo(() => {
+    if (locale === "ar") return lesson.titleAr;
+    if (locale === "fr") return lesson.titleFr || lesson.title;
+    return lesson.title;
+  }, [locale, lesson]);
+
+  const localizedDescription = useMemo(() => {
+    if (locale === "ar") return lesson.descriptionAr || lesson.description;
+    if (locale === "fr") return lesson.descriptionFr || lesson.description;
+    return lesson.description;
+  }, [locale, lesson]);
+
+  const localizedPhaseTitle = useMemo(() => {
+    if (locale === "ar") return phase.titleAr;
+    if (locale === "fr") return phase.titleFr || phase.title;
+    return phase.title;
+  }, [locale, phase]);
 
   // Find prev/next lessons
   const lessonIndex = phase.lessons.findIndex((l) => l.id === lessonIdFull);
@@ -516,18 +616,18 @@ export default function LessonPage({ params }: LessonPageProps) {
           <div className="mx-auto max-w-5xl">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Link href="/learn" className="hover:text-foreground">
-                Learn
+                {t.learn}
               </Link>
               <ChevronRight className="h-4 w-4" />
               <Link
                 href={`/learn/phase/${phaseIdNum}`}
                 className="hover:text-foreground"
               >
-                Phase {phaseIdNum}
+                {t.phase} {phaseIdNum}
               </Link>
               <ChevronRight className="h-4 w-4" />
               <span className="text-foreground">
-                Lesson {phaseIdNum}.{lessonIdNum}
+                {t.lesson} {phaseIdNum}.{lessonIdNum}
               </span>
             </div>
 
@@ -540,18 +640,20 @@ export default function LessonPage({ params }: LessonPageProps) {
                     color: phase.color,
                   }}
                 >
-                  Phase {phaseIdNum}: {phase.title}
+                  {t.phase} {phaseIdNum}: {localizedPhaseTitle}
                 </Badge>
                 <h1 className="font-heading text-2xl font-bold text-foreground">
-                  {lesson.title}
+                  {localizedTitle}
                 </h1>
-                <p className="font-arabic text-lg text-gold">{lesson.titleAr}</p>
+                {locale !== "ar" && (
+                  <p className="font-arabic text-lg text-gold">{lesson.titleAr}</p>
+                )}
               </div>
 
               <Button variant="ghost" size="sm" asChild>
                 <Link href={`/learn/phase/${phaseIdNum}`}>
                   <ArrowLeft className="mr-2 h-4 w-4" />
-                  Back to Phase
+                  {locale === "fr" ? "Retour à la phase" : locale === "ar" ? "العودة للمرحلة" : "Back to Phase"}
                 </Link>
               </Button>
             </div>
@@ -586,11 +688,11 @@ export default function LessonPage({ params }: LessonPageProps) {
             <TabsList className="grid w-full max-w-md grid-cols-2">
               <TabsTrigger value="theory" className="gap-2">
                 <BookOpen className="h-4 w-4" />
-                Theory
+                {t.theory}
               </TabsTrigger>
               <TabsTrigger value="practice" className="gap-2">
                 <Play className="h-4 w-4" />
-                Practice ({exercises.length})
+                {t.practice} ({exercises.length})
               </TabsTrigger>
             </TabsList>
 
@@ -603,10 +705,14 @@ export default function LessonPage({ params }: LessonPageProps) {
                   <CardContent className="flex items-center justify-between p-6">
                     <div>
                       <h3 className="font-semibold text-foreground">
-                        Ready to practice?
+                        {locale === "fr" ? "Prêt à pratiquer ?" : locale === "ar" ? "هل أنت مستعد للتدريب؟" : "Ready to practice?"}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Test your knowledge with {exercises.length} exercises.
+                        {locale === "fr" 
+                          ? `Testez vos connaissances avec ${exercises.length} exercices.`
+                          : locale === "ar"
+                          ? `اختبر معرفتك مع ${exercises.length} تمارين.`
+                          : `Test your knowledge with ${exercises.length} exercises.`}
                       </p>
                     </div>
                     <Button
@@ -614,7 +720,7 @@ export default function LessonPage({ params }: LessonPageProps) {
                       onClick={() => setActiveTab("practice")}
                     >
                       <Play className="h-4 w-4" />
-                      Start Practice
+                      {locale === "fr" ? "Commencer la pratique" : locale === "ar" ? "ابدأ التدريب" : "Start Practice"}
                     </Button>
                   </CardContent>
                 </Card>
@@ -629,17 +735,21 @@ export default function LessonPage({ params }: LessonPageProps) {
                   <CardContent className="p-8 text-center">
                     <BookOpen className="mx-auto h-12 w-12 text-muted-foreground/50" />
                     <h3 className="mt-4 font-semibold text-foreground">
-                      No exercises yet
+                      {locale === "fr" ? "Pas encore d'exercices" : locale === "ar" ? "لا توجد تمارين بعد" : "No exercises yet"}
                     </h3>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Practice exercises for this lesson are coming soon.
+                      {locale === "fr" 
+                        ? "Les exercices pratiques pour cette leçon arrivent bientôt."
+                        : locale === "ar"
+                        ? "تمارين التدريب لهذا الدرس قادمة قريبًا."
+                        : "Practice exercises for this lesson are coming soon."}
                     </p>
                     <Button
                       variant="outline"
                       className="mt-4"
                       onClick={() => setActiveTab("theory")}
                     >
-                      Review Theory
+                      {locale === "fr" ? "Revoir la théorie" : locale === "ar" ? "مراجعة النظرية" : "Review Theory"}
                     </Button>
                   </CardContent>
                 </Card>

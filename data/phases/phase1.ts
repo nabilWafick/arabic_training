@@ -24,7 +24,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 1,
     title: "Letters 1-4: Alif, Bā', Tā', Thā'",
     titleAr: "الحروف ١-٤: الألف، الباء، التاء، الثاء",
+    titleFr: "Lettres 1-4 : Alif, Bā', Tā', Thā'",
     description: "Learn the first four letters of the Arabic alphabet with their sounds and shapes",
+    descriptionFr: "Apprenez les quatre premières lettres de l'alphabet arabe avec leurs sons et formes",
     objectives: [
       "Recognize letters Alif (ا), Bā' (ب), Tā' (ت), and Thā' (ث)",
       "Understand that ب, ت, ث share the same base shape with different dots",
@@ -72,7 +74,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 2,
     title: "Letters 5-7: Jīm, Ḥā', Khā'",
     titleAr: "الحروف ٥-٧: الجيم، الحاء، الخاء",
+    titleFr: "Lettres 5-7 : Jīm, Ḥā', Khā'",
     description: "Learn the second group of letters that share a common shape",
+    descriptionFr: "Apprenez le deuxième groupe de lettres partageant une forme commune",
     objectives: [
       "Recognize letters Jīm (ج), Ḥā' (ح), and Khā' (خ)",
       "Distinguish between these similar-looking letters",
@@ -115,7 +119,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 3,
     title: "Letters 8-11: Dāl, Dhāl, Rā', Zāy",
     titleAr: "الحروف ٨-١١: الدال، الذال، الراء، الزاي",
+    titleFr: "Lettres 8-11 : Dāl, Dhāl, Rā', Zāy",
     description: "Learn the non-connecting letters - letters that don't connect forward",
+    descriptionFr: "Apprenez les lettres non connectées - lettres qui ne se lient pas vers l'avant",
     objectives: [
       "Recognize Dāl (د), Dhāl (ذ), Rā' (ر), and Zāy (ز)",
       "Understand why these letters never connect to the following letter",
@@ -160,7 +166,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 4,
     title: "Letters 12-14: Sīn, Shīn, Ṣād",
     titleAr: "الحروف ١٢-١٤: السين، الشين، الصاد",
+    titleFr: "Lettres 12-14 : Sīn, Shīn, Ṣād",
     description: "Learn the 'S' letters with their distinctive three-tooth shape",
+    descriptionFr: "Apprenez les lettres 'S' avec leur forme distinctive à trois dents",
     objectives: [
       "Recognize Sīn (س), Shīn (ش), and Ṣād (ص)",
       "Write the three-tooth pattern of Sīn/Shīn",
@@ -203,7 +211,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 5,
     title: "Letters 15-17: Ḍād, Ṭā', Ẓā'",
     titleAr: "الحروف ١٥-١٧: الضاد، الطاء، الظاء",
+    titleFr: "Lettres 15-17 : Ḍād, Ṭā', Ẓā'",
     description: "Master the remaining emphatic letters - the signature sounds of Arabic",
+    descriptionFr: "Maîtrisez les lettres emphatiques restantes - les sons caractéristiques de l'arabe",
     objectives: [
       "Recognize Ḍād (ض), Ṭā' (ط), and Ẓā' (ظ)",
       "Pronounce all emphatic consonants confidently",
@@ -246,7 +256,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 6,
     title: "Letters 18-20: 'Ayn, Ghayn, Fā'",
     titleAr: "الحروف ١٨-٢٠: العين، الغين، الفاء",
+    titleFr: "Lettres 18-20 : 'Ayn, Ghayn, Fā'",
     description: "Learn the distinctive throat sounds and the letter Fā'",
+    descriptionFr: "Apprenez les sons gutturaux distinctifs et la lettre Fā'",
     objectives: [
       "Recognize 'Ayn (ع), Ghayn (غ), and Fā' (ف)",
       "Master the pharyngeal sound 'Ayn",
@@ -289,7 +301,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 7,
     title: "Letters 21-24: Qāf, Kāf, Lām, Mīm",
     titleAr: "الحروف ٢١-٢٤: القاف، الكاف، اللام، الميم",
+    titleFr: "Lettres 21-24 : Qāf, Kāf, Lām, Mīm",
     description: "Learn common consonants including the distinctive Qāf",
+    descriptionFr: "Apprenez les consonnes courantes, y compris le distinctif Qāf",
     objectives: [
       "Recognize Qāf (ق), Kāf (ك), Lām (ل), and Mīm (م)",
       "Distinguish between Qāf and Kāf sounds",
@@ -334,7 +348,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 8,
     title: "Letters 25-28: Nūn, Hā', Wāw, Yā'",
     titleAr: "الحروف ٢٥-٢٨: النون، الهاء، الواو، الياء",
+    titleFr: "Lettres 25-28 : Nūn, Hā', Wāw, Yā'",
     description: "Complete the alphabet! Learn the final four letters",
+    descriptionFr: "Complétez l'alphabet ! Apprenez les quatre dernières lettres",
     objectives: [
       "Recognize Nūn (ن), Hā' (ه), Wāw (و), and Yā' (ي)",
       "Understand Wāw and Yā' as both consonants and vowels",
@@ -385,7 +401,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 9,
     title: "Letter Forms: Introduction",
     titleAr: "أشكال الحروف: مقدمة",
+    titleFr: "Formes des lettres : Introduction",
     description: "Learn how Arabic letters change shape based on position",
+    descriptionFr: "Apprenez comment les lettres arabes changent de forme selon leur position",
     objectives: [
       "Understand the four forms of Arabic letters",
       "Identify isolated, initial, medial, and final forms",
@@ -425,7 +443,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 10,
     title: "Letter Forms: ب ت ث ن ي Group",
     titleAr: "أشكال الحروف: مجموعة ب ت ث ن ي",
+    titleFr: "Formes des lettres : Groupe ب ت ث ن ي",
     description: "Master the forms of letters with similar base shapes",
+    descriptionFr: "Maîtrisez les formes des lettres ayant des formes de base similaires",
     objectives: [
       "Write ب ت ث ن ي in all four forms",
       "Recognize these letters in any position",
@@ -467,7 +487,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 11,
     title: "Letter Forms: ج ح خ Group",
     titleAr: "أشكال الحروف: مجموعة ج ح خ",
+    titleFr: "Formes des lettres : Groupe ج ح خ",
     description: "Master the hook-shaped letters in all positions",
+    descriptionFr: "Maîtrisez les lettres en forme de crochet dans toutes les positions",
     objectives: [
       "Write ج ح خ in all four forms",
       "Understand how the 'hook' shape changes",
@@ -504,7 +526,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 12,
     title: "Letter Forms: س ش ص ض Group",
     titleAr: "أشكال الحروف: مجموعة س ش ص ض",
+    titleFr: "Formes des lettres : Groupe س ش ص ض",
     description: "Master the 'tooth' letters and their emphatic variants",
+    descriptionFr: "Maîtrisez les lettres 'à dents' et leurs variantes emphatiques",
     objectives: [
       "Write س ش ص ض in all four forms",
       "Understand how teeth simplify in connected forms",
@@ -541,7 +565,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 13,
     title: "Letter Forms: ع غ ف ق Group",
     titleAr: "أشكال الحروف: مجموعة ع غ ف ق",
+    titleFr: "Formes des lettres : Groupe ع غ ف ق",
     description: "Master the eye-shaped and loop letters",
+    descriptionFr: "Maîtrisez les lettres en forme d'œil et les lettres bouclées",
     objectives: [
       "Write ع غ ف ق in all four forms",
       "Recognize the 'eye' shape of ع غ",
@@ -578,7 +604,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 14,
     title: "Letter Forms: ك ل م ه Group",
     titleAr: "أشكال الحروف: مجموعة ك ل م ه",
+    titleFr: "Formes des lettres : Groupe ك ل م ه",
     description: "Master the remaining connecting letters",
+    descriptionFr: "Maîtrisez les lettres connectées restantes",
     objectives: [
       "Write ك ل م ه in all four forms",
       "Understand Hā's many forms",
@@ -621,7 +649,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 15,
     title: "Short Vowels: Fatḥa, Kasra, Ḍamma",
     titleAr: "الحركات القصيرة: الفتحة والكسرة والضمة",
+    titleFr: "Voyelles courtes : Fatḥa, Kasra, Ḍamma",
     description: "Learn the three short vowel marks (harakat)",
+    descriptionFr: "Apprenez les trois signes de voyelles courtes (harakat)",
     objectives: [
       "Recognize Fatḥa (َ), Kasra (ِ), and Ḍamma (ُ)",
       "Pronounce each vowel sound correctly",
@@ -661,7 +691,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 16,
     title: "Sukūn and Shadda",
     titleAr: "السكون والشدة",
+    titleFr: "Sukūn et Shadda",
     description: "Learn marks for no vowel (sukūn) and doubling (shadda)",
+    descriptionFr: "Apprenez les signes d'absence de voyelle (sukūn) et de redoublement (shadda)",
     objectives: [
       "Recognize Sukūn (ْ) and Shadda (ّ)",
       "Understand consonant clusters with sukūn",
@@ -702,7 +734,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 17,
     title: "Tanwīn (Nunation)",
     titleAr: "التنوين",
+    titleFr: "Tanwīn (Nounation)",
     description: "Learn the 'n' sound endings for indefinite nouns",
+    descriptionFr: "Apprenez les terminaisons en 'n' pour les noms indéfinis",
     objectives: [
       "Recognize the three tanwīn marks",
       "Understand tanwīn indicates indefiniteness",
@@ -742,7 +776,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 18,
     title: "Long Vowels: Alif, Wāw, Yā'",
     titleAr: "حروف المد: الألف والواو والياء",
+    titleFr: "Voyelles longues : Alif, Wāw, Yā'",
     description: "Master the long vowel sounds using vowel letters",
+    descriptionFr: "Maîtrisez les sons des voyelles longues à l'aide des lettres voyelles",
     objectives: [
       "Understand how ا و ي represent long vowels",
       "Distinguish short vs. long vowel sounds",
@@ -785,7 +821,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 19,
     title: "Reading: Two-Letter Words",
     titleAr: "القراءة: كلمات من حرفين",
+    titleFr: "Lecture : Mots de deux lettres",
     description: "Practice reading simple two-letter Arabic words",
+    descriptionFr: "Entraînez-vous à lire des mots arabes simples de deux lettres",
     objectives: [
       "Read two-letter words fluently",
       "Apply letter forms knowledge",
@@ -826,7 +864,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 20,
     title: "Reading: Three-Letter Words",
     titleAr: "القراءة: كلمات من ثلاثة حروف",
+    titleFr: "Lecture : Mots de trois lettres",
     description: "Practice reading three-letter root words",
+    descriptionFr: "Entraînez-vous à lire des mots racines de trois lettres",
     objectives: [
       "Read three-letter words fluently",
       "Understand the concept of Arabic roots",
@@ -865,7 +905,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 21,
     title: "Reading: Common Words",
     titleAr: "القراءة: كلمات شائعة",
+    titleFr: "Lecture : Mots courants",
     description: "Learn to read the most frequent Arabic words",
+    descriptionFr: "Apprenez à lire les mots arabes les plus fréquents",
     objectives: [
       "Read the 20 most common Arabic words",
       "Recognize high-frequency vocabulary",
@@ -908,7 +950,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 22,
     title: "Reading: Simple Sentences",
     titleAr: "القراءة: جمل بسيطة",
+    titleFr: "Lecture : Phrases simples",
     description: "Practice reading short Arabic sentences",
+    descriptionFr: "Entraînez-vous à lire des phrases courtes en arabe",
     objectives: [
       "Read simple Arabic sentences",
       "Understand basic sentence structure",
@@ -947,7 +991,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 23,
     title: "Writing: Basic Strokes",
     titleAr: "الكتابة: الخطوط الأساسية",
+    titleFr: "Écriture : Traits de base",
     description: "Master the fundamental strokes used in Arabic calligraphy",
+    descriptionFr: "Maîtrisez les traits fondamentaux utilisés en calligraphie arabe",
     objectives: [
       "Learn the basic strokes of Arabic writing",
       "Practice right-to-left writing direction",
@@ -987,7 +1033,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 24,
     title: "Writing: Letters That Don't Connect",
     titleAr: "الكتابة: الحروف التي لا تتصل",
+    titleFr: "Écriture : Lettres qui ne se connectent pas",
     description: "Practice writing non-connecting letters",
+    descriptionFr: "Entraînez-vous à écrire les lettres non connectées",
     objectives: [
       "Write ا د ذ ر ز و correctly",
       "Understand why these letters don't connect",
@@ -1023,7 +1071,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 25,
     title: "Writing: Connecting Letters",
     titleAr: "الكتابة: وصل الحروف",
+    titleFr: "Écriture : Connexion des lettres",
     description: "Learn to connect letters smoothly",
+    descriptionFr: "Apprenez à connecter les lettres de manière fluide",
     objectives: [
       "Write connected letter combinations",
       "Maintain smooth flow between letters",
@@ -1059,7 +1109,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 26,
     title: "Writing: Complete Words",
     titleAr: "الكتابة: كلمات كاملة",
+    titleFr: "Écriture : Mots complets",
     description: "Practice writing complete Arabic words",
+    descriptionFr: "Entraînez-vous à écrire des mots arabes complets",
     objectives: [
       "Write multi-letter words fluently",
       "Add vowel marks correctly",
@@ -1097,7 +1149,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 27,
     title: "Arabic Numbers 0-10",
     titleAr: "الأرقام العربية ٠-١٠",
+    titleFr: "Chiffres arabes 0-10",
     description: "Learn Arabic-Indic numerals and number words",
+    descriptionFr: "Apprenez les chiffres arabo-indiens et les mots pour les nombres",
     objectives: [
       "Recognize Arabic numerals ٠-١٠",
       "Write and pronounce number words",
@@ -1133,7 +1187,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 28,
     title: "Days of the Week",
     titleAr: "أيام الأسبوع",
+    titleFr: "Les jours de la semaine",
     description: "Learn the names of the days in Arabic",
+    descriptionFr: "Apprenez les noms des jours en arabe",
     objectives: [
       "Name all seven days in Arabic",
       "Understand day name origins",
@@ -1171,7 +1227,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 29,
     title: "Basic Greetings",
     titleAr: "التحيات الأساسية",
+    titleFr: "Salutations de base",
     description: "Learn essential Arabic greetings and responses",
+    descriptionFr: "Apprenez les salutations arabes essentielles et leurs réponses",
     objectives: [
       "Greet people appropriately in Arabic",
       "Respond to common greetings",
@@ -1209,7 +1267,9 @@ export const PHASE_1_LESSONS: Lesson[] = [
     order: 30,
     title: "Phase 1 Review & Assessment",
     titleAr: "مراجعة وتقييم المرحلة الأولى",
+    titleFr: "Révision et évaluation de la Phase 1",
     description: "Comprehensive review of all Phase 1 content",
+    descriptionFr: "Révision complète de tout le contenu de la Phase 1",
     objectives: [
       "Review all 28 letters of the Arabic alphabet",
       "Demonstrate reading fluency",

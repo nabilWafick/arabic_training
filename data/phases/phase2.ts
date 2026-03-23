@@ -21,7 +21,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 1,
     title: "Family Members",
     titleAr: "أفراد العائلة",
+    titleFr: "Les membres de la famille",
     description: "Learn vocabulary for family relationships",
+    descriptionFr: "Apprenez le vocabulaire des relations familiales",
     objectives: [
       "Name immediate family members in Arabic",
       "Understand masculine/feminine forms",
@@ -69,7 +71,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 2,
     title: "Body Parts",
     titleAr: "أعضاء الجسم",
+    titleFr: "Les parties du corps",
     description: "Learn vocabulary for parts of the body",
+    descriptionFr: "Apprenez le vocabulaire des parties du corps",
     objectives: [
       "Name major body parts in Arabic",
       "Understand dual form for paired body parts",
@@ -115,7 +119,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 3,
     title: "Colors",
     titleAr: "الألوان",
+    titleFr: "Les couleurs",
     description: "Learn the names of colors in Arabic",
+    descriptionFr: "Apprenez les noms des couleurs en arabe",
     objectives: [
       "Name the basic colors in Arabic",
       "Understand masculine/feminine color forms",
@@ -156,7 +162,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 4,
     title: "Food and Drinks",
     titleAr: "الطعام والشراب",
+    titleFr: "La nourriture et les boissons",
     description: "Learn vocabulary for common foods and beverages",
+    descriptionFr: "Apprenez le vocabulaire des aliments et des boissons courants",
     objectives: [
       "Name common foods in Arabic",
       "Order food at a restaurant",
@@ -202,7 +210,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 5,
     title: "Animals",
     titleAr: "الحيوانات",
+    titleFr: "Les animaux",
     description: "Learn the names of common animals",
+    descriptionFr: "Apprenez les noms des animaux courants",
     objectives: [
       "Name domestic and wild animals",
       "Use animal vocabulary in sentences",
@@ -247,7 +257,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 6,
     title: "Home and Furniture",
     titleAr: "البيت والأثاث",
+    titleFr: "La maison et les meubles",
     description: "Learn vocabulary for rooms and household items",
+    descriptionFr: "Apprenez le vocabulaire des pièces et des objets de la maison",
     objectives: [
       "Name rooms in a house",
       "Identify common furniture items",
@@ -295,7 +307,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 7,
     title: "Personal Pronouns",
     titleAr: "الضمائر الشخصية",
+    titleFr: "Les pronoms personnels",
     description: "Learn all Arabic personal pronouns",
+    descriptionFr: "Apprenez tous les pronoms personnels arabes",
     objectives: [
       "Memorize all 12 personal pronouns",
       "Distinguish gender and number",
@@ -345,7 +359,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 8,
     title: "Possessive Pronouns",
     titleAr: "ضمائر الملكية",
+    titleFr: "Les pronoms possessifs",
     description: "Learn to express possession in Arabic",
+    descriptionFr: "Apprenez à exprimer la possession en arabe",
     objectives: [
       "Attach possessive suffixes to nouns",
       "Express 'my', 'your', 'his', 'her', etc.",
@@ -387,7 +403,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 9,
     title: "Demonstrative Pronouns",
     titleAr: "أسماء الإشارة",
+    titleFr: "Les pronoms démonstratifs",
     description: "Learn 'this', 'that', 'these', 'those' in Arabic",
+    descriptionFr: "Apprenez « ceci », « cela », « ceux-ci », « ceux-là » en arabe",
     objectives: [
       "Use هَذَا and هَذِهِ correctly",
       "Distinguish near and far demonstratives",
@@ -430,7 +448,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 10,
     title: "Interrogative Pronouns",
     titleAr: "أدوات الاستفهام",
+    titleFr: "Les pronoms interrogatifs",
     description: "Learn question words in Arabic",
+    descriptionFr: "Apprenez les mots interrogatifs en arabe",
     objectives: [
       "Ask 'who', 'what', 'where', 'when', 'why', 'how'",
       "Form questions correctly",
@@ -476,7 +496,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 11,
     title: "Gender in Arabic",
     titleAr: "المذكر والمؤنث",
+    titleFr: "Le genre en arabe",
     description: "Understand masculine and feminine forms",
+    descriptionFr: "Comprenez les formes masculines et féminines",
     objectives: [
       "Identify masculine and feminine nouns",
       "Recognize the feminine marker ة",
@@ -518,7 +540,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 12,
     title: "The Definite Article الـ",
     titleAr: "أداة التعريف: الـ",
+    titleFr: "L'article défini الـ",
     description: "Master 'the' in Arabic and its pronunciation rules",
+    descriptionFr: "Maîtrisez l'article « le/la » en arabe et ses règles de prononciation",
     objectives: [
       "Use الـ (al-) to make nouns definite",
       "Understand sun and moon letters",
@@ -560,7 +584,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 13,
     title: "Adjectives and Agreement",
     titleAr: "الصفات والمطابقة",
+    titleFr: "Les adjectifs et l'accord",
     description: "Learn adjectives and how they agree with nouns",
+    descriptionFr: "Apprenez les adjectifs et comment ils s'accordent avec les noms",
     objectives: [
       "Use common Arabic adjectives",
       "Apply gender agreement",
@@ -603,7 +629,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 14,
     title: "Plural Forms",
     titleAr: "صيغ الجمع",
+    titleFr: "Les formes du pluriel",
     description: "Learn how to form plurals in Arabic",
+    descriptionFr: "Apprenez à former les pluriels en arabe",
     objectives: [
       "Understand sound and broken plurals",
       "Form masculine and feminine sound plurals",
@@ -645,7 +673,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 15,
     title: "Numbers 11-100",
     titleAr: "الأعداد ١١-١٠٠",
+    titleFr: "Les nombres de 11 à 100",
     description: "Learn numbers from 11 to 100",
+    descriptionFr: "Apprenez les nombres de 11 à 100",
     objectives: [
       "Count from 11 to 100 in Arabic",
       "Understand number-noun agreement",
@@ -689,7 +719,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 16,
     title: "Introduction to Arabic Verbs",
     titleAr: "مقدمة في الأفعال",
+    titleFr: "Introduction aux verbes arabes",
     description: "Understand the Arabic verb system basics",
+    descriptionFr: "Comprenez les bases du système verbal arabe",
     objectives: [
       "Understand the three-letter root system",
       "Recognize verb patterns",
@@ -731,7 +763,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 17,
     title: "Past Tense: Form I",
     titleAr: "الفعل الماضي: الفعل الثلاثي",
+    titleFr: "Le passé : Forme I",
     description: "Learn to conjugate past tense verbs",
+    descriptionFr: "Apprenez à conjuguer les verbes au passé",
     objectives: [
       "Conjugate past tense for all pronouns",
       "Memorize common past tense verbs",
@@ -769,7 +803,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 18,
     title: "Present Tense: Form I",
     titleAr: "الفعل المضارع: الفعل الثلاثي",
+    titleFr: "Le présent : Forme I",
     description: "Learn present tense conjugation",
+    descriptionFr: "Apprenez la conjugaison au présent",
     objectives: [
       "Conjugate present tense for all pronouns",
       "Understand prefix + suffix patterns",
@@ -807,7 +843,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 19,
     title: "Common Verbs in Action",
     titleAr: "أفعال شائعة",
+    titleFr: "Les verbes courants en action",
     description: "Practice the most frequently used Arabic verbs",
+    descriptionFr: "Pratiquez les verbes arabes les plus fréquemment utilisés",
     objectives: [
       "Master 20 most common Arabic verbs",
       "Use verbs in both tenses",
@@ -849,7 +887,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 20,
     title: "Negation with Verbs",
     titleAr: "نفي الأفعال",
+    titleFr: "La négation des verbes",
     description: "Learn to negate verbs in Arabic",
+    descriptionFr: "Apprenez à nier les verbes en arabe",
     objectives: [
       "Negate past tense with مَا",
       "Negate present tense with لَا",
@@ -893,7 +933,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 21,
     title: "Nominal Sentences",
     titleAr: "الجملة الاسمية",
+    titleFr: "Les phrases nominales",
     description: "Build sentences starting with nouns",
+    descriptionFr: "Construisez des phrases commençant par des noms",
     objectives: [
       "Understand nominal sentence structure",
       "Form 'X is Y' sentences",
@@ -934,7 +976,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 22,
     title: "Verbal Sentences",
     titleAr: "الجملة الفعلية",
+    titleFr: "Les phrases verbales",
     description: "Build sentences starting with verbs",
+    descriptionFr: "Construisez des phrases commençant par des verbes",
     objectives: [
       "Understand verbal sentence structure",
       "Use VSO word order",
@@ -974,7 +1018,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 23,
     title: "Asking Questions",
     titleAr: "طرح الأسئلة",
+    titleFr: "Poser des questions",
     description: "Form different types of questions",
+    descriptionFr: "Formez différents types de questions",
     objectives: [
       "Ask yes/no questions with هَلْ",
       "Use question words in sentences",
@@ -1016,7 +1062,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 24,
     title: "Prepositions and Location",
     titleAr: "حروف الجر والمكان",
+    titleFr: "Les prépositions et la localisation",
     description: "Learn prepositions and express location",
+    descriptionFr: "Apprenez les prépositions et exprimez la localisation",
     objectives: [
       "Use common Arabic prepositions",
       "Describe locations and directions",
@@ -1058,7 +1106,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 25,
     title: "Expressing Time",
     titleAr: "التعبير عن الوقت",
+    titleFr: "Exprimer le temps",
     description: "Talk about time, schedules, and routines",
+    descriptionFr: "Parlez du temps, des horaires et des routines",
     objectives: [
       "Tell time in Arabic",
       "Discuss daily routines",
@@ -1102,7 +1152,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 26,
     title: "Introducing Yourself",
     titleAr: "تقديم النفس",
+    titleFr: "Se présenter",
     description: "Learn to introduce yourself in Arabic",
+    descriptionFr: "Apprenez à vous présenter en arabe",
     objectives: [
       "Give your name and nationality",
       "State your profession",
@@ -1144,7 +1196,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 27,
     title: "At the Restaurant",
     titleAr: "في المطعم",
+    titleFr: "Au restaurant",
     description: "Learn restaurant vocabulary and conversations",
+    descriptionFr: "Apprenez le vocabulaire et les conversations au restaurant",
     objectives: [
       "Order food and drinks",
       "Ask about the menu",
@@ -1186,7 +1240,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 28,
     title: "Shopping",
     titleAr: "التسوق",
+    titleFr: "Les achats",
     description: "Learn shopping vocabulary and conversations",
+    descriptionFr: "Apprenez le vocabulaire et les conversations pour faire des achats",
     objectives: [
       "Ask about prices",
       "Negotiate and bargain",
@@ -1228,7 +1284,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 29,
     title: "Daily Routines",
     titleAr: "الروتين اليومي",
+    titleFr: "Les routines quotidiennes",
     description: "Describe your daily activities",
+    descriptionFr: "Décrivez vos activités quotidiennes",
     objectives: [
       "Talk about daily schedule",
       "Use time expressions naturally",
@@ -1266,7 +1324,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
     order: 30,
     title: "Phase 2 Review & Assessment",
     titleAr: "مراجعة وتقييم المرحلة الثانية",
+    titleFr: "Révision et évaluation de la Phase 2",
     description: "Comprehensive review of Phase 2",
+    descriptionFr: "Révision complète de la Phase 2",
     objectives: [
       "Review all vocabulary learned",
       "Demonstrate grammar mastery",

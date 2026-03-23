@@ -11,7 +11,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-1", phaseId: 5, order: 1,
     title: "Classical Arabic Style",
     titleAr: "أسلوب العربية الكلاسيكية",
+    titleFr: "Style de l'arabe classique",
     description: "Master the distinctive features of classical Arabic",
+    descriptionFr: "Maîtrisez les caractéristiques distinctives de l'arabe classique",
     objectives: ["Recognize classical style markers", "Read pre-modern texts", "Understand archaic forms", "Appreciate linguistic beauty"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -34,7 +36,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-2", phaseId: 5, order: 2,
     title: "Quranic Arabic Features",
     titleAr: "خصائص لغة القرآن",
+    titleFr: "Caractéristiques de l'arabe coranique",
     description: "Study the unique linguistic features of Quranic Arabic",
+    descriptionFr: "Étudiez les caractéristiques linguistiques uniques de l'arabe coranique",
     objectives: ["Recognize Quranic style", "Understand unique vocabulary", "Appreciate rhetorical beauty", "Read with understanding"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -57,7 +61,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-3", phaseId: 5, order: 3,
     title: "Hadith Literature",
     titleAr: "الأحاديث النبوية",
+    titleFr: "La littérature du Hadith",
     description: "Introduction to Prophetic traditions",
+    descriptionFr: "Introduction aux traditions prophétiques",
     objectives: ["Understand hadith structure", "Learn key terminology", "Read basic hadiths", "Appreciate historical significance"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -80,7 +86,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-4", phaseId: 5, order: 4,
     title: "Classical Commentary (Tafsir)",
     titleAr: "التفسير الكلاسيكي",
+    titleFr: "Le commentaire classique (Tafsir)",
     description: "Introduction to classical Quranic commentary",
+    descriptionFr: "Introduction au commentaire coranique classique",
     objectives: ["Understand tafsir methodology", "Read basic tafsir", "Learn commentary vocabulary", "Appreciate interpretive traditions"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -103,7 +111,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-5", phaseId: 5, order: 5,
     title: "Pre-Islamic Poetry (Jahiliyya)",
     titleAr: "الشعر الجاهلي",
+    titleFr: "La poésie préislamique (Jahiliyya)",
     description: "Study the golden age of Arabic poetry",
+    descriptionFr: "Étudiez l'âge d'or de la poésie arabe",
     objectives: ["Understand pre-Islamic poetry", "Learn poetic vocabulary", "Analyze classic qasidas", "Appreciate desert imagery"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -126,7 +136,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-6", phaseId: 5, order: 6,
     title: "Classical Prose Masters",
     titleAr: "أساتذة النثر الكلاسيكي",
+    titleFr: "Les maîtres de la prose classique",
     description: "Study the greatest classical prose writers",
+    descriptionFr: "Étudiez les plus grands prosateurs classiques",
     objectives: ["Read classical prose", "Understand adab literature", "Appreciate stylistic mastery", "Analyze rhetorical techniques"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -150,7 +162,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-7", phaseId: 5, order: 7,
     title: "Poetic Meters (البحور)",
     titleAr: "البحور الشعرية",
+    titleFr: "Les mètres poétiques (البحور)",
     description: "Master the system of Arabic poetic meters",
+    descriptionFr: "Maîtrisez le système des mètres poétiques arabes",
     objectives: ["Understand meter system", "Scan basic meters", "Recognize common patterns", "Apply to poetry analysis"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -173,7 +187,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-8", phaseId: 5, order: 8,
     title: "Rhyme Patterns (القافية)",
     titleAr: "القافية والروي",
+    titleFr: "Les schémas de rimes (القافية)",
     description: "Master Arabic rhyme and its rules",
+    descriptionFr: "Maîtrisez la rime arabe et ses règles",
     objectives: ["Understand rhyme terminology", "Identify rhyme letters", "Recognize rhyme types", "Analyze poem structure"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -196,7 +212,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-9", phaseId: 5, order: 9,
     title: "Abbasid Poetry",
     titleAr: "الشعر العباسي",
+    titleFr: "La poésie abbasside",
     description: "Study the golden age of Islamic poetry",
+    descriptionFr: "Étudiez l'âge d'or de la poésie islamique",
     objectives: ["Know major Abbasid poets", "Understand new themes", "Recognize stylistic developments", "Analyze classic poems"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -219,7 +237,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-10", phaseId: 5, order: 10,
     title: "Andalusian Poetry",
     titleAr: "الشعر الأندلسي",
+    titleFr: "La poésie andalouse",
     description: "Explore the poetry of Islamic Spain",
+    descriptionFr: "Explorez la poésie de l'Espagne islamique",
     objectives: ["Understand Andalusian context", "Know unique forms", "Study major poets", "Appreciate مُوَشَّح form"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -242,7 +262,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-11", phaseId: 5, order: 11,
     title: "Modern Arabic Poetry",
     titleAr: "الشعر العربي الحديث",
+    titleFr: "La poésie arabe moderne",
     description: "Study the transformation of Arabic poetry",
+    descriptionFr: "Étudiez la transformation de la poésie arabe",
     objectives: ["Understand modernist movements", "Know major modern poets", "Recognize free verse", "Analyze contemporary themes"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -265,7 +287,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-12", phaseId: 5, order: 12,
     title: "Poetry Analysis Workshop",
     titleAr: "ورشة تحليل الشعر",
+    titleFr: "Atelier d'analyse poétique",
     description: "Apply all poetry skills in analysis",
+    descriptionFr: "Appliquez toutes vos compétences poétiques à l'analyse",
     objectives: ["Analyze complete poems", "Identify rhetorical devices", "Discuss themes", "Write critical responses"],
     estimatedTime: 60, difficulty: "hard", xpReward: 90,
     content: {
@@ -289,7 +313,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-13", phaseId: 5, order: 13,
     title: "MSA vs Dialects Overview",
     titleAr: "الفصحى واللهجات",
+    titleFr: "Arabe standard vs dialectes",
     description: "Understand Arabic diglossia and dialect variation",
+    descriptionFr: "Comprenez la diglossie arabe et la variation dialectale",
     objectives: ["Understand diglossia", "Recognize dialect features", "Navigate language registers", "Appreciate unity in diversity"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -312,7 +338,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-14", phaseId: 5, order: 14,
     title: "Egyptian Arabic Basics",
     titleAr: "أساسيات اللهجة المصرية",
+    titleFr: "Les bases de l'arabe égyptien",
     description: "Introduction to the most widely understood dialect",
+    descriptionFr: "Introduction au dialecte le plus largement compris",
     objectives: ["Understand Egyptian features", "Learn key vocabulary", "Recognize in media", "Basic comprehension"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -335,7 +363,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-15", phaseId: 5, order: 15,
     title: "Levantine Arabic Basics",
     titleAr: "أساسيات اللهجة الشامية",
+    titleFr: "Les bases de l'arabe levantin",
     description: "Introduction to Syrian/Lebanese/Palestinian Arabic",
+    descriptionFr: "Introduction à l'arabe syrien, libanais et palestinien",
     objectives: ["Understand Levantine features", "Learn key vocabulary", "Recognize regional variations", "Basic comprehension"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -358,7 +388,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-16", phaseId: 5, order: 16,
     title: "Gulf Arabic Basics",
     titleAr: "أساسيات اللهجة الخليجية",
+    titleFr: "Les bases de l'arabe du Golfe",
     description: "Introduction to Gulf states Arabic",
+    descriptionFr: "Introduction à l'arabe des pays du Golfe",
     objectives: ["Understand Gulf features", "Learn key vocabulary", "Recognize regional variations", "Basic comprehension"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -381,7 +413,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-17", phaseId: 5, order: 17,
     title: "Maghrebi Arabic Overview",
     titleAr: "نظرة عامة على اللهجات المغاربية",
+    titleFr: "Aperçu de l'arabe maghrébin",
     description: "Introduction to North African Arabic",
+    descriptionFr: "Introduction à l'arabe nord-africain",
     objectives: ["Understand Maghrebi distinctiveness", "Learn basic features", "Recognize major variations", "Appreciate linguistic diversity"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -404,7 +438,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-18", phaseId: 5, order: 18,
     title: "Dialect Comprehension Strategies",
     titleAr: "استراتيجيات فهم اللهجات",
+    titleFr: "Stratégies de compréhension des dialectes",
     description: "Develop skills for understanding all dialects",
+    descriptionFr: "Développez des compétences pour comprendre tous les dialectes",
     objectives: ["Apply MSA knowledge to dialects", "Identify cognates", "Use context", "Develop listening strategies"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -428,7 +464,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-19", phaseId: 5, order: 19,
     title: "Translation Theory",
     titleAr: "نظرية الترجمة",
+    titleFr: "Théorie de la traduction",
     description: "Understand principles of Arabic-English translation",
+    descriptionFr: "Comprenez les principes de la traduction arabe-anglais",
     objectives: ["Understand translation approaches", "Learn key terminology", "Analyze translation challenges", "Develop critical perspective"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -451,7 +489,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-20", phaseId: 5, order: 20,
     title: "Arabic to English Translation",
     titleAr: "الترجمة من العربية إلى الإنجليزية",
+    titleFr: "Traduction de l'arabe vers l'anglais",
     description: "Practice translating Arabic texts to English",
+    descriptionFr: "Pratiquez la traduction de textes arabes vers l'anglais",
     objectives: ["Translate various text types", "Handle cultural references", "Maintain register", "Produce natural English"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -474,7 +514,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-21", phaseId: 5, order: 21,
     title: "English to Arabic Translation",
     titleAr: "الترجمة من الإنجليزية إلى العربية",
+    titleFr: "Traduction de l'anglais vers l'arabe",
     description: "Practice translating English texts to Arabic",
+    descriptionFr: "Pratiquez la traduction de textes anglais vers l'arabe",
     objectives: ["Produce natural Arabic", "Use appropriate register", "Handle technical terms", "Maintain text coherence"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -497,7 +539,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-22", phaseId: 5, order: 22,
     title: "Cultural Mediation",
     titleAr: "الوساطة الثقافية",
+    titleFr: "La médiation culturelle",
     description: "Navigate cultural differences in translation",
+    descriptionFr: "Naviguez les différences culturelles dans la traduction",
     objectives: ["Identify cultural references", "Choose appropriate strategies", "Explain when needed", "Maintain sensitivity"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -520,7 +564,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-23", phaseId: 5, order: 23,
     title: "Literary Translation",
     titleAr: "ترجمة النصوص الأدبية",
+    titleFr: "La traduction littéraire",
     description: "Translate literary texts with style",
+    descriptionFr: "Traduisez des textes littéraires avec style",
     objectives: ["Preserve literary style", "Handle figurative language", "Maintain rhythm when possible", "Balance fidelity and beauty"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -543,7 +589,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-24", phaseId: 5, order: 24,
     title: "Professional Translation",
     titleAr: "الترجمة المهنية",
+    titleFr: "La traduction professionnelle",
     description: "Develop professional translation skills",
+    descriptionFr: "Développez des compétences en traduction professionnelle",
     objectives: ["Use CAT tools", "Manage terminology", "Meet deadlines", "Handle various domains"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -567,7 +615,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-25", phaseId: 5, order: 25,
     title: "Creative Writing in Arabic",
     titleAr: "الكتابة الإبداعية بالعربية",
+    titleFr: "L'écriture créative en arabe",
     description: "Develop creative writing skills in Arabic",
+    descriptionFr: "Développez des compétences en écriture créative en arabe",
     objectives: ["Write original texts", "Use literary devices", "Develop personal style", "Express ideas eloquently"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -590,7 +640,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-26", phaseId: 5, order: 26,
     title: "Critical Analysis Skills",
     titleAr: "مهارات التحليل النقدي",
+    titleFr: "Compétences en analyse critique",
     description: "Develop advanced critical analysis skills",
+    descriptionFr: "Développez des compétences avancées en analyse critique",
     objectives: ["Analyze texts critically", "Formulate arguments", "Support with evidence", "Write critical essays"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -613,7 +665,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-27", phaseId: 5, order: 27,
     title: "Public Speaking in Arabic",
     titleAr: "الخطابة بالعربية",
+    titleFr: "L'art oratoire en arabe",
     description: "Develop public speaking skills in Arabic",
+    descriptionFr: "Développez des compétences en prise de parole en public en arabe",
     objectives: ["Structure speeches", "Use rhetorical techniques", "Engage audiences", "Speak with confidence"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -636,7 +690,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-28", phaseId: 5, order: 28,
     title: "Research in Arabic",
     titleAr: "البحث باللغة العربية",
+    titleFr: "La recherche en arabe",
     description: "Conduct academic research using Arabic sources",
+    descriptionFr: "Menez des recherches académiques à partir de sources arabes",
     objectives: ["Search Arabic databases", "Evaluate Arabic sources", "Cite correctly", "Synthesize information"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -659,7 +715,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-29", phaseId: 5, order: 29,
     title: "Arabic Language Proficiency Standards",
     titleAr: "معايير الكفاءة في اللغة العربية",
+    titleFr: "Normes de compétence en langue arabe",
     description: "Understand and achieve proficiency standards",
+    descriptionFr: "Comprenez et atteignez les normes de compétence",
     objectives: ["Know proficiency frameworks", "Self-assess accurately", "Prepare for tests", "Document achievements"],
     estimatedTime: 55, difficulty: "hard", xpReward: 90,
     content: {
@@ -682,7 +740,9 @@ export const PHASE_5_LESSONS: Lesson[] = [
     id: "5-30", phaseId: 5, order: 30,
     title: "Final Mastery Assessment",
     titleAr: "التقييم النهائي للإتقان",
+    titleFr: "Évaluation finale de maîtrise",
     description: "Comprehensive assessment of Arabic mastery",
+    descriptionFr: "Évaluation complète de la maîtrise de l'arabe",
     objectives: ["Demonstrate all skills", "Complete capstone project", "Receive mastery certification", "Plan continued learning"],
     estimatedTime: 90, difficulty: "hard", xpReward: 150,
     content: {

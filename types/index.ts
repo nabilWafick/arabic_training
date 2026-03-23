@@ -41,9 +41,13 @@ export interface Phase {
   id: number;
   title: string;
   titleAr: string;
+  titleFr: string;
   description: string;
   descriptionAr: string;
+  descriptionFr: string;
   duration: string;
+  durationAr?: string;
+  durationFr?: string;
   color: string;
   icon: string;
   totalLessons: number;
@@ -56,8 +60,13 @@ export interface Lesson {
   order: number;
   title: string;
   titleAr: string;
+  titleFr: string;
   description: string;
+  descriptionAr?: string;
+  descriptionFr: string;
   objectives: string[];
+  objectivesAr?: string[];
+  objectivesFr?: string[];
   estimatedTime: number; // in minutes
   difficulty: 'easy' | 'medium' | 'hard';
   xpReward: number;
@@ -74,13 +83,19 @@ export interface LessonContent {
 
 export interface TheoryItem {
   title: string;
+  titleAr?: string;
+  titleFr?: string;
   content: string;
+  contentAr?: string;
+  contentFr?: string;
 }
 
 export interface VocabularyItem {
   arabic: string;
   transliteration: string;
   meaning: string;
+  meaningAr?: string;
+  meaningFr?: string;
 }
 
 export interface ContentExample {

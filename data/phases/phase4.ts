@@ -11,7 +11,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-1", phaseId: 4, order: 1,
     title: "I'rab - Grammatical Case System",
     titleAr: "الإعراب - نظام الحالات النحوية",
+    titleFr: "I'rab - Système des cas grammaticaux",
     description: "Master the Arabic case ending system",
+    descriptionFr: "Maîtrisez le système des désinences casuelles arabes",
     objectives: ["Understand nominative, accusative, genitive", "Recognize case markers", "Apply case rules", "Read classical texts"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -34,7 +36,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-2", phaseId: 4, order: 2,
     title: "Nunation (التنوين) Rules",
     titleAr: "أحكام التنوين",
+    titleFr: "Règles de la nunation (التنوين)",
     description: "Master the rules of nunation in Arabic",
+    descriptionFr: "Maîtrisez les règles de la nunation en arabe",
     objectives: ["Apply nunation correctly", "Distinguish tanween types", "Use with adjectives", "Handle diptotes"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -57,7 +61,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-3", phaseId: 4, order: 3,
     title: "The Construct State (الإضافة)",
     titleAr: "الإضافة المعنوية واللفظية",
+    titleFr: "L'état construit (الإضافة)",
     description: "Master genitive constructions in depth",
+    descriptionFr: "Maîtrisez en profondeur les constructions génitivales",
     objectives: ["Form complex إضافة chains", "Distinguish types of إضافة", "Apply definiteness rules", "Use in formal writing"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -80,7 +86,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-4", phaseId: 4, order: 4,
     title: "Numbers Agreement",
     titleAr: "العدد والمعدود",
+    titleFr: "Accord des nombres",
     description: "Master complex number-noun agreement rules",
+    descriptionFr: "Maîtrisez les règles complexes d'accord entre nombres et noms",
     objectives: ["Apply reverse gender rule (3-10)", "Use correct cases", "Handle 11-99", "Count with hundreds/thousands"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -103,7 +111,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-5", phaseId: 4, order: 5,
     title: "Five Nouns (الأسماء الخمسة)",
     titleAr: "الأسماء الخمسة",
+    titleFr: "Les cinq noms (الأسماء الخمسة)",
     description: "Learn the special declension of five nouns",
+    descriptionFr: "Apprenez la déclinaison spéciale des cinq noms",
     objectives: ["Identify the five nouns", "Apply special case endings", "Use correctly in إضافة", "Recognize in classical texts"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -126,7 +136,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-6", phaseId: 4, order: 6,
     title: "Weak Verbs in Depth",
     titleAr: "الأفعال المعتلة بالتفصيل",
+    titleFr: "Les verbes faibles en profondeur",
     description: "Master all types of weak verbs",
+    descriptionFr: "Maîtrisez tous les types de verbes faibles",
     objectives: ["Conjugate assimilated verbs", "Handle hollow verbs", "Form defective verbs", "Use doubly weak verbs"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -150,7 +162,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-7", phaseId: 4, order: 7,
     title: "Active Participle (اسم الفاعل)",
     titleAr: "اسم الفاعل",
+    titleFr: "Le participe actif (اسم الفاعل)",
     description: "Master the active participle pattern",
+    descriptionFr: "Maîtrisez le schème du participe actif",
     objectives: ["Form from Form I", "Form from derived forms", "Use as noun and adjective", "Understand temporal aspects"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -173,7 +187,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-8", phaseId: 4, order: 8,
     title: "Passive Participle (اسم المفعول)",
     titleAr: "اسم المفعول",
+    titleFr: "Le participe passif (اسم المفعول)",
     description: "Master the passive participle pattern",
+    descriptionFr: "Maîtrisez le schème du participe passif",
     objectives: ["Form from Form I", "Form from derived forms", "Distinguish from active", "Use in descriptions"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -196,7 +212,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-9", phaseId: 4, order: 9,
     title: "Verbal Noun (المصدر)",
     titleAr: "المصدر",
+    titleFr: "Le nom verbal (المصدر)",
     description: "Master verbal noun patterns",
+    descriptionFr: "Maîtrisez les schèmes des noms verbaux",
     objectives: ["Recognize Form I patterns", "Form from derived forms", "Use in إضافة", "Replace verbs with مصدر"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -219,7 +237,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-10", phaseId: 4, order: 10,
     title: "Nouns of Place & Time",
     titleAr: "اسم المكان واسم الزمان",
+    titleFr: "Noms de lieu et de temps",
     description: "Learn patterns for place and time nouns",
+    descriptionFr: "Apprenez les schèmes des noms de lieu et de temps",
     objectives: ["Form مَفْعَل and مَفْعِل patterns", "Distinguish place from time", "Use in descriptions", "Recognize in texts"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -242,7 +262,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-11", phaseId: 4, order: 11,
     title: "Noun of Instrument",
     titleAr: "اسم الآلة",
+    titleFr: "Le nom d'instrument",
     description: "Learn patterns for instrument nouns",
+    descriptionFr: "Apprenez les schèmes des noms d'instrument",
     objectives: ["Form مِفْعَل, مِفْعَال, مِفْعَلَة patterns", "Use instrument nouns", "Expand vocabulary", "Recognize in modern Arabic"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -265,7 +287,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-12", phaseId: 4, order: 12,
     title: "Diminutive & Intensive",
     titleAr: "التصغير وصيغ المبالغة",
+    titleFr: "Le diminutif et l'intensif",
     description: "Learn diminutive and intensive noun patterns",
+    descriptionFr: "Apprenez les schèmes du diminutif et de l'intensif",
     objectives: ["Form diminutives", "Use intensive adjective patterns", "Express nuance", "Recognize in literature"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -289,7 +313,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-13", phaseId: 4, order: 13,
     title: "Introduction to Arabic Poetry",
     titleAr: "مدخل إلى الشعر العربي",
+    titleFr: "Introduction à la poésie arabe",
     description: "Introduction to classical Arabic poetry",
+    descriptionFr: "Introduction à la poésie arabe classique",
     objectives: ["Understand poetic structure", "Learn basic meters", "Analyze rhyme schemes", "Appreciate classical poetry"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -312,7 +338,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-14", phaseId: 4, order: 14,
     title: "Arabic Meters (العروض)",
     titleAr: "علم العروض",
+    titleFr: "Les mètres arabes (العروض)",
     description: "Learn the basics of Arabic prosody",
+    descriptionFr: "Apprenez les bases de la prosodie arabe",
     objectives: ["Understand the concept of بحر", "Learn common meters", "Scan simple verses", "Appreciate rhythmic patterns"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -335,7 +363,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-15", phaseId: 4, order: 15,
     title: "Classical Prose Styles",
     titleAr: "أساليب النثر الكلاسيكي",
+    titleFr: "Styles de prose classique",
     description: "Explore classical Arabic prose styles",
+    descriptionFr: "Explorez les styles de prose arabe classique",
     objectives: ["Distinguish prose genres", "Analyze rhetorical devices", "Understand classical style", "Read historical texts"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -358,7 +388,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-16", phaseId: 4, order: 16,
     title: "Modern Arabic Literature",
     titleAr: "الأدب العربي الحديث",
+    titleFr: "Littérature arabe moderne",
     description: "Explore modern Arabic literary movements",
+    descriptionFr: "Explorez les mouvements littéraires arabes modernes",
     objectives: ["Understand النهضة literary renaissance", "Know major modern authors", "Read contemporary texts", "Analyze modern themes"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -381,7 +413,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-17", phaseId: 4, order: 17,
     title: "Religious & Classical Texts",
     titleAr: "النصوص الدينية والكلاسيكية",
+    titleFr: "Textes religieux et classiques",
     description: "Introduction to Quranic and classical text styles",
+    descriptionFr: "Introduction aux styles des textes coraniques et classiques",
     objectives: ["Recognize Quranic style", "Understand classical grammar", "Read with tajweed awareness", "Appreciate linguistic beauty"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -404,7 +438,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-18", phaseId: 4, order: 18,
     title: "Literary Analysis Skills",
     titleAr: "مهارات التحليل الأدبي",
+    titleFr: "Compétences en analyse littéraire",
     description: "Develop skills for analyzing Arabic texts",
+    descriptionFr: "Développez vos compétences d'analyse des textes arabes",
     objectives: ["Analyze structure and theme", "Identify literary devices", "Write critical responses", "Compare texts"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -428,7 +464,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-19", phaseId: 4, order: 19,
     title: "News Arabic",
     titleAr: "لغة الأخبار",
+    titleFr: "L'arabe des médias",
     description: "Master Arabic news language and conventions",
+    descriptionFr: "Maîtrisez le langage et les conventions de l'arabe journalistique",
     objectives: ["Understand news structure", "Learn journalistic vocabulary", "Read Arabic newspapers", "Watch Arabic news"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -451,7 +489,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-20", phaseId: 4, order: 20,
     title: "Political Arabic",
     titleAr: "اللغة السياسية",
+    titleFr: "L'arabe politique",
     description: "Learn political vocabulary and discourse",
+    descriptionFr: "Apprenez le vocabulaire et le discours politiques",
     objectives: ["Understand political systems", "Learn diplomatic language", "Discuss current events", "Analyze political speech"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -474,7 +514,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-21", phaseId: 4, order: 21,
     title: "Economic Arabic",
     titleAr: "اللغة الاقتصادية",
+    titleFr: "L'arabe économique",
     description: "Learn economic and business vocabulary",
+    descriptionFr: "Apprenez le vocabulaire économique et commercial",
     objectives: ["Understand economic terms", "Read financial news", "Discuss business topics", "Use commercial vocabulary"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -497,7 +539,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-22", phaseId: 4, order: 22,
     title: "Legal Arabic",
     titleAr: "اللغة القانونية",
+    titleFr: "L'arabe juridique",
     description: "Introduction to Arabic legal terminology",
+    descriptionFr: "Introduction à la terminologie juridique arabe",
     objectives: ["Understand legal concepts", "Read contracts", "Learn court vocabulary", "Use formal legal language"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -520,7 +564,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-23", phaseId: 4, order: 23,
     title: "Academic Arabic",
     titleAr: "اللغة الأكاديمية",
+    titleFr: "L'arabe académique",
     description: "Master academic writing and reading",
+    descriptionFr: "Maîtrisez la lecture et l'écriture académiques",
     objectives: ["Write academic essays", "Use citation and reference", "Structure arguments", "Read scholarly articles"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
@@ -543,7 +589,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-24", phaseId: 4, order: 24,
     title: "Presentation Skills in Arabic",
     titleAr: "مهارات العرض والتقديم",
+    titleFr: "Compétences de présentation en arabe",
     description: "Learn to present in Arabic professionally",
+    descriptionFr: "Apprenez à présenter professionnellement en arabe",
     objectives: ["Structure presentations", "Use transition phrases", "Handle Q&A", "Present data and arguments"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -567,7 +615,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-25", phaseId: 4, order: 25,
     title: "Arab Culture & Society",
     titleAr: "الثقافة والمجتمع العربي",
+    titleFr: "Culture et société arabes",
     description: "Understand Arab cultural values and society",
+    descriptionFr: "Comprenez les valeurs culturelles et la société arabes",
     objectives: ["Understand cultural values", "Navigate social situations", "Appreciate diversity", "Avoid cultural misunderstandings"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -590,7 +640,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-26", phaseId: 4, order: 26,
     title: "Proverbs & Idioms",
     titleAr: "الأمثال والتعبيرات",
+    titleFr: "Proverbes et expressions idiomatiques",
     description: "Learn Arabic proverbs and idiomatic expressions",
+    descriptionFr: "Apprenez les proverbes et expressions idiomatiques arabes",
     objectives: ["Understand common proverbs", "Use idioms correctly", "Appreciate wisdom literature", "Sound more natural"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -613,7 +665,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-27", phaseId: 4, order: 27,
     title: "Islamic Cultural Terms",
     titleAr: "المصطلحات الثقافية الإسلامية",
+    titleFr: "Termes culturels islamiques",
     description: "Learn essential Islamic cultural vocabulary",
+    descriptionFr: "Apprenez le vocabulaire culturel islamique essentiel",
     objectives: ["Understand religious vocabulary", "Navigate cultural contexts", "Show cultural awareness", "Avoid misunderstandings"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -636,7 +690,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-28", phaseId: 4, order: 28,
     title: "Arab History Overview",
     titleAr: "نظرة عامة على التاريخ العربي",
+    titleFr: "Aperçu de l'histoire arabe",
     description: "Learn key periods of Arab history",
+    descriptionFr: "Apprenez les périodes clés de l'histoire arabe",
     objectives: ["Understand historical periods", "Recognize historical figures", "Connect history to language", "Appreciate heritage"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -659,7 +715,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-29", phaseId: 4, order: 29,
     title: "Arabic Arts & Music",
     titleAr: "الفنون والموسيقى العربية",
+    titleFr: "Arts et musique arabes",
     description: "Explore Arabic artistic traditions",
+    descriptionFr: "Explorez les traditions artistiques arabes",
     objectives: ["Appreciate Arabic music", "Understand art forms", "Learn artistic vocabulary", "Discuss arts in Arabic"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
@@ -682,7 +740,9 @@ export const PHASE_4_LESSONS: Lesson[] = [
     id: "4-30", phaseId: 4, order: 30,
     title: "Phase 4 Review & Assessment",
     titleAr: "مراجعة وتقييم المرحلة الرابعة",
+    titleFr: "Révision et évaluation de la phase 4",
     description: "Comprehensive review of all Phase 4 material",
+    descriptionFr: "Révision complète de tout le contenu de la phase 4",
     objectives: ["Review advanced grammar", "Demonstrate literary knowledge", "Show professional language skills", "Exhibit cultural understanding"],
     estimatedTime: 60, difficulty: "hard", xpReward: 120,
     content: {
