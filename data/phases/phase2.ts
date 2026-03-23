@@ -672,7 +672,7 @@ export const PHASE_2_LESSONS: Lesson[] = [
         { arabic: "الشَّمْس", transliteration: "ash-shams", meaning: "the sun", meaningFr: "le soleil" },
         { arabic: "القَمَر", transliteration: "al-qamar", meaning: "the moon", meaningFr: "la lune" },
         { arabic: "النُّور", transliteration: "an-nūr", meaning: "the light", meaningFr: "la lumière" },
-        { arabic: "البَيْت", transliteration: "al-bayt", meaning: "the house" }
+        { arabic: "البَيْت", transliteration: "al-bayt", meaning: "the house", meaningFr: "la maison" }
       ]
     },
     exerciseCount: 17,
@@ -917,11 +917,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "كَتَبْتُ", transliteration: "katabtu", meaning: "I wrote" },
+        { arabic: "كَتَبْتُ", transliteration: "katabtu", meaning: "I wrote", meaningFr: "j'ai écrit" },
         { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningFr: "il est allé" },
-        { arabic: "أَكَلَتْ", transliteration: "akalat", meaning: "she ate" },
-        { arabic: "شَرِبْنَا", transliteration: "sharibnā", meaning: "we drank" },
-        { arabic: "دَرَسُوا", transliteration: "darasū", meaning: "they studied" }
+        { arabic: "أَكَلَتْ", transliteration: "akalat", meaning: "she ate", meaningFr: "elle a mangé" },
+        { arabic: "شَرِبْنَا", transliteration: "sharibnā", meaning: "we drank", meaningFr: "nous avons bu" },
+        { arabic: "دَرَسُوا", transliteration: "darasū", meaning: "they studied", meaningFr: "ils ont étudié" }
       ]
     },
     exerciseCount: 18,
@@ -1013,11 +1013,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "ذَهَبَ / يَذْهَبُ", transliteration: "dhahaba / yadhhabu", meaning: "to go" },
-        { arabic: "جَاءَ / يَجِيءُ", transliteration: "jā'a / yajī'u", meaning: "to come" },
-        { arabic: "أَكَلَ / يَأْكُلُ", transliteration: "akala / ya'kulu", meaning: "to eat" },
-        { arabic: "قَالَ / يَقُولُ", transliteration: "qāla / yaqūlu", meaning: "to say" },
-        { arabic: "فَهِمَ / يَفْهَمُ", transliteration: "fahima / yafhamu", meaning: "to understand" }
+        { arabic: "ذَهَبَ / يَذْهَبُ", transliteration: "dhahaba / yadhhabu", meaning: "to go", meaningFr: "aller" },
+        { arabic: "جَاءَ / يَجِيءُ", transliteration: "jā'a / yajī'u", meaning: "to come", meaningFr: "venir" },
+        { arabic: "أَكَلَ / يَأْكُلُ", transliteration: "akala / ya'kulu", meaning: "to eat", meaningFr: "manger" },
+        { arabic: "قَالَ / يَقُولُ", transliteration: "qāla / yaqūlu", meaning: "to say", meaningFr: "dire" },
+        { arabic: "فَهِمَ / يَفْهَمُ", transliteration: "fahima / yafhamu", meaning: "to understand", meaningFr: "comprendre" }
       ]
     },
     exerciseCount: 20,
@@ -1115,10 +1115,10 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "الطَّالِبُ ذَكِيٌّ", transliteration: "aṭ-ṭālibu dhakiyyun", meaning: "The student is smart" },
-        { arabic: "السَّمَاءُ زَرْقَاءُ", transliteration: "as-samā'u zarqā'u", meaning: "The sky is blue" },
-        { arabic: "أَنَا سَعِيدٌ", transliteration: "anā sa'īdun", meaning: "I am happy" },
-        { arabic: "هِيَ طَبِيبَةٌ", transliteration: "hiya ṭabībatun", meaning: "She is a doctor" }
+        { arabic: "الطَّالِبُ ذَكِيٌّ", transliteration: "aṭ-ṭālibu dhakiyyun", meaning: "The student is smart", meaningFr: "L'étudiant est intelligent" },
+        { arabic: "السَّمَاءُ زَرْقَاءُ", transliteration: "as-samā'u zarqā'u", meaning: "The sky is blue", meaningFr: "Le ciel est bleu" },
+        { arabic: "أَنَا سَعِيدٌ", transliteration: "anā sa'īdun", meaning: "I am happy", meaningFr: "Je suis heureux" },
+        { arabic: "هِيَ طَبِيبَةٌ", transliteration: "hiya ṭabībatun", meaning: "She is a doctor", meaningFr: "Elle est un docteur" }
       ]
     },
     exerciseCount: 16,
@@ -1164,9 +1164,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "كَتَبَ الطَّالِبُ", transliteration: "kataba aṭ-ṭālibu", meaning: "The student wrote" },
-        { arabic: "أَكَلَ الوَلَدُ التُّفَّاحَةَ", transliteration: "akala al-waladu at-tuffāḥata", meaning: "The boy ate the apple" },
-        { arabic: "شَرِبَتِ البِنْتُ الحَلِيبَ", transliteration: "sharibat al-bintu al-ḥalība", meaning: "The girl drank the milk" }
+        { arabic: "كَتَبَ الطَّالِبُ", transliteration: "kataba aṭ-ṭālibu", meaning: "The student wrote", meaningFr: "L'étudiant a écrit" },
+        { arabic: "أَكَلَ الوَلَدُ التُّفَّاحَةَ", transliteration: "akala al-waladu at-tuffāḥata", meaning: "The boy ate the apple", meaningFr: "Le garçon a mangé la pomme" },
+        { arabic: "شَرِبَتِ البِنْتُ الحَلِيبَ", transliteration: "sharibat al-bintu al-ḥalība", meaning: "The girl drank the milk", meaningFr: "La fille a bu le lait" }
       ]
     },
     exerciseCount: 17,
@@ -1212,9 +1212,9 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "هَلْ تَتَكَلَّمُ العَرَبِيَّةَ؟", transliteration: "hal tatakallamu al-'arabiyyata?", meaning: "Do you speak Arabic?" },
-        { arabic: "أَيْنَ تَسْكُنُ؟", transliteration: "ayna taskunu?", meaning: "Where do you live?" },
-        { arabic: "كَمْ عُمْرُكَ؟", transliteration: "kam 'umruka?", meaning: "How old are you?" },
+        { arabic: "هَلْ تَتَكَلَّمُ العَرَبِيَّةَ؟", transliteration: "hal tatakallamu al-'arabiyyata?", meaning: "Do you speak Arabic?", meaningFr: "Parlez-vous l'arabe ?" },
+        { arabic: "أَيْنَ تَسْكُنُ؟", transliteration: "ayna taskunu?", meaning: "Where do you live?", meaningFr: "Où habitez-vous ?" },
+        { arabic: "كَمْ عُمْرُكَ؟", transliteration: "kam 'umruka?", meaning: "How old are you?", meaningFr: "Quel âge avez-vous ?" },
         { arabic: "نَعَمْ", transliteration: "na'am", meaning: "Yes", meaningFr: "Oui" },
         { arabic: "لَا", transliteration: "lā", meaning: "No", meaningFr: "Non" }
       ]
