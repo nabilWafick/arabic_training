@@ -206,8 +206,10 @@ export const PHASE_2_LESSONS: Lesson[] = [
         },
         {
           title: "Color Patterns",
+          titleAr: "نماذج الألوان",
           titleFr: "Les motifs de couleurs",
           content: "Most colors follow the pattern أَفْعَل (af'al) for masculine and فَعْلَاء (fa'lā') for feminine. This is a special adjective pattern!\n\nSome colors don't change:\nبُنِّي (bunnī) = brown\nبُرْتُقَالِي (burtuqālī) = orange\nوَرْدِي (wardī) = pink\nبَنَفْسَجِي (banafsajī) = purple",
+          contentAr: "معظم الألوان تتبع نمط أَفْعَل (af'al) للمذكر و فَعْلَاء (fa'lā') للمؤنث. هذا نمط صفة خاص!\n\nبعض الألوان لا تتغير:\nبُنِّي (bunnī) = بني\nبُرْتُقَالِي (burtuqālī) = برتقالي\nوَرْدِي (wardī) = وردي\nبَنَفْسَجِي (banafsajī) = بنفسجي",
           contentFr: "La plupart des couleurs suivent le modèle أَفْعَل (af'al) pour le masculin et فَعْلَاء (fa'lā') pour le féminin. C'est un modèle d'adjectif spécial !\n\nCertaines couleurs ne changent pas :\nبُنِّي (bunnī) = marron\nبُرْتُقَالِي (burtuqālī) = orange\nوَرْدِي (wardī) = rose\nبَنَفْسَجِي (banafsajī) = violet"
         }
       ],
@@ -233,12 +235,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الطعام والشراب",
     titleFr: "La nourriture et les boissons",
     description: "Learn vocabulary for common foods and beverages",
+    descriptionAr: "تعلم مفردات الأطعمة والمشروبات الشائعة",
     descriptionFr: "Apprenez le vocabulaire des aliments et des boissons courants",
     objectives: [
       "Name common foods in Arabic",
       "Order food at a restaurant",
       "Express likes and dislikes for food",
       "Understand food-related verbs"
+    ],
+    objectivesAr: [
+      "تسمية الأطعمة والمشروبات الشائعة",
+      "فهم الأسماء المذكرة والمؤنثة",
+      "استخدام الأطعمة والمشروبات في الجمل",
+      "وصف التفضيلات الغذائية"
     ],
     objectivesFr: [
       "Nommer les aliments courants en arabe",
@@ -253,33 +262,39 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Basic Food Words",
+          titleAr: "الكلمات الأساسية للطعام",
           titleFr: "Les mots alimentaires de base",
           content: "طَعَام (ṭa'ām) = food\nخُبْز (khubz) = bread\nمَاء (mā') = water\nأَرُزّ (aruzz) = rice\nلَحْم (laḥm) = meat\nدَجَاج (dajāj) = chicken\nسَمَك (samak) = fish\nخُضَار (khuḍār) = vegetables\nفَاكِهَة (fākiha) = fruit",
+          contentAr: "طَعَام (ṭa'ām) = الطعام\nخُبْز (khubz) = الخبز\nمَاء (mā') = الماء\nأَرُزّ (aruzz) = الأرز\nلَحْم (laḥm) = اللحم\nدَجَاج (dajāj) = الدجاج\nسَمَك (samak) = السمك\nخُضَار (khuḍār) = الخضار\nفَاكِهَة (fākiha) = الفاكهة",
           contentFr: "طَعَام (ṭa'ām) = nourriture\nخُبْز (khubz) = pain\nمَاء (mā') = eau\nأَرُزّ (aruzz) = riz\nلَحْم (laḥm) = viande\nدَجَاج (dajāj) = poulet\nسَمَك (samak) = poisson\nخُضَار (khuḍār) = légumes\nفَاكِهَة (fākiha) = fruit"
         },
         {
           title: "Drinks",
+          titleAr: "المشروبات",
           titleFr: "Les boissons",
           content: "شَرَاب (sharāb) = drink/beverage\nقَهْوَة (qahwa) = coffee\nشَاي (shāy) = tea\nحَلِيب (ḥalīb) = milk\nعَصِير ('aṣīr) = juice\n\nNote: قَهْوَة (qahwa) is the origin of 'coffee' in many languages!",
+          contentAr: "شَرَاب (sharāb) = المشروب\nقَهْوَة (qahwa) = القهوة\nشَاي (shāy) = الشاي\nحَلِيب (ḥalīb) = الحليب\nعَصِير ('aṣīr) = العصير\n\nملاحظة: قَهْوَة (qahwa) هي أصل كلمة 'coffee' في العديد من اللغات!",
           contentFr: "شَرَاب (sharāb) = boisson\nقَهْوَة (qahwa) = café\nشَاي (shāy) = thé\nحَلِيب (ḥalīb) = lait\nعَصِير ('aṣīr) = jus\n\nRemarque : قَهْوَة (qahwa) est l'origine du mot « café » dans de nombreuses langues !"
         },
         {
           title: "At the Restaurant",
+          titleAr: "في المطعم",
           titleFr: "Au restaurant",
           content: "أُرِيدُ (urīdu) = I want\nمِنْ فَضْلِكَ (min faḍlika) = please (m)\nالحِسَاب (al-ḥisāb) = the bill\nلَذِيذ (ladhīdh) = delicious",
+          contentAr: "أُرِيدُ (urīdu) = أريد\nمِنْ فَضْلِكَ (min faḍlika) = من فضلك\nالحِسَاب (al-ḥisāb) = الحساب\nلَذِيذ (ladhīdh) = لذيذ",
           contentFr: "أُرِيدُ (urīdu) = Je veux\nمِنْ فَضْلِكَ (min faḍlika) = s'il vous plaît (m)\nالحِسَاب (al-ḥisāb) = l'addition\nلَذِيذ (ladhīdh) = délicieux"
         }
       ],
       vocabulary: [
-        { arabic: "طَعَام", transliteration: "ṭa'ām", meaning: "food", meaningFr: "nourriture" },
-        { arabic: "خُبْز", transliteration: "khubz", meaning: "bread", meaningFr: "pain" },
-        { arabic: "مَاء", transliteration: "mā'", meaning: "water", meaningFr: "eau" },
-        { arabic: "قَهْوَة", transliteration: "qahwa", meaning: "coffee", meaningFr: "café" },
-        { arabic: "شَاي", transliteration: "shāy", meaning: "tea", meaningFr: "thé" },
-        { arabic: "لَحْم", transliteration: "laḥm", meaning: "meat", meaningFr: "viande" },
-        { arabic: "خُضَار", transliteration: "khuḍār", meaning: "vegetables", meaningFr: "légumes" },
-        { arabic: "فَاكِهَة", transliteration: "fākiha", meaning: "fruit", meaningFr: "fruit" },
-        { arabic: "لَذِيذ", transliteration: "ladhīdh", meaning: "delicious", meaningFr: "délicieux" }
+        { arabic: "طَعَام", transliteration: "ṭa'ām", meaning: "food", meaningAr: "الطعام", meaningFr: "nourriture" },
+        { arabic: "خُبْز", transliteration: "khubz", meaning: "bread", meaningAr: "الخبز", meaningFr: "pain" },
+        { arabic: "مَاء", transliteration: "mā'", meaning: "water", meaningAr: "الماء", meaningFr: "eau" },
+        { arabic: "قَهْوَة", transliteration: "qahwa", meaning: "coffee", meaningAr: "القهوة", meaningFr: "café" },
+        { arabic: "شَاي", transliteration: "shāy", meaning: "tea", meaningAr: "الشاي", meaningFr: "thé" },
+        { arabic: "لَحْم", transliteration: "laḥm", meaning: "meat", meaningAr: "اللحم", meaningFr: "viande" },
+        { arabic: "خُضَار", transliteration: "khuḍār", meaning: "vegetables", meaningAr: "الخضار", meaningFr: "légumes" },
+        { arabic: "فَاكِهَة", transliteration: "fākiha", meaning: "fruit", meaningAr: "الفاكهة", meaningFr: "fruit" },
+        { arabic: "لَذِيذ", transliteration: "ladhīdh", meaning: "delicious", meaningAr: "لذيذ", meaningFr: "délicieux" }
       ]
     },
     exerciseCount: 18,
@@ -293,12 +308,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الحيوانات",
     titleFr: "Les animaux",
     description: "Learn the names of common animals",
+    descriptionAr: "تعلم أسماء الحيوانات الشائعة",
     descriptionFr: "Apprenez les noms des animaux courants",
     objectives: [
       "Name domestic and wild animals",
       "Use animal vocabulary in sentences",
       "Understand collective nouns",
       "Practice pronunciation of animal names"
+    ],
+    objectivesAr: [
+      "تسمية الحيوانات الشائعة",
+      "فهم الجنس والعدد للحيوانات",
+      "استخدام أسماء الحيوانات في السياقات",
+      "وصف الحيوانات وخصائصها"
     ],
     objectivesFr: [
       "Nommer les animaux domestiques et sauvages",
@@ -313,32 +335,38 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Domestic Animals",
+          titleAr: "الحيوانات الأليفة",
           titleFr: "Les animaux domestiques",
           content: "قِطّ (qiṭṭ) = cat\nكَلْب (kalb) = dog\nحِصَان (ḥiṣān) = horse\nبَقَرَة (baqara) = cow\nخَرُوف (kharūf) = sheep\nدَجَاجَة (dajāja) = chicken\nعَنْزَة ('anza) = goat",
+          contentAr: "قِطّ (qiṭṭ) = القطة\nكَلْب (kalb) = الكلب\nحِصَان (ḥiṣān) = الحصان\nبَقَرَة (baqara) = البقرة\nخَرُوف (kharūf) = الخروف\nدَجَاجَة (dajāja) = الدجاجة\nعَنْزَة ('anza) = العنزة",
           contentFr: "قِطّ (qiṭṭ) = chat\nكَلْب (kalb) = chien\nحِصَان (ḥiṣān) = cheval\nبَقَرَة (baqara) = vache\nخَرُوف (kharūf) = mouton\nدَجَاجَة (dajāja) = poule\nعَنْزَة ('anza) = chèvre"
         },
         {
           title: "Wild Animals",
+          titleAr: "الحيوانات البرية",
           titleFr: "Les animaux sauvages",
           content: "أَسَد (asad) = lion\nفِيل (fīl) = elephant\nقِرْد (qird) = monkey\nدُبّ (dubb) = bear\nثَعْلَب (tha'lab) = fox\nذِئْب (dhi'b) = wolf\nنَمِر (namir) = tiger",
+          contentAr: "أَسَد (asad) = الأسد\nفِيل (fīl) = الفيل\nقِرْد (qird) = القرد\nدُبّ (dubb) = الدب\nثَعْلَب (tha'lab) = الثعلب\nذِئْب (dhi'b) = الذئب\nنَمِر (namir) = النمر",
           contentFr: "أَسَد (asad) = lion\nفِيل (fīl) = éléphant\nقِرْد (qird) = singe\nدُبّ (dubb) = ours\nثَعْلَب (tha'lab) = renard\nذِئْب (dhi'b) = loup\nنَمِر (namir) = tigre"
         },
         {
           title: "The Camel 🐪",
+          titleAr: "الجمل 🐪",
           titleFr: "Le chameau 🐪",
           content: "The camel (جَمَل - jamal) is the symbol of Arabia! Arabic has dozens of words for different types of camels. The basic word جَمَل refers to a male camel, while نَاقَة (nāqa) is a female camel.",
+          contentAr: "الجمل (جَمَل - jamal) هو رمز الجزيرة العربية! للعربية عشرات الكلمات لأنواع مختلفة من الجمال. الكلمة الأساسية جَمَل تشير إلى جمل ذكر، بينما نَاقَة (nāqa) هي جمل أنثى.",
           contentFr: "Le chameau (جَمَل - jamal) est le symbole de l'Arabie ! L'arabe a des dizaines de mots pour différents types de chameaux. Le mot جَمَل fait référence à un chameau mâle, tandis que نَاقَة (nāqa) est un chameau femelle."
         }
       ],
       vocabulary: [
-        { arabic: "حَيَوَان", transliteration: "ḥayawān", meaning: "animal", meaningFr: "animal" },
-        { arabic: "قِطّ", transliteration: "qiṭṭ", meaning: "cat", meaningFr: "chat" },
-        { arabic: "كَلْب", transliteration: "kalb", meaning: "dog", meaningFr: "chien" },
-        { arabic: "أَسَد", transliteration: "asad", meaning: "lion", meaningFr: "lion" },
-        { arabic: "جَمَل", transliteration: "jamal", meaning: "camel", meaningFr: "chameau" },
-        { arabic: "طَائِر", transliteration: "ṭā'ir", meaning: "bird", meaningFr: "oiseau" },
-        { arabic: "سَمَكَة", transliteration: "samaka", meaning: "fish", meaningFr: "poisson" },
-        { arabic: "حِصَان", transliteration: "ḥiṣān", meaning: "horse", meaningFr: "cheval" }
+        { arabic: "حَيَوَان", transliteration: "ḥayawān", meaning: "animal", meaningAr: "الحيوان", meaningFr: "animal" },
+        { arabic: "قِطّ", transliteration: "qiṭṭ", meaning: "cat", meaningAr: "القطة", meaningFr: "chat" },
+        { arabic: "كَلْب", transliteration: "kalb", meaning: "dog", meaningAr: "الكلب", meaningFr: "chien" },
+        { arabic: "أَسَد", transliteration: "asad", meaning: "lion", meaningAr: "الأسد", meaningFr: "lion" },
+        { arabic: "جَمَل", transliteration: "jamal", meaning: "camel", meaningAr: "الجمل", meaningFr: "chameau" },
+        { arabic: "طَائِر", transliteration: "ṭā'ir", meaning: "bird", meaningAr: "الطائر", meaningFr: "oiseau" },
+        { arabic: "سَمَكَة", transliteration: "samaka", meaning: "fish", meaningAr: "السمكة", meaningFr: "poisson" },
+        { arabic: "حِصَان", transliteration: "ḥiṣān", meaning: "horse", meaningAr: "الحصان", meaningFr: "cheval" }
       ]
     },
     exerciseCount: 15,
@@ -352,12 +380,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "البيت والأثاث",
     titleFr: "La maison et les meubles",
     description: "Learn vocabulary for rooms and household items",
+    descriptionAr: "تعلم مفردات الغرف والأثاث المنزلي",
     descriptionFr: "Apprenez le vocabulaire des pièces et des objets de la maison",
     objectives: [
       "Name rooms in a house",
       "Identify common furniture items",
       "Describe your home in Arabic",
       "Use location prepositions"
+    ],
+    objectivesAr: [
+      "تسمية غرف المنزل",
+      "تسمية قطع الأثاث الشائعة",
+      "وصف المنزل والغرف",
+      "استخدام الكلمات المنزلية في حوارات"
     ],
     objectivesFr: [
       "Nommer les pièces d'une maison",
@@ -372,27 +407,39 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Rooms of the House",
-          content: "بَيْت (bayt) = house\nمَنْزِل (manzil) = residence/home\nغُرْفَة (ghurfa) = room\nغُرْفَة النَّوْم (ghurfat an-nawm) = bedroom\nغُرْفَة الجُلُوس (ghurfat al-julūs) = living room\nمَطْبَخ (maṭbakh) = kitchen\nحَمَّام (ḥammām) = bathroom"
+          titleAr: "غرف المنزل",
+          titleFr: "Les pièces de la maison",
+          content: "بَيْت (bayt) = house\nمَنْزِل (manzil) = residence/home\nغُرْفَة (ghurfa) = room\nغُرْفَة النَّوْم (ghurfat an-nawm) = bedroom\nغُرْفَة الجُلُوس (ghurfat al-julūs) = living room\nمَطْبَخ (maṭbakh) = kitchen\nحَمَّام (ḥammām) = bathroom",
+          contentAr: "بَيْت (bayt) = البيت\nمَنْزِل (manzil) = المنزل\nغُرْفَة (ghurfa) = الغرفة\nغُرْفَة النَّوْم (ghurfat an-nawm) = غرفة النوم\nغُرْفَة الجُلُوس (ghurfat al-julūs) = غرفة الجلوس\nمَطْبَخ (maṭbakh) = المطبخ\nحَمَّام (ḥammām) = الحمام",
+          contentFr: "بَيْت (bayt) = maison\nمَنْزِل (manzil) = résidence/maison\nغُرْفَة (ghurfa) = pièce\nغُرْفَة النَّوْم (ghurfat an-nawm) = chambre à coucher\nغُرْفَة الجُلُوس (ghurfat al-julūs) = salon\nمَطْبَخ (maṭbakh) = cuisine\nحَمَّام (ḥammām) = salle de bain"
         },
         {
           title: "Furniture",
-          content: "أَثَاث (athāth) = furniture\nسَرِير (sarīr) = bed\nكُرْسِي (kursī) = chair\nطَاوِلَة (ṭāwila) = table\nخِزَانَة (khizāna) = closet/cabinet\nمِرْآة (mir'āh) = mirror"
+          titleAr: "الأثاث",
+          titleFr: "Les meubles",
+          content: "أَثَاث (athāth) = furniture\nسَرِير (sarīr) = bed\nكُرْسِي (kursī) = chair\nطَاوِلَة (ṭāwila) = table\nخِزَانَة (khizāna) = closet/cabinet\nمِرْآة (mir'āh) = mirror",
+          contentAr: "أَثَاث (athāth) = الأثاث\nسَرِير (sarīr) = السرير\nكُرْسِي (kursī) = الكرسي\nطَاوِلَة (ṭāwila) = الطاولة\nخِزَانَة (khizāna) = الخزانة\nمِرْآة (mir'āh) = المرآة",
+          contentFr: "أَثَاث (athāth) = meubles\nسَرِير (sarīr) = lit\nكُرْسِي (kursī) = chaise\nطَاوِلَة (ṭāwila) = table\nخِزَانَة (khizāna) = placard/armoire\nمِرْآة (mir'āh) = miroir"
         },
         {
           title: "Location Words",
-          content: "فِي (fī) = in\nعَلَى ('alā) = on\nتَحْت (taḥt) = under\nفَوْق (fawq) = above\nبِجَانِب (bi-jānib) = next to\nأَمَام (amām) = in front of\nوَرَاء (warā') = behind"
+          titleAr: "كلمات المكان",
+          titleFr: "Les mots de lieu",
+          content: "فِي (fī) = in\nعَلَى ('alā) = on\nتَحْت (taḥt) = under\nفَوْق (fawq) = above\nبِجَانِب (bi-jānib) = next to\nأَمَام (amām) = in front of\nوَرَاء (warā') = behind",
+          contentAr: "فِي (fī) = في\nعَلَى ('alā) = على\nتَحْت (taḥt) = تحت\nفَوْق (fawq) = فوق\nبِجَانِب (bi-jānib) = بجانب\nأَمَام (amām) = أمام\nوَرَاء (warā') = وراء",
+          contentFr: "فِي (fī) = dans\nعَلَى ('alā) = sur\nتَحْت (taḥt) = sous\nفَوْق (fawq) = au-dessus\nبِجَانِب (bi-jānib) = à côté de\nأَمَام (amām) = devant\nوَرَاء (warā') = derrière"
         }
       ],
       vocabulary: [
-        { arabic: "بَيْت", transliteration: "bayt", meaning: "house", meaningFr: "maison" },
-        { arabic: "غُرْفَة", transliteration: "ghurfa", meaning: "room", meaningFr: "pièce" },
-        { arabic: "مَطْبَخ", transliteration: "maṭbakh", meaning: "kitchen", meaningFr: "cuisine" },
-        { arabic: "حَمَّام", transliteration: "ḥammām", meaning: "bathroom", meaningFr: "salle de bain" },
-        { arabic: "سَرِير", transliteration: "sarīr", meaning: "bed", meaningFr: "lit" },
-        { arabic: "كُرْسِي", transliteration: "kursī", meaning: "chair", meaningFr: "chaise" },
-        { arabic: "طَاوِلَة", transliteration: "ṭāwila", meaning: "table", meaningFr: "table" },
-        { arabic: "بَاب", transliteration: "bāb", meaning: "door", meaningFr: "porte" },
-        { arabic: "نَافِذَة", transliteration: "nāfidha", meaning: "window", meaningFr: "fenêtre" }
+        { arabic: "بَيْت", transliteration: "bayt", meaning: "house", meaningAr: "البيت", meaningFr: "maison" },
+        { arabic: "غُرْفَة", transliteration: "ghurfa", meaning: "room", meaningAr: "الغرفة", meaningFr: "pièce" },
+        { arabic: "مَطْبَخ", transliteration: "maṭbakh", meaning: "kitchen", meaningAr: "المطبخ", meaningFr: "cuisine" },
+        { arabic: "حَمَّام", transliteration: "ḥammām", meaning: "bathroom", meaningAr: "الحمام", meaningFr: "salle de bain" },
+        { arabic: "سَرِير", transliteration: "sarīr", meaning: "bed", meaningAr: "السرير", meaningFr: "lit" },
+        { arabic: "كُرْسِي", transliteration: "kursī", meaning: "chair", meaningAr: "الكرسي", meaningFr: "chaise" },
+        { arabic: "طَاوِلَة", transliteration: "ṭāwila", meaning: "table", meaningAr: "الطاولة", meaningFr: "table" },
+        { arabic: "بَاب", transliteration: "bāb", meaning: "door", meaningAr: "الباب", meaningFr: "porte" },
+        { arabic: "نَافِذَة", transliteration: "nāfidha", meaning: "window", meaningAr: "النافذة", meaningFr: "fenêtre" }
       ]
     },
     exerciseCount: 16,
@@ -408,12 +455,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الضمائر الشخصية",
     titleFr: "Les pronoms personnels",
     description: "Learn all Arabic personal pronouns",
+    descriptionAr: "تعلم جميع ضمائر الشخص في العربية",
     descriptionFr: "Apprenez tous les pronoms personnels arabes",
     objectives: [
       "Memorize all 12 personal pronouns",
       "Distinguish gender and number",
       "Use pronouns in sentences",
       "Understand the dual form"
+    ],
+    objectivesAr: [
+      "التعرف على جميع الضمائر الشخصية",
+      "استخدام الضمائر في الجمل بشكل صحيح",
+      "فهم الفروقات بين الضمائر",
+      "ممارسة الضمائر في السياقات"
     ],
     objectivesFr: [
       "Mémoriser les 12 pronoms personnels",
@@ -428,31 +482,47 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Arabic Pronoun System",
-          content: "Arabic has MORE pronouns than English because it distinguishes:\n• Gender (masculine/feminine)\n• Number (singular/dual/plural)\n• Person (1st/2nd/3rd)\n\nThat gives us 12 pronouns (vs. 7 in English)!"
+          titleAr: "نظام الضمائر العربية",
+          titleFr: "Le système des pronoms arabes",
+          content: "Arabic has MORE pronouns than English because it distinguishes:\n• Gender (masculine/feminine)\n• Number (singular/dual/plural)\n• Person (1st/2nd/3rd)\n\nThat gives us 12 pronouns (vs. 7 in English)!",
+          contentAr: "للعربية ضمائر أكثر من الإنجليزية لأنها تميز:\n• الجنس (مذكر/مؤنث)\n• العدد (مفرد/مثنى/جمع)\n• الشخص (الأول/الثاني/الثالث)\n\nهذا يعطينا 12 ضمير (مقابل 7 في الإنجليزية)!",
+          contentFr: "L'arabe a PLUS de pronoms que l'anglais car il distingue :\n• Le genre (masculin/féminin)\n• Le nombre (singulier/duel/pluriel)\n• La personne (1ère/2e/3e)\n\nCela nous donne 12 pronoms (contre 7 en anglais) !"
         },
         {
           title: "Singular Pronouns",
-          content: "1st person:\nأَنَا (anā) = I\n\n2nd person:\nأَنْتَ (anta) = you (masculine)\nأَنْتِ (anti) = you (feminine)\n\n3rd person:\nهُوَ (huwa) = he\nهِيَ (hiya) = she"
+          titleAr: "الضمائر المفردة",
+          titleFr: "Les pronoms singuliers",
+          content: "1st person:\nأَنَا (anā) = I\n\n2nd person:\nأَنْتَ (anta) = you (masculine)\nأَنْتِ (anti) = you (feminine)\n\n3rd person:\nهُوَ (huwa) = he\nهِيَ (hiya) = she",
+          contentAr: "الشخص الأول:\nأَنَا (anā) = أنا\n\nالشخص الثاني:\nأَنْتَ (anta) = أنت (مذكر)\nأَنْتِ (anti) = أنتِ (مؤنث)\n\nالشخص الثالث:\nهُوَ (huwa) = هو\nهِيَ (hiya) = هي",
+          contentFr: "1ère personne :\nأَنَا (anā) = je\n\n2e personne :\nأَنْتَ (anta) = tu (masculin)\nأَنْتِ (anti) = tu (féminin)\n\n3e personne :\nهُوَ (huwa) = il\nهِيَ (hiya) = elle"
         },
         {
           title: "Plural Pronouns",
-          content: "1st person:\nنَحْنُ (naḥnu) = we\n\n2nd person:\nأَنْتُمْ (antum) = you all (m or mixed)\nأَنْتُنَّ (antunna) = you all (f only)\n\n3rd person:\nهُمْ (hum) = they (m or mixed)\nهُنَّ (hunna) = they (f only)"
+          titleAr: "الضمائر الجمعية",
+          titleFr: "Les pronoms pluriels",
+          content: "1st person:\nنَحْنُ (naḥnu) = we\n\n2nd person:\nأَنْتُمْ (antum) = you all (m or mixed)\nأَنْتُنَّ (antunna) = you all (f only)\n\n3rd person:\nهُمْ (hum) = they (m or mixed)\nهُنَّ (hunna) = they (f only)",
+          contentAr: "الشخص الأول:\nنَحْنُ (naḥnu) = نحن\n\nالشخص الثاني:\nأَنْتُمْ (antum) = أنتم (مذكر أو مختلط)\nأَنْتُنَّ (antunna) = أنتن (مؤنث فقط)\n\nالشخص الثالث:\nهُمْ (hum) = هم (مذكر أو مختلط)\nهُنَّ (hunna) = هن (مؤنث فقط)",
+          contentFr: "1ère personne :\nنَحْنُ (naḥnu) = nous\n\n2e personne :\nأَنْتُمْ (antum) = vous (m ou mixte)\nأَنْتُنَّ (antunna) = vous (f seulement)\n\n3e personne :\nهُمْ (hum) = ils (m ou mixte)\nهُنَّ (hunna) = elles (f seulement)"
         },
         {
           title: "Dual Pronouns",
-          content: "Arabic also has dual forms for exactly 2 people:\nأَنْتُمَا (antumā) = you two\nهُمَا (humā) = they two\n\nThe dual is used less in modern spoken Arabic, but important for formal/written Arabic!"
+          titleAr: "الضمائر الثنائية",
+          titleFr: "Les pronoms duels",
+          content: "Arabic also has dual forms for exactly 2 people:\nأَنْتُمَا (antumā) = you two\nهُمَا (humā) = they two\n\nThe dual is used less in modern spoken Arabic, but important for formal/written Arabic!",
+          contentAr: "للعربية أيضًا صيغ ثنائية لشخصين بالضبط:\nأَنْتُمَا (antumā) = أنتما\nهُمَا (humā) = هما\n\nالصيغة الثنائية تُستخدم أقل في العربية الحديثة المنطوقة، لكنها مهمة للعربية الرسمية/المكتوبة!",
+          contentFr: "L'arabe a aussi des formes duelles pour exactement 2 personnes :\nأَنْتُمَا (antumā) = vous deux\nهُمَا (humā) = ils/elles deux\n\nLe duel est moins utilisé en arabe parlé moderne, mais important pour l'arabe formel/écrit !"
         }
       ],
       vocabulary: [
-        { arabic: "أَنَا", transliteration: "anā", meaning: "I", meaningFr: "je" },
-        { arabic: "أَنْتَ", transliteration: "anta", meaning: "you (m.s.)", meaningFr: "tu (m.s.)" },
-        { arabic: "أَنْتِ", transliteration: "anti", meaning: "you (f.s.)", meaningFr: "tu (f.s.)" },
-        { arabic: "هُوَ", transliteration: "huwa", meaning: "he", meaningFr: "il" },
-        { arabic: "هِيَ", transliteration: "hiya", meaning: "she", meaningFr: "elle" },
-        { arabic: "نَحْنُ", transliteration: "naḥnu", meaning: "we", meaningFr: "nous" },
-        { arabic: "أَنْتُمْ", transliteration: "antum", meaning: "you (pl.)", meaningFr: "vous (pl.)" },
-        { arabic: "هُمْ", transliteration: "hum", meaning: "they (m)", meaningFr: "ils (m)" },
-        { arabic: "هُنَّ", transliteration: "hunna", meaning: "they (f)", meaningFr: "elles (f)" }
+        { arabic: "أَنَا", transliteration: "anā", meaning: "I", meaningAr: "أنا", meaningFr: "je" },
+        { arabic: "أَنْتَ", transliteration: "anta", meaning: "you (m.s.)", meaningAr: "أنت", meaningFr: "tu (m.s.)" },
+        { arabic: "أَنْتِ", transliteration: "anti", meaning: "you (f.s.)", meaningAr: "أنتِ", meaningFr: "tu (f.s.)" },
+        { arabic: "هُوَ", transliteration: "huwa", meaning: "he", meaningAr: "هو", meaningFr: "il" },
+        { arabic: "هِيَ", transliteration: "hiya", meaning: "she", meaningAr: "هي", meaningFr: "elle" },
+        { arabic: "نَحْنُ", transliteration: "naḥnu", meaning: "we", meaningAr: "نحن", meaningFr: "nous" },
+        { arabic: "أَنْتُمْ", transliteration: "antum", meaning: "you (pl.)", meaningAr: "أنتم", meaningFr: "vous (pl.)" },
+        { arabic: "هُمْ", transliteration: "hum", meaning: "they (m)", meaningAr: "هم", meaningFr: "ils (m)" },
+        { arabic: "هُنَّ", transliteration: "hunna", meaning: "they (f)", meaningAr: "هن", meaningFr: "elles (f)" }
       ]
     },
     exerciseCount: 18,
@@ -466,12 +536,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "ضمائر الملكية",
     titleFr: "Les pronoms possessifs",
     description: "Learn to express possession in Arabic",
+    descriptionAr: "تعلم التعبير عن الملكية في العربية",
     descriptionFr: "Apprenez à exprimer la possession en arabe",
     objectives: [
       "Attach possessive suffixes to nouns",
       "Express 'my', 'your', 'his', 'her', etc.",
       "Understand suffix pronunciation changes",
       "Form possessive phrases"
+    ],
+    objectivesAr: [
+      "فهم ضمائر الملكية",
+      "ربط الضمائر بالأسماء بشكل صحيح",
+      "التعبير عن الملكية بطرق مختلفة",
+      "ممارسة الملكية في الجمل"
     ],
     objectivesFr: [
       "Attacher les suffixes possessifs aux noms",
@@ -486,23 +563,35 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Possessive Suffixes",
-          content: "Arabic expresses possession by ATTACHING a suffix to the noun:\n\nكِتَاب (kitāb) = book\nكِتَابِي (kitābī) = my book\nكِتَابُكَ (kitābuka) = your book (m)\nكِتَابُهُ (kitābuhu) = his book\nكِتَابُهَا (kitābuhā) = her book"
+          titleAr: "لواحق الملكية",
+          titleFr: "Les suffixes possessifs",
+          content: "Arabic expresses possession by ATTACHING a suffix to the noun:\n\nكِتَاب (kitāb) = book\nكِتَابِي (kitābī) = my book\nكِتَابُكَ (kitābuka) = your book (m)\nكِتَابُهُ (kitābuhu) = his book\nكِتَابُهَا (kitābuhā) = her book",
+          contentAr: "تعبر العربية عن الملكية بإضافة لاحقة إلى الاسم:\n\nكِتَاب (kitāb) = كتاب\nكِتَابِي (kitābī) = كتابي\nكِتَابُكَ (kitābuka) = كتابك (مذكر)\nكِتَابُهُ (kitābuhu) = كتابه\nكِتَابُهَا (kitābuhā) = كتابها",
+          contentFr: "L'arabe exprime la possession en ATTACHEANT un suffixe au nom :\n\nكِتَاب (kitāb) = livre\nكِتَابِي (kitābī) = mon livre\nكِتَابُكَ (kitābuka) = ton livre (m)\nكِتَابُهُ (kitābuhu) = son livre\nكِتَابُهَا (kitābuhā) = son livre (f)"
         },
         {
           title: "All Possessive Suffixes",
-          content: "Singular:\nـي (-ī) = my\nـكَ (-ka) = your (m)\nـكِ (-ki) = your (f)\nـهُ (-hu) = his\nـهَا (-hā) = her\n\nPlural:\nـنَا (-nā) = our\nـكُمْ (-kum) = your (pl)\nـهُمْ (-hum) = their"
+          titleAr: "جميع لواحق الملكية",
+          titleFr: "Tous les suffixes possessifs",
+          content: "Singular:\nـي (-ī) = my\nـكَ (-ka) = your (m)\nـكِ (-ki) = your (f)\nـهُ (-hu) = his\nـهَا (-hā) = her\n\nPlural:\nـنَا (-nā) = our\nـكُمْ (-kum) = your (pl)\nـهُمْ (-hum) = their",
+          contentAr: "المفرد:\nـي (-ī) = ياء الملكية\nـكَ (-ka) = كاف الملكية (مذكر)\nـكِ (-ki) = كاف الملكية (مؤنث)\nـهُ (-hu) = هاء الملكية (مذكر)\nـهَا (-hā) = هاء الملكية (مؤنث)\n\nالجمع:\nـنَا (-nā) = نون الملكية\nـكُمْ (-kum) = كاف الملكية الجمع\nـهُمْ (-hum) = هاء الملكية الجمع",
+          contentFr: "Singulier :\nـي (-ī) = mon/ma/mes\nـكَ (-ka) = ton/ta/tes (m)\nـكِ (-ki) = ton/ta/tes (f)\nـهُ (-hu) = son/sa/ses\nـهَا (-hā) = son/sa/ses (f)\n\nPluriel :\nـنَا (-nā) = notre/nos\nـكُمْ (-kum) = votre/vos (pl)\nـهُمْ (-hum) = leur/leurs"
         },
         {
           title: "Examples with Family",
-          content: "أَبِي (abī) = my father\nأُمُّكَ (ummuka) = your mother (m)\nأُخْتُهُ (ukhtuhu) = his sister\nبَيْتُنَا (baytunā) = our house\nأَبُوهُمْ (abūhum) = their father"
+          titleAr: "أمثلة مع العائلة",
+          titleFr: "Exemples avec la famille",
+          content: "أَبِي (abī) = my father\nأُمُّكَ (ummuka) = your mother (m)\nأُخْتُهُ (ukhtuhu) = his sister\nبَيْتُنَا (baytunā) = our house\nأَبُوهُمْ (abūhum) = their father",
+          contentAr: "أَبِي (abī) = أبي\nأُمُّكَ (ummuka) = أمك (مذكر)\nأُخْتُهُ (ukhtuhu) = أخته\nبَيْتُنَا (baytunā) = بيتنا\nأَبُوهُمْ (abūhum) = أبوهم",
+          contentFr: "أَبِي (abī) = mon père\nأُمُّكَ (ummuka) = ta mère (m)\nأُخْتُهُ (ukhtuhu) = sa sœur\nبَيْتُنَا (baytunā) = notre maison\nأَبُوهُمْ (abūhum) = leur père"
         }
       ],
       vocabulary: [
-        { arabic: "كِتَابِي", transliteration: "kitābī", meaning: "my book", meaningFr: "mon livre" },
-        { arabic: "بَيْتُكَ", transliteration: "baytuka", meaning: "your house (m)", meaningFr: "ta maison (m)" },
-        { arabic: "سَيَّارَتُهَا", transliteration: "sayyāratuhā", meaning: "her car", meaningFr: "sa voiture" },
-        { arabic: "عَائِلَتُنَا", transliteration: "'ā'ilatunā", meaning: "our family", meaningFr: "notre famille" },
-        { arabic: "صَدِيقُهُمْ", transliteration: "ṣadīquhum", meaning: "their friend", meaningFr: "leur ami" }
+        { arabic: "كِتَابِي", transliteration: "kitābī", meaning: "my book", meaningAr: "كتابي", meaningFr: "mon livre" },
+        { arabic: "بَيْتُكَ", transliteration: "baytuka", meaning: "your house (m)", meaningAr: "بيتك", meaningFr: "ta maison (m)" },
+        { arabic: "سَيَّارَتُهَا", transliteration: "sayyāratuhā", meaning: "her car", meaningAr: "سيارتها", meaningFr: "sa voiture" },
+        { arabic: "عَائِلَتُنَا", transliteration: "'ā'ilatunā", meaning: "our family", meaningAr: "عائلتنا", meaningFr: "notre famille" },
+        { arabic: "صَدِيقُهُمْ", transliteration: "ṣadīquhum", meaning: "their friend", meaningAr: "صديقهم", meaningFr: "leur ami" }
       ]
     },
     exerciseCount: 17,
@@ -516,12 +605,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "أسماء الإشارة",
     titleFr: "Les pronoms démonstratifs",
     description: "Learn 'this', 'that', 'these', 'those' in Arabic",
+    descriptionAr: "تعلم هذا وذاك وهؤلاء وتلك في العربية",
     descriptionFr: "Apprenez « ceci », « cela », « ceux-ci », « ceux-là » en arabe",
     objectives: [
       "Use هَذَا and هَذِهِ correctly",
       "Distinguish near and far demonstratives",
       "Form sentences with demonstratives",
       "Match demonstratives with noun gender"
+    ],
+    objectivesAr: [
+      "التعرف على الضمائر الإشارية",
+      "استخدام الضمائر الإشارية بشكل صحيح",
+      "فهم الفروقات بين القريب والبعيد",
+      "ممارسة الضمائر الإشارية"
     ],
     objectivesFr: [
       "Utiliser هَذَا et هَذِهِ correctement",
@@ -536,24 +632,36 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Near Demonstratives (This/These)",
-          content: "هَذَا (hādhā) = this (masculine)\nهَذِهِ (hādhihi) = this (feminine)\nهَذَانِ (hādhāni) = these two (m)\nهَاتَانِ (hātāni) = these two (f)\nهَؤُلَاءِ (hā'ulā'i) = these (plural)"
+          titleAr: "الضمائر الإشارية القريبة",
+          titleFr: "Démonstratifs proches (Ceci/Ceux-ci)",
+          content: "هَذَا (hādhā) = this (masculine)\nهَذِهِ (hādhihi) = this (feminine)\nهَذَانِ (hādhāni) = these two (m)\nهَاتَانِ (hātāni) = these two (f)\nهَؤُلَاءِ (hā'ulā'i) = these (plural)",
+          contentAr: "هَذَا (hādhā) = هذا (مذكر)\nهَذِهِ (hādhihi) = هذه (مؤنث)\nهَذَانِ (hādhāni) = هذان (مثنى مذكر)\nهَاتَانِ (hātāni) = هاتان (مثنى مؤنث)\nهَؤُلَاءِ (hā'ulā'i) = هؤلاء (جمع)",
+          contentFr: "هَذَا (hādhā) = ceci (m)\nهَذِهِ (hādhihi) = ceci (f)\nهَذَانِ (hādhāni) = ces deux (m)\nهَاتَانِ (hātāni) = ces deux (f)\nهَؤُلَاءِ (hā'ulā'i) = ceux-ci (pluriel)"
         },
         {
           title: "Far Demonstratives (That/Those)",
-          content: "ذَلِكَ (dhālika) = that (masculine)\nتِلْكَ (tilka) = that (feminine)\nذَانِكَ (dhānika) = those two (m)\nتَانِكَ (tānika) = those two (f)\nأُولَئِكَ (ulā'ika) = those (plural)"
+          titleAr: "الضمائر الإشارية البعيدة",
+          titleFr: "Démonstratifs éloignés (Cela/Ceux-là)",
+          content: "ذَلِكَ (dhālika) = that (masculine)\nتِلْكَ (tilka) = that (feminine)\nذَانِكَ (dhānika) = those two (m)\nتَانِكَ (tānika) = those two (f)\nأُولَئِكَ (ulā'ika) = those (plural)",
+          contentAr: "ذَلِكَ (dhālika) = ذلك (مذكر)\nتِلْكَ (tilka) = تلك (مؤنث)\nذَانِكَ (dhānika) = ذانك (مثنى مذكر)\nتَانِكَ (tānika) = تانك (مثنى مؤنث)\nأُولَئِكَ (ulā'ika) = أولئك (جمع)",
+          contentFr: "ذَلِكَ (dhālika) = cela (m)\nتِلْكَ (tilka) = cela (f)\nذَانِكَ (dhānika) = ces deux-là (m)\nتَانِكَ (tānika) = ces deux-là (f)\nأُولَئِكَ (ulā'ika) = ceux-là (pluriel)"
         },
         {
           title: "Using Demonstratives",
-          content: "هَذَا كِتَابٌ (hādhā kitābun) = This is a book\nهَذِهِ سَيَّارَةٌ (hādhihi sayyāratun) = This is a car\nذَلِكَ الرَّجُلُ (dhālika ar-rajulu) = That man\nتِلْكَ المَرْأَةُ (tilka al-mar'atu) = That woman"
+          titleAr: "استخدام الضمائر الإشارية",
+          titleFr: "Utiliser les démonstratifs",
+          content: "هَذَا كِتَابٌ (hādhā kitābun) = This is a book\nهَذِهِ سَيَّارَةٌ (hādhihi sayyāratun) = This is a car\nذَلِكَ الرَّجُلُ (dhālika ar-rajulu) = That man\nتِلْكَ المَرْأَةُ (tilka al-mar'atu) = That woman",
+          contentAr: "هَذَا كِتَابٌ (hādhā kitābun) = هذا كتاب\nهَذِهِ سَيَّارَةٌ (hādhihi sayyāratun) = هذه سيارة\nذَلِكَ الرَّجُلُ (dhālika ar-rajulu) = ذلك الرجل\nتِلْكَ المَرْأَةُ (tilka al-mar'atu) = تلك المرأة",
+          contentFr: "هَذَا كِتَابٌ (hādhā kitābun) = Ceci est un livre\nهَذِهِ سَيَّارَةٌ (hādhihi sayyāratun) = Ceci est une voiture\nذَلِكَ الرَّجُلُ (dhālika ar-rajulu) = Cet homme\nتِلْكَ المَرْأَةُ (tilka al-mar'atu) = Cette femme"
         }
       ],
       vocabulary: [
-        { arabic: "هَذَا", transliteration: "hādhā", meaning: "this (m)", meaningFr: "ceci (m)" },
-        { arabic: "هَذِهِ", transliteration: "hādhihi", meaning: "this (f)", meaningFr: "ceci (f)" },
-        { arabic: "ذَلِكَ", transliteration: "dhālika", meaning: "that (m)", meaningFr: "cela (m)" },
-        { arabic: "تِلْكَ", transliteration: "tilka", meaning: "that (f)", meaningFr: "cela (f)" },
-        { arabic: "هَؤُلَاءِ", transliteration: "hā'ulā'i", meaning: "these", meaningFr: "ceux-ci" },
-        { arabic: "أُولَئِكَ", transliteration: "ulā'ika", meaning: "those", meaningFr: "ceux-là" }
+        { arabic: "هَذَا", transliteration: "hādhā", meaning: "this (m)", meaningAr: "هذا", meaningFr: "ceci (m)" },
+        { arabic: "هَذِهِ", transliteration: "hādhihi", meaning: "this (f)", meaningAr: "هذه", meaningFr: "ceci (f)" },
+        { arabic: "ذَلِكَ", transliteration: "dhālika", meaning: "that (m)", meaningAr: "ذلك", meaningFr: "cela (m)" },
+        { arabic: "تِلْكَ", transliteration: "tilka", meaning: "that (f)", meaningAr: "تلك", meaningFr: "cela (f)" },
+        { arabic: "هَؤُلَاءِ", transliteration: "hā'ulā'i", meaning: "these", meaningAr: "هؤلاء", meaningFr: "ceux-ci" },
+        { arabic: "أُولَئِكَ", transliteration: "ulā'ika", meaning: "those", meaningAr: "أولئك", meaningFr: "ceux-là" }
       ]
     },
     exerciseCount: 16,
@@ -567,12 +675,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "أدوات الاستفهام",
     titleFr: "Les pronoms interrogatifs",
     description: "Learn question words in Arabic",
+    descriptionAr: "تعلم أدوات الاستفهام في العربية",
     descriptionFr: "Apprenez les mots interrogatifs en arabe",
     objectives: [
       "Ask 'who', 'what', 'where', 'when', 'why', 'how'",
       "Form questions correctly",
       "Understand word order in questions",
       "Practice question-answer exchanges"
+    ],
+    objectivesAr: [
+      "التعرف على أدوات الاستفهام المختلفة",
+      "صياغة الأسئلة بأدوات مختلفة",
+      "فهم متى يتم استخدام كل أداة",
+      "ممارسة الأسئلة في الحوارات"
     ],
     objectivesFr: [
       "Poser les questions 'qui', 'quoi', 'où', 'quand', 'pourquoi', 'comment'",
@@ -587,25 +702,37 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Basic Question Words",
-          content: "مَنْ (man) = who?\nمَا (mā) / مَاذَا (mādhā) = what?\nأَيْنَ (ayna) = where?\nمَتَى (matā) = when?\nلِمَاذَا (limādhā) = why?\nكَيْفَ (kayfa) = how?\nكَمْ (kam) = how many/much?"
+          titleAr: "أدوات الاستفهام الأساسية",
+          titleFr: "Mots interrogatifs de base",
+          content: "مَنْ (man) = who?\nمَا (mā) / مَاذَا (mādhā) = what?\nأَيْنَ (ayna) = where?\nمَتَى (matā) = when?\nلِمَاذَا (limādhā) = why?\nكَيْفَ (kayfa) = how?\nكَمْ (kam) = how many/much?",
+          contentAr: "مَنْ (man) = من (من يكون؟)\nمَا (mā) / مَاذَا (mādhā) = ما (ماذا يعني؟)\nأَيْنَ (ayna) = أين (في أي مكان؟)\nمَتَى (matā) = متى (في أي وقت؟)\nلِمَاذَا (limādhā) = لماذا (ما السبب؟)\nكَيْفَ (kayfa) = كيف (بأي طريقة؟)\nكَمْ (kam) = كم (كم العدد؟)",
+          contentFr: "مَنْ (man) = qui ?\nمَا (mā) / مَاذَا (mādhā) = quoi ?\nأَيْنَ (ayna) = où ?\nمَتَى (matā) = quand ?\nلِمَاذَا (limādhā) = pourquoi ?\nكَيْفَ (kayfa) = comment ?\nكَمْ (kam) = combien ?"
         },
         {
           title: "Forming Questions",
-          content: "Questions often start with the question word:\nمَنْ هَذَا؟ (man hādhā?) = Who is this?\nمَا اسْمُكَ؟ (mā ismuka?) = What is your name?\nأَيْنَ أَنْتَ؟ (ayna anta?) = Where are you?\nمَتَى السَّفَر؟ (matā as-safar?) = When is the trip?"
+          titleAr: "صياغة الأسئلة",
+          titleFr: "Former les questions",
+          content: "Questions often start with the question word:\nمَنْ هَذَا؟ (man hādhā?) = Who is this?\nمَا اسْمُكَ؟ (mā ismuka?) = What is your name?\nأَيْنَ أَنْتَ؟ (ayna anta?) = Where are you?\nمَتَى السَّفَر؟ (matā as-safar?) = When is the trip?",
+          contentAr: "تبدأ الأسئلة غالبًا بأداة الاستفهام:\nمَنْ هَذَا؟ (man hādhā?) = من هذا؟\nمَا اسْمُكَ؟ (mā ismuka?) = ما اسمك؟\nأَيْنَ أَنْتَ؟ (ayna anta?) = أين أنت؟\nمَتَى السَّفَر؟ (matā as-safar?) = متى السفر؟",
+          contentFr: "Les questions commencent souvent par le mot interrogatif :\nمَنْ هَذَا؟ (man hādhā?) = Qui est-ce ?\nمَا اسْمُكَ؟ (mā ismuka?) = Quel est ton nom ?\nأَيْنَ أَنْتَ؟ (ayna anta?) = Où es-tu ?\nمَتَى السَّفَر؟ (matā as-safar?) = Quand est le voyage ?"
         },
         {
           title: "Yes/No Questions",
-          content: "For yes/no questions, use هَلْ (hal) or أَ (a) at the beginning:\nهَلْ أَنْتَ طَالِبٌ؟ (hal anta ṭālibun?) = Are you a student?\nأَتُحِبُّ القَهْوَة؟ (atuḥibbu al-qahwa?) = Do you like coffee?"
+          titleAr: "الأسئلة نعم/لا",
+          titleFr: "Questions oui/non",
+          content: "For yes/no questions, use هَلْ (hal) or أَ (a) at the beginning:\nهَلْ أَنْتَ طَالِبٌ؟ (hal anta ṭālibun?) = Are you a student?\nأَتُحِبُّ القَهْوَة؟ (atuḥibbu al-qahwa?) = Do you like coffee?",
+          contentAr: "لأسئلة نعم/لا، استخدم هَلْ (hal) أو أَ (a) في البداية:\nهَلْ أَنْتَ طَالِبٌ؟ (hal anta ṭālibun?) = هل أنت طالب؟\nأَتُحِبُّ القَهْوَة؟ (atuḥibbu al-qahwa?) = أتحب القهوة؟",
+          contentFr: "Pour les questions oui/non, utilisez هَلْ (hal) ou أَ (a) au début :\nهَلْ أَنْتَ طَالِبٌ؟ (hal anta ṭālibun?) = Es-tu étudiant ?\nأَتُحِبُّ القَهْوَة؟ (atuḥibbu al-qahwa?) = Aimes-tu le café ?"
         }
       ],
       vocabulary: [
-        { arabic: "مَنْ", transliteration: "man", meaning: "who?", meaningFr: "qui ?" },
-        { arabic: "مَا / مَاذَا", transliteration: "mā / mādhā", meaning: "what?", meaningFr: "quoi ?" },
-        { arabic: "أَيْنَ", transliteration: "ayna", meaning: "where?", meaningFr: "où ?" },
-        { arabic: "مَتَى", transliteration: "matā", meaning: "when?", meaningFr: "quand ?" },
-        { arabic: "لِمَاذَا", transliteration: "limādhā", meaning: "why?", meaningFr: "pourquoi ?" },
-        { arabic: "كَيْفَ", transliteration: "kayfa", meaning: "how?", meaningFr: "comment ?" },
-        { arabic: "هَلْ", transliteration: "hal", meaning: "is? / do? (yes/no marker)", meaningFr: "est ? / tu fais ? (marqueur oui/non)" }
+        { arabic: "مَنْ", transliteration: "man", meaning: "who?", meaningAr: "من؟", meaningFr: "qui ?" },
+        { arabic: "مَا / مَاذَا", transliteration: "mā / mādhā", meaning: "what?", meaningAr: "ما؟", meaningFr: "quoi ?" },
+        { arabic: "أَيْنَ", transliteration: "ayna", meaning: "where?", meaningAr: "أين؟", meaningFr: "où ?" },
+        { arabic: "مَتَى", transliteration: "matā", meaning: "when?", meaningAr: "متى؟", meaningFr: "quand ?" },
+        { arabic: "لِمَاذَا", transliteration: "limādhā", meaning: "why?", meaningAr: "لماذا؟", meaningFr: "pourquoi ?" },
+        { arabic: "كَيْفَ", transliteration: "kayfa", meaning: "how?", meaningAr: "كيف؟", meaningFr: "comment ?" },
+        { arabic: "هَلْ", transliteration: "hal", meaning: "is? / do? (yes/no marker)", meaningAr: "هل؟", meaningFr: "est ? / tu fais ? (marqueur oui/non)" }
       ]
     },
     exerciseCount: 18,
@@ -621,12 +748,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "المذكر والمؤنث",
     titleFr: "Le genre en arabe",
     description: "Understand masculine and feminine forms",
+    descriptionAr: "فهم الصيغ المذكرة والمؤنثة في العربية",
     descriptionFr: "Comprenez les formes masculines et féminines",
     objectives: [
       "Identify masculine and feminine nouns",
       "Recognize the feminine marker ة",
       "Convert masculine to feminine",
       "Apply gender agreement rules"
+    ],
+    objectivesAr: [
+      "التعرف على الجنس النحوي",
+      "تحويل الكلمات بين المذكر والمؤنث",
+      "فهم انعكاس الجنس على الكلمات الأخرى",
+      "ممارسة تحديد وتطبيق الجنس"
     ],
     objectivesFr: [
       "Identifier les noms masculins et féminins",
@@ -641,23 +775,35 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Gender Basics",
-          content: "Arabic nouns are either masculine (مُذَكَّر) or feminine (مُؤَنَّث). Unlike English, ALL nouns have gender, including objects!\n\nMasculine: كِتَاب (book), قَلَم (pen), بَاب (door)\nFeminine: سَيَّارَة (car), مَدْرَسَة (school), مَدِينَة (city)"
+          titleAr: "أساسيات الجنس",
+          titleFr: "Les bases du genre",
+          content: "Arabic nouns are either masculine (مُذَكَّر) or feminine (مُؤَنَّث). Unlike English, ALL nouns have gender, including objects!\n\nMasculine: كِتَاب (book), قَلَم (pen), بَاب (door)\nFeminine: سَيَّارَة (car), مَدْرَسَة (school), مَدِينَة (city)",
+          contentAr: "أسماء العربية إما مذكرة أو مؤنثة. بخلاف الإنجليزية، جميع الأسماء لها جنس!\n\nمذكر: كِتَاب (كتاب)، قَلَم (قلم)، بَاب (باب)\nمؤنث: سَيَّارَة (سيارة)، مَدْرَسَة (مدرسة)، مَدِينَة (مدينة)",
+          contentFr: "Les noms arabes sont soit masculins (مُذَكَّر) soit féminins (مُؤَنَّث). Contrairement à l'anglais, TOUS les noms ont un genre, y compris les objets !\n\nMasculin : كِتَاب (livre), قَلَم (stylo), بَاب (porte)\nFéminin : سَيَّارَة (voiture), مَدْرَسَة (école), مَدِينَة (ville)"
         },
         {
           title: "The Feminine Marker ة",
-          content: "Most feminine nouns end in ة (tā' marbūṭa - 'tied t'):\nمُعَلِّم (mu'allim) = teacher (m) → مُعَلِّمَة (mu'allima) = teacher (f)\nطَالِب (ṭālib) = student (m) → طَالِبَة (ṭāliba) = student (f)\n\nNote: ة is pronounced 'a' at the end of a phrase, but 't' when connected to the next word."
+          titleAr: "علامة التأنيث: ة",
+          titleFr: "Le marqueur féminin ة",
+          content: "Most feminine nouns end in ة (tā' marbūṭa - 'tied t'):\nمُعَلِّم (mu'allim) = teacher (m) → مُعَلِّمَة (mu'allima) = teacher (f)\nطَالِب (ṭālib) = student (m) → طَالِبَة (ṭāliba) = student (f)\n\nNote: ة is pronounced 'a' at the end of a phrase, but 't' when connected to the next word.",
+          contentAr: "معظم الأسماء المؤنثة تنتهي بـ ة (تاء مربوطة):\nمُعَلِّم (معلم) ← مُعَلِّمَة (معلمة)\nطَالِب (طالب) ← طَالِبَة (طالبة)\n\nملاحظة: ة تُنطق 'ا' في نهاية الجملة، لكن 'ت' عندما تتصل بكلمة أخرى.",
+          contentFr: "La plupart des noms féminins se terminent par ة (tā' marbūṭa) :\nمُعَلِّم (professeur m) → مُعَلِّمَة (professeur f)\nطَالِب (étudiant m) → طَالِبَة (étudiante f)\n\nRemarque : ة se prononce 'a' à la fin d'une phrase, mais 't' quand elle est liée au mot suivant."
         },
         {
           title: "Naturally Feminine Nouns",
-          content: "Some nouns are feminine without ة:\nأُمّ (umm) = mother\nبِنْت (bint) = girl/daughter\nأُخْت (ukht) = sister\nشَمْس (shams) = sun\nأَرْض (arḍ) = earth\n\nMany body parts that come in pairs are also feminine!"
+          titleAr: "الأسماء المؤنثة الطبيعية",
+          titleFr: "Noms naturellement féminins",
+          content: "Some nouns are feminine without ة:\nأُمّ (umm) = mother\nبِنْت (bint) = girl/daughter\nأُخْت (ukht) = sister\nشَمْس (shams) = sun\nأَرْض (arḍ) = earth\n\nMany body parts that come in pairs are also feminine!",
+          contentAr: "بعض الأسماء مؤنثة بدون ة:\nأُمّ (أم) = الأم\nبِنْت (بنت) = البنت\nأُخْت (أخت) = الأخت\nشَمْس (شمس) = الشمس\nأَرْض (أرض) = الأرض\n\nأعضاء الجسم التي تأتي في أزواج تكون مؤنثة أيضًا!",
+          contentFr: "Certains noms sont féminins sans ة :\nأُمّ (mère)\nبِنْت (fille/jeune fille)\nأُخْت (sœur)\nشَمْس (soleil)\nأَرْض (terre)\n\nDe nombreuses parties du corps qui viennent en paires sont aussi féminines !"
         }
       ],
       vocabulary: [
-        { arabic: "مُذَكَّر", transliteration: "mudhakkar", meaning: "masculine", meaningFr: "masculin" },
-        { arabic: "مُؤَنَّث", transliteration: "mu'annath", meaning: "feminine", meaningFr: "féminin" },
-        { arabic: "طَالِب / طَالِبَة", transliteration: "ṭālib / ṭāliba", meaning: "student (m/f)", meaningFr: "étudiant (m/f)" },
-        { arabic: "مُعَلِّم / مُعَلِّمَة", transliteration: "mu'allim / mu'allima", meaning: "teacher (m/f)", meaningFr: "professeur (m/f)" },
-        { arabic: "صَدِيق / صَدِيقَة", transliteration: "ṣadīq / ṣadīqa", meaning: "friend (m/f)", meaningFr: "ami (m/f)" }
+        { arabic: "مُذَكَّر", transliteration: "mudhakkar", meaning: "masculine", meaningAr: "مذكر", meaningFr: "masculin" },
+        { arabic: "مُؤَنَّث", transliteration: "mu'annath", meaning: "feminine", meaningAr: "مؤنث", meaningFr: "féminin" },
+        { arabic: "طَالِب / طَالِبَة", transliteration: "ṭālib / ṭāliba", meaning: "student (m/f)", meaningAr: "طالب/طالبة", meaningFr: "étudiant (m/f)" },
+        { arabic: "مُعَلِّم / مُعَلِّمَة", transliteration: "mu'allim / mu'allima", meaning: "teacher (m/f)", meaningAr: "معلم/معلمة", meaningFr: "professeur (m/f)" },
+        { arabic: "صَدِيق / صَدِيقَة", transliteration: "ṣadīq / ṣadīqa", meaning: "friend (m/f)", meaningAr: "صديق/صديقة", meaningFr: "ami (m/f)" }
       ]
     },
     exerciseCount: 16,
@@ -671,12 +817,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "أداة التعريف: الـ",
     titleFr: "L'article défini الـ",
     description: "Master 'the' in Arabic and its pronunciation rules",
+    descriptionAr: "اتقن كلمة 'ال' في العربية وقواعد النطق",
     descriptionFr: "Maîtrisez l'article « le/la » en arabe et ses règles de prononciation",
     objectives: [
       "Use الـ (al-) to make nouns definite",
       "Understand sun and moon letters",
       "Apply assimilation rules correctly",
       "Distinguish definite from indefinite nouns"
+    ],
+    objectivesAr: [
+      "فهم استخدام أداة التعريف",
+      "نطق أداة التعريف بشكل صحيح",
+      "فهم الحروف الشمسية والقمرية",
+      "تطبيق قواعد أداة التعريف"
     ],
     objectivesFr: [
       "Utiliser الـ (al-) pour rendre les noms définis",
@@ -691,23 +844,35 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Definite Article",
-          content: "الـ (al-) means 'the' and attaches to the beginning of nouns:\nكِتَاب (kitāb) = a book\nالكِتَاب (al-kitāb) = THE book\n\nRemember: Indefinite nouns have tanwīn (كِتَابٌ); definite nouns have الـ (الكِتَاب)."
+          titleAr: "أداة التعريف الأساسية",
+          titleFr: "L'article défini",
+          content: "الـ (al-) means 'the' and attaches to the beginning of nouns:\nكِتَاب (kitāb) = a book\nالكِتَاب (al-kitāb) = THE book\n\nRemember: Indefinite nouns have tanwīn (كِتَابٌ); definite nouns have الـ (الكِتَاب).",
+          contentAr: "الـ (al-) تعني 'ال' وتضاف إلى بداية الاسم:\nكِتَاب (kitāb) = كتاب\nالكِتَاب (al-kitāb) = الكتاب\n\nتذكر: الأسماء النكرة لها تنوين (كِتَابٌ)؛ والأسماء المعرفة لها الـ (الكِتَاب)",
+          contentFr: "الـ (al-) signifie « le/la » et s'attache au début des noms :\nكِتَاب (kitāb) = un livre\nالكِتَاب (al-kitāb) = LE livre\n\nRappel : Les noms indéfinis ont la tanwīn (كِتَابٌ) ; les noms définis ont الـ (الكِتَاب)."
         },
         {
           title: "Sun Letters (حُرُوف شَمْسِيَّة)",
-          content: "With 'sun letters', the ل in الـ is SILENT and the following letter is doubled:\n\nت ث د ذ ر ز س ش ص ض ط ظ ل ن\n\nExample: الشَّمْس (ash-shams) not (al-shams)\nالسَّلَام (as-salām) not (al-salām)"
+          titleAr: "الحروف الشمسية",
+          titleFr: "Lettres solaires",
+          content: "With 'sun letters', the ل in الـ is SILENT and the following letter is doubled:\n\nت ث د ذ ر ز س ش ص ض ط ظ ل ن\n\nExample: الشَّمْس (ash-shams) not (al-shams)\nالسَّلَام (as-salām) not (al-salām)",
+          contentAr: "مع الحروف الشمسية، اللام في الـ صامت والحرف التالي يُشدد:\n\nت ث د ذ ر ز س ش ص ض ط ظ ل ن\n\nمثال: الشَّمْس (ash-shams) وليس (al-shams)\nالسَّلَام (as-salām) وليس (al-salām)",
+          contentFr: "Avec les « lettres solaires », le ل dans الـ est SILENCIEUX et la lettre suivante est doublée :\n\nت ث د ذ ر ز س ش ص ض ط ظ ل ن\n\nExemple : الشَّمْس (ash-shams) pas (al-shams)\nالسَّلَام (as-salām) pas (al-salām)"
         },
         {
           title: "Moon Letters (حُرُوف قَمَرِيَّة)",
-          content: "With 'moon letters', الـ is pronounced fully:\n\nا ب ج ح خ ع غ ف ق ك م ه و ي\n\nExample: القَمَر (al-qamar)\nالكِتَاب (al-kitāb)\nالبَيْت (al-bayt)"
+          titleAr: "الحروف القمرية",
+          titleFr: "Lettres lunaires",
+          content: "With 'moon letters', الـ is pronounced fully:\n\nا ب ج ح خ ع غ ف ق ك م ه و ي\n\nExample: القَمَر (al-qamar)\nالكِتَاب (al-kitāb)\nالبَيْت (al-bayt)",
+          contentAr: "مع الحروف القمرية، الـ تُنطق كاملة:\n\nا ب ج ح خ ع غ ف ق ك م ه و ي\n\nمثال: القَمَر (al-qamar)\nالكِتَاب (al-kitāb)\nالبَيْت (al-bayt)",
+          contentFr: "Avec les « lettres lunaires », الـ est prononcé complètement :\n\nا ب ج ح خ ع غ ف ق ك م ه و ي\n\nExemple : القَمَر (al-qamar)\nالكِتَاب (al-kitāb)\nالبَيْت (al-bayt)"
         }
       ],
       vocabulary: [
-        { arabic: "الكِتَاب", transliteration: "al-kitāb", meaning: "the book", meaningFr: "le livre" },
-        { arabic: "الشَّمْس", transliteration: "ash-shams", meaning: "the sun", meaningFr: "le soleil" },
-        { arabic: "القَمَر", transliteration: "al-qamar", meaning: "the moon", meaningFr: "la lune" },
-        { arabic: "النُّور", transliteration: "an-nūr", meaning: "the light", meaningFr: "la lumière" },
-        { arabic: "البَيْت", transliteration: "al-bayt", meaning: "the house", meaningFr: "la maison" }
+        { arabic: "الكِتَاب", transliteration: "al-kitāb", meaning: "the book", meaningAr: "الكتاب", meaningFr: "le livre" },
+        { arabic: "الشَّمْس", transliteration: "ash-shams", meaning: "the sun", meaningAr: "الشمس", meaningFr: "le soleil" },
+        { arabic: "القَمَر", transliteration: "al-qamar", meaning: "the moon", meaningAr: "القمر", meaningFr: "la lune" },
+        { arabic: "النُّور", transliteration: "an-nūr", meaning: "the light", meaningAr: "النور", meaningFr: "la lumière" },
+        { arabic: "البَيْت", transliteration: "al-bayt", meaning: "the house", meaningAr: "البيت", meaningFr: "la maison" }
       ]
     },
     exerciseCount: 17,
@@ -721,12 +886,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الصفات والمطابقة",
     titleFr: "Les adjectifs et l'accord",
     description: "Learn adjectives and how they agree with nouns",
+    descriptionAr: "تعلم الصفات وكيفية اتفاقها مع الأسماء",
     descriptionFr: "Apprenez les adjectifs et comment ils s'accordent avec les noms",
     objectives: [
       "Use common Arabic adjectives",
       "Apply gender agreement",
       "Apply definiteness agreement",
       "Form noun-adjective phrases"
+    ],
+    objectivesAr: [
+      "فهم الصفات في العربية",
+      "تطبيق قواعس الاتفاق",
+      "استخدام الصفات في الجمل",
+      "وصف الأشياء باستخدام الصفات"
     ],
     objectivesFr: [
       "Utiliser les adjectifs arabes courants",
@@ -741,24 +913,30 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Basic Adjectives",
-          content: "كَبِير (kabīr) = big\nصَغِير (ṣaghīr) = small\nجَمِيل (jamīl) = beautiful\nجَدِيد (jadīd) = new\nقَدِيم (qadīm) = old\nسَرِيع (sarī') = fast\nبَطِيء (baṭī') = slow"
+          titleAr: "الصفات الأساسية",
+          content: "كَبِير (kabīr) = big\nصَغِير (ṣaghīr) = small\nجَمِيل (jamīl) = beautiful\nجَدِيد (jadīd) = new\nقَدِيم (qadīm) = old\nسَرِيع (sarī') = fast\nبَطِيء (baṭī') = slow",
+          contentAr: "كَبِير (kabīr) = كبير\nصَغِير (ṣaghīr) = صغير\nجَمِيل (jamīl) = جميل\nجَدِيد (jadīd) = جديد\nقَدِيم (qadīm) = قديم\nسَرِيع (sarī') = سريع\nبَطِيء (baṭī') = بطيء"
         },
         {
           title: "Gender Agreement",
-          content: "Adjectives MUST match the gender of the noun:\n\nكِتَابٌ كَبِيرٌ (kitābun kabīrun) = a big book (m)\nسَيَّارَةٌ كَبِيرَةٌ (sayyāratun kabīratun) = a big car (f)\n\nAdd ة to make adjectives feminine!"
+          titleAr: "اتفاق الجنس",
+          content: "Adjectives MUST match the gender of the noun:\n\nكِتَابٌ كَبِيرٌ (kitābun kabīrun) = a big book (m)\nسَيَّارَةٌ كَبِيرَةٌ (sayyāratun kabīratun) = a big car (f)\n\nAdd ة to make adjectives feminine!",
+          contentAr: "يجب أن تتطابق الصفات مع جنس الاسم:\n\nكِتَابٌ كَبِيرٌ (kitābun kabīrun) = كتاب كبير (مذكر)\nسَيَّارَةٌ كَبِيرَةٌ (sayyāratun kabīratun) = سيارة كبيرة (مؤنث)\n\nأضف ة لجعل الصفات مؤنثة!"
         },
         {
           title: "Definiteness Agreement",
-          content: "Adjectives must also match definiteness:\n\nIndefinite: كِتَابٌ كَبِيرٌ = a big book\nDefinite: الكِتَابُ الكَبِيرُ = THE big book\n\nBoth noun AND adjective get الـ!"
+          titleAr: "اتفاق التعريف",
+          content: "Adjectives must also match definiteness:\n\nIndefinite: كِتَابٌ كَبِيرٌ = a big book\nDefinite: الكِتَابُ الكَبِيرُ = THE big book\n\nBoth noun AND adjective get الـ!",
+          contentAr: "يجب أن تتطابق الصفات أيضًا مع التعريف:\n\nنكرة: كِتَابٌ كَبِيرٌ = كتاب كبير\nمعرفة: الكِتَابُ الكَبِيرُ = الكتاب الكبير\n\nكل من الاسم والصفة يأخذ الـ!"
         }
       ],
       vocabulary: [
-        { arabic: "كَبِير / كَبِيرَة", transliteration: "kabīr / kabīra", meaning: "big", meaningFr: "grand" },
-        { arabic: "صَغِير / صَغِيرَة", transliteration: "ṣaghīr / ṣaghīra", meaning: "small", meaningFr: "petit" },
-        { arabic: "جَمِيل / جَمِيلَة", transliteration: "jamīl / jamīla", meaning: "beautiful", meaningFr: "beau" },
-        { arabic: "جَدِيد / جَدِيدَة", transliteration: "jadīd / jadīda", meaning: "new", meaningFr: "nouveau" },
-        { arabic: "طَوِيل / طَوِيلَة", transliteration: "ṭawīl / ṭawīla", meaning: "tall/long", meaningFr: "grand/long" },
-        { arabic: "قَصِير / قَصِيرَة", transliteration: "qaṣīr / qaṣīra", meaning: "short", meaningFr: "court" }
+        { arabic: "كَبِير / كَبِيرَة", transliteration: "kabīr / kabīra", meaning: "big", meaningAr: "كبير", meaningFr: "grand" },
+        { arabic: "صَغِير / صَغِيرَة", transliteration: "ṣaghīr / ṣaghīra", meaning: "small", meaningAr: "صغير", meaningFr: "petit" },
+        { arabic: "جَمِيل / جَمِيلَة", transliteration: "jamīl / jamīla", meaning: "beautiful", meaningAr: "جميل", meaningFr: "beau" },
+        { arabic: "جَدِيد / جَدِيدَة", transliteration: "jadīd / jadīda", meaning: "new", meaningAr: "جديد", meaningFr: "nouveau" },
+        { arabic: "طَوِيل / طَوِيلَة", transliteration: "ṭawīl / ṭawīla", meaning: "tall/long", meaningAr: "طويل", meaningFr: "grand/long" },
+        { arabic: "قَصِير / قَصِيرَة", transliteration: "qaṣīr / qaṣīra", meaning: "short", meaningAr: "قصير", meaningFr: "court" }
       ]
     },
     exerciseCount: 18,
@@ -772,12 +950,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "صيغ الجمع",
     titleFr: "Les formes du pluriel",
     description: "Learn how to form plurals in Arabic",
+    descriptionAr: "تعلم كيفية تكوين الجمع في العربية",
     descriptionFr: "Apprenez à former les pluriels en arabe",
     objectives: [
       "Understand sound and broken plurals",
       "Form masculine and feminine sound plurals",
       "Recognize common broken plural patterns",
       "Use plurals correctly in sentences"
+    ],
+    objectivesAr: [
+      "فهم أنواع الجموع المختلفة",
+      "تحويل الأسماء من المفرد إلى الجمع",
+      "استخدام الجموع في السياقات",
+      "التمييز بين أنواع الجموع"
     ],
     objectivesFr: [
       "Comprendre les pluriels sains et cassés",
@@ -792,23 +977,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Sound Plurals",
-          content: "Sound plurals add endings to the singular:\n\nMasculine sound plural: Add ـون (-ūn) or ـين (-īn)\nمُعَلِّم (teacher) → مُعَلِّمُون (teachers)\n\nFeminine sound plural: Change ة to ات (-āt)\nمُعَلِّمَة → مُعَلِّمَات"
+          titleAr: "الجموع السالمة",
+          content: "Sound plurals add endings to the singular:\n\nMasculine sound plural: Add ـون (-ūn) or ـين (-īn)\nمُعَلِّم (teacher) → مُعَلِّمُون (teachers)\n\nFeminine sound plural: Change ة to ات (-āt)\nمُعَلِّمَة → مُعَلِّمَات",
+          contentAr: "الجموع السالمة تضيف نهايات للمفرد:\n\nالجمع المذكر السالم: أضف ـون (-ūn) أو ـين (-īn)\nمُعَلِّم (معلم) → مُعَلِّمُون (معلمون)\n\nالجمع المؤنث السالم: غير ة إلى ات (-āt)\nمُعَلِّمَة → مُعَلِّمَات"
         },
         {
           title: "Broken Plurals",
-          content: "Broken plurals change the internal vowels (like English 'man/men'):\nكِتَاب (book) → كُتُب (books)\nرَجُل (man) → رِجَال (men)\nبَيْت (house) → بُيُوت (houses)\n\nThese must be memorized for each word!"
+          titleAr: "الجموع المكسرة",
+          content: "Broken plurals change the internal vowels (like English 'man/men'):\nكِتَاب (book) → كُتُب (books)\nرَجُل (man) → رِجَال (men)\nبَيْت (house) → بُيُوت (houses)\n\nThese must be memorized for each word!",
+          contentAr: "الجموع المكسرة تغير حروف العلة الداخلية:\nكِتَاب (كتاب) → كُتُب (كتب)\nرَجُل (رجل) → رِجَال (رجال)\nبَيْت (بيت) → بُيُوت (بيوت)\n\nيجب حفظ كل كلمة على حدة!"
         },
         {
           title: "Common Broken Plural Patterns",
-          content: "فُعُول: بُيُوت، قُلُوب، عُيُون\nفِعَال: رِجَال، جِبَال\nأَفْعَال: أَقْلَام، أَوْلَاد\nفُعَلَاء: عُلَمَاء، أُمَرَاء"
+          titleAr: "أنماط الجموع المكسرة الشائعة",
+          content: "فُعُول: بُيُوت، قُلُوب، عُيُون\nفِعَال: رِجَال، جِبَال\nأَفْعَال: أَقْلَام، أَوْلَاد\nفُعَلَاء: عُلَمَاء، أُمَرَاء",
+          contentAr: "فُعُول: بُيُوت (بيوت)، قُلُوب (قلوب)، عُيُون (عيون)\nفِعَال: رِجَال (رجال)، جِبَال (جبال)\nأَفْعَال: أَقْلَام (أقلام)، أَوْلَاد (أولاد)\nفُعَلَاء: عُلَمَاء (علماء)، أُمَرَاء (أمراء)"
         }
       ],
       vocabulary: [
-        { arabic: "كِتَاب → كُتُب", transliteration: "kitāb → kutub", meaning: "book → books", meaningFr: "livre → livres" },
-        { arabic: "رَجُل → رِجَال", transliteration: "rajul → rijāl", meaning: "man → men", meaningFr: "homme → hommes" },
-        { arabic: "بَيْت → بُيُوت", transliteration: "bayt → buyūt", meaning: "house → houses", meaningFr: "maison → maisons" },
-        { arabic: "وَلَد → أَوْلَاد", transliteration: "walad → awlād", meaning: "boy → boys", meaningFr: "garçon → garçons" },
-        { arabic: "طَالِب → طُلَّاب", transliteration: "ṭālib → ṭullāb", meaning: "student → students", meaningFr: "étudiant → étudiants" }
+        { arabic: "كِتَاب → كُتُب", transliteration: "kitāb → kutub", meaning: "book → books", meaningAr: "كتاب→كتب", meaningFr: "livre → livres" },
+        { arabic: "رَجُل → رِجَال", transliteration: "rajul → rijāl", meaning: "man → men", meaningAr: "رجل→رجال", meaningFr: "homme → hommes" },
+        { arabic: "بَيْت → بُيُوت", transliteration: "bayt → buyūt", meaning: "house → houses", meaningAr: "بيت→بيوت", meaningFr: "maison → maisons" },
+        { arabic: "وَلَد → أَوْلَاد", transliteration: "walad → awlād", meaning: "boy → boys", meaningAr: "ولد→أولاد", meaningFr: "garçon → garçons" },
+        { arabic: "طَالِب → طُلَّاب", transliteration: "ṭālib → ṭullāb", meaning: "student → students", meaningAr: "طالب→طلاب", meaningFr: "étudiant → étudiants" }
       ]
     },
     exerciseCount: 18,
@@ -822,12 +1013,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الأعداد ١١-١٠٠",
     titleFr: "Les nombres de 11 à 100",
     description: "Learn numbers from 11 to 100",
+    descriptionAr: "تعلم الأرقام من 11 إلى 100",
     descriptionFr: "Apprenez les nombres de 11 à 100",
     objectives: [
       "Count from 11 to 100 in Arabic",
       "Understand number-noun agreement",
       "Read prices and quantities",
       "Use numbers in practical contexts"
+    ],
+    objectivesAr: [
+      "نطق الأرقام من 11 إلى 100",
+      "كتابة الأرقام والكلمات الرقمية",
+      "استخدام الأرقام في السياقات",
+      "فهم قواعد اتفاق الأرقام"
     ],
     objectivesFr: [
       "Compter de 11 à 100 en arabe",
@@ -842,23 +1040,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Numbers 11-19",
-          content: "These are compound numbers:\n11 = أَحَدَ عَشَرَ (aḥada 'ashara)\n12 = اِثْنَا عَشَرَ (ithnā 'ashara)\n13 = ثَلَاثَةَ عَشَرَ (thalāthata 'ashara)\n14 = أَرْبَعَةَ عَشَرَ (arba'ata 'ashara)\n15 = خَمْسَةَ عَشَرَ (khamsata 'ashara)"
+          titleAr: "الأرقام ١١-١٩",
+          content: "These are compound numbers:\n11 = أَحَدَ عَشَرَ (aḥada 'ashara)\n12 = اِثْنَا عَشَرَ (ithnā 'ashara)\n13 = ثَلَاثَةَ عَشَرَ (thalāthata 'ashara)\n14 = أَرْبَعَةَ عَشَرَ (arba'ata 'ashara)\n15 = خَمْسَةَ عَشَرَ (khamsata 'ashara)",
+          contentAr: "هذه أرقام مركبة:\n11 = أَحَدَ عَشَرَ\n12 = اِثْنَا عَشَرَ\n13 = ثَلَاثَةَ عَشَرَ\n14 = أَرْبَعَةَ عَشَرَ\n15 = خَمْسَةَ عَشَرَ"
         },
         {
           title: "Tens (20-90)",
-          content: "20 = عِشْرُون ('ishrūn)\n30 = ثَلَاثُون (thalāthūn)\n40 = أَرْبَعُون (arba'ūn)\n50 = خَمْسُون (khamsūn)\n60 = سِتُّون (sittūn)\n70 = سَبْعُون (sab'ūn)\n80 = ثَمَانُون (thamānūn)\n90 = تِسْعُون (tis'ūn)"
+          titleAr: "العشرات (٢٠-٩٠)",
+          content: "20 = عِشْرُون ('ishrūn)\n30 = ثَلَاثُون (thalāthūn)\n40 = أَرْبَعُون (arba'ūn)\n50 = خَمْسُون (khamsūn)\n60 = سِتُّون (sittūn)\n70 = سَبْعُون (sab'ūn)\n80 = ثَمَانُون (thamānūn)\n90 = تِسْعُون (tis'ūn)",
+          contentAr: "20 = عِشْرُون\n30 = ثَلَاثُون\n40 = أَرْبَعُون\n50 = خَمْسُون\n60 = سِتُّون\n70 = سَبْعُون\n80 = ثَمَانُون\n90 = تِسْعُون"
         },
         {
           title: "Compound Numbers",
-          content: "21-99 are formed with وَ (and):\n21 = وَاحِدٌ وَعِشْرُون (one and twenty)\n35 = خَمْسَةٌ وَثَلَاثُون (five and thirty)\n99 = تِسْعَةٌ وَتِسْعُون (nine and ninety)"
+          titleAr: "الأرقام المركبة",
+          content: "21-99 are formed with وَ (and):\n21 = وَاحِدٌ وَعِشْرُون (one and twenty)\n35 = خَمْسَةٌ وَثَلَاثُون (five and thirty)\n99 = تِسْعَةٌ وَتِسْعُون (nine and ninety)",
+          contentAr: "21-99 تُكوَّن بـ وَ (و):\n21 = وَاحِدٌ وَعِشْرُون\n35 = خَمْسَةٌ وَثَلَاثُون\n99 = تِسْعَةٌ وَتِسْعُون"
         }
       ],
       vocabulary: [
-        { arabic: "عِشْرُون", transliteration: "'ishrūn", meaning: "twenty", meaningFr: "vingt" },
-        { arabic: "ثَلَاثُون", transliteration: "thalāthūn", meaning: "thirty", meaningFr: "trente" },
-        { arabic: "خَمْسُون", transliteration: "khamsūn", meaning: "fifty", meaningFr: "cinquante" },
-        { arabic: "مِئَة / مِائَة", transliteration: "mi'a", meaning: "one hundred", meaningFr: "cent" },
-        { arabic: "رَقْم", transliteration: "raqm", meaning: "number", meaningFr: "nombre" }
+        { arabic: "عِشْرُون", transliteration: "'ishrūn", meaning: "twenty", meaningAr: "عشرون", meaningFr: "vingt" },
+        { arabic: "ثَلَاثُون", transliteration: "thalāthūn", meaning: "thirty", meaningAr: "ثلاثون", meaningFr: "trente" },
+        { arabic: "خَمْسُون", transliteration: "khamsūn", meaning: "fifty", meaningAr: "خمسون", meaningFr: "cinquante" },
+        { arabic: "مِئَة / مِائَة", transliteration: "mi'a", meaning: "one hundred", meaningAr: "مائة", meaningFr: "cent" },
+        { arabic: "رَقْم", transliteration: "raqm", meaning: "number", meaningAr: "رقم", meaningFr: "nombre" }
       ]
     },
     exerciseCount: 16,
@@ -874,12 +1078,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "مقدمة في الأفعال",
     titleFr: "Introduction aux verbes arabes",
     description: "Understand the Arabic verb system basics",
+    descriptionAr: "فهم أساسيات نظام الفعل العربي",
     descriptionFr: "Comprenez les bases du système verbal arabe",
     objectives: [
       "Understand the three-letter root system",
       "Recognize verb patterns",
       "Identify verb forms in sentences",
       "Learn the concept of past, present, and future"
+    ],
+    objectivesAr: [
+      "فهم بنية الفعل الثلاثي",
+      "التعرف على الأفعال المختلفة",
+      "فهم أشكال الفعل",
+      "مقدمة عن تصريف الفعل"
     ],
     objectivesFr: [
       "Comprendre le système de racines à trois lettres",
@@ -894,23 +1105,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Three-Letter Root",
-          content: "Most Arabic verbs come from a THREE-LETTER ROOT. By adding prefixes, suffixes, and changing vowels, you create different words:\n\nRoot: ك-ت-ب (k-t-b) = concept of writing\n• كَتَبَ (kataba) = he wrote\n• يَكْتُبُ (yaktub) = he writes\n• كِتَاب (kitāb) = book\n• كَاتِب (kātib) = writer\n• مَكْتَب (maktab) = office/desk"
+          titleAr: "الجذر الثلاثي",
+          content: "Most Arabic verbs come from a THREE-LETTER ROOT. By adding prefixes, suffixes, and changing vowels, you create different words:\n\nRoot: ك-ت-ب (k-t-b) = concept of writing\n• كَتَبَ (kataba) = he wrote\n• يَكْتُبُ (yaktub) = he writes\n• كِتَاب (kitāb) = book\n• كَاتِب (kātib) = writer\n• مَكْتَب (maktab) = office/desk",
+          contentAr: "معظم الأفعال العربية تأتي من جذر ثلاثي الأحرف. بإضافة البادئات واللواحق وتغيير حروف العلة:\n\nالجذر: ك-ت-ب = مفهوم الكتابة\n• كَتَبَ (kataba) = هو كتب\n• يَكْتُبُ (yaktub) = هو يكتب\n• كِتَاب (kitāb) = كتاب\n• كَاتِب (kātib) = كاتب\n• مَكْتَب (maktab) = مكتب"
         },
         {
           title: "Verb Tenses",
-          content: "Arabic has TWO main verb forms:\n\n1. الفِعْل المَاضِي (al-fi'l al-māḍī) = Past tense\nكَتَبَ = he wrote\n\n2. الفِعْل المُضَارِع (al-fi'l al-muḍāri') = Present/Future\nيَكْتُبُ = he writes / he will write"
+          titleAr: "أزمنة الفعل",
+          content: "Arabic has TWO main verb forms:\n\n1. الفِعْل المَاضِي (al-fi'l al-māḍī) = Past tense\nكَتَبَ = he wrote\n\n2. الفِعْل المُضَارِع (al-fi'l al-muḍāri') = Present/Future\nيَكْتُبُ = he writes / he will write",
+          contentAr: "للعربية شكلان رئيسيان:\n\n1. الفِعْل المَاضِي = الماضي\nكَتَبَ = هو كتب\n\n2. الفِعْل المُضَارِع = المضارع/المستقبل\nيَكْتُبُ = هو يكتب / سيكتب"
         },
         {
           title: "Person, Gender, Number",
-          content: "Arabic verbs change based on:\n• WHO is doing the action (I, you, he, she, etc.)\n• GENDER (masculine/feminine)\n• NUMBER (singular, dual, plural)\n\nThis means MANY verb forms! But don't worry - patterns are regular."
+          titleAr: "الشخص والجنس والعدد",
+          content: "Arabic verbs change based on:\n• WHO is doing the action (I, you, he, she, etc.)\n• GENDER (masculine/feminine)\n• NUMBER (singular, dual, plural)\n\nThis means MANY verb forms! But don't worry - patterns are regular.",
+          contentAr: "تتغير الأفعال بناءً على:\n• من يقوم بالفعل (أنا، أنت، هو، هي، إلخ)\n• الجنس (مذكر/مؤنث)\n• العدد (مفرد، مثنى، جمع)\n\nهذا يعني أشكالًا فعلية متعددة، لكن الأنماط منتظمة!"
         }
       ],
       vocabulary: [
-        { arabic: "فِعْل", transliteration: "fi'l", meaning: "verb", meaningFr: "verbe" },
-        { arabic: "كَتَبَ", transliteration: "kataba", meaning: "he wrote", meaningFr: "il a écrit" },
-        { arabic: "قَرَأَ", transliteration: "qara'a", meaning: "he read", meaningFr: "il a lu" },
-        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningFr: "il est allé" },
-        { arabic: "فَعَلَ", transliteration: "fa'ala", meaning: "he did", meaningFr: "il a fait" }
+        { arabic: "فِعْل", transliteration: "fi'l", meaning: "verb", meaningAr: "الفعل", meaningFr: "verbe" },
+        { arabic: "كَتَبَ", transliteration: "kataba", meaning: "he wrote", meaningAr: "كتب", meaningFr: "il a écrit" },
+        { arabic: "قَرَأَ", transliteration: "qara'a", meaning: "he read", meaningAr: "قرأ", meaningFr: "il a lu" },
+        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningAr: "ذهب", meaningFr: "il est allé" },
+        { arabic: "فَعَلَ", transliteration: "fa'ala", meaning: "he did", meaningAr: "فعل", meaningFr: "il a fait" }
       ]
     },
     exerciseCount: 15,
@@ -924,12 +1141,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الفعل الماضي: الفعل الثلاثي",
     titleFr: "Le passé : Forme I",
     description: "Learn to conjugate past tense verbs",
+    descriptionAr: "تعلم تصريف أفعال الماضي",
     descriptionFr: "Apprenez à conjuguer les verbes au passé",
     objectives: [
       "Conjugate past tense for all pronouns",
       "Memorize common past tense verbs",
       "Form simple past tense sentences",
       "Understand suffixes for each person"
+    ],
+    objectivesAr: [
+      "فهم صيغة الماضي للفعل الثلاثي",
+      "تصريف الأفعال مع جميع الضمائر",
+      "استخدام الماضي في الجمل",
+      "ممارسة الماضي في السياقات"
     ],
     objectivesFr: [
       "Conjuguer les verbes au passé pour tous les pronoms",
@@ -944,19 +1168,23 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Past Tense Conjugation",
-          content: "The past tense adds SUFFIXES to show who did the action:\n\nكَتَبَ (kataba) = he wrote\nكَتَبَتْ (katabat) = she wrote\nكَتَبْتُ (katabtu) = I wrote\nكَتَبْتَ (katabta) = you wrote (m)\nكَتَبْتِ (katabti) = you wrote (f)\nكَتَبْنَا (katabnā) = we wrote\nكَتَبُوا (katabū) = they wrote (m)"
+          titleAr: "تصريف الفعل الماضي",
+          content: "The past tense adds SUFFIXES to show who did the action:\n\nكَتَبَ (kataba) = he wrote\nكَتَبَتْ (katabat) = she wrote\nكَتَبْتُ (katabtu) = I wrote\nكَتَبْتَ (katabta) = you wrote (m)\nكَتَبْتِ (katabti) = you wrote (f)\nكَتَبْنَا (katabnā) = we wrote\nكَتَبُوا (katabū) = they wrote (m)",
+          contentAr: "الفعل الماضي يضيف لواحق لإظهار من قام بالفعل:\n\nكَتَبَ (kataba) = هو كتب\nكَتَبَتْ (katabat) = هي كتبت\nكَتَبْتُ (katabtu) = أنا كتبت\nكَتَبْتَ (katabta) = أنت كتبت (م)\nكَتَبْتِ (katabti) = أنتِ كتبتِ (ن)\nكَتَبْنَا (katabnā) = نحن كتبنا\nكَتَبُوا (katabū) = هم كتبوا (م)"
         },
         {
           title: "Common Past Tense Verbs",
-          content: "ذَهَبَ (dhahaba) = he went\nأَكَلَ (akala) = he ate\nشَرِبَ (shariba) = he drank\nجَلَسَ (jalasa) = he sat\nفَتَحَ (fataḥa) = he opened\nأَغْلَقَ (aghlaqa) = he closed\nعَمِلَ ('amila) = he worked"
+          titleAr: "الأفعال الشائعة في الماضي",
+          content: "ذَهَبَ (dhahaba) = he went\nأَكَلَ (akala) = he ate\nشَرِبَ (shariba) = he drank\nجَلَسَ (jalasa) = he sat\nفَتَحَ (fataḥa) = he opened\nأَغْلَقَ (aghlaqa) = he closed\nعَمِلَ ('amila) = he worked",
+          contentAr: "ذَهَبَ (dhahaba) = ذهب\nأَكَلَ (akala) = أكل\nشَرِبَ (shariba) = شرب\nجَلَسَ (jalasa) = جلس\nفَتَحَ (fataḥa) = فتح\nأَغْلَقَ (aghlaqa) = أغلق\nعَمِلَ ('amila) = عمل"
         }
       ],
       vocabulary: [
-        { arabic: "كَتَبْتُ", transliteration: "katabtu", meaning: "I wrote", meaningFr: "j'ai écrit" },
-        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningFr: "il est allé" },
-        { arabic: "أَكَلَتْ", transliteration: "akalat", meaning: "she ate", meaningFr: "elle a mangé" },
-        { arabic: "شَرِبْنَا", transliteration: "sharibnā", meaning: "we drank", meaningFr: "nous avons bu" },
-        { arabic: "دَرَسُوا", transliteration: "darasū", meaning: "they studied", meaningFr: "ils ont étudié" }
+        { arabic: "كَتَبْتُ", transliteration: "katabtu", meaning: "I wrote", meaningAr: "كتبت", meaningFr: "j'ai écrit" },
+        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningAr: "ذهب", meaningFr: "il est allé" },
+        { arabic: "أَكَلَتْ", transliteration: "akalat", meaning: "she ate", meaningAr: "أكلت", meaningFr: "elle a mangé" },
+        { arabic: "شَرِبْنَا", transliteration: "sharibnā", meaning: "we drank", meaningAr: "شربنا", meaningFr: "nous avons bu" },
+        { arabic: "دَرَسُوا", transliteration: "darasū", meaning: "they studied", meaningAr: "درسوا", meaningFr: "ils ont étudié" }
       ]
     },
     exerciseCount: 18,
@@ -970,12 +1198,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الفعل المضارع: الفعل الثلاثي",
     titleFr: "Le présent : Forme I",
     description: "Learn present tense conjugation",
+    descriptionAr: "تعلم تصريف أفعال المضارع",
     descriptionFr: "Apprenez la conjugaison au présent",
     objectives: [
       "Conjugate present tense for all pronouns",
       "Understand prefix + suffix patterns",
       "Use present tense in sentences",
       "Express ongoing actions"
+    ],
+    objectivesAr: [
+      "فهم صيغة المضارع",
+      "تصريف الأفعال مع جميع الضمائر",
+      "استخدام المضارع في الجمل",
+      "التمييز بين الماضي والمضارع"
     ],
     objectivesFr: [
       "Conjuguer les verbes au présent pour tous les pronoms",
@@ -990,19 +1225,23 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Present Tense Formation",
-          content: "Present tense uses PREFIXES (and sometimes suffixes):\n\nيَكْتُبُ (yaktub) = he writes (prefix يـ)\nتَكْتُبُ (taktub) = she writes (prefix تـ)\nأَكْتُبُ (aktub) = I write (prefix أَ)\nتَكْتُبُ (taktub) = you write-m (prefix تـ)\nتَكْتُبِينَ (taktubīn) = you write-f (prefix تـ + suffix ين)\nنَكْتُبُ (naktub) = we write (prefix نـ)"
+          titleAr: "تكوين المضارع",
+          content: "Present tense uses PREFIXES (and sometimes suffixes):\n\nيَكْتُبُ (yaktub) = he writes (prefix يـ)\nتَكْتُبُ (taktub) = she writes (prefix تـ)\nأَكْتُبُ (aktub) = I write (prefix أَ)\nتَكْتُبُ (taktub) = you write-m (prefix تـ)\nتَكْتُبِينَ (taktubīn) = you write-f (prefix تـ + suffix ين)\nنَكْتُبُ (naktub) = we write (prefix نـ)",
+          contentAr: "المضارع يستخدم البادئات (وأحيانًا اللواحق):\n\nيَكْتُبُ (yaktub) = هو يكتب\nتَكْتُبُ (taktub) = هي تكتب\nأَكْتُبُ (aktub) = أنا أكتب\nتَكْتُبُ (taktub) = أنت تكتب (م)\nتَكْتُبِينَ (taktubīn) = أنتِ تكتبين (ن)\nنَكْتُبُ (naktub) = نحن نكتب"
         },
         {
           title: "Present Tense Pattern",
-          content: "The pattern is:\nأَ + root = I\nتَ + root = you (m) / she\nيَ + root = he\nنَ + root = we\n\nAdd ـُونَ for 'they' masculine\nAdd ـْنَ for 'they' feminine"
+          titleAr: "نمط المضارع",
+          content: "The pattern is:\nأَ + root = I\nتَ + root = you (m) / she\nيَ + root = he\nنَ + root = we\n\nAdd ـُونَ for 'they' masculine\nAdd ـْنَ for 'they' feminine",
+          contentAr: "النمط هو:\nأَ + الجذر = أنا\nتَ + الجذر = أنت (م)/هي\nيَ + الجذر = هو\nنَ + الجذر = نحن\n\nأضف ـُونَ لـ 'هم' (مذكر)\nأضف ـْنَ لـ 'هن' (مؤنث)"
         }
       ],
       vocabulary: [
-        { arabic: "أَكْتُبُ", transliteration: "aktubu", meaning: "I write", meaningFr: "j'écris" },
-        { arabic: "تَذْهَبُ", transliteration: "tadhhabu", meaning: "you go / she goes", meaningFr: "tu vas / elle va" },
-        { arabic: "يَأْكُلُ", transliteration: "ya'kulu", meaning: "he eats", meaningFr: "il mange" },
-        { arabic: "نَشْرَبُ", transliteration: "nashrabu", meaning: "we drink", meaningFr: "nous buvons" },
-        { arabic: "يَعْمَلُونَ", transliteration: "ya'malūna", meaning: "they work", meaningFr: "ils travaillent" }
+        { arabic: "أَكْتُبُ", transliteration: "aktubu", meaning: "I write", meaningAr: "أكتب", meaningFr: "j'écris" },
+        { arabic: "تَذْهَبُ", transliteration: "tadhhabu", meaning: "you go / she goes", meaningAr: "تذهب", meaningFr: "tu vas / elle va" },
+        { arabic: "يَأْكُلُ", transliteration: "ya'kulu", meaning: "he eats", meaningAr: "يأكل", meaningFr: "il mange" },
+        { arabic: "نَشْرَبُ", transliteration: "nashrabu", meaning: "we drink", meaningAr: "نشرب", meaningFr: "nous buvons" },
+        { arabic: "يَعْمَلُونَ", transliteration: "ya'malūna", meaning: "they work", meaningAr: "يعملون", meaningFr: "ils travaillent" }
       ]
     },
     exerciseCount: 18,
@@ -1016,12 +1255,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "أفعال شائعة",
     titleFr: "Les verbes courants en action",
     description: "Practice the most frequently used Arabic verbs",
+    descriptionAr: "ممارسة الأفعال الأكثر استخداماً في العربية",
     descriptionFr: "Pratiquez les verbes arabes les plus fréquemment utilisés",
     objectives: [
       "Master 20 most common Arabic verbs",
       "Use verbs in both tenses",
       "Build practical sentences",
       "Develop verb vocabulary"
+    ],
+    objectivesAr: [
+      "فهم الأفعال الشائعة جداً",
+      "تصريف الأفعال الشائعة",
+      "استخدام الأفعال في السياقات الحقيقية",
+      "بناء جمل باستخدام الأفعال الشائعة"
     ],
     objectivesFr: [
       "Maîtriser les 20 verbes arabes les plus courants",
@@ -1036,23 +1282,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Movement Verbs",
-          content: "ذَهَبَ / يَذْهَبُ (dhahaba/yadhhabu) = to go\nجَاءَ / يَجِيءُ (jā'a/yajī'u) = to come\nخَرَجَ / يَخْرُجُ (kharaja/yakhruju) = to exit\nدَخَلَ / يَدْخُلُ (dakhala/yadkhulu) = to enter\nرَجَعَ / يَرْجِعُ (raja'a/yarji'u) = to return"
+          titleAr: "أفعال الحركة",
+          content: "ذَهَبَ / يَذْهَبُ (dhahaba/yadhhabu) = to go\nجَاءَ / يَجِيءُ (jā'a/yajī'u) = to come\nخَرَجَ / يَخْرُجُ (kharaja/yakhruju) = to exit\nدَخَلَ / يَدْخُلُ (dakhala/yadkhulu) = to enter\nرَجَعَ / يَرْجِعُ (raja'a/yarji'u) = to return",
+          contentAr: "ذَهَبَ / يَذْهَبُ = ذهب/يذهب\nجَاءَ / يَجِيءُ = جاء/يجيء\nخَرَجَ / يَخْرُجُ = خرج/يخرج\nدَخَلَ / يَدْخُلُ = دخل/يدخل\nرَجَعَ / يَرْجِعُ = رجع/يرجع"
         },
         {
           title: "Daily Action Verbs",
-          content: "أَكَلَ / يَأْكُلُ (akala/ya'kulu) = to eat\nشَرِبَ / يَشْرَبُ (shariba/yashrabu) = to drink\nنَامَ / يَنَامُ (nāma/yanāmu) = to sleep\nقَامَ / يَقُومُ (qāma/yaqūmu) = to stand/get up\nجَلَسَ / يَجْلِسُ (jalasa/yajlisu) = to sit"
+          titleAr: "أفعال الحياة اليومية",
+          content: "أَكَلَ / يَأْكُلُ (akala/ya'kulu) = to eat\nشَرِبَ / يَشْرَبُ (shariba/yashrabu) = to drink\nنَامَ / يَنَامُ (nāma/yanāmu) = to sleep\nقَامَ / يَقُومُ (qāma/yaqūmu) = to stand/get up\nجَلَسَ / يَجْلِسُ (jalasa/yajlisu) = to sit",
+          contentAr: "أَكَلَ / يَأْكُلُ = أكل/يأكل\nشَرِبَ / يَشْرَبُ = شرب/يشرب\nنَامَ / يَنَامُ = نام/ينام\nقَامَ / يَقُومُ = قام/يقوم\nجَلَسَ / يَجْلِسُ = جلس/يجلس"
         },
         {
           title: "Communication Verbs",
-          content: "قَالَ / يَقُولُ (qāla/yaqūlu) = to say\nسَأَلَ / يَسْأَلُ (sa'ala/yas'alu) = to ask\nأَجَابَ / يُجِيبُ (ajāba/yujību) = to answer\nتَكَلَّمَ / يَتَكَلَّمُ (takallama/yatakallamu) = to speak\nفَهِمَ / يَفْهَمُ (fahima/yafhamu) = to understand"
+          titleAr: "أفعال التواصل",
+          content: "قَالَ / يَقُولُ (qāla/yaqūlu) = to say\nسَأَلَ / يَسْأَلُ (sa'ala/yas'alu) = to ask\nأَجَابَ / يُجِيبُ (ajāba/yujību) = to answer\nتَكَلَّمَ / يَتَكَلَّمُ (takallama/yatakallamu) = to speak\nفَهِمَ / يَفْهَمُ (fahima/yafhamu) = to understand",
+          contentAr: "قَالَ / يَقُولُ = قال/يقول\nسَأَلَ / يَسْأَلُ = سأل/يسأل\nأَجَابَ / يُجِيبُ = أجاب/يجيب\nتَكَلَّمَ / يَتَكَلَّمُ = تكلم/يتكلم\nفَهِمَ / يَفْهَمُ = فهم/يفهم"
         }
       ],
       vocabulary: [
-        { arabic: "ذَهَبَ / يَذْهَبُ", transliteration: "dhahaba / yadhhabu", meaning: "to go", meaningFr: "aller" },
-        { arabic: "جَاءَ / يَجِيءُ", transliteration: "jā'a / yajī'u", meaning: "to come", meaningFr: "venir" },
-        { arabic: "أَكَلَ / يَأْكُلُ", transliteration: "akala / ya'kulu", meaning: "to eat", meaningFr: "manger" },
-        { arabic: "قَالَ / يَقُولُ", transliteration: "qāla / yaqūlu", meaning: "to say", meaningFr: "dire" },
-        { arabic: "فَهِمَ / يَفْهَمُ", transliteration: "fahima / yafhamu", meaning: "to understand", meaningFr: "comprendre" }
+        { arabic: "ذَهَبَ / يَذْهَبُ", transliteration: "dhahaba / yadhhabu", meaning: "to go", meaningAr: "ذهب/يذهب", meaningFr: "aller" },
+        { arabic: "جَاءَ / يَجِيءُ", transliteration: "jā'a / yajī'u", meaning: "to come", meaningAr: "جاء/يجيء", meaningFr: "venir" },
+        { arabic: "أَكَلَ / يَأْكُلُ", transliteration: "akala / ya'kulu", meaning: "to eat", meaningAr: "أكل/يأكل", meaningFr: "manger" },
+        { arabic: "قَالَ / يَقُولُ", transliteration: "qāla / yaqūlu", meaning: "to say", meaningAr: "قال/يقول", meaningFr: "dire" },
+        { arabic: "فَهِمَ / يَفْهَمُ", transliteration: "fahima / yafhamu", meaning: "to understand", meaningAr: "فهم/يفهم", meaningFr: "comprendre" }
       ]
     },
     exerciseCount: 20,
@@ -1066,12 +1318,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "نفي الأفعال",
     titleFr: "La négation des verbes",
     description: "Learn to negate verbs in Arabic",
+    descriptionAr: "تعلم نفي الأفعال في العربية",
     descriptionFr: "Apprenez à nier les verbes en arabe",
     objectives: [
       "Negate past tense with مَا",
       "Negate present tense with لَا",
       "Use لَمْ for emphatic past negation",
       "Form negative sentences correctly"
+    ],
+    objectivesAr: [
+      "فهم طرق نفي الأفعال",
+      "استخدام الجزيئات السالبة بشكل صحيح",
+      "تكوين الجمل السالبة",
+      "ممارسة النفي في السياقات"
     ],
     objectivesFr: [
       "Nier le passé avec مَا",
@@ -1086,23 +1345,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Negating the Past: مَا",
-          content: "Place مَا (mā) before the past tense verb:\n\nذَهَبَ (dhahaba) = he went\nمَا ذَهَبَ (mā dhahaba) = he did not go\n\nكَتَبْتُ = I wrote\nمَا كَتَبْتُ = I did not write"
+          titleAr: "نفي الماضي: مَا",
+          content: "Place مَا (mā) before the past tense verb:\n\nذَهَبَ (dhahaba) = he went\nمَا ذَهَبَ (mā dhahaba) = he did not go\n\nكَتَبْتُ = I wrote\nمَا كَتَبْتُ = I did not write",
+          contentAr: "ضع مَا (mā) قبل فعل الماضي:\n\nذَهَبَ (dhahaba) = ذهب\nمَا ذَهَبَ (mā dhahaba) = ما ذهب\n\nكَتَبْتُ = كتبت\nمَا كَتَبْتُ = ما كتبت"
         },
         {
           title: "Negating the Present: لَا",
-          content: "Place لَا (lā) before the present tense verb:\n\nيَذْهَبُ (yadhhabu) = he goes\nلَا يَذْهَبُ (lā yadhhabu) = he does not go\n\nأَفْهَمُ = I understand\nلَا أَفْهَمُ = I do not understand"
+          titleAr: "نفي المضارع: لَا",
+          content: "Place لَا (lā) before the present tense verb:\n\nيَذْهَبُ (yadhhabu) = he goes\nلَا يَذْهَبُ (lā yadhhabu) = he does not go\n\nأَفْهَمُ = I understand\nلَا أَفْهَمُ = I do not understand",
+          contentAr: "ضع لَا (lā) قبل فعل المضارع:\n\nيَذْهَبُ (yadhhabu) = يذهب\nلَا يَذْهَبُ (lā yadhhabu) = لا يذهب\n\nأَفْهَمُ = أفهم\nلَا أَفْهَمُ = لا أفهم"
         },
         {
           title: "Emphatic Past Negation: لَمْ",
-          content: "لَمْ + present tense form (with sukūn) = emphatic 'did not':\n\nلَمْ يَذْهَبْ (lam yadhab) = he did NOT go\nلَمْ أَفْهَمْ (lam afham) = I did NOT understand\n\nThis is more emphatic than مَا and very common in formal Arabic."
+          titleAr: "النفي القوي في الماضي: لَمْ",
+          content: "لَمْ + present tense form (with sukūn) = emphatic 'did not':\n\nلَمْ يَذْهَبْ (lam yadhab) = he did NOT go\nلَمْ أَفْهَمْ (lam afham) = I did NOT understand\n\nThis is more emphatic than مَا and very common in formal Arabic.",
+          contentAr: "لَمْ + صيغة المضارع (مع السكون) = النفي القوي:\n\nلَمْ يَذْهَبْ (lam yadhab) = لم يذهب (تأكيد)\nلَمْ أَفْهَمْ (lam afham) = لم أفهم (تأكيد)\n\nهذا أقوى من مَا وشائع جداً في العربية الفصحى."
         }
       ],
       vocabulary: [
-        { arabic: "مَا", transliteration: "mā", meaning: "not (past)", meaningFr: "pas (passé)" },
-        { arabic: "لَا", transliteration: "lā", meaning: "not (present)", meaningFr: "pas (présent)" },
-        { arabic: "لَمْ", transliteration: "lam", meaning: "did not (emphatic)", meaningFr: "n'a pas (emphatique)" },
-        { arabic: "لَنْ", transliteration: "lan", meaning: "will not", meaningFr: "ne sera pas" },
-        { arabic: "لَيْسَ", transliteration: "laysa", meaning: "is not", meaningFr: "n'est pas" }
+        { arabic: "مَا", transliteration: "mā", meaning: "not (past)", meaningAr: "ما (نفي الماضي)", meaningFr: "pas (passé)" },
+        { arabic: "لَا", transliteration: "lā", meaning: "not (present)", meaningAr: "لا (نفي المضارع)", meaningFr: "pas (présent)" },
+        { arabic: "لَمْ", transliteration: "lam", meaning: "did not (emphatic)", meaningAr: "لم (نفي مؤكد)", meaningFr: "n'a pas (emphatique)" },
+        { arabic: "لَنْ", transliteration: "lan", meaning: "will not", meaningAr: "لن (نفي المستقبل)", meaningFr: "ne sera pas" },
+        { arabic: "لَيْسَ", transliteration: "laysa", meaning: "is not", meaningAr: "ليس", meaningFr: "n'est pas" }
       ]
     },
     exerciseCount: 16,
@@ -1118,12 +1383,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الجملة الاسمية",
     titleFr: "Les phrases nominales",
     description: "Build sentences starting with nouns",
+    descriptionAr: "بناء جمل تبدأ بالأسماء",
     descriptionFr: "Construisez des phrases commençant par des noms",
     objectives: [
       "Understand nominal sentence structure",
       "Form 'X is Y' sentences",
       "Use pronouns as copulas",
       "Describe people and things"
+    ],
+    objectivesAr: [
+      "فهم بنية الجملة الاسمية",
+      "تحديد المبتدأ والخبر",
+      "بناء جمل اسمية صحيحة",
+      "ممارسة الجمل الاسمية"
     ],
     objectivesFr: [
       "Comprendre la structure de la phrase nominale",
@@ -1138,22 +1410,28 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "What is a Nominal Sentence?",
-          content: "A nominal sentence (جُمْلَة اِسْمِيَّة) starts with a NOUN and describes a state of being. Arabic does not use 'is' in the present tense!\n\nالبَيْتُ كَبِيرٌ (al-baytu kabīrun) = The house (is) big\nالطَّالِبُ ذَكِيٌّ (aṭ-ṭālibu dhakiyyun) = The student (is) smart"
+          titleAr: "ما هي الجملة الاسمية؟",
+          content: "A nominal sentence (جُمْلَة اِسْمِيَّة) starts with a NOUN and describes a state of being. Arabic does not use 'is' in the present tense!\n\nالبَيْتُ كَبِيرٌ (al-baytu kabīrun) = The house (is) big\nالطَّالِبُ ذَكِيٌّ (aṭ-ṭālibu dhakiyyun) = The student (is) smart",
+          contentAr: "الجملة الاسمية تبدأ باسم وتصف حالة الكون. العربية لا تستخدم 'يكون' في المضارع!\n\nالبَيْتُ كَبِيرٌ = البيت كبير\nالطَّالِبُ ذَكِيٌّ = الطالب ذكي"
         },
         {
           title: "Subject and Predicate",
-          content: "Every nominal sentence has:\n• مُبْتَدَأ (mubtada') = Subject (what we're talking about)\n• خَبَر (khabar) = Predicate (what we're saying about it)\n\nالوَلَدُ (subject) طَوِيلٌ (predicate) = The boy is tall"
+          titleAr: "المبتدأ والخبر",
+          content: "Every nominal sentence has:\n• مُبْتَدَأ (mubtada') = Subject (what we're talking about)\n• خَبَر (khabar) = Predicate (what we're saying about it)\n\nالوَلَدُ (subject) طَوِيلٌ (predicate) = The boy is tall",
+          contentAr: "كل جملة اسمية لديها:\n• مُبْتَدَأ (mubtada') = المبتدأ (ما نتحدث عنه)\n• خَبَر (khabar) = الخبر (ما نقوله عنه)\n\nالوَلَدُ (مبتدأ) طَوِيلٌ (خبر) = الولد طويل"
         },
         {
           title: "Using Pronouns",
-          content: "For emphasis or clarity, you can add a pronoun:\n\nالبَيْتُ هُوَ كَبِيرٌ = The house, it is big\nهِيَ مُعَلِّمَةٌ = She is a teacher\nأَنَا طَالِبٌ = I am a student"
+          titleAr: "استخدام الضمائر",
+          content: "For emphasis or clarity, you can add a pronoun:\n\nالبَيْتُ هُوَ كَبِيرٌ = The house, it is big\nهِيَ مُعَلِّمَةٌ = She is a teacher\nأَنَا طَالِبٌ = I am a student",
+          contentAr: "للتأكيد أو الوضوح، يمكنك إضافة ضمير:\n\nالبَيْتُ هُوَ كَبِيرٌ = البيت، إنه كبير\nهِيَ مُعَلِّمَةٌ = هي معلمة\nأَنَا طَالِبٌ = أنا طالب"
         }
       ],
       vocabulary: [
-        { arabic: "الطَّالِبُ ذَكِيٌّ", transliteration: "aṭ-ṭālibu dhakiyyun", meaning: "The student is smart", meaningFr: "L'étudiant est intelligent" },
-        { arabic: "السَّمَاءُ زَرْقَاءُ", transliteration: "as-samā'u zarqā'u", meaning: "The sky is blue", meaningFr: "Le ciel est bleu" },
-        { arabic: "أَنَا سَعِيدٌ", transliteration: "anā sa'īdun", meaning: "I am happy", meaningFr: "Je suis heureux" },
-        { arabic: "هِيَ طَبِيبَةٌ", transliteration: "hiya ṭabībatun", meaning: "She is a doctor", meaningFr: "Elle est un docteur" }
+        { arabic: "الطَّالِبُ ذَكِيٌّ", transliteration: "aṭ-ṭālibu dhakiyyun", meaning: "The student is smart", meaningAr: "الطالب ذكي", meaningFr: "L'étudiant est intelligent" },
+        { arabic: "السَّمَاءُ زَرْقَاءُ", transliteration: "as-samā'u zarqā'u", meaning: "The sky is blue", meaningAr: "السماء زرقاء", meaningFr: "Le ciel est bleu" },
+        { arabic: "أَنَا سَعِيدٌ", transliteration: "anā sa'īdun", meaning: "I am happy", meaningAr: "أنا سعيد", meaningFr: "Je suis heureux" },
+        { arabic: "هِيَ طَبِيبَةٌ", transliteration: "hiya ṭabībatun", meaning: "She is a doctor", meaningAr: "هي طبيبة", meaningFr: "Elle est un docteur" }
       ]
     },
     exerciseCount: 16,
@@ -1167,12 +1445,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الجملة الفعلية",
     titleFr: "Les phrases verbales",
     description: "Build sentences starting with verbs",
+    descriptionAr: "بناء جمل تبدأ بالأفعال",
     descriptionFr: "Construisez des phrases commençant par des verbes",
     objectives: [
       "Understand verbal sentence structure",
       "Use VSO word order",
       "Add objects to sentences",
       "Compare verbal and nominal sentences"
+    ],
+    objectivesAr: [
+      "فهم بنية الجملة الفعلية",
+      "تحديد الفعل والفاعل والمفعول",
+      "بناء جمل فعلية صحيحة",
+      "ممارسة الجمل الفعلية"
     ],
     objectivesFr: [
       "Comprendre la structure de la phrase verbale",
@@ -1187,21 +1472,27 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "What is a Verbal Sentence?",
-          content: "A verbal sentence (جُمْلَة فِعْلِيَّة) starts with a VERB. The typical order is:\nVerb - Subject - Object (VSO)\n\nكَتَبَ الطَّالِبُ الدَّرْسَ\n(kataba aṭ-ṭālibu ad-darsa)\n= Wrote the-student the-lesson\n= The student wrote the lesson"
+          titleAr: "ما هي الجملة الفعلية؟",
+          content: "A verbal sentence (جُمْلَة فِعْلِيَّة) starts with a VERB. The typical order is:\nVerb - Subject - Object (VSO)\n\nكَتَبَ الطَّالِبُ الدَّرْسَ\n(kataba aṭ-ṭālibu ad-darsa)\n= Wrote the-student the-lesson\n= The student wrote the lesson",
+          contentAr: "الجملة الفعلية تبدأ بالفعل. الترتيب النموذجي هو:\nفعل - فاعل - مفعول\n\nكَتَبَ الطَّالِبُ الدَّرْسَ\n= كتب الطالب الدرس\n= الطالب كتب الدرس"
         },
         {
           title: "VSO vs SVO",
-          content: "Arabic prefers VSO in formal writing:\nذَهَبَ الوَلَدُ = went the-boy = The boy went\n\nBut SVO is also correct:\nالوَلَدُ ذَهَبَ = the-boy went = The boy went\n\nSVO is more common in spoken Arabic."
+          titleAr: "ترتيب الكلمات: فعل-فاعل-مفعول أم اسم-فعل-مفعول؟",
+          content: "Arabic prefers VSO in formal writing:\nذَهَبَ الوَلَدُ = went the-boy = The boy went\n\nBut SVO is also correct:\nالوَلَدُ ذَهَبَ = the-boy went = The boy went\n\nSVO is more common in spoken Arabic.",
+          contentAr: "العربية تفضل ترتيب الفعل-الفاعل-المفعول في الكتابة الرسمية:\nذَهَبَ الوَلَدُ = ذهب الولد\n\nلكن الترتيب الآخر أيضًا صحيح:\nالوَلَدُ ذَهَبَ = الولد ذهب\n\nالترتيب الثاني أكثر شيوعًا في العربية المنطوقة."
         },
         {
           title: "Adding Objects",
-          content: "Direct objects come after the subject:\n\nقَرَأَ الطَّالِبُ الكِتَابَ\nV: قَرَأَ (read)\nS: الطَّالِبُ (the student)\nO: الكِتَابَ (the book)\n= The student read the book"
+          titleAr: "إضافة المفاعيل",
+          content: "Direct objects come after the subject:\n\nقَرَأَ الطَّالِبُ الكِتَابَ\nV: قَرَأَ (read)\nS: الطَّالِبُ (the student)\nO: الكِتَابَ (the book)\n= The student read the book",
+          contentAr: "المفاعيل المباشرة تأتي بعد الفاعل:\n\nقَرَأَ الطَّالِبُ الكِتَابَ\nف: قَرَأَ (قرأ)\nفا: الطَّالِبُ (الطالب)\nمف: الكِتَابَ (الكتاب)\n= الطالب قرأ الكتاب"
         }
       ],
       vocabulary: [
-        { arabic: "كَتَبَ الطَّالِبُ", transliteration: "kataba aṭ-ṭālibu", meaning: "The student wrote", meaningFr: "L'étudiant a écrit" },
-        { arabic: "أَكَلَ الوَلَدُ التُّفَّاحَةَ", transliteration: "akala al-waladu at-tuffāḥata", meaning: "The boy ate the apple", meaningFr: "Le garçon a mangé la pomme" },
-        { arabic: "شَرِبَتِ البِنْتُ الحَلِيبَ", transliteration: "sharibat al-bintu al-ḥalība", meaning: "The girl drank the milk", meaningFr: "La fille a bu le lait" }
+        { arabic: "كَتَبَ الطَّالِبُ", transliteration: "kataba aṭ-ṭālibu", meaning: "The student wrote", meaningAr: "كتب الطالب", meaningFr: "L'étudiant a écrit" },
+        { arabic: "أَكَلَ الوَلَدُ التُّفَّاحَةَ", transliteration: "akala al-waladu at-tuffāḥata", meaning: "The boy ate the apple", meaningAr: "أكل الولد التفاحة", meaningFr: "Le garçon a mangé la pomme" },
+        { arabic: "شَرِبَتِ البِنْتُ الحَلِيبَ", transliteration: "sharibat al-bintu al-ḥalība", meaning: "The girl drank the milk", meaningAr: "شربت البنت الحليب", meaningFr: "La fille a bu le lait" }
       ]
     },
     exerciseCount: 17,
@@ -1215,12 +1506,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "طرح الأسئلة",
     titleFr: "Poser des questions",
     description: "Form different types of questions",
+    descriptionAr: "صياغة أنواع مختلفة من الأسئلة",
     descriptionFr: "Formez différents types de questions",
     objectives: [
       "Ask yes/no questions with هَلْ",
       "Use question words in sentences",
       "Answer questions appropriately",
       "Practice question intonation"
+    ],
+    objectivesAr: [
+      "فهم أنواع الأسئلة المختلفة",
+      "استخدام أدوات الاستفهام",
+      "صياغة الأسئلة بشكل صحيح",
+      "ممارسة الأسئلة في الحوارات"
     ],
     objectivesFr: [
       "Poser les questions oui/non avec هَلْ",
@@ -1235,23 +1533,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Yes/No Questions",
-          content: "Add هَلْ (hal) or أَ (a) to the beginning:\n\nStatement: أَنْتَ طَالِبٌ = You are a student\nQuestion: هَلْ أَنْتَ طَالِبٌ؟ = Are you a student?\n\nStatement: تُحِبُّ القَهْوَةَ = You like coffee\nQuestion: أَتُحِبُّ القَهْوَةَ؟ = Do you like coffee?"
+          titleAr: "الأسئلة نعم/لا",
+          content: "Add هَلْ (hal) or أَ (a) to the beginning:\n\nStatement: أَنْتَ طَالِبٌ = You are a student\nQuestion: هَلْ أَنْتَ طَالِبٌ؟ = Are you a student?\n\nStatement: تُحِبُّ القَهْوَةَ = You like coffee\nQuestion: أَتُحِبُّ القَهْوَةَ؟ = Do you like coffee?",
+          contentAr: "أضف هَلْ (hal) أو أَ (a) في البداية:\n\nجملة: أَنْتَ طَالِبٌ = أنت طالب\nسؤال: هَلْ أَنْتَ طَالِبٌ؟ = هل أنت طالب؟\n\nجملة: تُحِبُّ القَهْوَةَ = تحب القهوة\nسؤال: أَتُحِبُّ القَهْوَةَ؟ = أتحب القهوة؟"
         },
         {
           title: "Information Questions",
-          content: "Use question words at the beginning:\n\nمَنْ هَذَا؟ = Who is this?\nمَا هَذَا؟ = What is this?\nأَيْنَ المَدْرَسَةُ؟ = Where is the school?\nمَتَى السَّفَرُ؟ = When is the trip?\nلِمَاذَا تَدْرُسُ؟ = Why do you study?"
+          titleAr: "الأسئلة المعلوماتية",
+          content: "Use question words at the beginning:\n\nمَنْ هَذَا؟ = Who is this?\nمَا هَذَا؟ = What is this?\nأَيْنَ المَدْرَسَةُ؟ = Where is the school?\nمَتَى السَّفَرُ؟ = When is the trip?\nلِمَاذَا تَدْرُسُ؟ = Why do you study?",
+          contentAr: "استخدم أدوات الاستفهام في البداية:\n\nمَنْ هَذَا؟ = من هذا؟\nمَا هَذَا؟ = ما هذا؟\nأَيْنَ المَدْرَسَةُ؟ = أين المدرسة؟\nمَتَى السَّفَرُ؟ = متى السفر؟\nلِمَاذَا تَدْرُسُ؟ = لماذا تدرس؟"
         },
         {
           title: "Common Answers",
-          content: "نَعَمْ (na'am) = Yes\nلَا (lā) = No\nلَا أَعْرِفُ (lā a'rifu) = I don't know\nرُبَّمَا (rubbamā) = Maybe\nبِالتَّأْكِيد (bit-ta'kīd) = Certainly"
+          titleAr: "الإجابات الشائعة",
+          content: "نَعَمْ (na'am) = Yes\nلَا (lā) = No\nلَا أَعْرِفُ (lā a'rifu) = I don't know\nرُبَّمَا (rubbamā) = Maybe\nبِالتَّأْكِيد (bit-ta'kīd) = Certainly",
+          contentAr: "نَعَمْ (na'am) = نعم\nلَا (lā) = لا\nلَا أَعْرِفُ (lā a'rifu) = لا أعرف\nرُبَّمَا (rubbamā) = ربما\nبِالتَّأْكِيد (bit-ta'kīd) = بالتأكيد"
         }
       ],
       vocabulary: [
-        { arabic: "هَلْ تَتَكَلَّمُ العَرَبِيَّةَ؟", transliteration: "hal tatakallamu al-'arabiyyata?", meaning: "Do you speak Arabic?", meaningFr: "Parlez-vous l'arabe ?" },
-        { arabic: "أَيْنَ تَسْكُنُ؟", transliteration: "ayna taskunu?", meaning: "Where do you live?", meaningFr: "Où habitez-vous ?" },
-        { arabic: "كَمْ عُمْرُكَ؟", transliteration: "kam 'umruka?", meaning: "How old are you?", meaningFr: "Quel âge avez-vous ?" },
-        { arabic: "نَعَمْ", transliteration: "na'am", meaning: "Yes", meaningFr: "Oui" },
-        { arabic: "لَا", transliteration: "lā", meaning: "No", meaningFr: "Non" }
+        { arabic: "هَلْ تَتَكَلَّمُ العَرَبِيَّةَ؟", transliteration: "hal tatakallamu al-'arabiyyata?", meaning: "Do you speak Arabic?", meaningAr: "هل تتكلم العربية؟", meaningFr: "Parlez-vous l'arabe ?" },
+        { arabic: "أَيْنَ تَسْكُنُ؟", transliteration: "ayna taskunu?", meaning: "Where do you live?", meaningAr: "أين تسكن؟", meaningFr: "Où habitez-vous ?" },
+        { arabic: "كَمْ عُمْرُكَ؟", transliteration: "kam 'umruka?", meaning: "How old are you?", meaningAr: "كم عمرك؟", meaningFr: "Quel âge avez-vous ?" },
+        { arabic: "نَعَمْ", transliteration: "na'am", meaning: "Yes", meaningAr: "نعم", meaningFr: "Oui" },
+        { arabic: "لَا", transliteration: "lā", meaning: "No", meaningAr: "لا", meaningFr: "Non" }
       ]
     },
     exerciseCount: 18,
@@ -1265,12 +1569,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "حروف الجر والمكان",
     titleFr: "Les prépositions et la localisation",
     description: "Learn prepositions and express location",
+    descriptionAr: "تعلم حروف الجر والتعبير عن الموقع",
     descriptionFr: "Apprenez les prépositions et exprimez la localisation",
     objectives: [
       "Use common Arabic prepositions",
       "Describe locations and directions",
       "Form prepositional phrases",
       "Combine prepositions with pronouns"
+    ],
+    objectivesAr: [
+      "التعرف على حروف الجر الشائعة",
+      "فهم وظائف حروف الجر",
+      "التعبير عن الموقع والمكان",
+      "استخدام حروف الجر في الجمل"
     ],
     objectivesFr: [
       "Utiliser les prépositions arabes courantes",
@@ -1285,23 +1596,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Common Prepositions",
-          content: "فِي (fī) = in\nعَلَى ('alā) = on\nمِنْ (min) = from\nإِلَى (ilā) = to\nمَعَ (ma'a) = with\nبِـ (bi-) = with/by\nلِـ (li-) = for/to"
+          titleAr: "حروف الجر الشائعة",
+          content: "فِي (fī) = in\nعَلَى ('alā) = on\nمِنْ (min) = from\nإِلَى (ilā) = to\nمَعَ (ma'a) = with\nبِـ (bi-) = with/by\nلِـ (li-) = for/to",
+          contentAr: "فِي (fī) = في\nعَلَى ('alā) = على\nمِنْ (min) = من\nإِلَى (ilā) = إلى\nمَعَ (ma'a) = معّ\nبِـ (bi-) = بـ\nلِـ (li-) = لـ"
         },
         {
           title: "Location Words",
-          content: "أَمَامَ (amāma) = in front of\nوَرَاءَ (warā'a) = behind\nفَوْقَ (fawqa) = above\nتَحْتَ (taḥta) = under\nبَيْنَ (bayna) = between\nبِجَانِبِ (bi-jānibi) = next to\nقَرِيبٌ مِنْ (qarībun min) = near"
+          titleAr: "كلمات الموقع",
+          content: "أَمَامَ (amāma) = in front of\nوَرَاءَ (warā'a) = behind\nفَوْقَ (fawqa) = above\nتَحْتَ (taḥta) = under\nبَيْنَ (bayna) = between\nبِجَانِبِ (bi-jānibi) = next to\nقَرِيبٌ مِنْ (qarībun min) = near",
+          contentAr: "أَمَامَ (amāma) = أمام\nوَرَاءَ (warā'a) = وراء\nفَوْقَ (fawqa) = فوق\nتَحْتَ (taḥta) = تحت\nبَيْنَ (bayna) = بين\nبِجَانِبِ (bi-jānibi) = بجانب\nقَرِيبٌ مِنْ (qarībun min) = قريب من"
         },
         {
           title: "Prepositions + Pronouns",
-          content: "Pronouns attach to prepositions:\nمَعِي (ma'ī) = with me\nمَعَكَ (ma'aka) = with you (m)\nمَعَهُ (ma'ahu) = with him\nمِنْهَا (minhā) = from her\nإِلَيْهِمْ (ilayhim) = to them"
+          titleAr: "حروف الجر + الضمائر",
+          content: "Pronouns attach to prepositions:\nمَعِي (ma'ī) = with me\nمَعَكَ (ma'aka) = with you (m)\nمَعَهُ (ma'ahu) = with him\nمِنْهَا (minhā) = from her\nإِلَيْهِمْ (ilayhim) = to them",
+          contentAr: "الضمائر تتصل بحروف الجر:\nمَعِي (ma'ī) = معي\nمَعَكَ (ma'aka) = معك (م)\nمَعَهُ (ma'ahu) = معه\nمِنْهَا (minhā) = منها\nإِلَيْهِمْ (ilayhim) = إليهم"
         }
       ],
       vocabulary: [
-        { arabic: "فِي البَيْت", transliteration: "fī al-bayt", meaning: "in the house", meaningFr: "dans la maison" },
-        { arabic: "عَلَى الطَّاوِلَة", transliteration: "'alā aṭ-ṭāwila", meaning: "on the table", meaningFr: "sur la table" },
-        { arabic: "مِنَ المَدْرَسَة", transliteration: "min al-madrasa", meaning: "from the school", meaningFr: "de l'école" },
-        { arabic: "إِلَى السُّوق", transliteration: "ilā as-sūq", meaning: "to the market", meaningFr: "au marché" },
-        { arabic: "مَعِي", transliteration: "ma'ī", meaning: "with me", meaningFr: "avec moi" }
+        { arabic: "فِي البَيْت", transliteration: "fī al-bayt", meaning: "in the house", meaningAr: "في البيت", meaningFr: "dans la maison" },
+        { arabic: "عَلَى الطَّاوِلَة", transliteration: "'alā aṭ-ṭāwila", meaning: "on the table", meaningAr: "على الطاولة", meaningFr: "sur la table" },
+        { arabic: "مِنَ المَدْرَسَة", transliteration: "min al-madrasa", meaning: "from the school", meaningAr: "من المدرسة", meaningFr: "de l'école" },
+        { arabic: "إِلَى السُّوق", transliteration: "ilā as-sūq", meaning: "to the market", meaningAr: "إلى السوق", meaningFr: "au marché" },
+        { arabic: "مَعِي", transliteration: "ma'ī", meaning: "with me", meaningAr: "معي", meaningFr: "avec moi" }
       ]
     },
     exerciseCount: 17,
@@ -1315,12 +1632,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "التعبير عن الوقت",
     titleFr: "Exprimer le temps",
     description: "Talk about time, schedules, and routines",
+    descriptionAr: "التحدث عن الوقت والجداول والروتين",
     descriptionFr: "Parlez du temps, des horaires et des routines",
     objectives: [
       "Tell time in Arabic",
       "Discuss daily routines",
       "Use time expressions",
       "Talk about schedules"
+    ],
+    objectivesAr: [
+      "فهم أسماء الوقت والزمن",
+      "التعبير عن الأوقات والساعات",
+      "وصف الروتين اليومي",
+      "استخدام الزمن في السياقات"
     ],
     objectivesFr: [
       "Dire l'heure en arabe",
@@ -1335,23 +1659,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Telling Time",
-          content: "السَّاعَةُ كَمْ؟ (as-sā'atu kam?) = What time is it?\n\nالسَّاعَةُ الثَّانِيَة = It's 2 o'clock\nالسَّاعَةُ الثَّالِثَة وَالنِّصْف = It's 3:30\nالسَّاعَةُ الرَّابِعَة وَالرُّبْع = It's 4:15\nالسَّاعَةُ الخَامِسَة إِلَّا رُبْعًا = It's 4:45 (5 minus quarter)"
+          titleAr: "قول الوقت",
+          content: "السَّاعَةُ كَمْ؟ (as-sā'atu kam?) = What time is it?\n\nالسَّاعَةُ الثَّانِيَة = It's 2 o'clock\nالسَّاعَةُ الثَّالِثَة وَالنِّصْف = It's 3:30\nالسَّاعَةُ الرَّابِعَة وَالرُّبْع = It's 4:15\nالسَّاعَةُ الخَامِسَة إِلَّا رُبْعًا = It's 4:45 (5 minus quarter)",
+          contentAr: "السَّاعَةُ كَمْ؟ = الساعة كم؟\n\nالسَّاعَةُ الثَّانِيَة = الساعة الثانية\nالسَّاعَةُ الثَّالِثَة وَالنِّصْف = الساعة الثالثة والنصف\nالسَّاعَةُ الرَّابِعَة وَالرُّبْع = الساعة الرابعة والربع\nالسَّاعَةُ الخَامِسَة إِلَّا رُبْعًا = الساعة الخامسة إلا ربعاً"
         },
         {
           title: "Time Vocabulary",
-          content: "سَاعَة (sā'a) = hour/watch\nدَقِيقَة (daqīqa) = minute\nثَانِيَة (thāniya) = second\nنِصْف (niṣf) = half\nرُبْع (rub') = quarter\nصَبَاح (ṣabāḥ) = morning\nمَسَاء (masā') = evening"
+          titleAr: "مفردات الزمن",
+          content: "سَاعَة (sā'a) = hour/watch\nدَقِيقَة (daqīqa) = minute\nثَانِيَة (thāniya) = second\nنِصْف (niṣf) = half\nرُبْع (rub') = quarter\nصَبَاح (ṣabāḥ) = morning\nمَسَاء (masā') = evening",
+          contentAr: "سَاعَة (sā'a) = ساعة\nدَقِيقَة (daqīqa) = دقيقة\nثَانِيَة (thāniya) = ثانية\nنِصْف (niṣf) = نصف\nرُبْع (rub') = ربع\nصَبَاح (ṣabāḥ) = صباح\nمَسَاء (masā') = مساء"
         },
         {
           title: "Time Expressions",
-          content: "الآنَ (al-āna) = now\nغَدًا (ghadan) = tomorrow\nأَمْس (ams) = yesterday\nاليَوْم (al-yawm) = today\nكُلّ يَوْم (kull yawm) = every day\nأَحْيَانًا (aḥyānan) = sometimes"
+          titleAr: "تعبيرات الوقت",
+          content: "الآنَ (al-āna) = now\nغَدًا (ghadan) = tomorrow\nأَمْس (ams) = yesterday\nاليَوْم (al-yawm) = today\nكُلّ يَوْم (kull yawm) = every day\nأَحْيَانًا (aḥyānan) = sometimes",
+          contentAr: "الآنَ (al-āna) = الآن\nغَدًا (ghadan) = غداً\nأَمْس (ams) = أمس\nاليَوْم (al-yawm) = اليوم\nكُلّ يَوْم (kull yawm) = كل يوم\nأَحْيَانًا (aḥyānan) = أحياناً"
         }
       ],
       vocabulary: [
-        { arabic: "السَّاعَة", transliteration: "as-sā'a", meaning: "the hour/o'clock", meaningFr: "l'heure" },
-        { arabic: "صَبَاحًا", transliteration: "ṣabāḥan", meaning: "in the morning", meaningFr: "le matin" },
-        { arabic: "مَسَاءً", transliteration: "masā'an", meaning: "in the evening", meaningFr: "le soir" },
-        { arabic: "غَدًا", transliteration: "ghadan", meaning: "tomorrow", meaningFr: "demain" },
-        { arabic: "أَمْس", transliteration: "ams", meaning: "yesterday", meaningFr: "hier" }
+        { arabic: "السَّاعَة", transliteration: "as-sā'a", meaning: "the hour/o'clock", meaningAr: "الساعة", meaningFr: "l'heure" },
+        { arabic: "صَبَاحًا", transliteration: "ṣabāḥan", meaning: "in the morning", meaningAr: "صباحاً", meaningFr: "le matin" },
+        { arabic: "مَسَاءً", transliteration: "masā'an", meaning: "in the evening", meaningAr: "مساءً", meaningFr: "le soir" },
+        { arabic: "غَدًا", transliteration: "ghadan", meaning: "tomorrow", meaningAr: "غداً", meaningFr: "demain" },
+        { arabic: "أَمْس", transliteration: "ams", meaning: "yesterday", meaningAr: "أمس", meaningFr: "hier" }
       ]
     },
     exerciseCount: 16,
@@ -1367,12 +1697,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "تقديم النفس",
     titleFr: "Se présenter",
     description: "Learn to introduce yourself in Arabic",
+    descriptionAr: "تعلم تقديم نفسك باللغة العربية",
     descriptionFr: "Apprenez à vous présenter en arabe",
     objectives: [
       "Give your name and nationality",
       "State your profession",
       "Talk about where you live",
       "Ask others about themselves"
+    ],
+    objectivesAr: [
+      "تقديم النفس بشكل صحيح",
+      "وصف نفسك وخلفيتك",
+      "طرح الأسئلة الشخصية",
+      "الرد على أسئلة التقديم"
     ],
     objectivesFr: [
       "Donner votre nom et votre nationalité",
@@ -1387,23 +1724,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Basic Introduction",
-          content: "اِسْمِي ... (ismī ...) = My name is ...\nأَنَا مِنْ ... (anā min ...) = I am from ...\nأَنَا ... (anā ...) = I am (profession/nationality)\n\nExample:\nمَرْحَبًا! اِسْمِي أَحْمَد. أَنَا مِنْ مِصْر. أَنَا طَالِبٌ.\n= Hello! My name is Ahmed. I am from Egypt. I am a student."
+          titleAr: "التقديم الأساسي",
+          content: "اِسْمِي ... (ismī ...) = My name is ...\nأَنَا مِنْ ... (anā min ...) = I am from ...\nأَنَا ... (anā ...) = I am (profession/nationality)\n\nExample:\nمَرْحَبًا! اِسْمِي أَحْمَد. أَنَا مِنْ مِصْر. أَنَا طَالِبٌ.\n= Hello! My name is Ahmed. I am from Egypt. I am a student.",
+          contentAr: "اِسْمِي ... (ismī ...) = اسمي\nأَنَا مِنْ ... (anā min ...) = أنا من\nأَنَا ... (anā ...) = أنا (مهنة/جنسية)\n\nمثال:\nمَرْحَبًا! اِسْمِي أَحْمَد. أَنَا مِنْ مِصْر. أَنَا طَالِبٌ.\n= مرحباً! اسمي أحمد. أنا من مصر. أنا طالب."
         },
         {
           title: "Asking About Others",
-          content: "مَا اسْمُكَ؟ (mā ismuka?) = What is your name? (m)\nمَا اسْمُكِ؟ (mā ismuki?) = What is your name? (f)\nمِنْ أَيْنَ أَنْتَ؟ (min ayna anta?) = Where are you from? (m)\nمَا عَمَلُكَ؟ (mā 'amaluka?) = What is your work? (m)"
+          titleAr: "السؤال عن الآخرين",
+          content: "مَا اسْمُكَ؟ (mā ismuka?) = What is your name? (m)\nمَا اسْمُكِ؟ (mā ismuki?) = What is your name? (f)\nمِنْ أَيْنَ أَنْتَ؟ (min ayna anta?) = Where are you from? (m)\nمَا عَمَلُكَ؟ (mā 'amaluka?) = What is your work? (m)",
+          contentAr: "مَا اسْمُكَ؟ (mā ismuka?) = ما اسمك؟ (م)\nمَا اسْمُكِ؟ (mā ismuki?) = ما اسمك؟ (ن)\nمِنْ أَيْنَ أَنْتَ؟ (min ayna anta?) = من أين أنت؟ (م)\nمَا عَمَلُكَ؟ (mā 'amaluka?) = ما عملك؟ (م)"
         },
         {
           title: "Nationalities",
-          content: "مِصْرِي (miṣrī) = Egyptian (m)\nسُورِي (sūrī) = Syrian\nمَغْرِبِي (maghribī) = Moroccan\nأَمْرِيكِي (amrīkī) = American\nبْرِيطَانِي (brīṭānī) = British\nفَرَنْسِي (faransī) = French"
+          titleAr: "الجنسيات",
+          content: "مِصْرِي (miṣrī) = Egyptian (m)\nسُورِي (sūrī) = Syrian\nمَغْرِبِي (maghribī) = Moroccan\nأَمْرِيكِي (amrīkī) = American\nبْرِيطَانِي (brīṭānī) = British\nفَرَنْسِي (faransī) = French",
+          contentAr: "مِصْرِي (miṣrī) = مصري\nسُورِي (sūrī) = سوري\nمَغْرِبِي (maghribī) = مغربي\nأَمْرِيكِي (amrīkī) = أمريكي\nبْرِيطَانِي (brīṭānī) = بريطاني\nفَرَنْسِي (faransī) = فرنسي"
         }
       ],
       vocabulary: [
-        { arabic: "اِسْمِي", transliteration: "ismī", meaning: "my name is", meaningFr: "je m'appelle" },
-        { arabic: "أَنَا مِنْ", transliteration: "anā min", meaning: "I am from", meaningFr: "je suis de" },
-        { arabic: "أَسْكُنُ فِي", transliteration: "askunu fī", meaning: "I live in", meaningFr: "j'habite" },
-        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work", meaningFr: "je travaille" },
-        { arabic: "تَشَرَّفْنَا", transliteration: "tasharrafnā", meaning: "pleased to meet you", meaningFr: "enchanté de vous rencontrer" }
+        { arabic: "اِسْمِي", transliteration: "ismī", meaning: "my name is", meaningAr: "اسمي", meaningFr: "je m'appelle" },
+        { arabic: "أَنَا مِنْ", transliteration: "anā min", meaning: "I am from", meaningAr: "أنا من", meaningFr: "je suis de" },
+        { arabic: "أَسْكُنُ فِي", transliteration: "askunu fī", meaning: "I live in", meaningAr: "أسكن في", meaningFr: "j'habite" },
+        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work", meaningAr: "أعمل", meaningFr: "je travaille" },
+        { arabic: "تَشَرَّفْنَا", transliteration: "tasharrafnā", meaning: "pleased to meet you", meaningAr: "تشرفنا", meaningFr: "enchanté de vous rencontrer" }
       ]
     },
     exerciseCount: 16,
@@ -1417,12 +1760,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "في المطعم",
     titleFr: "Au restaurant",
     description: "Learn restaurant vocabulary and conversations",
+    descriptionAr: "تعلم مفردات المطعم والحوارات",
     descriptionFr: "Apprenez le vocabulaire et les conversations au restaurant",
     objectives: [
       "Order food and drinks",
       "Ask about the menu",
       "Request the bill",
       "Express food preferences"
+    ],
+    objectivesAr: [
+      "فهم مفردات المطعم",
+      "قراءة القائمة وطلب الطعام",
+      "التحدث مع الخادم بشكل صحيح",
+      "التعبير عن التفضيلات الغذائية"
     ],
     objectivesFr: [
       "Commander de la nourriture et des boissons",
@@ -1437,23 +1787,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Restaurant Basics",
-          content: "مَطْعَم (maṭ'am) = restaurant\nقَائِمَة الطَّعَام (qā'imat aṭ-ṭa'ām) = menu\nنَادِل (nādil) = waiter\nطَاوِلَة (ṭāwila) = table\nالحِسَاب (al-ḥisāb) = the bill"
+          titleAr: "أساسيات المطعم",
+          content: "مَطْعَم (maṭ'am) = restaurant\nقَائِمَة الطَّعَام (qā'imat aṭ-ṭa'ām) = menu\nنَادِل (nādil) = waiter\nطَاوِلَة (ṭāwila) = table\nالحِسَاب (al-ḥisāb) = the bill",
+          contentAr: "مَطْعَم (maṭ'am) = المطعم\nقَائِمَة الطَّعَام (qā'imat aṭ-ṭa'ām) = قائمة الطعام\nنَادِل (nādil) = الناد ل\nطَاوِلَة (ṭāwila) = الطاولة\nالحِسَاب (al-ḥisāb) = الحساب"
         },
         {
           title: "Ordering",
-          content: "أُرِيدُ ... (urīdu ...) = I want ...\nهَلْ عِنْدَكُمْ ...؟ (hal 'indakum ...?) = Do you have ...?\nمَا هُوَ طَبَقُ اليَوْم؟ (mā huwa ṭabaq al-yawm?) = What is the dish of the day?\nهَذَا لَذِيذٌ! (hādhā ladhīdhun!) = This is delicious!"
+          titleAr: "الطلب",
+          content: "أُرِيدُ ... (urīdu ...) = I want ...\nهَلْ عِنْدَكُمْ ...؟ (hal 'indakum ...?) = Do you have ...?\nمَا هُوَ طَبَقُ اليَوْم؟ (mā huwa ṭabaq al-yawm?) = What is the dish of the day?\nهَذَا لَذِيذٌ! (hādhā ladhīdhun!) = This is delicious!",
+          contentAr: "أُرِيدُ ... (urīdu ...) = أريد\nهَلْ عِنْدَكُمْ ...؟ (hal 'indakum ...?) = هل عندكم\nمَا هُوَ طَبَقُ اليَوْم؟ (mā huwa ṭabaq al-yawm?) = ما هو طبق اليوم؟\nهَذَا لَذِيذٌ! (hādhā ladhīdhun!) = هذا لذيذ!"
         },
         {
           title: "Special Requests",
-          content: "مِنْ فَضْلِكَ (min faḍlika) = please (m)\nبِدُونِ ... (bidūni ...) = without ...\nمَعَ ... (ma'a ...) = with ...\nالحِسَابَ، مِنْ فَضْلِكَ (al-ḥisāba, min faḍlika) = The bill, please"
+          titleAr: "طلبات خاصة",
+          content: "مِنْ فَضْلِكَ (min faḍlika) = please (m)\nبِدُونِ ... (bidūni ...) = without ...\nمَعَ ... (ma'a ...) = with ...\nالحِسَابَ، مِنْ فَضْلِكَ (al-ḥisāba, min faḍlika) = The bill, please",
+          contentAr: "مِنْ فَضْلِكَ (min faḍlika) = من فضلك\nبِدُونِ ... (bidūni ...) = بدون\nمَعَ ... (ma'a ...) = معَ\nالحِسَابَ، مِنْ فَضْلِكَ (al-ḥisāba, min faḍlika) = الحساب، من فضلك"
         }
       ],
       vocabulary: [
-        { arabic: "أُرِيدُ", transliteration: "urīdu", meaning: "I want", meaningFr: "je veux" },
-        { arabic: "قَائِمَة الطَّعَام", transliteration: "qā'imat aṭ-ṭa'ām", meaning: "menu", meaningFr: "menu" },
-        { arabic: "الحِسَاب", transliteration: "al-ḥisāb", meaning: "the bill", meaningFr: "l'addition" },
-        { arabic: "لَذِيذ", transliteration: "ladhīdh", meaning: "delicious" },
-        { arabic: "شُكْرًا", transliteration: "shukran", meaning: "thank you", meaningFr: "merci" }
+        { arabic: "أُرِيدُ", transliteration: "urīdu", meaning: "I want", meaningAr: "أريد", meaningFr: "je veux" },
+        { arabic: "قَائِمَة الطَّعَام", transliteration: "qā'imat aṭ-ṭa'ām", meaning: "menu", meaningAr: "قائمة الطعام", meaningFr: "menu" },
+        { arabic: "الحِسَاب", transliteration: "al-ḥisāb", meaning: "the bill", meaningAr: "الحساب", meaningFr: "l'addition" },
+        { arabic: "لَذِيذ", transliteration: "ladhīdh", meaning: "delicious", meaningAr: "لذيذ", meaningFr: "délicieux" },
+        { arabic: "شُكْرًا", transliteration: "shukran", meaning: "thank you", meaningAr: "شكراً", meaningFr: "merci" }
       ]
     },
     exerciseCount: 15,
@@ -1467,12 +1823,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "التسوق",
     titleFr: "Les achats",
     description: "Learn shopping vocabulary and conversations",
+    descriptionAr: "تعلم مفردات التسوق والحوارات",
     descriptionFr: "Apprenez le vocabulaire et les conversations pour faire des achats",
     objectives: [
       "Ask about prices",
       "Negotiate and bargain",
       "Describe what you want",
       "Complete a purchase"
+    ],
+    objectivesAr: [
+      "فهم مفردات التسوق",
+      "السؤال عن الأسعار والمنتجات",
+      "فهم الإجابات والتعاملات",
+      "بناء حوار تسوق كامل"
     ],
     objectivesFr: [
       "Demander les prix",
@@ -1487,23 +1850,29 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Shopping Vocabulary",
-          content: "سُوق (sūq) = market\nمَحَلّ (maḥall) = store\nسِعْر (si'r) = price\nنُقُود (nuqūd) = money\nرَخِيص (rakhīṣ) = cheap\nغَالٍ (ghālin) = expensive"
+          titleAr: "مفردات التسوق",
+          content: "سُوق (sūq) = market\nمَحَلّ (maḥall) = store\nسِعْر (si'r) = price\nنُقُود (nuqūd) = money\nرَخِيص (rakhīṣ) = cheap\nغَالٍ (ghālin) = expensive",
+          contentAr: "سُوق (sūq) = السوق\nمَحَلّ (maḥall) = المحل\nسِعْر (si'r) = السعر\nنُقُود (nuqūd) = النقود\nرَخِيص (rakhīṣ) = رخيص\nغَالٍ (ghālin) = غالٍ"
         },
         {
           title: "Asking Prices",
-          content: "بِكَمْ هَذَا؟ (bikam hādhā?) = How much is this?\nكَمِ السِّعْرُ؟ (kam as-si'ru?) = What is the price?\nهَذَا غَالٍ جِدًّا! (hādhā ghālin jiddan!) = This is too expensive!\nهَلْ يُمْكِنُ تَخْفِيض؟ (hal yumkinu takhfīḍ?) = Is a discount possible?"
+          titleAr: "السؤال عن الأسعار",
+          content: "بِكَمْ هَذَا؟ (bikam hādhā?) = How much is this?\nكَمِ السِّعْرُ؟ (kam as-si'ru?) = What is the price?\nهَذَا غَالٍ جِدًّا! (hādhā ghālin jiddan!) = This is too expensive!\nهَلْ يُمْكِنُ تَخْفِيض؟ (hal yumkinu takhfīḍ?) = Is a discount possible?",
+          contentAr: "بِكَمْ هَذَا؟ (bikam hādhā?) = بكم هذا؟\nكَمِ السِّعْرُ؟ (kam as-si'ru?) = كم السعر؟\nهَذَا غَالٍ جِدًّا! (hādhā ghālin jiddan!) = هذا غالٍ جداً!\nهَلْ يُمْكِنُ تَخْفِيض؟ (hal yumkinu takhfīḍ?) = هل يمكن تخفيض؟"
         },
         {
           title: "Making a Purchase",
-          content: "سَآخُذُ هَذَا (sa-ākhudu hādhā) = I will take this\nأُرِيدُ وَاحِدًا (urīdu wāḥidan) = I want one\nهَلْ تَقْبَلُونَ البِطَاقَة؟ (hal taqbalūna al-biṭāqa?) = Do you accept cards?\nشُكْرًا، مَعَ السَّلَامَة! (shukran, ma'a as-salāma!) = Thank you, goodbye!"
+          titleAr: "إجراء عملية شراء",
+          content: "سَآخُذُ هَذَا (sa-ākhudu hādhā) = I will take this\nأُرِيدُ وَاحِدًا (urīdu wāḥidan) = I want one\nهَلْ تَقْبَلُونَ البِطَاقَة؟ (hal taqbalūna al-biṭāqa?) = Do you accept cards?\nشُكْرًا، مَعَ السَّلَامَة! (shukran, ma'a as-salāma!) = Thank you, goodbye!",
+          contentAr: "سَآخُذُ هَذَا (sa-ākhudu hādhā) = سآخذ هذا\nأُرِيدُ وَاحِدًا (urīdu wāḥidan) = أريد واحداً\nهَلْ تَقْبَلُونَ البِطَاقَة؟ (hal taqbalūna al-biṭāqa?) = هل تقبلون البطاقة؟\nشُكْرًا، مَعَ السَّلَامَة! (shukran, ma'a as-salāma!) = شكراً، معَ السلامة!"
         }
       ],
       vocabulary: [
-        { arabic: "بِكَمْ؟", transliteration: "bikam?", meaning: "How much?", meaningFr: "Combien ?" },
-        { arabic: "سِعْر", transliteration: "si'r", meaning: "price", meaningFr: "prix" },
-        { arabic: "غَالٍ", transliteration: "ghālin", meaning: "expensive", meaningFr: "cher" },
-        { arabic: "رَخِيص", transliteration: "rakhīṣ", meaning: "cheap", meaningFr: "bon marché" },
-        { arabic: "سَآخُذُ", transliteration: "sa-ākhudu", meaning: "I will take", meaningFr: "je vais prendre" }
+        { arabic: "بِكَمْ؟", transliteration: "bikam?", meaning: "How much?", meaningAr: "بكم؟", meaningFr: "Combien ?" },
+        { arabic: "سِعْر", transliteration: "si'r", meaning: "price", meaningAr: "السعر", meaningFr: "prix" },
+        { arabic: "غَالٍ", transliteration: "ghālin", meaning: "expensive", meaningAr: "غالٍ", meaningFr: "cher" },
+        { arabic: "رَخِيص", transliteration: "rakhīṣ", meaning: "cheap", meaningAr: "رخيص", meaningFr: "bon marché" },
+        { arabic: "سَآخُذُ", transliteration: "sa-ākhudu", meaning: "I will take", meaningAr: "سآخذ", meaningFr: "je vais prendre" }
       ]
     },
     exerciseCount: 15,
@@ -1517,12 +1886,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الروتين اليومي",
     titleFr: "Les routines quotidiennes",
     description: "Describe your daily activities",
+    descriptionAr: "وصف أنشطتك اليومية",
     descriptionFr: "Décrivez vos activités quotidiennes",
     objectives: [
       "Talk about daily schedule",
       "Use time expressions naturally",
       "Describe habits and routines",
       "Ask about others' routines"
+    ],
+    objectivesAr: [
+      "فهم الأفعال المتعلقة بالروتين",
+      "وصف روتينك اليومي",
+      "استخدام الأوقات مع الأنشطة",
+      "بناء جمل عن الحياة اليومية"
     ],
     objectivesFr: [
       "Parler de votre emploi du temps quotidien",
@@ -1537,19 +1913,23 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Morning Routine",
-          content: "أَسْتَيْقِظُ (astayqiẓu) = I wake up\nأَغْتَسِلُ (aghtasilu) = I wash/shower\nأَتَنَاوَلُ الفُطُور (atanāwalu al-fuṭūr) = I have breakfast\nأَذْهَبُ إِلَى العَمَل (adhhabu ilā al-'amal) = I go to work"
+          titleAr: "روتين الصباح",
+          content: "أَسْتَيْقِظُ (astayqiẓu) = I wake up\nأَغْتَسِلُ (aghtasilu) = I wash/shower\nأَتَنَاوَلُ الفُطُور (atanāwalu al-fuṭūr) = I have breakfast\nأَذْهَبُ إِلَى العَمَل (adhhabu ilā al-'amal) = I go to work",
+          contentAr: "أَسْتَيْقِظُ (astayqiẓu) = أستيقظ\nأَغْتَسِلُ (aghtasilu) = أغتسل\nأَتَنَاوَلُ الفُطُور (atanāwalu al-fuṭūr) = أتناول الفطور\nأَذْهَبُ إِلَى العَمَل (adhhabu ilā al-'amal) = أذهب إلى العمل"
         },
         {
           title: "Daily Activities",
-          content: "أَعْمَلُ (a'malu) = I work\nأَدْرُسُ (adrusu) = I study\nأَتَغَدَّى (ataghadda) = I have lunch\nأَرْجِعُ (arji'u) = I return home\nأَتَعَشَّى (ata'ashsha) = I have dinner\nأَنَامُ (anāmu) = I sleep"
+          titleAr: "الأنشطة اليومية",
+          content: "أَعْمَلُ (a'malu) = I work\nأَدْرُسُ (adrusu) = I study\nأَتَغَدَّى (ataghadda) = I have lunch\nأَرْجِعُ (arji'u) = I return home\nأَتَعَشَّى (ata'ashsha) = I have dinner\nأَنَامُ (anāmu) = I sleep",
+          contentAr: "أَعْمَلُ (a'malu) = أعمل\nأَدْرُسُ (adrusu) = أدرس\nأَتَغَدَّى (ataghadda) = أتغدى\nأَرْجِعُ (arji'u) = أرجع\nأَتَعَشَّى (ata'ashsha) = أتعشى\nأَنَامُ (anāmu) = أنام"
         }
       ],
       vocabulary: [
-        { arabic: "أَسْتَيْقِظُ", transliteration: "astayqiẓu", meaning: "I wake up", meaningFr: "je me réveille" },
-        { arabic: "أَذْهَبُ", transliteration: "adhhabu", meaning: "I go", meaningFr: "je vais" },
-        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work", meaningFr: "je travaille" },
-        { arabic: "أَرْجِعُ", transliteration: "arji'u", meaning: "I return", meaningFr: "je reviens" },
-        { arabic: "أَنَامُ", transliteration: "anāmu", meaning: "I sleep", meaningFr: "je dors" }
+        { arabic: "أَسْتَيْقِظُ", transliteration: "astayqiẓu", meaning: "I wake up", meaningAr: "أستيقظ", meaningFr: "je me réveille" },
+        { arabic: "أَذْهَبُ", transliteration: "adhhabu", meaning: "I go", meaningAr: "أذهب", meaningFr: "je vais" },
+        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work", meaningAr: "أعمل", meaningFr: "je travaille" },
+        { arabic: "أَرْجِعُ", transliteration: "arji'u", meaning: "I return", meaningAr: "أرجع", meaningFr: "je reviens" },
+        { arabic: "أَنَامُ", transliteration: "anāmu", meaning: "I sleep", meaningAr: "أنام", meaningFr: "je dors" }
       ]
     },
     exerciseCount: 16,
@@ -1563,12 +1943,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "مراجعة وتقييم المرحلة الثانية",
     titleFr: "Révision et évaluation de la Phase 2",
     description: "Comprehensive review of Phase 2",
+    descriptionAr: "مراجعة شاملة للمرحلة الثانية",
     descriptionFr: "Révision complète de la Phase 2",
     objectives: [
       "Review all vocabulary learned",
       "Demonstrate grammar mastery",
       "Complete practical conversations",
       "Prepare for Phase 3"
+    ],
+    objectivesAr: [
+      "مراجعة المفردات من المرحلة الثانية",
+      "ممارسة القواعد النحوية",
+      "تطبيق المهارات المكتسبة",
+      "تقييم التقدم في المرحلة الثانية"
     ],
     objectivesFr: [
       "Révisez tout le vocabulaire appris",
@@ -1583,22 +1970,28 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "🎉 Phase 2 Complete!",
-          content: "Amazing progress! You've learned:\n✓ 200+ vocabulary words\n✓ Personal and possessive pronouns\n✓ Gender and plural forms\n✓ Past and present tense verbs\n✓ Sentence construction\n✓ Practical conversations"
+          titleAr: "🎉 المرحلة الثانية اكتملت!",
+          content: "Amazing progress! You've learned:\n✓ 200+ vocabulary words\n✓ Personal and possessive pronouns\n✓ Gender and plural forms\n✓ Past and present tense verbs\n✓ Sentence construction\n✓ Practical conversations",
+          contentAr: "تقدم مذهل! لقد تعلمت:\n✓ أكثر من 200 كلمة\n✓ الضمائر الشخصية والملكية\n✓ صيغ المذكر والمؤنث والجمع\n✓ الأفعال في الماضي والمضارع\n✓ بناء الجمل\n✓ حوارات عملية"
         },
         {
           title: "Skills Achieved",
-          content: "You can now:\n• Introduce yourself\n• Describe your family and home\n• Order at restaurants and shop\n• Tell time and discuss routines\n• Form questions and answers\n• Use basic Arabic grammar correctly"
+          titleAr: "المهارات التي تحققت",
+          content: "You can now:\n• Introduce yourself\n• Describe your family and home\n• Order at restaurants and shop\n• Tell time and discuss routines\n• Form questions and answers\n• Use basic Arabic grammar correctly",
+          contentAr: "يمكنك الآن:\n• تقديم نفسك\n• وصف عائلتك ومنزلك\n• الطلب في المطاعم والتسوق\n• قول الوقت ومناقشة الروتين\n• طرح الأسئلة والإجابة عليها\n• استخدام قواعد العربية بشكل صحيح"
         },
         {
           title: "Ready for Phase 3!",
-          content: "In Phase 3: Expansion, you'll learn:\n• Advanced verb forms\n• Complex sentence structures\n• Conditional and subjunctive moods\n• Extended vocabulary by topic\n• Paragraph reading and writing"
+          titleAr: "جاهز للمرحلة الثالثة!",
+          content: "In Phase 3: Expansion, you'll learn:\n• Advanced verb forms\n• Complex sentence structures\n• Conditional and subjunctive moods\n• Extended vocabulary by topic\n• Paragraph reading and writing",
+          contentAr: "في المرحلة الثالثة: التوسع، ستتعلم:\n• أشكال فعلية متقدمة\n• بنى جملة معقدة\n• أفعال شرطية وما شابهها\n• مفردات موسعة حسب الموضوع\n• قراءة الفقرات والكتابة"
         }
       ],
       vocabulary: [
-        { arabic: "تَهَانِينَا!", transliteration: "tahāninā!", meaning: "Congratulations!", meaningFr: "Félicitations !" },
-        { arabic: "أَحْسَنْتَ!", transliteration: "aḥsanta!", meaning: "Well done!", meaningFr: "Bien joué !" },
-        { arabic: "مُمْتَاز", transliteration: "mumtāz", meaning: "Excellent", meaningFr: "Excellent" },
-        { arabic: "اِسْتَمِرّ", transliteration: "istamirr", meaning: "Keep going", meaningFr: "Continuez" }
+        { arabic: "تَهَانِينَا!", transliteration: "tahāninā!", meaning: "Congratulations!", meaningAr: "تهانينا!", meaningFr: "Félicitations !" },
+        { arabic: "أَحْسَنْتَ!", transliteration: "aḥsanta!", meaning: "Well done!", meaningAr: "أحسنت!", meaningFr: "Bien joué !" },
+        { arabic: "مُمْتَاز", transliteration: "mumtāz", meaning: "Excellent", meaningAr: "ممتاز", meaningFr: "Excellent" },
+        { arabic: "اِسْتَمِرّ", transliteration: "istamirr", meaning: "Keep going", meaningAr: "استمر", meaningFr: "Continuez" }
       ]
     },
     exerciseCount: 25,

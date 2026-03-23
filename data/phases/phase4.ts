@@ -689,22 +689,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الثقافة والمجتمع العربي",
     titleFr: "Culture et société arabes",
     description: "Understand Arab cultural values and society",
+    descriptionAr: "فهم القيم الثقافية العربية والمجتمع",
     descriptionFr: "Comprenez les valeurs culturelles et la société arabes",
     objectives: ["Understand cultural values", "Navigate social situations", "Appreciate diversity", "Avoid cultural misunderstandings"],
+    objectivesAr: ["فهم القيم الثقافية والمبادئ الأساسية", "التنقل في المواقف الاجتماعية بحكمة", "تقدير التنوع الثقافي العربي", "تجنب سوء الفهم الثقافي"],
     objectivesFr: ["Comprendre les valeurs culturelles", "Naviguer les situations sociales", "Apprécier la diversité", "Éviter les malentendus culturels"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Core Values", titleFr: "Valeurs fondamentales", content: "كَرَم - generosity\nشَرَف - honor\nضِيَافَة - hospitality\nصِلَة الرَّحِم - family ties\nاِحْتِرَام - respect", contentFr: "كَرَم - générosité\nشَرَف - honneur\nضِيَافَة - hospitalité\nصِلَة الرَّحِم - liens familiaux\nاِحْتِرَام - respect" },
-        { title: "Social Etiquette", titleFr: "Étiquette sociale", content: "Greetings are elaborate and important\nGuest treatment is paramount\nElderly are highly respected\nFamily is central to identity", contentFr: "Les salutations sont élaborées et importantes\nL'accueil des invités est primordial\nLes aînés sont très respectés\nLa famille est centrale à l'identité" },
-        { title: "Regional Diversity", titleFr: "Diversité régionale", content: "المَشْرِق - Levant\nالمَغْرِب - North Africa\nالخَلِيج - Gulf\nEach has distinct customs while sharing core values", contentFr: "المَشْرِق - Levant\nالمَغْرِب - Afrique du Nord\nالخَلِيج - Golfe\nChacun a des coutumes distinctes tout en partageant les valeurs fondamentales" }
+        { title: "Core Values", titleAr: "القيم الأساسية", titleFr: "Valeurs fondamentales", content: "كَرَم - generosity\nشَرَف - honor\nضِيَافَة - hospitality\nصِلَة الرَّحِم - family ties\nاِحْتِرَام - respect", contentAr: "كَرَم - الجود والسخاء في العطاء\nشَرَف - العزة والكرامة\nضِيَافَة - الاستقبال الكريم والضيافة\nصِلَة الرَّحِم - صلة القرابة والعائلة\nاِحْتِرَام - تقدير واحترام الآخرين", contentFr: "كَرَم - générosité\nشَرَف - honneur\nضِيَافَة - hospitalité\nصِلَة الرَّحِم - liens familiaux\nاِحْتِرَام - respect" },
+        { title: "Social Etiquette", titleAr: "آداب اجتماعية", titleFr: "Étiquette sociale", content: "Greetings are elaborate and important\nGuest treatment is paramount\nElderly are highly respected\nFamily is central to identity", contentAr: "السلامات والتحيات معقدة ومهمة جداً\nمعاملة الضيف لها أهمية قصوى\nاحترام الكبار والعجائز عميق جداً\nالعائلة مركز الهوية والانتماء", contentFr: "Les salutations sont élaborées et importantes\nL'accueil des invités est primordial\nLes aînés sont très respectés\nLa famille est centrale à l'identité" },
+        { title: "Regional Diversity", titleAr: "التنوع الإقليمي", titleFr: "Diversité régionale", content: "المَشْرِق - Levant\nالمَغْرِب - North Africa\nالخَلِيج - Gulf\nEach has distinct customs while sharing core values", contentAr: "المَشْرِق - بلاد الشام والعراق\nالمَغْرِب - شمال أفريقيا\nالخَلِيج - دول الخليج العربية\nلكل منطقة عاداتها المميزة مع مشاركة القيم الأساسية", contentFr: "المَشْرِق - Levant\nالمَغْرِب - Afrique du Nord\nالخَلِيج - Golfe\nChacun a des coutumes distinctes tout en partageant les valeurs fondamentales" }
       ],
       vocabulary: [
-        { arabic: "ثَقَافَة", transliteration: "thaqāfa", meaning: "culture", meaningFr: "culture" },
-        { arabic: "تَقَالِيد", transliteration: "taqālīd", meaning: "traditions", meaningFr: "traditions" },
-        { arabic: "عَادَات", transliteration: "'ādāt", meaning: "customs", meaningFr: "coutumes" },
-        { arabic: "قِيَم", transliteration: "qiyam", meaning: "values", meaningFr: "valeurs" },
-        { arabic: "هُوِيَّة", transliteration: "huwiyya", meaning: "identity", meaningFr: "identité" }
+        { arabic: "ثَقَافَة", transliteration: "thaqāfa", meaning: "culture", meaningAr: "مجموع الفنون والعادات والمعتقدات", meaningFr: "culture" },
+        { arabic: "تَقَالِيد", transliteration: "taqālīd", meaning: "traditions", meaningAr: "عادات وسلوكيات موروثة", meaningFr: "traditions" },
+        { arabic: "عَادَات", transliteration: "'ādāt", meaning: "customs", meaningAr: "سلوكيات معروفة ومتكررة", meaningFr: "coutumes" },
+        { arabic: "قِيَم", transliteration: "qiyam", meaning: "values", meaningAr: "المبادئ والمعايير الأخلاقية", meaningFr: "valeurs" },
+        { arabic: "هُوِيَّة", transliteration: "huwiyya", meaning: "identity", meaningAr: "الخصائص التي تعرف الشخص أو المجتمع", meaningFr: "identité" }
       ]
     },
     exerciseCount: 15, prerequisites: ["4-24"]
@@ -715,22 +717,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الأمثال والتعبيرات",
     titleFr: "Proverbes et expressions idiomatiques",
     description: "Learn Arabic proverbs and idiomatic expressions",
+    descriptionAr: "تعلم الأمثال والتعبيرات الاصطلاحية العربية",
     descriptionFr: "Apprenez les proverbes et expressions idiomatiques arabes",
     objectives: ["Understand common proverbs", "Use idioms correctly", "Appreciate wisdom literature", "Sound more natural"],
+    objectivesAr: ["فهم الأمثال الشهيرة والمشهورة", "استخدام التعبيرات الاصطلاحية بشكل صحيح", "تقدير أدب الحكمة والأمثال", "الكلام بطريقة طبيعية أكثر"],
     objectivesFr: ["Comprendre les proverbes courants", "Utiliser correctement les idiomes", "Apprécier la littérature de sagesse", "Sonner plus naturel"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Common Proverbs", titleFr: "Proverbes courants", content: "العِلْمُ فِي الصِّغَرِ كَالنَّقْشِ فِي الحَجَرِ\nLearning in youth is like carving in stone\n\nمَنْ جَدَّ وَجَدَ\nWhoever strives, finds", contentFr: "العِلْمُ فِي الصِّغَرِ كَالنَّقْشِ فِي الحَجَرِ\nL'apprentissage dans la jeunesse est comme graver dans la pierre\n\nمَنْ جَدَّ وَجَدَ\nQuiconque s'efforce, trouve" },
-        { title: "Idioms", titleFr: "Idiomes", content: "عَلَى رَأْسِي - at your service (lit. on my head)\nفِي عَيْنِي - very dear (lit. in my eye)\nاِبْنُ البَلَد - local person, patriot", contentFr: "عَلَى رَأْسِي - à votre service (lit. sur ma tête)\nفِي عَيْنِي - très cher (lit. dans mon œil)\nاِبْنُ البَلَد - habitant local, patriote" },
-        { title: "Expressions", titleFr: "Expressions", content: "إِنْ شَاءَ اللهُ - God willing\nمَا شَاءَ اللهُ - what God has willed (admiration)\nالحَمْدُ لِلَّهِ - praise be to God", contentFr: "إِنْ شَاءَ اللهُ - si Dieu le veut\nمَا شَاءَ اللهُ - ce que Dieu a voulu (admiration)\nالحَمْدُ لِلَّهِ - louanges à Dieu" }
+        { title: "Common Proverbs", titleAr: "الأمثال الشهيرة", titleFr: "Proverbes courants", content: "العِلْمُ فِي الصِّغَرِ كَالنَّقْشِ فِي الحَجَرِ\nLearning in youth is like carving in stone\n\nمَنْ جَدَّ وَجَدَ\nWhoever strives, finds", contentAr: "العِلْمُ فِي الصِّغَرِ كَالنَّقْشِ فِي الحَجَرِ\nالعلم المكتسب في الصغر ثابت كالنقش على الحجر\n\nمَنْ جَدَّ وَجَدَ\nمن اجتهد وسعى، حصل على مبتغاه", contentFr: "العِلْمُ فِي الصِّغَرِ كَالنَّقْشِ فِي الحَجَرِ\nL'apprentissage dans la jeunesse est comme graver dans la pierre\n\nمَنْ جَدَّ وَجَدَ\nQuiconque s'efforce, trouve" },
+        { title: "Idioms", titleAr: "التعبيرات الاصطلاحية", titleFr: "Idiomes", content: "عَلَى رَأْسِي - at your service (lit. on my head)\nفِي عَيْنِي - very dear (lit. in my eye)\nاِبْنُ البَلَد - local person, patriot", contentAr: "عَلَى رَأْسِي - تحت أمرك ورضاك (حرفياً: على رأسي)\nفِي عَيْنِي - عزيز جداً وغالي (حرفياً: في عيني)\nاِبْنُ البَلَد - شخص من السكان المحليين، وطني غيور", contentFr: "عَلَى رَأْسِي - à votre service (lit. sur ma tête)\nفِي عَيْنِي - très cher (lit. dans mon œil)\nاِبْنُ البَلَد - habitant local, patriote" },
+        { title: "Expressions", titleAr: "التعابير الشائعة", titleFr: "Expressions", content: "إِنْ شَاءَ اللهُ - God willing\nمَا شَاءَ اللهُ - what God has willed (admiration)\nالحَمْدُ لِلَّهِ - praise be to God", contentAr: "إِنْ شَاءَ اللهُ - إذا أراد الله، بإذن الله\nمَا شَاءَ اللهُ - ما قدره وأراده الله (للإعجاب والتقدير)\nالحَمْدُ لِلَّهِ - الشكر والحمد لله على كل حال", contentFr: "إِنْ شَاءَ اللهُ - si Dieu le veut\nمَا شَاءَ اللهُ - ce que Dieu a voulu (admiration)\nالحَمْدُ لِلَّهِ - louanges à Dieu" }
       ],
       vocabulary: [
-        { arabic: "مَثَل", transliteration: "mathal", meaning: "proverb", meaningFr: "proverbe" },
-        { arabic: "حِكْمَة", transliteration: "ḥikma", meaning: "wisdom", meaningFr: "sagesse" },
-        { arabic: "تَعْبِير", transliteration: "ta'bīr", meaning: "expression", meaningFr: "expression" },
-        { arabic: "مَجَازِيّ", transliteration: "majāzī", meaning: "figurative", meaningFr: "figuré" },
-        { arabic: "حَرْفِيّ", transliteration: "ḥarfī", meaning: "literal", meaningFr: "littéral" }
+        { arabic: "مَثَل", transliteration: "mathal", meaning: "proverb", meaningAr: "قول موجز يحتوي على حكمة", meaningFr: "proverbe" },
+        { arabic: "حِكْمَة", transliteration: "ḥikma", meaning: "wisdom", meaningAr: "الفهم العميق والتصرف الحكيم", meaningFr: "sagesse" },
+        { arabic: "تَعْبِير", transliteration: "ta'bīr", meaning: "expression", meaningAr: "طريقة قول الشيء باللفظ", meaningFr: "expression" },
+        { arabic: "مَجَازِيّ", transliteration: "majāzī", meaning: "figurative", meaningAr: "غير حقيقي أو مباشر، استعاري", meaningFr: "figuré" },
+        { arabic: "حَرْفِيّ", transliteration: "ḥarfī", meaning: "literal", meaningAr: "طبقاً للنص والمعنى المباشر", meaningFr: "littéral" }
       ]
     },
     exerciseCount: 15, prerequisites: ["4-25"]
@@ -741,22 +745,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "المصطلحات الثقافية الإسلامية",
     titleFr: "Termes culturels islamiques",
     description: "Learn essential Islamic cultural vocabulary",
+    descriptionAr: "تعلم المفردات الثقافية الإسلامية الأساسية",
     descriptionFr: "Apprenez le vocabulaire culturel islamique essentiel",
     objectives: ["Understand religious vocabulary", "Navigate cultural contexts", "Show cultural awareness", "Avoid misunderstandings"],
+    objectivesAr: ["فهم المفردات والمصطلحات الدينية", "التنقل في السياقات الثقافية الإسلامية", "إظهار الوعي والاحترام الثقافي", "تجنب سوء الفهم الديني والثقافي"],
     objectivesFr: ["Comprendre le vocabulaire religieux", "Naviguer les contextes culturels", "Montrer une conscience culturelle", "Éviter les malentendus"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Daily Expressions", titleFr: "Expressions quotidiennes", content: "بِسْمِ اللهِ - in God's name (starting)\nالحَمْدُ لِلَّهِ - praise God (gratitude)\nسُبْحَانَ اللهِ - glory to God (amazement)\nأَسْتَغْفِرُ اللهَ - I seek God's forgiveness", contentFr: "بِسْمِ اللهِ - au nom de Dieu (commencer)\nالحَمْدُ لِلَّهِ - louer Dieu (gratitude)\nسُبْحَانَ اللهِ - gloire à Dieu (étonnement)\nأَسْتَغْفِرُ اللهَ - je demande pardon à Dieu" },
-        { title: "Religious Practices", titleFr: "Pratiques religieuses", content: "صَلَاة - prayer\nصَوْم/صِيَام - fasting\nزَكَاة - charity\nحَجّ - pilgrimage", contentFr: "صَلَاة - prière\nصَوْم/صِيَام - jeûne\nزَكَاة - aumône\nحَجّ - pèlerinage" },
-        { title: "Important Terms", titleFr: "Termes importants", content: "حَلَال - permitted\nحَرَام - forbidden\nسُنَّة - prophetic tradition\nفِقْه - jurisprudence", contentFr: "حَلَال - permis\nحَرَام - interdit\nسُنَّة - tradition prophétique\nفِقْه - jurisprudence" }
+        { title: "Daily Expressions", titleAr: "التعابير اليومية", titleFr: "Expressions quotidiennes", content: "بِسْمِ اللهِ - in God's name (starting)\nالحَمْدُ لِلَّهِ - praise God (gratitude)\nسُبْحَانَ اللهِ - glory to God (amazement)\nأَسْتَغْفِرُ اللهَ - I seek God's forgiveness", contentAr: "بِسْمِ اللهِ - باسم الله (عند البدء بشيء)\nالحَمْدُ لِلَّهِ - شكراً لله (للتعبير عن الامتنان)\nسُبْحَانَ اللهِ - تنزيه الله (للتعبير عن التعجب والدهشة)\nأَسْتَغْفِرُ اللهَ - أطلب مغفرة الله (للندم والتوبة)", contentFr: "بِسْمِ اللهِ - au nom de Dieu (commencer)\nالحَمْدُ لِلَّهِ - louer Dieu (gratitude)\nسُبْحَانَ اللهِ - gloire à Dieu (étonnement)\nأَسْتَغْفِرُ اللهَ - je demande pardon à Dieu" },
+        { title: "Religious Practices", titleAr: "الممارسات الدينية", titleFr: "Pratiques religieuses", content: "صَلَاة - prayer\nصَوْم/صِيَام - fasting\nزَكَاة - charity\nحَجّ - pilgrimage", contentAr: "صَلَاة - الدعاء والاتصال بالله\nصَوْم/صِيَام - الامتناع عن الطعام والشراب\nزَكَاة - الصدقة والمساعدة للفقراء\nحَجّ - الحج إلى مكة المكرمة", contentFr: "صَلَاة - prière\nصَوْم/صِيَام - jeûne\nزَكَاة - aumône\nحَجّ - pèlerinage" },
+        { title: "Important Terms", titleAr: "مصطلحات مهمة", titleFr: "Termes importants", content: "حَلَال - permitted\nحَرَام - forbidden\nسُنَّة - prophetic tradition\nفِقْه - jurisprudence", contentAr: "حَلَال - مما يجوز ويسمح به شرعاً\nحَرَام - محظور وممنوع شرعاً\nسُنَّة - تعاليم الرسول محمد وتراثه\nفِقْه - فهم واستنتاج أحكام الشرع الإسلامي" }
       ],
       vocabulary: [
-        { arabic: "مَسْجِد/جَامِع", transliteration: "masjid/jāmi'", meaning: "mosque", meaningFr: "mosquée" },
-        { arabic: "إِمَام", transliteration: "imām", meaning: "prayer leader", meaningFr: "imam" },
-        { arabic: "خُطْبَة", transliteration: "khuṭba", meaning: "sermon", meaningFr: "sermon" },
-        { arabic: "دُعَاء", transliteration: "du'ā'", meaning: "supplication", meaningFr: "supplication" },
-        { arabic: "ذِكْر", transliteration: "dhikr", meaning: "remembrance", meaningFr: "remémoration" }
+        { arabic: "مَسْجِد/جَامِع", transliteration: "masjid/jāmi'", meaning: "mosque", meaningAr: "مكان العبادة والصلاة في الإسلام", meaningFr: "mosquée" },
+        { arabic: "إِمَام", transliteration: "imām", meaning: "prayer leader", meaningAr: "من يؤم الصلاة ويقودها", meaningFr: "imam" },
+        { arabic: "خُطْبَة", transliteration: "khuṭba", meaning: "sermon", meaningAr: "كلام يلقى للموعظة والتعليم", meaningFr: "sermon" },
+        { arabic: "دُعَاء", transliteration: "du'ā'", meaning: "supplication", meaningAr: "طلب من الله والتضرع إليه", meaningFr: "supplication" },
+        { arabic: "ذِكْر", transliteration: "dhikr", meaning: "remembrance", meaningAr: "تذكر الله والدعاء والتسبيح", meaningFr: "remémoration" }
       ]
     },
     exerciseCount: 15, prerequisites: ["4-26"]
@@ -767,22 +773,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "نظرة عامة على التاريخ العربي",
     titleFr: "Aperçu de l'histoire arabe",
     description: "Learn key periods of Arab history",
+    descriptionAr: "تعلم الفترات الرئيسية من التاريخ العربي",
     descriptionFr: "Apprenez les périodes clés de l'histoire arabe",
     objectives: ["Understand historical periods", "Recognize historical figures", "Connect history to language", "Appreciate heritage"],
+    objectivesAr: ["فهم الفترات التاريخية الرئيسية", "التعرف على الشخصيات التاريخية المهمة", "ربط التاريخ باللغة والثقافة", "تقدير التراث والحضارة"],
     objectivesFr: ["Comprendre les périodes historiques", "Reconnaître les figures historiques", "Connecter l'histoire à la langue", "Apprécier le patrimoine"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Major Periods", titleFr: "Périodes majeures", content: "الجَاهِلِيَّة - Pre-Islamic era\nصَدْر الإِسْلَام - Early Islamic period\nالعَصْر الأُمَوِيّ - Umayyad era\nالعَصْر العَبَّاسِيّ - Abbasid era (Golden Age)\nالعَصْر الحَدِيث - Modern era", contentFr: "الجَاهِلِيَّة - Ère pré-islamique\nصَدْر الإِسْلَام - Période islamique précoce\nالعَصْر الأُمَوِيّ - Ère omeyyade\nالعَصْر العَبَّاسِيّ - Ère abbassade (Âge d'or)\nالعَصْر الحَدِيث - Ère moderne" },
-        { title: "Golden Age", titleFr: "Âge d'or", content: "بَغْدَاد - center of learning\nبَيْت الحِكْمَة - House of Wisdom\nTranslation movement\nAdvances in science, medicine, philosophy", contentFr: "بَغْدَاد - centre d'apprentissage\nبَيْت الحِكْمَة - Maison de la Sagesse\nMouvement de traduction\nProgrès en science, médecine, philosophie" },
-        { title: "Modern History", titleFr: "Histoire moderne", content: "الاِسْتِعْمَار - colonialism\nالاِسْتِقْلَال - independence\nالقَضِيَّة الفِلَسْطِينِيَّة - Palestinian cause\nالرَّبِيع العَرَبِيّ - Arab Spring", contentFr: "الاِسْتِعْمَار - colonialisme\nالاِسْتِقْلَال - indépendance\nالقَضِيَّة الفِلَسْطِينِيَّة - Cause palestinienne\nالرَّبِيع العَرَبِيّ - Printemps arabe" }
+        { title: "Major Periods", titleAr: "الفترات التاريخية الكبرى", titleFr: "Périodes majeures", content: "الجَاهِلِيَّة - Pre-Islamic era\nصَدْر الإِسْلَام - Early Islamic period\nالعَصْر الأُمَوِيّ - Umayyad era\nالعَصْر العَبَّاسِيّ - Abbasid era (Golden Age)\nالعَصْر الحَدِيث - Modern era", contentAr: "الجَاهِلِيَّة - فترة ما قبل الإسلام\nصَدْر الإِسْلَام - الفترة الأولى من الحضارة الإسلامية\nالعَصْر الأُمَوِيّ - فترة الدولة الأموية\nالعَصْر العَبَّاسِيّ - فترة الدولة العباسية (العصر الذهبي)\nالعَصْر الحَدِيث - الفترة المعاصرة الحديثة", contentFr: "الجَاهِلِيَّة - Ère pré-islamique\nصَدْر الإِسْلَام - Période islamique précoce\nالعَصْر الأُمَوِيّ - Ère omeyyade\nالعَصْر العَبَّاسِيّ - Ère abbassade (Âge d'or)\nالعَصْر الحَدِيث - Ère moderne" },
+        { title: "Golden Age", titleAr: "العصر الذهبي", titleFr: "Âge d'or", content: "بَغْدَاد - center of learning\nبَيْت الحِكْمَة - House of Wisdom\nTranslation movement\nAdvances in science, medicine, philosophy", contentAr: "بَغْدَاد - مركز العلم والحضارة\nبَيْت الحِكْمَة - مركز الترجمة والدراسات\nحركة الترجمة - نقل العلوم من اليونانية والفارسية\nإسهامات في الرياضيات والفلك والطب والفلسفة", contentFr: "بَغْدَاد - centre d'apprentissage\nبَيْت الحِكْمَة - Maison de la Sagesse\nMouvement de traduction\nProgrès en science, médecine, philosophie" },
+        { title: "Modern History", titleAr: "التاريخ الحديث والمعاصر", titleFr: "Histoire moderne", content: "الاِسْتِعْمَار - colonialism\nالاِسْتِقْلَال - independence\nالقَضِيَّة الفِلَسْطِينِيَّة - Palestinian cause\nالرَّبِيع العَرَبِيّ - Arab Spring", contentAr: "الاِسْتِعْمَار - الاحتلال الأجنبي للأراضي العربية\nالاِسْتِقْلَال - استقلال الدول العربية وتحررها\nالقَضِيَّة الفِلَسْطِينِيَّة - النضال الفلسطيني من أجل الحرية\nالرَّبِيع العَرَبِيّ - الثورات والانتفاضات العربية", contentFr: "الاِسْتِعْمَار - colonialisme\nالاِسْتِقْلَال - indépendance\nالقَضِيَّة الفِلَسْطِينِيَّة - Cause palestinienne\nالرَّبِيع العَرَبِيّ - Printemps arabe" }
       ],
       vocabulary: [
-        { arabic: "تَارِيخ", transliteration: "tārīkh", meaning: "history", meaningFr: "histoire" },
-        { arabic: "حَضَارَة", transliteration: "ḥaḍāra", meaning: "civilization", meaningFr: "civilisation" },
-        { arabic: "تُرَاث", transliteration: "turāth", meaning: "heritage", meaningFr: "patrimoine" },
-        { arabic: "عَصْر", transliteration: "'aṣr", meaning: "era/age", meaningFr: "ère/époque" },
-        { arabic: "خِلَافَة", transliteration: "khilāfa", meaning: "caliphate", meaningFr: "califat" }
+        { arabic: "تَارِيخ", transliteration: "tārīkh", meaning: "history", meaningAr: "سجل الأحداث والوقائع الماضية", meaningFr: "histoire" },
+        { arabic: "حَضَارَة", transliteration: "ḥaḍāra", meaning: "civilization", meaningAr: "درجة عالية من التطور الثقافي والاجتماعي", meaningFr: "civilisation" },
+        { arabic: "تُرَاث", transliteration: "turāth", meaning: "heritage", meaningAr: "ما يرثه الأجيال من علم وثقافة وتقاليد", meaningFr: "patrimoine" },
+        { arabic: "عَصْر", transliteration: "'aṣr", meaning: "era/age", meaningAr: "فترة زمنية محددة من التاريخ", meaningFr: "ère/époque" },
+        { arabic: "خِلَافَة", transliteration: "khilāfa", meaning: "caliphate", meaningAr: "النظام الحكومي الإسلامي بزعامة الخليفة", meaningFr: "califat" }
       ]
     },
     exerciseCount: 15, prerequisites: ["4-27"]
@@ -793,22 +801,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الفنون والموسيقى العربية",
     titleFr: "Arts et musique arabes",
     description: "Explore Arabic artistic traditions",
+    descriptionAr: "استكشاف التقاليد الفنية والموسيقية العربية",
     descriptionFr: "Explorez les traditions artistiques arabes",
     objectives: ["Appreciate Arabic music", "Understand art forms", "Learn artistic vocabulary", "Discuss arts in Arabic"],
+    objectivesAr: ["تقدير الموسيقى العربية وأنواعها", "فهم أشكال الفن والتعبير الفني", "تعلم المفردات الفنية والموسيقية", "مناقشة الفنون باللغة العربية"],
     objectivesFr: ["Apprécier la musique arabe", "Comprendre les formes artistiques", "Apprendre le vocabulaire artistique", "Discuter les arts en arabe"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Music", titleFr: "Musique", content: "مَقَام - modal system\nطَرَب - musical ecstasy\nعُود - oud (lute)\nنَاي - flute\nدُفّ - drum", contentFr: "مَقَام - système modal\nطَرَب - extase musicale\nعُود - oud (luth)\nنَاي - flûte\nدُفّ - tambour" },
-        { title: "Visual Arts", titleFr: "Arts visuels", content: "خَطّ - calligraphy\nزَخْرَفَة - ornamentation\nأَرَابِيسْك - arabesque\nفَنّ إِسْلَامِيّ - Islamic art", contentFr: "خَطّ - calligraphie\nزَخْرَفَة - ornementation\nأَرَابِيسْك - arabesque\nفَنّ إِسْلَامِيّ - art islamique" },
-        { title: "Famous Artists", titleFr: "Artistes célèbres", content: "أُمّ كُلْثُوم - legendary singer\nفَيْرُوز - Lebanese singer\nعَبْد الحَلِيم - romantic singer\nمَحْمُود دَرْوِيش - poet", contentFr: "أُمّ كُلْثُوم - chanteuse légendaire\nفَيْرُوز - chanteuse libanaise\nعَبْد الحَلِيم - chanteur romantique\nمَحْمُود دَرْوِيش - poète" }
+        { title: "Music", titleAr: "الموسيقى العربية", titleFr: "Musique", content: "مَقَام - modal system\nطَرَب - musical ecstasy\nعُود - oud (lute)\nنَاي - flute\nدُفّ - drum", contentAr: "مَقَام - النظام الموسيقي العربي\nطَرَب - الطرب والاستمتاع الموسيقي العميق\nعُود - آلة موسيقية وترية\nنَاي - آلة موسيقية هوائية\nدُفّ - آلة إيقاعية", contentFr: "مَقَام - système modal\nطَرَب - extase musicale\nعُود - oud (luth)\nنَاي - flûte\nدُفّ - tambour" },
+        { title: "Visual Arts", titleAr: "الفنون البصرية", titleFr: "Arts visuels", content: "خَطّ - calligraphy\nزَخْرَفَة - ornamentation\nأَرَابِيسْك - arabesque\nفَنّ إِسْلَامِيّ - Islamic art", contentAr: "خَطّ - فن كتابة الحروف بجمال وإتقان\nزَخْرَفَة - الزخارف والنقوش الفنية\nأَرَابِيسْك - النقوش والزخارف الهندسية\nفَنّ إِسْلَامِيّ - الفن المتطور في الحضارة الإسلامية", contentFr: "خَطّ - calligraphie\nزَخْرَفَة - ornementation\nأَرَابِيسْك - arabesque\nفَنّ إِسْلَامِيّ - art islamique" },
+        { title: "Famous Artists", titleAr: "الفنانون الشهيرون", titleFr: "Artistes célèbres", content: "أُمّ كُلْثُوم - legendary singer\nفَيْرُوز - Lebanese singer\nعَبْد الحَلِيم - romantic singer\nمَحْمُود دَرْوِيش - poet", contentAr: "أُمّ كُلْثُوم - الموسيقار والمغنية الأسطورية\nفَيْرُوز - المغنية اللبنانية الشهيرة\nعَبْد الحَلِيم - المغني الرومانسي الكبير\nمَحْمُود دَرْوِيش - الشاعر الفلسطيني الكبير", contentFr: "أُمّ كُلْثُوم - chanteuse légendaire\nفَيْرُوز - chanteuse libanaise\nعَبْد الحَلِيم - chanteur romantique\nمَحْمُود دَرْوِيش - poète" }
       ],
       vocabulary: [
-        { arabic: "فَنّ", transliteration: "fann", meaning: "art", meaningFr: "art" },
-        { arabic: "مُوسِيقَى", transliteration: "mūsīqā", meaning: "music", meaningFr: "musique" },
-        { arabic: "غِنَاء", transliteration: "ghinā'", meaning: "singing", meaningFr: "chant" },
-        { arabic: "أُغْنِيَة", transliteration: "ughniya", meaning: "song", meaningFr: "chanson" },
-        { arabic: "فَنَّان", transliteration: "fannān", meaning: "artist", meaningFr: "artiste" }
+        { arabic: "فَنّ", transliteration: "fann", meaning: "art", meaningAr: "الإبداع والتعبير الجمالي", meaningFr: "art" },
+        { arabic: "مُوسِيقَى", transliteration: "mūsīqā", meaning: "music", meaningAr: "النغمات والألحان المترابطة", meaningFr: "musique" },
+        { arabic: "غِنَاء", transliteration: "ghinā'", meaning: "singing", meaningAr: "إطلاق الصوت بنغمات موسيقية", meaningFr: "chant" },
+        { arabic: "أُغْنِيَة", transliteration: "ughniya", meaning: "song", meaningAr: "قطعة موسيقية غنائية", meaningFr: "chanson" },
+        { arabic: "فَنَّان", transliteration: "fannān", meaning: "artist", meaningAr: "الشخص الماهر في الفن", meaningFr: "artiste" }
       ]
     },
     exerciseCount: 15, prerequisites: ["4-28"]
@@ -819,22 +829,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "مراجعة وتقييم المرحلة الرابعة",
     titleFr: "Révision et évaluation de la phase 4",
     description: "Comprehensive review of all Phase 4 material",
+    descriptionAr: "مراجعة شاملة لجميع محتويات المرحلة الرابعة",
     descriptionFr: "Révision complète de tout le contenu de la phase 4",
     objectives: ["Review advanced grammar", "Demonstrate literary knowledge", "Show professional language skills", "Exhibit cultural understanding"],
+    objectivesAr: ["مراجعة القواعس النحوية المتقدمة", "إظهار المعرفة الأدبية الشاملة", "إظهار مهارات اللغة الاحترافية", "إظهار الفهم الثقافي العميق"],
     objectivesFr: ["Revoir la grammaire avancée", "Démontrer les connaissances littéraires", "Montrer les compétences en langage professionnel", "Exhiber la compréhension culturelle"],
     estimatedTime: 60, difficulty: "hard", xpReward: 120,
     content: {
       theory: [
-        { title: "Grammar Mastery", titleFr: "Maîtrise de la grammaire", content: "Full case system (I'rab)\nAll derived forms\nNumber agreement\nWeak verbs", contentFr: "Système de cas complet (I'rab)\nToutes les formes dérivées\nAccord en nombre\nVerbes faibles" },
-        { title: "Literature Skills", titleFr: "Compétences littéraires", content: "Poetry basics\nProse styles\nClassical and modern texts\nLiterary analysis", contentFr: "Bases de la poésie\nStyles de prose\nTextes classiques et modernes\nAnalyse littéraire" },
-        { title: "Professional Skills", titleFr: "Compétences professionnelles", content: "News and political Arabic\nBusiness and legal language\nAcademic writing\nPresentations", contentFr: "Arabe journalistique et politique\nLangage commercial et juridique\nÉcriture académique\nPrésentations" }
+        { title: "Grammar Mastery", titleAr: "إتقان القواعس النحوية", titleFr: "Maîtrise de la grammaire", content: "Full case system (I'rab)\nAll derived forms\nNumber agreement\nWeak verbs", contentAr: "نظام الحالات الإعرابية الكامل (الإعراب)\nجميع الأفعال المزيدة والمشتقات\nاتفاق الأعداد مع المعدود\nالأفعال الضعيفة والمعتلة" },
+        { title: "Literature Skills", titleAr: "مهارات الأدب والتحليل", titleFr: "Compétences littéraires", content: "Poetry basics\nProse styles\nClassical and modern texts\nLiterary analysis", contentAr: "أساسيات الشعر والعروض\nأساليب النثر والبلاغة\nالنصوص الكلاسيكية والحديثة\nتحليل النصوص الأدبية" },
+        { title: "Professional Skills", titleAr: "المهارات الاحترافية", titleFr: "Compétences professionnelles", content: "News and political Arabic\nBusiness and legal language\nAcademic writing\nPresentations", contentAr: "لغة الأخبار والسياسة\nلغة الأعمال والقانون\nالكتابة الأكاديمية والعلمية\nمهارات العرض والتقديم" }
       ],
       vocabulary: [
-        { arabic: "طَلَاقَة", transliteration: "ṭalāqa", meaning: "fluency", meaningFr: "fluidité" },
-        { arabic: "إِتْقَان", transliteration: "itqān", meaning: "mastery", meaningFr: "maîtrise" },
-        { arabic: "كَفَاءَة", transliteration: "kafā'a", meaning: "competence", meaningFr: "compétence" },
-        { arabic: "مَهَارَة", transliteration: "mahāra", meaning: "skill", meaningFr: "compétence" },
-        { arabic: "شَهَادَة", transliteration: "shahāda", meaning: "certificate", meaningFr: "certificat" }
+        { arabic: "طَلَاقَة", transliteration: "ṭalāqa", meaning: "fluency", meaningAr: "الكلام السلس والمتسارع بسهولة", meaningFr: "fluidité" },
+        { arabic: "إِتْقَان", transliteration: "itqān", meaning: "mastery", meaningAr: "الإحكام والتمكن الكامل من المهارة", meaningFr: "maîtrise" },
+        { arabic: "كَفَاءَة", transliteration: "kafā'a", meaning: "competence", meaningAr: "الكفاية والقدرة على القيام بعمل", meaningFr: "compétence" },
+        { arabic: "مَهَارَة", transliteration: "mahāra", meaning: "skill", meaningAr: "الدراية والمقدرة على فعل شيء بكفاءة", meaningFr: "compétence" },
+        { arabic: "شَهَادَة", transliteration: "shahāda", meaning: "certificate", meaningAr: "وثيقة تثبت الإنجاز أو التخرج", meaningFr: "certificat" }
       ]
     },
     exerciseCount: 22, prerequisites: ["4-29"]

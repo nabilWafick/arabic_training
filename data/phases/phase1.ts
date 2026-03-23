@@ -279,8 +279,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleFr: "Lettres 8-11 : Dāl, Dhāl, Rā', Zāy",
     description:
       "Learn the non-connecting letters - letters that don't connect forward",
-    descriptionAr:
-      "تعلم الحروف غير المتصلة - الحروف التي لا تتصل للأمام",
+    descriptionAr: "تعلم الحروف غير المتصلة - الحروف التي لا تتصل للأمام",
     descriptionFr:
       "Apprenez les lettres non connectées - lettres qui ne se lient pas vers l'avant",
     objectives: [
@@ -341,7 +340,13 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "د", transliteration: "dāl", meaning: "Dāl (d sound)", meaningAr: "الدال (صوت 'd')", meaningFr: "Dāl (son 'd')" },
+        {
+          arabic: "د",
+          transliteration: "dāl",
+          meaning: "Dāl (d sound)",
+          meaningAr: "الدال (صوت 'd')",
+          meaningFr: "Dāl (son 'd')",
+        },
         {
           arabic: "ذ",
           transliteration: "dhāl",
@@ -349,12 +354,48 @@ export const PHASE_1_LESSONS: Lesson[] = [
           meaningAr: "الذال (صوت 'dh' مثل 'the')",
           meaningFr: "Dhāl ('dh' comme dans l'anglais 'the')",
         },
-        { arabic: "ر", transliteration: "rā'", meaning: "Rā' (rolled r)", meaningAr: "الراء (صوت 'r' مكرر)", meaningFr: "Rā' ('r' roulé)" },
-        { arabic: "ز", transliteration: "zāy", meaning: "Zāy (z sound)", meaningAr: "الزاي (صوت 'z')", meaningFr: "Zāy (son 'z')" },
-        { arabic: "دَار", transliteration: "dār", meaning: "house/home", meaningAr: "منزل/بيت", meaningFr: "maison/foyer" },
-        { arabic: "ذَهَب", transliteration: "dhahab", meaning: "gold", meaningAr: "ذهب", meaningFr: "or" },
-        { arabic: "رَجُل", transliteration: "rajul", meaning: "man", meaningAr: "رجل", meaningFr: "homme" },
-        { arabic: "زَهْرَة", transliteration: "zahra", meaning: "flower", meaningAr: "زهرة", meaningFr: "fleur" },
+        {
+          arabic: "ر",
+          transliteration: "rā'",
+          meaning: "Rā' (rolled r)",
+          meaningAr: "الراء (صوت 'r' مكرر)",
+          meaningFr: "Rā' ('r' roulé)",
+        },
+        {
+          arabic: "ز",
+          transliteration: "zāy",
+          meaning: "Zāy (z sound)",
+          meaningAr: "الزاي (صوت 'z')",
+          meaningFr: "Zāy (son 'z')",
+        },
+        {
+          arabic: "دَار",
+          transliteration: "dār",
+          meaning: "house/home",
+          meaningAr: "منزل/بيت",
+          meaningFr: "maison/foyer",
+        },
+        {
+          arabic: "ذَهَب",
+          transliteration: "dhahab",
+          meaning: "gold",
+          meaningAr: "ذهب",
+          meaningFr: "or",
+        },
+        {
+          arabic: "رَجُل",
+          transliteration: "rajul",
+          meaning: "man",
+          meaningAr: "رجل",
+          meaningFr: "homme",
+        },
+        {
+          arabic: "زَهْرَة",
+          transliteration: "zahra",
+          meaning: "flower",
+          meaningAr: "زهرة",
+          meaningFr: "fleur",
+        },
       ],
     },
     exerciseCount: 16,
@@ -369,8 +410,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleFr: "Lettres 12-14 : Sīn, Shīn, Ṣād",
     description:
       "Learn the 'S' letters with their distinctive three-tooth shape",
-    descriptionAr:
-      "تعلم حروف 'S' بشكلها المميز ذو الأسنان الثلاثة",
+    descriptionAr: "تعلم حروف 'S' بشكلها المميز ذو الأسنان الثلاثة",
     descriptionFr:
       "Apprenez les lettres 'S' avec leur forme distinctive à trois dents",
     objectives: [
@@ -383,7 +423,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "اعترف بالسين (س)، الشين (ش)، والصاد (ص)",
       "اكتب نمط الأسنان الثلاثة للسين والشين",
       "افهم الحروف الممدودة (الصاد)",
-      "نطق الصوت الثقيل 'ṣ'"
+      "نطق الصوت الثقيل 'ṣ'",
     ],
     objectivesFr: [
       "Reconnaître Sīn (س), Shīn (ش) et Ṣād (ص)",
@@ -422,12 +462,42 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "س", transliteration: "sīn", meaning: "Sīn (s sound)", meaningAr: "السين (صوت 's')" },
-        { arabic: "ش", transliteration: "shīn", meaning: "Shīn (sh sound)", meaningAr: "الشين (صوت 'sh')" },
-        { arabic: "ص", transliteration: "ṣād", meaning: "Ṣād (emphatic s)", meaningAr: "الصاد (صوت 's' ممدود)" },
-        { arabic: "سَمَاء", transliteration: "samā'", meaning: "sky", meaningAr: "سماء" },
-        { arabic: "شَمْس", transliteration: "shams", meaning: "sun", meaningAr: "شمس" },
-        { arabic: "صَبَاح", transliteration: "ṣabāḥ", meaning: "morning", meaningAr: "صباح" },
+        {
+          arabic: "س",
+          transliteration: "sīn",
+          meaning: "Sīn (s sound)",
+          meaningAr: "السين (صوت 's')",
+        },
+        {
+          arabic: "ش",
+          transliteration: "shīn",
+          meaning: "Shīn (sh sound)",
+          meaningAr: "الشين (صوت 'sh')",
+        },
+        {
+          arabic: "ص",
+          transliteration: "ṣād",
+          meaning: "Ṣād (emphatic s)",
+          meaningAr: "الصاد (صوت 's' ممدود)",
+        },
+        {
+          arabic: "سَمَاء",
+          transliteration: "samā'",
+          meaning: "sky",
+          meaningAr: "سماء",
+        },
+        {
+          arabic: "شَمْس",
+          transliteration: "shams",
+          meaning: "sun",
+          meaningAr: "شمس",
+        },
+        {
+          arabic: "صَبَاح",
+          transliteration: "ṣabāḥ",
+          meaning: "morning",
+          meaningAr: "صباح",
+        },
       ],
     },
     exerciseCount: 16,
@@ -442,8 +512,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleFr: "Lettres 15-17 : Ḍād, Ṭā', Ẓā'",
     description:
       "Master the remaining emphatic letters - the signature sounds of Arabic",
-    descriptionAr:
-      "احتقن الحروف الممدودة المتبقية - الأصوات المميزة للعربية",
+    descriptionAr: "احتقن الحروف الممدودة المتبقية - الأصوات المميزة للعربية",
     descriptionFr:
       "Maîtrisez les lettres emphatiques restantes - les sons caractéristiques de l'arabe",
     objectives: [
@@ -456,7 +525,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "اعترف بالضاد (ض)، الطاء (ط)، والظاء (ظ)",
       "نطق جميع الحروف الممدودة بثقة",
       "ميز بين الأزواج العادية والممدودة",
-      "افهم لماذا تسمى اللغة العربية 'لغة الضاد'"
+      "افهم لماذا تسمى اللغة العربية 'لغة الضاد'",
     ],
     objectivesFr: [
       "Reconnaître Ḍād (ض), Ṭā' (ط) et Ẓā' (ظ)",
@@ -495,12 +564,42 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "ض", transliteration: "ḍād", meaning: "Ḍād (emphatic d)", meaningAr: "الضاد (صوت 'd' ممدود)" },
-        { arabic: "ط", transliteration: "ṭā'", meaning: "Ṭā' (emphatic t)", meaningAr: "الطاء (صوت 't' ممدود)" },
-        { arabic: "ظ", transliteration: "ẓā'", meaning: "Ẓā' (emphatic dh/z)", meaningAr: "الظاء (صوت 'dh' ممدود)" },
-        { arabic: "ضَوْء", transliteration: "ḍaw'", meaning: "light", meaningAr: "ضوء" },
-        { arabic: "طَعَام", transliteration: "ṭa'ām", meaning: "food", meaningAr: "طعام" },
-        { arabic: "ظُهْر", transliteration: "ẓuhr", meaning: "noon", meaningAr: "ظهر" },
+        {
+          arabic: "ض",
+          transliteration: "ḍād",
+          meaning: "Ḍād (emphatic d)",
+          meaningAr: "الضاد (صوت 'd' ممدود)",
+        },
+        {
+          arabic: "ط",
+          transliteration: "ṭā'",
+          meaning: "Ṭā' (emphatic t)",
+          meaningAr: "الطاء (صوت 't' ممدود)",
+        },
+        {
+          arabic: "ظ",
+          transliteration: "ẓā'",
+          meaning: "Ẓā' (emphatic dh/z)",
+          meaningAr: "الظاء (صوت 'dh' ممدود)",
+        },
+        {
+          arabic: "ضَوْء",
+          transliteration: "ḍaw'",
+          meaning: "light",
+          meaningAr: "ضوء",
+        },
+        {
+          arabic: "طَعَام",
+          transliteration: "ṭa'ām",
+          meaning: "food",
+          meaningAr: "طعام",
+        },
+        {
+          arabic: "ظُهْر",
+          transliteration: "ẓuhr",
+          meaning: "noon",
+          meaningAr: "ظهر",
+        },
       ],
     },
     exerciseCount: 16,
@@ -577,10 +676,30 @@ export const PHASE_1_LESSONS: Lesson[] = [
           meaning: "Ghayn (French r / gargle)",
           meaningAr: "الغين (صوت الفرنسية r أو الغرغرة)",
         },
-        { arabic: "ف", transliteration: "fā'", meaning: "Fā' (f sound)", meaningAr: "الفاء (صوت f)" },
-        { arabic: "عَيْن", transliteration: "'ayn", meaning: "eye", meaningAr: "عين" },
-        { arabic: "غَابَة", transliteration: "ghāba", meaning: "forest", meaningAr: "غابة" },
-        { arabic: "فَم", transliteration: "fam", meaning: "mouth", meaningAr: "فم" },
+        {
+          arabic: "ف",
+          transliteration: "fā'",
+          meaning: "Fā' (f sound)",
+          meaningAr: "الفاء (صوت f)",
+        },
+        {
+          arabic: "عَيْن",
+          transliteration: "'ayn",
+          meaning: "eye",
+          meaningAr: "عين",
+        },
+        {
+          arabic: "غَابَة",
+          transliteration: "ghāba",
+          meaning: "forest",
+          meaningAr: "غابة",
+        },
+        {
+          arabic: "فَم",
+          transliteration: "fam",
+          meaning: "mouth",
+          meaningAr: "فم",
+        },
       ],
     },
     exerciseCount: 17,
@@ -646,14 +765,54 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "ق", transliteration: "qāf", meaning: "Qāf (deep k)", meaningAr: "القاف (صوت 'k' عميق)" },
-        { arabic: "ك", transliteration: "kāf", meaning: "Kāf (k sound)", meaningAr: "الكاف (صوت 'k')" },
-        { arabic: "ل", transliteration: "lām", meaning: "Lām (l sound)", meaningAr: "اللام (صوت 'l')" },
-        { arabic: "م", transliteration: "mīm", meaning: "Mīm (m sound)", meaningAr: "الميم (صوت 'm')" },
-        { arabic: "قَمَر", transliteration: "qamar", meaning: "moon", meaningAr: "قمر" },
-        { arabic: "كِتَاب", transliteration: "kitāb", meaning: "book", meaningAr: "كتاب" },
-        { arabic: "لَيْل", transliteration: "layl", meaning: "night", meaningAr: "ليل" },
-        { arabic: "مَاء", transliteration: "mā'", meaning: "water", meaningAr: "ماء" },
+        {
+          arabic: "ق",
+          transliteration: "qāf",
+          meaning: "Qāf (deep k)",
+          meaningAr: "القاف (صوت 'k' عميق)",
+        },
+        {
+          arabic: "ك",
+          transliteration: "kāf",
+          meaning: "Kāf (k sound)",
+          meaningAr: "الكاف (صوت 'k')",
+        },
+        {
+          arabic: "ل",
+          transliteration: "lām",
+          meaning: "Lām (l sound)",
+          meaningAr: "اللام (صوت 'l')",
+        },
+        {
+          arabic: "م",
+          transliteration: "mīm",
+          meaning: "Mīm (m sound)",
+          meaningAr: "الميم (صوت 'm')",
+        },
+        {
+          arabic: "قَمَر",
+          transliteration: "qamar",
+          meaning: "moon",
+          meaningAr: "قمر",
+        },
+        {
+          arabic: "كِتَاب",
+          transliteration: "kitāb",
+          meaning: "book",
+          meaningAr: "كتاب",
+        },
+        {
+          arabic: "لَيْل",
+          transliteration: "layl",
+          meaning: "night",
+          meaningAr: "ليل",
+        },
+        {
+          arabic: "مَاء",
+          transliteration: "mā'",
+          meaning: "water",
+          meaningAr: "ماء",
+        },
       ],
     },
     exerciseCount: 18,
@@ -727,14 +886,54 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "ن", transliteration: "nūn", meaning: "Nūn (n sound)", meaningAr: "النون (صوت 'n')" },
-        { arabic: "ه", transliteration: "hā'", meaning: "Hā' (light h)", meaningAr: "الهاء (صوت 'h' خفيف)" },
-        { arabic: "و", transliteration: "wāw", meaning: "Wāw (w/ū sound)", meaningAr: "الواو (صوت 'w' أو 'ū')" },
-        { arabic: "ي", transliteration: "yā'", meaning: "Yā' (y/ī sound)", meaningAr: "الياء (صوت 'y' أو 'ī')" },
-        { arabic: "نُور", transliteration: "nūr", meaning: "light", meaningAr: "نور" },
-        { arabic: "هُوَ", transliteration: "huwa", meaning: "he", meaningAr: "هو" },
-        { arabic: "وَرْد", transliteration: "ward", meaning: "rose", meaningAr: "وردة" },
-        { arabic: "يَد", transliteration: "yad", meaning: "hand", meaningAr: "يد" },
+        {
+          arabic: "ن",
+          transliteration: "nūn",
+          meaning: "Nūn (n sound)",
+          meaningAr: "النون (صوت 'n')",
+        },
+        {
+          arabic: "ه",
+          transliteration: "hā'",
+          meaning: "Hā' (light h)",
+          meaningAr: "الهاء (صوت 'h' خفيف)",
+        },
+        {
+          arabic: "و",
+          transliteration: "wāw",
+          meaning: "Wāw (w/ū sound)",
+          meaningAr: "الواو (صوت 'w' أو 'ū')",
+        },
+        {
+          arabic: "ي",
+          transliteration: "yā'",
+          meaning: "Yā' (y/ī sound)",
+          meaningAr: "الياء (صوت 'y' أو 'ī')",
+        },
+        {
+          arabic: "نُور",
+          transliteration: "nūr",
+          meaning: "light",
+          meaningAr: "نور",
+        },
+        {
+          arabic: "هُوَ",
+          transliteration: "huwa",
+          meaning: "he",
+          meaningAr: "هو",
+        },
+        {
+          arabic: "وَرْد",
+          transliteration: "ward",
+          meaning: "rose",
+          meaningAr: "وردة",
+        },
+        {
+          arabic: "يَد",
+          transliteration: "yad",
+          meaning: "hand",
+          meaningAr: "يد",
+        },
       ],
     },
     exerciseCount: 20,
@@ -750,8 +949,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مقدمة",
     titleFr: "Formes des lettres : Introduction",
     description: "Learn how Arabic letters change shape based on position",
-    descriptionAr:
-      "تعلم كيف تتغير أشكال الحروف العربية بناءً على موضعها",
+    descriptionAr: "تعلم كيف تتغير أشكال الحروف العربية بناءً على موضعها",
     descriptionFr:
       "Apprenez comment les lettres arabes changent de forme selon leur position",
     objectives: [
@@ -810,8 +1008,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ب ت ث ن ي",
     titleFr: "Formes des lettres : Groupe ب ت ث ن ي",
     description: "Master the forms of letters with similar base shapes",
-    descriptionAr:
-      "احتقن أشكال الحروف ذات الأشكال الأساسية المتشابهة",
+    descriptionAr: "احتقن أشكال الحروف ذات الأشكال الأساسية المتشابهة",
     descriptionFr:
       "Maîtrisez les formes des lettres ayant des formes de base similaires",
     objectives: [
@@ -876,8 +1073,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ج ح خ",
     titleFr: "Formes des lettres : Groupe ج ح خ",
     description: "Master the hook-shaped letters in all positions",
-    descriptionAr:
-      "احتقن الحروف على شكل خطاف في جميع المواضع",
+    descriptionAr: "احتقن الحروف على شكل خطاف في جميع المواضع",
     descriptionFr:
       "Maîtrisez les lettres en forme de crochet dans toutes les positions",
     objectives: [
@@ -905,31 +1101,52 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Hook Letters",
+          titleAr: "حروف الخطاف",
           titleFr: "Les lettres en crochet",
           content:
             "ج ح خ have a distinctive 'hook' or 'teacup' shape. In initial and medial forms, the hook becomes smaller:\n\nIsolated: ج ح خ (full hook visible)\nInitial: جـ حـ خـ (hook becomes a small curve)\nMedial: ـجـ ـحـ ـخـ (hook is minimized)\nFinal: ـج ـح ـخ (full hook returns)",
+          contentAr:
+            "ج ح خ لها شكل مميز من 'الخطاف' أو 'فنجان الشاي'. في الأشكال الأولية والوسطية، يصبح الخطاف أصغر:\n\nالمنفصل: ج ح خ (الخطاف كامل مرئي)\nالأول: جـ حـ خـ (الخطاف يصبح منحنى صغير)\nالوسط: ـجـ ـحـ ـخـ (الخطاف مصغر)\nالنهائي: ـج ـح ـخ (الخطاف كامل يعود)",
           contentFr:
             "ج ح خ ont une forme distinctive de 'crochet' ou 'tasse à thé'. Dans les formes initiales et médianes, le crochet devient plus petit :\n\nIsolée : ج ح خ (crochet complet visible)\nInitiale : جـ حـ خـ (le crochet devient une petite courbe)\nMédiane : ـجـ ـحـ ـخـ (le crochet est minimisé)\nFinale : ـج ـح ـخ (le crochet complet revient)",
         },
         {
           title: "Writing Tips",
+          titleAr: "نصائح الكتابة",
           titleFr: "Conseils d'écriture",
           content:
             "When writing these letters:\n1. Start from the right\n2. In initial/medial forms, make a small curve\n3. In isolated/final forms, complete the full hook\n4. Add dots last: ج (below), خ (above), ح (none)",
+          contentAr:
+            "عند كتابة هذه الحروف:\n١. ابدأ من اليمين\n٢. في الأشكال الأولية/الوسطية، اصنع منحنى صغير\n٣. في الأشكال المنفصلة/النهائية، أكمل الخطاف بالكامل\n٤. أضف النقاط أخيراً: ج (أسفل)، خ (أعلى)، ح (لا توجد)",
           contentFr:
             "Lors de l'écriture de ces lettres :\n1. Commencez par la droite\n2. Dans les formes initiales/médianes, faites une petite courbe\n3. Dans les formes isolées/finales, complétez le crochet entier\n4. Ajoutez les points en dernier : ج (en dessous), خ (au-dessus), ح (aucun)",
         },
       ],
       vocabulary: [
-        { arabic: "جَدِيد", transliteration: "jadīd", meaning: "new", meaningFr: "nouveau" },
-        { arabic: "حَجَر", transliteration: "ḥajar", meaning: "stone", meaningFr: "pierre" },
+        {
+          arabic: "جَدِيد",
+          transliteration: "jadīd",
+          meaning: "new",
+          meaningFr: "nouveau",
+        },
+        {
+          arabic: "حَجَر",
+          transliteration: "ḥajar",
+          meaning: "stone",
+          meaningFr: "pierre",
+        },
         {
           arabic: "خَرَجَ",
           transliteration: "kharaja",
           meaning: "he went out",
           meaningFr: "il est sorti",
         },
-        { arabic: "نَحْن", transliteration: "naḥnu", meaning: "we", meaningFr: "nous" },
+        {
+          arabic: "نَحْن",
+          transliteration: "naḥnu",
+          meaning: "we",
+          meaningFr: "nous",
+        },
       ],
     },
     exerciseCount: 15,
@@ -943,8 +1160,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة س ش ص ض",
     titleFr: "Formes des lettres : Groupe س ش ص ض",
     description: "Master the 'tooth' letters and their emphatic variants",
-    descriptionAr:
-      "احتقن حروف 'الأسنان' ومتغيراتها الممدودة",
+    descriptionAr: "احتقن حروف 'الأسنان' ومتغيراتها الممدودة",
     descriptionFr:
       "Maîtrisez les lettres 'à dents' et leurs variantes emphatiques",
     objectives: [
@@ -972,26 +1188,52 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Tooth Letters",
+          titleAr: "حروف الأسنان",
           titleFr: "Les lettres à dents",
           content:
             "س and ش have three 'teeth' in isolated form, but these often simplify when connected:\n\nIsolated: س ش (3 clear teeth)\nInitial: سـ شـ (teeth may be simplified to a flat line)\nMedial: ـسـ ـشـ (often just a wavy line)\nFinal: ـس ـش (teeth visible again)",
+          contentAr:
+            "س و ش لهما ثلاث 'أسنان' في الشكل المنفصل، لكنها غالباً ما تتبسط عند الربط:\n\nالمنفصل: س ش (٣ أسنان واضحة)\nالأول: سـ شـ (قد تتبسط الأسنان إلى خط مسطح)\nالوسط: ـسـ ـشـ (غالباً مجرد خط متموج)\nالنهائي: ـس ـش (الأسنان مرئية مرة أخرى)",
           contentFr:
             "س et ش ont trois 'dents' sous forme isolée, mais celles-ci se simplifient souvent lorsqu'elles sont connectées :\n\nIsolée : س ش (3 dents visibles)\nInitiale : سـ شـ (les dents peuvent être simplifiées en une ligne plate)\nMédiane : ـسـ ـشـ (souvent juste une ligne ondulée)\nFinale : ـس ـش (les dents sont à nouveau visibles)",
         },
         {
           title: "Emphatic Versions",
+          titleAr: "الإصدارات الممدودة",
           titleFr: "Versions emphatiques",
           content:
             "ص and ض are the emphatic versions. They have a distinctive oval/loop shape:\n\nIsolated: ص ض (closed loop + tail)\nThe loop stays consistent in all forms, making them easier to recognize!",
+          contentAr:
+            "ص و ض هما النسختان الممدودتان. لهما شكل بيضاوي/حلقي مميز:\n\nالمنفصل: ص ض (حلقة مغلقة + ذيل)\nتبقى الحلقة متسقة في جميع الأشكال، مما يسهل التعرف عليها!",
           contentFr:
             "ص et ض sont les versions emphatiques. Elles ont une forme ovale/bouclée distinctive :\n\nIsolée : ص ض (boucle fermée + queue)\nLa boucle reste constante dans toutes les formes, ce qui les rend plus faciles à reconnaître !",
         },
       ],
       vocabulary: [
-        { arabic: "سَمَك", transliteration: "samak", meaning: "fish", meaningFr: "poisson" },
-        { arabic: "شَجَرَة", transliteration: "shajara", meaning: "tree", meaningFr: "arbre" },
-        { arabic: "صَدِيق", transliteration: "ṣadīq", meaning: "friend", meaningFr: "ami" },
-        { arabic: "أَرْض", transliteration: "arḍ", meaning: "earth/land", meaningFr: "terre/sol" },
+        {
+          arabic: "سَمَك",
+          transliteration: "samak",
+          meaning: "fish",
+          meaningFr: "poisson",
+        },
+        {
+          arabic: "شَجَرَة",
+          transliteration: "shajara",
+          meaning: "tree",
+          meaningFr: "arbre",
+        },
+        {
+          arabic: "صَدِيق",
+          transliteration: "ṣadīq",
+          meaning: "friend",
+          meaningFr: "ami",
+        },
+        {
+          arabic: "أَرْض",
+          transliteration: "arḍ",
+          meaning: "earth/land",
+          meaningFr: "terre/sol",
+        },
       ],
     },
     exerciseCount: 16,
@@ -1005,8 +1247,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ع غ ف ق",
     titleFr: "Formes des lettres : Groupe ع غ ف ق",
     description: "Master the eye-shaped and loop letters",
-    descriptionAr:
-      "احتقن الحروف على شكل عين والحروف الحلقية",
+    descriptionAr: "احتقن الحروف على شكل عين والحروف الحلقية",
     descriptionFr:
       "Maîtrisez les lettres en forme d'œil et les lettres bouclées",
     objectives: [
@@ -1034,17 +1275,23 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Eye Letters: ع غ",
+          titleAr: "حروف العين: ع غ",
           titleFr: "Les lettres en œil : ع غ",
           content:
             "ع and غ are called 'eye' letters because they look like an eye in their isolated form:\n\nIsolated: ع غ (full eye shape)\nInitial: عـ غـ (small opening curve)\nMedial: ـعـ ـغـ (similar to initial)\nFinal: ـع ـغ (full eye returns)",
+          contentAr:
+            "تُسمى ع و غ حروف 'العين' لأنها تبدو مثل العين في شكلها المنفصل:\n\nالمنفصل: ع غ (شكل العين الكامل)\nالأول: عـ غـ (منحنى فتح صغير)\nالوسط: ـعـ ـغـ (مشابه للأول)\nالنهائي: ـع ـغ (العين الكاملة تعود)",
           contentFr:
             "ع et غ sont appelées lettres 'œil' parce qu'elles ressemblent à un œil sous leur forme isolée :\n\nIsolée : ع غ (forme d'œil complète)\nInitiale : عـ غـ (petite courbe d'ouverture)\nMédiane : ـعـ ـغـ (similaire à l'initiale)\nFinale : ـع ـغ (l'œil complet revient)",
         },
         {
           title: "The Loop Letters: ف ق",
+          titleAr: "حروف الحلقة: ف ق",
           titleFr: "Les lettres bouclées : ف ق",
           content:
             "ف and ق both have loops, but different styles:\n• ف: Small loop with dot above, sits on baseline\n• ق: Two dots above, dips BELOW baseline in isolated/final forms\n\nTip: ق looks like it's diving underwater!",
+          contentAr:
+            "كل من ف و ق لديهما حلقات، لكن بأنماط مختلفة:\n• ف: حلقة صغيرة مع نقطة أعلاه، تجلس على خط الأساس\n• ق: نقطتان أعلاه، تنخفض أسفل خط الأساس في الأشكال المنفصلة/النهائية\n\nنصيحة: ق تبدو وكأنها تغوص تحت الماء!",
           contentFr:
             "ف et ق ont toutes deux des boucles, mais de styles différents :\n• ف : Petite boucle avec un point au-dessus, posée sur la ligne de base\n• ق : Deux points au-dessus, plonge EN DESSOUS de la ligne de base dans les formes isolées/finales\n\nAstuce : ق ressemble à quelqu'un qui plonge sous l'eau !",
         },
@@ -1056,9 +1303,24 @@ export const PHASE_1_LESSONS: Lesson[] = [
           meaning: "Arabic/Arab",
           meaningFr: "arabe",
         },
-        { arabic: "غَنِي", transliteration: "ghanī", meaning: "rich", meaningFr: "riche" },
-        { arabic: "فَرَح", transliteration: "faraḥ", meaning: "joy", meaningFr: "joie" },
-        { arabic: "قَلْب", transliteration: "qalb", meaning: "heart", meaningFr: "cœur" },
+        {
+          arabic: "غَنِي",
+          transliteration: "ghanī",
+          meaning: "rich",
+          meaningFr: "riche",
+        },
+        {
+          arabic: "فَرَح",
+          transliteration: "faraḥ",
+          meaning: "joy",
+          meaningFr: "joie",
+        },
+        {
+          arabic: "قَلْب",
+          transliteration: "qalb",
+          meaning: "heart",
+          meaningFr: "cœur",
+        },
       ],
     },
     exerciseCount: 16,
@@ -1072,8 +1334,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ك ل م ه",
     titleFr: "Formes des lettres : Groupe ك ل م ه",
     description: "Master the remaining connecting letters",
-    descriptionAr:
-      "احتقن الحروف المتصلة المتبقية",
+    descriptionAr: "احتقن الحروف المتصلة المتبقية",
     descriptionFr: "Maîtrisez les lettres connectées restantes",
     objectives: [
       "Write ك ل م ه in all four forms",
@@ -1100,34 +1361,63 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Kāf and Lām",
+          titleAr: "الكاف واللام",
           titleFr: "Kāf et Lām",
           content:
             "ك (Kāf) has a distinctive zig-zag top in isolated form that simplifies when connected.\n\nل (Lām) is the tall letter - it's essentially a vertical stroke. When followed by Alif, it creates a special ligature: لا (lām-alif).",
+          contentAr:
+            "ك (الكاف) لها قمة متعرجة مميزة في الشكل المنفصل تتبسط عند الربط.\n\nل (اللام) هي الحرف الطويل - إنها في الأساس خط عمودي. عند متابعتها بألف، تنشئ ربطة خاصة: لا (لام-ألف).",
           contentFr:
             "ك (Kāf) a un sommet en zigzag distinctif sous forme isolée qui se simplifie lorsqu'elle est connectée.\n\nل (Lām) est la lettre haute - c'est essentiellement un trait vertical. Lorsqu'elle est suivie d'Alif, elle crée une ligature spéciale : لا (lām-alif).",
         },
         {
           title: "Mīm - The Round Letter",
+          titleAr: "الميم - الحرف المستدير",
           titleFr: "Mīm - La lettre ronde",
           content:
             "م (Mīm) has a nice round shape:\nIsolated: م (circle with tail)\nInitial: مـ (open circle curve)\nMedial: ـمـ (small bump on line)\nFinal: ـم (circle returns)",
+          contentAr:
+            "م (الميم) لها شكل مستدير لطيف:\nالمنفصل: م (دائرة مع ذيل)\nالأول: مـ (منحنى دائرة مفتوحة)\nالوسط: ـمـ (نتوء صغير على الخط)\nالنهائي: ـم (الدائرة تعود)",
           contentFr:
             "م (Mīm) a une belle forme ronde :\nIsolée : م (cercle avec queue)\nInitiale : مـ (courbe de cercle ouvert)\nMédiane : ـمـ (petite bosse sur la ligne)\nFinale : ـم (le cercle revient)",
         },
         {
           title: "Hā' - The Chameleon",
+          titleAr: "الهاء - الحرف المتقلب",
           titleFr: "Hā' - Le caméléon",
           content:
             "ه (Hā') is unique - it has VERY different forms:\nIsolated: ه (like a small 'h')\nInitial: هـ (like a small hat)\nMedial: ـهـ (like '∞' or two loops)\nFinal: ـه (like isolated)\n\nDon't worry - you'll recognize it with practice!",
+          contentAr:
+            "ه (الهاء) فريدة - لديها أشكال مختلفة جداً:\nالمنفصل: ه (مثل 'h' صغير)\nالأول: هـ (مثل قبعة صغيرة)\nالوسط: ـهـ (مثل '∞' أو حلقتين)\nالنهائي: ـه (مثل المنفصل)\n\nلا تقلق - ستتعرف عليها مع الممارسة!",
           contentFr:
             "ه (Hā') est unique - elle a des formes TRÈS différentes :\nIsolée : ه (comme un petit 'h')\nInitiale : هـ (comme un petit chapeau)\nMédiane : ـهـ (comme '∞' ou deux boucles)\nFinale : ـه (comme isolée)\n\nNe vous inquiétez pas - vous la reconnaîtrez avec la pratique !",
         },
       ],
       vocabulary: [
-        { arabic: "كَبِير", transliteration: "kabīr", meaning: "big", meaningFr: "grand" },
-        { arabic: "لَا", transliteration: "lā", meaning: "no", meaningFr: "non" },
-        { arabic: "مَلِك", transliteration: "malik", meaning: "king", meaningFr: "roi" },
-        { arabic: "هَذَا", transliteration: "hādhā", meaning: "this", meaningFr: "ceci" },
+        {
+          arabic: "كَبِير",
+          transliteration: "kabīr",
+          meaning: "big",
+          meaningFr: "grand",
+        },
+        {
+          arabic: "لَا",
+          transliteration: "lā",
+          meaning: "no",
+          meaningFr: "non",
+        },
+        {
+          arabic: "مَلِك",
+          transliteration: "malik",
+          meaning: "king",
+          meaningFr: "roi",
+        },
+        {
+          arabic: "هَذَا",
+          transliteration: "hādhā",
+          meaning: "this",
+          meaningFr: "ceci",
+        },
       ],
     },
     exerciseCount: 18,
@@ -1143,8 +1433,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الحركات القصيرة: الفتحة والكسرة والضمة",
     titleFr: "Voyelles courtes : Fatḥa, Kasra, Ḍamma",
     description: "Learn the three short vowel marks (harakat)",
-    descriptionAr:
-      "تعلم علامات الحروف الصوتية القصيرة الثلاثة (حرakat)",
+    descriptionAr: "تعلم علامات الحروف الصوتية القصيرة الثلاثة (حرakat)",
     descriptionFr: "Apprenez les trois signes de voyelles courtes (harakat)",
     objectives: [
       "Recognize Fatḥa (َ), Kasra (ِ), and Ḍamma (ُ)",
@@ -1171,25 +1460,34 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "What Are Harakat?",
+          titleAr: "ما هي الحركات؟",
           titleFr: "Que sont les Harakat ?",
           content:
             "Harakat (حَرَكَات) are small marks placed above or below letters to indicate vowel sounds. Written Arabic for learners and religious texts includes these marks; everyday Arabic often omits them.\n\nThink of them as training wheels - they help you read correctly!",
+          contentAr:
+            "الحركات (حَرَكَات) هي علامات صغيرة توضع فوق أو تحت الحروف للإشارة إلى أصوات الحروف الصوتية. اللغة العربية المكتوبة للمتعلمين والنصوص الدينية تتضمن هذه العلامات؛ غالباً ما يحذفها العرب العاديون.\n\nفكر فيها كعجلات التدريب - فهي تساعدك على القراءة بشكل صحيح!",
           contentFr:
             "Les Harakat (حَرَكَات) sont de petits signes placés au-dessus ou en dessous des lettres pour indiquer les sons des voyelles. L'arabe écrit pour les apprenants et les textes religieux inclut ces signes ; l'arabe quotidien les omet souvent.\n\nConsidérez-les comme des roues d'entraînement - ils vous aident à lire correctement !",
         },
         {
           title: "The Three Short Vowels",
+          titleAr: "الحروف الصوتية القصيرة الثلاثة",
           titleFr: "Les trois voyelles courtes",
           content:
             "• Fatḥa (فَتْحَة) = ـَ = 'a' sound (like 'cat')\n  Written ABOVE the letter\n\n• Kasra (كَسْرَة) = ـِ = 'i' sound (like 'sit')\n  Written BELOW the letter\n\n• Ḍamma (ضَمَّة) = ـُ = 'u' sound (like 'put')\n  Written ABOVE the letter (looks like small و)",
+          contentAr:
+            "• الفتحة (فَتْحَة) = ـَ = صوت 'a' (مثل 'cat')\n  مكتوب فوق الحرف\n\n• الكسرة (كَسْرَة) = ـِ = صوت 'i' (مثل 'sit')\n  مكتوب تحت الحرف\n\n• الضمة (ضَمَّة) = ـُ = صوت 'u' (مثل 'put')\n  مكتوب فوق الحرف (يشبه و صغير)",
           contentFr:
             "• Fatḥa (فَتْحَة) = ـَ = son 'a' (comme dans 'patte')\n  Écrit AU-DESSUS de la lettre\n\n• Kasra (كَسْرَة) = ـِ = son 'i' (comme dans 'lit')\n  Écrit EN DESSOUS de la lettre\n\n• Ḍamma (ضَمَّة) = ـُ = son 'ou' (comme dans 'tout')\n  Écrit AU-DESSUS de la lettre (ressemble à un petit و)",
         },
         {
           title: "Examples",
+          titleAr: "أمثلة",
           titleFr: "Exemples",
           content:
             "بَ (ba) بِ (bi) بُ (bu)\nتَ (ta) تِ (ti) تُ (tu)\nكَ (ka) كِ (ki) كُ (ku)\n\nThe consonant stays the same - only the vowel changes!",
+          contentAr:
+            "بَ (ba) بِ (bi) بُ (bu)\nتَ (ta) تِ (ti) تُ (tu)\nكَ (ka) كِ (ki) كُ (ku)\n\nيبقى الحرف الساكن كما هو - فقط الحرف الصوتي يتغير!",
           contentFr:
             "بَ (ba) بِ (bi) بُ (bou)\nتَ (ta) تِ (ti) تُ (tou)\nكَ (ka) كِ (ki) كُ (kou)\n\nLa consonne reste la même - seule la voyelle change !",
         },
@@ -1211,8 +1509,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "السكون والشدة",
     titleFr: "Sukūn et Shadda",
     description: "Learn marks for no vowel (sukūn) and doubling (shadda)",
-    descriptionAr:
-      "تعلم علامات عدم وجود حرف صوتي (sukūn) والتضعيف (shadda)",
+    descriptionAr: "تعلم علامات عدم وجود حرف صوتي (sukūn) والتضعيف (shadda)",
     descriptionFr:
       "Apprenez les signes d'absence de voyelle (sukūn) et de redoublement (shadda)",
     objectives: [
@@ -1276,8 +1573,18 @@ export const PHASE_1_LESSONS: Lesson[] = [
           meaning: "shadda (doubling mark)",
           meaningFr: "shadda (signe de redoublement)",
         },
-        { arabic: "كُرْسِي", transliteration: "kursī", meaning: "chair", meaningFr: "chaise" },
-        { arabic: "حُبّ", transliteration: "ḥubb", meaning: "love", meaningFr: "amour" },
+        {
+          arabic: "كُرْسِي",
+          transliteration: "kursī",
+          meaning: "chair",
+          meaningFr: "chaise",
+        },
+        {
+          arabic: "حُبّ",
+          transliteration: "ḥubb",
+          meaning: "love",
+          meaningFr: "amour",
+        },
       ],
     },
     exerciseCount: 16,
@@ -1291,8 +1598,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "التنوين",
     titleFr: "Tanwīn (Nounation)",
     description: "Learn the 'n' sound endings for indefinite nouns",
-    descriptionAr:
-      "تعلم صوت 'n' النهائي للأسماء غير المحددة",
+    descriptionAr: "تعلم صوت 'n' النهائي للأسماء غير المحددة",
     descriptionFr: "Apprenez les terminaisons en 'n' pour les noms indéfinis",
     objectives: [
       "Recognize the three tanwīn marks",
@@ -1418,9 +1724,24 @@ export const PHASE_1_LESSONS: Lesson[] = [
           meaning: "book (long ā)",
           meaningFr: "livre (ā long)",
         },
-        { arabic: "نُور", transliteration: "nūr", meaning: "light (long ū)", meaningFr: "lumière (ū long)" },
-        { arabic: "كَبِير", transliteration: "kabīr", meaning: "big (long ī)", meaningFr: "grand (ī long)" },
-        { arabic: "سَمَاء", transliteration: "samā'", meaning: "sky (long ā)", meaningFr: "ciel (ā long)" },
+        {
+          arabic: "نُور",
+          transliteration: "nūr",
+          meaning: "light (long ū)",
+          meaningFr: "lumière (ū long)",
+        },
+        {
+          arabic: "كَبِير",
+          transliteration: "kabīr",
+          meaning: "big (long ī)",
+          meaningFr: "grand (ī long)",
+        },
+        {
+          arabic: "سَمَاء",
+          transliteration: "samā'",
+          meaning: "sky (long ā)",
+          meaningFr: "ciel (ā long)",
+        },
       ],
     },
     exerciseCount: 17,
@@ -1436,8 +1757,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "القراءة: كلمات من حرفين",
     titleFr: "Lecture : Mots de deux lettres",
     description: "Practice reading simple two-letter Arabic words",
-    descriptionAr:
-      "تدرب على قراءة كلمات عربية بسيطة من حرفين",
+    descriptionAr: "تدرب على قراءة كلمات عربية بسيطة من حرفين",
     descriptionFr:
       "Entraînez-vous à lire des mots arabes simples de deux lettres",
     objectives: [
@@ -1481,14 +1801,54 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "مِنْ", transliteration: "min", meaning: "from", meaningFr: "de" },
-        { arabic: "إِلَى", transliteration: "ilā", meaning: "to", meaningFr: "vers/à" },
-        { arabic: "أَبْ", transliteration: "ab", meaning: "father", meaningFr: "père" },
-        { arabic: "أُمّ", transliteration: "umm", meaning: "mother", meaningFr: "mère" },
-        { arabic: "فِي", transliteration: "fī", meaning: "in", meaningFr: "dans" },
-        { arabic: "عَنْ", transliteration: "'an", meaning: "about", meaningFr: "à propos de" },
-        { arabic: "لَا", transliteration: "lā", meaning: "no", meaningFr: "non" },
-        { arabic: "أَوْ", transliteration: "aw", meaning: "or", meaningFr: "ou" },
+        {
+          arabic: "مِنْ",
+          transliteration: "min",
+          meaning: "from",
+          meaningFr: "de",
+        },
+        {
+          arabic: "إِلَى",
+          transliteration: "ilā",
+          meaning: "to",
+          meaningFr: "vers/à",
+        },
+        {
+          arabic: "أَبْ",
+          transliteration: "ab",
+          meaning: "father",
+          meaningFr: "père",
+        },
+        {
+          arabic: "أُمّ",
+          transliteration: "umm",
+          meaning: "mother",
+          meaningFr: "mère",
+        },
+        {
+          arabic: "فِي",
+          transliteration: "fī",
+          meaning: "in",
+          meaningFr: "dans",
+        },
+        {
+          arabic: "عَنْ",
+          transliteration: "'an",
+          meaning: "about",
+          meaningFr: "à propos de",
+        },
+        {
+          arabic: "لَا",
+          transliteration: "lā",
+          meaning: "no",
+          meaningFr: "non",
+        },
+        {
+          arabic: "أَوْ",
+          transliteration: "aw",
+          meaning: "or",
+          meaningFr: "ou",
+        },
       ],
     },
     exerciseCount: 14,
@@ -1502,8 +1862,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "القراءة: كلمات من ثلاثة حروف",
     titleFr: "Lecture : Mots de trois lettres",
     description: "Practice reading three-letter root words",
-    descriptionAr:
-      "تدرب على قراءة كلمات جذرية من ثلاثة أحرف",
+    descriptionAr: "تدرب على قراءة كلمات جذرية من ثلاثة أحرف",
     descriptionFr: "Entraînez-vous à lire des mots racines de trois lettres",
     objectives: [
       "Read three-letter words fluently",
@@ -1546,12 +1905,42 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "كَتَبَ", transliteration: "kataba", meaning: "he wrote", meaningFr: "il a écrit" },
-        { arabic: "قَرَأَ", transliteration: "qara'a", meaning: "he read", meaningFr: "il a lu" },
-        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningFr: "il est allé" },
-        { arabic: "وَلَد", transliteration: "walad", meaning: "boy", meaningFr: "garçon" },
-        { arabic: "بَيْت", transliteration: "bayt", meaning: "house", meaningFr: "maison" },
-        { arabic: "شَمْس", transliteration: "shams", meaning: "sun", meaningFr: "soleil" },
+        {
+          arabic: "كَتَبَ",
+          transliteration: "kataba",
+          meaning: "he wrote",
+          meaningFr: "il a écrit",
+        },
+        {
+          arabic: "قَرَأَ",
+          transliteration: "qara'a",
+          meaning: "he read",
+          meaningFr: "il a lu",
+        },
+        {
+          arabic: "ذَهَبَ",
+          transliteration: "dhahaba",
+          meaning: "he went",
+          meaningFr: "il est allé",
+        },
+        {
+          arabic: "وَلَد",
+          transliteration: "walad",
+          meaning: "boy",
+          meaningFr: "garçon",
+        },
+        {
+          arabic: "بَيْت",
+          transliteration: "bayt",
+          meaning: "house",
+          meaningFr: "maison",
+        },
+        {
+          arabic: "شَمْس",
+          transliteration: "shams",
+          meaning: "sun",
+          meaningFr: "soleil",
+        },
       ],
     },
     exerciseCount: 16,
@@ -1565,8 +1954,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "القراءة: كلمات شائعة",
     titleFr: "Lecture : Mots courants",
     description: "Learn to read the most frequent Arabic words",
-    descriptionAr:
-      "تعلم قراءة أكثر الكلمات العربية شيوعًا",
+    descriptionAr: "تعلم قراءة أكثر الكلمات العربية شيوعًا",
     descriptionFr: "Apprenez à lire les mots arabes les plus fréquents",
     objectives: [
       "Read the 20 most common Arabic words",
@@ -1609,16 +1997,66 @@ export const PHASE_1_LESSONS: Lesson[] = [
         },
       ],
       vocabulary: [
-        { arabic: "هُوَ", transliteration: "huwa", meaning: "he", meaningFr: "il" },
-        { arabic: "هِيَ", transliteration: "hiya", meaning: "she", meaningFr: "elle" },
-        { arabic: "هُمْ", transliteration: "hum", meaning: "they (m)", meaningFr: "ils" },
-        { arabic: "أَنَا", transliteration: "anā", meaning: "I", meaningFr: "je" },
-        { arabic: "أَنْتَ", transliteration: "anta", meaning: "you (m)", meaningFr: "tu/vous (m)" },
-        { arabic: "مَاذَا", transliteration: "mādhā", meaning: "what", meaningFr: "quoi" },
-        { arabic: "لِمَاذَا", transliteration: "limādhā", meaning: "why", meaningFr: "pourquoi" },
-        { arabic: "كَيْفَ", transliteration: "kayfa", meaning: "how", meaningFr: "comment" },
-        { arabic: "أَيْنَ", transliteration: "ayna", meaning: "where", meaningFr: "où" },
-        { arabic: "مَتَى", transliteration: "matā", meaning: "when", meaningFr: "quand" },
+        {
+          arabic: "هُوَ",
+          transliteration: "huwa",
+          meaning: "he",
+          meaningFr: "il",
+        },
+        {
+          arabic: "هِيَ",
+          transliteration: "hiya",
+          meaning: "she",
+          meaningFr: "elle",
+        },
+        {
+          arabic: "هُمْ",
+          transliteration: "hum",
+          meaning: "they (m)",
+          meaningFr: "ils",
+        },
+        {
+          arabic: "أَنَا",
+          transliteration: "anā",
+          meaning: "I",
+          meaningFr: "je",
+        },
+        {
+          arabic: "أَنْتَ",
+          transliteration: "anta",
+          meaning: "you (m)",
+          meaningFr: "tu/vous (m)",
+        },
+        {
+          arabic: "مَاذَا",
+          transliteration: "mādhā",
+          meaning: "what",
+          meaningFr: "quoi",
+        },
+        {
+          arabic: "لِمَاذَا",
+          transliteration: "limādhā",
+          meaning: "why",
+          meaningFr: "pourquoi",
+        },
+        {
+          arabic: "كَيْفَ",
+          transliteration: "kayfa",
+          meaning: "how",
+          meaningFr: "comment",
+        },
+        {
+          arabic: "أَيْنَ",
+          transliteration: "ayna",
+          meaning: "where",
+          meaningFr: "où",
+        },
+        {
+          arabic: "مَتَى",
+          transliteration: "matā",
+          meaning: "when",
+          meaningFr: "quand",
+        },
       ],
     },
     exerciseCount: 18,
@@ -1632,12 +2070,19 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "القراءة: جمل بسيطة",
     titleFr: "Lecture : Phrases simples",
     description: "Practice reading short Arabic sentences",
+    descriptionAr: "ممارسة قراءة جمل عربية قصيرة",
     descriptionFr: "Entraînez-vous à lire des phrases courtes en arabe",
     objectives: [
       "Read simple Arabic sentences",
       "Understand basic sentence structure",
       "Recognize word boundaries",
       "Build comprehension skills",
+    ],
+    objectivesAr: [
+      "قراءة جمل عربية بسيطة",
+      "فهم البنية الأساسية للجملة",
+      "التعرف على حدود الكلمات",
+      "تطوير مهارات الفهم القرائي",
     ],
     objectivesFr: [
       "Lire des phrases arabes simples",
@@ -1652,17 +2097,23 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Arabic Sentence Structure",
+          titleAr: "بنية الجملة العربية",
           titleFr: "Structure des phrases arabes",
           content:
             "Arabic sentences can start with either:\n1. A verb (VSO): ذَهَبَ الوَلَدُ (went the-boy = The boy went)\n2. A noun (SVO): الوَلَدُ ذَهَبَ (the-boy went = The boy went)\n\nBoth are correct! Verb-first is more common in formal Arabic.",
+          contentAr:
+            "يمكن للجملة العربية أن تبدأ بأي من الآتي:\n1. فعل (نمط ف ف م): ذَهَبَ الوَلَدُ (ذهب الولد)\n2. اسم (نمط م ف): الوَلَدُ ذَهَبَ (الولد ذهب)\n\nكلا النمطين صحيح! البدء بالفعل أكثر شيوعًا في العربية الفصحى.",
           contentFr:
             "Les phrases arabes peuvent commencer par :\n1. Un verbe (VSO) : ذَهَبَ الوَلَدُ (est allé le-garçon = Le garçon est allé)\n2. Un nom (SVO) : الوَلَدُ ذَهَبَ (le-garçon est allé = Le garçon est allé)\n\nLes deux sont corrects ! Verbe en premier est plus courant en arabe formel.",
         },
         {
           title: "Reading Tips for Sentences",
+          titleAr: "نصائح القراءة للجمل",
           titleFr: "Conseils de lecture pour les phrases",
           content:
             "1. Don't panic - go word by word\n2. Look for الـ (al-) to find nouns\n3. Verbs often come first\n4. Use context for meaning",
+          contentAr:
+            "1. لا تقلق - اقرأ كلمة تلو الأخرى\n2. ابحث عن الـ (أل) للعثور على الأسماء\n3. غالباً ما يأتي الفعل أولاً\n4. استخدم السياق لفهم المعنى",
           contentFr:
             "1. Pas de panique - allez mot par mot\n2. Cherchez الـ (al-) pour trouver les noms\n3. Les verbes viennent souvent en premier\n4. Utilisez le contexte pour le sens",
         },
@@ -1672,24 +2123,28 @@ export const PHASE_1_LESSONS: Lesson[] = [
           arabic: "الوَلَدُ ذَهَبَ",
           transliteration: "al-waladu dhahaba",
           meaning: "The boy went",
+          meaningAr: "ذهب الولد",
           meaningFr: "Le garçon est allé",
         },
         {
           arabic: "البِنْتُ كَتَبَتْ",
           transliteration: "al-bintu katabat",
           meaning: "The girl wrote",
+          meaningAr: "كتبت البنت",
           meaningFr: "La fille a écrit",
         },
         {
           arabic: "هَذَا كِتَابٌ",
           transliteration: "hādhā kitābun",
           meaning: "This is a book",
+          meaningAr: "هذا كتاب",
           meaningFr: "C'est un livre",
         },
         {
           arabic: "أَنَا طَالِبٌ",
           transliteration: "anā ṭālibun",
           meaning: "I am a student",
+          meaningAr: "أنا طالب",
           meaningFr: "Je suis étudiant",
         },
       ],
@@ -1707,6 +2162,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الكتابة: الخطوط الأساسية",
     titleFr: "Écriture : Traits de base",
     description: "Master the fundamental strokes used in Arabic calligraphy",
+    descriptionAr: "اتقن الخطوط الأساسية المستخدمة في الخط العربي",
     descriptionFr:
       "Maîtrisez les traits fondamentaux utilisés en calligraphie arabe",
     objectives: [
@@ -1714,6 +2170,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Practice right-to-left writing direction",
       "Understand baseline and letter proportions",
       "Develop proper pen control",
+    ],
+    objectivesAr: [
+      "تعلم الخطوط الأساسية للكتابة العربية",
+      "ممارسة اتجاه الكتابة من اليمين إلى اليسار",
+      "فهم خط الأساس ونسب الحروف",
+      "تطوير السيطرة الصحيحة على الأداة",
     ],
     objectivesFr: [
       "Apprendre les traits de base de l'écriture arabe",
@@ -1728,25 +2190,34 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Four Basic Strokes",
+          titleAr: "الخطوط الأساسية الأربعة",
           titleFr: "Les quatre traits de base",
           content:
             "Arabic letters are made from combining these basic strokes:\n1. Vertical line (↓): Used in ا ل ك\n2. Horizontal line (←): Used in connections\n3. Curves (↺): Used in ب ج س\n4. Dots (•): Added last to distinguish letters",
+          contentAr:
+            "تُكون الحروف العربية من خلال دمج هذه الخطوط الأساسية:\n1. الخط العمودي (↓): يُستخدم في ا ل ك\n2. الخط الأفقي (←): يُستخدم في الوصلات\n3. المنحنيات (↺): تُستخدم في ب ج س\n4. النقاط (•): تُضاف آخراً لتمييز الحروف",
           contentFr:
             "Les lettres arabes sont formées en combinant ces traits de base :\n1. Ligne verticale (↓) : Utilisée dans ا ل ك\n2. Ligne horizontale (←) : Utilisée pour les connexions\n3. Courbes (↺) : Utilisées dans ب ج س\n4. Points (•) : Ajoutés en dernier pour distinguer les lettres",
         },
         {
           title: "Right-to-Left Writing",
+          titleAr: "الكتابة من اليمين إلى اليسار",
           titleFr: "Écriture de droite à gauche",
           content:
             "Arabic is written RIGHT to LEFT. For right-handed writers, this means pushing the pen (vs pulling in English). Keep your paper angled for comfort!",
+          contentAr:
+            "تُكتب العربية من اليمين إلى اليسار. بالنسبة للكاتبين بيدهم اليمنى، هذا يعني دفع القلم (بخلاف السحب في الإنجليزية). حافظ على زاوية الورقة لراحتك!",
           contentFr:
             "L'arabe s'écrit de DROITE à GAUCHE. Pour les droitiers, cela signifie pousser le stylo (au lieu de tirer comme en français). Inclinez votre papier pour plus de confort !",
         },
         {
           title: "Letter Proportions",
+          titleAr: "نسب الحروف",
           titleFr: "Proportions des lettres",
           content:
             "Traditional Arabic calligraphy uses dots to measure proportions:\n• Alif height = 7 dots\n• Letter body = 1-2 dots\n• Descenders (ي ن) = 3-5 dots below baseline",
+          contentAr:
+            "تستخدم الخطوط العربية التقليدية النقاط لقياس النسب:\n• ارتفاع الألف = 7 نقاط\n• جسم الحرف = 1-2 نقطة\n• الأحرف الهابطة (ي ن) = 3-5 نقاط تحت خط الأساس",
           contentFr:
             "La calligraphie arabe traditionnelle utilise des points pour mesurer les proportions :\n• Hauteur de l'Alif = 7 points\n• Corps de la lettre = 1-2 points\n• Jambages (ي ن) = 3-5 points sous la ligne de base",
         },
@@ -1756,18 +2227,21 @@ export const PHASE_1_LESSONS: Lesson[] = [
           arabic: "ا",
           transliteration: "alif",
           meaning: "Practice vertical stroke",
+          meaningAr: "تدرب على الخط العمودي",
           meaningFr: "Pratiquer le trait vertical",
         },
         {
           arabic: "ب",
           transliteration: "bā'",
           meaning: "Practice curve + dot",
+          meaningAr: "تدرب على المنحنى والنقطة",
           meaningFr: "Pratiquer la courbe + point",
         },
         {
           arabic: "س",
           transliteration: "sīn",
           meaning: "Practice teeth stroke",
+          meaningAr: "تدرب على خط الأسنان",
           meaningFr: "Pratiquer le trait en dents",
         },
       ],
@@ -1783,12 +2257,19 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الكتابة: الحروف التي لا تتصل",
     titleFr: "Écriture : Lettres qui ne se connectent pas",
     description: "Practice writing non-connecting letters",
+    descriptionAr: "ممارسة كتابة الحروف غير المتصلة",
     descriptionFr: "Entraînez-vous à écrire les lettres non connectées",
     objectives: [
       "Write ا د ذ ر ز و correctly",
       "Understand why these letters don't connect",
       "Practice letter spacing",
       "Build muscle memory",
+    ],
+    objectivesAr: [
+      "كتابة الحروف التي لا تتصل بالحروف الأخرى",
+      "اتقان تشكيل الحروف المنفصلة",
+      "فهم الأشكال المختلفة للحروف",
+      "تحسين الدقة في الكتابة",
     ],
     objectivesFr: [
       "Écrire ا د ذ ر ز و correctement",
@@ -1803,17 +2284,23 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Non-Connectors",
+          titleAr: "الحروف غير المتصلة",
           titleFr: "Les lettres non connectées",
           content:
             "These 6 letters NEVER connect to the following letter:\nا (alif) - vertical line\nد (dāl) - curved stroke\nذ (dhāl) - dāl + dot\nر (rā') - small curve\nز (zāy) - rā' + dot\nو (wāw) - round loop",
+          contentAr:
+            "هذه الـ 6 أحرف لا تتصل أبدًا بالحرف التالي:\nا (alif) - خط عمودي\nد (dāl) - خط منحن\nذ (dhāl) - dāl + نقطة\nر (rā') - منحنى صغير\nز (zāy) - rā' + نقطة\nو (wāw) - حلقة مستديرة",
           contentFr:
             "Ces 6 lettres ne se connectent JAMAIS à la lettre suivante :\nا (alif) - ligne verticale\nد (dāl) - trait courbé\nذ (dhāl) - dāl + point\nر (rā') - petite courbe\nز (zāy) - rā' + point\nو (wāw) - boucle ronde",
         },
         {
           title: "Writing Tips",
+          titleAr: "نصائح الكتابة",
           titleFr: "Conseils d'écriture",
           content:
             "When writing these letters:\n• Complete the letter fully\n• Lift your pen\n• Leave a small gap\n• Start the next letter fresh",
+          contentAr:
+            "عند كتابة هذه الحروف:\n• أكمل الحرف بالكامل\n• ارفع قلمك\n• اترك مسافة صغيرة\n• ابدأ الحرف التالي من جديد",
           contentFr:
             "Lors de l'écriture de ces lettres :\n• Terminez complètement la lettre\n• Levez votre stylo\n• Laissez un petit espace\n• Commencez la lettre suivante de nouveau",
         },
@@ -1823,18 +2310,21 @@ export const PHASE_1_LESSONS: Lesson[] = [
           arabic: "دَار",
           transliteration: "dār",
           meaning: "house (practice دار)",
+          meaningAr: "منزل (تدرب على دار)",
           meaningFr: "maison (pratiquer دار)",
         },
         {
           arabic: "وَرَق",
           transliteration: "waraq",
           meaning: "paper (practice ورق)",
+          meaningAr: "ورق (تدرب على ورق)",
           meaningFr: "papier (pratiquer ورق)",
         },
         {
           arabic: "زَيْت",
           transliteration: "zayt",
           meaning: "oil (practice زيت)",
+          meaningAr: "زيت (تدرب على زيت)",
           meaningFr: "huile (pratiquer زيت)",
         },
       ],
@@ -1850,12 +2340,19 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الكتابة: وصل الحروف",
     titleFr: "Écriture : Connexion des lettres",
     description: "Learn to connect letters smoothly",
+    descriptionAr: "تعلم ربط الحروف بسلاسة",
     descriptionFr: "Apprenez à connecter les lettres de manière fluide",
     objectives: [
       "Write connected letter combinations",
       "Maintain smooth flow between letters",
       "Practice common letter pairs",
       "Develop writing fluency",
+    ],
+    objectivesAr: [
+      "ربط الحروف بشكل صحيح",
+      "فهم أشكال الحروف المتصلة",
+      "ممارسة الكتابة الجارية",
+      "تطوير المهارات الحركية الدقيقة",
     ],
     objectivesFr: [
       "Écrire des combinaisons de lettres connectées",
@@ -1870,28 +2367,47 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Connection Points",
+          titleAr: "نقاط الاتصال",
           titleFr: "Points de connexion",
           content:
             "Most letters connect at the BASELINE. The connection is a thin horizontal stroke that flows naturally from one letter to the next.\n\nExample: بـيـت (bayt) - see how ب connects to ي connects to ت",
+          contentAr:
+            "تتصل معظم الحروف عند خط الأساس. الاتصال هو خط أفقي رقيق يتدفق بشكل طبيعي من حرف إلى آخر.\n\nمثال: بـيـت (bayt) - انظر كيف يتصل ب بـ ي وتتصل ي بـ ت",
           contentFr:
             "La plupart des lettres se connectent à la LIGNE DE BASE. La connexion est un trait horizontal fin qui coule naturellement d'une lettre à l'autre.\n\nExemple : بـيـت (bayt) - voyez comment ب se connecte à ي qui se connecte à ت",
         },
         {
           title: "Common Combinations",
+          titleAr: "التركيبات الشائعة",
           titleFr: "Combinaisons courantes",
           content:
             "Practice these frequent pairs:\n• لا (lām-alif): Special ligature\n• مـح (mīm-ḥā'): Round to hook\n• كـت (kāf-tā'): Zig-zag to curve\n• فـي (fā'-yā'): Loop to dots",
+          contentAr:
+            "تدرب على هذه الأزواج الشائعة:\n• لا (lām-alif): ربط خاص\n• مـح (mīm-ḥā'): مستدير إلى خطاف\n• كـت (kāf-tā'): متعرج إلى منحنى\n• فـي (fā'-yā'): حلقة إلى نقاط",
           contentFr:
             "Pratiquez ces paires fréquentes :\n• لا (lām-alif) : Ligature spéciale\n• مـح (mīm-ḥā') : Rond vers crochet\n• كـت (kāf-tā') : Zig-zag vers courbe\n• فـي (fā'-yā') : Boucle vers points",
         },
       ],
       vocabulary: [
-        { arabic: "مَكْتَبَة", transliteration: "maktaba", meaning: "library", meaningFr: "bibliothèque" },
-        { arabic: "مَدْرَسَة", transliteration: "madrasa", meaning: "school", meaningFr: "école" },
+        {
+          arabic: "مَكْتَبَة",
+          transliteration: "maktaba",
+          meaning: "library",
+          meaningAr: "مكتبة",
+          meaningFr: "bibliothèque",
+        },
+        {
+          arabic: "مَدْرَسَة",
+          transliteration: "madrasa",
+          meaning: "school",
+          meaningAr: "مدرسة",
+          meaningFr: "école",
+        },
         {
           arabic: "جَامِعَة",
           transliteration: "jāmi'a",
           meaning: "university",
+          meaningAr: "جامعة",
           meaningFr: "université",
         },
       ],
@@ -1907,12 +2423,19 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الكتابة: كلمات كاملة",
     titleFr: "Écriture : Mots complets",
     description: "Practice writing complete Arabic words",
+    descriptionAr: "ممارسة كتابة كلمات عربية كاملة",
     descriptionFr: "Entraînez-vous à écrire des mots arabes complets",
     objectives: [
       "Write multi-letter words fluently",
       "Add vowel marks correctly",
       "Maintain consistent letter size",
       "Develop neat handwriting",
+    ],
+    objectivesAr: [
+      "كتابة كلمات عربية كاملة",
+      "تطبيق قواعد ربط الحروف",
+      "تحسين سرعة الكتابة والدقة",
+      "بناء الثقة في الكتابة اليدوية",
     ],
     objectivesFr: [
       "Écrire des mots à plusieurs lettres avec fluidité",
@@ -1927,25 +2450,49 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Word Writing Strategy",
+          titleAr: "استراتيجية كتابة الكلمات",
           titleFr: "Stratégie d'écriture des mots",
           content:
             "When writing Arabic words:\n1. Plan the word mentally first\n2. Write all LETTERS from right to left\n3. Add DOTS after completing each letter group\n4. Add VOWEL MARKS (harakat) last",
+          contentAr:
+            "عند كتابة كلمات عربية:\n1. خطط الكلمة عقليًا أولاً\n2. اكتب جميع الحروف من اليمين إلى اليسار\n3. أضف النقاط بعد إكمال كل مجموعة حروف\n4. أضف علامات الحروف الصوتية (harakat) آخراً",
           contentFr:
             "Lors de l'écriture de mots arabes :\n1. Planifiez d'abord le mot mentalement\n2. Écrivez toutes les LETTRES de droite à gauche\n3. Ajoutez les POINTS après avoir terminé chaque groupe de lettres\n4. Ajoutez les MARQUES DE VOYELLES (harakat) en dernier",
         },
         {
           title: "Common Mistakes to Avoid",
+          titleAr: "الأخطاء الشائعة التي يجب تجنبها",
           titleFr: "Erreurs courantes à éviter",
           content:
             "• Mixing letter forms (using final form in the middle)\n• Forgetting to lift pen after non-connectors\n• Inconsistent letter sizes\n• Misplacing dots",
+          contentAr:
+            "• خلط أشكال الحروف (استخدام الشكل النهائي في الوسط)\n• نسيان رفع القلم بعد الحروف غير المتصلة\n• أحجام حروف غير متسقة\n• وضع النقاط بشكل خاطئ",
           contentFr:
             "• Mélanger les formes de lettres (utiliser la forme finale au milieu)\n• Oublier de lever le stylo après les lettres non connectées\n• Tailles de lettres incohérentes\n• Points mal placés",
         },
       ],
       vocabulary: [
-        { arabic: "سَلَام", transliteration: "salām", meaning: "peace", meaningFr: "paix" },
-        { arabic: "شُكْرًا", transliteration: "shukran", meaning: "thank you", meaningFr: "merci" },
-        { arabic: "مَرْحَبًا", transliteration: "marḥaban", meaning: "hello", meaningFr: "bonjour" },
+        {
+          arabic: "سَلَام",
+          transliteration: "salām",
+          meaning: "peace",
+          meaningAr: "سلام",
+          meaningFr: "paix",
+        },
+        {
+          arabic: "شُكْرًا",
+          transliteration: "shukran",
+          meaning: "thank you",
+          meaningAr: "شكراً",
+          meaningFr: "merci",
+        },
+        {
+          arabic: "مَرْحَبًا",
+          transliteration: "marḥaban",
+          meaning: "hello",
+          meaningAr: "مرحباً",
+          meaningFr: "bonjour",
+        },
       ],
     },
     exerciseCount: 18,
@@ -1961,6 +2508,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الأرقام العربية ٠-١٠",
     titleFr: "Chiffres arabes 0-10",
     description: "Learn Arabic-Indic numerals and number words",
+    descriptionAr: "تعلم الأرقام الهندية العربية والكلمات الرقمية",
     descriptionFr:
       "Apprenez les chiffres arabo-indiens et les mots pour les nombres",
     objectives: [
@@ -1968,6 +2516,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Write and pronounce number words",
       "Count from 0 to 10 in Arabic",
       "Use numbers in basic contexts",
+    ],
+    objectivesAr: [
+      "التعرف على الأرقام الهندية من 0 إلى 10",
+      "نطق كلمات الأرقام بالعربية",
+      "كتابة الأرقام الهندية بشكل صحيح",
+      "استخدام الأرقام في السياقات العملية",
     ],
     objectivesFr: [
       "Reconnaître les chiffres arabes ٠-١٠",
@@ -1982,17 +2536,23 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Arabic-Indic Numerals",
+          titleAr: "الأرقام الهندية العربية",
           titleFr: "Chiffres arabo-indiens",
           content:
             "Arabic uses its own numeral system (though Western numerals are also common):\n٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩ ١٠\n0  1  2  3  4  5  6  7  8  9  10\n\nFun fact: Our 'Arabic numerals' (1, 2, 3...) actually came FROM Arabic!",
+          contentAr:
+            "تستخدم العربية نظام الأرقام الخاص بها (على الرغم من أن الأرقام الغربية شائعة أيضًا):\n٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩ ١٠\n0  1  2  3  4  5  6  7  8  9  10\n\nحقيقة مرحة: 'الأرقام العربية' (1، 2، 3...) في الواقع جاءت من العربية!",
           contentFr:
             "L'arabe utilise son propre système de chiffres (bien que les chiffres occidentaux soient aussi courants) :\n٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩ ١٠\n0  1  2  3  4  5  6  7  8  9  10\n\nFait amusant : Nos 'chiffres arabes' (1, 2, 3...) viennent en fait DE l'arabe !",
         },
         {
           title: "Number Words",
+          titleAr: "كلمات الأرقام",
           titleFr: "Mots des nombres",
           content:
             "0 = صِفْر (ṣifr) - origin of 'zero'!\n1 = وَاحِد (wāḥid)\n2 = اِثْنَان (ithnān)\n3 = ثَلَاثَة (thalātha)\n4 = أَرْبَعَة (arba'a)\n5 = خَمْسَة (khamsa)",
+          contentAr:
+            "0 = صِفْر (ṣifr) - أصل كلمة 'zero'!\n1 = وَاحِد (wāḥid)\n2 = اِثْنَان (ithnān)\n3 = ثَلَاثَة (thalātha)\n4 = أَرْبَعَة (arba'a)\n5 = خَمْسَة (khamsa)",
           contentFr:
             "0 = صِفْر (ṣifr) - origine de 'zéro' !\n1 = وَاحِد (wāḥid)\n2 = اِثْنَان (ithnān)\n3 = ثَلَاثَة (thalātha)\n4 = أَرْبَعَة (arba'a)\n5 = خَمْسَة (khamsa)",
         },
@@ -2014,12 +2574,19 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أيام الأسبوع",
     titleFr: "Les jours de la semaine",
     description: "Learn the names of the days in Arabic",
+    descriptionAr: "تعلم أسماء أيام الأسبوع بالعربية",
     descriptionFr: "Apprenez les noms des jours en arabe",
     objectives: [
       "Name all seven days in Arabic",
       "Understand day name origins",
       "Use days in simple sentences",
       "Practice pronunciation",
+    ],
+    objectivesAr: [
+      "التعرف على أسماء الأيام السبعة",
+      "نطق أسماء الأيام بشكل صحيح",
+      "استخدام أسماء الأيام في الجمل",
+      "حفظ الترتيب الصحيح للأيام",
     ],
     objectivesFr: [
       "Nommer les sept jours en arabe",
@@ -2034,41 +2601,66 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Arabic Week",
+          titleAr: "الأسبوع العربي",
           titleFr: "La semaine arabe",
           content:
             "The Arabic week starts on SUNDAY (not Monday):\n\n1. الأَحَد (al-aḥad) - Sunday (The One)\n2. الاِثْنَيْن (al-ithnayn) - Monday (The Two)\n3. الثُّلَاثَاء (ath-thulāthā') - Tuesday (The Three)\n4. الأَرْبِعَاء (al-arbi'ā') - Wednesday (The Four)\n5. الخَمِيس (al-khamīs) - Thursday (The Five)\n6. الجُمْعَة (al-jum'a) - Friday (Gathering - prayer day)\n7. السَّبْت (as-sabt) - Saturday (Sabbath)",
+          contentAr:
+            "يبدأ الأسبوع العربي يوم الأحد (وليس الاثنين):\n\n١. الأَحَد (al-aḥad) - الأحد (الواحد)\n٢. الاِثْنَيْن (al-ithnayn) - الاثنين (الاثنان)\n٣. الثُّلَاثَاء (ath-thulāthā') - الثلاثاء (الثلاثة)\n٤. الأَرْبِعَاء (al-arbi'ā') - الأربعاء (الأربعة)\n٥. الخَمِيس (al-khamīs) - الخميس (الخمسة)\n٦. الجُمْعَة (al-jum'a) - الجمعة (التجمع - يوم الصلاة)\n٧. السَّبْت (as-sabt) - السبت (السبت)",
           contentFr:
             "La semaine arabe commence le DIMANCHE (pas le lundi) :\n\n1. الأَحَد (al-aḥad) - Dimanche (Le Un)\n2. الاِثْنَيْن (al-ithnayn) - Lundi (Le Deux)\n3. الثُّلَاثَاء (ath-thulāthā') - Mardi (Le Trois)\n4. الأَرْبِعَاء (al-arbi'ā') - Mercredi (Le Quatre)\n5. الخَمِيس (al-khamīs) - Jeudi (Le Cinq)\n6. الجُمْعَة (al-jum'a) - Vendredi (Rassemblement - jour de prière)\n7. السَّبْت (as-sabt) - Samedi (Sabbat)",
         },
       ],
       vocabulary: [
-        { arabic: "الأَحَد", transliteration: "al-aḥad", meaning: "Sunday", meaningFr: "Dimanche" },
+        {
+          arabic: "الأَحَد",
+          transliteration: "al-aḥad",
+          meaning: "Sunday",
+          meaningAr: "الأحد",
+          meaningFr: "Dimanche",
+        },
         {
           arabic: "الاِثْنَيْن",
           transliteration: "al-ithnayn",
           meaning: "Monday",
+          meaningAr: "الاثنين",
           meaningFr: "Lundi",
         },
         {
           arabic: "الثُّلَاثَاء",
           transliteration: "ath-thulāthā'",
           meaning: "Tuesday",
+          meaningAr: "الثلاثاء",
           meaningFr: "Mardi",
         },
         {
           arabic: "الأَرْبِعَاء",
           transliteration: "al-arbi'ā'",
           meaning: "Wednesday",
+          meaningAr: "الأربعاء",
           meaningFr: "Mercredi",
         },
         {
           arabic: "الخَمِيس",
           transliteration: "al-khamīs",
           meaning: "Thursday",
+          meaningAr: "الخميس",
           meaningFr: "Jeudi",
         },
-        { arabic: "الجُمْعَة", transliteration: "al-jum'a", meaning: "Friday", meaningFr: "Vendredi" },
-        { arabic: "السَّبْت", transliteration: "as-sabt", meaning: "Saturday", meaningFr: "Samedi" },
+        {
+          arabic: "الجُمْعَة",
+          transliteration: "al-jum'a",
+          meaning: "Friday",
+          meaningAr: "الجمعة",
+          meaningFr: "Vendredi",
+        },
+        {
+          arabic: "السَّبْت",
+          transliteration: "as-sabt",
+          meaning: "Saturday",
+          meaningAr: "السبت",
+          meaningFr: "Samedi",
+        },
       ],
     },
     exerciseCount: 14,
@@ -2084,6 +2676,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "التحيات الأساسية",
     titleFr: "Salutations de base",
     description: "Learn essential Arabic greetings and responses",
+    descriptionAr: "تعلم التحيات العربية الأساسية والردود عليها",
     descriptionFr:
       "Apprenez les salutations arabes essentielles et leurs réponses",
     objectives: [
@@ -2091,6 +2684,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Respond to common greetings",
       "Understand greeting etiquette",
       "Practice conversational pronunciation",
+    ],
+    objectivesAr: [
+      "حيّ الناس بشكل صحيح بالعربية",
+      "رد على التحيات الشائعة",
+      "افهم آداب التحية",
+      "تدرب على نطق المحادثة",
     ],
     objectivesFr: [
       "Saluer les gens correctement en arabe",
@@ -2105,17 +2704,23 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Universal Greeting",
+          titleAr: "التحية العالمية",
           titleFr: "La salutation universelle",
           content:
             "السَّلَامُ عَلَيْكُمْ (as-salāmu 'alaykum) = Peace be upon you\n\nResponse: وَعَلَيْكُمُ السَّلَام (wa 'alaykum as-salām) = And upon you peace\n\nThis is the most important Arabic greeting - used by Muslims worldwide!",
+          contentAr:
+            "السَّلَامُ عَلَيْكُمْ (as-salāmu 'alaykum) = السلام عليكم\n\nالرد: وَعَلَيْكُمُ السَّلَام (wa 'alaykum as-salām) = وعليكم السلام\n\nهذه هي أهم تحية عربية - يستخدمها المسلمون في جميع أنحاء العالم!",
           contentFr:
             "السَّلَامُ عَلَيْكُمْ (as-salāmu 'alaykum) = Que la paix soit sur vous\n\nRéponse : وَعَلَيْكُمُ السَّلَام (wa 'alaykum as-salām) = Et sur vous la paix\n\nC'est la salutation arabe la plus importante - utilisée par les musulmans du monde entier !",
         },
         {
           title: "Common Greetings",
+          titleAr: "التحيات الشائعة",
           titleFr: "Salutations courantes",
           content:
             "مَرْحَبًا (marḥaban) = Hello/Welcome\nأَهْلًا وَسَهْلًا (ahlan wa-sahlan) = Welcome\nصَبَاحُ الخَيْر (ṣabāḥ al-khayr) = Good morning\nمَسَاءُ الخَيْر (masā' al-khayr) = Good evening",
+          contentAr:
+            "مَرْحَبًا (marḥaban) = مرحباً\nأَهْلًا وَسَهْلًا (ahlan wa-sahlan) = أهلاً وسهلاً\nصَبَاحُ الخَيْر (ṣabāḥ al-khayr) = صباح الخير\nمَسَاءُ الخَيْر (masā' al-khayr) = مساء الخير",
           contentFr:
             "مَرْحَبًا (marḥaban) = Bonjour/Bienvenue\nأَهْلًا وَسَهْلًا (ahlan wa-sahlan) = Bienvenue\nصَبَاحُ الخَيْر (ṣabāḥ al-khayr) = Bonjour (matin)\nمَسَاءُ الخَيْر (masā' al-khayr) = Bonsoir",
         },
@@ -2125,25 +2730,35 @@ export const PHASE_1_LESSONS: Lesson[] = [
           arabic: "السَّلَامُ عَلَيْكُمْ",
           transliteration: "as-salāmu 'alaykum",
           meaning: "Peace be upon you",
+          meaningAr: "السلام عليكم",
           meaningFr: "Que la paix soit sur vous",
         },
-        { arabic: "مَرْحَبًا", transliteration: "marḥaban", meaning: "Hello", meaningFr: "Bonjour" },
+        {
+          arabic: "مَرْحَبًا",
+          transliteration: "marḥaban",
+          meaning: "Hello",
+          meaningAr: "مرحباً",
+          meaningFr: "Bonjour",
+        },
         {
           arabic: "صَبَاحُ الخَيْر",
           transliteration: "ṣabāḥ al-khayr",
           meaning: "Good morning",
+          meaningAr: "صباح الخير",
           meaningFr: "Bonjour (matin)",
         },
         {
           arabic: "مَسَاءُ الخَيْر",
           transliteration: "masā' al-khayr",
           meaning: "Good evening",
+          meaningAr: "مساء الخير",
           meaningFr: "Bonsoir",
         },
         {
           arabic: "كَيْفَ حَالُكَ؟",
           transliteration: "kayfa ḥāluka?",
           meaning: "How are you? (m)",
+          meaningAr: "كيف حالك؟",
           meaningFr: "Comment vas-tu ? (m)",
         },
       ],
@@ -2159,12 +2774,19 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "مراجعة وتقييم المرحلة الأولى",
     titleFr: "Révision et évaluation de la Phase 1",
     description: "Comprehensive review of all Phase 1 content",
+    descriptionAr: "مراجعة شاملة لجميع محتويات المرحلة الأولى",
     descriptionFr: "Révision complète de tout le contenu de la Phase 1",
     objectives: [
       "Review all 28 letters of the Arabic alphabet",
       "Demonstrate reading fluency",
       "Apply vowel marks correctly",
       "Celebrate your achievements!",
+    ],
+    objectivesAr: [
+      "مراجعة الأبجدية العربية الكاملة",
+      "التدريب على الحروف والعلامات",
+      "تعزيز مهارات القراءة والكتابة",
+      "تقييم المعرفة المكتسبة في المرحلة الأولى",
     ],
     objectivesFr: [
       "Réviser les 28 lettres de l'alphabet arabe",
@@ -2179,25 +2801,34 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "🎉 Congratulations!",
+          titleAr: "🎉 مبروك!",
           titleFr: "🎉 Félicitations !",
           content:
             "You've completed Phase 1: Foundations! You can now:\n✓ Read the Arabic alphabet\n✓ Write Arabic letters in all forms\n✓ Use vowel marks (harakat)\n✓ Read simple words and phrases\n✓ Count and greet in Arabic",
+          contentAr:
+            "لقد أكملت المرحلة الأولى: الأساسيات! يمكنك الآن:\n✓ قراءة الأبجدية العربية\n✓ كتابة الحروف العربية بجميع أشكالها\n✓ استخدام علامات الحروف الصوتية (harakat)\n✓ قراءة كلمات وعبارات بسيطة\n✓ العد والتحية بالعربية",
           contentFr:
             "Vous avez terminé la Phase 1 : Fondations ! Vous pouvez maintenant :\n✓ Lire l'alphabet arabe\n✓ Écrire les lettres arabes sous toutes leurs formes\n✓ Utiliser les marques de voyelles (harakat)\n✓ Lire des mots et phrases simples\n✓ Compter et saluer en arabe",
         },
         {
           title: "Skills Assessment",
+          titleAr: "تقييم المهارات",
           titleFr: "Évaluation des compétences",
           content:
             "This final lesson will test all your Phase 1 skills:\n• Letter recognition\n• Form identification\n• Vowel mark application\n• Reading comprehension\n• Writing accuracy",
+          contentAr:
+            "ستختبر هذه الدرس النهائي جميع مهاراتك في المرحلة الأولى:\n• التعرف على الحروف\n• تحديد الأشكال\n• تطبيق علامات الحروف الصوتية\n• فهم المقروء\n• دقة الكتابة",
           contentFr:
             "Cette leçon finale testera toutes vos compétences de Phase 1 :\n• Reconnaissance des lettres\n• Identification des formes\n• Application des marques de voyelles\n• Compréhension en lecture\n• Précision de l'écriture",
         },
         {
           title: "Ready for Phase 2!",
+          titleAr: "جاهز للمرحلة الثانية!",
           titleFr: "Prêt pour la Phase 2 !",
           content:
             "In Phase 2: Building Blocks, you'll learn:\n• Basic vocabulary (100+ words)\n• Noun-adjective agreement\n• Pronouns and possessives\n• Simple sentences\n• More practical conversations",
+          contentAr:
+            "في المرحلة الثانية: كتل البناء، ستتعلم:\n• المفردات الأساسية (100+ كلمة)\n• اتفاق الاسم والصفة\n• الضمائر والملكيات\n• جمل بسيطة\n• محادثات عملية أكثر",
           contentFr:
             "Dans la Phase 2 : Blocs de construction, vous apprendrez :\n• Vocabulaire de base (100+ mots)\n• Accord nom-adjectif\n• Pronoms et possessifs\n• Phrases simples\n• Plus de conversations pratiques",
         },

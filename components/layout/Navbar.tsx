@@ -3,7 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Moon, Sun, Globe, User, LogOut, Settings, Flame, Star, ChevronDown } from "lucide-react";
+import {
+  Menu,
+  X,
+  Moon,
+  Sun,
+  Globe,
+  User,
+  LogOut,
+  Settings,
+  Flame,
+  Star,
+  ChevronDown,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
@@ -44,33 +56,36 @@ const languages = [
  * theme toggle, language switcher, and user menu
  */
 export function Navbar() {
-  const t = useTranslations('navigation');
+  const t = useTranslations("navigation");
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  
-  const { user, isAuthenticated, settings, setTheme, setLocale, logout } = useUserStore();
+
+  const { user, isAuthenticated, settings, setTheme, setLocale, logout } =
+    useUserStore();
   const { stats, getLevelInfo } = useGamificationStore();
-  
+
   // Extract stats with safe defaults
   const level = stats?.level ?? 1;
   const xp = stats?.xp ?? 0;
   const streak = stats?.streak ?? 0;
-  
+
   // Calculate level info for XP progress
   const levelInfo = getLevelInfo();
-  const xpProgress = levelInfo.requiredXP && levelInfo.requiredXP > 0 
-    ? Math.min((levelInfo.currentXP / levelInfo.requiredXP) * 100, 100)
-    : 0;
-  
-  const currentLanguage = languages.find((l) => l.code === settings.locale) || languages[0];
-  
+  const xpProgress =
+    levelInfo.requiredXP && levelInfo.requiredXP > 0
+      ? Math.min((levelInfo.currentXP / levelInfo.requiredXP) * 100, 100)
+      : 0;
+
+  const currentLanguage =
+    languages.find((l) => l.code === settings.locale) || languages[0];
+
   /**
    * Toggle between light and dark theme
    */
   const toggleTheme = () => {
     const newTheme = settings.theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
-    
+
     // Apply theme to document
     if (newTheme === "dark") {
       document.documentElement.classList.add("dark");
@@ -78,13 +93,13 @@ export function Navbar() {
       document.documentElement.classList.remove("dark");
     }
   };
-  
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-dark">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-gold to-gold-dark">
             <span className="font-arabic text-xl text-background">ع</span>
           </div>
           <div className="hidden sm:block">
@@ -94,7 +109,7 @@ export function Navbar() {
             <span className="block text-xs text-muted-foreground">Pro</span>
           </div>
         </Link>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex md:items-center md:gap-6">
           {navItems.map((item) => (
@@ -105,14 +120,14 @@ export function Navbar() {
                 "relative px-1 py-2 text-sm font-medium transition-colors hover:text-gold",
                 pathname === item.href
                   ? "text-gold after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-gold"
-                  : "text-muted-foreground"
+                  : "text-muted-foreground",
               )}
             >
               {t(item.key)}
             </Link>
           ))}
         </div>
-        
+
         {/* Right side actions */}
         <div className="flex items-center gap-2">
           {/* Gamification stats (visible when authenticated or has progress) */}
@@ -125,7 +140,7 @@ export function Navbar() {
                   <span className="text-sm font-medium">{streak}</span>
                 </div>
               )}
-              
+
               {/* Level & XP */}
               <div className="flex items-center gap-2">
                 <Badge variant="secondary" className="bg-gold/10 text-gold">
@@ -141,7 +156,7 @@ export function Navbar() {
               </div>
             </div>
           )}
-          
+
           {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -157,7 +172,7 @@ export function Navbar() {
                   onClick={() => setLocale(lang.code as "en" | "fr" | "ar")}
                   className={cn(
                     "cursor-pointer",
-                    settings.locale === lang.code && "bg-gold/10"
+                    settings.locale === lang.code && "bg-gold/10",
                   )}
                 >
                   <span className="mr-2">{lang.flag}</span>
@@ -166,7 +181,7 @@ export function Navbar() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          
+
           {/* Theme Toggle */}
           <Button
             variant="ghost"
@@ -181,14 +196,17 @@ export function Navbar() {
             )}
             <span className="sr-only">Toggle theme</span>
           </Button>
-          
+
           {/* User Menu / Auth */}
           {isAuthenticated && user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="h-9 gap-2 px-2">
                   <Avatar className="h-7 w-7">
-                    <AvatarImage src={user.image || undefined} alt={user.name || "User"} />
+                    <AvatarImage
+                      src={user.image || undefined}
+                      alt={user.name || "User"}
+                    />
                     <AvatarFallback className="bg-gold/20 text-gold text-xs">
                       {user.name?.charAt(0).toUpperCase() || "U"}
                     </AvatarFallback>
@@ -205,13 +223,13 @@ export function Navbar() {
                 <DropdownMenuItem asChild>
                   <Link href="/profile" className="cursor-pointer">
                     <User className="mr-2 h-4 w-4" />
-                    {t('profile')}
+                    {t("profile")}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/settings" className="cursor-pointer">
                     <Settings className="mr-2 h-4 w-4" />
-                    {t('settings')}
+                    {t("settings")}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
@@ -220,21 +238,25 @@ export function Navbar() {
                   className="cursor-pointer text-destructive focus:text-destructive"
                 >
                   <LogOut className="mr-2 h-4 w-4" />
-                  {t('logout')}
+                  {t("logout")}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
             <div className="hidden items-center gap-2 sm:flex">
               <Button variant="ghost" size="sm" asChild>
-                <Link href="/login">{t('login')}</Link>
+                <Link href="/login">{t("login")}</Link>
               </Button>
-              <Button size="sm" className="bg-gold hover:bg-gold-dark text-background" asChild>
-                <Link href="/register">{t('register')}</Link>
+              <Button
+                size="sm"
+                className="bg-gold hover:bg-gold-dark text-background"
+                asChild
+              >
+                <Link href="/register">{t("register")}</Link>
               </Button>
             </div>
           )}
-          
+
           {/* Mobile Menu Toggle */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -256,14 +278,14 @@ export function Navbar() {
                         "rounded-lg px-4 py-3 text-base font-medium transition-colors",
                         pathname === item.href
                           ? "bg-gold/10 text-gold"
-                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                          : "text-muted-foreground hover:bg-muted hover:text-foreground",
                       )}
                     >
                       {t(item.key)}
                     </Link>
                   ))}
                 </nav>
-                
+
                 {/* Mobile stats */}
                 {(isAuthenticated || level > 1 || xp > 0) && (
                   <div className="rounded-lg border border-border bg-card p-4">
@@ -293,7 +315,7 @@ export function Navbar() {
                     </div>
                   </div>
                 )}
-                
+
                 {/* Mobile auth buttons */}
                 {!isAuthenticated && (
                   <div className="flex flex-col gap-2">
@@ -302,7 +324,10 @@ export function Navbar() {
                         Login
                       </Link>
                     </Button>
-                    <Button className="w-full bg-gold hover:bg-gold-dark text-background" asChild>
+                    <Button
+                      className="w-full bg-gold hover:bg-gold-dark text-background"
+                      asChild
+                    >
                       <Link href="/register" onClick={() => setIsOpen(false)}>
                         Sign up
                       </Link>

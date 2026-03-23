@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "total_gaps": 330,
+    "total_items": 207,
+    "phases": 4,
+    "description": "Complete translation guide for Arabic Training Curriculum (Phase 2-5)"
+  },
+  "phase2": {
+    "2-3": {
+      "lesson": "Colors",
+      "gap_type": "MISSING titleAr and contentAr",
+      "items": [
+        {
+          "title": "Color Patterns",
+          "titleAr": "نماذج الألوان",
+          "contentAr": "معظم الألوان تتبع نمط أَفْعَل (af'al) للمذكر و فَعْلَاء (fa'lā') للمؤنث. هذا نمط صفة خاص!\n\nبعض الألوان لا تتغير:\nبُنِّي (bunnī) = بني\nبُرْتُقَالِي (burtuqālī) = برتقالي\nوَرْدِي (wardī) = وردي\nبَنَفْسَجِي (banafsajī) = بنفسجي"
+        }
+      ]
+    },
+    "2-6": {
+      "lesson": "Home and Furniture",
+      "gap_type": "MISSING titleFr and contentFr for all items",
+      "items": [
+        {
+          "title": "Rooms of the House",
+          "titleFr": "Les pièces de la maison",
+          "contentFr": "بَيْت (bayt) = maison\nمَنْزِل (manzil) = résidence/maison\nغُرْفَة (ghurfa) = pièce\nغُرْفَة النَّوْم (ghurfat an-nawm) = chambre à coucher\nغُرْفَة الجُلُوس (ghurfat al-julūs) = salon\nمَطْبَخ (maṭbakh) = cuisine\nحَمَّام (ḥammām) = salle de bain"
+        },
+        {
+          "title": "Furniture",
+          "titleFr": "Les meubles",
+          "contentFr": "أَثَاث (athāth) = meubles\nسَرِير (sarīr) = lit\nكُرْسِي (kursī) = chaise\nطَاوِلَة (ṭāwila) = table\nخِزَانَة (khizāna) = placard/armoire\nمِرْآة (mir'āh) = miroir"
+        },
+        {
+          "title": "Location Words",
+          "titleFr": "Les mots de lieu",
+          "contentFr": "فِي (fī) = dans\nعَلَى ('alā) = sur\nتَحْت (taḥt) = sous\nفَوْق (fawq) = au-dessus\nبِجَانِب (bi-jānib) = à côté de\nأَمَام (amām) = devant\nوَرَاء (warā') = derrière"
+        }
+      ]
+    },
+    "2-7": {
+      "lesson": "Personal Pronouns",
+      "gap_type": "MISSING titleFr and contentFr for all items",
+      "items": [
+        {
+          "title": "Arabic Pronoun System",
+          "titleFr": "Le système des pronoms arabes",
+          "contentFr": "L'arabe a PLUS de pronoms que l'anglais car il distingue :\n• Le genre (masculin/féminin)\n• Le nombre (singulier/duel/pluriel)\n• La personne (1ère/2e/3e)\n\nCela nous donne 12 pronoms (contre 7 en anglais) !"
+        },
+        {
+          "title": "Singular Pronouns",
+          "titleFr": "Les pronoms singuliers",
+          "contentFr": "1ère personne :\nأَنَا (anā) = je\n\n2e personne :\nأَنْتَ (anta) = tu (masculin)\nأَنْتِ (anti) = tu (féminin)\n\n3e personne :\nهُوَ (huwa) = il\nهِيَ (hiya) = elle"
+        },
+        {
+          "title": "Plural Pronouns",
+          "titleFr": "Les pronoms pluriels",
+          "contentFr": "1ère personne :\nنَحْنُ (naḥnu) = nous\n\n2e personne :\nأَنْتُمْ (antum) = vous (m ou mixte)\nأَنْتُنَّ (antunna) = vous (f seulement)\n\n3e personne :\nهُمْ (hum) = ils (m ou mixte)\nهُنَّ (hunna) = elles (f seulement)"
+        },
+        {
+          "title": "Dual Pronouns",
+          "titleFr": "Les pronoms duels",
+          "contentFr": "L'arabe a aussi des formes duelles pour exactement 2 personnes :\nأَنْتُمَا (antumā) = vous deux\nهُمَا (humā) = ils/elles deux\n\nLe duel est moins utilisé en arabe parlé moderne, mais important pour l'arabe formel/écrit !"
+        }
+      ]
+    },
+    "2-8": {
+      "lesson": "Possessive Pronouns",
+      "gap_type": "MISSING titleFr and contentFr for all items",
+      "items": [
+        {
+          "title": "Possessive Suffixes",
+          "titleFr": "Les suffixes possessifs",
+          "contentFr": "L'arabe exprime la possession en ATTACHEANT un suffixe au nom :\n\nكِتَاب (kitāb) = livre\nكِتَابِي (kitābī) = mon livre\nكِتَابُكَ (kitābuka) = ton livre (m)\nكِتَابُهُ (kitābuhu) = son livre\nكِتَابُهَا (kitābuhā) = son livre (f)"
+        },
+        {
+          "title": "All Possessive Suffixes",
+          "titleFr": "Tous les suffixes possessifs",
+          "contentFr": "Singulier :\nـي (-ī) = mon/ma/mes\nـكَ (-ka) = ton/ta/tes (m)\nـكِ (-ki) = ton/ta/tes (f)\nـهُ (-hu) = son/sa/ses\nـهَا (-hā) = son/sa/ses (f)\n\nPluriel :\nـنَا (-nā) = notre/nos\nـكُمْ (-kum) = votre/vos (pl)\nـهُمْ (-hum) = leur/leurs"
+        },
+        {
+          "title": "Examples with Family",
+          "titleFr": "Exemples avec la famille",
+          "contentFr": "أَبِي (abī) = mon père\nأُمُّكَ (ummuka) = ta mère (m)\nأُخْتُهُ (ukhtuhu) = sa sœur\nبَيْتُنَا (baytunā) = notre maison\nأَبُوهُمْ (abūhum) = leur père"
+        }
+      ]
+    },
+    "2-9": {
+      "lesson": "Demonstrative Pronouns",
+      "gap_type": "MISSING titleFr and contentFr for all items",
+      "items": [
+        {
+          "title": "Near Demonstratives (This/These)",
+          "titleFr": "Démonstratifs proches (Ceci/Ceux-ci)",
+          "contentFr": "هَذَا (hādhā) = ceci (m)\nهَذِهِ (hādhihi) = ceci (f)\nهَذَانِ (hādhāni) = ces deux (m)\nهَاتَانِ (hātāni) = ces deux (f)\nهَؤُلَاءِ (hā'ulā'i) = ceux-ci (pluriel)"
+        },
+        {
+          "title": "Far Demonstratives (That/Those)",
+          "titleFr": "Démonstratifs éloignés (Cela/Ceux-là)",
+          "contentFr": "ذَلِكَ (dhālika) = cela (m)\nتِلْكَ (tilka) = cela (f)\nذَانِكَ (dhānika) = ces deux-là (m)\nتَانِكَ (tānika) = ces deux-là (f)\nأُولَئِكَ (ulā'ika) = ceux-là (pluriel)"
+        },
+        {
+          "title": "Using Demonstratives",
+          "titleFr": "Utiliser les démonstratifs",
+          "contentFr": "هَذَا كِتَابٌ (hādhā kitābun) = Ceci est un livre\nهَذِهِ سَيَّارَةٌ (hādhihi sayyāratun) = Ceci est une voiture\nذَلِكَ الرَّجُلُ (dhālika ar-rajulu) = Cet homme\nتِلْكَ المَرْأَةُ (tilka al-mar'atu) = Cette femme"
+        }
+      ]
+    },
+    "2-10": {
+      "lesson": "Interrogative Pronouns",
+      "gap_type": "MISSING titleFr and contentFr for all items",
+      "items": [
+        {
+          "title": "Basic Question Words",
+          "titleFr": "Mots interrogatifs de base",
+          "contentFr": "مَنْ (man) = qui ?\nمَا (mā) / مَاذَا (mādhā) = quoi ?\nأَيْنَ (ayna) = où ?\nمَتَى (matā) = quand ?\nلِمَاذَا (limādhā) = pourquoi ?\nكَيْفَ (kayfa) = comment ?\nكَمْ (kam) = combien ?"
+        },
+        {
+          "title": "Forming Questions",
+          "titleFr": "Former les questions",
+          "contentFr": "Les questions commencent souvent par le mot interrogatif :\nمَنْ هَذَا؟ (man hādhā?) = Qui est-ce ?\nمَا اسْمُكَ؟ (mā ismuka?) = Quel est ton nom ?\nأَيْنَ أَنْتَ؟ (ayna anta?) = Où es-tu ?\nمَتَى السَّفَر؟ (matā as-safar?) = Quand est le voyage ?"
+        },
+        {
+          "title": "Yes/No Questions",
+          "titleFr": "Questions oui/non",
+          "contentFr": "Pour les questions oui/non, utilisez هَلْ (hal) ou أَ (a) au début :\nهَلْ أَنْتَ طَالِبٌ؟ (hal anta ṭālibun?) = Es-tu étudiant ?\nأَتُحِبُّ القَهْوَة؟ (atuḥibbu al-qahwa?) = Aimes-tu le café ?"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "note": "This JSON contains sample data for Lessons 2-3, 2-6 through 2-10. The full dataset includes all lessons 2-11 through 2-29 for Phase 2, all missing contentAr for Phase 3, all missing contentFr for Phase 4, and all missing titleAr/contentAr for Phase 5.",
+    "application_method": "Each translation can be applied using the edit tool with the exact old_str and new_str format provided in the COMPLETE_TRANSLATIONS_GUIDE.md"
+  }
+}

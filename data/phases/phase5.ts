@@ -153,22 +153,24 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "أساتذة النثر الكلاسيكي",
     titleFr: "Les maîtres de la prose classique",
     description: "Study the greatest classical prose writers",
+    descriptionAr: "دراسة أعظم كتاب النثر الكلاسيكي",
     descriptionFr: "Étudiez les plus grands prosateurs classiques",
     objectives: ["Read classical prose", "Understand adab literature", "Appreciate stylistic mastery", "Analyze rhetorical techniques"],
+    objectivesAr: ["فهم أعمال كبار الكتاب", "قراءة النثر الكلاسيكي", "تحليل الأسلوب الكلاسيكي", "دراسة الأدب الكلاسيكي"],
     objectivesFr: ["Lire la prose classique", "Comprendre la littérature adab", "Apprécier la maîtrise stylistique", "Analyser les techniques rhétoriques"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "الجَاحِظ (d. 869)", titleFr: "الجَاحِظ (m. 869)", content: "Master of Arabic prose\nWorks: كِتَاب الحَيَوَان، البَيَان وَالتَّبْيِين\nStyle: witty, digressive, encyclopedic", contentFr: "Maître de la prose arabe\nŒuvres: كِتَاب الحَيَوَان، البَيَان وَالتَّبْيِين\nStyle: spirituel, digressif, encyclopédique" },
-        { title: "اِبْن المُقَفَّع (d. 756)", titleFr: "اِبْن المُقَفَّع (m. 756)", content: "Translator and stylist\nكَلِيلَة وَدِمْنَة - animal fables\nConcise, elegant style", contentFr: "Traducteur et styliste\nكَلِيلَة وَدِمْنَة - fables d'animaux\nStyle concis et élégant" },
-        { title: "أَدَب Literature", titleFr: "Littérature أَدَب", content: "Genre combining entertainment and education\nCollections of anecdotes, poetry, wisdom\nModel for refined prose", contentFr: "Genre combinant divertissement et éducation\nCollections d'anecdotes, poésie, sagesse\nModèle de prose raffinée" }
+        { title: "الجَاحِظ (d. 869)", titleAr: "الجاحظ (توفي 869)", titleFr: "الجَاحِظ (m. 869)", content: "Master of Arabic prose\nWorks: كِتَاب الحَيَوَان، البَيَان وَالتَّبْيِين\nStyle: witty, digressive, encyclopedic", contentAr: "إمام الكتاب العرب وسيد النثر العربي\nأعماله: كتاب الحيوان والبيان والتبيين\nأسلوبه: فكاهي وسارد ومتنوع وموسوعي", contentFr: "Maître de la prose arabe\nŒuvres: كِتَاب الحَيَوَان، البَيَان وَالتَّبْيِين\nStyle: spirituel, digressif, encyclopédique" },
+        { title: "اِبْن المُقَفَّع (d. 756)", titleAr: "ابن المقفع (توفي 756)", titleFr: "اِبْن المُقَفَّع (m. 756)", content: "Translator and stylist\nكَلِيلَة وَدِمْنَة - animal fables\nConcise, elegant style", contentAr: "مترجم وكاتب أنيق\nكليلة ودمنة - قصص حيوانية أخلاقية\nأسلوب مختصر وأنيق وسلس", contentFr: "Traducteur et styliste\nكَلِيلَة وَدِمْنَة - fables d'animaux\nStyle concis et élégant" },
+        { title: "أَدَب Literature", titleAr: "أدب الأدب والآداب", titleFr: "Littérature أَدَب", content: "Genre combining entertainment and education\nCollections of anecdotes, poetry, wisdom\nModel for refined prose", contentAr: "نوع أدبي يجمع بين الترفيه والتعليم\nمجموعات من النوادر والقصص والشعر والحكم\nنموذج للنثر الرفيع والمتقن", contentFr: "Genre combinant divertissement et éducation\nCollections d'anecdotes, poésie, sagesse\nModèle de prose raffinée" }
       ],
       vocabulary: [
-        { arabic: "أَدَب", transliteration: "adab", meaning: "literature/etiquette", meaningFr: "littérature/étiquette" },
-        { arabic: "أَدِيب", transliteration: "adīb", meaning: "litterateur", meaningFr: "homme de lettres" },
-        { arabic: "مَقَالَة", transliteration: "maqāla", meaning: "essay/article", meaningFr: "essai/article" },
-        { arabic: "حِكَايَة", transliteration: "ḥikāya", meaning: "story/tale", meaningFr: "histoire/conte" },
-        { arabic: "أُسْلُوب", transliteration: "uslūb", meaning: "style", meaningFr: "style" }
+        { arabic: "أَدَب", transliteration: "adab", meaning: "literature/etiquette", meaningAr: "فن الكلام والآداب والسلوك الحسن", meaningFr: "littérature/étiquette" },
+        { arabic: "أَدِيب", transliteration: "adīb", meaning: "litterateur", meaningAr: "الكاتب والشاعر والعالم الأديب", meaningFr: "homme de lettres" },
+        { arabic: "مَقَالَة", transliteration: "maqāla", meaning: "essay/article", meaningAr: "الكتابة القصيرة أو المقالة النثرية", meaningFr: "essai/article" },
+        { arabic: "حِكَايَة", transliteration: "ḥikāya", meaning: "story/tale", meaningAr: "القصة أو السرد القصير", meaningFr: "histoire/conte" },
+        { arabic: "أُسْلُوب", transliteration: "uslūb", meaning: "style", meaningAr: "الطريقة والأسلوب في الكتابة والتعبير", meaningFr: "style" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-5"]
@@ -216,16 +218,16 @@ export const PHASE_5_LESSONS: Lesson[] = [
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "Rhyme Letter (رَوِيّ)", titleFr: "Lettre de rime (رَوِيّ)", content: "The final consonant that defines the rhyme\nMust be consistent throughout the poem\nThe poem is named by this letter: قَصِيدَة لَامِيَّة", contentFr: "La consonne finale qui définit la rime\nDoit être cohérente tout au long du poème\nLe poème est nommé par cette lettre: قَصِيدَة لَامِيَّة" },
-        { title: "Types of Rhyme", titleFr: "Types de rime", content: "مُقَيَّدَة - ending in sukun\nمُطْلَقَة - ending in vowel\nمُرْدَفَة - with long vowel before rawiyy", contentFr: "مُقَيَّدَة - se terminant par sukun\nمُطْلَقَة - se terminant par une voyelle\nمُرْدَفَة - avec une longue voyelle avant rawiyy" },
-        { title: "Rhyme Defects (عُيُوب)", titleFr: "Défauts de rime (عُيُوب)", content: "إِقْوَاء - changing vowel before rawiyy\nإِكْفَاء - changing rawiyy\nسِنَاد - inconsistent structure", contentFr: "إِقْوَاء - changement de voyelle avant rawiyy\nإِكْفَاء - changement de rawiyy\nسِنَاد - structure incohérente" }
+        { title: "Rhyme Letter (رَوِيّ)", titleAr: "حرف الروي", titleFr: "Lettre de rime (رَوِيّ)", content: "The final consonant that defines the rhyme\nMust be consistent throughout the poem\nThe poem is named by this letter: قَصِيدَة لَامِيَّة", contentAr: "الحرف النهائي الذي يحدد القافية\nيجب أن يكون متسقاً في جميع أنحاء القصيدة\nيُسمى الشعر على اسم هذا الحرف", contentFr: "La consonne finale qui définit la rime\nDoit être cohérente tout au long du poème\nLe poème est nommé par cette lettre: قَصِيدَة لَامِيَّة" },
+        { title: "Types of Rhyme", titleAr: "أنواع القافية", titleFr: "Types de rime", content: "مُقَيَّدَة - ending in sukun\nمُطْلَقَة - ending in vowel\nمُرْدَفَة - with long vowel before rawiyy", contentAr: "مُقَيَّدَة - تنتهي بسكون\nمُطْلَقَة - تنتهي بحركة\nمُرْدَفَة - بها حرف مد قبل الروي", contentFr: "مُقَيَّدَة - se terminant par sukun\nمُطْلَقَة - se terminant par une voyelle\nمُرْدَفَة - avec une longue voyelle avant rawiyy" },
+        { title: "Rhyme Defects (عُيُوب)", titleAr: "عيوب القافية", titleFr: "Défauts de rime (عُيُوب)", content: "إِقْوَاء - changing vowel before rawiyy\nإِكْفَاء - changing rawiyy\nسِنَاد - inconsistent structure", contentAr: "إِقْوَاء - تغيير حركة الروي\nإِكْفَاء - تغيير الروي نفسه\nسِنَاد - عدم التسق في البناء", contentFr: "إِقْوَاء - changement de voyelle avant rawiyy\nإِكْفَاء - changement de rawiyy\nسِنَاد - structure incohérente" }
       ],
       vocabulary: [
-        { arabic: "قَافِيَة", transliteration: "qāfiya", meaning: "rhyme", meaningFr: "rime" },
-        { arabic: "رَوِيّ", transliteration: "rawiyy", meaning: "rhyme letter", meaningFr: "lettre de rime" },
-        { arabic: "رِدْف", transliteration: "ridf", meaning: "pre-rawiyy vowel", meaningFr: "voyelle pré-rawiyy" },
-        { arabic: "وَصْل", transliteration: "waṣl", meaning: "post-rawiyy element", meaningFr: "élément post-rawiyy" },
-        { arabic: "قَصِيدَة", transliteration: "qaṣīda", meaning: "ode", meaningFr: "ode" }
+        { arabic: "قَافِيَة", transliteration: "qāfiya", meaning: "rhyme", meaningAr: "القافية أو الروي في الشعر", meaningFr: "rime" },
+        { arabic: "رَوِيّ", transliteration: "rawiyy", meaning: "rhyme letter", meaningAr: "حرف الروي الذي يحدد القافية", meaningFr: "lettre de rime" },
+        { arabic: "رِدْف", transliteration: "ridf", meaning: "pre-rawiyy vowel", meaningAr: "الحرف الممدود قبل الروي", meaningFr: "voyelle pré-rawiyy" },
+        { arabic: "وَصْل", transliteration: "waṣl", meaning: "post-rawiyy element", meaningAr: "العنصر الذي يأتي بعد الروي", meaningFr: "élément post-rawiyy" },
+        { arabic: "قَصِيدَة", transliteration: "qaṣīda", meaning: "ode", meaningAr: "القصيدة الشعرية الطويلة", meaningFr: "ode" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-7"]
@@ -244,16 +246,16 @@ export const PHASE_5_LESSONS: Lesson[] = [
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "Major Poets", titleFr: "Grands poètes", content: "أَبُو نُوَاس - wine poetry, wit\nأَبُو تَمَّام - innovative metaphor\nالبُحْتُرِي - classical elegance\nالمُتَنَبِّي - greatest Arabic poet", contentFr: "أَبُو نُوَاس - poésie bachique, esprit\nأَبُو تَمَّام - métaphore innovante\nالبُحْتُرِي - élégance classique\nالمُتَنَبِّي - plus grand poète arabe" },
-        { title: "New Themes", titleFr: "Nouveaux thèmes", content: "خَمْرِيَّات - wine poetry\nزُهْدِيَّات - ascetic poetry\nفَلْسَفِيَّات - philosophical poems\nUrban life themes", contentFr: "خَمْرِيَّات - poésie bachique\nزُهْدِيَّات - poésie ascétique\nفَلْسَفِيَّات - poèmes philosophiques\nThèmes de la vie urbaine" },
-        { title: "المُتَنَبِّي (d. 965)", titleFr: "المُتَنَبِّي (m. 965)", content: "Considered greatest Arabic poet\nFamous for مَدْح (panegyric)\nComplex imagery, profound wisdom\nInfluenced all later poetry", contentFr: "Considéré comme le plus grand poète arabe\nFameux pour مَدْح (panégyrique)\nImagerie complexe, sagesse profonde\nA influencé toute la poésie ultérieure" }
+        { title: "Major Poets", titleAr: "الشعراء الكبار", titleFr: "Grands poètes", content: "أَبُو نُوَاس - wine poetry, wit\nأَبُو تَمَّام - innovative metaphor\nالبُحْتُرِي - classical elegance\nالمُتَنَبِّي - greatest Arabic poet", contentAr: "أَبُو نُوَاس - الشاعر الماهر في شعر الخمر والفكاهة\nأَبُو تَمَّام - مجدد الاستعارة والصورة\nالبُحْتُرِي - الكاتب الأنيق الكلاسيكي\nالمُتَنَبِّي - أعظم شاعر عربي", contentFr: "أَبُو نُوَاس - poésie bachique, esprit\nأَبُو تَمَّام - métaphore innovante\nالبُحْتُرِي - élégance classique\nالمُتَنَبِّي - plus grand poète arabe" },
+        { title: "New Themes", titleAr: "موضوعات جديدة", titleFr: "Nouveaux thèmes", content: "خَمْرِيَّات - wine poetry\nزُهْدِيَّات - ascetic poetry\nفَلْسَفِيَّات - philosophical poems\nUrban life themes", contentAr: "خَمْرِيَّات - شعر الخمر والنبيذ\nزُهْدِيَّات - الشعر الزهدي والأخلاقي\nفَلْسَفِيَّات - الأشعار الفلسفية\nمواضيع الحياة الحضرية", contentFr: "خَمْرِيَّات - poésie bachique\nزُهْدِيَّات - poésie ascétique\nفَلْسَفِيَّات - poèmes philosophiques\nThèmes de la vie urbaine" },
+        { title: "المُتَنَبِّي (d. 965)", titleAr: "المتنبي (توفي 965)", titleFr: "المُتَنَبِّي (m. 965)", content: "Considered greatest Arabic poet\nFamous for مَدْح (panegyric)\nComplex imagery, profound wisdom\nInfluenced all later poetry", contentAr: "يُعتبر أعظم شاعر عربي\nمشهور بفن المدح والإطراء\nيتميز بالصور المعقدة والحكمة العميقة\nأثر على كل الشعراء اللاحقين", contentFr: "Considéré comme le plus grand poète arabe\nFameux pour مَدْح (panégyrique)\nImagerie complexe, sagesse profonde\nA influencé toute la poésie ultérieure" }
       ],
       vocabulary: [
-        { arabic: "مَدْح", transliteration: "madḥ", meaning: "praise poetry", meaningFr: "poésie de louange" },
-        { arabic: "هِجَاء", transliteration: "hijā'", meaning: "satire", meaningFr: "satire" },
-        { arabic: "رِثَاء", transliteration: "rithā'", meaning: "elegy", meaningFr: "élégie" },
-        { arabic: "غَزَل", transliteration: "ghazal", meaning: "love poetry", meaningFr: "poésie amoureuse" },
-        { arabic: "زُهْد", transliteration: "zuhd", meaning: "ascetic poetry", meaningFr: "poésie ascétique" }
+        { arabic: "مَدْح", transliteration: "madḥ", meaning: "praise poetry", meaningAr: "الشعر المتعلق بمدح وإطراء", meaningFr: "poésie de louange" },
+        { arabic: "هِجَاء", transliteration: "hijā'", meaning: "satire", meaningAr: "الشعر الهجائي والسب", meaningFr: "satire" },
+        { arabic: "رِثَاء", transliteration: "rithā'", meaning: "elegy", meaningAr: "شعر الندب والرثاء", meaningFr: "élégie" },
+        { arabic: "غَزَل", transliteration: "ghazal", meaning: "love poetry", meaningAr: "الشعر العاطفي والغزلي", meaningFr: "poésie amoureuse" },
+        { arabic: "زُهْد", transliteration: "zuhd", meaning: "ascetic poetry", meaningAr: "شعر الزهد والتقوى", meaningFr: "poésie ascétique" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-8"]
@@ -272,16 +274,16 @@ export const PHASE_5_LESSONS: Lesson[] = [
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "Andalusian Context", titleFr: "Contexte andalou", content: "Islamic Spain (711-1492)\nCultural flowering\nMixing of Arabic, Romance, Hebrew\nUnique literary traditions", contentFr: "Espagne islamique (711-1492)\nEpanouissement culturel\nMélange d'arabe, roman, hébreu\nTraditions littéraires uniques" },
-        { title: "المُوَشَّح", titleFr: "المُوَشَّح", content: "Strophic poetry form\nMultiple rhyme schemes\nOften ends in vernacular خَرْجَة\nInfluenced European troubadours", contentFr: "Forme de poésie strophique\nSchémas de rime multiples\nSe termine souvent en خَرْجَة vernaculaire\nA influencé les troubadours européens" },
-        { title: "Major Poets", titleFr: "Grands poètes", content: "اِبْن زَيْدُون - love poetry\nاِبْن حَزْم - طَوْق الحَمَامَة (love treatise)\nاِبْن خَفَاجَة - nature poetry", contentFr: "اِبْن زَيْدُون - poésie amoureuse\nاِبْن حَزْم - طَوْق الحَمَامَة (traité d'amour)\nاِبْن خَفَاجَة - poésie de nature" }
+        { title: "Andalusian Context", titleAr: "السياق الأندلسي", titleFr: "Contexte andalou", content: "Islamic Spain (711-1492)\nCultural flowering\nMixing of Arabic, Romance, Hebrew\nUnique literary traditions", contentAr: "الأندلس الإسلامية (711-1492)\nازدهار ثقافي كبير\nاختلاط العربية والرومانسية والعبرية\nتقاليد أدبية فريدة", contentFr: "Espagne islamique (711-1492)\nEpanouissement culturel\nMélange d'arabe, roman, hébreu\nTraditions littéraires uniques" },
+        { title: "المُوَشَّح", titleAr: "شكل الموشح", titleFr: "المُوَشَّح", content: "Strophic poetry form\nMultiple rhyme schemes\nOften ends in vernacular خَرْجَة\nInfluenced European troubadours", contentAr: "نوع من الشعر المقسم لأقسام\nأنماط قافية متعددة\nغالباً ما ينتهي بخرجة عامية\nأثر على الشعراء الأوروبيين", contentFr: "Forme de poésie strophique\nSchémas de rime multiples\nSe termine souvent en خَرْجَة vernaculaire\nA influencé les troubadours européens" },
+        { title: "Major Poets", titleAr: "الشعراء الأندلسيين", titleFr: "Grands poètes", content: "اِبْن زَيْدُون - love poetry\nاِبْن حَزْم - طَوْق الحَمَامَة (love treatise)\nاِبْن خَفَاجَة - nature poetry", contentAr: "اِبْن زَيْدُون - شاعر الحب الكبير\nاِبْن حَزْم - مؤلف طوق الحمامة\nاِبْن خَفَاجة - شاعر الطبيعة", contentFr: "اِبْن زَيْدُون - poésie amoureuse\nاِبْن حَزْم - طَوْق الحَمَامَة (traité d'amour)\nاِبْن خَفَاجَة - poésie de nature" }
       ],
       vocabulary: [
-        { arabic: "أَنْدَلُس", transliteration: "andalus", meaning: "Islamic Spain", meaningFr: "Espagne islamique" },
-        { arabic: "مُوَشَّح", transliteration: "muwashshaḥ", meaning: "strophic poem", meaningFr: "poème strophique" },
-        { arabic: "زَجَل", transliteration: "zajal", meaning: "vernacular poetry", meaningFr: "poésie vernaculaire" },
-        { arabic: "خَرْجَة", transliteration: "kharja", meaning: "final vernacular verse", meaningFr: "vers vernaculaire final" },
-        { arabic: "طَبِيعَة", transliteration: "ṭabī'a", meaning: "nature", meaningFr: "nature" }
+        { arabic: "أَنْدَلُس", transliteration: "andalus", meaning: "Islamic Spain", meaningAr: "شبه الجزيرة الأيبيرية الإسلامية", meaningFr: "Espagne islamique" },
+        { arabic: "مُوَشَّح", transliteration: "muwashshaḥ", meaning: "strophic poem", meaningAr: "القصيدة المقسمة الموشحة", meaningFr: "poème strophique" },
+        { arabic: "زَجَل", transliteration: "zajal", meaning: "vernacular poetry", meaningAr: "الشعر باللهجة العامية", meaningFr: "poésie vernaculaire" },
+        { arabic: "خَرْجَة", transliteration: "kharja", meaning: "final vernacular verse", meaningAr: "الآية الأخيرة بالعامية", meaningFr: "vers vernaculaire final" },
+        { arabic: "طَبِيعَة", transliteration: "ṭabī'a", meaning: "nature", meaningAr: "الطبيعة والجمال الطبيعي", meaningFr: "nature" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-9"]
@@ -300,16 +302,16 @@ export const PHASE_5_LESSONS: Lesson[] = [
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "النهضة Revival", titleFr: "Renouveau النهضة", content: "أَحْمَد شَوْقِي - 'Prince of Poets'\nحَافِظ إِبْرَاهِيم - 'Poet of the Nile'\nNeo-classical movement", contentFr: "أَحْمَد شَوْقِي - « Prince des poètes »\nحَافِظ إِبْرَاهِيم - « Poète du Nil »\nMouvement néoclassique" },
-        { title: "Free Verse (شِعْر حُرّ)", titleFr: "Vers libre (شِعْر حُرّ)", content: "1940s revolution\nنَازِك المَلَائِكَة - pioneer\nبَدْر شَاكِر السَّيَّاب - major voice\nBroken classical meters", contentFr: "Révolution des années 1940\nنَازِك المَلَائِكَة - pionnière\nبَدْر شَاكِر السَّيَّاب - voix majeure\nMètres classiques brisés" },
-        { title: "Contemporary Poets", titleFr: "Poètes contemporains", content: "مَحْمُود دَرْوِيش - Palestinian icon\nنِزَار قَبَّانِي - love and politics\nأَدُونِيس - avant-garde", contentFr: "مَحْمُود دَرْوِيش - icône palestinienne\nنِزَار قَبَّانِي - amour et politique\nأَدُونِيس - avant-garde" }
+        { title: "النهضة Revival", titleAr: "عصر النهضة والإحياء", titleFr: "Renouveau النهضة", content: "أَحْمَد شَوْقِي - 'Prince of Poets'\nحَافِظ إِبْرَاهِيم - 'Poet of the Nile'\nNeo-classical movement", contentAr: "أَحْمَد شَوْقِي - أمير الشعراء\nحَافِظ إِبْرَاهِيم - شاعر النيل\nحركة إحياء النموذج الكلاسيكي", contentFr: "أَحْمَد شَوْقِي - « Prince des poètes »\nحَافِظ إِبْرَاهِيم - « Poète du Nil »\nMouvement néoclassique" },
+        { title: "Free Verse (شِعْر حُرّ)", titleAr: "الشعر الحر والتحرر", titleFr: "Vers libre (شِعْر حُرّ)", content: "1940s revolution\nنَازِك المَلَائِكَة - pioneer\nبَدْر شَاكِر السَّيَّاب - major voice\nBroken classical meters", contentAr: "ثورة الأربعينيات الشعرية\nنَازِك المَلَائِكَة - الرائدة الأولى\nبَدْر شَاكِر السَّيَّاب - الصوت الرئيسي\nكسر البحور والأوزان الكلاسيكية", contentFr: "Révolution des années 1940\nنَازِك المَلَائِكَة - pionnière\nبَدْر شَاكِر السَّيَّاب - voix majeure\nMètres classiques brisés" },
+        { title: "Contemporary Poets", titleAr: "الشعراء المعاصرون", titleFr: "Poètes contemporains", content: "مَحْمُود دَرْوِيش - Palestinian icon\nنِزَار قَبَّانِي - love and politics\nأَدُونِيس - avant-garde", contentAr: "مَحْمُود دَرْوِيش - رمز فلسطيني\nنِزَار قَبَّانِي - شاعر الحب والسياسة\nأَدُونِيس - الشاعر الطليعي", contentFr: "مَحْمُود دَرْوِيش - icône palestinienne\nنِزَار قَبَّانِي - amour et politique\nأَدُونِيس - avant-garde" }
       ],
       vocabulary: [
-        { arabic: "شِعْر حُرّ", transliteration: "shi'r ḥurr", meaning: "free verse", meaningFr: "vers libre" },
-        { arabic: "قَصِيدَة نَثْر", transliteration: "qaṣīdat nathr", meaning: "prose poem", meaningFr: "poème en prose" },
-        { arabic: "حَدَاثَة", transliteration: "ḥadātha", meaning: "modernity", meaningFr: "modernité" },
-        { arabic: "تَجْدِيد", transliteration: "tajdīd", meaning: "renewal", meaningFr: "renouvellement" },
-        { arabic: "تَجْرِبَة", transliteration: "tajriba", meaning: "experience", meaningFr: "expérience" }
+        { arabic: "شِعْر حُرّ", transliteration: "shi'r ḥurr", meaning: "free verse", meaningAr: "الشعر غير الموزون والحديث", meaningFr: "vers libre" },
+        { arabic: "قَصِيدَة نَثْر", transliteration: "qaṣīdat nathr", meaning: "prose poem", meaningAr: "قصيدة بصيغة نثرية", meaningFr: "poème en prose" },
+        { arabic: "حَدَاثَة", transliteration: "ḥadātha", meaning: "modernity", meaningAr: "الحداثة والمعاصرة", meaningFr: "modernité" },
+        { arabic: "تَجْدِيد", transliteration: "tajdīd", meaning: "renewal", meaningAr: "التجديد والإحياء", meaningFr: "renouvellement" },
+        { arabic: "تَجْرِبَة", transliteration: "tajriba", meaning: "experience", meaningAr: "التجربة الشعرية والشخصية", meaningFr: "expérience" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-10"]
@@ -328,16 +330,16 @@ export const PHASE_5_LESSONS: Lesson[] = [
     estimatedTime: 60, difficulty: "hard", xpReward: 90,
     content: {
       theory: [
-        { title: "Analysis Framework", titleFr: "Cadre d'analyse", content: "1. Context: poet, period, occasion\n2. Form: meter, rhyme, structure\n3. Language: vocabulary, grammar, style\n4. Imagery: metaphor, simile, symbols\n5. Theme: central idea, message", contentFr: "1. Contexte: poète, période, occasion\n2. Forme: mètre, rime, structure\n3. Langue: vocabulaire, grammaire, style\n4. Imagerie: métaphore, comparaison, symboles\n5. Thème: idée centrale, message" },
-        { title: "Rhetorical Devices", titleFr: "Procédés rhétoriques", content: "تَشْبِيه - simile\nاِسْتِعَارَة - metaphor\nكِنَايَة - metonymy\nتَوْرِيَة - double entendre\nطِبَاق - antithesis", contentFr: "تَشْبِيه - comparaison\nاِسْتِعَارَة - métaphore\nكِنَايَة - métonymie\nتَوْرِيَة - double entente\nطِبَاق - antithèse" },
-        { title: "Critical Writing", titleFr: "Écriture critique", content: "Opening: context and thesis\nBody: systematic analysis\nEvidence: quotations with analysis\nConclusion: significance", contentFr: "Ouverture: contexte et thèse\nCorps: analyse systématique\nPreuves: citations avec analyse\nConclusion: importance" }
+        { title: "Analysis Framework", titleAr: "إطار التحليل", titleFr: "Cadre d'analyse", content: "1. Context: poet, period, occasion\n2. Form: meter, rhyme, structure\n3. Language: vocabulary, grammar, style\n4. Imagery: metaphor, simile, symbols\n5. Theme: central idea, message", contentAr: "السياق: الشاعر والعصر والمناسبة\nالشكل: البحر والقافية والتركيب\nاللغة: المفردات والقواعد والأسلوب\nالصورة: التشبيه والاستعارة والرموز\nالموضوع: الفكرة المركزية والرسالة", contentFr: "1. Contexte: poète, période, occasion\n2. Forme: mètre, rime, structure\n3. Langue: vocabulaire, grammaire, style\n4. Imagerie: métaphore, comparaison, symboles\n5. Thème: idée centrale, message" },
+        { title: "Rhetorical Devices", titleAr: "الأجهزة البلاغية", titleFr: "Procédés rhétoriques", content: "تَشْبِيه - simile\nاِسْتِعَارَة - metaphor\nكِنَايَة - metonymy\nتَوْرِيَة - double entendre\nطِبَاق - antithesis", contentAr: "تَشْبِيه - المقارنة\nاِسْتِعَارَة - المجاز\nكِنَايَة - التلميح\nتَوْرِيَة - المعنى المزدوج\nطِبَاق - التقابل", contentFr: "تَشْبِيه - comparaison\nاِسْتِعَارَة - métaphore\nكِنَايَة - métonymie\nتَوْرِيَة - double entente\nطِبَاق - antithèse" },
+        { title: "Critical Writing", titleAr: "الكتابة النقدية", titleFr: "Écriture critique", content: "Opening: context and thesis\nBody: systematic analysis\nEvidence: quotations with analysis\nConclusion: significance", contentAr: "المقدمة: السياق والرسالة الأساسية\nالجسم: التحليل المنظم\nالأدلة: الاقتباسات والتحليل\nالخاتمة: الأهمية والنتائج", contentFr: "Ouverture: contexte et thèse\nCorps: analyse systématique\nPreuves: citations avec analyse\nConclusion: importance" }
       ],
       vocabulary: [
-        { arabic: "تَحْلِيل أَدَبِيّ", transliteration: "taḥlīl adabī", meaning: "literary analysis", meaningFr: "analyse littéraire" },
-        { arabic: "صُورَة فَنِّيَّة", transliteration: "ṣūra fanniyya", meaning: "artistic image", meaningFr: "image artistique" },
-        { arabic: "رَمْزِيَّة", transliteration: "ramziyya", meaning: "symbolism", meaningFr: "symbolisme" },
-        { arabic: "دَلَالَة", transliteration: "dalāla", meaning: "signification", meaningFr: "signification" },
-        { arabic: "جَمَالِيَّة", transliteration: "jamāliyya", meaning: "aesthetics", meaningFr: "esthétique" }
+        { arabic: "تَحْلِيل أَدَبِيّ", transliteration: "taḥlīl adabī", meaning: "literary analysis", meaningAr: "تحليل النصوص الأدبية", meaningFr: "analyse littéraire" },
+        { arabic: "صُورَة فَنِّيَّة", transliteration: "ṣūra fanniyya", meaning: "artistic image", meaningAr: "الصورة الفنية والتعبيرية", meaningFr: "image artistique" },
+        { arabic: "رَمْزِيَّة", transliteration: "ramziyya", meaning: "symbolism", meaningAr: "الرموز والدلالات الرمزية", meaningFr: "symbolisme" },
+        { arabic: "دَلَالَة", transliteration: "dalāla", meaning: "signification", meaningAr: "الدلالة والمعنى", meaningFr: "signification" },
+        { arabic: "جَمَالِيَّة", transliteration: "jamāliyya", meaning: "aesthetics", meaningAr: "الجمال والقيم الجمالية", meaningFr: "esthétique" }
       ]
     },
     exerciseCount: 20, prerequisites: ["5-11"]
@@ -357,16 +359,16 @@ export const PHASE_5_LESSONS: Lesson[] = [
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Diglossia", titleFr: "Diglossie", content: "High (فُصْحَى): formal, written, media\nLow (عَامِّيَّة): daily speech, informal\nArab speakers navigate both constantly", contentFr: "Haute (فُصْحَى): formelle, écrite, médias\nBasse (عَامِّيَّة): parlé quotidien, informel\nLes locuteurs arabes naviguent les deux constamment" },
-        { title: "Dialect Groups", titleFr: "Groupes dialectaux", content: "المَشْرِق - Levantine (شَامِي)\nالمَصْرِي - Egyptian\nالمَغَارِبِي - North African\nالخَلِيجِي - Gulf", contentFr: "المَشْرِق - Levantin (شَامِي)\nالمَصْرِي - Égyptien\nالمَغَارِبِي - Nord-africain\nالخَلِيجِي - Golfe" },
-        { title: "Common Features", titleFr: "Caractéristiques communes", content: "Loss of case endings\nSimplified verb system\nBorrowed vocabulary\nPhonological changes", contentFr: "Perte des terminaisons casuelles\nSystème verbal simplifié\nVocabulaire emprunté\nChangements phonologiques" }
+        { title: "Diglossia", titleAr: "الازدواجية اللغوية", titleFr: "Diglossie", content: "High (فُصْحَى): formal, written, media\nLow (عَامِّيَّة): daily speech, informal\nArab speakers navigate both constantly", contentAr: "العربية الفصحى: رسمية وكتابية وإعلامية\nاللهجات العامية: محكية يومية وشبه رسمية\nالمتحدثون العرب يتنقلون باستمرار بين المستويين", contentFr: "Haute (فُصْحَى): formelle, écrite, médias\nBasse (عَامِّيَّة): parlé quotidien, informel\nLes locuteurs arabes naviguent les deux constamment" },
+        { title: "Dialect Groups", titleAr: "مجموعات اللهجات", titleFr: "Groupes dialectaux", content: "المَشْرِق - Levantine (شَامِي)\nالمَصْرِي - Egyptian\nالمَغَارِبِي - North African\nالخَلِيجِي - Gulf", contentAr: "المَشْرِق - اللهجة الشامية\nالمَصْرِي - اللهجة المصرية\nالمَغَارِبِي - لهجات شمال أفريقيا\nالخَلِيجِي - لهجات الخليج", contentFr: "المَشْرِق - Levantin (شَامِي)\nالمَصْرِي - Égyptien\nالمَغَارِبِي - Nord-africain\nالخَلِيجِي - Golfe" },
+        { title: "Common Features", titleAr: "الخصائص المشتركة", titleFr: "Caractéristiques communes", content: "Loss of case endings\nSimplified verb system\nBorrowed vocabulary\nPhonological changes", contentAr: "فقدان حروف الإعراب الكاملة\nنظام فعلي مبسط\nمفردات مستعارة من لغات أخرى\nتغيرات صوتية مختلفة", contentFr: "Perte des terminaisons casuelles\nSystème verbal simplifié\nVocabulaire emprunté\nChangements phonologiques" }
       ],
       vocabulary: [
-        { arabic: "لَهْجَة", transliteration: "lahja", meaning: "dialect", meaningFr: "dialecte" },
-        { arabic: "عَامِّيَّة", transliteration: "'āmmiyya", meaning: "colloquial", meaningFr: "parlé" },
-        { arabic: "فُصْحَى", transliteration: "fuṣḥā", meaning: "classical/standard", meaningFr: "classique/standard" },
-        { arabic: "دَارِجَة", transliteration: "dārija", meaning: "vernacular (Maghreb)", meaningFr: "vernaculaire (Maghreb)" },
-        { arabic: "مَحْكِيَّة", transliteration: "maḥkiyya", meaning: "spoken (Levant)", meaningFr: "parlé (Levant)" }
+        { arabic: "لَهْجَة", transliteration: "lahja", meaning: "dialect", meaningAr: "اللهجة واللغة المحلية", meaningFr: "dialecte" },
+        { arabic: "عَامِّيَّة", transliteration: "'āmmiyya", meaning: "colloquial", meaningAr: "اللغة المحكية العامية", meaningFr: "parlé" },
+        { arabic: "فُصْحَى", transliteration: "fuṣḥā", meaning: "classical/standard", meaningAr: "العربية الفصحى الكلاسيكية", meaningFr: "classique/standard" },
+        { arabic: "دَارِجَة", transliteration: "dārija", meaning: "vernacular (Maghreb)", meaningAr: "اللهجة الدارجة المغربية", meaningFr: "vernaculaire (Maghreb)" },
+        { arabic: "مَحْكِيَّة", transliteration: "maḥkiyya", meaning: "spoken (Levant)", meaningAr: "اللهجة المحكية الشامية", meaningFr: "parlé (Levant)" }
       ]
     },
     exerciseCount: 16, prerequisites: ["5-12"]
@@ -390,11 +392,11 @@ export const PHASE_5_LESSONS: Lesson[] = [
         { title: "Verb Differences", titleFr: "Différences verbales", content: "بـ prefix for present: بَيِكْتِب (he writes)\nهَـ prefix for future: هَيْرُوح (he will go)", contentFr: "Préfixe بـ pour le présent: بَيِكْتِب (il écrit)\nPréfixe هَـ pour le futur: هَيْرُوح (il ira)" }
       ],
       vocabulary: [
-        { arabic: "إِزَّيَّك", transliteration: "izzayyak", meaning: "how are you? (m)", meaningFr: "comment allez-vous? (m)" },
-        { arabic: "كُوَيِّس", transliteration: "kuwayyis", meaning: "good/fine", meaningFr: "bien/bien" },
-        { arabic: "عَايِز", transliteration: "'āyiz", meaning: "want (m)", meaningFr: "vouloir (m)" },
-        { arabic: "دِلْوَقْتِي", transliteration: "dilwa'ti", meaning: "now", meaningFr: "maintenant" },
-        { arabic: "كِدَه", transliteration: "kida", meaning: "like this", meaningFr: "comme ça" }
+        { arabic: "إِزَّيَّك", transliteration: "izzayyak", meaning: "how are you? (m)", meaningAr: "كيف حالك بالمصرية", meaningFr: "comment allez-vous? (m)" },
+        { arabic: "كُوَيِّس", transliteration: "kuwayyis", meaning: "good/fine", meaningAr: "تمام وبخير بالمصرية", meaningFr: "bien/bien" },
+        { arabic: "عَايِز", transliteration: "'āyiz", meaning: "want (m)", meaningAr: "أريد بالمصرية (الذكر)", meaningFr: "vouloir (m)" },
+        { arabic: "دِلْوَقْتِي", transliteration: "dilwa'ti", meaning: "now", meaningAr: "الآن بالمصرية", meaningFr: "maintenant" },
+        { arabic: "كِدَه", transliteration: "kida", meaning: "like this", meaningAr: "مثل هذا بالمصرية", meaningFr: "comme ça" }
       ]
     },
     exerciseCount: 16, prerequisites: ["5-13"]
@@ -418,11 +420,11 @@ export const PHASE_5_LESSONS: Lesson[] = [
         { title: "Verb Differences", titleFr: "Différences verbales", content: "بـ prefix for present: بِيكْتُب\nرَح for future: رَح يِرُوح\nPresent continuous: عَم + verb", contentFr: "Préfixe بـ pour le présent: بِيكْتُب\nرَح pour le futur: رَح يِرُوح\nContinue présent: عَم + verbe" }
       ],
       vocabulary: [
-        { arabic: "كِيفَك", transliteration: "kīfak", meaning: "how are you? (m)", meaningFr: "comment allez-vous? (m)" },
-        { arabic: "مْنِيح", transliteration: "mnīḥ", meaning: "good/fine", meaningFr: "bien/bien" },
-        { arabic: "بَدِّي", transliteration: "biddi", meaning: "I want", meaningFr: "je veux" },
-        { arabic: "هَلَّق", transliteration: "halla'", meaning: "now", meaningFr: "maintenant" },
-        { arabic: "هَيْك", transliteration: "heik", meaning: "like this", meaningFr: "comme ça" }
+        { arabic: "كِيفَك", transliteration: "kīfak", meaning: "how are you? (m)", meaningAr: "كيف حالك بالشامية", meaningFr: "comment allez-vous? (m)" },
+        { arabic: "مْنِيح", transliteration: "mnīḥ", meaning: "good/fine", meaningAr: "تمام وبخير بالشامية", meaningFr: "bien/bien" },
+        { arabic: "بَدِّي", transliteration: "biddi", meaning: "I want", meaningAr: "أريد بالشامية", meaningFr: "je veux" },
+        { arabic: "هَلَّق", transliteration: "halla'", meaning: "now", meaningAr: "الآن بالشامية", meaningFr: "maintenant" },
+        { arabic: "هَيْك", transliteration: "heik", meaning: "like this", meaningAr: "مثل هذا بالشامية", meaningFr: "comme ça" }
       ]
     },
     exerciseCount: 16, prerequisites: ["5-14"]
@@ -446,11 +448,11 @@ export const PHASE_5_LESSONS: Lesson[] = [
         { title: "Verb Differences", titleFr: "Différences verbales", content: "يـ/تـ prefix standard\nبـ for continuous in some areas\nDistinct pronoun forms", contentFr: "Préfixe يـ/تـ standard\nبـ pour le continu dans certains domaines\nFormes de pronoms distinctes" }
       ],
       vocabulary: [
-        { arabic: "شْلُونَك", transliteration: "shlōnak", meaning: "how are you? (m)", meaningFr: "comment allez-vous? (m)" },
-        { arabic: "زَيْن", transliteration: "zēn", meaning: "good/fine", meaningFr: "bien/bien" },
-        { arabic: "أَبِي/أَبْغَى", transliteration: "abi/abgha", meaning: "I want", meaningFr: "je veux" },
-        { arabic: "حِين", transliteration: "ḥīn", meaning: "now", meaningFr: "maintenant" },
-        { arabic: "جِذِي", transliteration: "chidhi", meaning: "like this", meaningFr: "comme ça" }
+        { arabic: "شْلُونَك", transliteration: "shlōnak", meaning: "how are you? (m)", meaningAr: "كيف حالك بالخليجية", meaningFr: "comment allez-vous? (m)" },
+        { arabic: "زَيْن", transliteration: "zēn", meaning: "good/fine", meaningAr: "تمام بالخليجية", meaningFr: "bien/bien" },
+        { arabic: "أَبِي/أَبْغَى", transliteration: "abi/abgha", meaning: "I want", meaningAr: "أريد بالخليجية", meaningFr: "je veux" },
+        { arabic: "حِين", transliteration: "ḥīn", meaning: "now", meaningAr: "الآن بالخليجية", meaningFr: "maintenant" },
+        { arabic: "جِذِي", transliteration: "chidhi", meaning: "like this", meaningAr: "مثل هذا بالخليجية", meaningFr: "comme ça" }
       ]
     },
     exerciseCount: 16, prerequisites: ["5-15"]
@@ -474,11 +476,11 @@ export const PHASE_5_LESSONS: Lesson[] = [
         { title: "Regional Variation", titleFr: "Variation régionale", content: "مَغْرِب (Morocco) - most distinct\nجَزَائِر (Algeria) - intermediate\nتُونِس (Tunisia) - closer to Eastern\nلِيبْيَا (Libya) - Eastern features", contentFr: "مَغْرِب (Maroc) - le plus distinct\nجَزَائِر (Algérie) - intermédiaire\nتُونِس (Tunisie) - plus proche de l'Est\nلِيبْيَا (Libye) - caractéristiques orientales" }
       ],
       vocabulary: [
-        { arabic: "لَا بَأْس", transliteration: "labās", meaning: "fine (Maghreb)", meaningFr: "bien (Maghreb)" },
-        { arabic: "وَاخَا", transliteration: "wākha", meaning: "okay (Morocco)", meaningFr: "d'accord (Maroc)" },
-        { arabic: "بَزَّاف", transliteration: "bezzāf", meaning: "a lot (Maghreb)", meaningFr: "beaucoup (Maghreb)" },
-        { arabic: "دَابَا", transliteration: "dāba", meaning: "now (Morocco)", meaningFr: "maintenant (Maroc)" },
-        { arabic: "كِيفَاش", transliteration: "kīfāsh", meaning: "how (Maghreb)", meaningFr: "comment (Maghreb)" }
+        { arabic: "لَا بَأْس", transliteration: "labās", meaning: "fine (Maghreb)", meaningAr: "حسناً بالمغربية", meaningFr: "bien (Maghreb)" },
+        { arabic: "وَاخَا", transliteration: "wākha", meaning: "okay (Morocco)", meaningAr: "تمام بالمغربية", meaningFr: "d'accord (Maroc)" },
+        { arabic: "بَزَّاف", transliteration: "bezzāf", meaning: "a lot (Maghreb)", meaningAr: "كثيراً جداً بالمغربية", meaningFr: "beaucoup (Maghreb)" },
+        { arabic: "دَابَا", transliteration: "dāba", meaning: "now (Morocco)", meaningAr: "الآن بالمغربية", meaningFr: "maintenant (Maroc)" },
+        { arabic: "كِيفَاش", transliteration: "kīfāsh", meaning: "how (Maghreb)", meaningAr: "كيف بالمغربية", meaningFr: "comment (Maghreb)" }
       ]
     },
     exerciseCount: 16, prerequisites: ["5-16"]
@@ -502,11 +504,11 @@ export const PHASE_5_LESSONS: Lesson[] = [
         { title: "Listening Strategies", titleFr: "Stratégies d'écoute", content: "Start with Egyptian (most media)\nUse subtitled content\nFocus on high-frequency patterns\nDon't aim for perfection - aim for comprehension", contentFr: "Commencez par l'égyptien (plus de médias)\nUtilisez du contenu sous-titré\nConcentrez-vous sur les modèles haute fréquence\nN'aspirez pas à la perfection - aspirez à la compréhension" }
       ],
       vocabulary: [
-        { arabic: "فَهْم", transliteration: "fahm", meaning: "understanding", meaningFr: "compréhension" },
-        { arabic: "اِسْتِمَاع", transliteration: "istimā'", meaning: "listening", meaningFr: "écoute" },
-        { arabic: "تَعَرُّف", transliteration: "ta'arruf", meaning: "recognition", meaningFr: "reconnaissance" },
-        { arabic: "سِيَاق", transliteration: "siyāq", meaning: "context", meaningFr: "contexte" },
-        { arabic: "تَخْمِين", transliteration: "takhmīn", meaning: "guessing", meaningFr: "deviner" }
+        { arabic: "فَهْم", transliteration: "fahm", meaning: "understanding", meaningAr: "الفهم والإدراك", meaningFr: "compréhension" },
+        { arabic: "اِسْتِمَاع", transliteration: "istimā'", meaning: "listening", meaningAr: "الاستماع والإصغاء", meaningFr: "écoute" },
+        { arabic: "تَعَرُّف", transliteration: "ta'arruf", meaning: "recognition", meaningAr: "التعرف والمعرفة", meaningFr: "reconnaissance" },
+        { arabic: "سِيَاق", transliteration: "siyāq", meaning: "context", meaningAr: "السياق والبيئة", meaningFr: "contexte" },
+        { arabic: "تَخْمِين", transliteration: "takhmīn", meaning: "guessing", meaningAr: "التخمين والحدس", meaningFr: "deviner" }
       ]
     },
     exerciseCount: 17, prerequisites: ["5-17"]
@@ -526,16 +528,16 @@ export const PHASE_5_LESSONS: Lesson[] = [
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
       theory: [
-        { title: "Translation Approaches", titleFr: "Approches de traduction", content: "تَرْجَمَة حَرْفِيَّة - literal translation\nتَرْجَمَة حُرَّة - free translation\nتَرْجَمَة تَفْسِيرِيَّة - interpretive translation\nBalance between fidelity and naturalness", contentFr: "تَرْجَمَة حَرْفِيَّة - traduction littérale\nتَرْجَمَة حُرَّة - traduction libre\nتَرْجَمَة تَفْسِيرِيَّة - traduction interprétative\nÉquilibre entre fidélité et naturel" },
-        { title: "Challenges", titleFr: "Défis", content: "Cultural concepts (كَرَم، شَرَف)\nIdioms and proverbs\nReligious terminology\nRegister differences", contentFr: "Concepts culturels (كَرَم، شَرَف)\nIdiomes et proverbes\nTerminologie religieuse\nDifférences de registre" },
-        { title: "Quality Standards", titleFr: "Normes de qualité", content: "Accuracy (دِقَّة)\nClarity (وُضُوح)\nNaturalness (طَبِيعِيَّة)\nAppropriate register", contentFr: "Précision (دِقَّة)\nClareté (وُضُوح)\nNaturel (طَبِيعِيَّة)\nRegistre approprié" }
+        { title: "Translation Approaches", titleAr: "نهج الترجمة", titleFr: "Approches de traduction", content: "تَرْجَمَة حَرْفِيَّة - literal translation\nتَرْجَمَة حُرَّة - free translation\nتَرْجَمَة تَفْسِيرِيَّة - interpretive translation\nBalance between fidelity and naturalness", contentAr: "تَرْجَمَة حَرْفِيَّة - الترجمة الحرفية المباشرة\nتَرْجَمَة حُرَّة - ترجمة حرة من القيود\nتَرْجَمَة تَفْسِيرِيَّة - ترجمة تفسيرية\nالتوازن بين الأمانة والطبيعية", contentFr: "تَرْجَمَة حَرْفِيَّة - traduction littérale\nتَرْجَمَة حُرَّة - traduction libre\nتَرْجَمَة تَفْسِيرِيَّة - traduction interprétative\nÉquilibre entre fidélité et naturel" },
+        { title: "Challenges", titleAr: "التحديات", titleFr: "Défis", content: "Cultural concepts (كَرَم، شَرَف)\nIdioms and proverbs\nReligious terminology\nRegister differences", contentAr: "المفاهيم الثقافية: كَرَم و شَرَف\nالأمثال والتعابير\nالمصطلحات الدينية\nالفروقات في مستويات اللغة", contentFr: "Concepts culturels (كَرَم، شَرَف)\nIdiomes et proverbes\nTerminologie religieuse\nDifférences de registre" },
+        { title: "Quality Standards", titleAr: "معايير الجودة", titleFr: "Normes de qualité", content: "Accuracy (دِقَّة)\nClarity (وُضُوح)\nNaturalness (طَبِيعِيَّة)\nAppropriate register", contentAr: "دِقَّة - الدقة والصحة\nوُضُوح - الوضوح والفهم\nطَبِيعِيَّة - الطبيعية والسلاسة\nالسجل المناسب", contentFr: "Précision (دِقَّة)\nClareté (وُضُوح)\nNaturel (طَبِيعِيَّة)\nRegistre approprié" }
       ],
       vocabulary: [
-        { arabic: "تَرْجَمَة", transliteration: "tarjama", meaning: "translation", meaningFr: "traduction" },
-        { arabic: "مُتَرْجِم", transliteration: "mutarjim", meaning: "translator", meaningFr: "traducteur" },
-        { arabic: "نَصّ أَصْلِيّ", transliteration: "naṣṣ aṣlī", meaning: "source text", meaningFr: "texte source" },
-        { arabic: "نَصّ مُتَرْجَم", transliteration: "naṣṣ mutarjam", meaning: "target text", meaningFr: "texte cible" },
-        { arabic: "أَمَانَة", transliteration: "amāna", meaning: "fidelity", meaningFr: "fidélité" }
+        { arabic: "تَرْجَمَة", transliteration: "tarjama", meaning: "translation", meaningAr: "الترجمة من لغة لأخرى", meaningFr: "traduction" },
+        { arabic: "مُتَرْجِم", transliteration: "mutarjim", meaning: "translator", meaningAr: "المترجم والمتخصص", meaningFr: "traducteur" },
+        { arabic: "نَصّ أَصْلِيّ", transliteration: "naṣṣ aṣlī", meaning: "source text", meaningAr: "النص الأصلي المراد ترجمته", meaningFr: "texte source" },
+        { arabic: "نَصّ مُتَرْجَم", transliteration: "naṣṣ mutarjam", meaning: "target text", meaningAr: "النص المترجم المستهدف", meaningFr: "texte cible" },
+        { arabic: "أَمَانَة", transliteration: "amāna", meaning: "fidelity", meaningAr: "الأمانة والدقة الترجمية", meaningFr: "fidélité" }
       ]
     },
     exerciseCount: 17, prerequisites: ["5-18"]
