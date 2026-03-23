@@ -324,6 +324,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Describe your home in Arabic",
       "Use location prepositions"
     ],
+    objectivesFr: [
+      "Nommer les pièces d'une maison",
+      "Identifier les meubles courants",
+      "Décrire votre maison en arabe",
+      "Utiliser les prépositions de lieu"
+    ],
     estimatedTime: 50,
     difficulty: "easy",
     xpReward: 55,
@@ -343,15 +349,15 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "بَيْت", transliteration: "bayt", meaning: "house" },
-        { arabic: "غُرْفَة", transliteration: "ghurfa", meaning: "room" },
-        { arabic: "مَطْبَخ", transliteration: "maṭbakh", meaning: "kitchen" },
-        { arabic: "حَمَّام", transliteration: "ḥammām", meaning: "bathroom" },
-        { arabic: "سَرِير", transliteration: "sarīr", meaning: "bed" },
-        { arabic: "كُرْسِي", transliteration: "kursī", meaning: "chair" },
-        { arabic: "طَاوِلَة", transliteration: "ṭāwila", meaning: "table" },
-        { arabic: "بَاب", transliteration: "bāb", meaning: "door" },
-        { arabic: "نَافِذَة", transliteration: "nāfidha", meaning: "window" }
+        { arabic: "بَيْت", transliteration: "bayt", meaning: "house", meaningFr: "maison" },
+        { arabic: "غُرْفَة", transliteration: "ghurfa", meaning: "room", meaningFr: "pièce" },
+        { arabic: "مَطْبَخ", transliteration: "maṭbakh", meaning: "kitchen", meaningFr: "cuisine" },
+        { arabic: "حَمَّام", transliteration: "ḥammām", meaning: "bathroom", meaningFr: "salle de bain" },
+        { arabic: "سَرِير", transliteration: "sarīr", meaning: "bed", meaningFr: "lit" },
+        { arabic: "كُرْسِي", transliteration: "kursī", meaning: "chair", meaningFr: "chaise" },
+        { arabic: "طَاوِلَة", transliteration: "ṭāwila", meaning: "table", meaningFr: "table" },
+        { arabic: "بَاب", transliteration: "bāb", meaning: "door", meaningFr: "porte" },
+        { arabic: "نَافِذَة", transliteration: "nāfidha", meaning: "window", meaningFr: "fenêtre" }
       ]
     },
     exerciseCount: 16,
@@ -373,6 +379,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Distinguish gender and number",
       "Use pronouns in sentences",
       "Understand the dual form"
+    ],
+    objectivesFr: [
+      "Mémoriser les 12 pronoms personnels",
+      "Distinguer le genre et le nombre",
+      "Utiliser les pronoms dans les phrases",
+      "Comprendre la forme duelle"
     ],
     estimatedTime: 55,
     difficulty: "medium",
@@ -397,15 +409,15 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "أَنَا", transliteration: "anā", meaning: "I" },
-        { arabic: "أَنْتَ", transliteration: "anta", meaning: "you (m.s.)" },
-        { arabic: "أَنْتِ", transliteration: "anti", meaning: "you (f.s.)" },
-        { arabic: "هُوَ", transliteration: "huwa", meaning: "he" },
-        { arabic: "هِيَ", transliteration: "hiya", meaning: "she" },
-        { arabic: "نَحْنُ", transliteration: "naḥnu", meaning: "we" },
-        { arabic: "أَنْتُمْ", transliteration: "antum", meaning: "you (pl.)" },
-        { arabic: "هُمْ", transliteration: "hum", meaning: "they (m)" },
-        { arabic: "هُنَّ", transliteration: "hunna", meaning: "they (f)" }
+        { arabic: "أَنَا", transliteration: "anā", meaning: "I", meaningFr: "je" },
+        { arabic: "أَنْتَ", transliteration: "anta", meaning: "you (m.s.)", meaningFr: "tu (m.s.)" },
+        { arabic: "أَنْتِ", transliteration: "anti", meaning: "you (f.s.)", meaningFr: "tu (f.s.)" },
+        { arabic: "هُوَ", transliteration: "huwa", meaning: "he", meaningFr: "il" },
+        { arabic: "هِيَ", transliteration: "hiya", meaning: "she", meaningFr: "elle" },
+        { arabic: "نَحْنُ", transliteration: "naḥnu", meaning: "we", meaningFr: "nous" },
+        { arabic: "أَنْتُمْ", transliteration: "antum", meaning: "you (pl.)", meaningFr: "vous (pl.)" },
+        { arabic: "هُمْ", transliteration: "hum", meaning: "they (m)", meaningFr: "ils (m)" },
+        { arabic: "هُنَّ", transliteration: "hunna", meaning: "they (f)", meaningFr: "elles (f)" }
       ]
     },
     exerciseCount: 18,
@@ -426,6 +438,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Understand suffix pronunciation changes",
       "Form possessive phrases"
     ],
+    objectivesFr: [
+      "Attacher les suffixes possessifs aux noms",
+      "Exprimer 'mon', 'ton', 'son', 'son' (féminin), etc.",
+      "Comprendre les changements de prononciation des suffixes",
+      "Former des phrases possessives"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -445,11 +463,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "كِتَابِي", transliteration: "kitābī", meaning: "my book" },
-        { arabic: "بَيْتُكَ", transliteration: "baytuka", meaning: "your house (m)" },
-        { arabic: "سَيَّارَتُهَا", transliteration: "sayyāratuhā", meaning: "her car" },
-        { arabic: "عَائِلَتُنَا", transliteration: "'ā'ilatunā", meaning: "our family" },
-        { arabic: "صَدِيقُهُمْ", transliteration: "ṣadīquhum", meaning: "their friend" }
+        { arabic: "كِتَابِي", transliteration: "kitābī", meaning: "my book", meaningFr: "mon livre" },
+        { arabic: "بَيْتُكَ", transliteration: "baytuka", meaning: "your house (m)", meaningFr: "ta maison (m)" },
+        { arabic: "سَيَّارَتُهَا", transliteration: "sayyāratuhā", meaning: "her car", meaningFr: "sa voiture" },
+        { arabic: "عَائِلَتُنَا", transliteration: "'ā'ilatunā", meaning: "our family", meaningFr: "notre famille" },
+        { arabic: "صَدِيقُهُمْ", transliteration: "ṣadīquhum", meaning: "their friend", meaningFr: "leur ami" }
       ]
     },
     exerciseCount: 17,
@@ -470,6 +488,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Form sentences with demonstratives",
       "Match demonstratives with noun gender"
     ],
+    objectivesFr: [
+      "Utiliser هَذَا et هَذِهِ correctement",
+      "Distinguer les démonstratifs proches et éloignés",
+      "Former des phrases avec les démonstratifs",
+      "Accorder les démonstratifs avec le genre du nom"
+    ],
     estimatedTime: 50,
     difficulty: "medium",
     xpReward: 60,
@@ -489,12 +513,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "هَذَا", transliteration: "hādhā", meaning: "this (m)" },
-        { arabic: "هَذِهِ", transliteration: "hādhihi", meaning: "this (f)" },
-        { arabic: "ذَلِكَ", transliteration: "dhālika", meaning: "that (m)" },
-        { arabic: "تِلْكَ", transliteration: "tilka", meaning: "that (f)" },
-        { arabic: "هَؤُلَاءِ", transliteration: "hā'ulā'i", meaning: "these" },
-        { arabic: "أُولَئِكَ", transliteration: "ulā'ika", meaning: "those" }
+        { arabic: "هَذَا", transliteration: "hādhā", meaning: "this (m)", meaningFr: "ceci (m)" },
+        { arabic: "هَذِهِ", transliteration: "hādhihi", meaning: "this (f)", meaningFr: "ceci (f)" },
+        { arabic: "ذَلِكَ", transliteration: "dhālika", meaning: "that (m)", meaningFr: "cela (m)" },
+        { arabic: "تِلْكَ", transliteration: "tilka", meaning: "that (f)", meaningFr: "cela (f)" },
+        { arabic: "هَؤُلَاءِ", transliteration: "hā'ulā'i", meaning: "these", meaningFr: "ceux-ci" },
+        { arabic: "أُولَئِكَ", transliteration: "ulā'ika", meaning: "those", meaningFr: "ceux-là" }
       ]
     },
     exerciseCount: 16,
@@ -515,6 +539,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Understand word order in questions",
       "Practice question-answer exchanges"
     ],
+    objectivesFr: [
+      "Poser les questions 'qui', 'quoi', 'où', 'quand', 'pourquoi', 'comment'",
+      "Former les questions correctement",
+      "Comprendre l'ordre des mots dans les questions",
+      "Pratiquer les échanges question-réponse"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -534,13 +564,13 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "مَنْ", transliteration: "man", meaning: "who?" },
-        { arabic: "مَا / مَاذَا", transliteration: "mā / mādhā", meaning: "what?" },
-        { arabic: "أَيْنَ", transliteration: "ayna", meaning: "where?" },
-        { arabic: "مَتَى", transliteration: "matā", meaning: "when?" },
-        { arabic: "لِمَاذَا", transliteration: "limādhā", meaning: "why?" },
-        { arabic: "كَيْفَ", transliteration: "kayfa", meaning: "how?" },
-        { arabic: "هَلْ", transliteration: "hal", meaning: "is? / do? (yes/no marker)" }
+        { arabic: "مَنْ", transliteration: "man", meaning: "who?", meaningFr: "qui ?" },
+        { arabic: "مَا / مَاذَا", transliteration: "mā / mādhā", meaning: "what?", meaningFr: "quoi ?" },
+        { arabic: "أَيْنَ", transliteration: "ayna", meaning: "where?", meaningFr: "où ?" },
+        { arabic: "مَتَى", transliteration: "matā", meaning: "when?", meaningFr: "quand ?" },
+        { arabic: "لِمَاذَا", transliteration: "limādhā", meaning: "why?", meaningFr: "pourquoi ?" },
+        { arabic: "كَيْفَ", transliteration: "kayfa", meaning: "how?", meaningFr: "comment ?" },
+        { arabic: "هَلْ", transliteration: "hal", meaning: "is? / do? (yes/no marker)", meaningFr: "est ? / tu fais ? (marqueur oui/non)" }
       ]
     },
     exerciseCount: 18,
@@ -563,6 +593,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Convert masculine to feminine",
       "Apply gender agreement rules"
     ],
+    objectivesFr: [
+      "Identifier les noms masculins et féminins",
+      "Reconnaître le marqueur féminin ة",
+      "Convertir le masculin en féminin",
+      "Appliquer les règles d'accord des genres"
+    ],
     estimatedTime: 50,
     difficulty: "medium",
     xpReward: 60,
@@ -582,11 +618,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "مُذَكَّر", transliteration: "mudhakkar", meaning: "masculine" },
-        { arabic: "مُؤَنَّث", transliteration: "mu'annath", meaning: "feminine" },
-        { arabic: "طَالِب / طَالِبَة", transliteration: "ṭālib / ṭāliba", meaning: "student (m/f)" },
-        { arabic: "مُعَلِّم / مُعَلِّمَة", transliteration: "mu'allim / mu'allima", meaning: "teacher (m/f)" },
-        { arabic: "صَدِيق / صَدِيقَة", transliteration: "ṣadīq / ṣadīqa", meaning: "friend (m/f)" }
+        { arabic: "مُذَكَّر", transliteration: "mudhakkar", meaning: "masculine", meaningFr: "masculin" },
+        { arabic: "مُؤَنَّث", transliteration: "mu'annath", meaning: "feminine", meaningFr: "féminin" },
+        { arabic: "طَالِب / طَالِبَة", transliteration: "ṭālib / ṭāliba", meaning: "student (m/f)", meaningFr: "étudiant (m/f)" },
+        { arabic: "مُعَلِّم / مُعَلِّمَة", transliteration: "mu'allim / mu'allima", meaning: "teacher (m/f)", meaningFr: "professeur (m/f)" },
+        { arabic: "صَدِيق / صَدِيقَة", transliteration: "ṣadīq / ṣadīqa", meaning: "friend (m/f)", meaningFr: "ami (m/f)" }
       ]
     },
     exerciseCount: 16,
@@ -607,6 +643,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Apply assimilation rules correctly",
       "Distinguish definite from indefinite nouns"
     ],
+    objectivesFr: [
+      "Utiliser الـ (al-) pour rendre les noms définis",
+      "Comprendre les lettres du soleil et de la lune",
+      "Appliquer les règles d'assimilation correctement",
+      "Distinguer les noms définis des noms indéfinis"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -626,10 +668,10 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "الكِتَاب", transliteration: "al-kitāb", meaning: "the book" },
-        { arabic: "الشَّمْس", transliteration: "ash-shams", meaning: "the sun" },
-        { arabic: "القَمَر", transliteration: "al-qamar", meaning: "the moon" },
-        { arabic: "النُّور", transliteration: "an-nūr", meaning: "the light" },
+        { arabic: "الكِتَاب", transliteration: "al-kitāb", meaning: "the book", meaningFr: "le livre" },
+        { arabic: "الشَّمْس", transliteration: "ash-shams", meaning: "the sun", meaningFr: "le soleil" },
+        { arabic: "القَمَر", transliteration: "al-qamar", meaning: "the moon", meaningFr: "la lune" },
+        { arabic: "النُّور", transliteration: "an-nūr", meaning: "the light", meaningFr: "la lumière" },
         { arabic: "البَيْت", transliteration: "al-bayt", meaning: "the house" }
       ]
     },
@@ -651,6 +693,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Apply definiteness agreement",
       "Form noun-adjective phrases"
     ],
+    objectivesFr: [
+      "Utiliser les adjectifs arabes courants",
+      "Appliquer l'accord de genre",
+      "Appliquer l'accord de définitude",
+      "Former des groupes nominaux et adjectivaux"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -670,12 +718,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "كَبِير / كَبِيرَة", transliteration: "kabīr / kabīra", meaning: "big" },
-        { arabic: "صَغِير / صَغِيرَة", transliteration: "ṣaghīr / ṣaghīra", meaning: "small" },
-        { arabic: "جَمِيل / جَمِيلَة", transliteration: "jamīl / jamīla", meaning: "beautiful" },
-        { arabic: "جَدِيد / جَدِيدَة", transliteration: "jadīd / jadīda", meaning: "new" },
-        { arabic: "طَوِيل / طَوِيلَة", transliteration: "ṭawīl / ṭawīla", meaning: "tall/long" },
-        { arabic: "قَصِير / قَصِيرَة", transliteration: "qaṣīr / qaṣīra", meaning: "short" }
+        { arabic: "كَبِير / كَبِيرَة", transliteration: "kabīr / kabīra", meaning: "big", meaningFr: "grand" },
+        { arabic: "صَغِير / صَغِيرَة", transliteration: "ṣaghīr / ṣaghīra", meaning: "small", meaningFr: "petit" },
+        { arabic: "جَمِيل / جَمِيلَة", transliteration: "jamīl / jamīla", meaning: "beautiful", meaningFr: "beau" },
+        { arabic: "جَدِيد / جَدِيدَة", transliteration: "jadīd / jadīda", meaning: "new", meaningFr: "nouveau" },
+        { arabic: "طَوِيل / طَوِيلَة", transliteration: "ṭawīl / ṭawīla", meaning: "tall/long", meaningFr: "grand/long" },
+        { arabic: "قَصِير / قَصِيرَة", transliteration: "qaṣīr / qaṣīra", meaning: "short", meaningFr: "court" }
       ]
     },
     exerciseCount: 18,
@@ -696,6 +744,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Recognize common broken plural patterns",
       "Use plurals correctly in sentences"
     ],
+    objectivesFr: [
+      "Comprendre les pluriels sains et cassés",
+      "Former les pluriels sains masculins et féminins",
+      "Reconnaître les modèles de pluriels cassés courants",
+      "Utiliser correctement les pluriels dans les phrases"
+    ],
     estimatedTime: 60,
     difficulty: "medium",
     xpReward: 70,
@@ -715,11 +769,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "كِتَاب → كُتُب", transliteration: "kitāb → kutub", meaning: "book → books" },
-        { arabic: "رَجُل → رِجَال", transliteration: "rajul → rijāl", meaning: "man → men" },
-        { arabic: "بَيْت → بُيُوت", transliteration: "bayt → buyūt", meaning: "house → houses" },
-        { arabic: "وَلَد → أَوْلَاد", transliteration: "walad → awlād", meaning: "boy → boys" },
-        { arabic: "طَالِب → طُلَّاب", transliteration: "ṭālib → ṭullāb", meaning: "student → students" }
+        { arabic: "كِتَاب → كُتُب", transliteration: "kitāb → kutub", meaning: "book → books", meaningFr: "livre → livres" },
+        { arabic: "رَجُل → رِجَال", transliteration: "rajul → rijāl", meaning: "man → men", meaningFr: "homme → hommes" },
+        { arabic: "بَيْت → بُيُوت", transliteration: "bayt → buyūt", meaning: "house → houses", meaningFr: "maison → maisons" },
+        { arabic: "وَلَد → أَوْلَاد", transliteration: "walad → awlād", meaning: "boy → boys", meaningFr: "garçon → garçons" },
+        { arabic: "طَالِب → طُلَّاب", transliteration: "ṭālib → ṭullāb", meaning: "student → students", meaningFr: "étudiant → étudiants" }
       ]
     },
     exerciseCount: 18,
@@ -740,6 +794,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Read prices and quantities",
       "Use numbers in practical contexts"
     ],
+    objectivesFr: [
+      "Compter de 11 à 100 en arabe",
+      "Comprendre l'accord numéro-nom",
+      "Lire les prix et les quantités",
+      "Utiliser les nombres dans des contextes pratiques"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -759,11 +819,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "عِشْرُون", transliteration: "'ishrūn", meaning: "twenty" },
-        { arabic: "ثَلَاثُون", transliteration: "thalāthūn", meaning: "thirty" },
-        { arabic: "خَمْسُون", transliteration: "khamsūn", meaning: "fifty" },
-        { arabic: "مِئَة / مِائَة", transliteration: "mi'a", meaning: "one hundred" },
-        { arabic: "رَقْم", transliteration: "raqm", meaning: "number" }
+        { arabic: "عِشْرُون", transliteration: "'ishrūn", meaning: "twenty", meaningFr: "vingt" },
+        { arabic: "ثَلَاثُون", transliteration: "thalāthūn", meaning: "thirty", meaningFr: "trente" },
+        { arabic: "خَمْسُون", transliteration: "khamsūn", meaning: "fifty", meaningFr: "cinquante" },
+        { arabic: "مِئَة / مِائَة", transliteration: "mi'a", meaning: "one hundred", meaningFr: "cent" },
+        { arabic: "رَقْم", transliteration: "raqm", meaning: "number", meaningFr: "nombre" }
       ]
     },
     exerciseCount: 16,
@@ -786,6 +846,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Identify verb forms in sentences",
       "Learn the concept of past, present, and future"
     ],
+    objectivesFr: [
+      "Comprendre le système de racines à trois lettres",
+      "Reconnaître les modèles de verbes",
+      "Identifier les formes de verbes dans les phrases",
+      "Apprendre le concept du passé, du présent et du futur"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -805,11 +871,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "فِعْل", transliteration: "fi'l", meaning: "verb" },
-        { arabic: "كَتَبَ", transliteration: "kataba", meaning: "he wrote" },
-        { arabic: "قَرَأَ", transliteration: "qara'a", meaning: "he read" },
-        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went" },
-        { arabic: "فَعَلَ", transliteration: "fa'ala", meaning: "he did" }
+        { arabic: "فِعْل", transliteration: "fi'l", meaning: "verb", meaningFr: "verbe" },
+        { arabic: "كَتَبَ", transliteration: "kataba", meaning: "he wrote", meaningFr: "il a écrit" },
+        { arabic: "قَرَأَ", transliteration: "qara'a", meaning: "he read", meaningFr: "il a lu" },
+        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningFr: "il est allé" },
+        { arabic: "فَعَلَ", transliteration: "fa'ala", meaning: "he did", meaningFr: "il a fait" }
       ]
     },
     exerciseCount: 15,
@@ -830,6 +896,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Form simple past tense sentences",
       "Understand suffixes for each person"
     ],
+    objectivesFr: [
+      "Conjuguer les verbes au passé pour tous les pronoms",
+      "Mémoriser les verbes au passé courants",
+      "Former des phrases au passé simple",
+      "Comprendre les suffixes pour chaque personne"
+    ],
     estimatedTime: 60,
     difficulty: "medium",
     xpReward: 70,
@@ -846,7 +918,7 @@ export const PHASE_2_LESSONS: Lesson[] = [
       ],
       vocabulary: [
         { arabic: "كَتَبْتُ", transliteration: "katabtu", meaning: "I wrote" },
-        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went" },
+        { arabic: "ذَهَبَ", transliteration: "dhahaba", meaning: "he went", meaningFr: "il est allé" },
         { arabic: "أَكَلَتْ", transliteration: "akalat", meaning: "she ate" },
         { arabic: "شَرِبْنَا", transliteration: "sharibnā", meaning: "we drank" },
         { arabic: "دَرَسُوا", transliteration: "darasū", meaning: "they studied" }
@@ -870,6 +942,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Use present tense in sentences",
       "Express ongoing actions"
     ],
+    objectivesFr: [
+      "Conjuguer les verbes au présent pour tous les pronoms",
+      "Comprendre les modèles de préfixe + suffixe",
+      "Utiliser le présent dans les phrases",
+      "Exprimer les actions en cours"
+    ],
     estimatedTime: 60,
     difficulty: "medium",
     xpReward: 70,
@@ -885,11 +963,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "أَكْتُبُ", transliteration: "aktubu", meaning: "I write" },
-        { arabic: "تَذْهَبُ", transliteration: "tadhhabu", meaning: "you go / she goes" },
-        { arabic: "يَأْكُلُ", transliteration: "ya'kulu", meaning: "he eats" },
-        { arabic: "نَشْرَبُ", transliteration: "nashrabu", meaning: "we drink" },
-        { arabic: "يَعْمَلُونَ", transliteration: "ya'malūna", meaning: "they work" }
+        { arabic: "أَكْتُبُ", transliteration: "aktubu", meaning: "I write", meaningFr: "j'écris" },
+        { arabic: "تَذْهَبُ", transliteration: "tadhhabu", meaning: "you go / she goes", meaningFr: "tu vas / elle va" },
+        { arabic: "يَأْكُلُ", transliteration: "ya'kulu", meaning: "he eats", meaningFr: "il mange" },
+        { arabic: "نَشْرَبُ", transliteration: "nashrabu", meaning: "we drink", meaningFr: "nous buvons" },
+        { arabic: "يَعْمَلُونَ", transliteration: "ya'malūna", meaning: "they work", meaningFr: "ils travaillent" }
       ]
     },
     exerciseCount: 18,
@@ -909,6 +987,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Use verbs in both tenses",
       "Build practical sentences",
       "Develop verb vocabulary"
+    ],
+    objectivesFr: [
+      "Maîtriser les 20 verbes arabes les plus courants",
+      "Utiliser les verbes aux deux temps",
+      "Construire des phrases pratiques",
+      "Développer le vocabulaire des verbes"
     ],
     estimatedTime: 55,
     difficulty: "medium",
@@ -954,6 +1038,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Use لَمْ for emphatic past negation",
       "Form negative sentences correctly"
     ],
+    objectivesFr: [
+      "Nier le passé avec مَا",
+      "Nier le présent avec لَا",
+      "Utiliser لَمْ pour la négation emphase du passé",
+      "Former correctement les phrases négatives"
+    ],
     estimatedTime: 50,
     difficulty: "medium",
     xpReward: 60,
@@ -973,11 +1063,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "مَا", transliteration: "mā", meaning: "not (past)" },
-        { arabic: "لَا", transliteration: "lā", meaning: "not (present)" },
-        { arabic: "لَمْ", transliteration: "lam", meaning: "did not (emphatic)" },
-        { arabic: "لَنْ", transliteration: "lan", meaning: "will not" },
-        { arabic: "لَيْسَ", transliteration: "laysa", meaning: "is not" }
+        { arabic: "مَا", transliteration: "mā", meaning: "not (past)", meaningFr: "pas (passé)" },
+        { arabic: "لَا", transliteration: "lā", meaning: "not (present)", meaningFr: "pas (présent)" },
+        { arabic: "لَمْ", transliteration: "lam", meaning: "did not (emphatic)", meaningFr: "n'a pas (emphatique)" },
+        { arabic: "لَنْ", transliteration: "lan", meaning: "will not", meaningFr: "ne sera pas" },
+        { arabic: "لَيْسَ", transliteration: "laysa", meaning: "is not", meaningFr: "n'est pas" }
       ]
     },
     exerciseCount: 16,
@@ -999,6 +1089,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Form 'X is Y' sentences",
       "Use pronouns as copulas",
       "Describe people and things"
+    ],
+    objectivesFr: [
+      "Comprendre la structure de la phrase nominale",
+      "Former des phrases 'X est Y'",
+      "Utiliser les pronoms comme copules",
+      "Décrire les personnes et les choses"
     ],
     estimatedTime: 50,
     difficulty: "medium",
@@ -1043,6 +1139,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Add objects to sentences",
       "Compare verbal and nominal sentences"
     ],
+    objectivesFr: [
+      "Comprendre la structure de la phrase verbale",
+      "Utiliser l'ordre VSO",
+      "Ajouter des objets aux phrases",
+      "Comparer les phrases verbales et nominales"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -1085,6 +1187,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Answer questions appropriately",
       "Practice question intonation"
     ],
+    objectivesFr: [
+      "Poser les questions oui/non avec هَلْ",
+      "Utiliser les mots interrogatifs dans les phrases",
+      "Répondre aux questions de manière appropriée",
+      "Pratiquer l'intonation des questions"
+    ],
     estimatedTime: 50,
     difficulty: "medium",
     xpReward: 60,
@@ -1107,8 +1215,8 @@ export const PHASE_2_LESSONS: Lesson[] = [
         { arabic: "هَلْ تَتَكَلَّمُ العَرَبِيَّةَ؟", transliteration: "hal tatakallamu al-'arabiyyata?", meaning: "Do you speak Arabic?" },
         { arabic: "أَيْنَ تَسْكُنُ؟", transliteration: "ayna taskunu?", meaning: "Where do you live?" },
         { arabic: "كَمْ عُمْرُكَ؟", transliteration: "kam 'umruka?", meaning: "How old are you?" },
-        { arabic: "نَعَمْ", transliteration: "na'am", meaning: "Yes" },
-        { arabic: "لَا", transliteration: "lā", meaning: "No" }
+        { arabic: "نَعَمْ", transliteration: "na'am", meaning: "Yes", meaningFr: "Oui" },
+        { arabic: "لَا", transliteration: "lā", meaning: "No", meaningFr: "Non" }
       ]
     },
     exerciseCount: 18,
@@ -1129,6 +1237,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Form prepositional phrases",
       "Combine prepositions with pronouns"
     ],
+    objectivesFr: [
+      "Utiliser les prépositions arabes courantes",
+      "Décrire les lieux et les directions",
+      "Former les groupes prépositionnels",
+      "Combiner les prépositions avec les pronoms"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -1148,11 +1262,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "فِي البَيْت", transliteration: "fī al-bayt", meaning: "in the house" },
-        { arabic: "عَلَى الطَّاوِلَة", transliteration: "'alā aṭ-ṭāwila", meaning: "on the table" },
-        { arabic: "مِنَ المَدْرَسَة", transliteration: "min al-madrasa", meaning: "from the school" },
-        { arabic: "إِلَى السُّوق", transliteration: "ilā as-sūq", meaning: "to the market" },
-        { arabic: "مَعِي", transliteration: "ma'ī", meaning: "with me" }
+        { arabic: "فِي البَيْت", transliteration: "fī al-bayt", meaning: "in the house", meaningFr: "dans la maison" },
+        { arabic: "عَلَى الطَّاوِلَة", transliteration: "'alā aṭ-ṭāwila", meaning: "on the table", meaningFr: "sur la table" },
+        { arabic: "مِنَ المَدْرَسَة", transliteration: "min al-madrasa", meaning: "from the school", meaningFr: "de l'école" },
+        { arabic: "إِلَى السُّوق", transliteration: "ilā as-sūq", meaning: "to the market", meaningFr: "au marché" },
+        { arabic: "مَعِي", transliteration: "ma'ī", meaning: "with me", meaningFr: "avec moi" }
       ]
     },
     exerciseCount: 17,
@@ -1173,6 +1287,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Use time expressions",
       "Talk about schedules"
     ],
+    objectivesFr: [
+      "Dire l'heure en arabe",
+      "Discuter des routines quotidiennes",
+      "Utiliser les expressions de temps",
+      "Parler des horaires"
+    ],
     estimatedTime: 55,
     difficulty: "medium",
     xpReward: 65,
@@ -1192,11 +1312,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "السَّاعَة", transliteration: "as-sā'a", meaning: "the hour/o'clock" },
-        { arabic: "صَبَاحًا", transliteration: "ṣabāḥan", meaning: "in the morning" },
-        { arabic: "مَسَاءً", transliteration: "masā'an", meaning: "in the evening" },
-        { arabic: "غَدًا", transliteration: "ghadan", meaning: "tomorrow" },
-        { arabic: "أَمْس", transliteration: "ams", meaning: "yesterday" }
+        { arabic: "السَّاعَة", transliteration: "as-sā'a", meaning: "the hour/o'clock", meaningFr: "l'heure" },
+        { arabic: "صَبَاحًا", transliteration: "ṣabāḥan", meaning: "in the morning", meaningFr: "le matin" },
+        { arabic: "مَسَاءً", transliteration: "masā'an", meaning: "in the evening", meaningFr: "le soir" },
+        { arabic: "غَدًا", transliteration: "ghadan", meaning: "tomorrow", meaningFr: "demain" },
+        { arabic: "أَمْس", transliteration: "ams", meaning: "yesterday", meaningFr: "hier" }
       ]
     },
     exerciseCount: 16,
@@ -1219,6 +1339,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Talk about where you live",
       "Ask others about themselves"
     ],
+    objectivesFr: [
+      "Donner votre nom et votre nationalité",
+      "Indiquer votre profession",
+      "Parler de votre lieu de résidence",
+      "Demander aux autres de se présenter"
+    ],
     estimatedTime: 50,
     difficulty: "easy",
     xpReward: 55,
@@ -1238,11 +1364,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "اِسْمِي", transliteration: "ismī", meaning: "my name is" },
-        { arabic: "أَنَا مِنْ", transliteration: "anā min", meaning: "I am from" },
-        { arabic: "أَسْكُنُ فِي", transliteration: "askunu fī", meaning: "I live in" },
-        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work" },
-        { arabic: "تَشَرَّفْنَا", transliteration: "tasharrafnā", meaning: "pleased to meet you" }
+        { arabic: "اِسْمِي", transliteration: "ismī", meaning: "my name is", meaningFr: "je m'appelle" },
+        { arabic: "أَنَا مِنْ", transliteration: "anā min", meaning: "I am from", meaningFr: "je suis de" },
+        { arabic: "أَسْكُنُ فِي", transliteration: "askunu fī", meaning: "I live in", meaningFr: "j'habite" },
+        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work", meaningFr: "je travaille" },
+        { arabic: "تَشَرَّفْنَا", transliteration: "tasharrafnā", meaning: "pleased to meet you", meaningFr: "enchanté de vous rencontrer" }
       ]
     },
     exerciseCount: 16,
@@ -1263,6 +1389,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Request the bill",
       "Express food preferences"
     ],
+    objectivesFr: [
+      "Commander de la nourriture et des boissons",
+      "Demander à propos du menu",
+      "Demander l'addition",
+      "Exprimer vos préférences alimentaires"
+    ],
     estimatedTime: 50,
     difficulty: "easy",
     xpReward: 55,
@@ -1282,11 +1414,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "أُرِيدُ", transliteration: "urīdu", meaning: "I want" },
-        { arabic: "قَائِمَة الطَّعَام", transliteration: "qā'imat aṭ-ṭa'ām", meaning: "menu" },
-        { arabic: "الحِسَاب", transliteration: "al-ḥisāb", meaning: "the bill" },
+        { arabic: "أُرِيدُ", transliteration: "urīdu", meaning: "I want", meaningFr: "je veux" },
+        { arabic: "قَائِمَة الطَّعَام", transliteration: "qā'imat aṭ-ṭa'ām", meaning: "menu", meaningFr: "menu" },
+        { arabic: "الحِسَاب", transliteration: "al-ḥisāb", meaning: "the bill", meaningFr: "l'addition" },
         { arabic: "لَذِيذ", transliteration: "ladhīdh", meaning: "delicious" },
-        { arabic: "شُكْرًا", transliteration: "shukran", meaning: "thank you" }
+        { arabic: "شُكْرًا", transliteration: "shukran", meaning: "thank you", meaningFr: "merci" }
       ]
     },
     exerciseCount: 15,
@@ -1307,6 +1439,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Describe what you want",
       "Complete a purchase"
     ],
+    objectivesFr: [
+      "Demander les prix",
+      "Négocier et marchander",
+      "Décrire ce que vous voulez",
+      "Effectuer un achat"
+    ],
     estimatedTime: 50,
     difficulty: "easy",
     xpReward: 55,
@@ -1326,11 +1464,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "بِكَمْ؟", transliteration: "bikam?", meaning: "How much?" },
-        { arabic: "سِعْر", transliteration: "si'r", meaning: "price" },
-        { arabic: "غَالٍ", transliteration: "ghālin", meaning: "expensive" },
-        { arabic: "رَخِيص", transliteration: "rakhīṣ", meaning: "cheap" },
-        { arabic: "سَآخُذُ", transliteration: "sa-ākhudu", meaning: "I will take" }
+        { arabic: "بِكَمْ؟", transliteration: "bikam?", meaning: "How much?", meaningFr: "Combien ?" },
+        { arabic: "سِعْر", transliteration: "si'r", meaning: "price", meaningFr: "prix" },
+        { arabic: "غَالٍ", transliteration: "ghālin", meaning: "expensive", meaningFr: "cher" },
+        { arabic: "رَخِيص", transliteration: "rakhīṣ", meaning: "cheap", meaningFr: "bon marché" },
+        { arabic: "سَآخُذُ", transliteration: "sa-ākhudu", meaning: "I will take", meaningFr: "je vais prendre" }
       ]
     },
     exerciseCount: 15,
@@ -1351,6 +1489,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Describe habits and routines",
       "Ask about others' routines"
     ],
+    objectivesFr: [
+      "Parler de votre emploi du temps quotidien",
+      "Utiliser naturellement les expressions de temps",
+      "Décrire les habitudes et les routines",
+      "Demander aux autres à propos de leurs routines"
+    ],
     estimatedTime: 50,
     difficulty: "easy",
     xpReward: 55,
@@ -1366,11 +1510,11 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "أَسْتَيْقِظُ", transliteration: "astayqiẓu", meaning: "I wake up" },
-        { arabic: "أَذْهَبُ", transliteration: "adhhabu", meaning: "I go" },
-        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work" },
-        { arabic: "أَرْجِعُ", transliteration: "arji'u", meaning: "I return" },
-        { arabic: "أَنَامُ", transliteration: "anāmu", meaning: "I sleep" }
+        { arabic: "أَسْتَيْقِظُ", transliteration: "astayqiẓu", meaning: "I wake up", meaningFr: "je me réveille" },
+        { arabic: "أَذْهَبُ", transliteration: "adhhabu", meaning: "I go", meaningFr: "je vais" },
+        { arabic: "أَعْمَلُ", transliteration: "a'malu", meaning: "I work", meaningFr: "je travaille" },
+        { arabic: "أَرْجِعُ", transliteration: "arji'u", meaning: "I return", meaningFr: "je reviens" },
+        { arabic: "أَنَامُ", transliteration: "anāmu", meaning: "I sleep", meaningFr: "je dors" }
       ]
     },
     exerciseCount: 16,
@@ -1391,6 +1535,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Complete practical conversations",
       "Prepare for Phase 3"
     ],
+    objectivesFr: [
+      "Révisez tout le vocabulaire appris",
+      "Démontrez la maîtrise de la grammaire",
+      "Complétez les conversations pratiques",
+      "Préparez-vous pour la Phase 3"
+    ],
     estimatedTime: 60,
     difficulty: "medium",
     xpReward: 100,
@@ -1410,10 +1560,10 @@ export const PHASE_2_LESSONS: Lesson[] = [
         }
       ],
       vocabulary: [
-        { arabic: "تَهَانِينَا!", transliteration: "tahāninā!", meaning: "Congratulations!" },
-        { arabic: "أَحْسَنْتَ!", transliteration: "aḥsanta!", meaning: "Well done!" },
-        { arabic: "مُمْتَاز", transliteration: "mumtāz", meaning: "Excellent" },
-        { arabic: "اِسْتَمِرّ", transliteration: "istamirr", meaning: "Keep going" }
+        { arabic: "تَهَانِينَا!", transliteration: "tahāninā!", meaning: "Congratulations!", meaningFr: "Félicitations !" },
+        { arabic: "أَحْسَنْتَ!", transliteration: "aḥsanta!", meaning: "Well done!", meaningFr: "Bien joué !" },
+        { arabic: "مُمْتَاز", transliteration: "mumtāz", meaning: "Excellent", meaningFr: "Excellent" },
+        { arabic: "اِسْتَمِرّ", transliteration: "istamirr", meaning: "Keep going", meaningFr: "Continuez" }
       ]
     },
     exerciseCount: 25,
