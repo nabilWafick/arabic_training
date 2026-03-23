@@ -613,8 +613,8 @@ export const PHASE_3_LESSONS: Lesson[] = [
     estimatedTime: 45, difficulty: "medium", xpReward: 60,
     content: {
       theory: [
-        { title: "Body Parts Review", titleAr: "Body Parts Review", titleFr: "Révision des parties du corps", content: "رَأْس - head\nصَدْر - chest\nمَعِدَة - stomach\nظَهْر - back\nقَلْب - heart", contentFr: "رَأْس - tête\nصَدْر - poitrine\nمَعِدَة - estomac\nظَهْر - dos\nقَلْب - cœur" },
-        { title: "Symptoms & Conditions", titleAr: "Symptoms & Conditions", titleFr: "Symptômes et conditions", content: "أَلَم - pain\nحُمَّى - fever\nصُدَاع - headache\nزُكَام - cold\nسُعَال - cough", contentFr: "أَلَم - douleur\nحُمَّى - fièvre\nصُدَاع - mal de tête\nزُكَام - rhume\nسُعَال - toux" }
+        { title: "Body Parts Review", titleAr: "Body Parts Review", titleFr: "Révision des parties du corps", content: "رَأْس - head\nصَدْر - chest\nمَعِدَة - stomach\nظَهْر - back\nقَلْب - heart", contentAr: "رَأْس - الرأس\nصَدْر - الصدر\nمَعِدَة - المعدة\nظَهْر - الظهر\nقَلْب - القلب", contentFr: "رَأْس - tête\nصَدْر - poitrine\nمَعِدَة - estomac\nظَهْر - dos\nقَلْب - cœur" },
+        { title: "Symptoms & Conditions", titleAr: "Symptoms & Conditions", titleFr: "Symptômes et conditions", content: "أَلَم - pain\nحُمَّى - fever\nصُدَاع - headache\nزُكَام - cold\nسُعَال - cough", contentAr: "أَلَم - الألم، الوجع\nحُمَّى - الحمى\nصُدَاع - الصداع\nزُكَام - الزكام\nسُعَال - السعال", contentFr: "أَلَم - douleur\nحُمَّى - fièvre\nصُدَاع - mal de tête\nزُكَام - rhume\nسُعَال - toux" }
       ],
       vocabulary: [
         { arabic: "مَرِيض", transliteration: "marīḍ", meaning: "patient/sick", meaningAr: "مريض، عليل", meaningFr: "patient/malade" },
@@ -698,8 +698,8 @@ export const PHASE_3_LESSONS: Lesson[] = [
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "News Structure", titleAr: "بنية الأخبار", titleFr: "Structure des nouvelles", content: "عُنْوَان - headline\nمُقَدِّمَة - introduction\nتَفَاصِيل - details\nخَاتِمَة - conclusion", contentFr: "عُنْوَان - titre\nمُقَدِّمَة - introduction\nتَفَاصِيل - détails\nخَاتِمَة - conclusion" },
-        { title: "Common News Vocabulary", titleAr: "المفردات الإخبارية الشائعة", titleFr: "Vocabulaire courant des nouvelles", content: "أَعْلَنَ - announced\nصَرَّحَ - declared\nأَكَّدَ - confirmed\nنَفَى - denied\nوَفْقًا لِـ - according to", contentFr: "أَعْلَنَ - annoncé\nصَرَّحَ - déclaré\nأَكَّدَ - confirmé\nنَفَى - nié\nوَفْقًا لِـ - selon" }
+        { title: "News Structure", titleAr: "بنية الأخبار", titleFr: "Structure des nouvelles", content: "عُنْوَان - headline\nمُقَدِّمَة - introduction\nتَفَاصِيل - details\nخَاتِمَة - conclusion", contentAr: "عُنْوَان - العنوان الرئيسي\nمُقَدِّمَة - المقدمة الإخبارية\nتَفَاصِيل - التفاصيل والمعلومات\nخَاتِمَة - الخاتمة والخلاصة", contentFr: "عُنْوَان - titre\nمُقَدِّمَة - introduction\nتَفَاصِيل - détails\nخَاتِمَة - conclusion" },
+        { title: "Common News Vocabulary", titleAr: "المفردات الإخبارية الشائعة", titleFr: "Vocabulaire courant des nouvelles", content: "أَعْلَنَ - announced\nصَرَّحَ - declared\nأَكَّدَ - confirmed\nنَفَى - denied\nوَفْقًا لِـ - according to", contentAr: "أَعْلَنَ - أعلن، صرح بشكل رسمي\nصَرَّحَ - صرح، أدلى بتصريح\nأَكَّدَ - أكد، أعاد التأكيد\nنَفَى - نفى، أنكر\nوَفْقًا لِـ - وفقا لـ، حسب، طبقا لـ", contentFr: "أَعْلَنَ - annoncé\nصَرَّحَ - déclaré\nأَكَّدَ - confirmé\nنَفَى - nié\nوَفْقًا لِـ - selon" }
       ],
       vocabulary: [
         { arabic: "خَبَر", transliteration: "khabar", meaning: "news", meaningAr: "news", meaningFr: "nouvelle" },
@@ -726,8 +726,8 @@ export const PHASE_3_LESSONS: Lesson[] = [
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Story Elements", titleAr: "عناصر القصة", titleFr: "Éléments de l'histoire", content: "شَخْصِيَّة - character\nحَبْكَة - plot\nمَكَان - setting\nذُرْوَة - climax\nنِهَايَة - ending", contentFr: "شَخْصِيَّة - personnage\nحَبْكَة - intrigue\nمَكَان - cadre\nذُرْوَة - climax\nنِهَايَة - fin" },
-        { title: "Narrative Vocabulary", titleAr: "المفردات السردية", titleFr: "Vocabulaire narratif", content: "رَاوٍ - narrator\nبَطَل - hero/protagonist\nحِوَار - dialogue\nوَصْف - description", contentFr: "رَاوٍ - narrateur\nبَطَل - héros/protagoniste\nحِوَار - dialogue\nوَصْف - description" }
+        { title: "Story Elements", titleAr: "عناصر القصة", titleFr: "Éléments de l'histoire", content: "شَخْصِيَّة - character\nحَبْكَة - plot\nمَكَان - setting\nذُرْوَة - climax\nنِهَايَة - ending", contentAr: "شَخْصِيَّة - الشخصيات والشخص الرئيسي\nحَبْكَة - حبكة القصة وسلسلة الأحداث\nمَكَان - المكان والزمان والبيئة\nذُرْوَة - ذروة القصة والنقطة الفاصلة\nنِهَايَة - النهاية والحل", contentFr: "شَخْصِيَّة - personnage\nحَبْكَة - intrigue\nمَكَان - cadre\nذُرْوَة - climax\nنِهَايَة - fin" },
+        { title: "Narrative Vocabulary", titleAr: "المفردات السردية", titleFr: "Vocabulaire narratif", content: "رَاوٍ - narrator\nبَطَل - hero/protagonist\nحِوَار - dialogue\nوَصْف - description", contentAr: "رَاوٍ - الراوي المسؤول عن سرد القصة\nبَطَل - البطل والشخصية الرئيسية\nحِوَار - الحوار والكلام بين الشخصيات\nوَصْف - الوصف التفصيلي والتصوير الأدبي", contentFr: "رَاوٍ - narrateur\nبَطَل - héros/protagoniste\nحِوَار - dialogue\nوَصْف - description" }
       ],
       vocabulary: [
         { arabic: "قِصَّة", transliteration: "qiṣṣa", meaning: "story", meaningAr: "قصة", meaningFr: "histoire" },
@@ -754,8 +754,8 @@ export const PHASE_3_LESSONS: Lesson[] = [
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Paragraph Structure", titleAr: "بنية الفقرة", titleFr: "Structure du paragraphe", content: "جُمْلَة رَئِيسِيَّة - Topic sentence\nجُمَل دَاعِمَة - Supporting sentences\nخَاتِمَة - Concluding sentence", contentFr: "جُمْلَة رَئِيسِيَّة - Phrase sujet\nجُمَل دَاعِمَة - Phrases de soutien\nخَاتِمَة - Phrase de conclusion" },
-        { title: "Transition Words", titleAr: "كلمات الربط", titleFr: "Mots de transition", content: "أَوَّلًا - firstly\nثَانِيًا - secondly\nبِالإِضَافَةِ إِلَى - in addition to\nعِلَاوَةً عَلَى - moreover\nفِي الخِتَام - in conclusion", contentFr: "أَوَّلًا - premièrement\nثَانِيًا - deuxièmement\nبِالإِضَافَةِ إِلَى - en plus\nعِلَاوَةً عَلَى - de plus\nفِي الخِتَام - en conclusion" }
+        { title: "Paragraph Structure", titleAr: "بنية الفقرة", titleFr: "Structure du paragraphe", content: "جُمْلَة رَئِيسِيَّة - Topic sentence\nجُمَل دَاعِمَة - Supporting sentences\nخَاتِمَة - Concluding sentence", contentAr: "جُمْلَة رَئِيسِيَّة - الجملة الرئيسية التي تشرح فكرة الفقرة\nجُمَل دَاعِمَة - الجمل الداعمة والشارحة للفكرة الرئيسية\nخَاتِمَة - جملة الخاتمة التي تلخص الفقرة", contentFr: "جُمْلَة رَئِيسِيَّة - Phrase sujet\nجُمَل دَاعِمَة - Phrases de soutien\nخَاتِمَة - Phrase de conclusion" },
+        { title: "Transition Words", titleAr: "كلمات الربط", titleFr: "Mots de transition", content: "أَوَّلًا - firstly\nثَانِيًا - secondly\nبِالإِضَافَةِ إِلَى - in addition to\nعِلَاوَةً عَلَى - moreover\nفِي الخِتَام - in conclusion", contentAr: "أَوَّلًا - أولا، في البداية\nثَانِيًا - ثانيا، بعد ذلك\nبِالإِضَافَةِ إِلَى - بالإضافة إلى، فضلا عن\nعِلَاوَةً عَلَى - علاوة على، وبالمثل\nفِي الخِتَام - في الخاتمة، في النهاية", contentFr: "أَوَّلًا - premièrement\nثَانِيًا - deuxièmement\nبِالإِضَافَةِ إِلَى - en plus\nعِلَاوَةً عَلَى - de plus\nفِي الخِتَام - en conclusion" }
       ],
       vocabulary: [
         { arabic: "فِقْرَة", transliteration: "fiqra", meaning: "paragraph", meaningAr: "فقرة", meaningFr: "paragraphe" },
@@ -782,8 +782,8 @@ export const PHASE_3_LESSONS: Lesson[] = [
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Letter Structure", titleAr: "بنية الرسالة", titleFr: "Structure de la lettre", content: "التَّحِيَّة - Greeting\nالمُقَدِّمَة - Introduction\nالمَوْضُوع - Body\nالخَاتِمَة - Closing\nالتَّوْقِيع - Signature", contentFr: "التَّحِيَّة - Salutation\nالمُقَدِّمَة - Introduction\nالمَوْضُوع - Corps\nالخَاتِمَة - Fermeture\nالتَّوْقِيع - Signature" },
-        { title: "Formal Expressions", titleAr: "الصيغ الرسمية", titleFr: "Expressions formelles", content: "سَعَادَة / حَضْرَة - Dear (formal)\nتَحِيَّة طَيِّبَة - Kind regards\nمَعَ فَائِقِ الاِحْتِرَام - With utmost respect\nأَرْجُو مِنْ سِيَادَتِكُم - I request from you", contentFr: "سَعَادَة / حَضْرَة - Cher (formel)\nتَحِيَّة طَيِّبَة - Cordialement\nمَعَ فَائِقِ الاِحْتِرَام - Avec mon plus profond respect\nأَرْجُو مِنْ سِيَادَتِكُم - Je vous demande" }
+        { title: "Letter Structure", titleAr: "بنية الرسالة", titleFr: "Structure de la lettre", content: "التَّحِيَّة - Greeting\nالمُقَدِّمَة - Introduction\nالمَوْضُوع - Body\nالخَاتِمَة - Closing\nالتَّوْقِيع - Signature", contentAr: "التَّحِيَّة - التحية والتنويه برسالة التحية\nالمُقَدِّمَة - المقدمة التي تبين موضوع الرسالة\nالمَوْضُوع - صلب الرسالة والمحتوى الرئيسي\nالخَاتِمَة - إنهاء الرسالة بكلمات مهذبة\nالتَّوْقِيع - توقيع المرسل وتاريخ الرسالة", contentFr: "التَّحِيَّة - Salutation\nالمُقَدِّمَة - Introduction\nالمَوْضُوع - Corps\nالخَاتِمَة - Fermeture\nالتَّوْقِيع - Signature" },
+        { title: "Formal Expressions", titleAr: "الصيغ الرسمية", titleFr: "Expressions formelles", content: "سَعَادَة / حَضْرَة - Dear (formal)\nتَحِيَّة طَيِّبَة - Kind regards\nمَعَ فَائِقِ الاِحْتِرَام - With utmost respect\nأَرْجُو مِنْ سِيَادَتِكُم - I request from you", contentAr: "سَعَادَة / حَضْرَة - صيغ احترام عند الخطاب الرسمي\nتَحِيَّة طَيِّبَة - تحية طيبة وبعد\nمَعَ فَائِقِ الاِحْتِرَام - مع فائق الاحترام والتقدير\nأَرْجُو مِنْ سِيَادَتِكُم - أرجو من سيادتكم، طلب رسمي مهذب", contentFr: "سَعَادَة / حَضْرَة - Cher (formel)\nتَحِيَّة طَيِّبَة - Cordialement\nمَعَ فَائِقِ الاِحْتِرَام - Avec mon plus profond respect\nأَرْجُو مِنْ سِيَادَتِكُم - Je vous demande" }
       ],
       vocabulary: [
         { arabic: "رِسَالَة رَسْمِيَّة", transliteration: "risāla rasmiyya", meaning: "formal letter", meaningAr: "رسالة رسمية", meaningFr: "lettre formelle" },
@@ -810,8 +810,8 @@ export const PHASE_3_LESSONS: Lesson[] = [
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Essay Structure", titleAr: "بنية المقالة", titleFr: "Structure des essais", content: "مُقَدِّمَة - Introduction (thesis statement)\nجِسْم المَقَال - Body (arguments + evidence)\nخَاتِمَة - Conclusion (summary + final thought)", contentFr: "مُقَدِّمَة - Introduction (énoncé de thèse)\nجِسْم المَقَال - Corps (arguments + preuves)\nخَاتِمَة - Conclusion (résumé + pensée finale)" },
-        { title: "Argumentative Language", titleAr: "لغة الحجج", titleFr: "Langage argumentatif", content: "مِنْ نَاحِيَةٍ - on one hand\nمِنْ نَاحِيَةٍ أُخْرَى - on the other hand\nوَمَعَ ذَلِكَ - nevertheless\nبِالتَّالِي - therefore", contentFr: "مِنْ نَاحِيَةٍ - d'un côté\nمِنْ نَاحِيَةٍ أُخْرَى - de l'autre côté\nوَمَعَ ذَلِكَ - néanmoins\nبِالتَّالِي - par conséquent" }
+        { title: "Essay Structure", titleAr: "بنية المقالة", titleFr: "Structure des essais", content: "مُقَدِّمَة - Introduction (thesis statement)\nجِسْم المَقَال - Body (arguments + evidence)\nخَاتِمَة - Conclusion (summary + final thought)", contentAr: "مُقَدِّمَة - المقدمة وشرح الفكرة الرئيسية والأطروحة\nجِسْم المَقَال - الحجج والأدلة التي تدعم الأطروحة\nخَاتِمَة - الخلاصة وإعادة تأكيد الفكرة الرئيسية", contentFr: "مُقَدِّمَة - Introduction (énoncé de thèse)\nجِسْم المَقَال - Corps (arguments + preuves)\nخَاتِمَة - Conclusion (résumé + pensée finale)" },
+        { title: "Argumentative Language", titleAr: "لغة الحجج", titleFr: "Langage argumentatif", content: "مِنْ نَاحِيَةٍ - on one hand\nمِنْ نَاحِيَةٍ أُخْرَى - on the other hand\nوَمَعَ ذَلِكَ - nevertheless\nبِالتَّالِي - therefore", contentAr: "مِنْ نَاحِيَةٍ - من ناحية، من جهة\nمِنْ نَاحِيَةٍ أُخْرَى - من ناحية أخرى، من جهة أخرى\nوَمَعَ ذَلِكَ - ومع ذلك، لكن\nبِالتَّالِي - بالتالي، لذلك", contentFr: "مِنْ نَاحِيَةٍ - d'un côté\nمِنْ نَاحِيَةٍ أُخْرَى - de l'autre côté\nوَمَعَ ذَلِكَ - néanmoins\nبِالتَّالِي - par conséquent" }
       ],
       vocabulary: [
         { arabic: "مَقَال", transliteration: "maqāl", meaning: "essay/article", meaningAr: "مقال", meaningFr: "essai/article" },

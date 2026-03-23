@@ -914,20 +914,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Basic Adjectives",
           titleAr: "الصفات الأساسية",
+          titleFr: "Adjectifs de base",
           content: "كَبِير (kabīr) = big\nصَغِير (ṣaghīr) = small\nجَمِيل (jamīl) = beautiful\nجَدِيد (jadīd) = new\nقَدِيم (qadīm) = old\nسَرِيع (sarī') = fast\nبَطِيء (baṭī') = slow",
-          contentAr: "كَبِير (kabīr) = كبير\nصَغِير (ṣaghīr) = صغير\nجَمِيل (jamīl) = جميل\nجَدِيد (jadīd) = جديد\nقَدِيم (qadīm) = قديم\nسَرِيع (sarī') = سريع\nبَطِيء (baṭī') = بطيء"
+          contentAr: "كَبِير (kabīr) = كبير\nصَغِير (ṣaghīr) = صغير\nجَمِيل (jamīl) = جميل\nجَدِيد (jadīd) = جديد\nقَدِيم (qadīm) = قديم\nسَرِيع (sarī') = سريع\nبَطِيء (baṭī') = بطيء",
+          contentFr: "كَبِير (kabīr) = grand\nصَغِير (ṣaghīr) = petit\nجَمِيل (jamīl) = beau\nجَدِيد (jadīd) = nouveau\nقَدِيم (qadīm) = ancien\nسَرِيع (sarī') = rapide\nبَطِيء (baṭī') = lent"
         },
         {
           title: "Gender Agreement",
           titleAr: "اتفاق الجنس",
+          titleFr: "Accord de genre",
           content: "Adjectives MUST match the gender of the noun:\n\nكِتَابٌ كَبِيرٌ (kitābun kabīrun) = a big book (m)\nسَيَّارَةٌ كَبِيرَةٌ (sayyāratun kabīratun) = a big car (f)\n\nAdd ة to make adjectives feminine!",
-          contentAr: "يجب أن تتطابق الصفات مع جنس الاسم:\n\nكِتَابٌ كَبِيرٌ (kitābun kabīrun) = كتاب كبير (مذكر)\nسَيَّارَةٌ كَبِيرَةٌ (sayyāratun kabīratun) = سيارة كبيرة (مؤنث)\n\nأضف ة لجعل الصفات مؤنثة!"
+          contentAr: "يجب أن تتطابق الصفات مع جنس الاسم:\n\nكِتَابٌ كَبِيرٌ (kitābun kabīrun) = كتاب كبير (مذكر)\nسَيَّارَةٌ كَبِيرَةٌ (sayyāratun kabīratun) = سيارة كبيرة (مؤنث)\n\nأضف ة لجعل الصفات مؤنثة!",
+          contentFr: "Les adjectifs DOIVENT correspondre au genre du nom :\n\nكِتَابٌ كَبِيرٌ (kitābun kabīrun) = un grand livre (m)\nسَيَّارَةٌ كَبِيرَةٌ (sayyāratun kabīratun) = une grande voiture (f)\n\nAjoutez ة pour rendre les adjectifs féminins !"
         },
         {
           title: "Definiteness Agreement",
           titleAr: "اتفاق التعريف",
+          titleFr: "Accord de définitude",
           content: "Adjectives must also match definiteness:\n\nIndefinite: كِتَابٌ كَبِيرٌ = a big book\nDefinite: الكِتَابُ الكَبِيرُ = THE big book\n\nBoth noun AND adjective get الـ!",
-          contentAr: "يجب أن تتطابق الصفات أيضًا مع التعريف:\n\nنكرة: كِتَابٌ كَبِيرٌ = كتاب كبير\nمعرفة: الكِتَابُ الكَبِيرُ = الكتاب الكبير\n\nكل من الاسم والصفة يأخذ الـ!"
+          contentAr: "يجب أن تتطابق الصفات أيضًا مع التعريف:\n\nنكرة: كِتَابٌ كَبِيرٌ = كتاب كبير\nمعرفة: الكِتَابُ الكَبِيرُ = الكتاب الكبير\n\nكل من الاسم والصفة يأخذ الـ!",
+          contentFr: "Les adjectifs doivent aussi correspondre à la définitude :\n\nIndéfini : كِتَابٌ كَبِيرٌ = un grand livre\nDéfini : الكِتَابُ الكَبِيرُ = LE grand livre\n\nA LA FOIS le nom ET l'adjectif prennent الـ !"
         }
       ],
       vocabulary: [
@@ -978,20 +984,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Sound Plurals",
           titleAr: "الجموع السالمة",
+          titleFr: "Les pluriels réguliers",
           content: "Sound plurals add endings to the singular:\n\nMasculine sound plural: Add ـون (-ūn) or ـين (-īn)\nمُعَلِّم (teacher) → مُعَلِّمُون (teachers)\n\nFeminine sound plural: Change ة to ات (-āt)\nمُعَلِّمَة → مُعَلِّمَات",
-          contentAr: "الجموع السالمة تضيف نهايات للمفرد:\n\nالجمع المذكر السالم: أضف ـون (-ūn) أو ـين (-īn)\nمُعَلِّم (معلم) → مُعَلِّمُون (معلمون)\n\nالجمع المؤنث السالم: غير ة إلى ات (-āt)\nمُعَلِّمَة → مُعَلِّمَات"
+          contentAr: "الجموع السالمة تضيف نهايات للمفرد:\n\nالجمع المذكر السالم: أضف ـون (-ūn) أو ـين (-īn)\nمُعَلِّم (معلم) → مُعَلِّمُون (معلمون)\n\nالجمع المؤنث السالم: غير ة إلى ات (-āt)\nمُعَلِّمَة → مُعَلِّمَات",
+          contentFr: "Les pluriels réguliers ajoutent des terminaisons au singulier :\n\nPluriel régulier masculin : Ajoutez ـون (-ūn) ou ـين (-īn)\nمُعَلِّم (professeur) → مُعَلِّمُون (professeurs)\n\nPluriel régulier féminin : Changez ة en ات (-āt)\nمُعَلِّمَة → مُعَلِّمَات"
         },
         {
           title: "Broken Plurals",
           titleAr: "الجموع المكسرة",
+          titleFr: "Les pluriels irréguliers",
           content: "Broken plurals change the internal vowels (like English 'man/men'):\nكِتَاب (book) → كُتُب (books)\nرَجُل (man) → رِجَال (men)\nبَيْت (house) → بُيُوت (houses)\n\nThese must be memorized for each word!",
-          contentAr: "الجموع المكسرة تغير حروف العلة الداخلية:\nكِتَاب (كتاب) → كُتُب (كتب)\nرَجُل (رجل) → رِجَال (رجال)\nبَيْت (بيت) → بُيُوت (بيوت)\n\nيجب حفظ كل كلمة على حدة!"
+          contentAr: "الجموع المكسرة تغير حروف العلة الداخلية:\nكِتَاب (كتاب) → كُتُب (كتب)\nرَجُل (رجل) → رِجَال (رجال)\nبَيْت (بيت) → بُيُوت (بيوت)\n\nيجب حفظ كل كلمة على حدة!",
+          contentFr: "Les pluriels irréguliers changent les voyelles internes (comme l'anglais 'man/men') :\nكِتَاب (livre) → كُتُب (livres)\nرَجُل (homme) → رِجَال (hommes)\nبَيْت (maison) → بُيُوت (maisons)\n\nCeux-ci doivent être mémorisés pour chaque mot !"
         },
         {
           title: "Common Broken Plural Patterns",
           titleAr: "أنماط الجموع المكسرة الشائعة",
+          titleFr: "Modèles de pluriels irréguliers courants",
           content: "فُعُول: بُيُوت، قُلُوب، عُيُون\nفِعَال: رِجَال، جِبَال\nأَفْعَال: أَقْلَام، أَوْلَاد\nفُعَلَاء: عُلَمَاء، أُمَرَاء",
-          contentAr: "فُعُول: بُيُوت (بيوت)، قُلُوب (قلوب)، عُيُون (عيون)\nفِعَال: رِجَال (رجال)، جِبَال (جبال)\nأَفْعَال: أَقْلَام (أقلام)، أَوْلَاد (أولاد)\nفُعَلَاء: عُلَمَاء (علماء)، أُمَرَاء (أمراء)"
+          contentAr: "فُعُول: بُيُوت (بيوت)، قُلُوب (قلوب)، عُيُون (عيون)\nفِعَال: رِجَال (رجال)، جِبَال (جبال)\nأَفْعَال: أَقْلَام (أقلام)، أَوْلَاد (أولاد)\nفُعَلَاء: عُلَمَاء (علماء)، أُمَرَاء (أمراء)",
+          contentFr: "فُعُول : بُيُوت, قُلُوب, عُيُون\nفِعَال : رِجَال, جِبَال\nأَفْعَال : أَقْلَام, أَوْلَاد\nفُعَلَاء : عُلَمَاء, أُمَرَاء"
         }
       ],
       vocabulary: [
@@ -1041,20 +1053,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Numbers 11-19",
           titleAr: "الأرقام ١١-١٩",
+          titleFr: "Les nombres 11-19",
           content: "These are compound numbers:\n11 = أَحَدَ عَشَرَ (aḥada 'ashara)\n12 = اِثْنَا عَشَرَ (ithnā 'ashara)\n13 = ثَلَاثَةَ عَشَرَ (thalāthata 'ashara)\n14 = أَرْبَعَةَ عَشَرَ (arba'ata 'ashara)\n15 = خَمْسَةَ عَشَرَ (khamsata 'ashara)",
-          contentAr: "هذه أرقام مركبة:\n11 = أَحَدَ عَشَرَ\n12 = اِثْنَا عَشَرَ\n13 = ثَلَاثَةَ عَشَرَ\n14 = أَرْبَعَةَ عَشَرَ\n15 = خَمْسَةَ عَشَرَ"
+          contentAr: "هذه أرقام مركبة:\n11 = أَحَدَ عَشَرَ\n12 = اِثْنَا عَشَرَ\n13 = ثَلَاثَةَ عَشَرَ\n14 = أَرْبَعَةَ عَشَرَ\n15 = خَمْسَةَ عَشَرَ",
+          contentFr: "Ce sont des nombres composés :\n11 = أَحَدَ عَشَرَ (aḥada 'ashara)\n12 = اِثْنَا عَشَرَ (ithnā 'ashara)\n13 = ثَلَاثَةَ عَشَرَ (thalāthata 'ashara)\n14 = أَرْبَعَةَ عَشَرَ (arba'ata 'ashara)\n15 = خَمْسَةَ عَشَرَ (khamsata 'ashara)"
         },
         {
           title: "Tens (20-90)",
           titleAr: "العشرات (٢٠-٩٠)",
+          titleFr: "Les dizaines (20-90)",
           content: "20 = عِشْرُون ('ishrūn)\n30 = ثَلَاثُون (thalāthūn)\n40 = أَرْبَعُون (arba'ūn)\n50 = خَمْسُون (khamsūn)\n60 = سِتُّون (sittūn)\n70 = سَبْعُون (sab'ūn)\n80 = ثَمَانُون (thamānūn)\n90 = تِسْعُون (tis'ūn)",
-          contentAr: "20 = عِشْرُون\n30 = ثَلَاثُون\n40 = أَرْبَعُون\n50 = خَمْسُون\n60 = سِتُّون\n70 = سَبْعُون\n80 = ثَمَانُون\n90 = تِسْعُون"
+          contentAr: "20 = عِشْرُون\n30 = ثَلَاثُون\n40 = أَرْبَعُون\n50 = خَمْسُون\n60 = سِتُّون\n70 = سَبْعُون\n80 = ثَمَانُون\n90 = تِسْعُون",
+          contentFr: "20 = عِشْرُون (vingt)\n30 = ثَلَاثُون (trente)\n40 = أَرْبَعُون (quarante)\n50 = خَمْسُون (cinquante)\n60 = سِتُّون (soixante)\n70 = سَبْعُون (soixante-dix)\n80 = ثَمَانُون (quatre-vingts)\n90 = تِسْعُون (quatre-vingt-dix)"
         },
         {
           title: "Compound Numbers",
           titleAr: "الأرقام المركبة",
+          titleFr: "Les nombres composés",
           content: "21-99 are formed with وَ (and):\n21 = وَاحِدٌ وَعِشْرُون (one and twenty)\n35 = خَمْسَةٌ وَثَلَاثُون (five and thirty)\n99 = تِسْعَةٌ وَتِسْعُون (nine and ninety)",
-          contentAr: "21-99 تُكوَّن بـ وَ (و):\n21 = وَاحِدٌ وَعِشْرُون\n35 = خَمْسَةٌ وَثَلَاثُون\n99 = تِسْعَةٌ وَتِسْعُون"
+          contentAr: "21-99 تُكوَّن بـ وَ (و):\n21 = وَاحِدٌ وَعِشْرُون\n35 = خَمْسَةٌ وَثَلَاثُون\n99 = تِسْعَةٌ وَتِسْعُون",
+          contentFr: "Les nombres 21-99 se forment avec وَ (et) :\n21 = وَاحِدٌ وَعِشْرُون (un et vingt)\n35 = خَمْسَةٌ وَثَلَاثُون (cinq et trente)\n99 = تِسْعَةٌ وَتِسْعُون (neuf et quatre-vingt-dix)"
         }
       ],
       vocabulary: [
@@ -1106,20 +1124,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "The Three-Letter Root",
           titleAr: "الجذر الثلاثي",
+          titleFr: "La racine à trois lettres",
           content: "Most Arabic verbs come from a THREE-LETTER ROOT. By adding prefixes, suffixes, and changing vowels, you create different words:\n\nRoot: ك-ت-ب (k-t-b) = concept of writing\n• كَتَبَ (kataba) = he wrote\n• يَكْتُبُ (yaktub) = he writes\n• كِتَاب (kitāb) = book\n• كَاتِب (kātib) = writer\n• مَكْتَب (maktab) = office/desk",
-          contentAr: "معظم الأفعال العربية تأتي من جذر ثلاثي الأحرف. بإضافة البادئات واللواحق وتغيير حروف العلة:\n\nالجذر: ك-ت-ب = مفهوم الكتابة\n• كَتَبَ (kataba) = هو كتب\n• يَكْتُبُ (yaktub) = هو يكتب\n• كِتَاب (kitāb) = كتاب\n• كَاتِب (kātib) = كاتب\n• مَكْتَب (maktab) = مكتب"
+          contentAr: "معظم الأفعال العربية تأتي من جذر ثلاثي الأحرف. بإضافة البادئات واللواحق وتغيير حروف العلة:\n\nالجذر: ك-ت-ب = مفهوم الكتابة\n• كَتَبَ (kataba) = هو كتب\n• يَكْتُبُ (yaktub) = هو يكتب\n• كِتَاب (kitāb) = كتاب\n• كَاتِب (kātib) = كاتب\n• مَكْتَب (maktab) = مكتب",
+          contentFr: "La plupart des verbes arabes proviennent d'une RACINE À TROIS LETTRES. En ajoutant des préfixes, des suffixes et en changeant les voyelles, vous créez différents mots :\n\nRacine : ك-ت-ب (k-t-b) = concept d'écrire\n• كَتَبَ (kataba) = il a écrit\n• يَكْتُبُ (yaktub) = il écrit\n• كِتَاب (kitāb) = livre\n• كَاتِب (kātib) = écrivain\n• مَكْتَب (maktab) = bureau/pupitre"
         },
         {
           title: "Verb Tenses",
           titleAr: "أزمنة الفعل",
+          titleFr: "Les temps des verbes",
           content: "Arabic has TWO main verb forms:\n\n1. الفِعْل المَاضِي (al-fi'l al-māḍī) = Past tense\nكَتَبَ = he wrote\n\n2. الفِعْل المُضَارِع (al-fi'l al-muḍāri') = Present/Future\nيَكْتُبُ = he writes / he will write",
-          contentAr: "للعربية شكلان رئيسيان:\n\n1. الفِعْل المَاضِي = الماضي\nكَتَبَ = هو كتب\n\n2. الفِعْل المُضَارِع = المضارع/المستقبل\nيَكْتُبُ = هو يكتب / سيكتب"
+          contentAr: "للعربية شكلان رئيسيان:\n\n1. الفِعْل المَاضِي = الماضي\nكَتَبَ = هو كتب\n\n2. الفِعْل المُضَارِع = المضارع/المستقبل\nيَكْتُبُ = هو يكتب / سيكتب",
+          contentFr: "L'arabe a DEUX formes principales de verbes :\n\n1. الفِعْل المَاضِي (al-fi'l al-māḍī) = Passé\nكَتَبَ = il a écrit\n\n2. الفِعْل المُضَارِع (al-fi'l al-muḍāri') = Présent/Futur\nيَكْتُبُ = il écrit / il écrira"
         },
         {
           title: "Person, Gender, Number",
           titleAr: "الشخص والجنس والعدد",
+          titleFr: "Personne, genre et nombre",
           content: "Arabic verbs change based on:\n• WHO is doing the action (I, you, he, she, etc.)\n• GENDER (masculine/feminine)\n• NUMBER (singular, dual, plural)\n\nThis means MANY verb forms! But don't worry - patterns are regular.",
-          contentAr: "تتغير الأفعال بناءً على:\n• من يقوم بالفعل (أنا، أنت، هو، هي، إلخ)\n• الجنس (مذكر/مؤنث)\n• العدد (مفرد، مثنى، جمع)\n\nهذا يعني أشكالًا فعلية متعددة، لكن الأنماط منتظمة!"
+          contentAr: "تتغير الأفعال بناءً على:\n• من يقوم بالفعل (أنا، أنت، هو، هي، إلخ)\n• الجنس (مذكر/مؤنث)\n• العدد (مفرد، مثنى، جمع)\n\nهذا يعني أشكالًا فعلية متعددة، لكن الأنماط منتظمة!",
+          contentFr: "Les verbes arabes changent selon :\n• QUI fait l'action (je, tu, il, elle, etc.)\n• LE GENRE (masculin/féminin)\n• LE NOMBRE (singulier, duel, pluriel)\n\nCela signifie BEAUCOUP de formes verbales ! Mais ne vous inquiétez pas - les modèles sont réguliers."
         }
       ],
       vocabulary: [
@@ -1169,14 +1193,18 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Past Tense Conjugation",
           titleAr: "تصريف الفعل الماضي",
+          titleFr: "Conjugaison au passé",
           content: "The past tense adds SUFFIXES to show who did the action:\n\nكَتَبَ (kataba) = he wrote\nكَتَبَتْ (katabat) = she wrote\nكَتَبْتُ (katabtu) = I wrote\nكَتَبْتَ (katabta) = you wrote (m)\nكَتَبْتِ (katabti) = you wrote (f)\nكَتَبْنَا (katabnā) = we wrote\nكَتَبُوا (katabū) = they wrote (m)",
-          contentAr: "الفعل الماضي يضيف لواحق لإظهار من قام بالفعل:\n\nكَتَبَ (kataba) = هو كتب\nكَتَبَتْ (katabat) = هي كتبت\nكَتَبْتُ (katabtu) = أنا كتبت\nكَتَبْتَ (katabta) = أنت كتبت (م)\nكَتَبْتِ (katabti) = أنتِ كتبتِ (ن)\nكَتَبْنَا (katabnā) = نحن كتبنا\nكَتَبُوا (katabū) = هم كتبوا (م)"
+          contentAr: "الفعل الماضي يضيف لواحق لإظهار من قام بالفعل:\n\nكَتَبَ (kataba) = هو كتب\nكَتَبَتْ (katabat) = هي كتبت\nكَتَبْتُ (katabtu) = أنا كتبت\nكَتَبْتَ (katabta) = أنت كتبت (م)\nكَتَبْتِ (katabti) = أنتِ كتبتِ (ن)\nكَتَبْنَا (katabnā) = نحن كتبنا\nكَتَبُوا (katabū) = هم كتبوا (م)",
+          contentFr: "Le passé ajoute des SUFFIXES pour montrer qui a fait l'action :\n\nكَتَبَ (kataba) = il a écrit\nكَتَبَتْ (katabat) = elle a écrit\nكَتَبْتُ (katabtu) = j'ai écrit\nكَتَبْتَ (katabta) = tu as écrit (m)\nكَتَبْتِ (katabti) = tu as écrit (f)\nكَتَبْنَا (katabnā) = nous avons écrit\nكَتَبُوا (katabū) = ils ont écrit (m)"
         },
         {
           title: "Common Past Tense Verbs",
           titleAr: "الأفعال الشائعة في الماضي",
+          titleFr: "Verbes au passé courants",
           content: "ذَهَبَ (dhahaba) = he went\nأَكَلَ (akala) = he ate\nشَرِبَ (shariba) = he drank\nجَلَسَ (jalasa) = he sat\nفَتَحَ (fataḥa) = he opened\nأَغْلَقَ (aghlaqa) = he closed\nعَمِلَ ('amila) = he worked",
-          contentAr: "ذَهَبَ (dhahaba) = ذهب\nأَكَلَ (akala) = أكل\nشَرِبَ (shariba) = شرب\nجَلَسَ (jalasa) = جلس\nفَتَحَ (fataḥa) = فتح\nأَغْلَقَ (aghlaqa) = أغلق\nعَمِلَ ('amila) = عمل"
+          contentAr: "ذَهَبَ (dhahaba) = ذهب\nأَكَلَ (akala) = أكل\nشَرِبَ (shariba) = شرب\nجَلَسَ (jalasa) = جلس\nفَتَحَ (fataḥa) = فتح\nأَغْلَقَ (aghlaqa) = أغلق\nعَمِلَ ('amila) = عمل",
+          contentFr: "ذَهَبَ (dhahaba) = aller (il est allé)\nأَكَلَ (akala) = manger (il a mangé)\nشَرِبَ (shariba) = boire (il a bu)\nجَلَسَ (jalasa) = s'asseoir (il s'est assis)\nفَتَحَ (fataḥa) = ouvrir (il a ouvert)\nأَغْلَقَ (aghlaqa) = fermer (il a fermé)\nعَمِلَ ('amila) = travailler (il a travaillé)"
         }
       ],
       vocabulary: [
@@ -1226,14 +1254,18 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Present Tense Formation",
           titleAr: "تكوين المضارع",
+          titleFr: "Formation du présent",
           content: "Present tense uses PREFIXES (and sometimes suffixes):\n\nيَكْتُبُ (yaktub) = he writes (prefix يـ)\nتَكْتُبُ (taktub) = she writes (prefix تـ)\nأَكْتُبُ (aktub) = I write (prefix أَ)\nتَكْتُبُ (taktub) = you write-m (prefix تـ)\nتَكْتُبِينَ (taktubīn) = you write-f (prefix تـ + suffix ين)\nنَكْتُبُ (naktub) = we write (prefix نـ)",
-          contentAr: "المضارع يستخدم البادئات (وأحيانًا اللواحق):\n\nيَكْتُبُ (yaktub) = هو يكتب\nتَكْتُبُ (taktub) = هي تكتب\nأَكْتُبُ (aktub) = أنا أكتب\nتَكْتُبُ (taktub) = أنت تكتب (م)\nتَكْتُبِينَ (taktubīn) = أنتِ تكتبين (ن)\nنَكْتُبُ (naktub) = نحن نكتب"
+          contentAr: "المضارع يستخدم البادئات (وأحيانًا اللواحق):\n\nيَكْتُبُ (yaktub) = هو يكتب\nتَكْتُبُ (taktub) = هي تكتب\nأَكْتُبُ (aktub) = أنا أكتب\nتَكْتُبُ (taktub) = أنت تكتب (م)\nتَكْتُبِينَ (taktubīn) = أنتِ تكتبين (ن)\nنَكْتُبُ (naktub) = نحن نكتب",
+          contentFr: "Le présent utilise des PRÉFIXES (et parfois des suffixes) :\n\nيَكْتُبُ (yaktub) = il écrit (préfixe يـ)\nتَكْتُبُ (taktub) = elle écrit (préfixe تـ)\nأَكْتُبُ (aktub) = j'écris (préfixe أَ)\nتَكْتُبُ (taktub) = tu écris (m) (préfixe تـ)\nتَكْتُبِينَ (taktubīn) = tu écris (f) (préfixe تـ + suffixe ين)\nنَكْتُبُ (naktub) = nous écrivons (préfixe نـ)"
         },
         {
           title: "Present Tense Pattern",
           titleAr: "نمط المضارع",
+          titleFr: "Modèle du présent",
           content: "The pattern is:\nأَ + root = I\nتَ + root = you (m) / she\nيَ + root = he\nنَ + root = we\n\nAdd ـُونَ for 'they' masculine\nAdd ـْنَ for 'they' feminine",
-          contentAr: "النمط هو:\nأَ + الجذر = أنا\nتَ + الجذر = أنت (م)/هي\nيَ + الجذر = هو\nنَ + الجذر = نحن\n\nأضف ـُونَ لـ 'هم' (مذكر)\nأضف ـْنَ لـ 'هن' (مؤنث)"
+          contentAr: "النمط هو:\nأَ + الجذر = أنا\nتَ + الجذر = أنت (م)/هي\nيَ + الجذر = هو\nنَ + الجذر = نحن\n\nأضف ـُونَ لـ 'هم' (مذكر)\nأضف ـْنَ لـ 'هن' (مؤنث)",
+          contentFr: "Le modèle est :\nأَ + racine = je\nتَ + racine = tu (m) / elle\nيَ + racine = il\nنَ + racine = nous\n\nAjoutez ـُونَ pour 'ils' (masculin)\nAjoutez ـْنَ pour 'elles' (féminin)"
         }
       ],
       vocabulary: [
@@ -1283,20 +1315,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Movement Verbs",
           titleAr: "أفعال الحركة",
+          titleFr: "Verbes de mouvement",
           content: "ذَهَبَ / يَذْهَبُ (dhahaba/yadhhabu) = to go\nجَاءَ / يَجِيءُ (jā'a/yajī'u) = to come\nخَرَجَ / يَخْرُجُ (kharaja/yakhruju) = to exit\nدَخَلَ / يَدْخُلُ (dakhala/yadkhulu) = to enter\nرَجَعَ / يَرْجِعُ (raja'a/yarji'u) = to return",
-          contentAr: "ذَهَبَ / يَذْهَبُ = ذهب/يذهب\nجَاءَ / يَجِيءُ = جاء/يجيء\nخَرَجَ / يَخْرُجُ = خرج/يخرج\nدَخَلَ / يَدْخُلُ = دخل/يدخل\nرَجَعَ / يَرْجِعُ = رجع/يرجع"
+          contentAr: "ذَهَبَ / يَذْهَبُ = ذهب/يذهب\nجَاءَ / يَجِيءُ = جاء/يجيء\nخَرَجَ / يَخْرُجُ = خرج/يخرج\nدَخَلَ / يَدْخُلُ = دخل/يدخل\nرَجَعَ / يَرْجِعُ = رجع/يرجع",
+          contentFr: "ذَهَبَ / يَذْهَبُ (dhahaba/yadhhabu) = aller\nجَاءَ / يَجِيءُ (jā'a/yajī'u) = venir\nخَرَجَ / يَخْرُجُ (kharaja/yakhruju) = sortir\nدَخَلَ / يَدْخُلُ (dakhala/yadkhulu) = entrer\nرَجَعَ / يَرْجِعُ (raja'a/yarji'u) = retourner"
         },
         {
           title: "Daily Action Verbs",
           titleAr: "أفعال الحياة اليومية",
+          titleFr: "Verbes d'action quotidiens",
           content: "أَكَلَ / يَأْكُلُ (akala/ya'kulu) = to eat\nشَرِبَ / يَشْرَبُ (shariba/yashrabu) = to drink\nنَامَ / يَنَامُ (nāma/yanāmu) = to sleep\nقَامَ / يَقُومُ (qāma/yaqūmu) = to stand/get up\nجَلَسَ / يَجْلِسُ (jalasa/yajlisu) = to sit",
-          contentAr: "أَكَلَ / يَأْكُلُ = أكل/يأكل\nشَرِبَ / يَشْرَبُ = شرب/يشرب\nنَامَ / يَنَامُ = نام/ينام\nقَامَ / يَقُومُ = قام/يقوم\nجَلَسَ / يَجْلِسُ = جلس/يجلس"
+          contentAr: "أَكَلَ / يَأْكُلُ = أكل/يأكل\nشَرِبَ / يَشْرَبُ = شرب/يشرب\nنَامَ / يَنَامُ = نام/ينام\nقَامَ / يَقُومُ = قام/يقوم\nجَلَسَ / يَجْلِسُ = جلس/يجلس",
+          contentFr: "أَكَلَ / يَأْكُلُ (akala/ya'kulu) = manger\nشَرِبَ / يَشْرَبُ (shariba/yashrabu) = boire\nنَامَ / يَنَامُ (nāma/yanāmu) = dormir\nقَامَ / يَقُومُ (qāma/yaqūmu) = se lever/se tenir debout\nجَلَسَ / يَجْلِسُ (jalasa/yajlisu) = s'asseoir"
         },
         {
           title: "Communication Verbs",
           titleAr: "أفعال التواصل",
+          titleFr: "Verbes de communication",
           content: "قَالَ / يَقُولُ (qāla/yaqūlu) = to say\nسَأَلَ / يَسْأَلُ (sa'ala/yas'alu) = to ask\nأَجَابَ / يُجِيبُ (ajāba/yujību) = to answer\nتَكَلَّمَ / يَتَكَلَّمُ (takallama/yatakallamu) = to speak\nفَهِمَ / يَفْهَمُ (fahima/yafhamu) = to understand",
-          contentAr: "قَالَ / يَقُولُ = قال/يقول\nسَأَلَ / يَسْأَلُ = سأل/يسأل\nأَجَابَ / يُجِيبُ = أجاب/يجيب\nتَكَلَّمَ / يَتَكَلَّمُ = تكلم/يتكلم\nفَهِمَ / يَفْهَمُ = فهم/يفهم"
+          contentAr: "قَالَ / يَقُولُ = قال/يقول\nسَأَلَ / يَسْأَلُ = سأل/يسأل\nأَجَابَ / يُجِيبُ = أجاب/يجيب\nتَكَلَّمَ / يَتَكَلَّمُ = تكلم/يتكلم\nفَهِمَ / يَفْهَمُ = فهم/يفهم",
+          contentFr: "قَالَ / يَقُولُ (qāla/yaqūlu) = dire\nسَأَلَ / يَسْأَلُ (sa'ala/yas'alu) = demander\nأَجَابَ / يُجِيبُ (ajāba/yujību) = répondre\nتَكَلَّمَ / يَتَكَلَّمُ (takallama/yatakallamu) = parler\nفَهِمَ / يَفْهَمُ (fahima/yafhamu) = comprendre"
         }
       ],
       vocabulary: [
@@ -1346,20 +1384,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Negating the Past: مَا",
           titleAr: "نفي الماضي: مَا",
+          titleFr: "Nier le passé : مَا",
           content: "Place مَا (mā) before the past tense verb:\n\nذَهَبَ (dhahaba) = he went\nمَا ذَهَبَ (mā dhahaba) = he did not go\n\nكَتَبْتُ = I wrote\nمَا كَتَبْتُ = I did not write",
-          contentAr: "ضع مَا (mā) قبل فعل الماضي:\n\nذَهَبَ (dhahaba) = ذهب\nمَا ذَهَبَ (mā dhahaba) = ما ذهب\n\nكَتَبْتُ = كتبت\nمَا كَتَبْتُ = ما كتبت"
+          contentAr: "ضع مَا (mā) قبل فعل الماضي:\n\nذَهَبَ (dhahaba) = ذهب\nمَا ذَهَبَ (mā dhahaba) = ما ذهب\n\nكَتَبْتُ = كتبت\nمَا كَتَبْتُ = ما كتبت",
+          contentFr: "Placez مَا (mā) avant le verbe au passé :\n\nذَهَبَ (dhahaba) = il est allé\nمَا ذَهَبَ (mā dhahaba) = il n'est pas allé\n\nكَتَبْتُ = j'ai écrit\nمَا كَتَبْتُ = je n'ai pas écrit"
         },
         {
           title: "Negating the Present: لَا",
           titleAr: "نفي المضارع: لَا",
+          titleFr: "Nier le présent : لَا",
           content: "Place لَا (lā) before the present tense verb:\n\nيَذْهَبُ (yadhhabu) = he goes\nلَا يَذْهَبُ (lā yadhhabu) = he does not go\n\nأَفْهَمُ = I understand\nلَا أَفْهَمُ = I do not understand",
-          contentAr: "ضع لَا (lā) قبل فعل المضارع:\n\nيَذْهَبُ (yadhhabu) = يذهب\nلَا يَذْهَبُ (lā yadhhabu) = لا يذهب\n\nأَفْهَمُ = أفهم\nلَا أَفْهَمُ = لا أفهم"
+          contentAr: "ضع لَا (lā) قبل فعل المضارع:\n\nيَذْهَبُ (yadhhabu) = يذهب\nلَا يَذْهَبُ (lā yadhhabu) = لا يذهب\n\nأَفْهَمُ = أفهم\nلَا أَفْهَمُ = لا أفهم",
+          contentFr: "Placez لَا (lā) avant le verbe au présent :\n\nيَذْهَبُ (yadhhabu) = il va\nلَا يَذْهَبُ (lā yadhhabu) = il ne va pas\n\nأَفْهَمُ = je comprends\nلَا أَفْهَمُ = je ne comprends pas"
         },
         {
           title: "Emphatic Past Negation: لَمْ",
           titleAr: "النفي القوي في الماضي: لَمْ",
+          titleFr: "Négation emphase du passé : لَمْ",
           content: "لَمْ + present tense form (with sukūn) = emphatic 'did not':\n\nلَمْ يَذْهَبْ (lam yadhab) = he did NOT go\nلَمْ أَفْهَمْ (lam afham) = I did NOT understand\n\nThis is more emphatic than مَا and very common in formal Arabic.",
-          contentAr: "لَمْ + صيغة المضارع (مع السكون) = النفي القوي:\n\nلَمْ يَذْهَبْ (lam yadhab) = لم يذهب (تأكيد)\nلَمْ أَفْهَمْ (lam afham) = لم أفهم (تأكيد)\n\nهذا أقوى من مَا وشائع جداً في العربية الفصحى."
+          contentAr: "لَمْ + صيغة المضارع (مع السكون) = النفي القوي:\n\nلَمْ يَذْهَبْ (lam yadhab) = لم يذهب (تأكيد)\nلَمْ أَفْهَمْ (lam afham) = لم أفهم (تأكيد)\n\nهذا أقوى من مَا وشائع جداً في العربية الفصحى.",
+          contentFr: "لَمْ + forme du présent (avec sukūn) = 'n'a pas' (emphatique) :\n\nلَمْ يَذْهَبْ (lam yadhab) = il N'EST PAS allé\nلَمْ أَفْهَمْ (lam afham) = je N'AI PAS compris\n\nC'est plus emphatique que مَا et très courant en arabe formel."
         }
       ],
       vocabulary: [
@@ -1411,20 +1455,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "What is a Nominal Sentence?",
           titleAr: "ما هي الجملة الاسمية؟",
+          titleFr: "Qu'est-ce qu'une phrase nominale ?",
           content: "A nominal sentence (جُمْلَة اِسْمِيَّة) starts with a NOUN and describes a state of being. Arabic does not use 'is' in the present tense!\n\nالبَيْتُ كَبِيرٌ (al-baytu kabīrun) = The house (is) big\nالطَّالِبُ ذَكِيٌّ (aṭ-ṭālibu dhakiyyun) = The student (is) smart",
-          contentAr: "الجملة الاسمية تبدأ باسم وتصف حالة الكون. العربية لا تستخدم 'يكون' في المضارع!\n\nالبَيْتُ كَبِيرٌ = البيت كبير\nالطَّالِبُ ذَكِيٌّ = الطالب ذكي"
+          contentAr: "الجملة الاسمية تبدأ باسم وتصف حالة الكون. العربية لا تستخدم 'يكون' في المضارع!\n\nالبَيْتُ كَبِيرٌ = البيت كبير\nالطَّالِبُ ذَكِيٌّ = الطالب ذكي",
+          contentFr: "Une phrase nominale (جُمْلَة اِسْمِيَّة) commence par un NOM et décrit un état d'être. L'arabe n'utilise pas 'être' au présent !\n\nالبَيْتُ كَبِيرٌ (al-baytu kabīrun) = La maison (est) grande\nالطَّالِبُ ذَكِيٌّ (aṭ-ṭālibu dhakiyyun) = L'étudiant (est) intelligent"
         },
         {
           title: "Subject and Predicate",
           titleAr: "المبتدأ والخبر",
+          titleFr: "Sujet et prédicat",
           content: "Every nominal sentence has:\n• مُبْتَدَأ (mubtada') = Subject (what we're talking about)\n• خَبَر (khabar) = Predicate (what we're saying about it)\n\nالوَلَدُ (subject) طَوِيلٌ (predicate) = The boy is tall",
-          contentAr: "كل جملة اسمية لديها:\n• مُبْتَدَأ (mubtada') = المبتدأ (ما نتحدث عنه)\n• خَبَر (khabar) = الخبر (ما نقوله عنه)\n\nالوَلَدُ (مبتدأ) طَوِيلٌ (خبر) = الولد طويل"
+          contentAr: "كل جملة اسمية لديها:\n• مُبْتَدَأ (mubtada') = المبتدأ (ما نتحدث عنه)\n• خَبَر (khabar) = الخبر (ما نقوله عنه)\n\nالوَلَدُ (مبتدأ) طَوِيلٌ (خبر) = الولد طويل",
+          contentFr: "Chaque phrase nominale a :\n• مُبْتَدَأ (mubtada') = Sujet (ce dont nous parlons)\n• خَبَر (khabar) = Prédicat (ce que nous en disons)\n\nالوَلَدُ (sujet) طَوِيلٌ (prédicat) = Le garçon est grand"
         },
         {
           title: "Using Pronouns",
           titleAr: "استخدام الضمائر",
+          titleFr: "Utiliser les pronoms",
           content: "For emphasis or clarity, you can add a pronoun:\n\nالبَيْتُ هُوَ كَبِيرٌ = The house, it is big\nهِيَ مُعَلِّمَةٌ = She is a teacher\nأَنَا طَالِبٌ = I am a student",
-          contentAr: "للتأكيد أو الوضوح، يمكنك إضافة ضمير:\n\nالبَيْتُ هُوَ كَبِيرٌ = البيت، إنه كبير\nهِيَ مُعَلِّمَةٌ = هي معلمة\nأَنَا طَالِبٌ = أنا طالب"
+          contentAr: "للتأكيد أو الوضوح، يمكنك إضافة ضمير:\n\nالبَيْتُ هُوَ كَبِيرٌ = البيت، إنه كبير\nهِيَ مُعَلِّمَةٌ = هي معلمة\nأَنَا طَالِبٌ = أنا طالب",
+          contentFr: "Pour l'emphase ou la clarté, vous pouvez ajouter un pronom :\n\nالبَيْتُ هُوَ كَبِيرٌ = La maison, elle est grande\nهِيَ مُعَلِّمَةٌ = Elle est une professeur\nأَنَا طَالِبٌ = Je suis un étudiant"
         }
       ],
       vocabulary: [
@@ -1473,20 +1523,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "What is a Verbal Sentence?",
           titleAr: "ما هي الجملة الفعلية؟",
+          titleFr: "Qu'est-ce qu'une phrase verbale ?",
           content: "A verbal sentence (جُمْلَة فِعْلِيَّة) starts with a VERB. The typical order is:\nVerb - Subject - Object (VSO)\n\nكَتَبَ الطَّالِبُ الدَّرْسَ\n(kataba aṭ-ṭālibu ad-darsa)\n= Wrote the-student the-lesson\n= The student wrote the lesson",
-          contentAr: "الجملة الفعلية تبدأ بالفعل. الترتيب النموذجي هو:\nفعل - فاعل - مفعول\n\nكَتَبَ الطَّالِبُ الدَّرْسَ\n= كتب الطالب الدرس\n= الطالب كتب الدرس"
+          contentAr: "الجملة الفعلية تبدأ بالفعل. الترتيب النموذجي هو:\nفعل - فاعل - مفعول\n\nكَتَبَ الطَّالِبُ الدَّرْسَ\n= كتب الطالب الدرس\n= الطالب كتب الدرس",
+          contentFr: "Une phrase verbale (جُمْلَة فِعْلِيَّة) commence par un VERBE. L'ordre typique est :\nVerbe - Sujet - Objet (VSO)\n\nكَتَبَ الطَّالِبُ الدَّرْسَ\n(kataba aṭ-ṭālibu ad-darsa)\n= A écrit l'étudiant la leçon\n= L'étudiant a écrit la leçon"
         },
         {
           title: "VSO vs SVO",
           titleAr: "ترتيب الكلمات: فعل-فاعل-مفعول أم اسم-فعل-مفعول؟",
+          titleFr: "VSO vs SVO",
           content: "Arabic prefers VSO in formal writing:\nذَهَبَ الوَلَدُ = went the-boy = The boy went\n\nBut SVO is also correct:\nالوَلَدُ ذَهَبَ = the-boy went = The boy went\n\nSVO is more common in spoken Arabic.",
-          contentAr: "العربية تفضل ترتيب الفعل-الفاعل-المفعول في الكتابة الرسمية:\nذَهَبَ الوَلَدُ = ذهب الولد\n\nلكن الترتيب الآخر أيضًا صحيح:\nالوَلَدُ ذَهَبَ = الولد ذهب\n\nالترتيب الثاني أكثر شيوعًا في العربية المنطوقة."
+          contentAr: "العربية تفضل ترتيب الفعل-الفاعل-المفعول في الكتابة الرسمية:\nذَهَبَ الوَلَدُ = ذهب الولد\n\nلكن الترتيب الآخر أيضًا صحيح:\nالوَلَدُ ذَهَبَ = الولد ذهب\n\nالترتيب الثاني أكثر شيوعًا في العربية المنطوقة.",
+          contentFr: "L'arabe préfère VSO dans l'écriture formelle :\nذَهَبَ الوَلَدُ = est allé le garçon = Le garçon est allé\n\nMais SVO est aussi correct :\nالوَلَدُ ذَهَبَ = le garçon est allé = Le garçon est allé\n\nL'ordre SVO est plus courant en arabe parlé."
         },
         {
           title: "Adding Objects",
           titleAr: "إضافة المفاعيل",
+          titleFr: "Ajouter des objets",
           content: "Direct objects come after the subject:\n\nقَرَأَ الطَّالِبُ الكِتَابَ\nV: قَرَأَ (read)\nS: الطَّالِبُ (the student)\nO: الكِتَابَ (the book)\n= The student read the book",
-          contentAr: "المفاعيل المباشرة تأتي بعد الفاعل:\n\nقَرَأَ الطَّالِبُ الكِتَابَ\nف: قَرَأَ (قرأ)\nفا: الطَّالِبُ (الطالب)\nمف: الكِتَابَ (الكتاب)\n= الطالب قرأ الكتاب"
+          contentAr: "المفاعيل المباشرة تأتي بعد الفاعل:\n\nقَرَأَ الطَّالِبُ الكِتَابَ\nف: قَرَأَ (قرأ)\nفا: الطَّالِبُ (الطالب)\nمف: الكِتَابَ (الكتاب)\n= الطالب قرأ الكتاب",
+          contentFr: "Les objets directs viennent après le sujet :\n\nقَرَأَ الطَّالِبُ الكِتَابَ\nV: قَرَأَ (a lu)\nS: الطَّالِبُ (l'étudiant)\nO: الكِتَابَ (le livre)\n= L'étudiant a lu le livre"
         }
       ],
       vocabulary: [
@@ -1534,20 +1590,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Yes/No Questions",
           titleAr: "الأسئلة نعم/لا",
+          titleFr: "Questions oui/non",
           content: "Add هَلْ (hal) or أَ (a) to the beginning:\n\nStatement: أَنْتَ طَالِبٌ = You are a student\nQuestion: هَلْ أَنْتَ طَالِبٌ؟ = Are you a student?\n\nStatement: تُحِبُّ القَهْوَةَ = You like coffee\nQuestion: أَتُحِبُّ القَهْوَةَ؟ = Do you like coffee?",
-          contentAr: "أضف هَلْ (hal) أو أَ (a) في البداية:\n\nجملة: أَنْتَ طَالِبٌ = أنت طالب\nسؤال: هَلْ أَنْتَ طَالِبٌ؟ = هل أنت طالب؟\n\nجملة: تُحِبُّ القَهْوَةَ = تحب القهوة\nسؤال: أَتُحِبُّ القَهْوَةَ؟ = أتحب القهوة؟"
+          contentAr: "أضف هَلْ (hal) أو أَ (a) في البداية:\n\nجملة: أَنْتَ طَالِبٌ = أنت طالب\nسؤال: هَلْ أَنْتَ طَالِبٌ؟ = هل أنت طالب؟\n\nجملة: تُحِبُّ القَهْوَةَ = تحب القهوة\nسؤال: أَتُحِبُّ القَهْوَةَ؟ = أتحب القهوة؟",
+          contentFr: "Ajoutez هَلْ (hal) ou أَ (a) au début :\n\nDéclaration : أَنْتَ طَالِبٌ = Tu es un étudiant\nQuestion : هَلْ أَنْتَ طَالِبٌ؟ = Es-tu un étudiant ?\n\nDéclaration : تُحِبُّ القَهْوَةَ = Tu aimes le café\nQuestion : أَتُحِبُّ القَهْوَةَ؟ = Aimes-tu le café ?"
         },
         {
           title: "Information Questions",
           titleAr: "الأسئلة المعلوماتية",
+          titleFr: "Questions d'information",
           content: "Use question words at the beginning:\n\nمَنْ هَذَا؟ = Who is this?\nمَا هَذَا؟ = What is this?\nأَيْنَ المَدْرَسَةُ؟ = Where is the school?\nمَتَى السَّفَرُ؟ = When is the trip?\nلِمَاذَا تَدْرُسُ؟ = Why do you study?",
-          contentAr: "استخدم أدوات الاستفهام في البداية:\n\nمَنْ هَذَا؟ = من هذا؟\nمَا هَذَا؟ = ما هذا؟\nأَيْنَ المَدْرَسَةُ؟ = أين المدرسة؟\nمَتَى السَّفَرُ؟ = متى السفر؟\nلِمَاذَا تَدْرُسُ؟ = لماذا تدرس؟"
+          contentAr: "استخدم أدوات الاستفهام في البداية:\n\nمَنْ هَذَا؟ = من هذا؟\nمَا هَذَا؟ = ما هذا؟\nأَيْنَ المَدْرَسَةُ؟ = أين المدرسة؟\nمَتَى السَّفَرُ؟ = متى السفر؟\nلِمَاذَا تَدْرُسُ؟ = لماذا تدرس؟",
+          contentFr: "Utilisez des mots interrogatifs au début :\n\nمَنْ هَذَا؟ = Qui est-ce ?\nمَا هَذَا؟ = Qu'est-ce que c'est ?\nأَيْنَ المَدْرَسَةُ؟ = Où est l'école ?\nمَتَى السَّفَرُ؟ = Quand est le voyage ?\nلِمَاذَا تَدْرُسُ؟ = Pourquoi étudies-tu ?"
         },
         {
           title: "Common Answers",
           titleAr: "الإجابات الشائعة",
+          titleFr: "Réponses courantes",
           content: "نَعَمْ (na'am) = Yes\nلَا (lā) = No\nلَا أَعْرِفُ (lā a'rifu) = I don't know\nرُبَّمَا (rubbamā) = Maybe\nبِالتَّأْكِيد (bit-ta'kīd) = Certainly",
-          contentAr: "نَعَمْ (na'am) = نعم\nلَا (lā) = لا\nلَا أَعْرِفُ (lā a'rifu) = لا أعرف\nرُبَّمَا (rubbamā) = ربما\nبِالتَّأْكِيد (bit-ta'kīd) = بالتأكيد"
+          contentAr: "نَعَمْ (na'am) = نعم\nلَا (lā) = لا\nلَا أَعْرِفُ (lā a'rifu) = لا أعرف\nرُبَّمَا (rubbamā) = ربما\nبِالتَّأْكِيد (bit-ta'kīd) = بالتأكيد",
+          contentFr: "نَعَمْ (na'am) = Oui\nلَا (lā) = Non\nلَا أَعْرِفُ (lā a'rifu) = Je ne sais pas\nرُبَّمَا (rubbamā) = Peut-être\nبِالتَّأْكِيد (bit-ta'kīd) = Certainement"
         }
       ],
       vocabulary: [
@@ -1597,20 +1659,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Common Prepositions",
           titleAr: "حروف الجر الشائعة",
+          titleFr: "Prépositions courantes",
           content: "فِي (fī) = in\nعَلَى ('alā) = on\nمِنْ (min) = from\nإِلَى (ilā) = to\nمَعَ (ma'a) = with\nبِـ (bi-) = with/by\nلِـ (li-) = for/to",
-          contentAr: "فِي (fī) = في\nعَلَى ('alā) = على\nمِنْ (min) = من\nإِلَى (ilā) = إلى\nمَعَ (ma'a) = معّ\nبِـ (bi-) = بـ\nلِـ (li-) = لـ"
+          contentAr: "فِي (fī) = في\nعَلَى ('alā) = على\nمِنْ (min) = من\nإِلَى (ilā) = إلى\nمَعَ (ma'a) = معّ\nبِـ (bi-) = بـ\nلِـ (li-) = لـ",
+          contentFr: "فِي (fī) = dans\nعَلَى ('alā) = sur\nمِنْ (min) = de\nإِلَى (ilā) = à/vers\nمَعَ (ma'a) = avec\nبِـ (bi-) = avec/par\nلِـ (li-) = pour/à"
         },
         {
           title: "Location Words",
           titleAr: "كلمات الموقع",
+          titleFr: "Mots de lieu",
           content: "أَمَامَ (amāma) = in front of\nوَرَاءَ (warā'a) = behind\nفَوْقَ (fawqa) = above\nتَحْتَ (taḥta) = under\nبَيْنَ (bayna) = between\nبِجَانِبِ (bi-jānibi) = next to\nقَرِيبٌ مِنْ (qarībun min) = near",
-          contentAr: "أَمَامَ (amāma) = أمام\nوَرَاءَ (warā'a) = وراء\nفَوْقَ (fawqa) = فوق\nتَحْتَ (taḥta) = تحت\nبَيْنَ (bayna) = بين\nبِجَانِبِ (bi-jānibi) = بجانب\nقَرِيبٌ مِنْ (qarībun min) = قريب من"
+          contentAr: "أَمَامَ (amāma) = أمام\nوَرَاءَ (warā'a) = وراء\nفَوْقَ (fawqa) = فوق\nتَحْتَ (taḥta) = تحت\nبَيْنَ (bayna) = بين\nبِجَانِبِ (bi-jānibi) = بجانب\nقَرِيبٌ مِنْ (qarībun min) = قريب من",
+          contentFr: "أَمَامَ (amāma) = devant\nوَرَاءَ (warā'a) = derrière\nفَوْقَ (fawqa) = au-dessus\nتَحْتَ (taḥta) = sous\nبَيْنَ (bayna) = entre\nبِجَانِبِ (bi-jānibi) = à côté de\nقَرِيبٌ مِنْ (qarībun min) = près de"
         },
         {
           title: "Prepositions + Pronouns",
           titleAr: "حروف الجر + الضمائر",
+          titleFr: "Prépositions + pronoms",
           content: "Pronouns attach to prepositions:\nمَعِي (ma'ī) = with me\nمَعَكَ (ma'aka) = with you (m)\nمَعَهُ (ma'ahu) = with him\nمِنْهَا (minhā) = from her\nإِلَيْهِمْ (ilayhim) = to them",
-          contentAr: "الضمائر تتصل بحروف الجر:\nمَعِي (ma'ī) = معي\nمَعَكَ (ma'aka) = معك (م)\nمَعَهُ (ma'ahu) = معه\nمِنْهَا (minhā) = منها\nإِلَيْهِمْ (ilayhim) = إليهم"
+          contentAr: "الضمائر تتصل بحروف الجر:\nمَعِي (ma'ī) = معي\nمَعَكَ (ma'aka) = معك (م)\nمَعَهُ (ma'ahu) = معه\nمِنْهَا (minhā) = منها\nإِلَيْهِمْ (ilayhim) = إليهم",
+          contentFr: "Les pronoms s'attachent aux prépositions :\nمَعِي (ma'ī) = avec moi\nمَعَكَ (ma'aka) = avec toi (m)\nمَعَهُ (ma'ahu) = avec lui\nمِنْهَا (minhā) = d'elle\nإِلَيْهِمْ (ilayhim) = vers eux"
         }
       ],
       vocabulary: [
@@ -1660,20 +1728,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Telling Time",
           titleAr: "قول الوقت",
+          titleFr: "Dire l'heure",
           content: "السَّاعَةُ كَمْ؟ (as-sā'atu kam?) = What time is it?\n\nالسَّاعَةُ الثَّانِيَة = It's 2 o'clock\nالسَّاعَةُ الثَّالِثَة وَالنِّصْف = It's 3:30\nالسَّاعَةُ الرَّابِعَة وَالرُّبْع = It's 4:15\nالسَّاعَةُ الخَامِسَة إِلَّا رُبْعًا = It's 4:45 (5 minus quarter)",
-          contentAr: "السَّاعَةُ كَمْ؟ = الساعة كم؟\n\nالسَّاعَةُ الثَّانِيَة = الساعة الثانية\nالسَّاعَةُ الثَّالِثَة وَالنِّصْف = الساعة الثالثة والنصف\nالسَّاعَةُ الرَّابِعَة وَالرُّبْع = الساعة الرابعة والربع\nالسَّاعَةُ الخَامِسَة إِلَّا رُبْعًا = الساعة الخامسة إلا ربعاً"
+          contentAr: "السَّاعَةُ كَمْ؟ = الساعة كم؟\n\nالسَّاعَةُ الثَّانِيَة = الساعة الثانية\nالسَّاعَةُ الثَّالِثَة وَالنِّصْف = الساعة الثالثة والنصف\nالسَّاعَةُ الرَّابِعَة وَالرُّبْع = الساعة الرابعة والربع\nالسَّاعَةُ الخَامِسَة إِلَّا رُبْعًا = الساعة الخامسة إلا ربعاً",
+          contentFr: "السَّاعَةُ كَمْ؟ (as-sā'atu kam?) = Quelle heure est-il ?\n\nالسَّاعَةُ الثَّانِيَة = Il est 2 heures\nالسَّاعَةُ الثَّالِثَة وَالنِّصْف = Il est 3 heures et demie\nالسَّاعَةُ الرَّابِعَة وَالرُّبْع = Il est 4 heures et quart\nالسَّاعَةُ الخَامِسَة إِلَّا رُبْعًا = Il est 5 heures moins le quart"
         },
         {
           title: "Time Vocabulary",
           titleAr: "مفردات الزمن",
+          titleFr: "Vocabulaire du temps",
           content: "سَاعَة (sā'a) = hour/watch\nدَقِيقَة (daqīqa) = minute\nثَانِيَة (thāniya) = second\nنِصْف (niṣf) = half\nرُبْع (rub') = quarter\nصَبَاح (ṣabāḥ) = morning\nمَسَاء (masā') = evening",
-          contentAr: "سَاعَة (sā'a) = ساعة\nدَقِيقَة (daqīqa) = دقيقة\nثَانِيَة (thāniya) = ثانية\nنِصْف (niṣf) = نصف\nرُبْع (rub') = ربع\nصَبَاح (ṣabāḥ) = صباح\nمَسَاء (masā') = مساء"
+          contentAr: "سَاعَة (sā'a) = ساعة\nدَقِيقَة (daqīqa) = دقيقة\nثَانِيَة (thāniya) = ثانية\nنِصْف (niṣf) = نصف\nرُبْع (rub') = ربع\nصَبَاح (ṣabāḥ) = صباح\nمَسَاء (masā') = مساء",
+          contentFr: "سَاعَة (sā'a) = heure/montre\nدَقِيقَة (daqīqa) = minute\nثَانِيَة (thāniya) = seconde\nنِصْف (niṣf) = demi\nرُبْع (rub') = quart\nصَبَاح (ṣabāḥ) = matin\nمَسَاء (masā') = soir"
         },
         {
           title: "Time Expressions",
           titleAr: "تعبيرات الوقت",
+          titleFr: "Expressions de temps",
           content: "الآنَ (al-āna) = now\nغَدًا (ghadan) = tomorrow\nأَمْس (ams) = yesterday\nاليَوْم (al-yawm) = today\nكُلّ يَوْم (kull yawm) = every day\nأَحْيَانًا (aḥyānan) = sometimes",
-          contentAr: "الآنَ (al-āna) = الآن\nغَدًا (ghadan) = غداً\nأَمْس (ams) = أمس\nاليَوْم (al-yawm) = اليوم\nكُلّ يَوْم (kull yawm) = كل يوم\nأَحْيَانًا (aḥyānan) = أحياناً"
+          contentAr: "الآنَ (al-āna) = الآن\nغَدًا (ghadan) = غداً\nأَمْس (ams) = أمس\nاليَوْم (al-yawm) = اليوم\nكُلّ يَوْم (kull yawm) = كل يوم\nأَحْيَانًا (aḥyānan) = أحياناً",
+          contentFr: "الآنَ (al-āna) = maintenant\nغَدًا (ghadan) = demain\nأَمْس (ams) = hier\nاليَوْم (al-yawm) = aujourd'hui\nكُلّ يَوْم (kull yawm) = tous les jours\nأَحْيَانًا (aḥyānan) = parfois"
         }
       ],
       vocabulary: [
@@ -1725,20 +1799,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Basic Introduction",
           titleAr: "التقديم الأساسي",
+          titleFr: "Introduction de base",
           content: "اِسْمِي ... (ismī ...) = My name is ...\nأَنَا مِنْ ... (anā min ...) = I am from ...\nأَنَا ... (anā ...) = I am (profession/nationality)\n\nExample:\nمَرْحَبًا! اِسْمِي أَحْمَد. أَنَا مِنْ مِصْر. أَنَا طَالِبٌ.\n= Hello! My name is Ahmed. I am from Egypt. I am a student.",
-          contentAr: "اِسْمِي ... (ismī ...) = اسمي\nأَنَا مِنْ ... (anā min ...) = أنا من\nأَنَا ... (anā ...) = أنا (مهنة/جنسية)\n\nمثال:\nمَرْحَبًا! اِسْمِي أَحْمَد. أَنَا مِنْ مِصْر. أَنَا طَالِبٌ.\n= مرحباً! اسمي أحمد. أنا من مصر. أنا طالب."
+          contentAr: "اِسْمِي ... (ismī ...) = اسمي\nأَنَا مِنْ ... (anā min ...) = أنا من\nأَنَا ... (anā ...) = أنا (مهنة/جنسية)\n\nمثال:\nمَرْحَبًا! اِسْمِي أَحْمَد. أَنَا مِنْ مِصْر. أَنَا طَالِبٌ.\n= مرحباً! اسمي أحمد. أنا من مصر. أنا طالب.",
+          contentFr: "اِسْمِي ... (ismī ...) = Je m'appelle ...\nأَنَا مِنْ ... (anā min ...) = Je suis de ...\nأَنَا ... (anā ...) = Je suis (profession/nationalité)\n\nExemple :\nمَرْحَبًا! اِسْمِي أَحْمَد. أَنَا مِنْ مِصْر. أَنَا طَالِبٌ.\n= Bonjour! Je m'appelle Ahmed. Je suis d'Égypte. Je suis un étudiant."
         },
         {
           title: "Asking About Others",
           titleAr: "السؤال عن الآخرين",
+          titleFr: "Demander aux autres",
           content: "مَا اسْمُكَ؟ (mā ismuka?) = What is your name? (m)\nمَا اسْمُكِ؟ (mā ismuki?) = What is your name? (f)\nمِنْ أَيْنَ أَنْتَ؟ (min ayna anta?) = Where are you from? (m)\nمَا عَمَلُكَ؟ (mā 'amaluka?) = What is your work? (m)",
-          contentAr: "مَا اسْمُكَ؟ (mā ismuka?) = ما اسمك؟ (م)\nمَا اسْمُكِ؟ (mā ismuki?) = ما اسمك؟ (ن)\nمِنْ أَيْنَ أَنْتَ؟ (min ayna anta?) = من أين أنت؟ (م)\nمَا عَمَلُكَ؟ (mā 'amaluka?) = ما عملك؟ (م)"
+          contentAr: "مَا اسْمُكَ؟ (mā ismuka?) = ما اسمك؟ (م)\nمَا اسْمُكِ؟ (mā ismuki?) = ما اسمك؟ (ن)\nمِنْ أَيْنَ أَنْتَ؟ (min ayna anta?) = من أين أنت؟ (م)\nمَا عَمَلُكَ؟ (mā 'amaluka?) = ما عملك؟ (م)",
+          contentFr: "مَا اسْمُكَ؟ (mā ismuka?) = Quel est ton nom ? (m)\nمَا اسْمُكِ؟ (mā ismuki?) = Quel est ton nom ? (f)\nمِنْ أَيْنَ أَنْتَ؟ (min ayna anta?) = D'où viens-tu ? (m)\nمَا عَمَلُكَ؟ (mā 'amaluka?) = Quel est ton travail ? (m)"
         },
         {
           title: "Nationalities",
           titleAr: "الجنسيات",
+          titleFr: "Les nationalités",
           content: "مِصْرِي (miṣrī) = Egyptian (m)\nسُورِي (sūrī) = Syrian\nمَغْرِبِي (maghribī) = Moroccan\nأَمْرِيكِي (amrīkī) = American\nبْرِيطَانِي (brīṭānī) = British\nفَرَنْسِي (faransī) = French",
-          contentAr: "مِصْرِي (miṣrī) = مصري\nسُورِي (sūrī) = سوري\nمَغْرِبِي (maghribī) = مغربي\nأَمْرِيكِي (amrīkī) = أمريكي\nبْرِيطَانِي (brīṭānī) = بريطاني\nفَرَنْسِي (faransī) = فرنسي"
+          contentAr: "مِصْرِي (miṣrī) = مصري\nسُورِي (sūrī) = سوري\nمَغْرِبِي (maghribī) = مغربي\nأَمْرِيكِي (amrīkī) = أمريكي\nبْرِيطَانِي (brīṭānī) = بريطاني\nفَرَنْسِي (faransī) = فرنسي",
+          contentFr: "مِصْرِي (miṣrī) = Égyptien (m)\nسُورِي (sūrī) = Syrien\nمَغْرِبِي (maghribī) = Marocain\nأَمْرِيكِي (amrīkī) = Américain\nبْرِيطَانِي (brīṭānī) = Britannique\nفَرَنْسِي (faransī) = Français"
         }
       ],
       vocabulary: [
@@ -1788,20 +1868,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Restaurant Basics",
           titleAr: "أساسيات المطعم",
+          titleFr: "Bases du restaurant",
           content: "مَطْعَم (maṭ'am) = restaurant\nقَائِمَة الطَّعَام (qā'imat aṭ-ṭa'ām) = menu\nنَادِل (nādil) = waiter\nطَاوِلَة (ṭāwila) = table\nالحِسَاب (al-ḥisāb) = the bill",
-          contentAr: "مَطْعَم (maṭ'am) = المطعم\nقَائِمَة الطَّعَام (qā'imat aṭ-ṭa'ām) = قائمة الطعام\nنَادِل (nādil) = الناد ل\nطَاوِلَة (ṭāwila) = الطاولة\nالحِسَاب (al-ḥisāb) = الحساب"
+          contentAr: "مَطْعَم (maṭ'am) = المطعم\nقَائِمَة الطَّعَام (qā'imat aṭ-ṭa'ām) = قائمة الطعام\nنَادِل (nādil) = الناد ل\nطَاوِلَة (ṭāwila) = الطاولة\nالحِسَاب (al-ḥisāb) = الحساب",
+          contentFr: "مَطْعَم (maṭ'am) = restaurant\nقَائِمَة الطَّعَام (qā'imat aṭ-ṭa'ām) = menu\nنَادِل (nādil) = serveur\nطَاوِلَة (ṭāwila) = table\nالحِسَاب (al-ḥisāb) = l'addition"
         },
         {
           title: "Ordering",
           titleAr: "الطلب",
+          titleFr: "Commande",
           content: "أُرِيدُ ... (urīdu ...) = I want ...\nهَلْ عِنْدَكُمْ ...؟ (hal 'indakum ...?) = Do you have ...?\nمَا هُوَ طَبَقُ اليَوْم؟ (mā huwa ṭabaq al-yawm?) = What is the dish of the day?\nهَذَا لَذِيذٌ! (hādhā ladhīdhun!) = This is delicious!",
-          contentAr: "أُرِيدُ ... (urīdu ...) = أريد\nهَلْ عِنْدَكُمْ ...؟ (hal 'indakum ...?) = هل عندكم\nمَا هُوَ طَبَقُ اليَوْم؟ (mā huwa ṭabaq al-yawm?) = ما هو طبق اليوم؟\nهَذَا لَذِيذٌ! (hādhā ladhīdhun!) = هذا لذيذ!"
+          contentAr: "أُرِيدُ ... (urīdu ...) = أريد\nهَلْ عِنْدَكُمْ ...؟ (hal 'indakum ...?) = هل عندكم\nمَا هُوَ طَبَقُ اليَوْم؟ (mā huwa ṭabaq al-yawm?) = ما هو طبق اليوم؟\nهَذَا لَذِيذٌ! (hādhā ladhīdhun!) = هذا لذيذ!",
+          contentFr: "أُرِيدُ ... (urīdu ...) = Je veux ...\nهَلْ عِنْدَكُمْ ...؟ (hal 'indakum ...?) = Avez-vous ...?\nمَا هُوَ طَبَقُ اليَوْم؟ (mā huwa ṭabaq al-yawm?) = Quel est le plat du jour ?\nهَذَا لَذِيذٌ! (hādhā ladhīdhun!) = C'est délicieux !"
         },
         {
           title: "Special Requests",
           titleAr: "طلبات خاصة",
+          titleFr: "Demandes spéciales",
           content: "مِنْ فَضْلِكَ (min faḍlika) = please (m)\nبِدُونِ ... (bidūni ...) = without ...\nمَعَ ... (ma'a ...) = with ...\nالحِسَابَ، مِنْ فَضْلِكَ (al-ḥisāba, min faḍlika) = The bill, please",
-          contentAr: "مِنْ فَضْلِكَ (min faḍlika) = من فضلك\nبِدُونِ ... (bidūni ...) = بدون\nمَعَ ... (ma'a ...) = معَ\nالحِسَابَ، مِنْ فَضْلِكَ (al-ḥisāba, min faḍlika) = الحساب، من فضلك"
+          contentAr: "مِنْ فَضْلِكَ (min faḍlika) = من فضلك\nبِدُونِ ... (bidūni ...) = بدون\nمَعَ ... (ma'a ...) = معَ\nالحِسَابَ، مِنْ فَضْلِكَ (al-ḥisāba, min faḍlika) = الحساب، من فضلك",
+          contentFr: "مِنْ فَضْلِكَ (min faḍlika) = s'il vous plaît (m)\nبِدُونِ ... (bidūni ...) = sans ...\nمَعَ ... (ma'a ...) = avec ...\nالحِسَابَ، مِنْ فَضْلِكَ (al-ḥisāba, min faḍlika) = L'addition, s'il vous plaît"
         }
       ],
       vocabulary: [
@@ -1851,20 +1937,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Shopping Vocabulary",
           titleAr: "مفردات التسوق",
+          titleFr: "Vocabulaire d'achat",
           content: "سُوق (sūq) = market\nمَحَلّ (maḥall) = store\nسِعْر (si'r) = price\nنُقُود (nuqūd) = money\nرَخِيص (rakhīṣ) = cheap\nغَالٍ (ghālin) = expensive",
-          contentAr: "سُوق (sūq) = السوق\nمَحَلّ (maḥall) = المحل\nسِعْر (si'r) = السعر\nنُقُود (nuqūd) = النقود\nرَخِيص (rakhīṣ) = رخيص\nغَالٍ (ghālin) = غالٍ"
+          contentAr: "سُوق (sūq) = السوق\nمَحَلّ (maḥall) = المحل\nسِعْر (si'r) = السعر\nنُقُود (nuqūd) = النقود\nرَخِيص (rakhīṣ) = رخيص\nغَالٍ (ghālin) = غالٍ",
+          contentFr: "سُوق (sūq) = marché\nمَحَلّ (maḥall) = magasin\nسِعْر (si'r) = prix\nنُقُود (nuqūd) = argent\nرَخِيص (rakhīṣ) = bon marché\nغَالٍ (ghālin) = cher"
         },
         {
           title: "Asking Prices",
           titleAr: "السؤال عن الأسعار",
+          titleFr: "Demander les prix",
           content: "بِكَمْ هَذَا؟ (bikam hādhā?) = How much is this?\nكَمِ السِّعْرُ؟ (kam as-si'ru?) = What is the price?\nهَذَا غَالٍ جِدًّا! (hādhā ghālin jiddan!) = This is too expensive!\nهَلْ يُمْكِنُ تَخْفِيض؟ (hal yumkinu takhfīḍ?) = Is a discount possible?",
-          contentAr: "بِكَمْ هَذَا؟ (bikam hādhā?) = بكم هذا؟\nكَمِ السِّعْرُ؟ (kam as-si'ru?) = كم السعر؟\nهَذَا غَالٍ جِدًّا! (hādhā ghālin jiddan!) = هذا غالٍ جداً!\nهَلْ يُمْكِنُ تَخْفِيض؟ (hal yumkinu takhfīḍ?) = هل يمكن تخفيض؟"
+          contentAr: "بِكَمْ هَذَا؟ (bikam hādhā?) = بكم هذا؟\nكَمِ السِّعْرُ؟ (kam as-si'ru?) = كم السعر؟\nهَذَا غَالٍ جِدًّا! (hādhā ghālin jiddan!) = هذا غالٍ جداً!\nهَلْ يُمْكِنُ تَخْفِيض؟ (hal yumkinu takhfīḍ?) = هل يمكن تخفيض؟",
+          contentFr: "بِكَمْ هَذَا؟ (bikam hādhā?) = Combien coûte ceci ?\nكَمِ السِّعْرُ؟ (kam as-si'ru?) = Quel est le prix ?\nهَذَا غَالٍ جِدًّا! (hādhā ghālin jiddan!) = C'est trop cher !\nهَلْ يُمْكِنُ تَخْفِيض؟ (hal yumkinu takhfīḍ?) = Une remise est-elle possible ?"
         },
         {
           title: "Making a Purchase",
           titleAr: "إجراء عملية شراء",
+          titleFr: "Effectuer un achat",
           content: "سَآخُذُ هَذَا (sa-ākhudu hādhā) = I will take this\nأُرِيدُ وَاحِدًا (urīdu wāḥidan) = I want one\nهَلْ تَقْبَلُونَ البِطَاقَة؟ (hal taqbalūna al-biṭāqa?) = Do you accept cards?\nشُكْرًا، مَعَ السَّلَامَة! (shukran, ma'a as-salāma!) = Thank you, goodbye!",
-          contentAr: "سَآخُذُ هَذَا (sa-ākhudu hādhā) = سآخذ هذا\nأُرِيدُ وَاحِدًا (urīdu wāḥidan) = أريد واحداً\nهَلْ تَقْبَلُونَ البِطَاقَة؟ (hal taqbalūna al-biṭāqa?) = هل تقبلون البطاقة؟\nشُكْرًا، مَعَ السَّلَامَة! (shukran, ma'a as-salāma!) = شكراً، معَ السلامة!"
+          contentAr: "سَآخُذُ هَذَا (sa-ākhudu hādhā) = سآخذ هذا\nأُرِيدُ وَاحِدًا (urīdu wāḥidan) = أريد واحداً\nهَلْ تَقْبَلُونَ البِطَاقَة؟ (hal taqbalūna al-biṭāqa?) = هل تقبلون البطاقة؟\nشُكْرًا، مَعَ السَّلَامَة! (shukran, ma'a as-salāma!) = شكراً، معَ السلامة!",
+          contentFr: "سَآخُذُ هَذَا (sa-ākhudu hādhā) = Je vais prendre ceci\nأُرِيدُ وَاحِدًا (urīdu wāḥidan) = Je veux un\nهَلْ تَقْبَلُونَ البِطَاقَة؟ (hal taqbalūna al-biṭāqa?) = Acceptez-vous les cartes ?\nشُكْرًا، مَعَ السَّلَامَة! (shukran, ma'a as-salāma!) = Merci, au revoir !"
         }
       ],
       vocabulary: [
@@ -1914,14 +2006,18 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "Morning Routine",
           titleAr: "روتين الصباح",
+          titleFr: "Routine du matin",
           content: "أَسْتَيْقِظُ (astayqiẓu) = I wake up\nأَغْتَسِلُ (aghtasilu) = I wash/shower\nأَتَنَاوَلُ الفُطُور (atanāwalu al-fuṭūr) = I have breakfast\nأَذْهَبُ إِلَى العَمَل (adhhabu ilā al-'amal) = I go to work",
-          contentAr: "أَسْتَيْقِظُ (astayqiẓu) = أستيقظ\nأَغْتَسِلُ (aghtasilu) = أغتسل\nأَتَنَاوَلُ الفُطُور (atanāwalu al-fuṭūr) = أتناول الفطور\nأَذْهَبُ إِلَى العَمَل (adhhabu ilā al-'amal) = أذهب إلى العمل"
+          contentAr: "أَسْتَيْقِظُ (astayqiẓu) = أستيقظ\nأَغْتَسِلُ (aghtasilu) = أغتسل\nأَتَنَاوَلُ الفُطُور (atanāwalu al-fuṭūr) = أتناول الفطور\nأَذْهَبُ إِلَى العَمَل (adhhabu ilā al-'amal) = أذهب إلى العمل",
+          contentFr: "أَسْتَيْقِظُ (astayqiẓu) = Je me réveille\nأَغْتَسِلُ (aghtasilu) = Je me lave/je prends une douche\nأَتَنَاوَلُ الفُطُور (atanāwalu al-fuṭūr) = Je déjeune\nأَذْهَبُ إِلَى العَمَل (adhhabu ilā al-'amal) = Je vais au travail"
         },
         {
           title: "Daily Activities",
           titleAr: "الأنشطة اليومية",
+          titleFr: "Activités quotidiennes",
           content: "أَعْمَلُ (a'malu) = I work\nأَدْرُسُ (adrusu) = I study\nأَتَغَدَّى (ataghadda) = I have lunch\nأَرْجِعُ (arji'u) = I return home\nأَتَعَشَّى (ata'ashsha) = I have dinner\nأَنَامُ (anāmu) = I sleep",
-          contentAr: "أَعْمَلُ (a'malu) = أعمل\nأَدْرُسُ (adrusu) = أدرس\nأَتَغَدَّى (ataghadda) = أتغدى\nأَرْجِعُ (arji'u) = أرجع\nأَتَعَشَّى (ata'ashsha) = أتعشى\nأَنَامُ (anāmu) = أنام"
+          contentAr: "أَعْمَلُ (a'malu) = أعمل\nأَدْرُسُ (adrusu) = أدرس\nأَتَغَدَّى (ataghadda) = أتغدى\nأَرْجِعُ (arji'u) = أرجع\nأَتَعَشَّى (ata'ashsha) = أتعشى\nأَنَامُ (anāmu) = أنام",
+          contentFr: "أَعْمَلُ (a'malu) = Je travaille\nأَدْرُسُ (adrusu) = J'étudie\nأَتَغَدَّى (ataghadda) = Je déjeune (déjeuner de midi)\nأَرْجِعُ (arji'u) = Je reviens\nأَتَعَشَّى (ata'ashsha) = Je dîne\nأَنَامُ (anāmu) = Je dors"
         }
       ],
       vocabulary: [
@@ -1971,20 +2067,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
         {
           title: "🎉 Phase 2 Complete!",
           titleAr: "🎉 المرحلة الثانية اكتملت!",
+          titleFr: "🎉 Phase 2 Complétée !",
           content: "Amazing progress! You've learned:\n✓ 200+ vocabulary words\n✓ Personal and possessive pronouns\n✓ Gender and plural forms\n✓ Past and present tense verbs\n✓ Sentence construction\n✓ Practical conversations",
-          contentAr: "تقدم مذهل! لقد تعلمت:\n✓ أكثر من 200 كلمة\n✓ الضمائر الشخصية والملكية\n✓ صيغ المذكر والمؤنث والجمع\n✓ الأفعال في الماضي والمضارع\n✓ بناء الجمل\n✓ حوارات عملية"
+          contentAr: "تقدم مذهل! لقد تعلمت:\n✓ أكثر من 200 كلمة\n✓ الضمائر الشخصية والملكية\n✓ صيغ المذكر والمؤنث والجمع\n✓ الأفعال في الماضي والمضارع\n✓ بناء الجمل\n✓ حوارات عملية",
+          contentFr: "Progrès remarquable ! Vous avez appris :\n✓ Plus de 200 mots de vocabulaire\n✓ Les pronoms personnels et possessifs\n✓ Les formes masculine, féminine et plurielle\n✓ Les verbes au passé et présent\n✓ La construction de phrases\n✓ Les conversations pratiques"
         },
         {
           title: "Skills Achieved",
           titleAr: "المهارات التي تحققت",
+          titleFr: "Compétences Acquises",
           content: "You can now:\n• Introduce yourself\n• Describe your family and home\n• Order at restaurants and shop\n• Tell time and discuss routines\n• Form questions and answers\n• Use basic Arabic grammar correctly",
-          contentAr: "يمكنك الآن:\n• تقديم نفسك\n• وصف عائلتك ومنزلك\n• الطلب في المطاعم والتسوق\n• قول الوقت ومناقشة الروتين\n• طرح الأسئلة والإجابة عليها\n• استخدام قواعد العربية بشكل صحيح"
+          contentAr: "يمكنك الآن:\n• تقديم نفسك\n• وصف عائلتك ومنزلك\n• الطلب في المطاعم والتسوق\n• قول الوقت ومناقشة الروتين\n• طرح الأسئلة والإجابة عليها\n• استخدام قواعد العربية بشكل صحيح",
+          contentFr: "Vous pouvez maintenant :\n• Vous présenter\n• Décrire votre famille et votre maison\n• Commander dans les restaurants et faire du shopping\n• Dire l'heure et discuter des routines\n• Poser des questions et répondre\n• Utiliser correctement la grammaire arabe de base"
         },
         {
           title: "Ready for Phase 3!",
           titleAr: "جاهز للمرحلة الثالثة!",
+          titleFr: "Prêt pour la Phase 3 !",
           content: "In Phase 3: Expansion, you'll learn:\n• Advanced verb forms\n• Complex sentence structures\n• Conditional and subjunctive moods\n• Extended vocabulary by topic\n• Paragraph reading and writing",
-          contentAr: "في المرحلة الثالثة: التوسع، ستتعلم:\n• أشكال فعلية متقدمة\n• بنى جملة معقدة\n• أفعال شرطية وما شابهها\n• مفردات موسعة حسب الموضوع\n• قراءة الفقرات والكتابة"
+          contentAr: "في المرحلة الثالثة: التوسع، ستتعلم:\n• أشكال فعلية متقدمة\n• بنى جملة معقدة\n• أفعال شرطية وما شابهها\n• مفردات موسعة حسب الموضوع\n• قراءة الفقرات والكتابة",
+          contentFr: "En Phase 3 : Expansion, vous apprendrez :\n• Les formes verbales avancées\n• Les structures de phrase complexes\n• Les modes conditionnel et subjonctif\n• Le vocabulaire étendu par sujet\n• La lecture et l'écriture de paragraphes"
         }
       ],
       vocabulary: [

@@ -439,26 +439,35 @@ export const PHASE_1_LESSONS: Lesson[] = [
         {
           title: "The Three-Tooth Letters: س ش",
           titleAr: "حروف الأسنان الثلاثة: س ش",
+          titleFr: "Les trois lettres dentales : س ش",
           content:
             "Sīn (س) and Shīn (ش) have a distinctive shape with three 'teeth' like a comb:\n• Sīn (س) = NO dots = 's' sound (like 'sun')\n• Shīn (ش) = THREE dots above = 'sh' sound (like 'ship')\n\nTip: Shīn has 3 teeth AND 3 dots!",
           contentAr:
             "السين (س) والشين (ش) لهما شكل مميز بثلاث 'أسنان' مثل مشط:\n• السين (س) = بدون نقاط = صوت 's' (مثل 'sun')\n• الشين (ش) = ثلاث نقاط فوق = صوت 'sh' (مثل 'ship')\n\nنصيحة: الشين بها 3 أسنان و 3 نقاط!",
+          contentFr:
+            "Sīn (س) et Shīn (ش) ont une forme distinctive avec trois « dents » comme un peigne :\n• Sīn (س) = SANS points = son 's' (comme dans 'soleil')\n• Shīn (ش) = TROIS points au-dessus = son 'ch' (comme dans 'chameau')\n\nAstuce : Shīn a 3 dents ET 3 points !",
         },
         {
           title: "Introducing Emphatic Letters: Ṣād (ص)",
           titleAr: "تقديم الحروف الممدودة: الصاد (ص)",
+          titleFr: "Présentation des lettres emphatiques : Ṣād (ص)",
           content:
             "Ṣād (ص) is your first 'emphatic' letter. Arabic has sounds that don't exist in English - emphatic letters are pronounced with the tongue pressed against the roof of the mouth, creating a 'heavier' sound.\n\nṢād is a 'heavy s' - imagine saying 's' while your tongue is pressed flat. Your mouth feels more full.",
           contentAr:
             "الصاد (ص) هو أول حرف 'ممدود' لك. اللغة العربية تحتوي على أصوات غير موجودة في الإنجليزية - الحروف الممدودة تُنطق بضغط اللسان على سقف الفم، مما يخلق صوتًا 'أثقل'.\n\nالصاد هي 's' ثقيلة - تخيل نطق 's' بينما لسانك مضغوط بشكل مسطح. يشعر فمك بأنه أكثر امتلاءً.",
+          contentFr:
+            "Ṣād (ص) est votre première lettre « emphatique ». L'arabe a des sons qui n'existent pas en français - les lettres emphatiques se prononcent en appuyant la langue contre le toit de la bouche, créant un son « plus lourd ».\n\nṢād est un 's' lourd - imaginez dire 's' tandis que votre langue est appuyée à plat. Votre bouche se sent plus pleine.",
         },
         {
           title: "Why Emphatics Matter",
           titleAr: "لماذا الحروف الممدودة مهمة",
+          titleFr: "Pourquoi les lettres emphatiques sont importantes",
           content:
             "Emphatic letters change the meaning of words! For example:\n• سَيْف (sayf) = sword (regular s)\n• صَيْف (ṣayf) = summer (emphatic s)\n\nArabics sometimes call this language 'لُغَة الضّاد' (the language of Ḍād) because emphatic sounds are so distinctive!",
           contentAr:
             "الحروف الممدودة تغير معنى الكلمات! على سبيل المثال:\n• سَيْف (sayf) = سيف (s عادي)\n• صَيْف (ṣayf) = صيف (s ممدود)\n\nيُطلق العرب على هذه اللغة أحيانًا 'لُغَة الضّاد' (لغة الضاد) لأن الأصوات الممدودة مميزة جدًا!",
+          contentFr:
+            "Les lettres emphatiques changent le sens des mots ! Par exemple :\n• سَيْف (sayf) = épée (s régulier)\n• صَيْف (ṣayf) = été (s emphatique)\n\nLes Arabes appellent parfois cette langue « لُغَة الضّاد » (la langue de Ḍād) car les sons emphatiques sont si distinctifs !",
         },
       ],
       vocabulary: [
@@ -541,26 +550,35 @@ export const PHASE_1_LESSONS: Lesson[] = [
         {
           title: "The Complete Emphatic Set",
           titleAr: "المجموعة الممدودة الكاملة",
+          titleFr: "L'ensemble emphatique complet",
           content:
             "You're learning the sounds that make Arabic unique! These three letters complete the emphatic consonant family:\n• Ḍād (ض) = emphatic 'd' (NO English equivalent!)\n• Ṭā' (ط) = emphatic 't' (heavy 't')\n• Ẓā' (ظ) = emphatic 'dh/z' (heavy 'th' like 'the')",
           contentAr:
             "أنت تتعلم الأصوات التي تجعل العربية فريدة! هذه الأحرف الثلاثة تكمل عائلة الحروف الممدودة:\n• الضاد (ض) = 'd' ممدود (بلا مكافئ إنجليزي!)\n• الطاء (ط) = 't' ممدود ('t' ثقيلة)\n• الظاء (ظ) = 'dh/z' ممدود ('th' ثقيلة مثل 'the')",
+          contentFr:
+            "Vous apprenez les sons qui rendent l'arabe unique ! Ces trois lettres complètent la famille des consonnes emphatiques :\n• Ḍād (ض) = 'd' emphatique (AUCUN équivalent français !)\n• Ṭā' (ط) = 't' emphatique (t lourd)\n• Ẓā' (ظ) = 'dh/z' emphatique (th lourd comme 'the' en anglais)",
         },
         {
           title: "Ḍād - The Arabic Letter",
           titleAr: "الضاد - حرف عربي",
+          titleFr: "Ḍād - La lettre arabe",
           content:
             "Ḍād (ض) is so unique that Arabic is called 'لُغَة الضّاد' (lughat aḍ-ḍād - the language of Ḍād). This sound exists ONLY in Arabic!\n\nTo pronounce it: Say 'd' but press your tongue against your upper teeth while pushing air from your throat. It sounds 'thick' and 'heavy'.",
           contentAr:
             "الضاد (ض) فريدة جدًا لدرجة أن اللغة العربية تُسمى 'لُغَة الضّاد' (لغة الضاد). هذا الصوت موجود فقط في العربية!\n\nللنطق به: قل 'd' لكن اضغط لسانك على أسنانك العلوية بينما تدفع الهواء من حلقك. يبدو 'سميك' و 'ثقيل'.",
+          contentFr:
+            "Ḍād (ض) est tellement unique que l'arabe s'appelle « لُغَة الضّاد » (lughat aḍ-ḍād - la langue de Ḍād). Ce son n'existe QUE en arabe !\n\nPour le prononcer : Dites 'd' mais appuyez votre langue contre vos dents supérieures en poussant l'air de votre gorge. Ça sonne « épais » et « lourd ».",
         },
         {
           title: "Emphatic Pairs Comparison",
           titleAr: "مقارنة الأزواج الممدودة",
+          titleFr: "Comparaison des paires emphatiques",
           content:
             "Regular → Emphatic:\n• ت (t) → ط (ṭ): thin t → thick t\n• د (d) → ض (ḍ): thin d → thick d\n• ذ (dh) → ظ (ẓ): thin th → thick th\n• س (s) → ص (ṣ): thin s → thick s\n\nEmphatics make surrounding vowels sound 'darker' too!",
           contentAr:
             "عادي → ممدود:\n• ت (t) → ط (ṭ): t رقيقة → t سميكة\n• د (d) → ض (ḍ): d رقيقة → d سميكة\n• ذ (dh) → ظ (ẓ): th رقيقة → th سميكة\n• س (s) → ص (ṣ): s رقيقة → s سميكة\n\nالحروف الممدودة تجعل الحروف الصوتية المحيطة تبدو 'أغمق' أيضًا!",
+          contentFr:
+            "Régulier → Emphatique :\n• ت (t) → ط (ṭ) : t fin → t épais\n• د (d) → ض (ḍ) : d fin → d épais\n• ذ (dh) → ظ (ẓ) : th fin → th épais\n• س (s) → ص (ṣ) : s fin → s épais\n\nLes emphatiques rendent aussi les voyelles environnantes « plus sombres » !",
         },
       ],
       vocabulary: [
@@ -641,26 +659,35 @@ export const PHASE_1_LESSONS: Lesson[] = [
         {
           title: "'Ayn - The Most Difficult Sound",
           titleAr: "العين - الصوت الأصعب",
+          titleFr: "'Ayn - Le son le plus difficile",
           content:
             "'Ayn (ع) is often the hardest letter for non-native speakers. It's a 'pharyngeal' consonant - produced by constricting your throat.\n\nHow to pronounce: Imagine you're choking (gently!), or gagging. The sound comes from squeezing the back of your throat. It's like saying 'ah' while your throat is tight.",
           contentAr:
             "العين (ع) غالبًا ما تكون أصعب حرف للمتحدثين غير الأصليين. إنها حرف 'حلقي' - ينتج عن تضييق حلقك.\n\nكيفية النطق به: تخيل أنك تختنق (برفق!)، أو تتقيأ. الصوت يأتي من الضغط على مؤخرة حلقك. إنه مثل قول 'ah' بينما حلقك مشدود.",
+          contentFr:
+            "'Ayn (ع) est souvent la lettre la plus difficile pour les non-locuteurs natifs. C'est une consonne « pharyngale » - produite en contractant votre gorge.\n\nComment le prononcer : Imaginez que vous vous étouffez (doucement !), ou que vous avez un haut-le-cœur. Le son vient de l'étranglement de l'arrière de votre gorge. C'est comme dire 'ah' tandis que votre gorge est serrée.",
         },
         {
           title: "Ghayn - The Gargling Sound",
           titleAr: "الغين - صوت الغرغرة",
+          titleFr: "Ghayn - Le son de gargarisme",
           content:
             "Ghayn (غ) is easier! It sounds like:\n• The French 'r' in 'Paris'\n• Gargling water in your throat\n• The 'ch' in 'Bach' but voiced\n\nGhayn and 'Ayn share the same shape - Ghayn just has a dot above.",
           contentAr:
             "الغين (غ) أسهل! تبدو مثل:\n• الفرنسية 'r' في 'Paris'\n• غرغرة الماء في حلقك\n• 'ch' في 'Bach' لكن بصوت مجهور\n\nالغين والعين تشتركان في نفس الشكل - الغين فقط لديها نقطة فوق.",
+          contentFr:
+            "Ghayn (غ) est plus facile ! Ça sonne comme :\n• Le français 'r' dans 'Paris'\n• Gargariser de l'eau dans votre gorge\n• Le 'ch' dans 'Bach' mais voisé\n\nGhayn et 'Ayn partagent la même forme - Ghayn a juste un point au-dessus.",
         },
         {
           title: "Fā' - A Familiar Friend",
           titleAr: "الفاء - صديق مألوف",
+          titleFr: "Fā' - Un ami familier",
           content:
             "Fā' (ف) is easy - it's just like English 'f'! It has a distinctive loop shape with one dot above.\n\nFun fact: Fā' looks like a lowercase 'q' with a dot - an easy visual reminder!",
           contentAr:
             "الفاء (ف) سهلة - إنها تمامًا مثل الإنجليزية 'f'! لديها شكل حلقة مميز بنقطة فوق.\n\nحقيقة مرحة: الفاء تشبه حرف 'q' صغير بنقطة - تذكير بصري سهل!",
+          contentFr:
+            "Fā' (ف) est facile - c'est exactement comme le 'f' français ! Elle a une forme de boucle distinctive avec un point au-dessus.\n\nFait amusant : Fā' ressemble à un 'q' minuscule avec un point - un rappel visuel facile !",
         },
       ],
       vocabulary: [
@@ -742,26 +769,35 @@ export const PHASE_1_LESSONS: Lesson[] = [
         {
           title: "Qāf vs. Kāf",
           titleAr: "القاف مقابل الكاف",
+          titleFr: "Qāf vs Kāf",
           content:
             "• Qāf (ق) = Deep 'k' from the back of the throat (like saying 'k' while gargling)\n• Kāf (ك) = Regular 'k' like English\n\nQāf is a 'uvular' sound - the sound originates further back than regular 'k'. Many Arabic dialects pronounce Qāf as 'g' or even as a glottal stop!",
           contentAr:
             "• القاف (ق) = 'k' عميق من مؤخرة الحلق (مثل قول 'k' بينما تغرغر)\n• الكاف (ك) = 'k' عادي مثل الإنجليزية\n\nالقاف صوت 'لهوي' - الصوت ينشأ أعمق من 'k' العادي. تنطق العديد من اللهجات العربية القاف كـ 'g' أو حتى كنقرة حنجرية!",
+          contentFr:
+            "• Qāf (ق) = 'k' profond depuis l'arrière de la gorge (comme dire 'k' en gargarisant)\n• Kāf (ك) = 'k' régulier comme en anglais\n\nQāf est un son « uvulaire » - le son provient plus à l'arrière que le 'k' régulier. De nombreux dialectes arabes prononcent Qāf comme 'g' ou même comme un coup de glotte !",
         },
         {
           title: "Lām - The Tall One",
           titleAr: "اللام - الحرف الطويل",
+          titleFr: "Lām - La lettre longue",
           content:
             "Lām (ل) is one of the tallest letters in Arabic. It looks like Alif (ا) but with a small hook at the bottom.\n\nImportant: Lām appears in 'الـ' (al-), the Arabic word for 'the'. You'll see it constantly!",
           contentAr:
             "اللام (ل) هو أحد أطول الحروف في العربية. يبدو مثل الألف (ا) لكن مع خطاف صغير في الأسفل.\n\nمهم: تظهر اللام في 'الـ' (al-)، كلمة العربية ل 'the'. ستراها باستمرار!",
+          contentFr:
+            "Lām (ل) est une lettre longue et droite, comme un trait vertical. Elle se prononce 'l' et se connecte aux lettres avant et après.\n\nAstuce : Lām n'a jamais de point - gardez-le propre et simple !",
         },
         {
           title: "Mīm - Round and Friendly",
           titleAr: "الميم - مستدير وودود",
+          titleFr: "Mīm - Rond et amical",
           content:
             "Mīm (م) is a round letter that looks like a small circle with a tail. It's one of the most common letters in Arabic.\n\nEasy to remember: Mīm looks like a little 'm' or a round marble!",
           contentAr:
             "الميم (م) حرف مستدير يبدو مثل دائرة صغيرة بذيل. إنه أحد أكثر الحروف شيوعًا في العربية.\n\nسهل التذكر: الميم تبدو مثل 'm' صغيرة أو رخام مستدير!",
+          contentFr:
+            "Mīm (م) a une forme ronde ressemblant à une vague ou à un bol. Elle se prononce 'm' et crée un son nasal amical.\n\nÉcriture : Lorsqu'elle se connecte à d'autres lettres, Mīm se referme complètement.",
         },
       ],
       vocabulary: [
@@ -855,34 +891,46 @@ export const PHASE_1_LESSONS: Lesson[] = [
         {
           title: "Nūn - The Dot Bowl",
           titleAr: "النون - وعاء النقطة",
+          titleFr: "Nūn - Le récipient du point",
           content:
             "Nūn (ن) looks like a small bowl with a dot above. It makes the 'n' sound.\n\nNūn is a 'sun letter' (حروف شمسية) - when 'ال' comes before it, the 'l' changes to 'n'. We'll learn more about this later!",
           contentAr:
             "النون (ن) تبدو مثل وعاء صغير بنقطة فوقه. ينتج عنها صوت 'n'.\n\nالنون حرف 'شمسي' (حروف شمسية) - عندما يأتي 'ال' قبله، يتغير 'l' إلى 'n'. سنتعلم المزيد عن هذا لاحقًا!",
+          contentFr:
+            "Nūn (ن) ressemble à Mīm (م) mais avec un seul point. Elle se prononce 'n' et crée un son nasal clair.\n\nAstuce : Si Mīm = récipient vide, alors Nūn = récipient avec UN point !",
         },
         {
           title: "Hā' - The Breathy H",
           titleAr: "الهاء - الـ H المزفزفة",
+          titleFr: "Hā' - Le H aspiré",
           content:
             "Hā' (ه) is different from Ḥā' (ح). It's a light, breathy 'h' - like English 'h' in 'hello'.\n\nHā' has many forms depending on position - in the middle of a word it looks like a small 'o' or '∞' shape!",
           contentAr:
             "الهاء (ه) مختلفة عن الحاء (ح). إنها 'h' خفيفة ومزفزفة - مثل الإنجليزية 'h' في 'hello'.\n\nللهاء أشكال كثيرة تبعًا للموضع - في منتصف الكلمة تبدو مثل 'o' صغيرة أو شكل '∞'!",
+          contentFr:
+            "Hā' (ه) est comme le H anglais avec une légère aspiration. C'est un son respiratoire plutôt qu'une vraie consonne.\n\nAstuce : Hā' n'a qu'une seule forme en position isolée - une boucle simple !",
         },
         {
           title: "The Semi-Vowels: Wāw and Yā'",
           titleAr: "شبه الحروف الصوتية: الواو والياء",
+          titleFr: "Semi-voyelles : Wāw et Yā'",
           content:
             "These two letters are special - they can be consonants OR vowels!\n\n• Wāw (و): As consonant = 'w' (like 'water'). As vowel = long 'ū' (like 'boot')\n• Yā' (ي): As consonant = 'y' (like 'yes'). As vowel = long 'ī' (like 'see')\n\nNon-connecting: Wāw never connects forward (like د ر ز).",
           contentAr:
             "هذان الحرفان خاصان - يمكن أن يكونا حروف ساكنة أو صوتية!\n\n• الواو (و): كحرف ساكن = 'w' (مثل 'water'). كحرف صوتي = 'ū' طويل (مثل 'boot')\n• الياء (ي): كحرف ساكن = 'y' (مثل 'yes'). كحرف صوتي = 'ī' طويل (مثل 'see')\n\nغير متصل: الواو لا تتصل أبدًا للأمام (مثل د ر ز).",
+          contentFr:
+            "Wāw (و) et Yā' (ي) ne sont pas de vraies voyelles, mais pas de vraies consonnes non plus - ce sont des « semi-voyelles ».\n\n• Wāw (و) = 'w' ou 'oo' long (comme dans 'too')\n• Yā' (ي) = 'y' ou 'ee' long (comme dans 'see')\n\nIls sont très flexibles - ils changent selon le contexte !",
         },
         {
           title: "🎉 Congratulations!",
           titleAr: "🎉 مبروك!",
+          titleFr: "🎉 Félicitations !",
           content:
             "You've learned all 28 letters of the Arabic alphabet! This is a HUGE achievement. The alphabet is the foundation of everything - and you've mastered it!",
           contentAr:
             "لقد تعلمت جميع الـ 28 حرفًا من الأبجدية العربية! هذا إنجاز ضخم. الأبجدية هي أساس كل شيء - وقد أتقنتها!",
+          contentFr:
+            "Vous avez maintenant complété les 28 lettres de l'alphabet arabe ! C'est un exploit impressionnant - vous pouvez maintenant lire le texte arabe (bien que certains accents et marquages puissent être nouveaux).\n\nVous êtes prêt pour la Phase 2 : les marques vocales et les compétences de lecture !",
         },
       ],
       vocabulary: [
