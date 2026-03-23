@@ -30,6 +30,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Use possessive pronouns with family words",
       "Introduce your family in Arabic"
     ],
+    objectivesFr: [
+      "Nommer les membres immédiats de la famille en arabe",
+      "Comprendre les formes masculine et féminine",
+      "Utiliser les pronoms possessifs avec les mots de famille",
+      "Présenter votre famille en arabe"
+    ],
     estimatedTime: 50,
     difficulty: "easy",
     xpReward: 55,
@@ -37,29 +43,35 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Arabic Family",
-          content: "Family (عَائِلَة - 'ā'ila) is central to Arabic culture. Arabic has specific terms for every family relationship - sometimes more specific than English!\n\nKey terms:\nأَب (ab) = father\nأُمّ (umm) = mother\nاِبْن (ibn) = son\nبِنْت (bint) = daughter"
+          titleFr: "La famille arabe",
+          content: "Family (عَائِلَة - 'ā'ila) is central to Arabic culture. Arabic has specific terms for every family relationship - sometimes more specific than English!\n\nKey terms:\nأَب (ab) = father\nأُمّ (umm) = mother\nاِبْن (ibn) = son\nبِنْت (bint) = daughter",
+          contentFr: "La famille (عَائِلَة - 'ā'ila) est au centre de la culture arabe. L'arabe a des termes spécifiques pour chaque relation familiale - parfois plus spécifiques qu'en anglais !\n\nTermes clés :\nأَب (ab) = père\nأُمّ (umm) = mère\nاِبْن (ibn) = fils\nبِنْت (bint) = fille"
         },
         {
           title: "Extended Family",
-          content: "جَدّ (jadd) = grandfather\nجَدَّة (jadda) = grandmother\nعَمّ ('amm) = paternal uncle\nخَال (khāl) = maternal uncle\nعَمَّة ('amma) = paternal aunt\nخَالَة (khāla) = maternal aunt\n\nNote: Arabic distinguishes between father's and mother's sides!"
+          titleFr: "La famille étendue",
+          content: "جَدّ (jadd) = grandfather\nجَدَّة (jadda) = grandmother\nعَمّ ('amm) = paternal uncle\nخَال (khāl) = maternal uncle\nعَمَّة ('amma) = paternal aunt\nخَالَة (khāla) = maternal aunt\n\nNote: Arabic distinguishes between father's and mother's sides!",
+          contentFr: "جَدّ (jadd) = grand-père\nجَدَّة (jadda) = grand-mère\nعَمّ ('amm) = oncle paternel\nخَال (khāl) = oncle maternel\nعَمَّة ('amma) = tante paternelle\nخَالَة (khāla) = tante maternelle\n\nRemarque : L'arabe distingue les côtés paternel et maternel !"
         },
         {
           title: "Siblings",
-          content: "أَخ (akh) = brother\nأُخْت (ukht) = sister\nإِخْوَة (ikhwa) = brothers/siblings\nأَخَوَات (akhawāt) = sisters\n\nIn Arabic, إِخْوَة can mean 'brothers' or 'siblings' (brothers and sisters together)."
+          titleFr: "Les frères et sœurs",
+          content: "أَخ (akh) = brother\nأُخْت (ukht) = sister\nإِخْوَة (ikhwa) = brothers/siblings\nأَخَوَات (akhawāt) = sisters\n\nIn Arabic, إِخْوَة can mean 'brothers' or 'siblings' (brothers and sisters together).",
+          contentFr: "أَخ (akh) = frère\nأُخْت (ukht) = sœur\nإِخْوَة (ikhwa) = frères/frères et sœurs\nأَخَوَات (akhawāt) = sœurs\n\nEn arabe, إِخْوَة peut signifier 'frères' ou 'frères et sœurs' (ensemble)."
         }
       ],
       vocabulary: [
-        { arabic: "عَائِلَة", transliteration: "'ā'ila", meaning: "family" },
-        { arabic: "أَب", transliteration: "ab", meaning: "father" },
-        { arabic: "أُمّ", transliteration: "umm", meaning: "mother" },
-        { arabic: "اِبْن", transliteration: "ibn", meaning: "son" },
-        { arabic: "بِنْت", transliteration: "bint", meaning: "daughter" },
-        { arabic: "أَخ", transliteration: "akh", meaning: "brother" },
-        { arabic: "أُخْت", transliteration: "ukht", meaning: "sister" },
-        { arabic: "جَدّ", transliteration: "jadd", meaning: "grandfather" },
-        { arabic: "جَدَّة", transliteration: "jadda", meaning: "grandmother" },
-        { arabic: "زَوْج", transliteration: "zawj", meaning: "husband" },
-        { arabic: "زَوْجَة", transliteration: "zawja", meaning: "wife" }
+        { arabic: "عَائِلَة", transliteration: "'ā'ila", meaning: "family", meaningFr: "famille" },
+        { arabic: "أَب", transliteration: "ab", meaning: "father", meaningFr: "père" },
+        { arabic: "أُمّ", transliteration: "umm", meaning: "mother", meaningFr: "mère" },
+        { arabic: "اِبْن", transliteration: "ibn", meaning: "son", meaningFr: "fils" },
+        { arabic: "بِنْت", transliteration: "bint", meaning: "daughter", meaningFr: "fille" },
+        { arabic: "أَخ", transliteration: "akh", meaning: "brother", meaningFr: "frère" },
+        { arabic: "أُخْت", transliteration: "ukht", meaning: "sister", meaningFr: "sœur" },
+        { arabic: "جَدّ", transliteration: "jadd", meaning: "grandfather", meaningFr: "grand-père" },
+        { arabic: "جَدَّة", transliteration: "jadda", meaning: "grandmother", meaningFr: "grand-mère" },
+        { arabic: "زَوْج", transliteration: "zawj", meaning: "husband", meaningFr: "mari" },
+        { arabic: "زَوْجَة", transliteration: "zawja", meaning: "wife", meaningFr: "épouse" }
       ]
     },
     exerciseCount: 16,
@@ -80,6 +92,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Use definite articles with body parts",
       "Describe physical appearance basics"
     ],
+    objectivesFr: [
+      "Nommer les principales parties du corps en arabe",
+      "Comprendre la forme duelle pour les parties du corps appariées",
+      "Utiliser les articles définis avec les parties du corps",
+      "Décrire l'apparence physique de base"
+    ],
     estimatedTime: 50,
     difficulty: "easy",
     xpReward: 55,
@@ -87,27 +105,33 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Head and Face",
-          content: "رَأْس (ra's) = head\nوَجْه (wajh) = face\nعَيْن ('ayn) = eye (also the letter!)\nأَنْف (anf) = nose\nفَم (fam) = mouth\nأُذُن (udhun) = ear\nشَعْر (sha'r) = hair"
+          titleFr: "La tête et le visage",
+          content: "رَأْس (ra's) = head\nوَجْه (wajh) = face\nعَيْن ('ayn) = eye (also the letter!)\nأَنْف (anf) = nose\nفَم (fam) = mouth\nأُذُن (udhun) = ear\nشَعْر (sha'r) = hair",
+          contentFr: "رَأْس (ra's) = tête\nوَجْه (wajh) = visage\nعَيْن ('ayn) = œil (aussi la lettre !)\nأَنْف (anf) = nez\nفَم (fam) = bouche\nأُذُن (udhun) = oreille\nشَعْر (sha'r) = cheveux"
         },
         {
           title: "The Dual Form",
-          content: "Arabic has a special form for TWO of something!\n\nعَيْن ('ayn) = one eye\nعَيْنَان ('aynān) = two eyes\nأُذُن (udhun) = one ear\nأُذُنَان (udhunān) = two ears\n\nFor body parts that come in pairs, the dual is common!"
+          titleFr: "La forme duelle",
+          content: "Arabic has a special form for TWO of something!\n\nعَيْن ('ayn) = one eye\nعَيْنَان ('aynān) = two eyes\nأُذُن (udhun) = one ear\nأُذُنَان (udhunān) = two ears\n\nFor body parts that come in pairs, the dual is common!",
+          contentFr: "L'arabe a une forme spéciale pour DEUX choses !\n\nعَيْن ('ayn) = un œil\nعَيْنَان ('aynān) = deux yeux\nأُذُن (udhun) = une oreille\nأُذُنَان (udhunān) = deux oreilles\n\nPour les parties du corps qui viennent par paires, la forme duelle est courante !"
         },
         {
           title: "The Body",
-          content: "جِسْم (jism) = body\nيَد (yad) = hand\nرِجْل (rijl) = leg/foot\nقَلْب (qalb) = heart\nبَطْن (baṭn) = stomach\nظَهْر (ẓahr) = back"
+          titleFr: "Le corps",
+          content: "جِسْم (jism) = body\nيَد (yad) = hand\nرِجْل (rijl) = leg/foot\nقَلْب (qalb) = heart\nبَطْن (baṭn) = stomach\nظَهْر (ẓahr) = back",
+          contentFr: "جِسْم (jism) = corps\nيَد (yad) = main\nرِجْل (rijl) = jambe/pied\nقَلْب (qalb) = cœur\nبَطْن (baṭn) = estomac\nظَهْر (ẓahr) = dos"
         }
       ],
       vocabulary: [
-        { arabic: "رَأْس", transliteration: "ra's", meaning: "head" },
-        { arabic: "وَجْه", transliteration: "wajh", meaning: "face" },
-        { arabic: "عَيْن", transliteration: "'ayn", meaning: "eye" },
-        { arabic: "أُذُن", transliteration: "udhun", meaning: "ear" },
-        { arabic: "فَم", transliteration: "fam", meaning: "mouth" },
-        { arabic: "يَد", transliteration: "yad", meaning: "hand" },
-        { arabic: "رِجْل", transliteration: "rijl", meaning: "leg/foot" },
-        { arabic: "قَلْب", transliteration: "qalb", meaning: "heart" },
-        { arabic: "جِسْم", transliteration: "jism", meaning: "body" }
+        { arabic: "رَأْس", transliteration: "ra's", meaning: "head", meaningFr: "tête" },
+        { arabic: "وَجْه", transliteration: "wajh", meaning: "face", meaningFr: "visage" },
+        { arabic: "عَيْن", transliteration: "'ayn", meaning: "eye", meaningFr: "œil" },
+        { arabic: "أُذُن", transliteration: "udhun", meaning: "ear", meaningFr: "oreille" },
+        { arabic: "فَم", transliteration: "fam", meaning: "mouth", meaningFr: "bouche" },
+        { arabic: "يَد", transliteration: "yad", meaning: "hand", meaningFr: "main" },
+        { arabic: "رِجْل", transliteration: "rijl", meaning: "leg/foot", meaningFr: "jambe/pied" },
+        { arabic: "قَلْب", transliteration: "qalb", meaning: "heart", meaningFr: "cœur" },
+        { arabic: "جِسْم", transliteration: "jism", meaning: "body", meaningFr: "corps" }
       ]
     },
     exerciseCount: 15,
@@ -128,6 +152,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Describe objects using colors",
       "Use colors in simple sentences"
     ],
+    objectivesFr: [
+      "Nommer les couleurs de base en arabe",
+      "Comprendre les formes masculine et féminine des couleurs",
+      "Décrire les objets à l'aide des couleurs",
+      "Utiliser les couleurs dans des phrases simples"
+    ],
     estimatedTime: 45,
     difficulty: "easy",
     xpReward: 50,
@@ -135,22 +165,26 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Basic Colors",
-          content: "Colors in Arabic change based on the noun's gender!\n\nMasculine → Feminine:\nأَحْمَر (aḥmar) → حَمْرَاء (ḥamrā') = red\nأَزْرَق (azraq) → زَرْقَاء (zarqā') = blue\nأَخْضَر (akhḍar) → خَضْرَاء (khaḍrā') = green\nأَصْفَر (aṣfar) → صَفْرَاء (ṣafrā') = yellow\nأَبْيَض (abyaḍ) → بَيْضَاء (bayḍā') = white\nأَسْوَد (aswad) → سَوْدَاء (sawdā') = black"
+          titleFr: "Les couleurs de base",
+          content: "Colors in Arabic change based on the noun's gender!\n\nMasculine → Feminine:\nأَحْمَر (aḥmar) → حَمْرَاء (ḥamrā') = red\nأَزْرَق (azraq) → زَرْقَاء (zarqā') = blue\nأَخْضَر (akhḍar) → خَضْرَاء (khaḍrā') = green\nأَصْفَر (aṣfar) → صَفْرَاء (ṣafrā') = yellow\nأَبْيَض (abyaḍ) → بَيْضَاء (bayḍā') = white\nأَسْوَد (aswad) → سَوْدَاء (sawdā') = black",
+          contentFr: "Les couleurs en arabe changent selon le genre du nom !\n\nMasculin → Féminin :\nأَحْمَر (aḥmar) → حَمْرَاء (ḥamrā') = rouge\nأَزْرَق (azraq) → زَرْقَاء (zarqā') = bleu\nأَخْضَر (akhḍar) → خَضْرَاء (khaḍrā') = vert\nأَصْفَر (aṣfar) → صَفْرَاء (ṣafrā') = jaune\nأَبْيَض (abyaḍ) → بَيْضَاء (bayḍā') = blanc\nأَسْوَد (aswad) → سَوْدَاء (sawdā') = noir"
         },
         {
           title: "Color Patterns",
-          content: "Most colors follow the pattern أَفْعَل (af'al) for masculine and فَعْلَاء (fa'lā') for feminine. This is a special adjective pattern!\n\nSome colors don't change:\nبُنِّي (bunnī) = brown\nبُرْتُقَالِي (burtuqālī) = orange\nوَرْدِي (wardī) = pink\nبَنَفْسَجِي (banafsajī) = purple"
+          titleFr: "Les motifs de couleurs",
+          content: "Most colors follow the pattern أَفْعَل (af'al) for masculine and فَعْلَاء (fa'lā') for feminine. This is a special adjective pattern!\n\nSome colors don't change:\nبُنِّي (bunnī) = brown\nبُرْتُقَالِي (burtuqālī) = orange\nوَرْدِي (wardī) = pink\nبَنَفْسَجِي (banafsajī) = purple",
+          contentFr: "La plupart des couleurs suivent le modèle أَفْعَل (af'al) pour le masculin et فَعْلَاء (fa'lā') pour le féminin. C'est un modèle d'adjectif spécial !\n\nCertaines couleurs ne changent pas :\nبُنِّي (bunnī) = marron\nبُرْتُقَالِي (burtuqālī) = orange\nوَرْدِي (wardī) = rose\nبَنَفْسَجِي (banafsajī) = violet"
         }
       ],
       vocabulary: [
-        { arabic: "أَحْمَر / حَمْرَاء", transliteration: "aḥmar / ḥamrā'", meaning: "red" },
-        { arabic: "أَزْرَق / زَرْقَاء", transliteration: "azraq / zarqā'", meaning: "blue" },
-        { arabic: "أَخْضَر / خَضْرَاء", transliteration: "akhḍar / khaḍrā'", meaning: "green" },
-        { arabic: "أَصْفَر / صَفْرَاء", transliteration: "aṣfar / ṣafrā'", meaning: "yellow" },
-        { arabic: "أَبْيَض / بَيْضَاء", transliteration: "abyaḍ / bayḍā'", meaning: "white" },
-        { arabic: "أَسْوَد / سَوْدَاء", transliteration: "aswad / sawdā'", meaning: "black" },
-        { arabic: "بُنِّي", transliteration: "bunnī", meaning: "brown" },
-        { arabic: "وَرْدِي", transliteration: "wardī", meaning: "pink" }
+        { arabic: "أَحْمَر / حَمْرَاء", transliteration: "aḥmar / ḥamrā'", meaning: "red", meaningFr: "rouge" },
+        { arabic: "أَزْرَق / زَرْقَاء", transliteration: "azraq / zarqā'", meaning: "blue", meaningFr: "bleu" },
+        { arabic: "أَخْضَر / خَضْرَاء", transliteration: "akhḍar / khaḍrā'", meaning: "green", meaningFr: "vert" },
+        { arabic: "أَصْفَر / صَفْرَاء", transliteration: "aṣfar / ṣafrā'", meaning: "yellow", meaningFr: "jaune" },
+        { arabic: "أَبْيَض / بَيْضَاء", transliteration: "abyaḍ / bayḍā'", meaning: "white", meaningFr: "blanc" },
+        { arabic: "أَسْوَد / سَوْدَاء", transliteration: "aswad / sawdā'", meaning: "black", meaningFr: "noir" },
+        { arabic: "بُنِّي", transliteration: "bunnī", meaning: "brown", meaningFr: "marron" },
+        { arabic: "وَرْدِي", transliteration: "wardī", meaning: "pink", meaningFr: "rose" }
       ]
     },
     exerciseCount: 14,
@@ -171,6 +205,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Express likes and dislikes for food",
       "Understand food-related verbs"
     ],
+    objectivesFr: [
+      "Nommer les aliments courants en arabe",
+      "Commander de la nourriture dans un restaurant",
+      "Exprimer vos préférences et dégoûts pour la nourriture",
+      "Comprendre les verbes liés à la nourriture"
+    ],
     estimatedTime: 55,
     difficulty: "easy",
     xpReward: 60,
@@ -178,27 +218,33 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Basic Food Words",
-          content: "طَعَام (ṭa'ām) = food\nخُبْز (khubz) = bread\nمَاء (mā') = water\nأَرُزّ (aruzz) = rice\nلَحْم (laḥm) = meat\nدَجَاج (dajāj) = chicken\nسَمَك (samak) = fish\nخُضَار (khuḍār) = vegetables\nفَاكِهَة (fākiha) = fruit"
+          titleFr: "Les mots alimentaires de base",
+          content: "طَعَام (ṭa'ām) = food\nخُبْز (khubz) = bread\nمَاء (mā') = water\nأَرُزّ (aruzz) = rice\nلَحْم (laḥm) = meat\nدَجَاج (dajāj) = chicken\nسَمَك (samak) = fish\nخُضَار (khuḍār) = vegetables\nفَاكِهَة (fākiha) = fruit",
+          contentFr: "طَعَام (ṭa'ām) = nourriture\nخُبْز (khubz) = pain\nمَاء (mā') = eau\nأَرُزّ (aruzz) = riz\nلَحْم (laḥm) = viande\nدَجَاج (dajāj) = poulet\nسَمَك (samak) = poisson\nخُضَار (khuḍār) = légumes\nفَاكِهَة (fākiha) = fruit"
         },
         {
           title: "Drinks",
-          content: "شَرَاب (sharāb) = drink/beverage\nقَهْوَة (qahwa) = coffee\nشَاي (shāy) = tea\nحَلِيب (ḥalīb) = milk\nعَصِير ('aṣīr) = juice\n\nNote: قَهْوَة (qahwa) is the origin of 'coffee' in many languages!"
+          titleFr: "Les boissons",
+          content: "شَرَاب (sharāb) = drink/beverage\nقَهْوَة (qahwa) = coffee\nشَاي (shāy) = tea\nحَلِيب (ḥalīb) = milk\nعَصِير ('aṣīr) = juice\n\nNote: قَهْوَة (qahwa) is the origin of 'coffee' in many languages!",
+          contentFr: "شَرَاب (sharāb) = boisson\nقَهْوَة (qahwa) = café\nشَاي (shāy) = thé\nحَلِيب (ḥalīb) = lait\nعَصِير ('aṣīr) = jus\n\nRemarque : قَهْوَة (qahwa) est l'origine du mot « café » dans de nombreuses langues !"
         },
         {
           title: "At the Restaurant",
-          content: "أُرِيدُ (urīdu) = I want\nمِنْ فَضْلِكَ (min faḍlika) = please (m)\nالحِسَاب (al-ḥisāb) = the bill\nلَذِيذ (ladhīdh) = delicious"
+          titleFr: "Au restaurant",
+          content: "أُرِيدُ (urīdu) = I want\nمِنْ فَضْلِكَ (min faḍlika) = please (m)\nالحِسَاب (al-ḥisāb) = the bill\nلَذِيذ (ladhīdh) = delicious",
+          contentFr: "أُرِيدُ (urīdu) = Je veux\nمِنْ فَضْلِكَ (min faḍlika) = s'il vous plaît (m)\nالحِسَاب (al-ḥisāb) = l'addition\nلَذِيذ (ladhīdh) = délicieux"
         }
       ],
       vocabulary: [
-        { arabic: "طَعَام", transliteration: "ṭa'ām", meaning: "food" },
-        { arabic: "خُبْز", transliteration: "khubz", meaning: "bread" },
-        { arabic: "مَاء", transliteration: "mā'", meaning: "water" },
-        { arabic: "قَهْوَة", transliteration: "qahwa", meaning: "coffee" },
-        { arabic: "شَاي", transliteration: "shāy", meaning: "tea" },
-        { arabic: "لَحْم", transliteration: "laḥm", meaning: "meat" },
-        { arabic: "خُضَار", transliteration: "khuḍār", meaning: "vegetables" },
-        { arabic: "فَاكِهَة", transliteration: "fākiha", meaning: "fruit" },
-        { arabic: "لَذِيذ", transliteration: "ladhīdh", meaning: "delicious" }
+        { arabic: "طَعَام", transliteration: "ṭa'ām", meaning: "food", meaningFr: "nourriture" },
+        { arabic: "خُبْز", transliteration: "khubz", meaning: "bread", meaningFr: "pain" },
+        { arabic: "مَاء", transliteration: "mā'", meaning: "water", meaningFr: "eau" },
+        { arabic: "قَهْوَة", transliteration: "qahwa", meaning: "coffee", meaningFr: "café" },
+        { arabic: "شَاي", transliteration: "shāy", meaning: "tea", meaningFr: "thé" },
+        { arabic: "لَحْم", transliteration: "laḥm", meaning: "meat", meaningFr: "viande" },
+        { arabic: "خُضَار", transliteration: "khuḍār", meaning: "vegetables", meaningFr: "légumes" },
+        { arabic: "فَاكِهَة", transliteration: "fākiha", meaning: "fruit", meaningFr: "fruit" },
+        { arabic: "لَذِيذ", transliteration: "ladhīdh", meaning: "delicious", meaningFr: "délicieux" }
       ]
     },
     exerciseCount: 18,
@@ -219,6 +265,12 @@ export const PHASE_2_LESSONS: Lesson[] = [
       "Understand collective nouns",
       "Practice pronunciation of animal names"
     ],
+    objectivesFr: [
+      "Nommer les animaux domestiques et sauvages",
+      "Utiliser le vocabulaire des animaux dans des phrases",
+      "Comprendre les noms collectifs",
+      "Pratiquer la prononciation des noms d'animaux"
+    ],
     estimatedTime: 45,
     difficulty: "easy",
     xpReward: 50,
@@ -226,26 +278,32 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Domestic Animals",
-          content: "قِطّ (qiṭṭ) = cat\nكَلْب (kalb) = dog\nحِصَان (ḥiṣān) = horse\nبَقَرَة (baqara) = cow\nخَرُوف (kharūf) = sheep\nدَجَاجَة (dajāja) = chicken\nعَنْزَة ('anza) = goat"
+          titleFr: "Les animaux domestiques",
+          content: "قِطّ (qiṭṭ) = cat\nكَلْب (kalb) = dog\nحِصَان (ḥiṣān) = horse\nبَقَرَة (baqara) = cow\nخَرُوف (kharūf) = sheep\nدَجَاجَة (dajāja) = chicken\nعَنْزَة ('anza) = goat",
+          contentFr: "قِطّ (qiṭṭ) = chat\nكَلْب (kalb) = chien\nحِصَان (ḥiṣān) = cheval\nبَقَرَة (baqara) = vache\nخَرُوف (kharūf) = mouton\nدَجَاجَة (dajāja) = poule\nعَنْزَة ('anza) = chèvre"
         },
         {
           title: "Wild Animals",
-          content: "أَسَد (asad) = lion\nفِيل (fīl) = elephant\nقِرْد (qird) = monkey\nدُبّ (dubb) = bear\nثَعْلَب (tha'lab) = fox\nذِئْب (dhi'b) = wolf\nنَمِر (namir) = tiger"
+          titleFr: "Les animaux sauvages",
+          content: "أَسَد (asad) = lion\nفِيل (fīl) = elephant\nقِرْد (qird) = monkey\nدُبّ (dubb) = bear\nثَعْلَب (tha'lab) = fox\nذِئْب (dhi'b) = wolf\nنَمِر (namir) = tiger",
+          contentFr: "أَسَد (asad) = lion\nفِيل (fīl) = éléphant\nقِرْد (qird) = singe\nدُبّ (dubb) = ours\nثَعْلَب (tha'lab) = renard\nذِئْب (dhi'b) = loup\nنَمِر (namir) = tigre"
         },
         {
           title: "The Camel 🐪",
-          content: "The camel (جَمَل - jamal) is the symbol of Arabia! Arabic has dozens of words for different types of camels. The basic word جَمَل refers to a male camel, while نَاقَة (nāqa) is a female camel."
+          titleFr: "Le chameau 🐪",
+          content: "The camel (جَمَل - jamal) is the symbol of Arabia! Arabic has dozens of words for different types of camels. The basic word جَمَل refers to a male camel, while نَاقَة (nāqa) is a female camel.",
+          contentFr: "Le chameau (جَمَل - jamal) est le symbole de l'Arabie ! L'arabe a des dizaines de mots pour différents types de chameaux. Le mot جَمَل fait référence à un chameau mâle, tandis que نَاقَة (nāqa) est un chameau femelle."
         }
       ],
       vocabulary: [
-        { arabic: "حَيَوَان", transliteration: "ḥayawān", meaning: "animal" },
-        { arabic: "قِطّ", transliteration: "qiṭṭ", meaning: "cat" },
-        { arabic: "كَلْب", transliteration: "kalb", meaning: "dog" },
-        { arabic: "أَسَد", transliteration: "asad", meaning: "lion" },
-        { arabic: "جَمَل", transliteration: "jamal", meaning: "camel" },
-        { arabic: "طَائِر", transliteration: "ṭā'ir", meaning: "bird" },
-        { arabic: "سَمَكَة", transliteration: "samaka", meaning: "fish" },
-        { arabic: "حِصَان", transliteration: "ḥiṣān", meaning: "horse" }
+        { arabic: "حَيَوَان", transliteration: "ḥayawān", meaning: "animal", meaningFr: "animal" },
+        { arabic: "قِطّ", transliteration: "qiṭṭ", meaning: "cat", meaningFr: "chat" },
+        { arabic: "كَلْب", transliteration: "kalb", meaning: "dog", meaningFr: "chien" },
+        { arabic: "أَسَد", transliteration: "asad", meaning: "lion", meaningFr: "lion" },
+        { arabic: "جَمَل", transliteration: "jamal", meaning: "camel", meaningFr: "chameau" },
+        { arabic: "طَائِر", transliteration: "ṭā'ir", meaning: "bird", meaningFr: "oiseau" },
+        { arabic: "سَمَكَة", transliteration: "samaka", meaning: "fish", meaningFr: "poisson" },
+        { arabic: "حِصَان", transliteration: "ḥiṣān", meaning: "horse", meaningFr: "cheval" }
       ]
     },
     exerciseCount: 15,

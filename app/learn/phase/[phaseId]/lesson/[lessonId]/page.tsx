@@ -32,7 +32,7 @@ import { useGamificationStore } from "@/stores/useGamificationStore";
 import { useAudioStore } from "@/stores/useAudioStore";
 import { useUserStore } from "@/stores/useUserStore";
 import { CURRICULUM, getPhase, getLesson, ARABIC_ALPHABET, ARABIC_HARAKAT, ARABIC_NUMBERS } from "@/data/curriculum";
-import type { Exercise, ExerciseType, ExerciseResult, Locale } from "@/types";
+import type { Exercise, ExerciseType, ExerciseResult, Locale, VocabularyItem, TheoryItem } from "@/types";
 
 /**
  * Localized strings for the lesson page UI
@@ -167,6 +167,38 @@ export default function LessonPage({ params }: LessonPageProps) {
     if (locale === "fr") return phase.titleFr || phase.title;
     return phase.title;
   }, [locale, phase]);
+
+  // Helper function to get localized objective
+  const getLocalizedObjective = (enObjective: string, index: number): string => {
+    if (locale === "ar" && lesson.objectivesAr && lesson.objectivesAr[index]) {
+      return lesson.objectivesAr[index];
+    }
+    if (locale === "fr" && lesson.objectivesFr && lesson.objectivesFr[index]) {
+      return lesson.objectivesFr[index];
+    }
+    return enObjective;
+  };
+
+  // Helper function to get localized theory item
+  const getLocalizedTheoryItem = (theoryItem: TheoryItem) => {
+    const title = locale === "ar" ? (theoryItem.titleAr || theoryItem.title) 
+                : locale === "fr" ? (theoryItem.titleFr || theoryItem.title)
+                : theoryItem.title;
+    
+    const content = locale === "ar" ? (theoryItem.contentAr || theoryItem.content)
+                  : locale === "fr" ? (theoryItem.contentFr || theoryItem.content)
+                  : theoryItem.content;
+    
+    return { title, content };
+  };
+
+  // Helper function to get localized vocabulary meaning
+  const getLocalizedVocabMeaning = (vocabItem: VocabularyItem | undefined): string => {
+    if (!vocabItem) return "";
+    if (locale === "ar") return vocabItem.meaningAr || vocabItem.meaning;
+    if (locale === "fr") return vocabItem.meaningFr || vocabItem.meaning;
+    return vocabItem.meaning;
+  };
 
   // Find prev/next lessons
   const lessonIndex = phase.lessons.findIndex((l) => l.id === lessonIdFull);
@@ -442,11 +474,11 @@ export default function LessonPage({ params }: LessonPageProps) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-gold" />
-            {lesson.title}
+            {localizedTitle}
           </CardTitle>
         </CardHeader>
         <CardContent className="prose prose-neutral dark:prose-invert max-w-none">
-          <p className="text-lg">{lesson.description}</p>
+          <p className="text-lg">{localizedDescription}</p>
           {lesson.content && (
             <div
               dangerouslySetInnerHTML={{ __html: lesson.content }}
@@ -456,13 +488,13 @@ export default function LessonPage({ params }: LessonPageProps) {
             <div className="my-6">
               <h3 className="flex items-center gap-2 text-lg font-semibold">
                 <Target className="h-5 w-5 text-gold" />
-                Learning Objectives
+                {t.objectives}
               </h3>
               <ul className="mt-2">
                 {lesson.objectives.map((obj, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-green-500" />
-                    {obj}
+                    {getLocalizedObjective(obj, i)}
                   </li>
                 ))}
               </ul>
@@ -789,9 +821,12 @@ export default function LessonPage({ params }: LessonPageProps) {
       {/* AI Learning Assistant - Floating helper */}
       <AILearningAssistant
         lessonId={lessonIdFull}
-        lessonTitle={lesson.title}
+        lessonTitle={localizedTitle}
         lessonTitleAr={lesson.titleAr}
-        lessonContent={lesson.content.theory.map(t => `${t.title}: ${t.content}`).join('\n')}
+        lessonContent={lesson.content.theory.map(t => {
+          const localized = getLocalizedTheoryItem(t);
+          return `${localized.title}: ${localized.content}`;
+        }).join('\n')}
         phaseLevel={phaseIdNum}
       />
 

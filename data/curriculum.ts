@@ -9,7 +9,11 @@ import { PHASE_2_LESSONS } from "./phases/phase2";
 import { PHASE_3_LESSONS } from "./phases/phase3";
 import { PHASE_4_LESSONS } from "./phases/phase4";
 import { PHASE_5_LESSONS } from "./phases/phase5";
-import { ARABIC_ALPHABET, ARABIC_HARAKAT, ARABIC_NUMBERS } from "./phases/constants";
+import {
+  ARABIC_ALPHABET,
+  ARABIC_HARAKAT,
+  ARABIC_NUMBERS,
+} from "./phases/constants";
 
 // Re-export constants for backwards compatibility
 export { ARABIC_ALPHABET, ARABIC_HARAKAT, ARABIC_NUMBERS };
@@ -23,14 +27,17 @@ const PHASE_DEFINITIONS: Omit<Phase, "lessons">[] = [
     title: "Foundations",
     titleAr: "الأساسيات",
     titleFr: "Les Fondements",
-    description: "Master the Arabic alphabet, vowel marks, and basic reading skills",
-    descriptionAr: "إتقان الحروف العربية وعلامات التشكيل ومهارات القراءة الأساسية",
-    descriptionFr: "Maîtrisez l'alphabet arabe, les signes vocaliques et les compétences de lecture de base",
+    description:
+      "Master the Arabic alphabet, vowel marks, and basic reading skills",
+    descriptionAr:
+      "إتقان الحروف العربية وعلامات التشكيل ومهارات القراءة الأساسية",
+    descriptionFr:
+      "Maîtrisez l'alphabet arabe, les signes vocaliques et les compétences de lecture de base",
     duration: "25 hours",
     durationFr: "25 heures",
     durationAr: "٢٥ ساعة",
-    color: "emerald",
-    icon: "book",
+    color: "#c9a85c",
+    icon: "✨",
     totalLessons: 30,
   },
   {
@@ -38,14 +45,16 @@ const PHASE_DEFINITIONS: Omit<Phase, "lessons">[] = [
     title: "Building Blocks",
     titleAr: "اللبنات الأساسية",
     titleFr: "Les Bases Essentielles",
-    description: "Build vocabulary, learn basic grammar, and form simple sentences",
+    description:
+      "Build vocabulary, learn basic grammar, and form simple sentences",
     descriptionAr: "بناء المفردات وتعلم القواعد الأساسية وتكوين جمل بسيطة",
-    descriptionFr: "Développez votre vocabulaire, apprenez la grammaire de base et formez des phrases simples",
+    descriptionFr:
+      "Développez votre vocabulaire, apprenez la grammaire de base et formez des phrases simples",
     duration: "35 hours",
     durationFr: "35 heures",
     durationAr: "٣٥ ساعة",
-    color: "blue",
-    icon: "layers",
+    color: "#4a6741",
+    icon: "🌱",
     totalLessons: 30,
   },
   {
@@ -53,14 +62,16 @@ const PHASE_DEFINITIONS: Omit<Phase, "lessons">[] = [
     title: "Expansion",
     titleAr: "التوسع",
     titleFr: "L'Expansion",
-    description: "Expand your knowledge with complex grammar and extended vocabulary",
+    description:
+      "Expand your knowledge with complex grammar and extended vocabulary",
     descriptionAr: "توسيع معرفتك بالقواعد المعقدة والمفردات الموسعة",
-    descriptionFr: "Élargissez vos connaissances avec une grammaire complexe et un vocabulaire étendu",
+    descriptionFr:
+      "Élargissez vos connaissances avec une grammaire complexe et un vocabulaire étendu",
     duration: "45 hours",
     durationFr: "45 heures",
     durationAr: "٤٥ ساعة",
-    color: "purple",
-    icon: "trending-up",
+    color: "#2c6e6a",
+    icon: "📚",
     totalLessons: 30,
   },
   {
@@ -68,14 +79,16 @@ const PHASE_DEFINITIONS: Omit<Phase, "lessons">[] = [
     title: "Fluency",
     titleAr: "الطلاقة",
     titleFr: "La Fluidité",
-    description: "Achieve reading fluency with advanced texts and cultural understanding",
+    description:
+      "Achieve reading fluency with advanced texts and cultural understanding",
     descriptionAr: "تحقيق الطلاقة في القراءة مع نصوص متقدمة وفهم ثقافي",
-    descriptionFr: "Atteignez la fluidité en lecture avec des textes avancés et une compréhension culturelle",
+    descriptionFr:
+      "Atteignez la fluidité en lecture avec des textes avancés et une compréhension culturelle",
     duration: "50 hours",
     durationFr: "50 heures",
     durationAr: "٥٠ ساعة",
-    color: "orange",
-    icon: "zap",
+    color: "#8b6914",
+    icon: "🎯",
     totalLessons: 30,
   },
   {
@@ -83,14 +96,16 @@ const PHASE_DEFINITIONS: Omit<Phase, "lessons">[] = [
     title: "Mastery",
     titleAr: "الإتقان",
     titleFr: "La Maîtrise",
-    description: "Master Arabic with classical texts, poetry, and native-like fluency",
+    description:
+      "Master Arabic with classical texts, poetry, and native-like fluency",
     descriptionAr: "إتقان اللغة العربية مع النصوص الكلاسيكية والشعر والطلاقة",
-    descriptionFr: "Maîtrisez l'arabe avec des textes classiques, la poésie et une aisance quasi native",
+    descriptionFr:
+      "Maîtrisez l'arabe avec des textes classiques, la poésie et une aisance quasi native",
     duration: "60 hours",
     durationFr: "60 heures",
     durationAr: "٦٠ ساعة",
-    color: "gold",
-    icon: "crown",
+    color: "#8b3a2a",
+    icon: "👑",
     totalLessons: 30,
   },
 ];
@@ -146,17 +161,17 @@ export function getNextLesson(currentLessonId: string): Lesson | undefined {
   const [phaseId, lessonNum] = currentLessonId.split("-").map(Number);
   const phaseLessons = PHASE_LESSONS[phaseId] || [];
   const currentIndex = phaseLessons.findIndex((l) => l.id === currentLessonId);
-  
+
   if (currentIndex < phaseLessons.length - 1) {
     return phaseLessons[currentIndex + 1];
   }
-  
+
   // Check next phase
   const nextPhaseLessons = PHASE_LESSONS[phaseId + 1];
   if (nextPhaseLessons && nextPhaseLessons.length > 0) {
     return nextPhaseLessons[0];
   }
-  
+
   return undefined;
 }
 
@@ -167,17 +182,17 @@ export function getPrevLesson(currentLessonId: string): Lesson | undefined {
   const [phaseId, lessonNum] = currentLessonId.split("-").map(Number);
   const phaseLessons = PHASE_LESSONS[phaseId] || [];
   const currentIndex = phaseLessons.findIndex((l) => l.id === currentLessonId);
-  
+
   if (currentIndex > 0) {
     return phaseLessons[currentIndex - 1];
   }
-  
+
   // Check previous phase
   const prevPhaseLessons = PHASE_LESSONS[phaseId - 1];
   if (prevPhaseLessons && prevPhaseLessons.length > 0) {
     return prevPhaseLessons[prevPhaseLessons.length - 1];
   }
-  
+
   return undefined;
 }
 
@@ -186,11 +201,11 @@ export function getPrevLesson(currentLessonId: string): Lesson | undefined {
  */
 export function getCurriculumStats() {
   let totalLessons = 0;
-  
+
   for (const phase of CURRICULUM) {
     totalLessons += phase.lessons.length;
   }
-  
+
   return {
     totalPhases: CURRICULUM.length,
     totalLessons,
