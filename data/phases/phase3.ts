@@ -13,22 +13,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "الفعل المزيد - فَعَّلَ",
     titleFr: "Forme verbale II (فَعَّلَ)",
     description: "Learn Form II verbs with doubled middle radical for intensification",
+    descriptionAr: "تعلم أفعال الصيغة الثانية بتضعيف الحرف الأوسط للتكثيف والسببية",
     descriptionFr: "Apprenez les verbes de forme II avec redoublement de la consonne médiane pour l'intensification",
     objectives: ["Understand Form II pattern", "Recognize doubled consonant", "Form causative verbs", "Practice common Form II verbs"],
+    objectivesAr: ["فهم نمط الصيغة الثانية", "التعرف على الحرف المضعف", "تكوين الأفعال السببية", "ممارسة الأفعال الشائعة في الصيغة الثانية"],
     objectivesFr: ["Comprendre le modèle de la forme II", "Reconnaître la consonne redoublée", "Former des verbes causatifs", "Pratiquer les verbes courants de la forme II"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "Introduction to Verb Forms", titleFr: "Introduction aux formes verbales", content: "Arabic has 10 verb forms (أوزان). Each form adds specific meaning. Form II (فَعَّلَ) doubles the middle letter with shadda, often making verbs causative or intensive.", contentFr: "L'arabe a 10 formes verbales (أوزان). Chaque forme ajoute une signification spécifique. La forme II (فَعَّلَ) redouble la lettre médiane avec shadda, rendant souvent les verbes causatifs ou intensifs." },
-        { title: "Form II Pattern", titleFr: "Modèle de la forme II", content: "Base: فَعَلَ (fa'ala) → Form II: فَعَّلَ (fa''ala)\nExamples:\n• عَلِمَ (knew) → عَلَّمَ (taught)\n• كَسَرَ (broke) → كَسَّرَ (shattered)\n• فَهِمَ (understood) → فَهَّمَ (made understand)", contentFr: "Base: فَعَلَ (fa'ala) → Forme II: فَعَّلَ (fa''ala)\nExemples:\n• عَلِمَ (knew) → عَلَّمَ (taught)\n• كَسَرَ (broke) → كَسَّرَ (shattered)\n• فَهِمَ (understood) → فَهَّمَ (made understand)" },
-        { title: "Common Uses", titleFr: "Utilisations courantes", content: "1. Causative: making someone do something\n2. Intensive: doing something intensely\n3. Declarative: considering something as X", contentFr: "1. Causatif: faire que quelqu'un fasse quelque chose\n2. Intensif: faire quelque chose intensément\n3. Déclaratif: considérer quelque chose comme X" }
+        { title: "Introduction to Verb Forms", titleAr: "مقدمة إلى أوزان الأفعال", titleFr: "Introduction aux formes verbales", content: "Arabic has 10 verb forms (أوزان). Each form adds specific meaning. Form II (فَعَّلَ) doubles the middle letter with shadda, often making verbs causative or intensive.", contentAr: "للغة العربية عشرة أوزان للأفعال. كل وزن يضيف معنى محدد. الوزن الثاني (فَعَّلَ) يضعف الحرف الأوسط بتشديد، مما يجعل الأفعال غالبا سببية أو مكثفة.", contentFr: "L'arabe a 10 formes verbales (أوزان). Chaque forme ajoute une signification spécifique. La forme II (فَعَّلَ) redouble la lettre médiane avec shadda, rendant souvent les verbes causatifs ou intensifs." },
+        { title: "Form II Pattern", titleAr: "نمط الصيغة الثانية", titleFr: "Modèle de la forme II", content: "Base: فَعَلَ (fa'ala) → Form II: فَعَّلَ (fa''ala)\nExamples:\n• عَلِمَ (knew) → عَلَّمَ (taught)\n• كَسَرَ (broke) → كَسَّرَ (shattered)\n• فَهِمَ (understood) → فَهَّمَ (made understand)", contentAr: "الأساس: فَعَلَ → الصيغة الثانية: فَعَّلَ\nأمثلة:\n• عَلِمَ (عرف) → عَلَّمَ (علم)\n• كَسَرَ (كسر) → كَسَّرَ (حطم)\n• فَهِمَ (فهم) → فَهَّمَ (أفهم)", contentFr: "Base: فَعَلَ (fa'ala) → Forme II: فَعَّلَ (fa''ala)\nExemples:\n• عَلِمَ (knew) → عَلَّمَ (taught)\n• كَسَرَ (broke) → كَسَّرَ (shattered)\n• فَهِمَ (understood) → فَهَّمَ (made understand)" },
+        { title: "Common Uses", titleAr: "الاستخدامات الشائعة", titleFr: "Utilisations courantes", content: "1. Causative: making someone do something\n2. Intensive: doing something intensely\n3. Declarative: considering something as X", contentAr: "١. السببية: جعل شخصا يفعل شيئا\n٢. المكثفة: فعل شيء بشدة\n٣. الخبرية: اعتبار شيء كـ", contentFr: "1. Causatif: faire que quelqu'un fasse quelque chose\n2. Intensif: faire quelque chose intensément\n3. Déclaratif: considérer quelque chose comme X" }
       ],
       vocabulary: [
-        { arabic: "عَلَّمَ", transliteration: "'allama", meaning: "to teach", meaningFr: "enseigner" },
-        { arabic: "دَرَّسَ", transliteration: "darrasa", meaning: "to teach/instruct", meaningFr: "enseigner/instruire" },
-        { arabic: "كَلَّمَ", transliteration: "kallama", meaning: "to speak to", meaningFr: "parler à" },
-        { arabic: "صَوَّرَ", transliteration: "ṣawwara", meaning: "to photograph", meaningFr: "photographier" },
-        { arabic: "قَدَّمَ", transliteration: "qaddama", meaning: "to present/offer", meaningFr: "présenter/offrir" }
+        { arabic: "عَلَّمَ", transliteration: "'allama", meaning: "to teach", meaningAr: "علم، درس", meaningFr: "enseigner" },
+        { arabic: "دَرَّسَ", transliteration: "darrasa", meaning: "to teach/instruct", meaningAr: "درس، علم", meaningFr: "enseigner/instruire" },
+        { arabic: "كَلَّمَ", transliteration: "kallama", meaning: "to speak to", meaningAr: "كلم، تحدث مع", meaningFr: "parler à" },
+        { arabic: "صَوَّرَ", transliteration: "ṣawwara", meaning: "to photograph", meaningAr: "صور، التقط صورة", meaningFr: "photographier" },
+        { arabic: "قَدَّمَ", transliteration: "qaddama", meaning: "to present/offer", meaningAr: "قدم، عرض", meaningFr: "présenter/offrir" }
       ]
     },
     exerciseCount: 16, prerequisites: []
@@ -39,22 +41,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "الفعل المزيد - فَاعَلَ",
     titleFr: "Forme verbale III (فَاعَلَ)",
     description: "Learn Form III verbs with alif after first radical for reciprocal actions",
+    descriptionAr: "تعلم أفعال الصيغة الثالثة بألف بعد الحرف الأول للأفعال المتبادلة",
     descriptionFr: "Apprenez les verbes de forme III avec alif après la première radicale pour les actions réciproques",
     objectives: ["Understand Form III pattern", "Recognize reciprocal meaning", "Form interaction verbs", "Use in conversations"],
+    objectivesAr: ["فهم نمط الصيغة الثالثة", "التعرف على المعنى المتبادل", "تكوين أفعال التفاعل", "استخدامها في المحادثات"],
     objectivesFr: ["Comprendre le modèle de la forme III", "Reconnaître le sens réciproque", "Former des verbes d'interaction", "Utiliser dans les conversations"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "Form III Pattern", titleFr: "Modèle de la forme III", content: "Form III adds alif (ا) after the first radical: فَعَلَ → فَاعَلَ\nThis form typically indicates mutual or reciprocal action - doing something WITH someone.", contentFr: "La forme III ajoute alif (ا) après la première radicale: فَعَلَ → فَاعَلَ\nCette forme indique généralement une action mutuelle ou réciproque - faire quelque chose AVEC quelqu'un." },
-        { title: "Examples", titleFr: "Exemples", content: "• كَتَبَ (wrote) → كَاتَبَ (corresponded with)\n• قَتَلَ (killed) → قَاتَلَ (fought with)\n• سَافَرَ (traveled) → سَافَرَ (traveled with)", contentFr: "• كَتَبَ (wrote) → كَاتَبَ (corresponded with)\n• قَتَلَ (killed) → قَاتَلَ (fought with)\n• سَافَرَ (traveled) → سَافَرَ (traveled with)" },
-        { title: "Reciprocal Meaning", titleFr: "Sens réciproque", content: "Form III often means doing an action together:\n• شَارَكَ - to participate/share with\n• حَاوَرَ - to converse with\n• جَاوَرَ - to be neighbor to", contentFr: "La forme III signifie souvent faire une action ensemble:\n• شَارَكَ - to participate/share with\n• حَاوَرَ - to converse with\n• جَاوَرَ - to be neighbor to" }
+        { title: "Form III Pattern", titleAr: "نمط الصيغة الثالثة", titleFr: "Modèle de la forme III", content: "Form III adds alif (ا) after the first radical: فَعَلَ → فَاعَلَ\nThis form typically indicates mutual or reciprocal action - doing something WITH someone.", contentAr: "الصيغة الثالثة تضيف ألف بعد الحرف الأول: فَعَلَ → فَاعَلَ\nهذا الوزن يشير عادة إلى عمل متبادل أو متقابل - فعل شيء مع شخص ما.", contentFr: "La forme III ajoute alif (ا) après la première radicale: فَعَلَ → فَاعَلَ\nCette forme indique généralement une action mutuelle ou réciproque - faire quelque chose AVEC quelqu'un." },
+        { title: "Examples", titleAr: "أمثلة", titleFr: "Exemples", content: "• كَتَبَ (wrote) → كَاتَبَ (corresponded with)\n• قَتَلَ (killed) → قَاتَلَ (fought with)\n• سَافَرَ (traveled) → سَافَرَ (traveled with)", contentAr: "• كَتَبَ (كتب) → كَاتَبَ (راسل)\n• قَتَلَ (قتل) → قَاتَلَ (حارب)\n• سَافَرَ (سافر) → سَافَرَ (سافر مع)", contentFr: "• كَتَبَ (wrote) → كَاتَبَ (corresponded with)\n• قَتَلَ (killed) → قَاتَلَ (fought with)\n• سَافَرَ (traveled) → سَافَرَ (traveled with)" },
+        { title: "Reciprocal Meaning", titleAr: "المعنى المتبادل", titleFr: "Sens réciproque", content: "Form III often means doing an action together:\n• شَارَكَ - to participate/share with\n• حَاوَرَ - to converse with\n• جَاوَرَ - to be neighbor to", contentAr: "الصيغة الثالثة غالبا تعني فعل عمل معا:\n• شَارَكَ - شارك/اشترك مع\n• حَاوَرَ - حاور/تحدث مع\n• جَاوَرَ - كان جارا لـ", contentFr: "La forme III signifie souvent faire une action ensemble:\n• شَارَكَ - to participate/share with\n• حَاوَرَ - to converse with\n• جَاوَرَ - to be neighbor to" }
       ],
       vocabulary: [
-        { arabic: "سَاعَدَ", transliteration: "sā'ada", meaning: "to help", meaningFr: "aider" },
-        { arabic: "شَاهَدَ", transliteration: "shāhada", meaning: "to watch/witness", meaningFr: "regarder/témoigner" },
-        { arabic: "حَاوَلَ", transliteration: "ḥāwala", meaning: "to try/attempt", meaningFr: "essayer/tenter" },
-        { arabic: "سَافَرَ", transliteration: "sāfara", meaning: "to travel", meaningFr: "voyager" },
-        { arabic: "قَابَلَ", transliteration: "qābala", meaning: "to meet", meaningFr: "rencontrer" }
+        { arabic: "سَاعَدَ", transliteration: "sā'ada", meaning: "to help", meaningAr: "ساعد، أعان", meaningFr: "aider" },
+        { arabic: "شَاهَدَ", transliteration: "shāhada", meaning: "to watch/witness", meaningAr: "شاهد، شهد", meaningFr: "regarder/témoigner" },
+        { arabic: "حَاوَلَ", transliteration: "ḥāwala", meaning: "to try/attempt", meaningAr: "حاول، حاولة", meaningFr: "essayer/tenter" },
+        { arabic: "سَافَرَ", transliteration: "sāfara", meaning: "to travel", meaningAr: "سافر، رحل", meaningFr: "voyager" },
+        { arabic: "قَابَلَ", transliteration: "qābala", meaning: "to meet", meaningAr: "قابل، التقى بـ", meaningFr: "rencontrer" }
       ]
     },
     exerciseCount: 16, prerequisites: ["3-1"]
@@ -65,22 +69,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "الفعل المزيد - أَفْعَلَ",
     titleFr: "Forme verbale IV (أَفْعَلَ)",
     description: "Learn Form IV verbs with hamza prefix for causative meaning",
+    descriptionAr: "تعلم أفعال الصيغة الرابعة بهمزة البداية للمعنى السببي",
     descriptionFr: "Apprenez les verbes de forme IV avec préfixe hamza pour le sens causatif",
     objectives: ["Understand Form IV pattern", "Recognize hamza prefix", "Form causative verbs", "Distinguish from Form II"],
+    objectivesAr: ["فهم نمط الصيغة الرابعة", "التعرف على بادئة الهمزة", "تكوين الأفعال السببية", "التمييز عن الصيغة الثانية"],
     objectivesFr: ["Comprendre le modèle de la forme IV", "Reconnaître le préfixe hamza", "Former des verbes causatifs", "Distinguer de la forme II"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "Form IV Pattern", titleFr: "Modèle de la forme IV", content: "Form IV adds hamza (أ) prefix and sukun on first radical: فَعَلَ → أَفْعَلَ\nLike Form II, it often has causative meaning but is more common with certain roots.", contentFr: "La forme IV ajoute le préfixe hamza (أ) et sukun sur la première radicale: فَعَلَ → أَفْعَلَ\nComme la forme II, elle a souvent un sens causatif mais est plus courante avec certaines racines." },
-        { title: "Examples", titleFr: "Exemples", content: "• خَرَجَ (went out) → أَخْرَجَ (took out)\n• دَخَلَ (entered) → أَدْخَلَ (inserted)\n• سَلَمَ (was safe) → أَسْلَمَ (submitted/became Muslim)", contentFr: "• خَرَجَ (went out) → أَخْرَجَ (took out)\n• دَخَلَ (entered) → أَدْخَلَ (inserted)\n• سَلَمَ (was safe) → أَسْلَمَ (submitted/became Muslim)" },
-        { title: "Form IV vs Form II", titleFr: "Forme IV vs Forme II", content: "Both can be causative:\n• Form II: more intensive, physical actions\n• Form IV: more abstract, state changes", contentFr: "Les deux peuvent être causatifs:\n• Forme II: plus intensive, actions physiques\n• Forme IV: plus abstrait, changements d'état" }
+        { title: "Form IV Pattern", titleAr: "نمط الصيغة الرابعة", titleFr: "Modèle de la forme IV", content: "Form IV adds hamza (أ) prefix and sukun on first radical: فَعَلَ → أَفْعَلَ\nLike Form II, it often has causative meaning but is more common with certain roots.", contentAr: "الصيغة الرابعة تضيف بادئة الهمزة وسكون على الحرف الأول: فَعَلَ → أَفْعَلَ\nمثل الصيغة الثانية، لها غالبا معنى سببي لكنها أكثر شيوعا مع بعض الجذور.", contentFr: "La forme IV ajoute le préfixe hamza (أ) et sukun sur la première radicale: فَعَلَ → أَفْعَلَ\nComme la forme II, elle a souvent un sens causatif mais est plus courante avec certaines racines." },
+        { title: "Examples", titleAr: "أمثلة", titleFr: "Exemples", content: "• خَرَجَ (went out) → أَخْرَجَ (took out)\n• دَخَلَ (entered) → أَدْخَلَ (inserted)\n• سَلَمَ (was safe) → أَسْلَمَ (submitted/became Muslim)", contentAr: "• خَرَجَ (خرج) → أَخْرَجَ (أخرج)\n• دَخَلَ (دخل) → أَدْخَلَ (أدخل)\n• سَلَمَ (سلم) → أَسْلَمَ (أسلم/استسلم)", contentFr: "• خَرَجَ (went out) → أَخْرَجَ (took out)\n• دَخَلَ (entered) → أَدْخَلَ (inserted)\n• سَلَمَ (was safe) → أَسْلَمَ (submitted/became Muslim)" },
+        { title: "Form IV vs Form II", titleAr: "الصيغة الرابعة مقابل الصيغة الثانية", titleFr: "Forme IV vs Forme II", content: "Both can be causative:\n• Form II: more intensive, physical actions\n• Form IV: more abstract, state changes", contentAr: "كلاهما يمكن أن يكون سببيا:\n• الصيغة الثانية: أكثر مكثفة، أفعال جسدية\n• الصيغة الرابعة: أكثر تجريدا، تغييرات الحالة", contentFr: "Les deux peuvent être causatifs:\n• Forme II: plus intensive, actions physiques\n• Forme IV: plus abstrait, changements d'état" }
       ],
       vocabulary: [
-        { arabic: "أَرْسَلَ", transliteration: "arsala", meaning: "to send", meaningFr: "envoyer" },
-        { arabic: "أَكْمَلَ", transliteration: "akmala", meaning: "to complete", meaningFr: "compléter" },
-        { arabic: "أَحَبَّ", transliteration: "aḥabba", meaning: "to love", meaningFr: "aimer" },
-        { arabic: "أَصْبَحَ", transliteration: "aṣbaḥa", meaning: "to become", meaningFr: "devenir" },
-        { arabic: "أَعْطَى", transliteration: "a'ṭā", meaning: "to give", meaningFr: "donner" }
+        { arabic: "أَرْسَلَ", transliteration: "arsala", meaning: "to send", meaningAr: "أرسل، بعث", meaningFr: "envoyer" },
+        { arabic: "أَكْمَلَ", transliteration: "akmala", meaning: "to complete", meaningAr: "أكمل، أتمم", meaningFr: "compléter" },
+        { arabic: "أَحَبَّ", transliteration: "aḥabba", meaning: "to love", meaningAr: "أحب، أحب جدا", meaningFr: "aimer" },
+        { arabic: "أَصْبَحَ", transliteration: "aṣbaḥa", meaning: "to become", meaningAr: "أصبح، بات", meaningFr: "devenir" },
+        { arabic: "أَعْطَى", transliteration: "a'ṭā", meaning: "to give", meaningAr: "أعطى، وهب", meaningFr: "donner" }
       ]
     },
     exerciseCount: 16, prerequisites: ["3-2"]
@@ -91,22 +97,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "الفعل المزيد - تَفَعَّلَ",
     titleFr: "Forme verbale V (تَفَعَّلَ)",
     description: "Learn Form V verbs - reflexive of Form II",
+    descriptionAr: "تعلم أفعال الصيغة الخامسة - المنعكسة من الصيغة الثانية",
     descriptionFr: "Apprenez les verbes de forme V - réfléchi de la forme II",
     objectives: ["Understand Form V pattern", "Recognize ta- prefix with shadda", "Form reflexive verbs", "Connect to Form II"],
+    objectivesAr: ["فهم نمط الصيغة الخامسة", "التعرف على بادئة ت- مع التشديد", "تكوين الأفعال المنعكسة", "الربط بالصيغة الثانية"],
     objectivesFr: ["Comprendre le modèle de la forme V", "Reconnaître le préfixe ta- avec shadda", "Former des verbes réfléchis", "Connecter à la forme II"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "Form V Pattern", titleFr: "Modèle de la forme V", content: "Form V = ta- prefix + Form II: تَفَعَّلَ\nIt's the reflexive of Form II - the action happens to oneself.", contentFr: "Forme V = préfixe ta- + Forme II: تَفَعَّلَ\nC'est le réfléchi de la forme II - l'action se fait à soi-même." },
-        { title: "Examples", titleFr: "Exemples", content: "• عَلَّمَ (taught) → تَعَلَّمَ (learned = taught oneself)\n• كَلَّمَ (spoke to) → تَكَلَّمَ (spoke)\n• حَرَّكَ (moved sth) → تَحَرَّكَ (moved oneself)", contentFr: "• عَلَّمَ (taught) → تَعَلَّمَ (learned = taught oneself)\n• كَلَّمَ (spoke to) → تَكَلَّمَ (spoke)\n• حَرَّكَ (moved sth) → تَحَرَّكَ (moved oneself)" },
-        { title: "Common Uses", titleFr: "Utilisations courantes", content: "1. Reflexive: action on oneself\n2. Gradual process\n3. Pretending/acting as", contentFr: "1. Réfléchi: action sur soi-même\n2. Processus graduel\n3. Prétendre/agir comme" }
+        { title: "Form V Pattern", titleAr: "نمط الصيغة الخامسة", titleFr: "Modèle de la forme V", content: "Form V = ta- prefix + Form II: تَفَعَّلَ\nIt's the reflexive of Form II - the action happens to oneself.", contentAr: "الصيغة الخامسة = بادئة ت- + الصيغة الثانية: تَفَعَّلَ\nهي المنعكسة من الصيغة الثانية - يحدث الفعل للذات.", contentFr: "Forme V = ta- prefix + Forme II: تَفَعَّلَ\nC'est le réfléchi de la forme II - l'action se fait à soi-même." },
+        { title: "Examples", titleAr: "أمثلة", titleFr: "Exemples", content: "• عَلَّمَ (taught) → تَعَلَّمَ (learned = taught oneself)\n• كَلَّمَ (spoke to) → تَكَلَّمَ (spoke)\n• حَرَّكَ (moved sth) → تَحَرَّكَ (moved oneself)", contentAr: "• عَلَّمَ (علم) → تَعَلَّمَ (تعلم)\n• كَلَّمَ (كلم) → تَكَلَّمَ (تكلم)\n• حَرَّكَ (حرك) → تَحَرَّكَ (تحرك)", contentFr: "• عَلَّمَ (taught) → تَعَلَّمَ (learned = taught oneself)\n• كَلَّمَ (spoke to) → تَكَلَّمَ (spoke)\n• حَرَّكَ (moved sth) → تَحَرَّكَ (moved oneself)" },
+        { title: "Common Uses", titleAr: "الاستخدامات الشائعة", titleFr: "Utilisations courantes", content: "1. Reflexive: action on oneself\n2. Gradual process\n3. Pretending/acting as", contentAr: "١. المنعكسة: الفعل على الذات\n٢. عملية تدريجية\n٣. التظاهر/التصرف كـ", contentFr: "1. Réfléchi: action sur soi-même\n2. Processus graduel\n3. Prétendre/agir comme" }
       ],
       vocabulary: [
-        { arabic: "تَعَلَّمَ", transliteration: "ta'allama", meaning: "to learn", meaningFr: "apprendre" },
-        { arabic: "تَكَلَّمَ", transliteration: "takallama", meaning: "to speak", meaningFr: "parler" },
-        { arabic: "تَذَكَّرَ", transliteration: "tadhakkara", meaning: "to remember", meaningFr: "se souvenir" },
-        { arabic: "تَصَوَّرَ", transliteration: "taṣawwara", meaning: "to imagine", meaningFr: "imaginer" },
-        { arabic: "تَغَيَّرَ", transliteration: "taghayyara", meaning: "to change", meaningFr: "changer" }
+        { arabic: "تَعَلَّمَ", transliteration: "ta'allama", meaning: "to learn", meaningAr: "تعلم، تلقى العلم", meaningFr: "apprendre" },
+        { arabic: "تَكَلَّمَ", transliteration: "takallama", meaning: "to speak", meaningAr: "تكلم، تحدث", meaningFr: "parler" },
+        { arabic: "تَذَكَّرَ", transliteration: "tadhakkara", meaning: "to remember", meaningAr: "تذكر، استرجع الذاكرة", meaningFr: "se souvenir" },
+        { arabic: "تَصَوَّرَ", transliteration: "taṣawwara", meaning: "to imagine", meaningAr: "تصور، تخيل", meaningFr: "imaginer" },
+        { arabic: "تَغَيَّرَ", transliteration: "taghayyara", meaning: "to change", meaningAr: "تغير، تبدل", meaningFr: "changer" }
       ]
     },
     exerciseCount: 16, prerequisites: ["3-3"]
@@ -117,22 +125,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "الفعل المزيد - تَفَاعَلَ",
     titleFr: "Forme verbale VI (تَفَاعَلَ)",
     description: "Learn Form VI verbs - mutual/reciprocal reflexive",
+    descriptionAr: "تعلم أفعال الصيغة السادسة - المنعكسة المتبادلة والمتقابلة",
     descriptionFr: "Apprenez les verbes de forme VI - réfléchi mutuel et réciproque",
     objectives: ["Understand Form VI pattern", "Recognize mutual actions", "Form reciprocal verbs", "Connect to Form III"],
+    objectivesAr: ["فهم نمط الصيغة السادسة", "التعرف على الأفعال المتبادلة", "تكوين الأفعال المتقابلة", "الربط بالصيغة الثالثة"],
     objectivesFr: ["Comprendre le modèle de la forme VI", "Reconnaître les actions mutuelles", "Former des verbes réciproques", "Connecter à la forme III"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "Form VI Pattern", titleFr: "Modèle de la forme VI", content: "Form VI = ta- prefix + Form III: تَفَاعَلَ\nIt expresses mutual action between multiple parties.", contentFr: "Forme VI = préfixe ta- + Forme III: تَفَاعَلَ\nElle exprime une action mutuelle entre plusieurs parties." },
-        { title: "Examples", titleFr: "Exemples", content: "• قَاتَلَ (fought with) → تَقَاتَلَ (fought each other)\n• بَادَلَ (exchanged with) → تَبَادَلَ (exchanged mutually)\n• سَاعَدَ (helped) → تَسَاعَدَ (helped each other)", contentFr: "• قَاتَلَ (fought with) → تَقَاتَلَ (fought each other)\n• بَادَلَ (exchanged with) → تَبَادَلَ (exchanged mutually)\n• سَاعَدَ (helped) → تَسَاعَدَ (helped each other)" },
-        { title: "Pretending Meaning", titleFr: "Sens de prétendre", content: "Form VI can also mean pretending:\n• تَمَارَضَ - pretended to be sick\n• تَجَاهَلَ - pretended not to know\n• تَنَاسَى - pretended to forget", contentFr: "La forme VI peut aussi signifier prétendre:\n• تَمَارَضَ - pretended to be sick\n• تَجَاهَلَ - pretended not to know\n• تَنَاسَى - pretended to forget" }
+        { title: "Form VI Pattern", titleAr: "نمط الصيغة السادسة", titleFr: "Modèle de la forme VI", content: "Form VI = ta- prefix + Form III: تَفَاعَلَ\nIt expresses mutual action between multiple parties.", contentAr: "الصيغة السادسة = بادئة ت- + الصيغة الثالثة: تَفَاعَلَ\nتعبر عن الفعل المتبادل بين عدة أطراف.", contentFr: "Forme VI = ta- prefix + Forme III: تَفَاعَلَ\nElle exprime une action mutuelle entre plusieurs parties." },
+        { title: "Examples", titleAr: "أمثلة", titleFr: "Exemples", content: "• قَاتَلَ (fought with) → تَقَاتَلَ (fought each other)\n• بَادَلَ (exchanged with) → تَبَادَلَ (exchanged mutually)\n• سَاعَدَ (helped) → تَسَاعَدَ (helped each other)", contentAr: "• قَاتَلَ (حارب مع) → تَقَاتَلَ (تقاتلوا)\n• بَادَلَ (بادل) → تَبَادَلَ (تبادلوا)\n• سَاعَدَ (ساعد) → تَسَاعَدَ (تساعدوا)", contentFr: "• قَاتَلَ (fought with) → تَقَاتَلَ (fought each other)\n• بَادَلَ (exchanged with) → تَبَادَلَ (exchanged mutually)\n• سَاعَدَ (helped) → تَسَاعَدَ (helped each other)" },
+        { title: "Pretending Meaning", titleAr: "معنى التظاهر", titleFr: "Sens de prétendre", content: "Form VI can also mean pretending:\n• تَمَارَضَ - pretended to be sick\n• تَجَاهَلَ - pretended not to know\n• تَنَاسَى - pretended to forget", contentAr: "الصيغة السادسة يمكن أن تعني أيضا التظاهر:\n• تَمَارَضَ - تظاهر بالمرض\n• تَجَاهَلَ - تجاهل/تظاهر بعدم المعرفة\n• تَنَاسَى - تناسى/تظاهر بالنسيان", contentFr: "La forme VI peut aussi signifier prétendre:\n• تَمَارَضَ - pretended to be sick\n• تَجَاهَلَ - pretended not to know\n• تَنَاسَى - pretended to forget" }
       ],
       vocabulary: [
-        { arabic: "تَعَاوَنَ", transliteration: "ta'āwana", meaning: "to cooperate", meaningFr: "coopérer" },
-        { arabic: "تَبَادَلَ", transliteration: "tabādala", meaning: "to exchange", meaningFr: "échanger" },
-        { arabic: "تَفَاهَمَ", transliteration: "tafāhama", meaning: "to understand each other", meaningFr: "se comprendre" },
-        { arabic: "تَوَاصَلَ", transliteration: "tawāṣala", meaning: "to communicate", meaningFr: "communiquer" },
-        { arabic: "تَسَاءَلَ", transliteration: "tasā'ala", meaning: "to wonder", meaningFr: "se demander" }
+        { arabic: "تَعَاوَنَ", transliteration: "ta'āwana", meaning: "to cooperate", meaningAr: "تعاون، تعاضد", meaningFr: "coopérer" },
+        { arabic: "تَبَادَلَ", transliteration: "tabādala", meaning: "to exchange", meaningAr: "تبادل، تناول بالتبادل", meaningFr: "échanger" },
+        { arabic: "تَفَاهَمَ", transliteration: "tafāhama", meaning: "to understand each other", meaningAr: "تفاهم، تبادل الفهم", meaningFr: "se comprendre" },
+        { arabic: "تَوَاصَلَ", transliteration: "tawāṣala", meaning: "to communicate", meaningAr: "توصل، تواصل", meaningFr: "communiquer" },
+        { arabic: "تَسَاءَلَ", transliteration: "tasā'ala", meaning: "to wonder", meaningAr: "تساءل، تبادل الأسئلة", meaningFr: "se demander" }
       ]
     },
     exerciseCount: 16, prerequisites: ["3-4"]
@@ -143,23 +153,25 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "نظرة عامة على الأوزان السابع إلى العاشر",
     titleFr: "Vue d'ensemble des formes verbales VII-X",
     description: "Overview of Forms VII, VIII, IX, and X with key examples",
+    descriptionAr: "نظرة عامة على الصيغ السابعة والثامنة والتاسعة والعاشرة مع أمثلة رئيسية",
     descriptionFr: "Vue d'ensemble des formes VII, VIII, IX et X avec des exemples clés",
     objectives: ["Understand Forms VII-X patterns", "Recognize passive/reflexive meanings", "Learn common verbs from each form", "Master form recognition"],
+    objectivesAr: ["فهم أنماط الصيغ السابعة إلى العاشرة", "التعرف على المعاني المبنية للمجهول والمنعكسة", "تعلم الأفعال الشائعة من كل صيغة", "إتقان التعرف على الصيغ"],
     objectivesFr: ["Comprendre les modèles des formes VII-X", "Reconnaître les sens passifs/réfléchis", "Apprendre les verbes courants de chaque forme", "Maîtriser la reconnaissance des formes"],
     estimatedTime: 55, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Form VII (اِنْفَعَلَ)", titleFr: "Forme VII (اِنْفَعَلَ)", content: "Passive/reflexive of Form I:\n• كَسَرَ (broke) → اِنْكَسَرَ (was broken)\n• فَتَحَ (opened) → اِنْفَتَحَ (was opened)", contentFr: "Passif/réfléchi de la forme I:\n• كَسَرَ (broke) → اِنْكَسَرَ (was broken)\n• فَتَحَ (opened) → اِنْفَتَحَ (was opened)" },
-        { title: "Form VIII (اِفْتَعَلَ)", titleFr: "Forme VIII (اِفْتَعَلَ)", content: "Reflexive with middle infixed ت:\n• جَمَعَ (gathered) → اِجْتَمَعَ (gathered together)\n• خَلَفَ (differed) → اِخْتَلَفَ (disagreed)", contentFr: "Réfléchi avec ت infixée au milieu:\n• جَمَعَ (gathered) → اِجْتَمَعَ (gathered together)\n• خَلَفَ (differed) → اِخْتَلَفَ (disagreed)" },
-        { title: "Form IX (اِفْعَلَّ)", titleFr: "Forme IX (اِفْعَلَّ)", content: "Colors and defects:\n• أَحْمَر (red) → اِحْمَرَّ (became red)\n• أَصْفَر (yellow) → اِصْفَرَّ (turned yellow)", contentFr: "Couleurs et défauts:\n• أَحْمَر (red) → اِحْمَرَّ (became red)\n• أَصْفَر (yellow) → اِصْفَرَّ (turned yellow)" },
-        { title: "Form X (اِسْتَفْعَلَ)", titleFr: "Forme X (اِسْتَفْعَلَ)", content: "Seeking/considering:\n• غَفَرَ (forgave) → اِسْتَغْفَرَ (sought forgiveness)\n• عَمَلَ (worked) → اِسْتَعْمَلَ (used)", contentFr: "Chercher/considérer:\n• غَفَرَ (forgave) → اِسْتَغْفَرَ (sought forgiveness)\n• عَمَلَ (worked) → اِسْتَعْمَلَ (used)" }
+        { title: "Form VII (اِنْفَعَلَ)", titleAr: "الصيغة السابعة (اِنْفَعَلَ)", titleFr: "Forme VII (اِنْفَعَلَ)", content: "Passive/reflexive of Form I:\n• كَسَرَ (broke) → اِنْكَسَرَ (was broken)\n• فَتَحَ (opened) → اِنْفَتَحَ (was opened)", contentAr: "المبنية للمجهول/المنعكسة من الصيغة الأولى:\n• كَسَرَ (كسر) → اِنْكَسَرَ (انكسر)\n• فَتَحَ (فتح) → اِنْفَتَحَ (انفتح)", contentFr: "Passif/réfléchi de la forme I:\n• كَسَرَ (broke) → اِنْكَسَرَ (was broken)\n• فَتَحَ (opened) → اِنْفَتَحَ (was opened)" },
+        { title: "Form VIII (اِفْتَعَلَ)", titleAr: "الصيغة الثامنة (اِفْتَعَلَ)", titleFr: "Forme VIII (اِفْتَعَلَ)", content: "Reflexive with middle infixed ت:\n• جَمَعَ (gathered) → اِجْتَمَعَ (gathered together)\n• خَلَفَ (differed) → اِخْتَلَفَ (disagreed)", contentAr: "المنعكسة مع ت مدرجة في الوسط:\n• جَمَعَ (جمع) → اِجْتَمَعَ (اجتمع)\n• خَلَفَ (اختلف) → اِخْتَلَفَ (اختلفوا)", contentFr: "Réfléchi avec ت infixée au milieu:\n• جَمَعَ (gathered) → اِجْتَمَعَ (gathered together)\n• خَلَفَ (differed) → اِخْتَلَفَ (disagreed)" },
+        { title: "Form IX (اِفْعَلَّ)", titleAr: "الصيغة التاسعة (اِفْعَلَّ)", titleFr: "Forme IX (اِفْعَلَّ)", content: "Colors and defects:\n• أَحْمَر (red) → اِحْمَرَّ (became red)\n• أَصْفَر (yellow) → اِصْفَرَّ (turned yellow)", contentAr: "الألوان والعيوب:\n• أَحْمَر (أحمر) → اِحْمَرَّ (احمر)\n• أَصْفَر (أصفر) → اِصْفَرَّ (اصفر)", contentFr: "Couleurs et défauts:\n• أَحْمَر (red) → اِحْمَرَّ (became red)\n• أَصْفَر (yellow) → اِصْفَرَّ (turned yellow)" },
+        { title: "Form X (اِسْتَفْعَلَ)", titleAr: "الصيغة العاشرة (اِسْتَفْعَلَ)", titleFr: "Forme X (اِسْتَفْعَلَ)", content: "Seeking/considering:\n• غَفَرَ (forgave) → اِسْتَغْفَرَ (sought forgiveness)\n• عَمَلَ (worked) → اِسْتَعْمَلَ (used)", contentAr: "الطلب والاعتبار:\n• غَفَرَ (غفر) → اِسْتَغْفَرَ (استغفر)\n• عَمَلَ (عمل) → اِسْتَعْمَلَ (استعمل)", contentFr: "Chercher/considérer:\n• غَفَرَ (forgave) → اِسْتَغْفَرَ (sought forgiveness)\n• عَمَلَ (worked) → اِسْتَعْمَلَ (used)" }
       ],
       vocabulary: [
-        { arabic: "اِنْتَظَرَ", transliteration: "intaẓara", meaning: "to wait (VIII)", meaningFr: "attendre (VIII)" },
-        { arabic: "اِسْتَخْدَمَ", transliteration: "istakhdama", meaning: "to use (X)", meaningFr: "utiliser (X)" },
-        { arabic: "اِحْتَاجَ", transliteration: "iḥtāja", meaning: "to need (VIII)", meaningFr: "avoir besoin (VIII)" },
-        { arabic: "اِسْتَمَعَ", transliteration: "istama'a", meaning: "to listen (X)", meaningFr: "écouter (X)" },
-        { arabic: "اِعْتَقَدَ", transliteration: "i'taqada", meaning: "to believe (VIII)", meaningFr: "croire (VIII)" }
+        { arabic: "اِنْتَظَرَ", transliteration: "intaẓara", meaning: "to wait (VIII)", meaningAr: "انتظر، استنتظر", meaningFr: "attendre (VIII)" },
+        { arabic: "اِسْتَخْدَمَ", transliteration: "istakhdama", meaning: "to use (X)", meaningAr: "استخدم، استعمل", meaningFr: "utiliser (X)" },
+        { arabic: "اِحْتَاجَ", transliteration: "iḥtāja", meaning: "to need (VIII)", meaningAr: "احتاج، افتقر إلى", meaningFr: "avoir besoin (VIII)" },
+        { arabic: "اِسْتَمَعَ", transliteration: "istama'a", meaning: "to listen (X)", meaningAr: "استمع، أصغى", meaningFr: "écouter (X)" },
+        { arabic: "اِعْتَقَدَ", transliteration: "i'taqada", meaning: "to believe (VIII)", meaningAr: "اعتقد، ظن", meaningFr: "croire (VIII)" }
       ]
     },
     exerciseCount: 18, prerequisites: ["3-5"]
@@ -171,22 +183,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "المُضارع المنصوب",
     titleFr: "Le mode subjonctif (المُضارع المنصوب)",
     description: "Learn the subjunctive mood and particles that trigger it",
+    descriptionAr: "تعلم المضارع المنصوب والحروف التي تدخل عليه",
     descriptionFr: "Apprenez le mode subjonctif et les particules qui le déclenchent",
     objectives: ["Understand subjunctive concept", "Recognize nasb particles", "Apply fatha ending", "Form complex sentences"],
+    objectivesAr: ["فهم مفهوم المضارع المنصوب", "التعرف على حروف النصب", "تطبيق علامة الفتحة", "تكوين جمل معقدة"],
     objectivesFr: ["Comprendre le concept du subjonctif", "Reconnaître les particules nasb", "Appliquer la terminaison fatha", "Former des phrases complexes"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "What is Subjunctive?", titleFr: "Qu'est-ce que le subjonctif?", content: "The subjunctive (منصوب) is used after certain particles to express wishes, purposes, or uncertainty. The verb ending changes from damma (ُ) to fatha (َ).", contentFr: "Le subjonctif (منصوب) est utilisé après certaines particules pour exprimer des souhaits, des buts ou l'incertitude. La terminaison du verbe change de damma (ُ) à fatha (َ)." },
-        { title: "Subjunctive Particles", titleFr: "Particules du subjonctif", content: "أَنْ (that/to) - most common\nلَنْ (will not) - negative future\nكَيْ / لِكَيْ (in order to)\nحَتَّى (until/so that)\nلِ (to/in order to)", contentFr: "أَنْ (that/to) - le plus courant\nلَنْ (will not) - futur négatif\nكَيْ / لِكَيْ (in order to)\nحَتَّى (until/so that)\nلِ (to/in order to)" },
-        { title: "Examples", titleFr: "Exemples", content: "أُرِيدُ أَنْ أَذْهَبَ - I want to go\nلَنْ أَنْسَى - I will not forget\nدَرَسْتُ لِأَنْجَحَ - I studied to succeed", contentFr: "أُرِيدُ أَنْ أَذْهَبَ - I want to go\nلَنْ أَنْسَى - I will not forget\nدَرَسْتُ لِأَنْجَحَ - I studied to succeed" }
+        { title: "What is Subjunctive?", titleAr: "ما هو المضارع المنصوب؟", titleFr: "Qu'est-ce que le subjonctif?", content: "The subjunctive (منصوب) is used after certain particles to express wishes, purposes, or uncertainty. The verb ending changes from damma (ُ) to fatha (َ).", contentAr: "المنصوب يستخدم بعد حروف معينة للتعبير عن الرغبات أو الأغراض أو عدم التأكد. تتغير نهاية الفعل من الضمة إلى الفتحة.", contentFr: "Le subjonctif (منصوب) est utilisé après certaines particules pour exprimer des souhaits, des buts ou l'incertitude. La terminaison du verbe change de damma (ُ) à fatha (َ)." },
+        { title: "Subjunctive Particles", titleAr: "حروف النصب", titleFr: "Particules du subjonctif", content: "أَنْ (that/to) - most common\nلَنْ (will not) - negative future\nكَيْ / لِكَيْ (in order to)\nحَتَّى (until/so that)\nلِ (to/in order to)", contentAr: "أَنْ (أن) - الأكثر شيوعا\nلَنْ (لن) - المستقبل السالب\nكَيْ / لِكَيْ (لكي)\nحَتَّى (حتى)\nلِ (لـ)", contentFr: "أَنْ (that/to) - le plus courant\nلَنْ (will not) - futur négatif\nكَيْ / لِكَيْ (in order to)\nحَتَّى (until/so that)\nلِ (to/in order to)" },
+        { title: "Examples", titleAr: "أمثلة", titleFr: "Exemples", content: "أُرِيدُ أَنْ أَذْهَبَ - I want to go\nلَنْ أَنْسَى - I will not forget\nدَرَسْتُ لِأَنْجَحَ - I studied to succeed", contentAr: "أُرِيدُ أَنْ أَذْهَبَ - أريد أن أذهب\nلَنْ أَنْسَى - لن أنسى\nدَرَسْتُ لِأَنْجَحَ - درست لأنجح", contentFr: "أُرِيدُ أَنْ أَذْهَبَ - I want to go\nلَنْ أَنْسَى - I will not forget\nدَرَسْتُ لِأَنْجَحَ - I studied to succeed" }
       ],
       vocabulary: [
-        { arabic: "أَنْ", transliteration: "an", meaning: "that/to (subjunctive)", meaningFr: "que/pour (subjonctif)" },
-        { arabic: "لَنْ", transliteration: "lan", meaning: "will not", meaningFr: "ne... pas" },
-        { arabic: "كَيْ", transliteration: "kay", meaning: "in order to", meaningFr: "afin de" },
-        { arabic: "حَتَّى", transliteration: "ḥattā", meaning: "until/so that", meaningFr: "jusqu'à/de sorte que" },
-        { arabic: "لِ", transliteration: "li", meaning: "to/for", meaningFr: "pour/à" }
+        { arabic: "أَنْ", transliteration: "an", meaning: "that/to (subjunctive)", meaningAr: "أن (حرف نصب)", meaningFr: "que/pour (subjonctif)" },
+        { arabic: "لَنْ", transliteration: "lan", meaning: "will not", meaningAr: "لن (حرف نصب)", meaningFr: "ne... pas" },
+        { arabic: "كَيْ", transliteration: "kay", meaning: "in order to", meaningAr: "كي (لكي)", meaningFr: "afin de" },
+        { arabic: "حَتَّى", transliteration: "ḥattā", meaning: "until/so that", meaningAr: "حتى (حرف نصب)", meaningFr: "jusqu'à/de sorte que" },
+        { arabic: "لِ", transliteration: "li", meaning: "to/for", meaningAr: "لـ (حرف نصب)", meaningFr: "pour/à" }
       ]
     },
     exerciseCount: 16, prerequisites: ["3-6"]
@@ -197,22 +211,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "المُضارع المجزوم",
     titleFr: "Le mode jussif (المُضارع المجزوم)",
     description: "Learn the jussive mood for commands and negation",
+    descriptionAr: "تعلم المضارع المجزوم المستخدم في الأوامر والنفي",
     descriptionFr: "Apprenez le mode jussif pour les ordres et la négation",
     objectives: ["Understand jussive concept", "Recognize jazm particles", "Apply sukun ending", "Use لَمْ for negation"],
+    objectivesAr: ["فهم مفهوم الجزم", "التعرف على حروف الجزم", "تطبيق السكون في النهاية", "استخدام لم للنفي"],
     objectivesFr: ["Comprendre le concept du jussif", "Reconnaître les particules jazm", "Appliquer la terminaison sukun", "Utiliser لَمْ pour la négation"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "What is Jussive?", titleFr: "Qu'est-ce que le jussif?", content: "The jussive (مجزوم) is used after certain particles, especially for negation and commands. The final vowel becomes sukun (ْ).", contentFr: "Le jussif (مجزوم) est utilisé après certaines particules, surtout pour la négation et les ordres. La voyelle finale devient sukun (ْ)." },
-        { title: "Jussive Particles", titleFr: "Particules du jussif", content: "لَمْ (did not) - past negation\nلَمَّا (not yet)\nلِ/لا (let/don't - commands)\nإِنْ (if - conditional)", contentFr: "لَمْ (did not) - négation du passé\nلَمَّا (not yet)\nلِ/لا (let/don't - ordres)\nإِنْ (if - conditionnel)" },
-        { title: "Examples", titleFr: "Exemples", content: "لَمْ أَفْهَمْ - I did not understand\nلَمَّا يَصِلْ - He hasn't arrived yet\nلِنَذْهَبْ - Let's go\nلا تَنْسَ - Don't forget", contentFr: "لَمْ أَفْهَمْ - I did not understand\nلَمَّا يَصِلْ - He hasn't arrived yet\nلِنَذْهَبْ - Let's go\nلا تَنْسَ - Don't forget" }
+        { title: "What is Jussive?", titleAr: "ما هو المضارع المجزوم؟", titleFr: "Qu'est-ce que le jussif?", content: "The jussive (مجزوم) is used after certain particles, especially for negation and commands. The final vowel becomes sukun (ْ).", contentAr: "المضارع المجزوم يُستخدم بعد حروف معينة، وخاصة للنفي والأوامر. تصبح الحركة الأخيرة سكوناً (ْ).", contentFr: "Le jussif (مجزوم) est utilisé après certaines particules, surtout pour la négation et les ordres. La voyelle finale devient sukun (ْ)." },
+        { title: "Jussive Particles", titleAr: "حروف الجزم", titleFr: "Particules du jussif", content: "لَمْ (did not) - past negation\nلَمَّا (not yet)\nلِ/لا (let/don't - commands)\nإِنْ (if - conditional)", contentAr: "لَمْ (لم) - النفي في الماضي\nلَمَّا (لم يزل) - لم يأتِ بعد\nلِ/لا (لا) - الأمر والنهي\nإِنْ (إن) - الشرط", contentFr: "لَمْ (did not) - négation du passé\nلَمَّا (not yet)\nلِ/لا (let/don't - ordres)\nإِنْ (if - conditionnel)" },
+        { title: "Examples", titleAr: "أمثلة", titleFr: "Exemples", content: "لَمْ أَفْهَمْ - I did not understand\nلَمَّا يَصِلْ - He hasn't arrived yet\nلِنَذْهَبْ - Let's go\nلا تَنْسَ - Don't forget", contentAr: "لَمْ أَفْهَمْ - لم أفهم\nلَمَّا يَصِلْ - لم يصل بعد\nلِنَذْهَبْ - لنذهب\nلا تَنْسَ - لا تنسَ", contentFr: "لَمْ أَفْهَمْ - I did not understand\nلَمَّا يَصِلْ - He hasn't arrived yet\nلِنَذْهَبْ - Let's go\nلا تَنْسَ - Don't forget" }
       ],
       vocabulary: [
-        { arabic: "لَمْ", transliteration: "lam", meaning: "did not (past negation)", meaningFr: "ne... pas (négation du passé)" },
-        { arabic: "لَمَّا", transliteration: "lammā", meaning: "not yet", meaningFr: "pas encore" },
-        { arabic: "لِنَذْهَبْ", transliteration: "linadhhab", meaning: "let's go", meaningFr: "allons" },
-        { arabic: "لا تَقْلَقْ", transliteration: "lā taqlaq", meaning: "don't worry", meaningFr: "ne t'inquiète pas" },
-        { arabic: "إِنْ", transliteration: "in", meaning: "if (conditional)", meaningFr: "si (conditionnel)" }
+        { arabic: "لَمْ", transliteration: "lam", meaning: "did not (past negation)", meaningAr: "لم، حرف نفي الماضي", meaningFr: "ne... pas (négation du passé)" },
+        { arabic: "لَمَّا", transliteration: "lammā", meaning: "not yet", meaningAr: "لم يزل، ما زال، لم يأتِ بعد", meaningFr: "pas encore" },
+        { arabic: "لِنَذْهَبْ", transliteration: "linadhhab", meaning: "let's go", meaningAr: "دعنا نذهب", meaningFr: "allons" },
+        { arabic: "لا تَقْلَقْ", transliteration: "lā taqlaq", meaning: "don't worry", meaningAr: "لا تقلق", meaningFr: "ne t'inquiète pas" },
+        { arabic: "إِنْ", transliteration: "in", meaning: "if (conditional)", meaningAr: "إن، حرف شرط", meaningFr: "si (conditionnel)" }
       ]
     },
     exerciseCount: 16, prerequisites: ["3-7"]
@@ -223,22 +239,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "فعل الأمر",
     titleFr: "L'impératif (الأمر)",
     description: "Master command forms for all persons",
+    descriptionAr: "احترف صيغ الأمر لجميع الأشخاص",
     descriptionFr: "Maîtrisez les formes de l'impératif pour toutes les personnes",
     objectives: ["Form imperatives from present tense", "Apply hamzat al-wasl rules", "Use negative commands", "Practice polite requests"],
+    objectivesAr: ["تكوين الأمر من المضارع", "تطبيق قواعد همزة الوصل", "استخدام الأوامر السالبة", "ممارسة الطلبات المهذبة"],
     objectivesFr: ["Former l'impératif à partir du temps présent", "Appliquer les règles hamzat al-wasl", "Utiliser les ordres négatifs", "Pratiquer les demandes polies"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "Forming the Imperative", titleFr: "Former l'impératif", content: "Remove the present tense prefix (ت/ي/ن/أ), add hamzat al-wasl if needed:\nتَكْتُبُ → اُكْتُبْ (write!)\nتَجْلِسُ → اِجْلِسْ (sit!)\nتَفْتَحُ → اِفْتَحْ (open!)", contentFr: "Supprimez le préfixe du temps présent (ت/ي/ن/أ), ajoutez hamzat al-wasl si nécessaire:\nتَكْتُبُ → اُكْتُبْ (write!)\nتَجْلِسُ → اِجْلِسْ (sit!)\nتَفْتَحُ → اِفْتَحْ (open!)" },
-        { title: "Hamzat al-Wasl Rules", titleFr: "Règles hamzat al-wasl", content: "If first letter after removing prefix has:\n• Damma (ُ): use اُ\n• Kasra (ِ) or Fatha (َ): use اِ", contentFr: "Si la première lettre après suppression du préfixe a:\n• Damma (ُ): use اُ\n• Kasra (ِ) or Fatha (َ): use اِ" },
-        { title: "Negative Commands", titleFr: "Ordres négatifs", content: "Use لا + Jussive:\nلا تَكْتُبْ - Don't write\nلا تَذْهَبْ - Don't go", contentFr: "Utilisez لا + Jussive:\nلا تَكْتُبْ - Don't write\nلا تَذْهَبْ - Don't go" }
+        { title: "Forming the Imperative", titleAr: "تكوين فعل الأمر", titleFr: "Former l'impératif", content: "Remove the present tense prefix (ت/ي/ن/أ), add hamzat al-wasl if needed:\nتَكْتُبُ → اُكْتُبْ (write!)\nتَجْلِسُ → اِجْلِسْ (sit!)\nتَفْتَحُ → اِفْتَحْ (open!)", contentAr: "احذف بادئة المضارع (ت/ي/ن/أ)، أضف همزة الوصل إذا لزم الأمر:\nتَكْتُبُ → اُكْتُبْ (اكتب)\nتَجْلِسُ → اِجْلِسْ (اجلس)\nتَفْتَحُ → اِفْتَحْ (افتح)", contentFr: "Supprimez le préfixe du temps présent (ت/ي/ن/أ), ajoutez hamzat al-wasl si nécessaire:\nتَكْتُبُ → اُكْتُبْ (write!)\nتَجْلِسُ → اِجْلِسْ (sit!)\nتَفْتَحُ → اِفْتَحْ (open!)" },
+        { title: "Hamzat al-Wasl Rules", titleAr: "قواعد همزة الوصل", titleFr: "Règles hamzat al-wasl", content: "If first letter after removing prefix has:\n• Damma (ُ): use اُ\n• Kasra (ِ) or Fatha (َ): use اِ", contentAr: "إذا كان الحرف الأول بعد حذف البادئة:\n• به ضمة (ُ): استخدم اُ\n• به كسرة (ِ) أو فتحة (َ): استخدم اِ", contentFr: "Si la première lettre après suppression du préfixe a:\n• Damma (ُ): use اُ\n• Kasra (ِ) or Fatha (َ): use اِ" },
+        { title: "Negative Commands", titleAr: "الأوامر السالبة", titleFr: "Ordres négatifs", content: "Use لا + Jussive:\nلا تَكْتُبْ - Don't write\nلا تَذْهَبْ - Don't go", contentAr: "استخدم لا + المضارع المجزوم:\nلا تَكْتُبْ - لا تكتب\nلا تَذْهَبْ - لا تذهب", contentFr: "Utilisez لا + Jussive:\nلا تَكْتُبْ - Don't write\nلا تَذْهَبْ - Don't go" }
       ],
       vocabulary: [
-        { arabic: "اُكْتُبْ", transliteration: "uktub", meaning: "write!", meaningFr: "écris!" },
-        { arabic: "اِقْرَأْ", transliteration: "iqra'", meaning: "read!", meaningFr: "lis!" },
-        { arabic: "اِسْمَعْ", transliteration: "isma'", meaning: "listen!", meaningFr: "écoute!" },
-        { arabic: "تَعَالَ", transliteration: "ta'āla", meaning: "come!", meaningFr: "viens!" },
-        { arabic: "اُنْظُرْ", transliteration: "unẓur", meaning: "look!", meaningFr: "regarde!" }
+        { arabic: "اُكْتُبْ", transliteration: "uktub", meaning: "write!", meaningAr: "اكتب", meaningFr: "écris!" },
+        { arabic: "اِقْرَأْ", transliteration: "iqra'", meaning: "read!", meaningAr: "اقرأ", meaningFr: "lis!" },
+        { arabic: "اِسْمَعْ", transliteration: "isma'", meaning: "listen!", meaningAr: "استمع، اسمع", meaningFr: "écoute!" },
+        { arabic: "تَعَالَ", transliteration: "ta'āla", meaning: "come!", meaningAr: "تعال", meaningFr: "viens!" },
+        { arabic: "اُنْظُرْ", transliteration: "unẓur", meaning: "look!", meaningAr: "انظر", meaningFr: "regarde!" }
       ]
     },
     exerciseCount: 16, prerequisites: ["3-8"]
@@ -249,22 +267,24 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "الجمل الشرطية",
     titleFr: "Les phrases conditionnelles (الجمل الشرطية)",
     description: "Learn to form if-then conditional sentences",
+    descriptionAr: "تعلم تكوين جمل الشرط من النوع إن-إذا",
     descriptionFr: "Apprenez à former des phrases conditionnelles si-alors",
     objectives: ["Understand condition and response", "Use إِنْ and إِذَا", "Apply correct verb moods", "Form real and unreal conditions"],
+    objectivesAr: ["فهم البنية الشرطية", "استخدام إن وإذا", "تطبيق أوقات الفعل الصحيحة", "تكوين شروط حقيقية وغير حقيقية"],
     objectivesFr: ["Comprendre la condition et la réponse", "Utiliser إِنْ et إِذَا", "Appliquer les modes corrects", "Former des conditions réelles et irréelles"],
     estimatedTime: 55, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Conditional Structure", titleFr: "Structure conditionnelle", content: "Arabic conditionals have:\n1. Conditional particle (أداة الشرط)\n2. Condition clause (فعل الشرط)\n3. Response clause (جواب الشرط)", contentFr: "Les conditionnelles arabes ont:\n1. Particule conditionnelle (أداة الشرط)\n2. Clause de condition (فعل الشرط)\n3. Clause de réponse (جواب الشرط)" },
-        { title: "إِنْ vs إِذَا", titleFr: "إِنْ vs إِذَا", content: "إِنْ - uncertain condition (uses jussive)\nإِذَا - likely condition (uses indicative)\n\nإِنْ تَدْرُسْ تَنْجَحْ - If you study, you'll succeed\nإِذَا دَرَسْتَ نَجَحْتَ - When you study, you succeed", contentFr: "إِنْ - condition incertaine (utilise le jussif)\nإِذَا - condition probable (utilise l'indicatif)\n\nإِنْ تَدْرُسْ تَنْجَحْ - If you study, you'll succeed\nإِذَا دَرَسْتَ نَجَحْتَ - When you study, you succeed" },
-        { title: "Other Conditionals", titleFr: "Autres conditionnelles", content: "لَوْ - hypothetical (if only)\nلَوْلا - if not for\nمَنْ - whoever\nمَا - whatever", contentFr: "لَوْ - hypothetical (if only)\nلَوْلا - if not for\nمَنْ - whoever\nمَا - whatever" }
+        { title: "Conditional Structure", titleAr: "بنية الجملة الشرطية", titleFr: "Structure conditionnelle", content: "Arabic conditionals have:\n1. Conditional particle (أداة الشرط)\n2. Condition clause (فعل الشرط)\n3. Response clause (جواب الشرط)", contentAr: "الجملة الشرطية لديها:\n1. أداة الشرط\n2. فعل الشرط\n3. جواب الشرط", contentFr: "Les conditionnelles arabes ont:\n1. Particule conditionnelle (أداة الشرط)\n2. Clause de condition (فعل الشرط)\n3. Clause de réponse (جواب الشرط)" },
+        { title: "إِنْ vs إِذَا", titleAr: "إن مقابل إذا", titleFr: "إِنْ vs إِذَا", content: "إِنْ - uncertain condition (uses jussive)\nإِذَا - likely condition (uses indicative)\n\nإِنْ تَدْرُسْ تَنْجَحْ - If you study, you'll succeed\nإِذَا دَرَسْتَ نَجَحْتَ - When you study, you succeed", contentAr: "إِنْ - شرط غير مؤكد (يستخدم الجزم)\nإِذَا - شرط محتمل (يستخدم المضارع العادي)\n\nإِنْ تَدْرُسْ تَنْجَحْ - إن تدرس تنجح\nإِذَا دَرَسْتَ نَجَحْتَ - إذا درست نجحت", contentFr: "إِنْ - condition incertaine (utilise le jussif)\nإِذَا - condition probable (utilise l'indicatif)\n\nإِنْ تَدْرُسْ تَنْجَحْ - If you study, you'll succeed\nإِذَا دَرَسْتَ نَجَحْتَ - When you study, you succeed" },
+        { title: "Other Conditionals", titleAr: "شروط أخرى", titleFr: "Autres conditionnelles", content: "لَوْ - hypothetical (if only)\nلَوْلا - if not for\nمَنْ - whoever\nمَا - whatever", contentAr: "لَوْ - افتراضي (لو فقط)\nلَوْلا - لولا\nمَنْ - من، أيا كان من\nمَا - ما، أيا كان ما", contentFr: "لَوْ - hypothetical (if only)\nلَوْلا - if not for\nمَنْ - whoever\nمَا - whatever" }
       ],
       vocabulary: [
-        { arabic: "إِنْ شَاءَ اللهُ", transliteration: "in shā' Allāh", meaning: "God willing", meaningFr: "si Dieu le veut" },
-        { arabic: "لَوْ سَمَحْتَ", transliteration: "law samaḥta", meaning: "please (if you permit)", meaningFr: "s'il vous plaît" },
-        { arabic: "إِذَا أَرَدْتَ", transliteration: "idhā aradta", meaning: "if you want", meaningFr: "si tu veux" },
-        { arabic: "مَهْمَا حَدَثَ", transliteration: "mahmā ḥadatha", meaning: "whatever happens", meaningFr: "quoi qu'il advienne" },
-        { arabic: "حَيْثُمَا", transliteration: "ḥaythumā", meaning: "wherever", meaningFr: "n'importe où" }
+        { arabic: "إِنْ شَاءَ اللهُ", transliteration: "in shā' Allāh", meaning: "God willing", meaningAr: "إن شاء الله", meaningFr: "si Dieu le veut" },
+        { arabic: "لَوْ سَمَحْتَ", transliteration: "law samaḥta", meaning: "please (if you permit)", meaningAr: "لو سمحت", meaningFr: "s'il vous plaît" },
+        { arabic: "إِذَا أَرَدْتَ", transliteration: "idhā aradta", meaning: "if you want", meaningAr: "إذا أردت", meaningFr: "si tu veux" },
+        { arabic: "مَهْمَا حَدَثَ", transliteration: "mahmā ḥadatha", meaning: "whatever happens", meaningAr: "مهما حدث، أيا كان ما يحدث", meaningFr: "quoi qu'il advienne" },
+        { arabic: "حَيْثُمَا", transliteration: "ḥaythumā", meaning: "wherever", meaningAr: "حيثما، أينما", meaningFr: "n'importe où" }
       ]
     },
     exerciseCount: 17, prerequisites: ["3-9"]
@@ -275,15 +295,17 @@ export const PHASE_3_LESSONS: Lesson[] = [
     titleAr: "المبني للمجهول",
     titleFr: "La voix passive (المبني للمجهول)",
     description: "Learn to form and use passive voice in Arabic",
+    descriptionAr: "تعلم تكوين واستخدام الصيغة المبنية للمجهول",
     descriptionFr: "Apprenez à former et utiliser la voix passive en arabe",
     objectives: ["Change active to passive", "Apply vowel patterns", "Use passive in different tenses", "Identify passive in texts"],
+    objectivesAr: ["تحويل المعلوم إلى مجهول", "تطبيق أنماط الحركات", "استخدام المجهول في أوقات مختلفة", "تحديد المجهول في النصوص"],
     objectivesFr: ["Changer l'actif en passif", "Appliquer les modèles de voyelles", "Utiliser le passif dans différents temps", "Identifier le passif dans les textes"],
     estimatedTime: 50, difficulty: "medium", xpReward: 65,
     content: {
       theory: [
-        { title: "Passive Vowel Pattern", titleFr: "Modèle des voyelles passives", content: "Past: فَعَلَ → فُعِلَ (1st vowel = damma, 2nd = kasra)\nكَتَبَ → كُتِبَ (was written)\nPresent: يَفْعَلُ → يُفْعَلُ (1st prefix = damma, root = fatha)\nيَكْتُبُ → يُكْتَبُ (is being written)", contentFr: "Passé: فَعَلَ → فُعِلَ (1ère voyelle = damma, 2ème = kasra)\nكَتَبَ → كُتِبَ (was written)\nPrésent: يَفْعَلُ → يُفْعَلُ (1er préfixe = damma, racine = fatha)\nيَكْتُبُ → يُكْتَبُ (is being written)" },
-        { title: "Examples", titleFr: "Exemples", content: "قَرَأَ الطَّالِبُ الكِتَابَ → قُرِئَ الكِتَابُ\nThe student read the book → The book was read\n\nيَبْنِي العُمَّالُ البَيْتَ → يُبْنَى البَيْتُ\nThe workers build the house → The house is being built", contentFr: "قَرَأَ الطَّالِبُ الكِتَابَ → قُرِئَ الكِتَابُ\nThe student read the book → The book was read\n\nيَبْنِي العُمَّالُ البَيْتَ → يُبْنَى البَيْتُ\nThe workers build the house → The house is being built" },
-        { title: "Passive Participle", titleFr: "Participe passif", content: "مَفْعُول pattern:\nمَكْتُوب - written\nمَعْرُوف - known\nمَفْهُوم - understood", contentFr: "Modèle مَفْعُول:\nمَكْتُوب - written\nمَعْرُوف - known\nمَفْهُوم - understood" }
+        { title: "Passive Vowel Pattern", titleAr: "نمط حركات المجهول", titleFr: "Modèle des voyelles passives", content: "Past: فَعَلَ → فُعِلَ (1st vowel = damma, 2nd = kasra)\nكَتَبَ → كُتِبَ (was written)\nPresent: يَفْعَلُ → يُفْعَلُ (1st prefix = damma, root = fatha)\nيَكْتُبُ → يُكْتَبُ (is being written)", contentAr: "الماضي: فَعَلَ → فُعِلَ (الحركة الأولى ضمة، الثانية كسرة)\nكَتَبَ → كُتِبَ (تم كتابته)\nالمضارع: يَفْعَلُ → يُفْعَلُ (البادئة ضمة، الجذر فتحة)\nيَكْتُبُ → يُكْتَبُ (يتم كتابته)", contentFr: "Passé: فَعَلَ → فُعِلَ (1ère voyelle = damma, 2ème = kasra)\nكَتَبَ → كُتِبَ (was written)\nPrésent: يَفْعَلُ → يُفْعَلُ (1er préfixe = damma, racine = fatha)\nيَكْتُبُ → يُكْتَبُ (is being written)" },
+        { title: "Examples", titleAr: "أمثلة", titleFr: "Exemples", content: "قَرَأَ الطَّالِبُ الكِتَابَ → قُرِئَ الكِتَابُ\nThe student read the book → The book was read\n\nيَبْنِي العُمَّالُ البَيْتَ → يُبْنَى البَيْتُ\nThe workers build the house → The house is being built", contentAr: "قَرَأَ الطَّالِبُ الكِتَابَ → قُرِئَ الكِتَابُ\nقرأ الطالب الكتاب → تم قراءة الكتاب\n\nيَبْنِي العُمَّالُ البَيْتَ → يُبْنَى البَيْتُ\nيبني العمال البيت → يتم بناء البيت", contentFr: "قَرَأَ الطَّالِبُ الكِتَابَ → قُرِئَ الكِتَابُ\nThe student read the book → The book was read\n\nيَبْنِي العُمَّالُ البَيْتَ → يُبْنَى البَيْتُ\nThe workers build the house → The house is being built" },
+        { title: "Passive Participle", titleAr: "اسم المفعول", titleFr: "Participe passif", content: "مَفْعُول pattern:\nمَكْتُوب - written\nمَعْرُوف - known\nمَفْهُوم - understood", contentAr: "صيغة مَفْعُول:\nمَكْتُوب - مكتوب\nمَعْرُوف - معروف\nمَفْهُوم - مفهوم", contentFr: "Modèle مَفْعُول:\nمَكْتُوب - written\nمَعْرُوف - known\nمَفْهُوم - understood" }
       ],
       vocabulary: [
         { arabic: "كُتِبَ", transliteration: "kutiba", meaning: "was written", meaningFr: "a été écrit" },

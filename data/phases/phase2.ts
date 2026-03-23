@@ -23,12 +23,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "أفراد العائلة",
     titleFr: "Les membres de la famille",
     description: "Learn vocabulary for family relationships",
+    descriptionAr: "تعلم مفردات علاقات الأسرة",
     descriptionFr: "Apprenez le vocabulaire des relations familiales",
     objectives: [
       "Name immediate family members in Arabic",
       "Understand masculine/feminine forms",
       "Use possessive pronouns with family words",
       "Introduce your family in Arabic"
+    ],
+    objectivesAr: [
+      "تسمية أفراد الأسرة المباشرين باللغة العربية",
+      "فهم الصيغ المذكرة والمؤنثة",
+      "استخدام ضمائر الملكية مع كلمات الأسرة",
+      "تقديم عائلتك باللغة العربية"
     ],
     objectivesFr: [
       "Nommer les membres immédiats de la famille en arabe",
@@ -43,35 +50,41 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Arabic Family",
+          titleAr: "الأسرة العربية",
           titleFr: "La famille arabe",
           content: "Family (عَائِلَة - 'ā'ila) is central to Arabic culture. Arabic has specific terms for every family relationship - sometimes more specific than English!\n\nKey terms:\nأَب (ab) = father\nأُمّ (umm) = mother\nاِبْن (ibn) = son\nبِنْت (bint) = daughter",
+          contentAr: "الأسرة (عَائِلَة - 'ā'ila) محورية في الثقافة العربية. للعربية مصطلحات محددة لكل علاقة أسرية - أحيانًا أكثر تحديدًا من الإنجليزية!\n\nالمصطلحات الرئيسية:\nأَب (ab) = الأب\nأُمّ (umm) = الأم\nاِبْن (ibn) = الابن\nبِنْت (bint) = الابنة",
           contentFr: "La famille (عَائِلَة - 'ā'ila) est au centre de la culture arabe. L'arabe a des termes spécifiques pour chaque relation familiale - parfois plus spécifiques qu'en anglais !\n\nTermes clés :\nأَب (ab) = père\nأُمّ (umm) = mère\nاِبْن (ibn) = fils\nبِنْت (bint) = fille"
         },
         {
           title: "Extended Family",
+          titleAr: "الأسرة الممتدة",
           titleFr: "La famille étendue",
           content: "جَدّ (jadd) = grandfather\nجَدَّة (jadda) = grandmother\nعَمّ ('amm) = paternal uncle\nخَال (khāl) = maternal uncle\nعَمَّة ('amma) = paternal aunt\nخَالَة (khāla) = maternal aunt\n\nNote: Arabic distinguishes between father's and mother's sides!",
+          contentAr: "جَدّ (jadd) = الجد\nجَدَّة (jadda) = الجدة\nعَمّ ('amm) = العم الأبوي\nخَال (khāl) = العم الأموي\nعَمَّة ('amma) = العمة الأبوية\nخَالَة (khāla) = العمة الأموية\n\nملاحظة: العربية تمييز بين الجانب الأبوي والجانب الأموي!",
           contentFr: "جَدّ (jadd) = grand-père\nجَدَّة (jadda) = grand-mère\nعَمّ ('amm) = oncle paternel\nخَال (khāl) = oncle maternel\nعَمَّة ('amma) = tante paternelle\nخَالَة (khāla) = tante maternelle\n\nRemarque : L'arabe distingue les côtés paternel et maternel !"
         },
         {
           title: "Siblings",
+          titleAr: "الإخوة والأخوات",
           titleFr: "Les frères et sœurs",
           content: "أَخ (akh) = brother\nأُخْت (ukht) = sister\nإِخْوَة (ikhwa) = brothers/siblings\nأَخَوَات (akhawāt) = sisters\n\nIn Arabic, إِخْوَة can mean 'brothers' or 'siblings' (brothers and sisters together).",
+          contentAr: "أَخ (akh) = الأخ\nأُخْت (ukht) = الأخت\nإِخْوَة (ikhwa) = الإخوة (الذكور أو الإخوة والأخوات معًا)\nأَخَوَات (akhawāt) = الأخوات\n\nفي العربية، إِخْوَة يمكن أن يعني 'الإخوة' أو 'الإخوة والأخوات' (معًا).",
           contentFr: "أَخ (akh) = frère\nأُخْت (ukht) = sœur\nإِخْوَة (ikhwa) = frères/frères et sœurs\nأَخَوَات (akhawāt) = sœurs\n\nEn arabe, إِخْوَة peut signifier 'frères' ou 'frères et sœurs' (ensemble)."
         }
       ],
       vocabulary: [
-        { arabic: "عَائِلَة", transliteration: "'ā'ila", meaning: "family", meaningFr: "famille" },
-        { arabic: "أَب", transliteration: "ab", meaning: "father", meaningFr: "père" },
-        { arabic: "أُمّ", transliteration: "umm", meaning: "mother", meaningFr: "mère" },
-        { arabic: "اِبْن", transliteration: "ibn", meaning: "son", meaningFr: "fils" },
-        { arabic: "بِنْت", transliteration: "bint", meaning: "daughter", meaningFr: "fille" },
-        { arabic: "أَخ", transliteration: "akh", meaning: "brother", meaningFr: "frère" },
-        { arabic: "أُخْت", transliteration: "ukht", meaning: "sister", meaningFr: "sœur" },
-        { arabic: "جَدّ", transliteration: "jadd", meaning: "grandfather", meaningFr: "grand-père" },
-        { arabic: "جَدَّة", transliteration: "jadda", meaning: "grandmother", meaningFr: "grand-mère" },
-        { arabic: "زَوْج", transliteration: "zawj", meaning: "husband", meaningFr: "mari" },
-        { arabic: "زَوْجَة", transliteration: "zawja", meaning: "wife", meaningFr: "épouse" }
+        { arabic: "عَائِلَة", transliteration: "'ā'ila", meaning: "family", meaningAr: "الأسرة", meaningFr: "famille" },
+        { arabic: "أَب", transliteration: "ab", meaning: "father", meaningAr: "الأب", meaningFr: "père" },
+        { arabic: "أُمّ", transliteration: "umm", meaning: "mother", meaningAr: "الأم", meaningFr: "mère" },
+        { arabic: "اِبْن", transliteration: "ibn", meaning: "son", meaningAr: "الابن", meaningFr: "fils" },
+        { arabic: "بِنْت", transliteration: "bint", meaning: "daughter", meaningAr: "الابنة", meaningFr: "fille" },
+        { arabic: "أَخ", transliteration: "akh", meaning: "brother", meaningAr: "الأخ", meaningFr: "frère" },
+        { arabic: "أُخْت", transliteration: "ukht", meaning: "sister", meaningAr: "الأخت", meaningFr: "sœur" },
+        { arabic: "جَدّ", transliteration: "jadd", meaning: "grandfather", meaningAr: "الجد", meaningFr: "grand-père" },
+        { arabic: "جَدَّة", transliteration: "jadda", meaning: "grandmother", meaningAr: "الجدة", meaningFr: "grand-mère" },
+        { arabic: "زَوْج", transliteration: "zawj", meaning: "husband", meaningAr: "الزوج", meaningFr: "mari" },
+        { arabic: "زَوْجَة", transliteration: "zawja", meaning: "wife", meaningAr: "الزوجة", meaningFr: "épouse" }
       ]
     },
     exerciseCount: 16,
@@ -85,12 +98,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "أعضاء الجسم",
     titleFr: "Les parties du corps",
     description: "Learn vocabulary for parts of the body",
+    descriptionAr: "تعلم مفردات أعضاء الجسم",
     descriptionFr: "Apprenez le vocabulaire des parties du corps",
     objectives: [
       "Name major body parts in Arabic",
       "Understand dual form for paired body parts",
       "Use definite articles with body parts",
       "Describe physical appearance basics"
+    ],
+    objectivesAr: [
+      "تسمية أجزاء الجسم الرئيسية باللغة العربية",
+      "فهم الصيغة الثنائية لأعضاء الجسم المتزوجة",
+      "استخدام أدوات التعريف مع أعضاء الجسم",
+      "وصف المظهر البدني الأساسي"
     ],
     objectivesFr: [
       "Nommer les principales parties du corps en arabe",
@@ -105,33 +125,39 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Head and Face",
+          titleAr: "الرأس والوجه",
           titleFr: "La tête et le visage",
           content: "رَأْس (ra's) = head\nوَجْه (wajh) = face\nعَيْن ('ayn) = eye (also the letter!)\nأَنْف (anf) = nose\nفَم (fam) = mouth\nأُذُن (udhun) = ear\nشَعْر (sha'r) = hair",
+          contentAr: "رَأْس (ra's) = الرأس\nوَجْه (wajh) = الوجه\nعَيْن ('ayn) = العين (وأيضًا الحرف!)\nأَنْف (anf) = الأنف\nفَم (fam) = الفم\nأُذُن (udhun) = الأذن\nشَعْر (sha'r) = الشعر",
           contentFr: "رَأْس (ra's) = tête\nوَجْه (wajh) = visage\nعَيْن ('ayn) = œil (aussi la lettre !)\nأَنْف (anf) = nez\nفَم (fam) = bouche\nأُذُن (udhun) = oreille\nشَعْر (sha'r) = cheveux"
         },
         {
           title: "The Dual Form",
+          titleAr: "الصيغة الثنائية",
           titleFr: "La forme duelle",
           content: "Arabic has a special form for TWO of something!\n\nعَيْن ('ayn) = one eye\nعَيْنَان ('aynān) = two eyes\nأُذُن (udhun) = one ear\nأُذُنَان (udhunān) = two ears\n\nFor body parts that come in pairs, the dual is common!",
+          contentAr: "للعربية صيغة خاصة لاثنين من شيء!\n\nعَيْن ('ayn) = عين واحدة\nعَيْنَان ('aynān) = عينان\nأُذُن (udhun) = أذن واحدة\nأُذُنَان (udhunān) = أذنان\n\nللأعضاء التي تأتي في أزواج، الصيغة الثنائية شائعة!",
           contentFr: "L'arabe a une forme spéciale pour DEUX choses !\n\nعَيْن ('ayn) = un œil\nعَيْنَان ('aynān) = deux yeux\nأُذُن (udhun) = une oreille\nأُذُنَان (udhunān) = deux oreilles\n\nPour les parties du corps qui viennent par paires, la forme duelle est courante !"
         },
         {
           title: "The Body",
+          titleAr: "الجسد",
           titleFr: "Le corps",
           content: "جِسْم (jism) = body\nيَد (yad) = hand\nرِجْل (rijl) = leg/foot\nقَلْب (qalb) = heart\nبَطْن (baṭn) = stomach\nظَهْر (ẓahr) = back",
+          contentAr: "جِسْم (jism) = الجسم\nيَد (yad) = اليد\nرِجْل (rijl) = الرجل/القدم\nقَلْب (qalb) = القلب\nبَطْن (baṭn) = البطن\nظَهْر (ẓahr) = الظهر",
           contentFr: "جِسْم (jism) = corps\nيَد (yad) = main\nرِجْل (rijl) = jambe/pied\nقَلْب (qalb) = cœur\nبَطْن (baṭn) = estomac\nظَهْر (ẓahr) = dos"
         }
       ],
       vocabulary: [
-        { arabic: "رَأْس", transliteration: "ra's", meaning: "head", meaningFr: "tête" },
-        { arabic: "وَجْه", transliteration: "wajh", meaning: "face", meaningFr: "visage" },
-        { arabic: "عَيْن", transliteration: "'ayn", meaning: "eye", meaningFr: "œil" },
-        { arabic: "أُذُن", transliteration: "udhun", meaning: "ear", meaningFr: "oreille" },
-        { arabic: "فَم", transliteration: "fam", meaning: "mouth", meaningFr: "bouche" },
-        { arabic: "يَد", transliteration: "yad", meaning: "hand", meaningFr: "main" },
-        { arabic: "رِجْل", transliteration: "rijl", meaning: "leg/foot", meaningFr: "jambe/pied" },
-        { arabic: "قَلْب", transliteration: "qalb", meaning: "heart", meaningFr: "cœur" },
-        { arabic: "جِسْم", transliteration: "jism", meaning: "body", meaningFr: "corps" }
+        { arabic: "رَأْس", transliteration: "ra's", meaning: "head", meaningAr: "الرأس", meaningFr: "tête" },
+        { arabic: "وَجْه", transliteration: "wajh", meaning: "face", meaningAr: "الوجه", meaningFr: "visage" },
+        { arabic: "عَيْن", transliteration: "'ayn", meaning: "eye", meaningAr: "العين", meaningFr: "œil" },
+        { arabic: "أُذُن", transliteration: "udhun", meaning: "ear", meaningAr: "الأذن", meaningFr: "oreille" },
+        { arabic: "فَم", transliteration: "fam", meaning: "mouth", meaningAr: "الفم", meaningFr: "bouche" },
+        { arabic: "يَد", transliteration: "yad", meaning: "hand", meaningAr: "اليد", meaningFr: "main" },
+        { arabic: "رِجْل", transliteration: "rijl", meaning: "leg/foot", meaningAr: "الرجل/القدم", meaningFr: "jambe/pied" },
+        { arabic: "قَلْب", transliteration: "qalb", meaning: "heart", meaningAr: "القلب", meaningFr: "cœur" },
+        { arabic: "جِسْم", transliteration: "jism", meaning: "body", meaningAr: "الجسم", meaningFr: "corps" }
       ]
     },
     exerciseCount: 15,
@@ -145,12 +171,19 @@ export const PHASE_2_LESSONS: Lesson[] = [
     titleAr: "الألوان",
     titleFr: "Les couleurs",
     description: "Learn the names of colors in Arabic",
+    descriptionAr: "تعلم أسماء الألوان باللغة العربية",
     descriptionFr: "Apprenez les noms des couleurs en arabe",
     objectives: [
       "Name the basic colors in Arabic",
       "Understand masculine/feminine color forms",
       "Describe objects using colors",
       "Use colors in simple sentences"
+    ],
+    objectivesAr: [
+      "تسمية الألوان الأساسية باللغة العربية",
+      "فهم صيغ الألوان المذكرة والمؤنثة",
+      "وصف الأشياء باستخدام الألوان",
+      "استخدام الألوان في جمل بسيطة"
     ],
     objectivesFr: [
       "Nommer les couleurs de base en arabe",
@@ -165,8 +198,10 @@ export const PHASE_2_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Basic Colors",
+          titleAr: "الألوان الأساسية",
           titleFr: "Les couleurs de base",
           content: "Colors in Arabic change based on the noun's gender!\n\nMasculine → Feminine:\nأَحْمَر (aḥmar) → حَمْرَاء (ḥamrā') = red\nأَزْرَق (azraq) → زَرْقَاء (zarqā') = blue\nأَخْضَر (akhḍar) → خَضْرَاء (khaḍrā') = green\nأَصْفَر (aṣfar) → صَفْرَاء (ṣafrā') = yellow\nأَبْيَض (abyaḍ) → بَيْضَاء (bayḍā') = white\nأَسْوَد (aswad) → سَوْدَاء (sawdā') = black",
+          contentAr: "الألوان في العربية تتغير بناءً على جنس الاسم!\n\nمذكر → مؤنث:\nأَحْمَر (aḥmar) → حَمْرَاء (ḥamrā') = أحمر\nأَزْرَق (azraq) → زَرْقَاء (zarqā') = أزرق\nأَخْضَر (akhḍar) → خَضْرَاء (khaḍrā') = أخضر\nأَصْفَر (aṣfar) → صَفْرَاء (ṣafrā') = أصفر\nأَبْيَض (abyaḍ) → بَيْضَاء (bayḍā') = أبيض\nأَسْوَد (aswad) → سَوْدَاء (sawdā') = أسود",
           contentFr: "Les couleurs en arabe changent selon le genre du nom !\n\nMasculin → Féminin :\nأَحْمَر (aḥmar) → حَمْرَاء (ḥamrā') = rouge\nأَزْرَق (azraq) → زَرْقَاء (zarqā') = bleu\nأَخْضَر (akhḍar) → خَضْرَاء (khaḍrā') = vert\nأَصْفَر (aṣfar) → صَفْرَاء (ṣafrā') = jaune\nأَبْيَض (abyaḍ) → بَيْضَاء (bayḍā') = blanc\nأَسْوَد (aswad) → سَوْدَاء (sawdā') = noir"
         },
         {

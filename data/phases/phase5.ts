@@ -13,22 +13,24 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "أسلوب العربية الكلاسيكية",
     titleFr: "Style de l'arabe classique",
     description: "Master the distinctive features of classical Arabic",
+    descriptionAr: "أتقن السمات المميزة للعربية الكلاسيكية والقديمة",
     descriptionFr: "Maîtrisez les caractéristiques distinctives de l'arabe classique",
     objectives: ["Recognize classical style markers", "Read pre-modern texts", "Understand archaic forms", "Appreciate linguistic beauty"],
+    objectivesAr: ["التعرف على علامات الأسلوب الكلاسيكي", "قراءة النصوص ما قبل الحديثة", "فهم الأشكال الأرخائية", "تقدير الجمال اللغوي"],
     objectivesFr: ["Reconnaître les marqueurs du style classique", "Lire les textes prémodernes", "Comprendre les formes archaïques", "Apprécier la beauté linguistique"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "Classical Features", titleFr: "Caractéristiques classiques", content: "Full case endings (i'rab) consistently used\nClassical vocabulary (rare in modern Arabic)\nComplex sentence structures\nRhetorical devices (بديع)", contentFr: "Terminaisons casuelles complètes (i'rab) utilisées systématiquement\nVocabulaire classique (rare en arabe moderne)\nStructures de phrases complexes\nProcédés rhétoriques (بديع)" },
-        { title: "Archaic Forms", titleFr: "Formes archaïques", content: "إِذْ for past time (when)\nلَمَّا meaning 'when' (not 'not yet')\nقَدْ for emphasis\nOath formulas: وَاللهِ، تَاللهِ", contentFr: "إِذْ pour le temps passé (quand)\nلَمَّا signifiant « quand » (pas « pas encore »)\nقَدْ pour l'emphase\nFormules de serment: وَاللهِ، تَاللهِ" },
-        { title: "Reading Classical Texts", titleFr: "Lecture de textes classiques", content: "Start with voweled texts\nUse classical dictionaries: لِسَان العَرَب\nStudy تَفْسِير for Quran\nPractice إِعْرَاب (parsing)", contentFr: "Commencez par des textes vocalisés\nUtilisez des dictionnaires classiques: لِسَان العَرَب\nÉtudiez le تَفْسِير pour le Coran\nPratiquez إِعْرَاب (analyse grammaticale)" }
+        { title: "Classical Features", titleAr: "السمات الكلاسيكية", titleFr: "Caractéristiques classiques", content: "Full case endings (i'rab) consistently used\nClassical vocabulary (rare in modern Arabic)\nComplex sentence structures\nRhetorical devices (بديع)", contentAr: "استخدام الحروف الإعرابية الكاملة (الإعراب) باستمرار\nالمفردات الكلاسيكية (نادرة في العربية الحديثة)\nالهياكل الجملية المعقدة\nالأجهزة البلاغية (البديع)", contentFr: "Terminaisons casuelles complètes (i'rab) utilisées systématiquement\nVocabulaire classique (rare en arabe moderne)\nStructures de phrases complexes\nProcédés rhétoriques (بديع)" },
+        { title: "Archaic Forms", titleAr: "الأشكال الأرخائية", titleFr: "Formes archaïques", content: "إِذْ for past time (when)\nلَمَّا meaning 'when' (not 'not yet')\nقَدْ for emphasis\nOath formulas: وَاللهِ، تَاللهِ", contentAr: "إِذْ للدلالة على الزمن الماضي (متى)\nلَمَّا بمعنى 'متى' (وليس 'لم بعد')\nقَدْ للتأكيد\nصيغ الحلف: وَاللهِ، تَاللهِ", contentFr: "إِذْ pour le temps passé (quand)\nلَمَّا signifiant « quand » (pas « pas encore »)\nقَدْ pour l'emphase\nFormules de serment: وَاللهِ، تَاللهِ" },
+        { title: "Reading Classical Texts", titleAr: "قراءة النصوص الكلاسيكية", titleFr: "Lecture de textes classiques", content: "Start with voweled texts\nUse classical dictionaries: لِسَان العَرَب\nStudy تَفْسِير for Quran\nPractice إِعْرَاب (parsing)", contentAr: "ابدأ بالنصوص المشكولة بالحروف\nاستخدم القواميس الكلاسيكية: لسان العرب\nادرس التفسير للقرآن الكريم\nمارس الإعراب (التحليل النحوي)", contentFr: "Commencez par des textes vocalisés\nUtilisez des dictionnaires classiques: لِسَان العَرَب\nÉtudiez le تَفْسِير pour le Coran\nPratiquez إِعْرَاب (analyse grammaticale)" }
       ],
       vocabulary: [
-        { arabic: "فُصْحَى", transliteration: "fuṣḥā", meaning: "classical Arabic", meaningFr: "arabe classique" },
-        { arabic: "عَامِّيَّة", transliteration: "'āmmiyya", meaning: "colloquial Arabic", meaningFr: "arabe parlé" },
-        { arabic: "نَحْو", transliteration: "naḥw", meaning: "grammar", meaningFr: "grammaire" },
-        { arabic: "صَرْف", transliteration: "ṣarf", meaning: "morphology", meaningFr: "morphologie" },
-        { arabic: "بَلَاغَة", transliteration: "balāgha", meaning: "rhetoric", meaningFr: "rhétorique" }
+        { arabic: "فُصْحَى", transliteration: "fuṣḥā", meaning: "classical Arabic", meaningAr: "العربية الفصحى القديمة", meaningFr: "arabe classique" },
+        { arabic: "عَامِّيَّة", transliteration: "'āmmiyya", meaning: "colloquial Arabic", meaningAr: "اللغة العامية أو المحكية", meaningFr: "arabe parlé" },
+        { arabic: "نَحْو", transliteration: "naḥw", meaning: "grammar", meaningAr: "علم القواعد النحوية", meaningFr: "grammaire" },
+        { arabic: "صَرْف", transliteration: "ṣarf", meaning: "morphology", meaningAr: "علم الصرف والتحويل", meaningFr: "morphologie" },
+        { arabic: "بَلَاغَة", transliteration: "balāgha", meaning: "rhetoric", meaningAr: "فن البلاغة والفصاحة", meaningFr: "rhétorique" }
       ]
     },
     exerciseCount: 18, prerequisites: []
@@ -39,22 +41,24 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "خصائص لغة القرآن",
     titleFr: "Caractéristiques de l'arabe coranique",
     description: "Study the unique linguistic features of Quranic Arabic",
+    descriptionAr: "ادرس السمات اللغوية الفريدة للعربية القرآنية",
     descriptionFr: "Étudiez les caractéristiques linguistiques uniques de l'arabe coranique",
     objectives: ["Recognize Quranic style", "Understand unique vocabulary", "Appreciate rhetorical beauty", "Read with understanding"],
+    objectivesAr: ["التعرف على الأسلوب القرآني", "فهم المفردات الفريدة", "تقدير الجمال البلاغي", "القراءة بفهم وتدبر"],
     objectivesFr: ["Reconnaître le style coranique", "Comprendre le vocabulaire unique", "Apprécier la beauté rhétorique", "Lire avec compréhension"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "Unique Vocabulary", titleFr: "Vocabulaire unique", content: "Some words have specific Quranic meanings:\nكَافِر - disbeliever (vs. farmer)\nصَلَاة - ritual prayer (vs. supplication)\nسَبِيل - way/path (often religious)", contentFr: "Certains mots ont des significations spécifiques au Coran:\nكَافِر - incroyant (vs. agriculteur)\nصَلَاة - prière rituelle (vs. supplication)\nسَبِيل - voie/chemin (souvent religieux)" },
-        { title: "Stylistic Features", titleFr: "Caractéristiques stylistiques", content: "Ring composition (مُعَاقَبَة)\nParallelism (مُقَابَلَة)\nRepetition for emphasis\nRhythmic prose (سَجْع)", contentFr: "Composition circulaire (مُعَاقَبَة)\nParallélisme (مُقَابَلَة)\nRépétition pour l'emphase\nProse rythmique (سَجْع)" },
-        { title: "Grammar Variations", titleFr: "Variations grammaticales", content: "Some grammatical forms unique to Quran\nInfluence on all later Arabic\nFoundation of فُصْحَى standards", contentFr: "Certaines formes grammaticales uniques au Coran\nInfluence sur tout l'arabe ultérieur\nFondation des normes فُصْحَى" }
+        { title: "Unique Vocabulary", titleAr: "المفردات الفريدة", titleFr: "Vocabulaire unique", content: "Some words have specific Quranic meanings:\nكَافِر - disbeliever (vs. farmer)\nصَلَاة - ritual prayer (vs. supplication)\nسَبِيل - way/path (often religious)", contentAr: "بعض الكلمات لها معانٍ قرآنية محددة:\nكَافِر - الكافر بالله (مقابل المزارع)\nصَلَاة - الصلاة المفروضة (مقابل الدعاء)\nسَبِيل - الطريق والدين (غالباً بمعنى ديني)", contentFr: "Certains mots ont des significations spécifiques au Coran:\nكَافِر - incroyant (vs. agriculteur)\nصَلَاة - prière rituelle (vs. supplication)\nسَبِيل - voie/chemin (souvent religieux)" },
+        { title: "Stylistic Features", titleAr: "السمات الأسلوبية", titleFr: "Caractéristiques stylistiques", content: "Ring composition (مُعَاقَبَة)\nParallelism (مُقَابَلَة)\nRepetition for emphasis\nRhythmic prose (سَجْع)", contentAr: "التراكيب الحلقية (المعاقبة)\nالمقابلة والتقابل\nالتكرار للتأكيد والإيضاح\nالنثر الموزون (السجع)", contentFr: "Composition circulaire (مُعَاقَبَة)\nParallélisme (مُقَابَلَة)\nRépétition pour l'emphase\nProse rythmique (سَجْع)" },
+        { title: "Grammar Variations", titleAr: "الاختلافات النحوية", titleFr: "Variations grammaticales", content: "Some grammatical forms unique to Quran\nInfluence on all later Arabic\nFoundation of فُصْحَى standards", contentAr: "أشكال نحوية فريدة في القرآن الكريم\nتأثيرها على العربية اللاحقة\nأساس معايير اللغة الفصحى", contentFr: "Certaines formes grammaticales uniques au Coran\nInfluence sur tout l'arabe ultérieur\nFondation des normes فُصْحَى" }
       ],
       vocabulary: [
-        { arabic: "تِلَاوَة", transliteration: "tilāwa", meaning: "recitation", meaningFr: "récitation" },
-        { arabic: "تَرْتِيل", transliteration: "tartīl", meaning: "measured recitation", meaningFr: "récitation mesurée" },
-        { arabic: "آيَة", transliteration: "āya", meaning: "verse/sign", meaningFr: "verset/signe" },
-        { arabic: "سُورَة", transliteration: "sūra", meaning: "chapter", meaningFr: "sourate" },
-        { arabic: "جُزْء", transliteration: "juz'", meaning: "part (1/30 of Quran)", meaningFr: "partie (1/30 du Coran)" }
+        { arabic: "تِلَاوَة", transliteration: "tilāwa", meaning: "recitation", meaningAr: "تلاوة القرآن الكريم والقراءة", meaningFr: "récitation" },
+        { arabic: "تَرْتِيل", transliteration: "tartīl", meaning: "measured recitation", meaningAr: "التلاوة الرتيلة والمتأنية", meaningFr: "récitation mesurée" },
+        { arabic: "آيَة", transliteration: "āya", meaning: "verse/sign", meaningAr: "الآية القرآنية أو العلامة", meaningFr: "verset/signe" },
+        { arabic: "سُورَة", transliteration: "sūra", meaning: "chapter", meaningAr: "السورة من سور القرآن", meaningFr: "sourate" },
+        { arabic: "جُزْء", transliteration: "juz'", meaning: "part (1/30 of Quran)", meaningAr: "الجزء من أجزاء القرآن (واحد من ثلاثين)", meaningFr: "partie (1/30 du Coran)" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-1"]
@@ -65,22 +69,24 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الأحاديث النبوية",
     titleFr: "La littérature du Hadith",
     description: "Introduction to Prophetic traditions",
+    descriptionAr: "مقدمة إلى التقاليد النبوية الشريفة",
     descriptionFr: "Introduction aux traditions prophétiques",
     objectives: ["Understand hadith structure", "Learn key terminology", "Read basic hadiths", "Appreciate historical significance"],
+    objectivesAr: ["فهم بناء الحديث النبوي", "تعلم المصطلحات الأساسية", "قراءة الأحاديث الأساسية", "تقدير الأهمية التاريخية"],
     objectivesFr: ["Comprendre la structure du hadith", "Apprendre la terminologie clé", "Lire les hadiths de base", "Apprécier la signification historique"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "Hadith Structure", titleFr: "Structure du hadith", content: "سَنَد (chain of narration) + مَتْن (text)\nExample: قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ:\n'The Prophet said...'", contentFr: "سَنَد (chaîne de narration) + مَتْن (texte)\nExemple: قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ:\n« Le Prophète a dit... »" },
-        { title: "Major Collections", titleFr: "Collections majeures", content: "صَحِيح البُخَارِيّ - most authentic\nصَحِيح مُسْلِم\nسُنَن أَبِي دَاوُد\nجَامِع التِّرْمِذِيّ", contentFr: "صَحِيح البُخَارِيّ - le plus authentique\nصَحِيح مُسْلِم\nسُنَن أَبِي دَاوُد\nجَامِع التِّرْمِذِيّ" },
-        { title: "Key Vocabulary", titleFr: "Vocabulaire clé", content: "حَدِيث - narration\nرَاوٍ - narrator\nصَحِيح - authentic\nضَعِيف - weak\nمَوْضُوع - fabricated", contentFr: "حَدِيث - narration\nرَاوٍ - narrateur\nصَحِيح - authentique\nضَعِيف - faible\nمَوْضُوع - fabriqué" }
+        { title: "Hadith Structure", titleAr: "بناء الحديث النبوي", titleFr: "Structure du hadith", content: "سَنَد (chain of narration) + مَتْن (text)\nExample: قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ:\n'The Prophet said...'", contentAr: "الإسناد (سلسلة الرواة) + المتن (النص)\nمثال: قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ:\nقال النبي صلى الله عليه وسلم", contentFr: "سَنَد (chaîne de narration) + مَتْن (texte)\nExemple: قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ:\n« Le Prophète a dit... »" },
+        { title: "Major Collections", titleAr: "المجموعات الكبرى", titleFr: "Collections majeures", content: "صَحِيح البُخَارِيّ - most authentic\nصَحِيح مُسْلِم\nسُنَن أَبِي دَاوُد\nجَامِع التِّرْمِذِيّ", contentAr: "صحيح البخاري - الأكثر مصداقية\nصحيح مسلم\nسنن أبي داود\nجامع الترمذي", contentFr: "صَحِيح البُخَارِيّ - le plus authentique\nصَحِيح مُسْلِم\nسُنَن أَبِي دَاوُد\nجَامِع التِّرْمِذِيّ" },
+        { title: "Key Vocabulary", titleAr: "المصطلحات الأساسية", titleFr: "Vocabulaire clé", content: "حَدِيث - narration\nرَاوٍ - narrator\nصَحِيح - authentic\nضَعِيف - weak\nمَوْضُوع - fabricated", contentAr: "حَدِيث - الرواية والحديث الشريف\nرَاوٍ - الشخص الذي يروي الحديث\nصَحِيح - الحديث الصحيح الثابت\nضَعِيف - الحديث الضعيف\nمَوْضُوع - الحديث الموضوع المختلق", contentFr: "حَدِيث - narration\nرَاوٍ - narrateur\nصَحِيح - authentique\nضَعِيف - faible\nمَوْضُوع - fabriqué" }
       ],
       vocabulary: [
-        { arabic: "حَدِيث", transliteration: "ḥadīth", meaning: "narration", meaningFr: "narration" },
-        { arabic: "سُنَّة", transliteration: "sunna", meaning: "prophetic tradition", meaningFr: "tradition prophétique" },
-        { arabic: "إِسْنَاد", transliteration: "isnād", meaning: "chain of narration", meaningFr: "chaîne de narration" },
-        { arabic: "مَتْن", transliteration: "matn", meaning: "text body", meaningFr: "corps du texte" },
-        { arabic: "رِوَايَة", transliteration: "riwāya", meaning: "narration/version", meaningFr: "narration/version" }
+        { arabic: "حَدِيث", transliteration: "ḥadīth", meaning: "narration", meaningAr: "الرواية والحديث الشريف", meaningFr: "narration" },
+        { arabic: "سُنَّة", transliteration: "sunna", meaning: "prophetic tradition", meaningAr: "السنة النبوية والتقاليد النبوية", meaningFr: "tradition prophétique" },
+        { arabic: "إِسْنَاد", transliteration: "isnād", meaning: "chain of narration", meaningAr: "السند أو سلسلة الرواة", meaningFr: "chaîne de narration" },
+        { arabic: "مَتْن", transliteration: "matn", meaning: "text body", meaningAr: "المتن أو نص الحديث", meaningFr: "corps du texte" },
+        { arabic: "رِوَايَة", transliteration: "riwāya", meaning: "narration/version", meaningAr: "الرواية أو الطريقة المختلفة", meaningFr: "narration/version" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-2"]
@@ -91,22 +97,24 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "التفسير الكلاسيكي",
     titleFr: "Le commentaire classique (Tafsir)",
     description: "Introduction to classical Quranic commentary",
+    descriptionAr: "مقدمة إلى التفسير الكلاسيكي للقرآن الكريم",
     descriptionFr: "Introduction au commentaire coranique classique",
     objectives: ["Understand tafsir methodology", "Read basic tafsir", "Learn commentary vocabulary", "Appreciate interpretive traditions"],
+    objectivesAr: ["فهم منهجية التفسير", "قراءة التفسير الأساسي", "تعلم مفردات التعليقات", "تقدير التقاليد التفسيرية"],
     objectivesFr: ["Comprendre la méthodologie du tafsir", "Lire le tafsir de base", "Apprendre le vocabulaire du commentaire", "Apprécier les traditions interprétatives"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "Types of Tafsir", titleFr: "Types de Tafsir", content: "تَفْسِير بِالمَأْثُور - tradition-based\nتَفْسِير بِالرَّأْيِ - reason-based\nتَفْسِير لُغَوِيّ - linguistic", contentFr: "تَفْسِير بِالمَأْثُور - basé sur la tradition\nتَفْسِير بِالرَّأْيِ - basé sur la raison\nتَفْسِير لُغَوِيّ - linguistique" },
-        { title: "Major Works", titleFr: "Œuvres majeures", content: "تَفْسِير الطَّبَرِيّ - comprehensive early tafsir\nتَفْسِير الزَّمَخْشَرِيّ - linguistic excellence\nتَفْسِير اِبْن كَثِير - popular hadith-based", contentFr: "تَفْسِير الطَّبَرِيّ - tafsir précoce complet\nتَفْسِير الزَّمَخْشَرِيّ - excellence linguistique\nتَفْسِير اِبْن كَثِير - populaire, basé sur le hadith" },
-        { title: "Reading Tafsir", titleFr: "Lire le Tafsir", content: "Vocabulary: سَبَب النُّزُول (occasion of revelation)\nقِرَاءَات (variant readings)\nنَسْخ (abrogation)", contentFr: "Vocabulaire: سَبَب النُّزُول (occasion de la révélation)\nقِرَاءَات (lectures variantes)\nنَسْخ (abrogation)" }
+        { title: "Types of Tafsir", titleAr: "أنواع التفسير", titleFr: "Types de Tafsir", content: "تَفْسِير بِالمَأْثُور - tradition-based\nتَفْسِير بِالرَّأْيِ - reason-based\nتَفْسِير لُغَوِيّ - linguistic", contentAr: "التفسير بالمأثور - القائم على النقل والرواية\nالتفسير بالرأي - القائم على العقل والاجتهاد\nالتفسير اللغوي - بناءً على اللغة والبلاغة", contentFr: "تَفْسِير بِالمَأْثُور - basé sur la tradition\nتَفْسِير بِالرَّأْيِ - basé sur la raison\nتَفْسِير لُغَوِيّ - linguistique" },
+        { title: "Major Works", titleAr: "الأعمال الكبرى", titleFr: "Œuvres majeures", content: "تَفْسِير الطَّبَرِيّ - comprehensive early tafsir\nتَفْسِير الزَّمَخْشَرِيّ - linguistic excellence\nتَفْسِير اِبْن كَثِير - popular hadith-based", contentAr: "تفسير الطبري - التفسير الشامل المبكر\nتفسير الزمخشري - الذي يتميز بالبراعة اللغوية\nتفسير ابن كثير - الشهير القائم على الحديث", contentFr: "تَفْسِير الطَّبَرِيّ - tafsir précoce complet\nتَفْسِير الزَّمَخْشَرِيّ - excellence linguistique\nتَفْسِير اِبْن كَثِير - populaire, basé sur le hadith" },
+        { title: "Reading Tafsir", titleAr: "قراءة التفسير", titleFr: "Lire le Tafsir", content: "Vocabulary: سَبَب النُّزُول (occasion of revelation)\nقِرَاءَات (variant readings)\nنَسْخ (abrogation)", contentAr: "المصطلحات: سبب النزول (سبب نزول الآية)\nالقراءات (الطرق المختلفة للقراءة)\nالنسخ (إلغاء الحكم السابق)", contentFr: "Vocabulaire: سَبَب النُّزُول (occasion de la révélation)\nقِرَاءَات (lectures variantes)\nنَسْخ (abrogation)" }
       ],
       vocabulary: [
-        { arabic: "تَفْسِير", transliteration: "tafsīr", meaning: "interpretation", meaningFr: "interprétation" },
-        { arabic: "تَأْوِيل", transliteration: "ta'wīl", meaning: "interpretation/allegorical", meaningFr: "interprétation/allégorique" },
-        { arabic: "شَرْح", transliteration: "sharḥ", meaning: "explanation", meaningFr: "explication" },
-        { arabic: "مَعْنَى", transliteration: "ma'nā", meaning: "meaning", meaningFr: "sens" },
-        { arabic: "دَلَالَة", transliteration: "dalāla", meaning: "indication/signification", meaningFr: "indication/signification" }
+        { arabic: "تَفْسِير", transliteration: "tafsīr", meaning: "interpretation", meaningAr: "شرح وتوضيح معاني القرآن", meaningFr: "interprétation" },
+        { arabic: "تَأْوِيل", transliteration: "ta'wīl", meaning: "interpretation/allegorical", meaningAr: "التفسير والمعنى العميق أو المجازي", meaningFr: "interprétation/allégorique" },
+        { arabic: "شَرْح", transliteration: "sharḥ", meaning: "explanation", meaningAr: "التوضيح والإيضاح التفصيلي", meaningFr: "explication" },
+        { arabic: "مَعْنَى", transliteration: "ma'nā", meaning: "meaning", meaningAr: "المعنى والمقصود والدلالة", meaningFr: "sens" },
+        { arabic: "دَلَالَة", transliteration: "dalāla", meaning: "indication/signification", meaningAr: "الدلالة والمعنى والإشارة", meaningFr: "indication/signification" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-3"]
@@ -117,22 +125,24 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الشعر الجاهلي",
     titleFr: "La poésie préislamique (Jahiliyya)",
     description: "Study the golden age of Arabic poetry",
+    descriptionAr: "ادرس العصر الذهبي للشعر العربي",
     descriptionFr: "Étudiez l'âge d'or de la poésie arabe",
     objectives: ["Understand pre-Islamic poetry", "Learn poetic vocabulary", "Analyze classic qasidas", "Appreciate desert imagery"],
+    objectivesAr: ["فهم الشعر الجاهلي", "تعلم المفردات الشعرية", "تحليل القصائد الكلاسيكية", "تقدير الصور الصحراوية"],
     objectivesFr: ["Comprendre la poésie préislamique", "Apprendre le vocabulaire poétique", "Analyser les qasidas classiques", "Apprécier l'imagerie du désert"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "المُعَلَّقَات (Suspended Odes)", titleFr: "المُعَلَّقَات (Odes suspendues)", content: "Seven (or ten) greatest pre-Islamic poems\nThemes: love, battle, desert journey\nPoets: اِمْرُؤ القَيْس، عَنْتَرَة، زُهَيْر", contentFr: "Sept (ou dix) plus grands poèmes préislamiques\nThèmes: amour, bataille, voyage dans le désert\nPoètes: اِمْرُؤ القَيْس، عَنْتَرَة، زُهَيْر" },
-        { title: "Qasida Structure", titleFr: "Structure de la Qasida", content: "نَسِيب - love prelude (atlal theme)\nرِحْلَة - desert journey\nمَدْح/فَخْر - praise/boast", contentFr: "نَسِيب - prélude amoureux (thème atlal)\nرِحْلَة - voyage dans le désert\nمَدْح/فَخْر - louange/vantardise" },
-        { title: "Poetic Imagery", titleFr: "Imagerie poétique", content: "Desert (صَحْرَاء)\nCamels (إِبِل)\nRuins (أَطْلَال)\nBeloved's departure (رَحِيل)", contentFr: "Désert (صَحْرَاء)\nChameaux (إِبِل)\nRuines (أَطْلَال)\nDépart du bien-aimé (رَحِيل)" }
+        { title: "المُعَلَّقَات (Suspended Odes)", titleAr: "المعلقات أو الذهبيات", titleFr: "المُعَلَّقَات (Odes suspendues)", content: "Seven (or ten) greatest pre-Islamic poems\nThemes: love, battle, desert journey\nPoets: اِمْرُؤ القَيْس، عَنْتَرَة، زُهَيْر", contentAr: "سبع أو عشر أعظم قصائد ما قبل الإسلام\nالمواضيع: الحب والقتال ورحلات الصحراء\nالشعراء: امرؤ القيس وعنترة وزهير", contentFr: "Sept (ou dix) plus grands poèmes préislamiques\nThèmes: amour, bataille, voyage dans le désert\nPoètes: اِمْرُؤ القَيْس، عَنْتَرَة، زُهَيْر" },
+        { title: "Qasida Structure", titleAr: "بناء القصيدة", titleFr: "Structure de la Qasida", content: "نَسِيب - love prelude (atlal theme)\nرِحْلَة - desert journey\nمَدْح/فَخْر - praise/boast", contentAr: "النسيب - مقدمة غزلية (موضوع الأطلال)\nالرحلة - سفر الصحراء\nالمدح أو الفخر - الثناء والتفاخر", contentFr: "نَسِيب - prélude amoureux (thème atlal)\nرِحْلَة - voyage dans le désert\nمَدْح/فَخْر - louange/vantardise" },
+        { title: "Poetic Imagery", titleAr: "الصور الشعرية", titleFr: "Imagerie poétique", content: "Desert (صَحْرَاء)\nCamels (إِبِل)\nRuins (أَطْلَال)\nBeloved's departure (رَحِيل)", contentAr: "الصحراء وأراضيها الشاسعة\nالإبل والخيل\nالأطلال والآثار القديمة\nرحيل المحبوب والفراق", contentFr: "Désert (صَحْرَاء)\nChameaux (إِبِل)\nRuines (أَطْلَال)\nDépart du bien-aimé (رَحِيل)" }
       ],
       vocabulary: [
-        { arabic: "جَاهِلِيَّة", transliteration: "jāhiliyya", meaning: "pre-Islamic era", meaningFr: "ère préislamique" },
-        { arabic: "مُعَلَّقَة", transliteration: "mu'allaqa", meaning: "suspended ode", meaningFr: "ode suspendue" },
-        { arabic: "قَصِيدَة", transliteration: "qaṣīda", meaning: "ode", meaningFr: "ode" },
-        { arabic: "أَطْلَال", transliteration: "aṭlāl", meaning: "ruins (of camp)", meaningFr: "ruines (du campement)" },
-        { arabic: "فَخْر", transliteration: "fakhr", meaning: "boasting poetry", meaningFr: "poésie de vantardise" }
+        { arabic: "جَاهِلِيَّة", transliteration: "jāhiliyya", meaning: "pre-Islamic era", meaningAr: "الفترة السابقة للإسلام", meaningFr: "ère préislamique" },
+        { arabic: "مُعَلَّقَة", transliteration: "mu'allaqa", meaning: "suspended ode", meaningAr: "القصيدة المعلقة أو الذهبية", meaningFr: "ode suspendue" },
+        { arabic: "قَصِيدَة", transliteration: "qaṣīda", meaning: "ode", meaningAr: "القصيدة الطويلة", meaningFr: "ode" },
+        { arabic: "أَطْلَال", transliteration: "aṭlāl", meaning: "ruins (of camp)", meaningAr: "آثار المخيم أو الديار القديمة", meaningFr: "ruines (du campement)" },
+        { arabic: "فَخْر", transliteration: "fakhr", meaning: "boasting poetry", meaningAr: "الشعر التفاخري أو التباهي", meaningFr: "poésie de vantardise" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-4"]
@@ -170,22 +180,24 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "البحور الشعرية",
     titleFr: "Les mètres poétiques (البحور)",
     description: "Master the system of Arabic poetic meters",
+    descriptionAr: "أتقن نظام البحور الشعرية العربية",
     descriptionFr: "Maîtrisez le système des mètres poétiques arabes",
     objectives: ["Understand meter system", "Scan basic meters", "Recognize common patterns", "Apply to poetry analysis"],
+    objectivesAr: ["فهم نظام البحور", "تقطيع البحور الأساسية", "التعرف على الأنماط الشائعة", "تطبيقها على تحليل الشعر"],
     objectivesFr: ["Comprendre le système métrique", "Scander les mètres de base", "Reconnaître les modèles courants", "Appliquer à l'analyse poétique"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
       theory: [
-        { title: "The 16 Meters", titleFr: "Les 16 mètres", content: "الطَّوِيل، المَدِيد، البَسِيط، الوَافِر\nالكَامِل، الهَزَج، الرَّجَز، الرَّمَل\nالسَّرِيع، المُنْسَرِح، الخَفِيف، المُضَارِع\nالمُقْتَضَب، المُجْتَثّ، المُتَقَارِب، المُتَدَارَك", contentFr: "الطَّوِيل، المَدِيد، البَسِيط، الوَافِر\nالكَامِل، الهَزَج، الرَّجَز، الرَّمَل\nالسَّرِيع، المُنْسَرِح، الخَفِيف، المُضَارِع\nالمُقْتَضَب، المُجْتَثّ، المُتَقَارِب، المُتَدَارَك" },
-        { title: "Metric Feet (تَفَاعِيل)", titleFr: "Pieds métriques (تَفَاعِيل)", content: "فَعُولُن - - U -\nفَاعِلُن - U -\nمُسْتَفْعِلُن - - U -\nمَفَاعِيلُن U - - -", contentFr: "فَعُولُن - - U -\nفَاعِلُن - U -\nمُسْتَفْعِلُن - - U -\nمَفَاعِيلُن U - - -" },
-        { title: "Scanning Process", titleFr: "Processus de scansion", content: "1. Remove short vowels for consonant-only text\n2. Mark syllables: short (U) or long (-)\n3. Match to metric feet\n4. Identify the بَحْر", contentFr: "1. Supprimer les voyelles courtes pour le texte sans voyelles\n2. Marquer les syllabes: courte (U) ou longue (-)\n3. Faire correspondre aux pieds métriques\n4. Identifier le بَحْر" }
+        { title: "The 16 Meters", titleAr: "البحور الستة عشر", titleFr: "Les 16 mètres", content: "الطَّوِيل، المَدِيد، البَسِيط، الوَافِر\nالكَامِل، الهَزَج، الرَّجَز، الرَّمَل\nالسَّرِيع، المُنْسَرِح، الخَفِيف، المُضَارِع\nالمُقْتَضَب، المُجْتَثّ، المُتَقَارِب، المُتَدَارَك", contentAr: "الطويل والمديد والبسيط والوافر\nالكامل والهزج والرجز والرمل\nالسريع والمنسرح والخفيف والمضارع\nالمقتضب والمجتث والمتقارب والمتدارك", contentFr: "الطَّوِيل، المَدِيد، البَسِيط، الوَافِر\nالكَامِل، الهَزَج، الرَّجَز، الرَّمَل\nالسَّرِيع، المُنْسَرِح، الخَفِيف، المُضَارِع\nالمُقْتَضَب، المُجْتَثّ، المُتَقَارِب، المُتَدَارَك" },
+        { title: "Metric Feet (تَفَاعِيل)", titleAr: "الأقدام الشعرية", titleFr: "Pieds métriques (تَفَاعِيل)", content: "فَعُولُن - - U -\nفَاعِلُن - U -\nمُسْتَفْعِلُن - - U -\nمَفَاعِيلُن U - - -", contentAr: "فَعُولُن والأقدام الخمسة الأخرى\nفَاعِلُن والمتغيرات\nمُسْتَفْعِلُن ومشتقاتها\nمَفَاعِيلُن والقدم السداسية", contentFr: "فَعُولُن - - U -\nفَاعِلُن - U -\nمُسْتَفْعِلُن - - U -\nمَفَاعِيلُن U - - -" },
+        { title: "Scanning Process", titleAr: "عملية التقطيع", titleFr: "Processus de scansion", content: "1. Remove short vowels for consonant-only text\n2. Mark syllables: short (U) or long (-)\n3. Match to metric feet\n4. Identify the بَحْر", contentAr: "إزالة الحركات القصيرة للحصول على النص\nتحديد المقاطع: قصيرة أم طويلة\nمطابقة الأقدام الشعرية\nتحديد البحر", contentFr: "1. Supprimer les voyelles courtes pour le texte sans voyelles\n2. Marquer les syllabes: courte (U) ou longue (-)\n3. Faire correspondre aux pieds métriques\n4. Identifier le بَحْر" }
       ],
       vocabulary: [
-        { arabic: "بَحْر", transliteration: "baḥr", meaning: "meter (sea)", meaningFr: "mètre (mer)" },
-        { arabic: "تَفْعِيلَة", transliteration: "taf'īla", meaning: "metric foot", meaningFr: "pied métrique" },
-        { arabic: "تَقْطِيع", transliteration: "taqṭī'", meaning: "scansion", meaningFr: "scansion" },
-        { arabic: "سَاكِن", transliteration: "sākin", meaning: "quiescent (no vowel)", meaningFr: "quiescent (sans voyelle)" },
-        { arabic: "مُتَحَرِّك", transliteration: "mutaḥarrik", meaning: "voweled", meaningFr: "voyellé" }
+        { arabic: "بَحْر", transliteration: "baḥr", meaning: "meter (sea)", meaningAr: "البحر الشعري والإيقاع", meaningFr: "mètre (mer)" },
+        { arabic: "تَفْعِيلَة", transliteration: "taf'īla", meaning: "metric foot", meaningAr: "القدم الشعري والوحدة الأساسية", meaningFr: "pied métrique" },
+        { arabic: "تَقْطِيع", transliteration: "taqṭī'", meaning: "scansion", meaningAr: "تقطيع القصيدة وتحليل البحر", meaningFr: "scansion" },
+        { arabic: "سَاكِن", transliteration: "sākin", meaning: "quiescent (no vowel)", meaningAr: "الساكن أو الحرف بدون حركة", meaningFr: "quiescent (sans voyelle)" },
+        { arabic: "مُتَحَرِّك", transliteration: "mutaḥarrik", meaning: "voweled", meaningAr: "الحرف المتحرك الممدود", meaningFr: "voyellé" }
       ]
     },
     exerciseCount: 18, prerequisites: ["5-6"]
@@ -196,8 +208,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "القافية والروي",
     titleFr: "Les schémas de rimes (القافية)",
     description: "Master Arabic rhyme and its rules",
+    descriptionAr: "أتقن نظام القافية والروي في الشعر العربي",
     descriptionFr: "Maîtrisez la rime arabe et ses règles",
     objectives: ["Understand rhyme terminology", "Identify rhyme letters", "Recognize rhyme types", "Analyze poem structure"],
+    objectivesAr: ["فهم مصطلحات القافية", "تحديد حروف الروي", "التعرف على أنواع القافية", "تحليل بنية القصيدة"],
     objectivesFr: ["Comprendre la terminologie de la rime", "Identifier les lettres de rime", "Reconnaître les types de rime", "Analyser la structure du poème"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -222,8 +236,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الشعر العباسي",
     titleFr: "La poésie abbasside",
     description: "Study the golden age of Islamic poetry",
+    descriptionAr: "ادرس العصر الذهبي للشعر الإسلامي والعباسي",
     descriptionFr: "Étudiez l'âge d'or de la poésie islamique",
     objectives: ["Know major Abbasid poets", "Understand new themes", "Recognize stylistic developments", "Analyze classic poems"],
+    objectivesAr: ["التعرف على الشعراء العباسيين الكبار", "فهم الموضوعات الجديدة", "التعرف على التطورات الأسلوبية", "تحليل القصائد الكلاسيكية"],
     objectivesFr: ["Connaître les grands poètes abbassides", "Comprendre les nouveaux thèmes", "Reconnaître les développements stylistiques", "Analyser les poèmes classiques"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -248,8 +264,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الشعر الأندلسي",
     titleFr: "La poésie andalouse",
     description: "Explore the poetry of Islamic Spain",
+    descriptionAr: "استكشف شعر الأندلس الإسلامية وتراثها الأدبي",
     descriptionFr: "Explorez la poésie de l'Espagne islamique",
     objectives: ["Understand Andalusian context", "Know unique forms", "Study major poets", "Appreciate مُوَشَّح form"],
+    objectivesAr: ["فهم السياق الأندلسي والتاريخي", "التعرف على الأشكال الفريدة", "دراسة الشعراء الأندلسيين الكبار", "تقدير فن الموشح"],
     objectivesFr: ["Comprendre le contexte andalou", "Connaître les formes uniques", "Étudier les grands poètes", "Apprécier la forme مُوَشَّح"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -274,8 +292,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الشعر العربي الحديث",
     titleFr: "La poésie arabe moderne",
     description: "Study the transformation of Arabic poetry",
+    descriptionAr: "ادرس تحول الشعر العربي من الكلاسيكية إلى الحداثة",
     descriptionFr: "Étudiez la transformation de la poésie arabe",
     objectives: ["Understand modernist movements", "Know major modern poets", "Recognize free verse", "Analyze contemporary themes"],
+    objectivesAr: ["فهم الحركات الحداثية والتجديدية", "التعرف على الشعراء العرب المحدثين", "التمييز بين الشعر الحر والشعر العمودي", "تحليل الموضوعات المعاصرة"],
     objectivesFr: ["Comprendre les mouvements modernistes", "Connaître les grands poètes modernes", "Reconnaître le vers libre", "Analyser les thèmes contemporains"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -300,8 +320,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "ورشة تحليل الشعر",
     titleFr: "Atelier d'analyse poétique",
     description: "Apply all poetry skills in analysis",
+    descriptionAr: "طبق جميع مهارات الشعر في التحليل الشامل",
     descriptionFr: "Appliquez toutes vos compétences poétiques à l'analyse",
     objectives: ["Analyze complete poems", "Identify rhetorical devices", "Discuss themes", "Write critical responses"],
+    objectivesAr: ["تحليل القصائد الكاملة", "تحديد الأجهزة البلاغية", "مناقشة المواضيع والأفكار", "كتابة الردود النقدية"],
     objectivesFr: ["Analyser des poèmes complets", "Identifier les procédés rhétoriques", "Discuter les thèmes", "Rédiger des réponses critiques"],
     estimatedTime: 60, difficulty: "hard", xpReward: 90,
     content: {
@@ -327,8 +349,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الفصحى واللهجات",
     titleFr: "Arabe standard vs dialectes",
     description: "Understand Arabic diglossia and dialect variation",
+    descriptionAr: "افهم الازدواجية اللغوية والتنوع اللهجي في العربية",
     descriptionFr: "Comprenez la diglossie arabe et la variation dialectale",
     objectives: ["Understand diglossia", "Recognize dialect features", "Navigate language registers", "Appreciate unity in diversity"],
+    objectivesAr: ["فهم الازدواجية اللغوية", "التعرف على خصائص اللهجات", "التنقل بين مستويات اللغة", "تقدير الوحدة في التنوع"],
     objectivesFr: ["Comprendre la diglossie", "Reconnaître les caractéristiques dialectales", "Naviguer dans les registres linguistiques", "Apprécier l'unité dans la diversité"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -353,8 +377,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "أساسيات اللهجة المصرية",
     titleFr: "Les bases de l'arabe égyptien",
     description: "Introduction to the most widely understood dialect",
+    descriptionAr: "مقدمة إلى اللهجة المصرية الأكثر فهماً على المستوى العربي",
     descriptionFr: "Introduction au dialecte le plus largement compris",
     objectives: ["Understand Egyptian features", "Learn key vocabulary", "Recognize in media", "Basic comprehension"],
+    objectivesAr: ["فهم خصائص اللهجة المصرية", "تعلم المفردات الأساسية", "التعرف عليها في الإعلام", "الفهم الأساسي للمحادثة"],
     objectivesFr: ["Comprendre les caractéristiques égyptiennes", "Apprendre le vocabulaire clé", "Reconnaître dans les médias", "Compréhension de base"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -379,8 +405,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "أساسيات اللهجة الشامية",
     titleFr: "Les bases de l'arabe levantin",
     description: "Introduction to Syrian/Lebanese/Palestinian Arabic",
+    descriptionAr: "مقدمة إلى اللهجة الشامية السورية واللبنانية والفلسطينية",
     descriptionFr: "Introduction à l'arabe syrien, libanais et palestinien",
     objectives: ["Understand Levantine features", "Learn key vocabulary", "Recognize regional variations", "Basic comprehension"],
+    objectivesAr: ["فهم خصائص اللهجة الشامية", "تعلم المفردات الأساسية", "التعرف على الاختلافات الإقليمية", "الفهم الأساسي للمحادثة"],
     objectivesFr: ["Comprendre les caractéristiques levantines", "Apprendre le vocabulaire clé", "Reconnaître les variations régionales", "Compréhension de base"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -405,8 +433,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "أساسيات اللهجة الخليجية",
     titleFr: "Les bases de l'arabe du Golfe",
     description: "Introduction to Gulf states Arabic",
+    descriptionAr: "مقدمة إلى لهجات دول الخليج العربي",
     descriptionFr: "Introduction à l'arabe des pays du Golfe",
     objectives: ["Understand Gulf features", "Learn key vocabulary", "Recognize regional variations", "Basic comprehension"],
+    objectivesAr: ["فهم خصائص اللهجة الخليجية", "تعلم المفردات الأساسية", "التعرف على الاختلافات الإقليمية", "الفهم الأساسي للمحادثة"],
     objectivesFr: ["Comprendre les caractéristiques du Golfe", "Apprendre le vocabulaire clé", "Reconnaître les variations régionales", "Compréhension de base"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -431,8 +461,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "نظرة عامة على اللهجات المغاربية",
     titleFr: "Aperçu de l'arabe maghrébin",
     description: "Introduction to North African Arabic",
+    descriptionAr: "مقدمة شاملة عن اللهجات العربية في شمال أفريقيا",
     descriptionFr: "Introduction à l'arabe nord-africain",
     objectives: ["Understand Maghrebi distinctiveness", "Learn basic features", "Recognize major variations", "Appreciate linguistic diversity"],
+    objectivesAr: ["فهم تميز اللهجات المغاربية", "تعلم الخصائص الأساسية", "التعرف على الاختلافات الرئيسية", "تقدير التنوع اللغوي"],
     objectivesFr: ["Comprendre la particularité du Maghreb", "Apprendre les caractéristiques de base", "Reconnaître les variations majeures", "Apprécier la diversité linguistique"],
     estimatedTime: 50, difficulty: "hard", xpReward: 75,
     content: {
@@ -457,8 +489,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "استراتيجيات فهم اللهجات",
     titleFr: "Stratégies de compréhension des dialectes",
     description: "Develop skills for understanding all dialects",
+    descriptionAr: "طور مهارات فهم وتحليل جميع اللهجات العربية",
     descriptionFr: "Développez des compétences pour comprendre tous les dialectes",
     objectives: ["Apply MSA knowledge to dialects", "Identify cognates", "Use context", "Develop listening strategies"],
+    objectivesAr: ["تطبيق معرفة الفصحى على فهم اللهجات", "تحديد الكلمات المتشابهة", "استخدام السياق والإشارات", "تطوير استراتيجيات الاستماع"],
     objectivesFr: ["Appliquer les connaissances MSA aux dialectes", "Identifier les cognats", "Utiliser le contexte", "Développer des stratégies d'écoute"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -484,8 +518,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "نظرية الترجمة",
     titleFr: "Théorie de la traduction",
     description: "Understand principles of Arabic-English translation",
+    descriptionAr: "افهم مبادئ الترجمة بين العربية والإنجليزية",
     descriptionFr: "Comprenez les principes de la traduction arabe-anglais",
     objectives: ["Understand translation approaches", "Learn key terminology", "Analyze translation challenges", "Develop critical perspective"],
+    objectivesAr: ["فهم نهج وطرق الترجمة المختلفة", "تعلم المصطلحات الترجمية الأساسية", "تحليل تحديات الترجمة", "تطوير منظور ناقد"],
     objectivesFr: ["Comprendre les approches de traduction", "Apprendre la terminologie clé", "Analyser les défis de traduction", "Développer une perspective critique"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -510,8 +546,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الترجمة من العربية إلى الإنجليزية",
     titleFr: "Traduction de l'arabe vers l'anglais",
     description: "Practice translating Arabic texts to English",
+    descriptionAr: "مارس ترجمة النصوص العربية إلى اللغة الإنجليزية",
     descriptionFr: "Pratiquez la traduction de textes arabes vers l'anglais",
     objectives: ["Translate various text types", "Handle cultural references", "Maintain register", "Produce natural English"],
+    objectivesAr: ["ترجمة أنواع نصوص مختلفة", "التعامل مع المراجع الثقافية", "الحفاظ على مستوى السجل اللغوي", "إنتاج إنجليزية طبيعية"],
     objectivesFr: ["Traduire différents types de textes", "Gérer les références culturelles", "Maintenir le registre", "Produire un anglais naturel"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -536,8 +574,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الترجمة من الإنجليزية إلى العربية",
     titleFr: "Traduction de l'anglais vers l'arabe",
     description: "Practice translating English texts to Arabic",
+    descriptionAr: "مارس ترجمة النصوص الإنجليزية إلى اللغة العربية",
     descriptionFr: "Pratiquez la traduction de textes anglais vers l'arabe",
     objectives: ["Produce natural Arabic", "Use appropriate register", "Handle technical terms", "Maintain text coherence"],
+    objectivesAr: ["إنتاج عربية طبيعية وسليمة", "استخدام السجل اللغوي المناسب", "التعامل مع المصطلحات التقنية", "الحفاظ على تماسك النص"],
     objectivesFr: ["Produire un arabe naturel", "Utiliser le registre approprié", "Gérer les termes techniques", "Maintenir la cohérence du texte"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -562,8 +602,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الوساطة الثقافية",
     titleFr: "La médiation culturelle",
     description: "Navigate cultural differences in translation",
+    descriptionAr: "تنقل بين الفروقات الثقافية في الترجمة بحساسية واحترافية",
     descriptionFr: "Naviguez les différences culturelles dans la traduction",
     objectives: ["Identify cultural references", "Choose appropriate strategies", "Explain when needed", "Maintain sensitivity"],
+    objectivesAr: ["تحديد المراجع والمفاهيم الثقافية", "اختيار الاستراتيجيات المناسبة", "التوضيح عند الحاجة", "الحفاظ على الحساسية الثقافية"],
     objectivesFr: ["Identifier les références culturelles", "Choisir les stratégies appropriées", "Expliquer si nécessaire", "Maintenir la sensibilité"],
     estimatedTime: 55, difficulty: "hard", xpReward: 80,
     content: {
@@ -588,8 +630,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "ترجمة النصوص الأدبية",
     titleFr: "La traduction littéraire",
     description: "Translate literary texts with style",
+    descriptionAr: "اترجم النصوص الأدبية مع الحفاظ على الأسلوب والجمالية",
     descriptionFr: "Traduisez des textes littéraires avec style",
     objectives: ["Preserve literary style", "Handle figurative language", "Maintain rhythm when possible", "Balance fidelity and beauty"],
+    objectivesAr: ["الحفاظ على الأسلوب الأدبي", "التعامل مع اللغة المجازية والصور البلاغية", "الحفاظ على الإيقاع عند الإمكان", "الموازنة بين الأمانة والجمالية"],
     objectivesFr: ["Préserver le style littéraire", "Gérer le langage figuré", "Maintenir le rythme si possible", "Équilibrer fidélité et beauté"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -614,8 +658,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الترجمة المهنية",
     titleFr: "La traduction professionnelle",
     description: "Develop professional translation skills",
+    descriptionAr: "طور مهارات الترجمة المهنية والاحترافية",
     descriptionFr: "Développez des compétences en traduction professionnelle",
     objectives: ["Use CAT tools", "Manage terminology", "Meet deadlines", "Handle various domains"],
+    objectivesAr: ["استخدام أدوات الترجمة المدعومة بالحاسوب", "إدارة المصطلحات والمعاجم", "الالتزام بالمواعيد النهائية", "التعامل مع مجالات متنوعة"],
     objectivesFr: ["Utiliser les outils TAO", "Gérer la terminologie", "Respecter les délais", "Gérer différents domaines"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -641,8 +687,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الكتابة الإبداعية بالعربية",
     titleFr: "L'écriture créative en arabe",
     description: "Develop creative writing skills in Arabic",
+    descriptionAr: "طور مهارات الكتابة الإبداعية والفنية باللغة العربية",
     descriptionFr: "Développez des compétences en écriture créative en arabe",
     objectives: ["Write original texts", "Use literary devices", "Develop personal style", "Express ideas eloquently"],
+    objectivesAr: ["كتابة نصوص أصلية وإبداعية", "استخدام الأجهزة والتقنيات الأدبية", "تطوير أسلوب شخصي وفريد", "التعبير عن الأفكار بفصاحة وجمالية"],
     objectivesFr: ["Écrire des textes originaux", "Utiliser des procédés littéraires", "Développer un style personnel", "Exprimer les idées éloquemment"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -667,8 +715,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "مهارات التحليل النقدي",
     titleFr: "Compétences en analyse critique",
     description: "Develop advanced critical analysis skills",
+    descriptionAr: "طور مهارات التحليل والنقد الأدبي المتقدم",
     descriptionFr: "Développez des compétences avancées en analyse critique",
     objectives: ["Analyze texts critically", "Formulate arguments", "Support with evidence", "Write critical essays"],
+    objectivesAr: ["تحليل النصوص بطريقة نقدية وتحليلية", "صياغة حجج وأدلة قوية", "دعم الآراء بالأدلة والاستشهادات", "كتابة مقالات نقدية احترافية"],
     objectivesFr: ["Analyser les textes de manière critique", "Formuler des arguments", "Soutenir par des preuves", "Rédiger des essais critiques"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -693,8 +743,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "الخطابة بالعربية",
     titleFr: "L'art oratoire en arabe",
     description: "Develop public speaking skills in Arabic",
+    descriptionAr: "طور مهارات الخطابة والتحدث أمام الجمهور باللغة العربية",
     descriptionFr: "Développez des compétences en prise de parole en public en arabe",
     objectives: ["Structure speeches", "Use rhetorical techniques", "Engage audiences", "Speak with confidence"],
+    objectivesAr: ["بناء وتنظيم الخطابات والحديث العام", "استخدام التقنيات البلاغية والإقناعية", "جذب انتباه الجمهور والتفاعل معهم", "التحدث بثقة واحترافية"],
     objectivesFr: ["Structurer les discours", "Utiliser des techniques rhétoriques", "Engager les audiences", "Parler avec confiance"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -719,8 +771,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "البحث باللغة العربية",
     titleFr: "La recherche en arabe",
     description: "Conduct academic research using Arabic sources",
+    descriptionAr: "أجرِ أبحاثاً أكاديمية واستخدم المصادر العربية الأصلية",
     descriptionFr: "Menez des recherches académiques à partir de sources arabes",
     objectives: ["Search Arabic databases", "Evaluate Arabic sources", "Cite correctly", "Synthesize information"],
+    objectivesAr: ["البحث في قواعد البيانات العربية المتخصصة", "تقييم وتقويم المصادر العربية", "التوثيق والاستشهاد بشكل صحيح", "تجميع وتركيب المعلومات"],
     objectivesFr: ["Rechercher dans les bases de données arabes", "Évaluer les sources arabes", "Citer correctement", "Synthétiser l'information"],
     estimatedTime: 55, difficulty: "hard", xpReward: 85,
     content: {
@@ -745,8 +799,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "معايير الكفاءة في اللغة العربية",
     titleFr: "Normes de compétence en langue arabe",
     description: "Understand and achieve proficiency standards",
+    descriptionAr: "افهم وحقق معايير الكفاءة اللغوية العالمية",
     descriptionFr: "Comprenez et atteignez les normes de compétence",
     objectives: ["Know proficiency frameworks", "Self-assess accurately", "Prepare for tests", "Document achievements"],
+    objectivesAr: ["معرفة أطر ومعايير الكفاءة الدولية", "التقييم الذاتي الدقيق للمستوى", "التحضير للاختبارات والفحوصات", "توثيق الإنجازات والشهادات"],
     objectivesFr: ["Connaître les cadres de compétence", "S'auto-évaluer avec précision", "Se préparer aux tests", "Documenter les réalisations"],
     estimatedTime: 55, difficulty: "hard", xpReward: 90,
     content: {
@@ -771,8 +827,10 @@ export const PHASE_5_LESSONS: Lesson[] = [
     titleAr: "التقييم النهائي للإتقان",
     titleFr: "Évaluation finale de maîtrise",
     description: "Comprehensive assessment of Arabic mastery",
+    descriptionAr: "تقييم شامل ودقيق لإتقان اللغة العربية",
     descriptionFr: "Évaluation complète de la maîtrise de l'arabe",
     objectives: ["Demonstrate all skills", "Complete capstone project", "Receive mastery certification", "Plan continued learning"],
+    objectivesAr: ["إثبات وتطبيق جميع المهارات المكتسبة", "إنجاز مشروع التتويج الشامل", "الحصول على شهادة الإتقان", "التخطيط لمتابعة التعلم"],
     objectivesFr: ["Démontrer toutes les compétences", "Compléter le projet final", "Recevoir la certification de maîtrise", "Planifier l'apprentissage continu"],
     estimatedTime: 90, difficulty: "hard", xpReward: 150,
     content: {

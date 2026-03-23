@@ -13,22 +13,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الإعراب - نظام الحالات النحوية",
     titleFr: "I'rab - Système des cas grammaticaux",
     description: "Master the Arabic case ending system",
+    descriptionAr: "إتقان نظام الحالات الإعرابية في اللغة العربية",
     descriptionFr: "Maîtrisez le système des désinences casuelles arabes",
     objectives: ["Understand nominative, accusative, genitive", "Recognize case markers", "Apply case rules", "Read classical texts"],
+    objectivesAr: ["فهم الحالات الإعرابية الثلاث (المرفوع والمنصوب والمجرور)", "التعرف على علامات الإعراب المختلفة", "تطبيق قواعد الإعراب في التحليل النحوي", "قراءة وفهم النصوص الكلاسيكية"],
     objectivesFr: ["Comprendre le nominatif, l'accusatif et le génitif", "Reconnaître les marqueurs de cas", "Appliquer les règles des cas", "Lire les textes classiques"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "The Three Cases", titleFr: "Les trois cas", content: "مَرْفُوع (Nominative - subject): ـُ / ـٌ\nمَنْصُوب (Accusative - object): ـَ / ـً\nمَجْرُور (Genitive - after preposition): ـِ / ـٍ", contentFr: "مَرْفُوع (Nominatif - sujet) : ـُ / ـٌ\nمَنْصُوب (Accusatif - complément) : ـَ / ـً\nمَجْرُور (Génitif - après préposition) : ـِ / ـٍ" },
-        { title: "When to Use Each", titleFr: "Quand utiliser chacun", content: "Nominative: Subject, predicate of nominal sentence\nAccusative: Object, adverbs, after إِنَّ sisters\nGenitive: After prepositions, in إضافة constructions", contentFr: "Nominatif : Sujet, prédicat de phrase nominale\nAccusatif : Complément, adverbes, après les sœurs de إِنَّ\nGénitif : Après prépositions, dans les constructions d'إضافة" },
-        { title: "Diptotes (الممنوع من الصرف)", titleFr: "Les diptotes (الممنوع من الصرف)", content: "Some nouns don't take full case endings:\n• Names: أَحْمَدُ، فَاطِمَةُ\n• Colors: أَحْمَرُ، أَصْفَرُ\n• Patterns: أَفْعَلُ، مَفَاعِلُ", contentFr: "Certains noms ne prennent pas de désinences de cas complets :\n• Noms propres : أَحْمَدُ، فَاطِمَةُ\n• Couleurs : أَحْمَرُ، أَصْفَرُ\n• Schèmes : أَفْعَلُ، مَفَاعِلُ" }
+        { title: "The Three Cases", titleAr: "الحالات الإعرابية الثلاث", titleFr: "Les trois cas", content: "مَرْفُوع (Nominative - subject): ـُ / ـٌ\nمَنْصُوب (Accusative - object): ـَ / ـً\nمَجْرُور (Genitive - after preposition): ـِ / ـٍ", contentAr: "المرفوع (الفاعل والمبتدأ): ـُ / ـٌ\nالمنصوب (المفعول والخبر): ـَ / ـً\nالمجرور (المجرور بالحرف والمجرور بالإضافة): ـِ / ـٍ", contentFr: "مَرْفُوع (Nominatif - sujet) : ـُ / ـٌ\nمَنْصُوب (Accusatif - complément) : ـَ / ـً\nمَجْرُور (Génitif - après préposition) : ـِ / ـٍ" },
+        { title: "When to Use Each", titleAr: "متى نستخدم كل حالة", titleFr: "Quand utiliser chacun", content: "Nominative: Subject, predicate of nominal sentence\nAccusative: Object, adverbs, after إِنَّ sisters\nGenitive: After prepositions, in إضافة constructions", contentAr: "المرفوع: الفاعل والمبتدأ والخبر في الجملة الاسمية\nالمنصوب: المفعول به والحال والمفعول فيه والمفعول معه\nالمجرور: ما بعد الحروف الجارة والمضاف إليه", contentFr: "Nominatif : Sujet, prédicat de phrase nominale\nAccusatif : Complément, adverbes, après les sœurs de إِنَّ\nGénitif : Après prépositions, dans les constructions d'إضافة" },
+        { title: "Diptotes (الممنوع من الصرف)", titleAr: "الممنوع من الصرف", titleFr: "Les diptotes (الممنوع من الصرف)", content: "Some nouns don't take full case endings:\n• Names: أَحْمَدُ، فَاطِمَةُ\n• Colors: أَحْمَرُ، أَصْفَرُ\n• Patterns: أَفْعَلُ، مَفَاعِلُ", contentAr: "أسماء لا تتغير علاماتها الإعرابية في حالة النصب والجر:\n• الأعلام: أَحْمَدُ، فَاطِمَةُ\n• الألوان: أَحْمَرُ، أَصْفَرُ\n• الصيغ المعينة: أَفْعَلُ، مَفَاعِلُ", contentFr: "Certains noms ne prennent pas de désinences de cas complets :\n• Noms propres : أَحْمَدُ، فَاطِمَةُ\n• Couleurs : أَحْمَرُ، أَصْفَرُ\n• Schèmes : أَفْعَلُ، مَفَاعِلُ" }
       ],
       vocabulary: [
-        { arabic: "مَرْفُوع", transliteration: "marfū'", meaning: "nominative case", meaningFr: "cas nominatif" },
-        { arabic: "مَنْصُوب", transliteration: "manṣūb", meaning: "accusative case", meaningFr: "cas accusatif" },
-        { arabic: "مَجْرُور", transliteration: "majrūr", meaning: "genitive case", meaningFr: "cas génitif" },
-        { arabic: "فَاعِل", transliteration: "fā'il", meaning: "subject/doer", meaningFr: "sujet/agent" },
-        { arabic: "مَفْعُول", transliteration: "maf'ūl", meaning: "object", meaningFr: "complément" }
+        { arabic: "مَرْفُوع", transliteration: "marfū'", meaning: "nominative case", meaningAr: "الحالة المرفوعة", meaningFr: "cas nominatif" },
+        { arabic: "مَنْصُوب", transliteration: "manṣūb", meaning: "accusative case", meaningAr: "الحالة المنصوبة", meaningFr: "cas accusatif" },
+        { arabic: "مَجْرُور", transliteration: "majrūr", meaning: "genitive case", meaningAr: "الحالة المجرورة", meaningFr: "cas génitif" },
+        { arabic: "فَاعِل", transliteration: "fā'il", meaning: "subject/doer", meaningAr: "من قام بالفعل", meaningFr: "sujet/agent" },
+        { arabic: "مَفْعُول", transliteration: "maf'ūl", meaning: "object", meaningAr: "المقصود الذي وقع عليه الفعل", meaningFr: "complément" }
       ]
     },
     exerciseCount: 17, prerequisites: []
@@ -39,22 +41,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "أحكام التنوين",
     titleFr: "Règles de la nunation (التنوين)",
     description: "Master the rules of nunation in Arabic",
+    descriptionAr: "إتقان قواعد التنوين وتطبيقها على الكلمات",
     descriptionFr: "Maîtrisez les règles de la nunation en arabe",
     objectives: ["Apply nunation correctly", "Distinguish tanween types", "Use with adjectives", "Handle diptotes"],
+    objectivesAr: ["تطبيق التنوين على الكلمات بشكل صحيح", "التمييز بين أنواع التنوين الثلاثة", "استخدام التنوين مع الصفات والأسماء", "التعامل مع الممنوع من الصرف"],
     objectivesFr: ["Appliquer correctement la nunation", "Distinguer les types de tanween", "Utiliser avec les adjectifs", "Gérer les diptotes"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "What is Tanween?", titleFr: "Qu'est-ce que le tanween ?", content: "Nunation adds an 'n' sound to indefinite nouns:\nـٌ (un) - nominative: كِتَابٌ\nـً (an) - accusative: كِتَابًا\nـٍ (in) - genitive: كِتَابٍ", contentFr: "La nunation ajoute un son 'n' aux noms indéfinis :\nـٌ (un) - nominatif : كِتَابٌ\nـً (an) - accusatif : كِتَابًا\nـٍ (in) - génitif : كِتَابٍ" },
-        { title: "When NOT to Use", titleFr: "Quand ne pas l'utiliser", content: "No tanween on:\n• Definite nouns (with الـ)\n• Diptotes (proper names, patterns)\n• Nouns in إضافة", contentFr: "Pas de tanween sur :\n• Les noms définis (avec الـ)\n• Les diptotes (noms propres, schèmes)\n• Les noms en إضافة" },
-        { title: "Accusative Alif", titleFr: "Alif accusatif", content: "Most accusative tanween adds alif: ـًا\nExcept words ending in:\n• تاء مربوطة: مدرسةً\n• Alif: عصًا", contentFr: "La plupart des nunations accusatives ajoutent alif : ـًا\nSauf les mots se terminant par :\n• تاء مربوطة : مدرسةً\n• Alif : عصًا" }
+        { title: "What is Tanween?", titleAr: "ما هو التنوين؟", titleFr: "Qu'est-ce que le tanween ?", content: "Nunation adds an 'n' sound to indefinite nouns:\nـٌ (un) - nominative: كِتَابٌ\nـً (an) - accusative: كِتَابًا\nـٍ (in) - genitive: كِتَابٍ", contentAr: "إضافة صوت النون إلى نهاية الكلمة المنونة:\nـٌ (نون الضم) - الحالة المرفوعة: كِتَابٌ\nـً (نون الفتح) - الحالة المنصوبة: كِتَابًا\nـٍ (نون الكسر) - الحالة المجرورة: كِتَابٍ" },
+        { title: "When NOT to Use", titleAr: "متى لا نستخدم التنوين", titleFr: "Quand ne pas l'utiliser", content: "No tanween on:\n• Definite nouns (with الـ)\n• Diptotes (proper names, patterns)\n• Nouns in إضافة", contentAr: "لا يجوز تنوين:\n• الأسماء المعرفة بـ (ال)\n• الممنوع من الصرف من الأعلام والصيغ\n• الاسم المضاف إلى غيره" },
+        { title: "Accusative Alif", titleAr: "ألف التنوين", titleFr: "Alif accusatif", content: "Most accusative tanween adds alif: ـًا\nExcept words ending in:\n• تاء مربوطة: مدرسةً\n• Alif: عصًا", contentAr: "معظم التنوين المنصوب يضاف إليه ألف: ـًا\nإلا الكلمات المنتهية بـ:\n• تاء التأنيث الساكنة: مدرسةً\n• الألف اللينة: عصًا" }
       ],
       vocabulary: [
-        { arabic: "تَنْوِين", transliteration: "tanwīn", meaning: "nunation", meaningFr: "nunation" },
-        { arabic: "نَكِرَة", transliteration: "nakira", meaning: "indefinite", meaningFr: "indéfini" },
-        { arabic: "مَعْرِفَة", transliteration: "ma'rifa", meaning: "definite", meaningFr: "défini" },
-        { arabic: "مُنَوَّن", transliteration: "munawwan", meaning: "nunated", meaningFr: "nunaté" },
-        { arabic: "غَيْر مُنَوَّن", transliteration: "ghayr munawwan", meaning: "non-nunated", meaningFr: "non nunaté" }
+        { arabic: "تَنْوِين", transliteration: "tanwīn", meaning: "nunation", meaningAr: "إضافة النون لنهاية الكلمة", meaningFr: "nunation" },
+        { arabic: "نَكِرَة", transliteration: "nakira", meaning: "indefinite", meaningAr: "اسم غير معرّف", meaningFr: "indéfini" },
+        { arabic: "مَعْرِفَة", transliteration: "ma'rifa", meaning: "definite", meaningAr: "اسم معرّف", meaningFr: "défini" },
+        { arabic: "مُنَوَّن", transliteration: "munawwan", meaning: "nunated", meaningAr: "مضاف إليه نون التنوين", meaningFr: "nunaté" },
+        { arabic: "غَيْر مُنَوَّن", transliteration: "ghayr munawwan", meaning: "non-nunated", meaningAr: "لم يضاف إليه نون التنوين", meaningFr: "non nunaté" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-1"]
@@ -65,22 +69,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الإضافة المعنوية واللفظية",
     titleFr: "L'état construit (الإضافة)",
     description: "Master genitive constructions in depth",
+    descriptionAr: "إتقان الإضافة والتراكيب الإضافية المعقدة",
     descriptionFr: "Maîtrisez en profondeur les constructions génitivales",
     objectives: ["Form complex إضافة chains", "Distinguish types of إضافة", "Apply definiteness rules", "Use in formal writing"],
+    objectivesAr: ["تكوين سلاسل إضافية معقدة", "التمييز بين أنواع الإضافة", "تطبيق قواعد التعريف والتنكير", "استخدام الإضافة في الكتابة الفصحى"],
     objectivesFr: ["Former des chaînes d'إضافة complexes", "Distinguer les types d'إضافة", "Appliquer les règles de définitude", "Utiliser dans l'écriture formelle"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Idafa Structure", titleFr: "Structure de l'idafa", content: "مُضَاف + مُضَاف إِلَيْه\n• First noun loses tanween and الـ\n• Second noun takes genitive case\n• Whole phrase takes definiteness of second", contentFr: "مُضَاف + مُضَاف إِلَيْه\n• Le premier nom perd la nunation et الـ\n• Le deuxième nom prend le cas génitif\n• La phrase entière prend la définitude du second" },
-        { title: "Chains", titleFr: "Chaînes", content: "Multiple إضافة:\nبَابُ بَيْتِ صَدِيقِي\nThe door of my friend's house\n(4 nouns in chain)", contentFr: "Multiples إضافة :\nبَابُ بَيْتِ صَدِيقِي\nLa porte de la maison de mon ami\n(4 noms en chaîne)" },
-        { title: "Semantic Types", titleFr: "Types sémantiques", content: "Possession: كِتَابُ الطَّالِبِ\nDescription: رَجُلُ عِلْمٍ (a man of knowledge)\nApposition: مَدِينَةُ القَاهِرَةِ", contentFr: "Possession : كِتَابُ الطَّالِبِ\nDescription : رَجُلُ عِلْمٍ (un homme de savoir)\nApposition : مَدِينَةُ القَاهِرَةِ" }
+        { title: "Idafa Structure", titleAr: "بنية الإضافة", titleFr: "Structure de l'idafa", content: "مُضَاف + مُضَاف إِلَيْه\n• First noun loses tanween and الـ\n• Second noun takes genitive case\n• Whole phrase takes definiteness of second", contentAr: "مُضَاف + مُضَاف إِلَيْه\n• الاسم الأول يفقد التنوين و(ال)\n• الاسم الثاني يكون مجروراً بالإضافة\n• التركيب يأخذ تعريف الاسم الثاني" },
+        { title: "Chains", titleAr: "السلاسل الإضافية", titleFr: "Chaînes", content: "Multiple إضافة:\nبَابُ بَيْتِ صَدِيقِي\nThe door of my friend's house\n(4 nouns in chain)", contentAr: "إضافات متعددة:\nبَابُ بَيْتِ صَدِيقِي\nباب بيت صديقي\n(أربعة أسماء في سلسلة واحدة)" },
+        { title: "Semantic Types", titleAr: "أنواع الإضافة الدلالية", titleFr: "Types sémantiques", content: "Possession: كِتَابُ الطَّالِبِ\nDescription: رَجُلُ عِلْمٍ (a man of knowledge)\nApposition: مَدِينَةُ القَاهِرَةِ", contentAr: "ملكية: كِتَابُ الطَّالِبِ (كتاب الطالب)\nوصف: رَجُلُ عِلْمٍ (رجل العلم)\nبدل: مَدِينَةُ القَاهِرَةِ (مدينة القاهرة)" }
       ],
       vocabulary: [
-        { arabic: "مُضَاف", transliteration: "muḍāf", meaning: "annexed (first term)", meaningFr: "annexé (premier terme)" },
-        { arabic: "مُضَاف إِلَيْه", transliteration: "muḍāf ilayh", meaning: "annexed to (second term)", meaningFr: "annexé à (second terme)" },
-        { arabic: "إِضَافَة لَفْظِيَّة", transliteration: "iḍāfa lafẓiyya", meaning: "verbal idafa", meaningFr: "idafa verbale" },
-        { arabic: "إِضَافَة مَعْنَوِيَّة", transliteration: "iḍāfa ma'nawiyya", meaning: "semantic idafa", meaningFr: "idafa sémantique" },
-        { arabic: "سِلْسِلَة", transliteration: "silsila", meaning: "chain", meaningFr: "chaîne" }
+        { arabic: "مُضَاف", transliteration: "muḍāf", meaning: "annexed (first term)", meaningAr: "الاسم المضاف (الأول)", meaningFr: "annexé (premier terme)" },
+        { arabic: "مُضَاف إِلَيْه", transliteration: "muḍāf ilayh", meaning: "annexed to (second term)", meaningAr: "الاسم المضاف إليه (الثاني)", meaningFr: "annexé à (second terme)" },
+        { arabic: "إِضَافَة لَفْظِيَّة", transliteration: "iḍāfa lafẓiyya", meaning: "verbal idafa", meaningAr: "إضافة لا تقتضي تعريف الأول", meaningFr: "idafa verbale" },
+        { arabic: "إِضَافَة مَعْنَوِيَّة", transliteration: "iḍāfa ma'nawiyya", meaning: "semantic idafa", meaningAr: "إضافة تقتضي تعريف الأول بتعريف الثاني", meaningFr: "idafa sémantique" },
+        { arabic: "سِلْسِلَة", transliteration: "silsila", meaning: "chain", meaningAr: "تسلسل من الكلمات", meaningFr: "chaîne" }
       ]
     },
     exerciseCount: 17, prerequisites: ["4-2"]
@@ -91,22 +97,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "العدد والمعدود",
     titleFr: "Accord des nombres",
     description: "Master complex number-noun agreement rules",
+    descriptionAr: "إتقان قواعد اتفاق الأعداد مع المعدود",
     descriptionFr: "Maîtrisez les règles complexes d'accord entre nombres et noms",
     objectives: ["Apply reverse gender rule (3-10)", "Use correct cases", "Handle 11-99", "Count with hundreds/thousands"],
+    objectivesAr: ["تطبيق قاعدة تذكير وتأنيث الأعداد (3-10)", "استخدام الحالات الإعرابية الصحيحة", "التعامل مع الأعداد 11-99", "العد مع المئات والآلاف"],
     objectivesFr: ["Appliquer la règle d'inversion de genre (3-10)", "Utiliser les cas corrects", "Gérer 11-99", "Compter avec centaines/milliers"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Numbers 3-10", titleFr: "Nombres 3-10", content: "REVERSE gender agreement:\nثَلَاثَةُ رِجَالٍ - 3 men (feminine number + masculine plural genitive)\nثَلَاثُ نِسَاءٍ - 3 women (masculine number + feminine plural genitive)", contentFr: "INVERSION du genre :\nثَلَاثَةُ رِجَالٍ - 3 hommes (nombre féminin + génitif pluriel masculin)\nثَلَاثُ نِسَاءٍ - 3 femmes (nombre masculin + génitif pluriel féminin)" },
-        { title: "Numbers 11-99", titleFr: "Nombres 11-99", content: "11-12: Special forms agree with counted\n13-19: Compound, reverse gender like 3-10\n20-99: Counted is singular accusative", contentFr: "11-12 : Formes spéciales qui s'accordent avec le compté\n13-19 : Composé, inversion de genre comme 3-10\n20-99 : Le compté est au singulier accusatif" },
-        { title: "100s and 1000s", titleFr: "Centaines et milliers", content: "مِائَة/مِئَة - 100 (counted in genitive singular)\nأَلْف - 1000 (counted in genitive singular)", contentFr: "مِائَة/مِئَة - 100 (compté au génitif singulier)\nأَلْف - 1000 (compté au génitif singulier)" }
+        { title: "Numbers 3-10", titleAr: "الأعداد من 3 إلى 10", titleFr: "Nombres 3-10", content: "REVERSE gender agreement:\nثَلَاثَةُ رِجَالٍ - 3 men (feminine number + masculine plural genitive)\nثَلَاثُ نِسَاءٍ - 3 women (masculine number + feminine plural genitive)", contentAr: "اتفاق تذكير وتأنيث معاكس:\nثَلَاثَةُ رِجَالٍ - ثلاثة رجال (عدد مؤنث + معدود جمع مذكر مجرور)\nثَلَاثُ نِسَاءٍ - ثلاث نساء (عدد مذكر + معدود جمع مؤنث مجرور)" },
+        { title: "Numbers 11-99", titleAr: "الأعداد من 11 إلى 99", titleFr: "Nombres 11-99", content: "11-12: Special forms agree with counted\n13-19: Compound, reverse gender like 3-10\n20-99: Counted is singular accusative", contentAr: "11-12: صيغ خاصة تتفق مع المعدود\n13-19: أعداد مركبة مع قاعدة التذكير والتأنيث المعاكسة\n20-99: المعدود مفرد منصوب" },
+        { title: "100s and 1000s", titleAr: "المئات والآلاف", titleFr: "Centaines et milliers", content: "مِائَة/مِئَة - 100 (counted in genitive singular)\nأَلْف - 1000 (counted in genitive singular)", contentAr: "مِائَة/مِئَة - مئة (المعدود مفرد مجرور)\nأَلْف - ألف (المعدود مفرد مجرور)" }
       ],
       vocabulary: [
-        { arabic: "عَدَد", transliteration: "'adad", meaning: "number", meaningFr: "nombre" },
-        { arabic: "مَعْدُود", transliteration: "ma'dūd", meaning: "counted noun", meaningFr: "nom compté" },
-        { arabic: "مُفْرَد", transliteration: "mufrad", meaning: "singular", meaningFr: "singulier" },
-        { arabic: "جَمْع", transliteration: "jam'", meaning: "plural", meaningFr: "pluriel" },
-        { arabic: "تَمْيِيز", transliteration: "tamyīz", meaning: "specification", meaningFr: "spécification" }
+        { arabic: "عَدَد", transliteration: "'adad", meaning: "number", meaningAr: "رقم أو مقدار", meaningFr: "nombre" },
+        { arabic: "مَعْدُود", transliteration: "ma'dūd", meaning: "counted noun", meaningAr: "الاسم المعدود", meaningFr: "nom compté" },
+        { arabic: "مُفْرَد", transliteration: "mufrad", meaning: "singular", meaningAr: "واحد منفرد", meaningFr: "singulier" },
+        { arabic: "جَمْع", transliteration: "jam'", meaning: "plural", meaningAr: "جمع الأسماء", meaningFr: "pluriel" },
+        { arabic: "تَمْيِيز", transliteration: "tamyīz", meaning: "specification", meaningAr: "الاسم الذي يوضح المقصود", meaningFr: "spécification" }
       ]
     },
     exerciseCount: 17, prerequisites: ["4-3"]
@@ -117,22 +125,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الأسماء الخمسة",
     titleFr: "Les cinq noms (الأسماء الخمسة)",
     description: "Learn the special declension of five nouns",
+    descriptionAr: "تعلم الإعراب الخاص للأسماء الخمسة",
     descriptionFr: "Apprenez la déclinaison spéciale des cinq noms",
     objectives: ["Identify the five nouns", "Apply special case endings", "Use correctly in إضافة", "Recognize in classical texts"],
+    objectivesAr: ["تحديد الأسماء الخمسة", "تطبيق الحالات الإعرابية الخاصة", "استخدامها بشكل صحيح في الإضافة", "التعرف عليها في النصوص الكلاسيكية"],
     objectivesFr: ["Identifier les cinq noms", "Appliquer les désinences de cas spéciales", "Utiliser correctement dans l'إضافة", "Les reconnaître dans les textes classiques"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "The Five Nouns", titleFr: "Les cinq noms", content: "أَبٌ (father), أَخٌ (brother), حَمٌ (father-in-law), فَمٌ (mouth), ذُو (possessor of)\nWhen in إضافة, they show long vowels:\nأَبُو (nominative), أَبَا (accusative), أَبِي (genitive)", contentFr: "أَبٌ (père), أَخٌ (frère), حَمٌ (beau-père), فَمٌ (bouche), ذُو (possesseur)\nQuand en إضافة, ils montrent des voyelles longues :\nأَبُو (nominatif), أَبَا (accusatif), أَبِي (génitif)" },
-        { title: "Example Sentences", titleFr: "Phrases d'exemple", content: "جَاءَ أَبُوهُ - His father came (nominative)\nرَأَيْتُ أَبَاهُ - I saw his father (accusative)\nسَلَّمْتُ عَلَى أَبِيهِ - I greeted his father (genitive)", contentFr: "جَاءَ أَبُوهُ - Son père est venu (nominatif)\nرَأَيْتُ أَبَاهُ - J'ai vu son père (accusatif)\nسَلَّمْتُ عَلَى أَبِيهِ - J'ai salué son père (génitif)" },
-        { title: "ذُو Usage", titleFr: "Utilisation de ذُو", content: "ذُو مَالٍ - possessor of wealth\nذُو عِلْمٍ - possessor of knowledge\nFeminine: ذَاتُ (nominative)", contentFr: "ذُو مَالٍ - possesseur de richesse\nذُو عِلْمٍ - possesseur de savoir\nFéminin : ذَاتُ (nominatif)" }
+        { title: "The Five Nouns", titleAr: "الأسماء الخمسة", titleFr: "Les cinq noms", content: "أَبٌ (father), أَخٌ (brother), حَمٌ (father-in-law), فَمٌ (mouth), ذُو (possessor of)\nWhen in إضافة, they show long vowels:\nأَبُو (nominative), أَبَا (accusative), أَبِي (genitive)", contentAr: "أَبٌ (الأب), أَخٌ (الأخ), حَمٌ (حماه), فَمٌ (الفم), ذُو (صاحب)\nعند إضافتها تظهر حروف علة طويلة:\nأَبُو (المرفوع), أَبَا (المنصوب), أَبِي (المجرور)" },
+        { title: "Example Sentences", titleAr: "جمل تطبيقية", titleFr: "Phrases d'exemple", content: "جَاءَ أَبُوهُ - His father came (nominative)\nرَأَيْتُ أَبَاهُ - I saw his father (accusative)\nسَلَّمْتُ عَلَى أَبِيهِ - I greeted his father (genitive)", contentAr: "جَاءَ أَبُوهُ - جاء والده (مرفوع)\nرَأَيْتُ أَبَاهُ - رأيت والده (منصوب)\nسَلَّمْتُ عَلَى أَبِيهِ - سلمت على والده (مجرور)" },
+        { title: "ذُو Usage", titleAr: "استخدام ذو", titleFr: "Utilisation de ذُو", content: "ذُو مَالٍ - possessor of wealth\nذُو عِلْمٍ - possessor of knowledge\nFeminine: ذَاتُ (nominative)", contentAr: "ذُو مَالٍ - صاحب مال\nذُو عِلْمٍ - صاحب علم\nالمؤنث: ذَاتُ (في المرفوع)" }
       ],
       vocabulary: [
-        { arabic: "أَبُو", transliteration: "abū", meaning: "father of (nom.)", meaningFr: "père de (nom.)" },
-        { arabic: "أَخُو", transliteration: "akhū", meaning: "brother of (nom.)", meaningFr: "frère de (nom.)" },
-        { arabic: "ذُو", transliteration: "dhū", meaning: "possessor of (nom.)", meaningFr: "possesseur de (nom.)" },
-        { arabic: "فُو", transliteration: "fū", meaning: "mouth of (nom.)", meaningFr: "bouche de (nom.)" },
-        { arabic: "حَمُو", transliteration: "ḥamū", meaning: "father-in-law of (nom.)", meaningFr: "beau-père de (nom.)" }
+        { arabic: "أَبُو", transliteration: "abū", meaning: "father of (nom.)", meaningAr: "الأب في حالة الإضافة", meaningFr: "père de (nom.)" },
+        { arabic: "أَخُو", transliteration: "akhū", meaning: "brother of (nom.)", meaningAr: "الأخ في حالة الإضافة", meaningFr: "frère de (nom.)" },
+        { arabic: "ذُو", transliteration: "dhū", meaning: "possessor of (nom.)", meaningAr: "صاحب في حالة الإضافة", meaningFr: "possesseur de (nom.)" },
+        { arabic: "فُو", transliteration: "fū", meaning: "mouth of (nom.)", meaningAr: "الفم في حالة الإضافة", meaningFr: "bouche de (nom.)" },
+        { arabic: "حَمُو", transliteration: "ḥamū", meaning: "father-in-law of (nom.)", meaningAr: "الحماة في حالة الإضافة", meaningFr: "beau-père de (nom.)" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-4"]
@@ -143,22 +153,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الأفعال المعتلة بالتفصيل",
     titleFr: "Les verbes faibles en profondeur",
     description: "Master all types of weak verbs",
+    descriptionAr: "إتقان جميع أنواع الأفعال المعتلة",
     descriptionFr: "Maîtrisez tous les types de verbes faibles",
     objectives: ["Conjugate assimilated verbs", "Handle hollow verbs", "Form defective verbs", "Use doubly weak verbs"],
+    objectivesAr: ["تصريف الأفعال المثال", "التعامل مع الأفعال الأجوف", "تشكيل الأفعال الناقصة", "استخدام الأفعال الملفوفة"],
     objectivesFr: ["Conjuguer les verbes assimilés", "Gérer les verbes creux", "Former les verbes défectifs", "Utiliser les verbes doublement faibles"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Assimilated (مثال)", titleFr: "Assimilé (مثال)", content: "First radical is و or ي:\nوَصَلَ → يَصِلُ (the و drops in present)\nوَعَدَ → يَعِدُ", contentFr: "La première radicale est و ou ي :\nوَصَلَ → يَصِلُ (le و tombe au présent)\nوَعَدَ → يَعِدُ" },
-        { title: "Hollow (أَجْوَف)", titleFr: "Creux (أَجْوَف)", content: "Middle radical is و or ي:\nقَالَ (قول) → يَقُولُ\nبَاعَ (بيع) → يَبِيعُ", contentFr: "La radicale médiane est و ou ي :\nقَالَ (قول) → يَقُولُ\nبَاعَ (بيع) → يَبِيعُ" },
-        { title: "Defective (نَاقِص)", titleFr: "Défectif (نَاقِص)", content: "Final radical is و or ي:\nمَشَى → يَمْشِي\nدَعَا → يَدْعُو", contentFr: "La radicale finale est و ou ي :\nمَشَى → يَمْشِي\nدَعَا → يَدْعُو" }
+        { title: "Assimilated (مثال)", titleAr: "الفعل المثال", titleFr: "Assimilé (مثال)", content: "First radical is و or ي:\nوَصَلَ → يَصِلُ (the و drops in present)\nوَعَدَ → يَعِدُ", contentAr: "الراء الأولى و أو ي:\nوَصَلَ → يَصِلُ (الواو تسقط في المضارع)\nوَعَدَ → يَعِدُ" },
+        { title: "Hollow (أَجْوَف)", titleAr: "الفعل الأجوف", titleFr: "Creux (أَجْوَف)", content: "Middle radical is و or ي:\nقَالَ (قول) → يَقُولُ\nبَاعَ (بيع) → يَبِيعُ", contentAr: "الراء الوسطى و أو ي:\nقَالَ (من قول) → يَقُولُ\nبَاعَ (من بيع) → يَبِيعُ" },
+        { title: "Defective (نَاقِص)", titleAr: "الفعل الناقص", titleFr: "Défectif (نَاقِص)", content: "Final radical is و or ي:\nمَشَى → يَمْشِي\nدَعَا → يَدْعُو", contentAr: "الراء الأخيرة و أو ي:\nمَشَى → يَمْشِي\nدَعَا → يَدْعُو" }
       ],
       vocabulary: [
-        { arabic: "مِثَال", transliteration: "mithāl", meaning: "assimilated verb", meaningFr: "verbe assimilé" },
-        { arabic: "أَجْوَف", transliteration: "ajwaf", meaning: "hollow verb", meaningFr: "verbe creux" },
-        { arabic: "نَاقِص", transliteration: "nāqiṣ", meaning: "defective verb", meaningFr: "verbe défectif" },
-        { arabic: "لَفِيف", transliteration: "lafīf", meaning: "doubly weak verb", meaningFr: "verbe doublement faible" },
-        { arabic: "صَحِيح", transliteration: "ṣaḥīḥ", meaning: "sound verb", meaningFr: "verbe sain" }
+        { arabic: "مِثَال", transliteration: "mithāl", meaning: "assimilated verb", meaningAr: "فعل تكون فاؤه معتلة", meaningFr: "verbe assimilé" },
+        { arabic: "أَجْوَف", transliteration: "ajwaf", meaning: "hollow verb", meaningAr: "فعل تكون عينه معتلة", meaningFr: "verbe creux" },
+        { arabic: "نَاقِص", transliteration: "nāqiṣ", meaning: "defective verb", meaningAr: "فعل تكون لامه معتلة", meaningFr: "verbe défectif" },
+        { arabic: "لَفِيف", transliteration: "lafīf", meaning: "doubly weak verb", meaningAr: "فعل معتل في موضعين", meaningFr: "verbe doublement faible" },
+        { arabic: "صَحِيح", transliteration: "ṣaḥīḥ", meaning: "sound verb", meaningAr: "فعل سالم من الاعتلال", meaningFr: "verbe sain" }
       ]
     },
     exerciseCount: 18, prerequisites: ["4-5"]
@@ -170,22 +182,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اسم الفاعل",
     titleFr: "Le participe actif (اسم الفاعل)",
     description: "Master the active participle pattern",
+    descriptionAr: "إتقان صيغة اسم الفاعل وتطبيقاتها",
     descriptionFr: "Maîtrisez le schème du participe actif",
     objectives: ["Form from Form I", "Form from derived forms", "Use as noun and adjective", "Understand temporal aspects"],
+    objectivesAr: ["تكوين اسم الفاعل من الفعل الثلاثي", "تكوينه من الأفعال المزيدة", "استخدامه اسماً وصفة", "فهم الدلالات الزمنية"],
     objectivesFr: ["Former à partir de la forme I", "Former à partir des formes dérivées", "Utiliser comme nom et adjectif", "Comprendre les aspects temporels"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Form I Pattern", titleFr: "Schème de la forme I", content: "فَاعِل pattern:\nكَتَبَ → كَاتِب (writer/writing)\nعَمِلَ → عَامِل (worker/working)\nدَرَسَ → دَارِس (student/studying)", contentFr: "Schème فَاعِل :\nكَتَبَ → كَاتِب (écrivain/écrivant)\nعَمِلَ → عَامِل (ouvrier/travaillant)\nدَرَسَ → دَارِس (étudiant/étudiant)" },
-        { title: "Derived Forms Pattern", titleFr: "Schème des formes dérivées", content: "Replace يـ prefix with مُـ:\nيُعَلِّمُ → مُعَلِّم (teacher)\nيُسَافِرُ → مُسَافِر (traveler)\nيَسْتَخْدِمُ → مُسْتَخْدِم (user)", contentFr: "Remplacer le préfixe يـ par مُـ :\nيُعَلِّمُ → مُعَلِّم (enseignant)\nيُسَافِرُ → مُسَافِر (voyageur)\nيَسْتَخْدِمُ → مُسْتَخْدِم (utilisateur)" },
-        { title: "Functions", titleFr: "Fonctions", content: "• As noun: الكَاتِب (the writer)\n• As adjective: رَجُلٌ عَامِلٌ (a working man)\n• Present action: أَنَا ذَاهِبٌ (I am going)", contentFr: "• Comme nom : الكَاتِب (l'écrivain)\n• Comme adjectif : رَجُلٌ عَامِلٌ (un homme qui travaille)\n• Action présente : أَنَا ذَاهِبٌ (Je vais)" }
+        { title: "Form I Pattern", titleAr: "صيغة الفعل الثلاثي", titleFr: "Schème de la forme I", content: "فَاعِل pattern:\nكَتَبَ → كَاتِب (writer/writing)\nعَمِلَ → عَامِل (worker/working)\nدَرَسَ → دَارِس (student/studying)", contentAr: "صيغة فَاعِل:\nكَتَبَ → كَاتِب (الكاتب: من يكتب)\nعَمِلَ → عَامِل (العامل: من يعمل)\nدَرَسَ → دَارِس (الدارس: من يدرس)" },
+        { title: "Derived Forms Pattern", titleAr: "صيغة الأفعال المزيدة", titleFr: "Schème des formes dérivées", content: "Replace يـ prefix with مُـ:\nيُعَلِّمُ → مُعَلِّم (teacher)\nيُسَافِرُ → مُسَافِر (traveler)\nيَسْتَخْدِمُ → مُسْتَخْدِم (user)", contentAr: "استبدال بادئة يـ بـ مُـ:\nيُعَلِّمُ → مُعَلِّم (المعلم)\nيُسَافِرُ → مُسَافِر (المسافر)\nيَسْتَخْدِمُ → مُسْتَخْدِم (المستخدم)" },
+        { title: "Functions", titleAr: "الوظائف", titleFr: "Fonctions", content: "• As noun: الكَاتِب (the writer)\n• As adjective: رَجُلٌ عَامِلٌ (a working man)\n• Present action: أَنَا ذَاهِبٌ (I am going)", contentAr: "• كاسم: الكَاتِب (الكاتب)\n• كصفة: رَجُلٌ عَامِلٌ (رجل عامل)\n• للدلالة على الحدث الحالي: أَنَا ذَاهِبٌ (أنا ذاهب)" }
       ],
       vocabulary: [
-        { arabic: "كَاتِب", transliteration: "kātib", meaning: "writer/writing", meaningFr: "écrivain/écrivant" },
-        { arabic: "قَارِئ", transliteration: "qāri'", meaning: "reader/reading", meaningFr: "lecteur/lisant" },
-        { arabic: "سَامِع", transliteration: "sāmi'", meaning: "listener/listening", meaningFr: "auditeur/écoutant" },
-        { arabic: "مُدَرِّس", transliteration: "mudarris", meaning: "teacher", meaningFr: "enseignant" },
-        { arabic: "مُسْتَمِع", transliteration: "mustami'", meaning: "listener (form VIII)", meaningFr: "auditeur (forme VIII)" }
+        { arabic: "كَاتِب", transliteration: "kātib", meaning: "writer/writing", meaningAr: "من يكتب", meaningFr: "écrivain/écrivant" },
+        { arabic: "قَارِئ", transliteration: "qāri'", meaning: "reader/reading", meaningAr: "من يقرأ", meaningFr: "lecteur/lisant" },
+        { arabic: "سَامِع", transliteration: "sāmi'", meaning: "listener/listening", meaningAr: "من يسمع", meaningFr: "auditeur/écoutant" },
+        { arabic: "مُدَرِّس", transliteration: "mudarris", meaning: "teacher", meaningAr: "من يدرس الطلاب", meaningFr: "enseignant" },
+        { arabic: "مُسْتَمِع", transliteration: "mustami'", meaning: "listener (form VIII)", meaningAr: "من يستمع (من الفعل المزيد)", meaningFr: "auditeur (forme VIII)" }
       ]
     },
     exerciseCount: 17, prerequisites: ["4-6"]
@@ -196,22 +210,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اسم المفعول",
     titleFr: "Le participe passif (اسم المفعول)",
     description: "Master the passive participle pattern",
+    descriptionAr: "إتقان صيغة اسم المفعول وتطبيقاتها",
     descriptionFr: "Maîtrisez le schème du participe passif",
     objectives: ["Form from Form I", "Form from derived forms", "Distinguish from active", "Use in descriptions"],
+    objectivesAr: ["تكوين اسم المفعول من الفعل الثلاثي", "تكوينه من الأفعال المزيدة", "التمييز بينه وبين اسم الفاعل", "استخدامه في الأوصاف"],
     objectivesFr: ["Former à partir de la forme I", "Former à partir des formes dérivées", "Distinguer de l'actif", "Utiliser dans les descriptions"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Form I Pattern", titleFr: "Schème de la forme I", content: "مَفْعُول pattern:\nكَتَبَ → مَكْتُوب (written)\nعَمِلَ → مَعْمُول (done/made)\nفَتَحَ → مَفْتُوح (opened)", contentFr: "Schème مَفْعُول :\nكَتَبَ → مَكْتُوب (écrit)\nعَمِلَ → مَعْمُول (fait/fabriqué)\nفَتَحَ → مَفْتُوح (ouvert)" },
-        { title: "Derived Forms Pattern", titleFr: "Schème des formes dérivées", content: "Like active but with fatha before last consonant:\nمُعَلَّم (taught) vs مُعَلِّم (teacher)\nمُسْتَخْدَم (used) vs مُسْتَخْدِم (user)", contentFr: "Comme l'actif mais avec fatha avant la dernière consonne :\nمُعَلَّم (enseigné) vs مُعَلِّم (enseignant)\nمُسْتَخْدَم (utilisé) vs مُسْتَخْدِم (utilisateur)" },
-        { title: "Common Usage", titleFr: "Utilisation courante", content: "مَكْتُوبٌ عَلَيْهِ - It is written on it (fated)\nمَمْنُوع - forbidden\nمَسْمُوح - permitted", contentFr: "مَكْتُوبٌ عَلَيْهِ - C'est écrit dessus (destiné)\nمَمْنُوع - interdit\nمَسْمُوح - permis" }
+        { title: "Form I Pattern", titleAr: "صيغة الفعل الثلاثي", titleFr: "Schème de la forme I", content: "مَفْعُول pattern:\nكَتَبَ → مَكْتُوب (written)\nعَمِلَ → مَعْمُول (done/made)\nفَتَحَ → مَفْتُوح (opened)", contentAr: "صيغة مَفْعُول:\nكَتَبَ → مَكْتُوب (الكتابة وقعت عليه)\nعَمِلَ → مَعْمُول (العمل وقع عليه)\nفَتَحَ → مَفْتُوح (الفتح وقع عليه)" },
+        { title: "Derived Forms Pattern", titleAr: "صيغة الأفعال المزيدة", titleFr: "Schème des formes dérivées", content: "Like active but with fatha before last consonant:\nمُعَلَّم (taught) vs مُعَلِّم (teacher)\nمُسْتَخْدَم (used) vs مُسْتَخْدِم (user)", contentAr: "مثل اسم الفاعل لكن بفتح ما قبل الآخر:\nمُعَلَّم (المعلّم: ما علّمه أحد) vs مُعَلِّم (المعلم: من يعلم)\nمُسْتَخْدَم (المستخدم: ما استخدم) vs مُسْتَخْدِم (المستخدم: من يستخدم)" },
+        { title: "Common Usage", titleAr: "الاستخدام الشائع", titleFr: "Utilisation courante", content: "مَكْتُوبٌ عَلَيْهِ - It is written on it (fated)\nمَمْنُوع - forbidden\nمَسْمُوح - permitted", contentAr: "مَكْتُوبٌ عَلَيْهِ - مقدر عليه\nمَمْنُوع - محظور\nمَسْمُوح - مأذون به" }
       ],
       vocabulary: [
-        { arabic: "مَكْتُوب", transliteration: "maktūb", meaning: "written", meaningFr: "écrit" },
-        { arabic: "مَفْهُوم", transliteration: "mafhūm", meaning: "understood", meaningFr: "compris" },
-        { arabic: "مَعْرُوف", transliteration: "ma'rūf", meaning: "known", meaningFr: "connu" },
-        { arabic: "مَجْهُول", transliteration: "majhūl", meaning: "unknown", meaningFr: "inconnu" },
-        { arabic: "مَشْغُول", transliteration: "mashghūl", meaning: "busy/occupied", meaningFr: "occupé/affairé" }
+        { arabic: "مَكْتُوب", transliteration: "maktūb", meaning: "written", meaningAr: "ما قد كتب", meaningFr: "écrit" },
+        { arabic: "مَفْهُوم", transliteration: "mafhūm", meaning: "understood", meaningAr: "ما قد فهم", meaningFr: "compris" },
+        { arabic: "مَعْرُوف", transliteration: "ma'rūf", meaning: "known", meaningAr: "ما قد عرف", meaningFr: "connu" },
+        { arabic: "مَجْهُول", transliteration: "majhūl", meaning: "unknown", meaningAr: "ما لم يعرف", meaningFr: "inconnu" },
+        { arabic: "مَشْغُول", transliteration: "mashghūl", meaning: "busy/occupied", meaningAr: "ما قد شغل بشيء", meaningFr: "occupé/affairé" }
       ]
     },
     exerciseCount: 17, prerequisites: ["4-7"]
@@ -222,22 +238,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "المصدر",
     titleFr: "Le nom verbal (المصدر)",
     description: "Master verbal noun patterns",
+    descriptionAr: "إتقان صيغ المصدر من جميع الأفعال",
     descriptionFr: "Maîtrisez les schèmes des noms verbaux",
     objectives: ["Recognize Form I patterns", "Form from derived forms", "Use in إضافة", "Replace verbs with مصدر"],
+    objectivesAr: ["التعرف على صيغ الفعل الثلاثي", "تكوينها من الأفعال المزيدة", "استخدامها في الإضافة", "استبدال الأفعال بالمصدر"],
     objectivesFr: ["Reconnaître les schèmes de la forme I", "Former à partir des formes dérivées", "Utiliser dans l'إضافة", "Remplacer les verbes par مصدر"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Form I Patterns", titleFr: "Schèmes de la forme I", content: "Many patterns exist:\nفَعْل: ضَرْب، فَتْح\nفِعَال: قِتَال، جِهَاد\nفُعُول: دُخُول، خُرُوج\nفَعَال: ذَهَاب، سَفَر", contentFr: "Beaucoup de schèmes existent :\nفَعْل : ضَرْب، فَتْح\nفِعَال : قِتَال، جِهَاد\nفُعُول : دُخُول، خُرُوج\nفَعَال : ذَهَاب، سَفَر" },
-        { title: "Derived Form Patterns", titleFr: "Schèmes des formes dérivées", content: "II: تَفْعِيل - تَعْلِيم\nIII: مُفَاعَلَة - مُسَاعَدَة\nIV: إِفْعَال - إِرْسَال\nV: تَفَعُّل - تَعَلُّم\nVI: تَفَاعُل - تَعَاوُن\nVII: اِنْفِعَال - اِنْكِسَار\nVIII: اِفْتِعَال - اِجْتِمَاع\nX: اِسْتِفْعَال - اِسْتِخْدَام", contentFr: "II : تَفْعِيل - تَعْلِيم\nIII : مُفَاعَلَة - مُسَاعَدَة\nIV : إِفْعَال - إِرْسَال\nV : تَفَعُّل - تَعَلُّم\nVI : تَفَاعُل - تَعَاوُن\nVII : اِنْفِعَال - اِنْكِسَار\nVIII : اِفْتِعَال - اِجْتِمَاع\nX : اِسْتِفْعَال - اِسْتِخْدَام" },
-        { title: "Usage", titleFr: "Utilisation", content: "قِرَاءَةُ الكُتُبِ مُفِيدَةٌ\nReading books is beneficial\n(مصدر as subject of nominal sentence)", contentFr: "قِرَاءَةُ الكُتُبِ مُفِيدَةٌ\nLire des livres est bénéfique\n(مصدر comme sujet de phrase nominale)" }
+        { title: "Form I Patterns", titleAr: "صيغ الفعل الثلاثي", titleFr: "Schèmes de la forme I", content: "Many patterns exist:\nفَعْل: ضَرْب، فَتْح\nفِعَال: قِتَال، جِهَاد\nفُعُول: دُخُول، خُرُوج\nفَعَال: ذَهَاب، سَفَر", contentAr: "صيغ متعددة:\nفَعْل: ضَرْب (الضرب)، فَتْح (الفتح)\nفِعَال: قِتَال (القتال)، جِهَاد (الجهاد)\nفُعُول: دُخُول (الدخول)، خُرُوج (الخروج)\nفَعَال: ذَهَاب (الذهاب)، سَفَر (السفر)" },
+        { title: "Derived Form Patterns", titleAr: "صيغ الأفعال المزيدة", titleFr: "Schèmes des formes dérivées", content: "II: تَفْعِيل - تَعْلِيم\nIII: مُفَاعَلَة - مُسَاعَدَة\nIV: إِفْعَال - إِرْسَال\nV: تَفَعُّل - تَعَلُّم\nVI: تَفَاعُل - تَعَاوُن\nVII: اِنْفِعَال - اِنْكِسَار\nVIII: اِفْتِعَال - اِجْتِمَاع\nX: اِسْتِفْعَال - اِسْتِخْدَام", contentAr: "II: تَفْعِيل - تَعْلِيم (التعليم)\nIII: مُفَاعَلَة - مُسَاعَدَة (المساعدة)\nIV: إِفْعَال - إِرْسَال (الإرسال)\nV: تَفَعُّل - تَعَلُّم (التعلم)\nVI: تَفَاعُل - تَعَاوُن (التعاون)\nVII: اِنْفِعَال - اِنْكِسَار (الانكسار)\nVIII: اِفْتِعَال - اِجْتِمَاع (الاجتماع)\nX: اِسْتِفْعَال - اِسْتِخْدَام (الاستخدام)" },
+        { title: "Usage", titleAr: "الاستخدام", titleFr: "Utilisation", content: "قِرَاءَةُ الكُتُبِ مُفِيدَةٌ\nReading books is beneficial\n(مصدر as subject of nominal sentence)", contentAr: "قِرَاءَةُ الكُتُبِ مُفِيدَةٌ\nقراءة الكتب مفيدة\n(المصدر كمبتدأ في الجملة الاسمية)" }
       ],
       vocabulary: [
-        { arabic: "قِرَاءَة", transliteration: "qirā'a", meaning: "reading", meaningFr: "lecture" },
-        { arabic: "كِتَابَة", transliteration: "kitāba", meaning: "writing", meaningFr: "écriture" },
-        { arabic: "تَعْلِيم", transliteration: "ta'līm", meaning: "teaching", meaningFr: "enseignement" },
-        { arabic: "اِسْتِخْدَام", transliteration: "istikhdām", meaning: "use/usage", meaningFr: "utilisation" },
-        { arabic: "تَعَاوُن", transliteration: "ta'āwun", meaning: "cooperation", meaningFr: "coopération" }
+        { arabic: "قِرَاءَة", transliteration: "qirā'a", meaning: "reading", meaningAr: "الفعل: قَرَأَ", meaningFr: "lecture" },
+        { arabic: "كِتَابَة", transliteration: "kitāba", meaning: "writing", meaningAr: "الفعل: كَتَبَ", meaningFr: "écriture" },
+        { arabic: "تَعْلِيم", transliteration: "ta'līm", meaning: "teaching", meaningAr: "الفعل: عَلَّمَ", meaningFr: "enseignement" },
+        { arabic: "اِسْتِخْدَام", transliteration: "istikhdām", meaning: "use/usage", meaningAr: "الفعل: اسْتَخْدَمَ", meaningFr: "utilisation" },
+        { arabic: "تَعَاوُن", transliteration: "ta'āwun", meaning: "cooperation", meaningAr: "الفعل: تَعَاوَنَ", meaningFr: "coopération" }
       ]
     },
     exerciseCount: 18, prerequisites: ["4-8"]
@@ -248,22 +266,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اسم المكان واسم الزمان",
     titleFr: "Noms de lieu et de temps",
     description: "Learn patterns for place and time nouns",
+    descriptionAr: "تعلم صيغ أسماء المكان والزمان",
     descriptionFr: "Apprenez les schèmes des noms de lieu et de temps",
     objectives: ["Form مَفْعَل and مَفْعِل patterns", "Distinguish place from time", "Use in descriptions", "Recognize in texts"],
+    objectivesAr: ["تكوين صيغة مَفْعَل ومَفْعِل", "التمييز بين اسم المكان واسم الزمان", "استخدامهما في الأوصاف", "التعرف عليهما في النصوص"],
     objectivesFr: ["Former les schèmes مَفْعَل et مَفْعِل", "Distinguer le lieu du temps", "Utiliser dans les descriptions", "Les reconnaître dans les textes"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Pattern", titleFr: "Schème", content: "مَفْعَل or مَفْعِل (depends on verb form):\nلَعِبَ → مَلْعَب (playground)\nجَلَسَ → مَجْلِس (sitting place/council)\nدَخَلَ → مَدْخَل (entrance)", contentFr: "مَفْعَل ou مَفْعِل (selon la forme du verbe) :\nلَعِبَ → مَلْعَب (terrain de jeu)\nجَلَسَ → مَجْلِس (lieu d'assise/conseil)\nدَخَلَ → مَدْخَل (entrée)" },
-        { title: "Time Usage", titleFr: "Utilisation pour le temps", content: "Same pattern for time:\nوُلِدَ → مَوْلِد (birthday/birthplace)\nغَرَبَ → مَغْرِب (sunset/west)\nطَلَعَ → مَطْلَع (sunrise)", contentFr: "Même schème pour le temps :\nوُلِدَ → مَوْلِد (naissance/lieu de naissance)\nغَرَبَ → مَغْرِب (coucher de soleil/ouest)\nطَلَعَ → مَطْلَع (lever de soleil)" },
-        { title: "Common Examples", titleFr: "Exemples courants", content: "مَكْتَب - office\nمَدْرَسَة - school\nمَطْبَخ - kitchen\nمَسْجِد - mosque", contentFr: "مَكْتَب - bureau\nمَدْرَسَة - école\nمَطْبَخ - cuisine\nمَسْجِد - mosquée" }
+        { title: "Pattern", titleAr: "الصيغة", titleFr: "Schème", content: "مَفْعَل or مَفْعِل (depends on verb form):\nلَعِبَ → مَلْعَب (playground)\nجَلَسَ → مَجْلِس (sitting place/council)\nدَخَلَ → مَدْخَل (entrance)", contentAr: "مَفْعَل أو مَفْعِل:\nلَعِبَ → مَلْعَب (مكان اللعب)\nجَلَسَ → مَجْلِس (مكان الجلوس/مجلس)\nدَخَلَ → مَدْخَل (مكان الدخول)" },
+        { title: "Time Usage", titleAr: "استخدام اسم الزمان", titleFr: "Utilisation pour le temps", content: "Same pattern for time:\nوُلِدَ → مَوْلِد (birthday/birthplace)\nغَرَبَ → مَغْرِب (sunset/west)\nطَلَعَ → مَطْلَع (sunrise)", contentAr: "نفس الصيغة للزمان:\nوُلِدَ → مَوْلِد (زمن/مكان الولادة)\nغَرَبَ → مَغْرِب (وقت الغروب)\nطَلَعَ → مَطْلَع (وقت الطلوع)" },
+        { title: "Common Examples", titleAr: "أمثلة شائعة", titleFr: "Exemples courants", content: "مَكْتَب - office\nمَدْرَسَة - school\nمَطْبَخ - kitchen\nمَسْجِد - mosque", contentAr: "مَكْتَب - مكتب العمل\nمَدْرَسَة - مكان الدراسة\nمَطْبَخ - مكان الطهي\nمَسْجِد - مكان السجود" }
       ],
       vocabulary: [
-        { arabic: "مَلْعَب", transliteration: "mal'ab", meaning: "playground/stadium", meaningFr: "terrain de jeu/stade" },
-        { arabic: "مَكْتَبَة", transliteration: "maktaba", meaning: "library", meaningFr: "bibliothèque" },
-        { arabic: "مَطَار", transliteration: "maṭār", meaning: "airport", meaningFr: "aéroport" },
-        { arabic: "مَوْقِف", transliteration: "mawqif", meaning: "parking/position", meaningFr: "parking/position" },
-        { arabic: "مَخْرَج", transliteration: "makhraj", meaning: "exit", meaningFr: "sortie" }
+        { arabic: "مَلْعَب", transliteration: "mal'ab", meaning: "playground/stadium", meaningAr: "مكان اللعب", meaningFr: "terrain de jeu/stade" },
+        { arabic: "مَكْتَبَة", transliteration: "maktaba", meaning: "library", meaningAr: "مكان الكتب", meaningFr: "bibliothèque" },
+        { arabic: "مَطَار", transliteration: "maṭār", meaning: "airport", meaningAr: "مكان الطيران", meaningFr: "aéroport" },
+        { arabic: "مَوْقِف", transliteration: "mawqif", meaning: "parking/position", meaningAr: "مكان الوقوف", meaningFr: "parking/position" },
+        { arabic: "مَخْرَج", transliteration: "makhraj", meaning: "exit", meaningAr: "مكان الخروج", meaningFr: "sortie" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-9"]
@@ -274,22 +294,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اسم الآلة",
     titleFr: "Le nom d'instrument",
     description: "Learn patterns for instrument nouns",
+    descriptionAr: "تعلم صيغ أسماء الآلة والمستحدثة",
     descriptionFr: "Apprenez les schèmes des noms d'instrument",
     objectives: ["Form مِفْعَل, مِفْعَال, مِفْعَلَة patterns", "Use instrument nouns", "Expand vocabulary", "Recognize in modern Arabic"],
+    objectivesAr: ["تكوين صيغ مِفْعَل، مِفْعَال، مِفْعَلَة", "استخدام أسماء الآلة", "توسيع المفردات", "التعرف عليها في العربية الحديثة"],
     objectivesFr: ["Former les schèmes مِفْعَل, مِفْعَال, مِفْعَلَة", "Utiliser les noms d'instrument", "Élargir le vocabulaire", "Les reconnaître en arabe moderne"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Classical Patterns", titleFr: "Schèmes classiques", content: "مِفْعَل: مِفْتَاح (key), مِصْبَاح (lamp)\nمِفْعَال: مِنْشَار (saw), مِفْتَاح (key)\nمِفْعَلَة: مِكْنَسَة (broom), مِطْرَقَة (hammer)", contentFr: "مِفْعَل : مِفْتَاح (clé), مِصْبَاح (lampe)\nمِفْعَال : مِنْشَار (scie), مِفْتَاح (clé)\nمِفْعَلَة : مِكْنَسَة (balai), مِطْرَقَة (marteau)" },
-        { title: "Modern Coinages", titleFr: "Néologismes modernes", content: "Arabic creates new instrument nouns:\nحَسَبَ → حَاسُوب (computer)\nبَرَدَ → ثَلَّاجَة (refrigerator)\nغَسَلَ → غَسَّالَة (washing machine)", contentFr: "L'arabe crée de nouveaux noms d'instrument :\nحَسَبَ → حَاسُوب (ordinateur)\nبَرَدَ → ثَلَّاجَة (réfrigérateur)\nغَسَلَ → غَسَّالَة (machine à laver)" },
-        { title: "فَعَّالَة Pattern", titleFr: "Schème فَعَّالَة", content: "Modern machines often use فَعَّالَة:\nثَلَّاجَة - refrigerator\nغَسَّالَة - washing machine\nسَيَّارَة - car (thing that moves)", contentFr: "Les machines modernes utilisent souvent فَعَّالَة :\nثَلَّاجَة - réfrigérateur\nغَسَّالَة - machine à laver\nسَيَّارَة - voiture (ce qui se déplace)" }
+        { title: "Classical Patterns", titleAr: "الصيغ الكلاسيكية", titleFr: "Schèmes classiques", content: "مِفْعَل: مِفْتَاح (key), مِصْبَاح (lamp)\nمِفْعَال: مِنْشَار (saw), مِفْتَاح (key)\nمِفْعَلَة: مِكْنَسَة (broom), مِطْرَقَة (hammer)", contentAr: "مِفْعَل: مِفْتَاح (المفتاح)، مِصْبَاح (المصباح)\nمِفْعَال: مِنْشَار (المنشار)، مِعْشَار (الأداة)\nمِفْعَلَة: مِكْنَسَة (المكنسة)، مِطْرَقَة (المطرقة)" },
+        { title: "Modern Coinages", titleAr: "الصيغ المستحدثة", titleFr: "Néologismes modernes", content: "Arabic creates new instrument nouns:\nحَسَبَ → حَاسُوب (computer)\nبَرَدَ → ثَلَّاجَة (refrigerator)\nغَسَلَ → غَسَّالَة (washing machine)", contentAr: "اللغة العربية تخلق صيغاً جديدة:\nحَسَبَ → حَاسُوب (الحاسوب)\nبَرَدَ → ثَلَّاجَة (الثلاجة)\nغَسَلَ → غَسَّالَة (غسالة الملابس)" },
+        { title: "فَعَّالَة Pattern", titleAr: "صيغة فَعَّالَة", titleFr: "Schème فَعَّالَة", content: "Modern machines often use فَعَّالَة:\nثَلَّاجَة - refrigerator\nغَسَّالَة - washing machine\nسَيَّارَة - car (thing that moves)", contentAr: "الآلات الحديثة غالباً تستخدم صيغة فَعَّالَة:\nثَلَّاجَة - الثلاجة\nغَسَّالَة - غسالة الملابس\nسَيَّارَة - السيارة (ما يتحرك)" }
       ],
       vocabulary: [
-        { arabic: "مِفْتَاح", transliteration: "miftāḥ", meaning: "key", meaningFr: "clé" },
-        { arabic: "مِقَصّ", transliteration: "miqaṣṣ", meaning: "scissors", meaningFr: "ciseaux" },
-        { arabic: "مِكْوَاة", transliteration: "mikwā", meaning: "iron (clothes)", meaningFr: "fer (à repasser)" },
-        { arabic: "حَاسُوب", transliteration: "ḥāsūb", meaning: "computer", meaningFr: "ordinateur" },
-        { arabic: "هَاتِف", transliteration: "hātif", meaning: "telephone", meaningFr: "téléphone" }
+        { arabic: "مِفْتَاح", transliteration: "miftāḥ", meaning: "key", meaningAr: "الأداة التي تفتح الأقفال", meaningFr: "clé" },
+        { arabic: "مِقَصّ", transliteration: "miqaṣṣ", meaning: "scissors", meaningAr: "أداة القص", meaningFr: "ciseaux" },
+        { arabic: "مِكْوَاة", transliteration: "mikwā", meaning: "iron (clothes)", meaningAr: "أداة الكي", meaningFr: "fer (à repasser)" },
+        { arabic: "حَاسُوب", transliteration: "ḥāsūb", meaning: "computer", meaningAr: "الجهاز الآلي الحاسب", meaningFr: "ordinateur" },
+        { arabic: "هَاتِف", transliteration: "hātif", meaning: "telephone", meaningAr: "جهاز الاتصال", meaningFr: "téléphone" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-10"]
@@ -300,22 +322,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "التصغير وصيغ المبالغة",
     titleFr: "Le diminutif et l'intensif",
     description: "Learn diminutive and intensive noun patterns",
+    descriptionAr: "تعلم صيغ التصغير والمبالغة",
     descriptionFr: "Apprenez les schèmes du diminutif et de l'intensif",
     objectives: ["Form diminutives", "Use intensive adjective patterns", "Express nuance", "Recognize in literature"],
+    objectivesAr: ["تكوين صيغة التصغير", "استخدام صيغ المبالغة والصفة المشبهة", "التعبير عن الدلالات المختلفة", "التعرف عليها في الأدب"],
     objectivesFr: ["Former des diminutifs", "Utiliser les schèmes d'adjectifs intensifs", "Exprimer des nuances", "Les reconnaître dans la littérature"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Diminutive (تصغير)", titleFr: "Diminutif (تصغير)", content: "Pattern: فُعَيْل\nكِتَاب → كُتَيِّب (booklet)\nكَلْب → كُلَيْب (puppy)\nبَيْت → بُيَيْت (small house)", contentFr: "Schème : فُعَيْل\nكِتَاب → كُتَيِّب (petit livre)\nكَلْب → كُلَيْب (petit chien)\nبَيْت → بُيَيْت (petite maison)" },
-        { title: "Intensive Adjectives", titleFr: "Adjectifs intensifs", content: "Patterns for extreme qualities:\nفَعَّال: كَذَّاب (big liar)\nفَعِيل: عَلِيم (very knowledgeable)\nفَعُول: صَبُور (very patient)\nمِفْعَال: مِهْذَار (very talkative)", contentFr: "Schèmes pour les qualités extrêmes :\nفَعَّال : كَذَّاب (grand menteur)\nفَعِيل : عَلِيم (très savant)\nفَعُول : صَبُور (très patient)\nمِفْعَال : مِهْذَار (très bavard)" },
-        { title: "Usage", titleFr: "Utilisation", content: "Express affection: يَا بُنَيّ (O my little son)\nExpress extremity: هُوَ أَكُول - He eats a lot", contentFr: "Exprimer l'affection : يَا بُنَيّ (Ô mon petit fils)\nExprimer l'extrémité : هُوَ أَكُول - Il mange beaucoup" }
+        { title: "Diminutive (تصغير)", titleAr: "صيغة التصغير", titleFr: "Diminutif (تصغير)", content: "Pattern: فُعَيْل\nكِتَاب → كُتَيِّب (booklet)\nكَلْب → كُلَيْب (puppy)\nبَيْت → بُيَيْت (small house)", contentAr: "صيغة فُعَيْل:\nكِتَاب → كُتَيِّب (الكتيب)\nكَلْب → كُلَيْب (الجراء)\nبَيْت → بُيَيْت (بيت صغير)" },
+        { title: "Intensive Adjectives", titleAr: "صيغ المبالغة", titleFr: "Adjectifs intensifs", content: "Patterns for extreme qualities:\nفَعَّال: كَذَّاب (big liar)\nفَعِيل: عَلِيم (very knowledgeable)\nفَعُول: صَبُور (very patient)\nمِفْعَال: مِهْذَار (very talkative)", contentAr: "صيغ للدلالة على المبالغة:\nفَعَّال: كَذَّاب (كذاب كثير)\nفَعِيل: عَلِيم (عالم جداً)\nفَعُول: صَبُور (صابر جداً)\nمِفْعَال: مِهْذَار (ثرثار جداً)" },
+        { title: "Usage", titleAr: "الاستخدام", titleFr: "Utilisation", content: "Express affection: يَا بُنَيّ (O my little son)\nExpress extremity: هُوَ أَكُول - He eats a lot", contentAr: "التعبير عن الحنان: يَا بُنَيّ (يا بني الصغير)\nالتعبير عن الشدة: هُوَ أَكُول - إنه يأكل كثيراً" }
       ],
       vocabulary: [
-        { arabic: "بُنَيّ", transliteration: "bunayy", meaning: "little son", meaningFr: "petit fils" },
-        { arabic: "عَلَّامَة", transliteration: "'allāma", meaning: "great scholar", meaningFr: "grand savant" },
-        { arabic: "فَهَّامَة", transliteration: "fahhāma", meaning: "very understanding", meaningFr: "très compréhensif" },
-        { arabic: "صَبُور", transliteration: "ṣabūr", meaning: "very patient", meaningFr: "très patient" },
-        { arabic: "شَكُور", transliteration: "shakūr", meaning: "very thankful", meaningFr: "très reconnaissant" }
+        { arabic: "بُنَيّ", transliteration: "bunayy", meaning: "little son", meaningAr: "الابن الصغير (بنوة)", meaningFr: "petit fils" },
+        { arabic: "عَلَّامَة", transliteration: "'allāma", meaning: "great scholar", meaningAr: "عالم كبير جداً", meaningFr: "grand savant" },
+        { arabic: "فَهَّامَة", transliteration: "fahhāma", meaning: "very understanding", meaningAr: "فاهم جداً (مبالغة)", meaningFr: "très compréhensif" },
+        { arabic: "صَبُور", transliteration: "ṣabūr", meaning: "very patient", meaningAr: "صابر جداً", meaningFr: "très patient" },
+        { arabic: "شَكُور", transliteration: "shakūr", meaning: "very thankful", meaningAr: "شاكر جداً", meaningFr: "très reconnaissant" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-11"]
@@ -327,22 +351,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "مدخل إلى الشعر العربي",
     titleFr: "Introduction à la poésie arabe",
     description: "Introduction to classical Arabic poetry",
+    descriptionAr: "مدخل شامل للشعر العربي الكلاسيكي",
     descriptionFr: "Introduction à la poésie arabe classique",
     objectives: ["Understand poetic structure", "Learn basic meters", "Analyze rhyme schemes", "Appreciate classical poetry"],
+    objectivesAr: ["فهم البناء الشعري والبيت والقصيدة", "تعلم البحور الشعرية الأساسية", "تحليل القافية والروي", "تقدير الشعر العربي الكلاسيكي"],
     objectivesFr: ["Comprendre la structure poétique", "Apprendre les mètres de base", "Analyser les schèmes de rime", "Apprécier la poésie classique"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Verse Structure", titleFr: "Structure du vers", content: "بَيْت (verse) = صَدْر (first hemistich) + عَجُز (second hemistich)\nقَصِيدَة (poem) = multiple verses with same rhyme", contentFr: "بَيْت (vers) = صَدْر (première moitié) + عَجُز (deuxième moitié)\nقَصِيدَة (poème) = plusieurs vers avec la même rime" },
-        { title: "Rhyme (القافية)", titleFr: "Rime (القافية)", content: "Classical poems maintain the same end rhyme throughout:\nكُلُّ بَيْتٍ يَنْتَهِي بِنَفْسِ الحَرْفِ\nRhyme letter (رَوِيّ) defines the poem", contentFr: "Les poèmes classiques maintiennent la même rime finale :\nكُلُّ بَيْتٍ يَنْتَهِي بِنَفْسِ الحَرْفِ\nLa lettre de rime (رَوِيّ) définit le poème" },
-        { title: "Famous Poets", titleFr: "Poètes célèbres", content: "Pre-Islamic: اِمْرُؤ القَيْس\nAbbasid: أَبُو نُوَاس، المُتَنَبِّي\nModern: أَحْمَد شَوْقِي، نِزَار قَبَّانِي", contentFr: "Pré-islamique : اِمْرُؤ القَيْس\nAbbassade : أَبُو نُوَاس، المُتَنَبِّي\nModerne : أَحْمَد شَوْقِي، نِزَار قَبَّانِي" }
+        { title: "Verse Structure", titleAr: "بناء البيت الشعري", titleFr: "Structure du vers", content: "بَيْت (verse) = صَدْر (first hemistich) + عَجُز (second hemistich)\nقَصِيدَة (poem) = multiple verses with same rhyme", contentAr: "البيت = صَدْر (الشطر الأول) + عَجُز (الشطر الثاني)\nالقصيدة = مجموعة أبيات لها قافية واحدة" },
+        { title: "Rhyme (القافية)", titleAr: "القافية والروي", titleFr: "Rime (القافية)", content: "Classical poems maintain the same end rhyme throughout:\nكُلُّ بَيْتٍ يَنْتَهِي بِنَفْسِ الحَرْفِ\nRhyme letter (رَوِيّ) defines the poem", contentAr: "تحافظ القصائد الكلاسيكية على قافية واحدة:\nكل بيت ينتهي بنفس الحرف\nحرف الروي هو الحرف الأخير المتكرر" },
+        { title: "Famous Poets", titleAr: "الشعراء المشهورون", titleFr: "Poètes célèbres", content: "Pre-Islamic: اِمْرُؤ القَيْس\nAbbasid: أَبُو نُوَاس، المُتَنَبِّي\nModern: أَحْمَد شَوْقِي، نِزَار قَبَّانِي", contentAr: "الجاهلي: امرؤ القيس\nالعباسي: أبو نواس والمتنبي\nالحديث: أحمد شوقي ونزار قباني" }
       ],
       vocabulary: [
-        { arabic: "شِعْر", transliteration: "shi'r", meaning: "poetry", meaningFr: "poésie" },
-        { arabic: "شَاعِر", transliteration: "shā'ir", meaning: "poet", meaningFr: "poète" },
-        { arabic: "قَصِيدَة", transliteration: "qaṣīda", meaning: "ode/poem", meaningFr: "ode/poème" },
-        { arabic: "بَيْت", transliteration: "bayt", meaning: "verse", meaningFr: "vers" },
-        { arabic: "قَافِيَة", transliteration: "qāfiya", meaning: "rhyme", meaningFr: "rime" }
+        { arabic: "شِعْر", transliteration: "shi'r", meaning: "poetry", meaningAr: "الكلام الموزون المقفى", meaningFr: "poésie" },
+        { arabic: "شَاعِر", transliteration: "shā'ir", meaning: "poet", meaningAr: "من ينظم الشعر", meaningFr: "poète" },
+        { arabic: "قَصِيدَة", transliteration: "qaṣīda", meaning: "ode/poem", meaningAr: "قطعة من الشعر", meaningFr: "ode/poème" },
+        { arabic: "بَيْت", transliteration: "bayt", meaning: "verse", meaningAr: "سطر من الشعر يتضمن الشطرين", meaningFr: "vers" },
+        { arabic: "قَافِيَة", transliteration: "qāfiya", meaning: "rhyme", meaningAr: "تكرار صوت في نهاية الأبيات", meaningFr: "rime" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-12"]
@@ -353,22 +379,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "علم العروض",
     titleFr: "Les mètres arabes (العروض)",
     description: "Learn the basics of Arabic prosody",
+    descriptionAr: "تعلم أساسيات علم العروض والتفاعيل",
     descriptionFr: "Apprenez les bases de la prosodie arabe",
     objectives: ["Understand the concept of بحر", "Learn common meters", "Scan simple verses", "Appreciate rhythmic patterns"],
+    objectivesAr: ["فهم مفهوم البحر في الشعر", "تعلم البحور الشعرية الشائعة", "تفعيل ومجزوءة الأبيات", "تقدير الأنماط الإيقاعية"],
     objectivesFr: ["Comprendre le concept de بحر", "Apprendre les mètres courants", "Scander des vers simples", "Apprécier les schèmes rythmiques"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "What is 'Arūḍ?", titleFr: "Qu'est-ce que 'Arūḍ ?", content: "The science of Arabic meters, founded by الخَلِيل بن أَحْمَد\n16 classical meters (بُحُور)\nBased on syllable patterns: فَعُولُن، فَاعِلُن، مُسْتَفْعِلُن", contentFr: "La science des mètres arabes, fondée par الخَلِيل بن أَحْمَد\n16 mètres classiques (بُحُور)\nBasés sur les schèmes de syllabes : فَعُولُن، فَاعِلُن، مُسْتَفْعِلُن" },
-        { title: "Common Meters", titleFr: "Mètres courants", content: "الطَّوِيل - most common pre-Islamic\nالكَامِل - perfect/complete\nالوَافِر - abundant\nالخَفِيف - light\nالرَّجَز - simple/accessible", contentFr: "الطَّوِيل - le plus courant pré-islamique\nالكَامِل - parfait/complet\nالوَافِر - abondant\nالخَفِيف - léger\nالرَّجَز - simple/accessible" },
-        { title: "Scanning Basics", titleFr: "Bases du scansion", content: "Count syllables: تَنْ (short) + تَانْ (long)\nMap to metric feet\nIdentify the بَحْر", contentFr: "Compter les syllabes : تَنْ (court) + تَانْ (long)\nMapper sur les pieds métriques\nIdentifier le بَحْر" }
+        { title: "What is 'Arūḍ?", titleAr: "ما هو علم العروض؟", titleFr: "Qu'est-ce que 'Arūḍ ?", content: "The science of Arabic meters, founded by الخَلِيل بن أَحْمَد\n16 classical meters (بُحُور)\nBased on syllable patterns: فَعُولُن، فَاعِلُن، مُسْتَفْعِلُن", contentAr: "علم بناء الشعر من حيث الوزن\nأسسه الخليل بن أحمد\n16 بحراً كلاسيكياً\nيعتمد على التفاعيل الأساسية" },
+        { title: "Common Meters", titleAr: "البحور الشائعة", titleFr: "Mètres courants", content: "الطَّوِيل - most common pre-Islamic\nالكَامِل - perfect/complete\nالوَافِر - abundant\nالخَفِيف - light\nالرَّجَز - simple/accessible", contentAr: "الطويل - الأكثر استخداماً في الشعر الجاهلي\nالكامل - مكتمل التفاعيل\nالوافر - وافر من التفاعيل\nالخفيف - خفيف النطق\nالرجز - بسيط وسهل" },
+        { title: "Scanning Basics", titleAr: "أساسيات التفعيل", titleFr: "Bases du scansion", content: "Count syllables: تَنْ (short) + تَانْ (long)\nMap to metric feet\nIdentify the بَحْر", contentAr: "عد المقاطع: قصيرة + طويلة\nطبق على التفاعيل\nحدد البحر الذي يتبعه البيت" }
       ],
       vocabulary: [
-        { arabic: "عَرُوض", transliteration: "'arūḍ", meaning: "prosody", meaningFr: "prosodie" },
-        { arabic: "بَحْر", transliteration: "baḥr", meaning: "meter (lit. sea)", meaningFr: "mètre (lit. mer)" },
-        { arabic: "تَفْعِيلَة", transliteration: "taf'īla", meaning: "metric foot", meaningFr: "pied métrique" },
-        { arabic: "وَزْن", transliteration: "wazn", meaning: "weight/meter", meaningFr: "poids/mètre" },
-        { arabic: "إِيقَاع", transliteration: "īqā'", meaning: "rhythm", meaningFr: "rythme" }
+        { arabic: "عَرُوض", transliteration: "'arūḍ", meaning: "prosody", meaningAr: "علم بناء الشعر الموزون", meaningFr: "prosodie" },
+        { arabic: "بَحْر", transliteration: "baḥr", meaning: "meter (lit. sea)", meaningAr: "نوع من أنواع الشعر الموزون", meaningFr: "mètre (lit. mer)" },
+        { arabic: "تَفْعِيلَة", transliteration: "taf'īla", meaning: "metric foot", meaningAr: "الوحدة الأساسية في القياس", meaningFr: "pied métrique" },
+        { arabic: "وَزْن", transliteration: "wazn", meaning: "weight/meter", meaningAr: "الميزان الشعري", meaningFr: "poids/mètre" },
+        { arabic: "إِيقَاع", transliteration: "īqā'", meaning: "rhythm", meaningAr: "توالي الحركات والسكنات", meaningFr: "rythme" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-13"]
@@ -379,22 +407,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "أساليب النثر الكلاسيكي",
     titleFr: "Styles de prose classique",
     description: "Explore classical Arabic prose styles",
+    descriptionAr: "استكشاف أساليب النثر العربي الكلاسيكي",
     descriptionFr: "Explorez les styles de prose arabe classique",
     objectives: ["Distinguish prose genres", "Analyze rhetorical devices", "Understand classical style", "Read historical texts"],
+    objectivesAr: ["التمييز بين أنواع النثر", "تحليل الأساليب البلاغية", "فهم الأسلوب الكلاسيكي", "قراءة النصوص التاريخية"],
     objectivesFr: ["Distinguer les genres de prose", "Analyser les figures rhétoriques", "Comprendre le style classique", "Lire les textes historiques"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Prose Genres", titleFr: "Genres de prose", content: "خُطْبَة - sermon/speech\nرِسَالَة - epistle\nمَقَامَة - literary assembly\nسِيرَة - biography\nتَارِيخ - history", contentFr: "خُطْبَة - sermon/discours\nرِسَالَة - épître\nمَقَامَة - assemblée littéraire\nسِيرَة - biographie\nتَارِيخ - histoire" },
-        { title: "Rhetorical Devices", titleFr: "Figures rhétoriques", content: "سَجْع - rhymed prose\nطِبَاق - antithesis\nجِنَاس - paronomasia\nاِسْتِعَارَة - metaphor", contentFr: "سَجْع - prose rimée\nطِبَاق - antithèse\nجِنَاس - paronomase\nاِسْتِعَارَة - métaphore" },
-        { title: "Famous Prose Writers", titleFr: "Prosateurs célèbres", content: "الجَاحِظ - master of أَدَب\nاِبْن المُقَفَّع - translator, stylist\nالهَمَذَانِي - inventor of مَقَامَة", contentFr: "الجَاحِظ - maître de أَدَب\nاِبْن المُقَفَّع - traducteur, styliste\nالهَمَذَانِي - inventeur de مَقَامَة" }
+        { title: "Prose Genres", titleAr: "أنواع النثر", titleFr: "Genres de prose", content: "خُطْبَة - sermon/speech\nرِسَالَة - epistle\nمَقَامَة - literary assembly\nسِيرَة - biography\nتَارِيخ - history", contentAr: "خُطْبَة - الكلام الموجه للجماهير\nرِسَالَة - الكتاب الموجه للفرد\nمَقَامَة - فن أدبي قصصي\nسِيرَة - السيرة الذاتية أو الحياة\nتَارِيخ - سجل الأحداث الماضية" },
+        { title: "Rhetorical Devices", titleAr: "الأساليب البلاغية", titleFr: "Figures rhétoriques", content: "سَجْع - rhymed prose\nطِبَاق - antithesis\nجِنَاس - paronomasia\nاِسْتِعَارَة - metaphor", contentAr: "سَجْع - تشابه الأصوات في نهاية الفقرات\nطِبَاق - الجمع بين الضدين\nجِنَاس - تكرار الحروف بطرق مختلفة\nاِسْتِعَارَة - استخدام اللفظ بمعنى غير حقيقي" },
+        { title: "Famous Prose Writers", titleAr: "كتاب النثر المشهورون", titleFr: "Prosateurs célèbres", content: "الجَاحِظ - master of أَدَب\nاِبْن المُقَفَّع - translator, stylist\nالهَمَذَانِي - inventor of مَقَامَة", contentAr: "الجاحظ - عالم البيان والأدب\nابن المقفع - المترجم والأديب\nالهمذاني - مبتكر فن المقامة" }
       ],
       vocabulary: [
-        { arabic: "نَثْر", transliteration: "nathr", meaning: "prose", meaningFr: "prose" },
-        { arabic: "سَجْع", transliteration: "saj'", meaning: "rhymed prose", meaningFr: "prose rimée" },
-        { arabic: "بَلَاغَة", transliteration: "balāgha", meaning: "rhetoric", meaningFr: "rhétorique" },
-        { arabic: "فَصَاحَة", transliteration: "faṣāḥa", meaning: "eloquence", meaningFr: "éloquence" },
-        { arabic: "أُسْلُوب", transliteration: "uslūb", meaning: "style", meaningFr: "style" }
+        { arabic: "نَثْر", transliteration: "nathr", meaning: "prose", meaningAr: "الكلام غير الموزون", meaningFr: "prose" },
+        { arabic: "سَجْع", transliteration: "saj'", meaning: "rhymed prose", meaningAr: "النثر المسجوع", meaningFr: "prose rimée" },
+        { arabic: "بَلَاغَة", transliteration: "balāgha", meaning: "rhetoric", meaningAr: "علم إيصال المعنى بأحسن طريقة", meaningFr: "rhétorique" },
+        { arabic: "فَصَاحَة", transliteration: "faṣāḥa", meaning: "eloquence", meaningAr: "جودة الأسلوب والنطق", meaningFr: "éloquence" },
+        { arabic: "أُسْلُوب", transliteration: "uslūb", meaning: "style", meaningAr: "طريقة الكتابة أو النطق", meaningFr: "style" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-14"]
@@ -405,22 +435,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "الأدب العربي الحديث",
     titleFr: "Littérature arabe moderne",
     description: "Explore modern Arabic literary movements",
+    descriptionAr: "استكشاف الحركات الأدبية العربية الحديثة",
     descriptionFr: "Explorez les mouvements littéraires arabes modernes",
     objectives: ["Understand النهضة literary renaissance", "Know major modern authors", "Read contemporary texts", "Analyze modern themes"],
+    objectivesAr: ["فهم النهضة الأدبية والثقافية", "معرفة الأدباء العرب البارزين", "قراءة النصوص الحديثة المعاصرة", "تحليل الموضوعات الحديثة"],
     objectivesFr: ["Comprendre la النهضة littéraire", "Connaître les auteurs modernes majeurs", "Lire les textes contemporains", "Analyser les thèmes modernes"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "النهضة (Renaissance)", titleFr: "النهضة (Renaissance)", content: "19th century revival:\n• Contact with West\n• Printing press impact\n• New genres: novel, short story, drama", contentFr: "Renouveau du XIXe siècle :\n• Contact avec l'Occident\n• Impact de l'imprimerie\n• Nouveaux genres : roman, nouvelle, drame" },
-        { title: "Major Authors", titleFr: "Auteurs majeurs", content: "نَجِيب مَحْفُوظ - Nobel laureate, Cairo Trilogy\nتَوْفِيق الحَكِيم - drama\nجُبْرَان خَلِيل جُبْرَان - poetic prose\nمَحْمُود دَرْوِيش - poetry of exile", contentFr: "نَجِيب مَحْفُوظ - Prix Nobel, Trilogie du Caire\nتَوْفِيق الحَكِيم - drame\nجُبْرَان خَلِيل جُبْرَان - prose poétique\nمَحْمُود دَرْوِيش - poésie de l'exil" },
-        { title: "Modern Themes", titleFr: "Thèmes modernes", content: "Identity and post-colonialism\nUrbanization and social change\nWomen's rights\nPalestinian cause", contentFr: "Identité et post-colonialisme\nUrbanisation et changement social\nDroits des femmes\nCause palestinienne" }
+        { title: "النهضة (Renaissance)", titleAr: "عصر النهضة والحداثة", titleFr: "النهضة (Renaissance)", content: "19th century revival:\n• Contact with West\n• Printing press impact\n• New genres: novel, short story, drama", contentAr: "احياء الأدب في القرن التاسع عشر:\n• التواصل مع الحضارة الغربية\n• تأثير الطباعة والنشر\n• ظهور فنون أدبية جديدة" },
+        { title: "Major Authors", titleAr: "الأدباء والكتاب المشهورون", titleFr: "Auteurs majeurs", content: "نَجِيب مَحْفُوظ - Nobel laureate, Cairo Trilogy\nتَوْفِيق الحَكِيم - drama\nجُبْرَان خَلِيل جُبْرَان - poetic prose\nمَحْمُود دَرْوِيش - poetry of exile", contentAr: "نجيب محفوظ - صاحب جائزة نوبل والثلاثية\nتوفيق الحكيم - رائد المسرح الفكري\nجبران خليل جبران - أديب الثورة الروحية\nمحمود درويش - شاعر الأرض والتراب" },
+        { title: "Modern Themes", titleAr: "الموضوعات الحديثة", titleFr: "Thèmes modernes", content: "Identity and post-colonialism\nUrbanization and social change\nWomen's rights\nPalestinian cause", contentAr: "الهوية والاستقلال الثقافي\nالتحضر والتغيير الاجتماعي\nحقوق المرأة والتحرر\nالقضية الفلسطينية" }
       ],
       vocabulary: [
-        { arabic: "أَدَب", transliteration: "adab", meaning: "literature", meaningFr: "littérature" },
-        { arabic: "رِوَايَة", transliteration: "riwāya", meaning: "novel", meaningFr: "roman" },
-        { arabic: "قِصَّة قَصِيرَة", transliteration: "qiṣṣa qaṣīra", meaning: "short story", meaningFr: "nouvelle" },
-        { arabic: "مَسْرَح", transliteration: "masraḥ", meaning: "theater", meaningFr: "théâtre" },
-        { arabic: "نَهْضَة", transliteration: "nahḍa", meaning: "renaissance", meaningFr: "renaissance" }
+        { arabic: "أَدَب", transliteration: "adab", meaning: "literature", meaningAr: "الإنتاج الفكري والفني", meaningFr: "littérature" },
+        { arabic: "رِوَايَة", transliteration: "riwāya", meaning: "novel", meaningAr: "قصة طويلة", meaningFr: "roman" },
+        { arabic: "قِصَّة قَصِيرَة", transliteration: "qiṣṣa qaṣīra", meaning: "short story", meaningAr: "قصة قليلة الحجم", meaningFr: "nouvelle" },
+        { arabic: "مَسْرَح", transliteration: "masraḥ", meaning: "theater", meaningAr: "فن الدراما والتمثيل", meaningFr: "théâtre" },
+        { arabic: "نَهْضَة", transliteration: "nahḍa", meaning: "renaissance", meaningAr: "إحياء الحضارة والفكر", meaningFr: "renaissance" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-15"]
@@ -431,22 +463,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "النصوص الدينية والكلاسيكية",
     titleFr: "Textes religieux et classiques",
     description: "Introduction to Quranic and classical text styles",
+    descriptionAr: "مدخل لأساليب النصوص القرآنية والكلاسيكية",
     descriptionFr: "Introduction aux styles des textes coraniques et classiques",
     objectives: ["Recognize Quranic style", "Understand classical grammar", "Read with tajweed awareness", "Appreciate linguistic beauty"],
+    objectivesAr: ["التعرف على أسلوب القرآن الكريم", "فهم النحو الكلاسيكي المتقدم", "القراءة مع الوعي بقواعد التجويد", "تقدير الجمال اللغوي"],
     objectivesFr: ["Reconnaître le style coranique", "Comprendre la grammaire classique", "Lire avec conscience du tajweed", "Apprécier la beauté linguistique"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Quranic Arabic", titleFr: "L'arabe coranique", content: "Classical but accessible style\nUnique grammatical constructions\nRhythmic prose (not poetry)\nFoundation of فُصْحَى", contentFr: "Style classique mais accessible\nConstructions grammaticales uniques\nProse rythmique (pas de poésie)\nFondation du فُصْحَى" },
-        { title: "Special Features", titleFr: "Caractéristiques spéciales", content: "Rare vocabulary: words with specific Quranic meanings\nOath formulas: وَالفَجْرِ، وَالشَّمْسِ\nStory patterns: قَصَص القُرْآن", contentFr: "Vocabulaire rare : mots avec des significations spécifiques coraniques\nFormules de serment : وَالفَجْرِ، وَالشَّمْسِ\nSchèmes narratifs : قَصَص القُرْآن" },
-        { title: "Approaching Classical Texts", titleFr: "Approcher les textes classiques", content: "• Use تَفْسِير (commentary)\n• Learn إِعْرَاب (parsing)\n• Study بَلَاغَة (rhetoric)", contentFr: "• Utiliser تَفْسِير (commentaire)\n• Apprendre إِعْرَاب (analyse grammaticale)\n• Étudier بَلَاغَة (rhétorique)" }
+        { title: "Quranic Arabic", titleAr: "اللغة القرآنية", titleFr: "L'arabe coranique", content: "Classical but accessible style\nUnique grammatical constructions\nRhythmic prose (not poetry)\nFoundation of فُصْحَى", contentAr: "أسلوب كلاسيكي ولكنه واضح سهل\nتراكيب نحوية فريدة\nنثر موزون وليس شعراً\nأساس اللغة الفصحى الحديثة" },
+        { title: "Special Features", titleAr: "الخصائص المميزة", titleFr: "Caractéristiques spéciales", content: "Rare vocabulary: words with specific Quranic meanings\nOath formulas: وَالفَجْرِ، وَالشَّمْسِ\nStory patterns: قَصَص القُرْآن", contentAr: "ألفاظ نادرة وذات دلالات قرآنية خاصة\nأسلوب الأيمان والحلف\nقصص قرآنية متكررة بأسلوب موحد" },
+        { title: "Approaching Classical Texts", titleAr: "قراءة النصوص الكلاسيكية", titleFr: "Approcher les textes classiques", content: "• Use تَفْسِير (commentary)\n• Learn إِعْرَاب (parsing)\n• Study بَلَاغَة (rhetoric)", contentAr: "• استخدام التفسير وشرح المعاني\n• تعلم الإعراب والتحليل النحوي\n• دراسة البلاغة والأساليب" }
       ],
       vocabulary: [
-        { arabic: "قُرْآن", transliteration: "qur'ān", meaning: "Quran", meaningFr: "Coran" },
-        { arabic: "آيَة", transliteration: "āya", meaning: "verse/sign", meaningFr: "verset/signe" },
-        { arabic: "سُورَة", transliteration: "sūra", meaning: "chapter", meaningFr: "chapitre" },
-        { arabic: "تَفْسِير", transliteration: "tafsīr", meaning: "interpretation", meaningFr: "interprétation" },
-        { arabic: "تَجْوِيد", transliteration: "tajwīd", meaning: "recitation rules", meaningFr: "règles de récitation" }
+        { arabic: "قُرْآن", transliteration: "qur'ān", meaning: "Quran", meaningAr: "كلام الله المنزل على محمد", meaningFr: "Coran" },
+        { arabic: "آيَة", transliteration: "āya", meaning: "verse/sign", meaningAr: "علامة أو دليل، أو جزء من السورة", meaningFr: "verset/signe" },
+        { arabic: "سُورَة", transliteration: "sūra", meaning: "chapter", meaningAr: "كل قسم من أقسام القرآن", meaningFr: "chapitre" },
+        { arabic: "تَفْسِير", transliteration: "tafsīr", meaning: "interpretation", meaningAr: "شرح معاني القرآن الكريم", meaningFr: "interprétation" },
+        { arabic: "تَجْوِيد", transliteration: "tajwīd", meaning: "recitation rules", meaningAr: "قواعد نطق القرآن الصحيح", meaningFr: "règles de récitation" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-16"]
@@ -457,22 +491,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "مهارات التحليل الأدبي",
     titleFr: "Compétences en analyse littéraire",
     description: "Develop skills for analyzing Arabic texts",
+    descriptionAr: "تطوير مهارات تحليل النصوص العربية الأدبية",
     descriptionFr: "Développez vos compétences d'analyse des textes arabes",
     objectives: ["Analyze structure and theme", "Identify literary devices", "Write critical responses", "Compare texts"],
+    objectivesAr: ["تحليل البناء والموضوع", "التعرف على الأساليب البلاغية", "كتابة التقييمات النقدية", "مقارنة النصوص المختلفة"],
     objectivesFr: ["Analyser la structure et le thème", "Identifier les figures littéraires", "Écrire des réponses critiques", "Comparer des textes"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Analysis Framework", titleFr: "Cadre d'analyse", content: "المَوْضُوع - Theme\nالأُسْلُوب - Style\nاللُّغَة - Language\nالصُّوَر - Imagery\nالبِنَاء - Structure", contentFr: "المَوْضُوع - Thème\nالأُسْلُوب - Style\nاللُّغَة - Langue\nالصُّوَر - Images\nالبِنَاء - Structure" },
-        { title: "Literary Devices", titleFr: "Figures littéraires", content: "تَشْبِيه - simile\nاِسْتِعَارَة - metaphor\nكِنَايَة - metonymy\nمَجَاز - figurative language", contentFr: "تَشْبِيه - comparaison\nاِسْتِعَارَة - métaphore\nكِنَايَة - métonymie\nمَجَاز - langage figuré" },
-        { title: "Critical Vocabulary", titleFr: "Vocabulaire critique", content: "يُعَبِّرُ عَن - expresses\nيُصَوِّرُ - depicts\nيَرْمُزُ إِلَى - symbolizes\nيُوحِي بِـ - suggests", contentFr: "يُعَبِّرُ عَن - exprime\nيُصَوِّرُ - dépeint\nيَرْمُزُ إِلَى - symbolise\nيُوحِي بِـ - suggère" }
+        { title: "Analysis Framework", titleAr: "إطار التحليل", titleFr: "Cadre d'analyse", content: "المَوْضُوع - Theme\nالأُسْلُوب - Style\nاللُّغَة - Language\nالصُّوَر - Imagery\nالبِنَاء - Structure", contentAr: "الموضوع - الفكرة الرئيسية\nالأسلوب - طريقة الكاتب\nاللغة - اختيار الألفاظ\nالصور البيانية - التشبيهات والاستعارات\nالبناء - تنظيم النص" },
+        { title: "Literary Devices", titleAr: "الأساليب البلاغية", titleFr: "Figures littéraires", content: "تَشْبِيه - simile\nاِسْتِعَارَة - metaphor\nكِنَايَة - metonymy\nمَجَاز - figurative language", contentAr: "تشبيه - مقارنة واضحة\nاستعارة - استخدام مجازي\nكناية - التعبير بطريقة غير مباشرة\nمجاز - استخدام غير حقيقي" },
+        { title: "Critical Vocabulary", titleAr: "المفردات النقدية", titleFr: "Vocabulaire critique", content: "يُعَبِّرُ عَن - expresses\nيُصَوِّرُ - depicts\nيَرْمُزُ إِلَى - symbolizes\nيُوحِي بِـ - suggests", contentAr: "يعبر عن - يفصح\nيصور - يرسم صورة\nيرمز إلى - يشير برمز\nيوحي بـ - يلمح إلى" }
       ],
       vocabulary: [
-        { arabic: "تَحْلِيل", transliteration: "taḥlīl", meaning: "analysis", meaningFr: "analyse" },
-        { arabic: "نَقْد أَدَبِيّ", transliteration: "naqd adabī", meaning: "literary criticism", meaningFr: "critique littéraire" },
-        { arabic: "تَفْسِير", transliteration: "tafsīr", meaning: "interpretation", meaningFr: "interprétation" },
-        { arabic: "مَعْنَى", transliteration: "ma'nā", meaning: "meaning", meaningFr: "sens" },
-        { arabic: "رَمْز", transliteration: "ramz", meaning: "symbol", meaningFr: "symbole" }
+        { arabic: "تَحْلِيل", transliteration: "taḥlīl", meaning: "analysis", meaningAr: "تفكيك وتحطيم للأجزاء", meaningFr: "analyse" },
+        { arabic: "نَقْد أَدَبِيّ", transliteration: "naqd adabī", meaning: "literary criticism", meaningAr: "تقييم الأعمال الأدبية", meaningFr: "critique littéraire" },
+        { arabic: "تَفْسِير", transliteration: "tafsīr", meaning: "interpretation", meaningAr: "شرح المعاني", meaningFr: "interprétation" },
+        { arabic: "مَعْنَى", transliteration: "ma'nā", meaning: "meaning", meaningAr: "الدلالة والمقصد", meaningFr: "sens" },
+        { arabic: "رَمْز", transliteration: "ramz", meaning: "symbol", meaningAr: "علامة أو إشارة", meaningFr: "symbole" }
       ]
     },
     exerciseCount: 17, prerequisites: ["4-17"]
@@ -484,22 +520,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "لغة الأخبار",
     titleFr: "L'arabe des médias",
     description: "Master Arabic news language and conventions",
+    descriptionAr: "إتقان لغة الأخبار والنصوص الصحفية",
     descriptionFr: "Maîtrisez le langage et les conventions de l'arabe journalistique",
     objectives: ["Understand news structure", "Learn journalistic vocabulary", "Read Arabic newspapers", "Watch Arabic news"],
+    objectivesAr: ["فهم بناء الخبر الصحفي", "تعلم المفردات الصحفية", "قراءة الصحف العربية", "مشاهدة نشرات الأخبار"],
     objectivesFr: ["Comprendre la structure des nouvelles", "Apprendre le vocabulaire journalistique", "Lire les journaux arabes", "Regarder les actualités arabes"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "News Structure", titleFr: "Structure des nouvelles", content: "مَنْ؟ مَاذَا؟ مَتَى؟ أَيْنَ؟ لِمَاذَا؟ كَيْفَ؟\nWho? What? When? Where? Why? How?\nLead (مُقَدِّمَة) answers key questions", contentFr: "مَنْ؟ مَاذَا؟ مَتَى؟ أَيْنَ؟ لِمَاذَا؟ كَيْفَ؟\nQui ? Quoi ? Quand ? Où ? Pourquoi ? Comment ?\nLe chapeau (مُقَدِّمَة) répond aux questions clés" },
-        { title: "News Vocabulary", titleFr: "Vocabulaire journalistique", content: "أَعْلَنَ - announced\nصَرَّحَ - declared\nأَفَادَ - reported\nكَشَفَ - revealed\nنَفَى - denied", contentFr: "أَعْلَنَ - annoncé\nصَرَّحَ - déclaré\nأَفَادَ - rapporté\nكَشَفَ - révélé\nنَفَى - nié" },
-        { title: "News Sources", titleFr: "Sources d'information", content: "Major channels: الجَزِيرَة، العَرَبِيَّة، BBC عَرَبِي\nNewspapers: الأَهْرَام، الشَّرْق الأَوْسَط", contentFr: "Chaînes majeures : الجَزِيرَة، العَرَبِيَّة، BBC عَرَبِي\nJournaux : الأَهْرَام، الشَّرْق الأَوْسَط" }
+        { title: "News Structure", titleAr: "بناء الخبر الصحفي", titleFr: "Structure des nouvelles", content: "مَنْ؟ مَاذَا؟ مَتَى؟ أَيْنَ؟ لِمَاذَا؟ كَيْفَ؟\nWho? What? When? Where? Why? How?\nLead (مُقَدِّمَة) answers key questions", contentAr: "من؟ ماذا؟ متى؟ أين؟ لماذا؟ كيف؟\nالمقدمة الخبرية تجيب على أهم الأسئلة\nثم التفاصيل والمعلومات الإضافية" },
+        { title: "News Vocabulary", titleAr: "المفردات الصحفية", titleFr: "Vocabulaire journalistique", content: "أَعْلَنَ - announced\nصَرَّحَ - declared\nأَفَادَ - reported\nكَشَفَ - revealed\nنَفَى - denied", contentAr: "أعلن - أصدر بياناً\nصرح - أدلى بتصريح\nأفاد - نقل خبراً\nكشف - أظهر\nنفى - أنكر" },
+        { title: "News Sources", titleAr: "مصادر الأخبار", titleFr: "Sources d'information", content: "Major channels: الجَزِيرَة، العَرَبِيَّة، BBC عَرَبِي\nNewspapers: الأَهْرَام، الشَّرْق الأَوْسَط", contentAr: "القنوات الرئيسية: الجزيرة والعربية وBBC عربي\nالصحف: الأهرام والشرق الأوسط والحياة" }
       ],
       vocabulary: [
-        { arabic: "مُرَاسِل", transliteration: "murāsil", meaning: "correspondent", meaningFr: "correspondant" },
-        { arabic: "تَقْرِير", transliteration: "taqrīr", meaning: "report", meaningFr: "rapport" },
-        { arabic: "عَاجِل", transliteration: "'ājil", meaning: "breaking/urgent", meaningFr: "urgent" },
-        { arabic: "مَصَادِر", transliteration: "maṣādir", meaning: "sources", meaningFr: "sources" },
-        { arabic: "نَاطِق رَسْمِيّ", transliteration: "nāṭiq rasmī", meaning: "official spokesperson", meaningFr: "porte-parole officiel" }
+        { arabic: "مُرَاسِل", transliteration: "murāsil", meaning: "correspondent", meaningAr: "صحفي يرسل الأخبار من الميدان", meaningFr: "correspondant" },
+        { arabic: "تَقْرِير", transliteration: "taqrīr", meaning: "report", meaningAr: "خبر مفصل", meaningFr: "rapport" },
+        { arabic: "عَاجِل", transliteration: "'ājil", meaning: "breaking/urgent", meaningAr: "خبر طارئ مستعجل", meaningFr: "urgent" },
+        { arabic: "مَصَادِر", transliteration: "maṣādir", meaning: "sources", meaningAr: "منابع المعلومات", meaningFr: "sources" },
+        { arabic: "نَاطِق رَسْمِيّ", transliteration: "nāṭiq rasmī", meaning: "official spokesperson", meaningAr: "متحدث باسم الجهة الرسمية", meaningFr: "porte-parole officiel" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-18"]
@@ -510,22 +548,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اللغة السياسية",
     titleFr: "L'arabe politique",
     description: "Learn political vocabulary and discourse",
+    descriptionAr: "تعلم المفردات والخطاب السياسي",
     descriptionFr: "Apprenez le vocabulaire et le discours politiques",
     objectives: ["Understand political systems", "Learn diplomatic language", "Discuss current events", "Analyze political speech"],
+    objectivesAr: ["فهم الأنظمة السياسية", "تعلم اللغة الدبلوماسية", "مناقشة الأحداث الجارية", "تحليل الخطاب السياسي"],
     objectivesFr: ["Comprendre les systèmes politiques", "Apprendre le langage diplomatique", "Discuter des événements actuels", "Analyser les discours politiques"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Government Terms", titleFr: "Termes gouvernementaux", content: "حُكُومَة - government\nبَرْلَمَان - parliament\nرَئِيس - president\nوَزِير - minister\nاِنْتِخَابَات - elections", contentFr: "حُكُومَة - gouvernement\nبَرْلَمَان - parlement\nرَئِيس - président\nوَزِير - ministre\nاِنْتِخَابَات - élections" },
-        { title: "Diplomatic Language", titleFr: "Langage diplomatique", content: "عَلَاقَات دِبْلُومَاسِيَّة - diplomatic relations\nمُفَاوَضَات - negotiations\nاِتِّفَاقِيَّة - agreement\nمُعَاهَدَة - treaty", contentFr: "عَلَاقَات دِبْلُومَاسِيَّة - relations diplomatiques\nمُفَاوَضَات - négociations\nاِتِّفَاقِيَّة - accord\nمُعَاهَدَة - traité" },
-        { title: "International Organizations", titleFr: "Organisations internationales", content: "الأُمَم المُتَّحِدَة - United Nations\nجَامِعَة الدُّوَل العَرَبِيَّة - Arab League\nمَجْلِس الأَمْن - Security Council", contentFr: "الأُمَم المُتَّحِدَة - Nations unies\nجَامِعَة الدُّوَل العَرَبِيَّة - Ligue arabe\nمَجْلِس الأَمْن - Conseil de sécurité" }
+        { title: "Government Terms", titleAr: "المصطلحات الحكومية", titleFr: "Termes gouvernementaux", content: "حُكُومَة - government\nبَرْلَمَان - parliament\nرَئِيس - president\nوَزِير - minister\nاِنْتِخَابَات - elections", contentAr: "حكومة - السلطة التنفيذية\nبرلمان - مجلس التشريع\nرئيس - قائد الدولة\nوزير - مسؤول حكومي\nانتخابات - عملية اختيار الممثلين" },
+        { title: "Diplomatic Language", titleAr: "اللغة الدبلوماسية", titleFr: "Langage diplomatique", content: "عَلَاقَات دِبْلُومَاسِيَّة - diplomatic relations\nمُفَاوَضَات - negotiations\nاِتِّفَاقِيَّة - agreement\nمُعَاهَدَة - treaty", contentAr: "علاقات دبلوماسية - العلاقات الرسمية\nمفاوضات - نقاشات تجاه اتفاق\nاتفاقية - عقد ملزم\nمعاهدة - عقد دولي" },
+        { title: "International Organizations", titleAr: "المنظمات الدولية", titleFr: "Organisations internationales", content: "الأُمَم المُتَّحِدَة - United Nations\nجَامِعَة الدُّوَل العَرَبِيَّة - Arab League\nمَجْلِس الأَمْن - Security Council", contentAr: "الأمم المتحدة - منظمة عالمية\nجامعة الدول العربية - اتحاد عربي\nمجلس الأمن - مجلس الأمن الدولي" }
       ],
       vocabulary: [
-        { arabic: "سِيَاسَة", transliteration: "siyāsa", meaning: "politics/policy", meaningFr: "politique/politique" },
-        { arabic: "دِيمُقْرَاطِيَّة", transliteration: "dīmuqrāṭiyya", meaning: "democracy", meaningFr: "démocratie" },
-        { arabic: "سِيَادَة", transliteration: "siyāda", meaning: "sovereignty", meaningFr: "souveraineté" },
-        { arabic: "مُوَاطِن", transliteration: "muwāṭin", meaning: "citizen", meaningFr: "citoyen" },
-        { arabic: "حُقُوق الإِنْسَان", transliteration: "ḥuqūq al-insān", meaning: "human rights", meaningFr: "droits de l'homme" }
+        { arabic: "سِيَاسَة", transliteration: "siyāsa", meaning: "politics/policy", meaningAr: "إدارة الدولة والحكم", meaningFr: "politique/politique" },
+        { arabic: "دِيمُقْرَاطِيَّة", transliteration: "dīmuqrāṭiyya", meaning: "democracy", meaningAr: "حكم الشعب", meaningFr: "démocratie" },
+        { arabic: "سِيَادَة", transliteration: "siyāda", meaning: "sovereignty", meaningAr: "السلطة العليا للدولة", meaningFr: "souveraineté" },
+        { arabic: "مُوَاطِن", transliteration: "muwāṭin", meaning: "citizen", meaningAr: "شخص من سكان الدولة", meaningFr: "citoyen" },
+        { arabic: "حُقُوق الإِنْسَان", transliteration: "ḥuqūq al-insān", meaning: "human rights", meaningAr: "الحقوق الأساسية للفرد", meaningFr: "droits de l'homme" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-19"]
@@ -536,22 +576,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اللغة الاقتصادية",
     titleFr: "L'arabe économique",
     description: "Learn economic and business vocabulary",
+    descriptionAr: "تعلم المفردات الاقتصادية والتجارية",
     descriptionFr: "Apprenez le vocabulaire économique et commercial",
     objectives: ["Understand economic terms", "Read financial news", "Discuss business topics", "Use commercial vocabulary"],
+    objectivesAr: ["فهم المصطلحات الاقتصادية", "قراءة الأخبار المالية", "مناقشة المواضيع التجارية", "استخدام المفردات التجارية"],
     objectivesFr: ["Comprendre les termes économiques", "Lire les actualités financières", "Discuter de sujets commerciaux", "Utiliser le vocabulaire commercial"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Economic Terms", titleFr: "Termes économiques", content: "اِقْتِصَاد - economy\nنَاتِج مَحَلِّيّ - GDP\nتَضَخُّم - inflation\nبَطَالَة - unemployment\nاِسْتِثْمَار - investment", contentFr: "اِقْتِصَاد - économie\nنَاتِج مَحَلِّيّ - PIB\nتَضَخُّم - inflation\nبَطَالَة - chômage\nاِسْتِثْمَار - investissement" },
-        { title: "Business Vocabulary", titleFr: "Vocabulaire commercial", content: "شَرِكَة - company\nسُوق - market\nتِجَارَة - trade\nصَادِرَات - exports\nوَارِدَات - imports", contentFr: "شَرِكَة - entreprise\nسُوق - marché\nتِجَارَة - commerce\nصَادِرَات - exportations\nوَارِدَات - importations" },
-        { title: "Financial Terms", titleFr: "Termes financiers", content: "بَنْك - bank\nقَرْض - loan\nفَائِدَة - interest\nأَسْهُم - stocks\nعُمْلَة - currency", contentFr: "بَنْك - banque\nقَرْض - prêt\nفَائِدَة - intérêt\nأَسْهُم - actions\nعُمْلَة - devise" }
+        { title: "Economic Terms", titleAr: "المصطلحات الاقتصادية", titleFr: "Termes économiques", content: "اِقْتِصَاد - economy\nنَاتِج مَحَلِّيّ - GDP\nتَضَخُّم - inflation\nبَطَالَة - unemployment\nاِسْتِثْمَار - investment", contentAr: "اقتصاد - نظام الإنتاج والاستهلاك\nالناتج المحلي - الإنتاج الوطني الإجمالي\nتضخم - ارتفاع الأسعار\nبطالة - عدم وجود عمل\nاستثمار - وضع المال في مشروع" },
+        { title: "Business Vocabulary", titleAr: "المفردات التجارية", titleFr: "Vocabulaire commercial", content: "شَرِكَة - company\nسُوق - market\nتِجَارَة - trade\nصَادِرَات - exports\nوَارِدَات - imports", contentAr: "شركة - مؤسسة تجارية\nسوق - مكان التبادل\nتجارة - تبادل السلع\nصادرات - بضائع للخارج\nواردات - بضائع من الخارج" },
+        { title: "Financial Terms", titleAr: "المصطلحات المالية", titleFr: "Termes financiers", content: "بَنْك - bank\nقَرْض - loan\nفَائِدَة - interest\nأَسْهُم - stocks\nعُمْلَة - currency", contentAr: "بنك - مؤسسة مالية\nقرض - مال مستعار\nفائدة - نسبة إضافية\nأسهم - حصص من الشركة\nعملة - نقد الدولة" }
       ],
       vocabulary: [
-        { arabic: "اِقْتِصَادِيّ", transliteration: "iqtiṣādī", meaning: "economic", meaningFr: "économique" },
-        { arabic: "رَأْس مَال", transliteration: "ra's māl", meaning: "capital", meaningFr: "capital" },
-        { arabic: "رِبْح", transliteration: "ribḥ", meaning: "profit", meaningFr: "bénéfice" },
-        { arabic: "خَسَارَة", transliteration: "khasāra", meaning: "loss", meaningFr: "perte" },
-        { arabic: "مِيزَانِيَّة", transliteration: "mīzāniyya", meaning: "budget", meaningFr: "budget" }
+        { arabic: "اِقْتِصَادِيّ", transliteration: "iqtiṣādī", meaning: "economic", meaningAr: "متعلق بالاقتصاد", meaningFr: "économique" },
+        { arabic: "رَأْس مَال", transliteration: "ra's māl", meaning: "capital", meaningAr: "الأموال والموارد", meaningFr: "capital" },
+        { arabic: "رِبْح", transliteration: "ribḥ", meaning: "profit", meaningAr: "الكسب من التجارة", meaningFr: "bénéfice" },
+        { arabic: "خَسَارَة", transliteration: "khasāra", meaning: "loss", meaningAr: "النقص في الأموال", meaningFr: "perte" },
+        { arabic: "مِيزَانِيَّة", transliteration: "mīzāniyya", meaning: "budget", meaningAr: "التخطيط المالي", meaningFr: "budget" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-20"]
@@ -562,22 +604,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اللغة القانونية",
     titleFr: "L'arabe juridique",
     description: "Introduction to Arabic legal terminology",
+    descriptionAr: "مقدمة إلى المصطلحات القانونية العربية",
     descriptionFr: "Introduction à la terminologie juridique arabe",
     objectives: ["Understand legal concepts", "Read contracts", "Learn court vocabulary", "Use formal legal language"],
+    objectivesAr: ["فهم المفاهيم القانونية", "قراءة العقود والوثائق", "تعلم مفردات المحاكم", "استخدام اللغة القانونية الفصحى"],
     objectivesFr: ["Comprendre les concepts juridiques", "Lire les contrats", "Apprendre le vocabulaire judiciaire", "Utiliser le langage juridique formel"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Legal System", titleFr: "Système juridique", content: "قَانُون - law\nدُسْتُور - constitution\nمَحْكَمَة - court\nقَاضٍ - judge\nمُحَامٍ - lawyer", contentFr: "قَانُون - loi\nدُسْتُور - constitution\nمَحْكَمَة - tribunal\nقَاضٍ - juge\nمُحَامٍ - avocat" },
-        { title: "Legal Procedures", titleFr: "Procédures juridiques", content: "دَعْوَى - lawsuit\nحُكْم - verdict\nاِسْتِئْنَاف - appeal\nشَهَادَة - testimony\nدَلِيل - evidence", contentFr: "دَعْوَى - procès\nحُكْم - verdict\nاِسْتِئْنَاف - appel\nشَهَادَة - témoignage\nدَلِيل - preuve" },
-        { title: "Contract Language", titleFr: "Langage du contrat", content: "عَقْد - contract\nطَرَف - party\nشُرُوط - terms\nاِلْتِزَام - obligation\nفَسْخ - annulment", contentFr: "عَقْد - contrat\nطَرَف - partie\nشُرُوط - conditions\nاِلْتِزَام - obligation\nفَسْخ - résiliation" }
+        { title: "Legal System", titleAr: "النظام القانوني", titleFr: "Système juridique", content: "قَانُون - law\nدُسْتُور - constitution\nمَحْكَمَة - court\nقَاضٍ - judge\nمُحَامٍ - lawyer", contentAr: "قانون - مجموعة القواعد\nدستور - القانون الأساسي\nمحكمة - مكان القضاء\nقاض - الحاكم بين الناس\nمحام - الدفاع عن الحقوق" },
+        { title: "Legal Procedures", titleAr: "الإجراءات القانونية", titleFr: "Procédures juridiques", content: "دَعْوَى - lawsuit\nحُكْم - verdict\nاِسْتِئْنَاف - appeal\nشَهَادَة - testimony\nدَلِيل - evidence", contentAr: "دعوى - قضية أمام المحكمة\nحكم - قرار القاضي\nاستئناف - تطعن في الحكم\nشهادة - إدلاء الشاهد\nدليل - إثبات الحق" },
+        { title: "Contract Language", titleAr: "لغة العقود", titleFr: "Langage du contrat", content: "عَقْد - contract\nطَرَف - party\nشُرُوط - terms\nاِلْتِزَام - obligation\nفَسْخ - annulment", contentAr: "عقد - اتفاق ملزم\nطرف - أحد المتعاقدين\nشروط - الالتزامات\nالتزام - الواجب\nفسخ - إنهاء العقد" }
       ],
       vocabulary: [
-        { arabic: "قَانُونِيّ", transliteration: "qānūnī", meaning: "legal", meaningFr: "juridique" },
-        { arabic: "حَقّ", transliteration: "ḥaqq", meaning: "right", meaningFr: "droit" },
-        { arabic: "وَاجِب", transliteration: "wājib", meaning: "duty", meaningFr: "devoir" },
-        { arabic: "جَرِيمَة", transliteration: "jarīma", meaning: "crime", meaningFr: "crime" },
-        { arabic: "عُقُوبَة", transliteration: "'uqūba", meaning: "punishment", meaningFr: "punition" }
+        { arabic: "قَانُونِيّ", transliteration: "qānūnī", meaning: "legal", meaningAr: "متعلق بالقانون", meaningFr: "juridique" },
+        { arabic: "حَقّ", transliteration: "ḥaqq", meaning: "right", meaningAr: "الاستحقاق", meaningFr: "droit" },
+        { arabic: "وَاجِب", transliteration: "wājib", meaning: "duty", meaningAr: "المسؤولية", meaningFr: "devoir" },
+        { arabic: "جَرِيمَة", transliteration: "jarīma", meaning: "crime", meaningAr: "الفعل المحظور", meaningFr: "crime" },
+        { arabic: "عُقُوبَة", transliteration: "'uqūba", meaning: "punishment", meaningAr: "العقاب على الجريمة", meaningFr: "punition" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-21"]
@@ -588,22 +632,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "اللغة الأكاديمية",
     titleFr: "L'arabe académique",
     description: "Master academic writing and reading",
+    descriptionAr: "إتقان الكتابة الأكاديمية والقراءة",
     descriptionFr: "Maîtrisez la lecture et l'écriture académiques",
     objectives: ["Write academic essays", "Use citation and reference", "Structure arguments", "Read scholarly articles"],
+    objectivesAr: ["كتابة المقالات الأكاديمية", "استخدام الاقتباسات والمراجع", "تنظيم الحجج والبراهين", "قراءة الدراسات العلمية"],
     objectivesFr: ["Écrire des essais académiques", "Utiliser les citations et références", "Structurer les arguments", "Lire les articles savants"],
     estimatedTime: 55, difficulty: "hard", xpReward: 75,
     content: {
       theory: [
-        { title: "Academic Structure", titleFr: "Structure académique", content: "مُقَدِّمَة - Introduction\nمَنْهَجِيَّة - Methodology\nنَتَائِج - Results\nمُنَاقَشَة - Discussion\nخَاتِمَة - Conclusion", contentFr: "مُقَدِّمَة - Introduction\nمَنْهَجِيَّة - Méthodologie\nنَتَائِج - Résultats\nمُنَاقَشَة - Discussion\nخَاتِمَة - Conclusion" },
-        { title: "Citation Language", titleFr: "Langage de citation", content: "وَفْقًا لِـ / حَسَبَ - according to\nكَمَا ذَكَرَ - as X mentioned\nيَرَى X أَنَّ - X believes that\nيُشِيرُ إِلَى - refers to", contentFr: "وَفْقًا لِـ / حَسَبَ - selon\nكَمَا ذَكَرَ - comme X l'a mentionné\nيَرَى X أَنَّ - X croit que\nيُشِيرُ إِلَى - se réfère à" },
-        { title: "Academic Vocabulary", titleFr: "Vocabulaire académique", content: "بَحْث - research\nدِرَاسَة - study\nنَظَرِيَّة - theory\nفَرَضِيَّة - hypothesis", contentFr: "بَحْث - recherche\nدِرَاسَة - étude\nنَظَرِيَّة - théorie\nفَرَضِيَّة - hypothèse" }
+        { title: "Academic Structure", titleAr: "البنية الأكاديمية", titleFr: "Structure académique", content: "مُقَدِّمَة - Introduction\nمَنْهَجِيَّة - Methodology\nنَتَائِج - Results\nمُنَاقَشَة - Discussion\nخَاتِمَة - Conclusion", contentAr: "مقدمة - عرض المشكلة والأهداف\nمنهجية - الطريقة المستخدمة\nنتائج - ما توصل إليه البحث\nمناقشة - تفسير النتائج\nخاتمة - الملخص والتوصيات" },
+        { title: "Citation Language", titleAr: "لغة الاستشهاد", titleFr: "Langage de citation", content: "وَفْقًا لِـ / حَسَبَ - according to\nكَمَا ذَكَرَ - as X mentioned\nيَرَى X أَنَّ - X believes that\nيُشِيرُ إِلَى - refers to", contentAr: "وفقاً لـ/حسب - بناءً على\nكما ذكر - كما قال\nيرى أن - يعتقد\nيشير إلى - ينوه عن" },
+        { title: "Academic Vocabulary", titleAr: "المفردات الأكاديمية", titleFr: "Vocabulaire académique", content: "بَحْث - research\nدِرَاسَة - study\nنَظَرِيَّة - theory\nفَرَضِيَّة - hypothesis", contentAr: "بحث - التقصي والاستقصاء\nدراسة - البحث الموضوعي\nنظرية - شرح منطقي\nفرضية - توقع يتطلب اختباراً" }
       ],
       vocabulary: [
-        { arabic: "أَكَادِيمِيّ", transliteration: "akādīmī", meaning: "academic", meaningFr: "académique" },
-        { arabic: "مَرْجِع", transliteration: "marji'", meaning: "reference", meaningFr: "référence" },
-        { arabic: "مَصْدَر", transliteration: "maṣdar", meaning: "source", meaningFr: "source" },
-        { arabic: "اِقْتِبَاس", transliteration: "iqtibās", meaning: "quotation", meaningFr: "citation" },
-        { arabic: "حَاشِيَة", transliteration: "ḥāshiya", meaning: "footnote", meaningFr: "note de bas de page" }
+        { arabic: "أَكَادِيمِيّ", transliteration: "akādīmī", meaning: "academic", meaningAr: "متعلق بالدراسة الأكاديمية", meaningFr: "académique" },
+        { arabic: "مَرْجِع", transliteration: "marji'", meaning: "reference", meaningAr: "مصدر المعلومات", meaningFr: "référence" },
+        { arabic: "مَصْدَر", transliteration: "maṣdar", meaning: "source", meaningAr: "منبع المعلومات", meaningFr: "source" },
+        { arabic: "اِقْتِبَاس", transliteration: "iqtibās", meaning: "quotation", meaningAr: "نقل بنص النص الأصلي", meaningFr: "citation" },
+        { arabic: "حَاشِيَة", transliteration: "ḥāshiya", meaning: "footnote", meaningAr: "ملاحظة في أسفل الصفحة", meaningFr: "note de bas de page" }
       ]
     },
     exerciseCount: 17, prerequisites: ["4-22"]
@@ -614,22 +660,24 @@ export const PHASE_4_LESSONS: Lesson[] = [
     titleAr: "مهارات العرض والتقديم",
     titleFr: "Compétences de présentation en arabe",
     description: "Learn to present in Arabic professionally",
+    descriptionAr: "تعلم فن التقديم والعرض بطريقة احترافية",
     descriptionFr: "Apprenez à présenter professionnellement en arabe",
     objectives: ["Structure presentations", "Use transition phrases", "Handle Q&A", "Present data and arguments"],
+    objectivesAr: ["تنظيم العروض التقديمية", "استخدام جمل الانتقال", "الإجابة على الأسئلة", "عرض البيانات والحجج"],
     objectivesFr: ["Structurer des présentations", "Utiliser des phrases de transition", "Gérer les questions-réponses", "Présenter des données et arguments"],
     estimatedTime: 50, difficulty: "hard", xpReward: 70,
     content: {
       theory: [
-        { title: "Opening", titleFr: "Ouverture", content: "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ - opening formula\nأَوَدُّ أَنْ أُقَدِّمَ - I would like to present\nمَوْضُوعُ حَدِيثِي اليَوْمَ - Today's topic is", contentFr: "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ - formule d'ouverture\nأَوَدُّ أَنْ أُقَدِّمَ - J'aimerais présenter\nمَوْضُوعُ حَدِيثِي اليَوْمَ - Le sujet d'aujourd'hui est" },
-        { title: "Transitions", titleFr: "Transitions", content: "أَوَّلًا / ثَانِيًا / أَخِيرًا\nبِالإِضَافَةِ إِلَى ذَلِكَ - in addition\nمِنْ نَاحِيَةٍ أُخْرَى - on the other hand\nفِي الخِتَام - in conclusion", contentFr: "أَوَّلًا / ثَانِيًا / أَخِيرًا\nبِالإِضَافَةِ إِلَى ذَلِكَ - de plus\nمِنْ نَاحِيَةٍ أُخْرَى - d'un autre côté\nفِي الخِتَام - en conclusion" },
-        { title: "Closing", titleFr: "Clôture", content: "شُكْرًا لِحُسْنِ اسْتِمَاعِكُم - Thank you for listening\nأَنَا مُسْتَعِدٌّ لِلأَسْئِلَة - I'm ready for questions", contentFr: "شُكْرًا لِحُسْنِ اسْتِمَاعِكُم - Merci de votre attention\nأَنَا مُسْتَعِدٌّ لِلأَسْئِلَة - Je suis prêt pour les questions" }
+        { title: "Opening", titleAr: "الافتتاحية", titleFr: "Ouverture", content: "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ - opening formula\nأَوَدُّ أَنْ أُقَدِّمَ - I would like to present\nمَوْضُوعُ حَدِيثِي اليَوْمَ - Today's topic is", contentAr: "بسم الله الرحمن الرحيم - البسملة\nأود أن أقدم - يسعدني أن أقدم\nموضوع حديثي اليوم - الموضوع الذي سأتحدث عنه" },
+        { title: "Transitions", titleAr: "جمل الانتقال", titleFr: "Transitions", content: "أَوَّلًا / ثَانِيًا / أَخِيرًا\nبِالإِضَافَةِ إِلَى ذَلِكَ - in addition\nمِنْ نَاحِيَةٍ أُخْرَى - on the other hand\nفِي الخِتَام - in conclusion", contentAr: "أولاً/ثانياً/ثالثاً\nبالإضافة إلى ذلك - أيضاً\nمن ناحية أخرى - بالمقابل\nفي الختام - وأخيراً" },
+        { title: "Closing", titleAr: "الخاتمة", titleFr: "Clôture", content: "شُكْرًا لِحُسْنِ اسْتِمَاعِكُم - Thank you for listening\nأَنَا مُسْتَعِدٌّ لِلأَسْئِلَة - I'm ready for questions", contentAr: "شكراً لحسن استماعكم - شكراً على اهتمامكم\nأنا مستعد للأسئلة - الآن الأسئلة والحوار" }
       ],
       vocabulary: [
-        { arabic: "عَرْض تَقْدِيمِيّ", transliteration: "'arḍ taqdīmī", meaning: "presentation", meaningFr: "présentation" },
-        { arabic: "شَرِيحَة", transliteration: "sharīḥa", meaning: "slide", meaningFr: "diapositive" },
-        { arabic: "رَسْم بَيَانِيّ", transliteration: "rasm bayānī", meaning: "chart/graph", meaningFr: "graphique" },
-        { arabic: "جُمْهُور", transliteration: "jumhūr", meaning: "audience", meaningFr: "audience" },
-        { arabic: "مُلَخَّص", transliteration: "mulakhkhaṣ", meaning: "summary", meaningFr: "résumé" }
+        { arabic: "عَرْض تَقْدِيمِيّ", transliteration: "'arḍ taqdīmī", meaning: "presentation", meaningAr: "عرض فني وشامل", meaningFr: "présentation" },
+        { arabic: "شَرِيحَة", transliteration: "sharīḥa", meaning: "slide", meaningAr: "صورة على الشاشة", meaningFr: "diapositive" },
+        { arabic: "رَسْم بَيَانِيّ", transliteration: "rasm bayānī", meaning: "chart/graph", meaningAr: "رسم توضيحي", meaningFr: "graphique" },
+        { arabic: "جُمْهُور", transliteration: "jumhūr", meaning: "audience", meaningAr: "المستمعون والحاضرون", meaningFr: "audience" },
+        { arabic: "مُلَخَّص", transliteration: "mulakhkhaṣ", meaning: "summary", meaningAr: "ملخص الأفكار الرئيسية", meaningFr: "résumé" }
       ]
     },
     exerciseCount: 16, prerequisites: ["4-23"]

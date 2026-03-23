@@ -27,6 +27,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleFr: "Lettres 1-4 : Alif, Bā', Tā', Thā'",
     description:
       "Learn the first four letters of the Arabic alphabet with their sounds and shapes",
+    descriptionAr:
+      "تعلم الحروف الأربعة الأولى من الأبجدية العربية مع أصواتها وأشكالها",
     descriptionFr:
       "Apprenez les quatre premières lettres de l'alphabet arabe avec leurs sons et formes",
     objectives: [
@@ -34,6 +36,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Understand that ب, ت, ث share the same base shape with different dots",
       "Pronounce each letter correctly",
       "Write each letter in isolated form",
+    ],
+    objectivesAr: [
+      "اعترف بالحروف الألف (ا)، الباء (ب)، التاء (ت)، والثاء (ث)",
+      "افهم أن ب و ت و ث تشترك في نفس الشكل الأساسي مع نقاط مختلفة",
+      "نطق كل حرف بشكل صحيح",
+      "اكتب كل حرف في صيغته المنعزلة",
     ],
     objectivesFr: [
       "Reconnaître les lettres Alif (ا), Bā' (ب), Tā' (ت) et Thā' (ث)",
@@ -48,33 +56,45 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Welcome to Arabic Script",
+          titleAr: "أهلا وسهلا بك في الكتابة العربية",
           titleFr: "Bienvenue dans l'écriture arabe",
           content:
             "Arabic is written from right to left (←) using 28 letters. Unlike English, most Arabic letters connect to each other within words, and letters change shape depending on their position. Today we start with the first four letters!",
+          contentAr:
+            "تُكتب اللغة العربية من اليمين إلى اليسار (←) باستخدام 28 حرفًا. بخلاف اللغة الإنجليزية، تتصل معظم الحروف العربية ببعضها البعض داخل الكلمات، وتتغير الحروف شكلاً اعتمادًا على موضعها. اليوم نبدأ بالحروف الأربعة الأولى!",
           contentFr:
             "L'arabe s'écrit de droite à gauche (←) en utilisant 28 lettres. Contrairement à l'anglais, la plupart des lettres arabes se connectent entre elles dans les mots, et les lettres changent de forme selon leur position. Aujourd'hui nous commençons avec les quatre premières lettres !",
         },
         {
           title: "Alif (ا) - The First Letter",
+          titleAr: "الألف (ا) - الحرف الأول",
           titleFr: "Alif (ا) - La première lettre",
           content:
             "Alif is a vertical stroke, like an English 'l' without the curve. It represents a long 'aa' sound (like 'father') or a glottal stop (the pause in 'uh-oh'). Alif NEVER connects to the next letter - it's independent!",
+          contentAr:
+            "الألف هو خط عمودي، مثل حرف 'l' الإنجليزي بدون انحناء. يمثل صوت 'aa' طويل (مثل كلمة 'father') أو نقرة حنجرية (الوقفة في 'uh-oh'). الألف لا يتصل أبدًا بالحرف التالي - فهو مستقل!",
           contentFr:
             "Alif est un trait vertical, comme un 'l' anglais sans la courbe. Il représente un son 'aa' long (comme dans 'pâte') ou un coup de glotte (la pause dans 'oh-oh'). Alif ne se connecte JAMAIS à la lettre suivante - il est indépendant !",
         },
         {
           title: "The 'B-T-Th' Family: ب ت ث",
+          titleAr: "عائلة 'B-T-Th': ب ت ث",
           titleFr: "La famille 'B-T-Th' : ب ت ث",
           content:
             "These three letters share the SAME base shape - like a boat or dish. The only difference is the dots:\n• Bā' (ب) = ONE dot BELOW = 'b' sound\n• Tā' (ت) = TWO dots ABOVE = 't' sound  \n• Thā' (ث) = THREE dots ABOVE = 'th' sound (like 'think')\n\nMemory trick: 'B' for Below (ب), 'T' for Two on Top (ت)",
+          contentAr:
+            "هذه الثلاثة أحرف تشترك في نفس الشكل الأساسي - مثل قارب أو طبق. الفرق الوحيد هو النقاط:\n• الباء (ب) = نقطة واحدة تحت = صوت 'b'\n• التاء (ت) = نقطتان فوق = صوت 't'\n• الثاء (ث) = ثلاث نقاط فوق = صوت 'th' (مثل 'think')\n\nحيلة التذكر: 'B' للأسفل (ب)، 'T' لاثنتين في الأعلى (ت)",
           contentFr:
             "Ces trois lettres partagent la MÊME forme de base - comme un bateau ou un plat. La seule différence est les points :\n• Bā' (ب) = UN point EN DESSOUS = son 'b'\n• Tā' (ت) = DEUX points AU-DESSUS = son 't'\n• Thā' (ث) = TROIS points AU-DESSUS = son 'th' (comme dans l'anglais 'think')\n\nAstuce mnémotechnique : 'B' pour Bas (ب), 'T' pour Trois (ث)",
         },
         {
           title: "Pronunciation Guide",
+          titleAr: "دليل النطق",
           titleFr: "Guide de prononciation",
           content:
             "• Alif (ا): Long 'aa' as in 'car' - or silent with hamza\n• Bā' (ب): Same as English 'b' in 'book'\n• Tā' (ت): Same as English 't' in 'top'\n• Thā' (ث): 'th' as in 'think' (NOT as in 'the')",
+          contentAr:
+            "• الألف (ا): 'aa' طويل كما في كلمة 'car' - أو صامت مع الهمزة\n• الباء (ب): نفس 'b' الإنجليزي في 'book'\n• التاء (ت): نفس 't' الإنجليزي في 'top'\n• الثاء (ث): 'th' كما في 'think' (وليس كما في 'the')",
           contentFr:
             "• Alif (ا) : 'aa' long comme dans 'pâte' - ou silencieux avec hamza\n• Bā' (ب) : Comme le 'b' français dans 'bon'\n• Tā' (ت) : Comme le 't' français dans 'table'\n• Thā' (ث) : 'th' comme dans l'anglais 'think' (PAS comme dans 'the')",
         },
@@ -84,42 +104,49 @@ export const PHASE_1_LESSONS: Lesson[] = [
           arabic: "ا",
           transliteration: "alif",
           meaning: "Alif (long 'a' or glottal stop)",
+          meaningAr: "الألف (صوت 'a' طويل أو نقرة حنجرية)",
           meaningFr: "Alif (son 'a' long ou coup de glotte)",
         },
         {
           arabic: "ب",
           transliteration: "bā'",
           meaning: "Bā' (b sound)",
+          meaningAr: "الباء (صوت 'b')",
           meaningFr: "Bā' (son 'b')",
         },
         {
           arabic: "ت",
           transliteration: "tā'",
           meaning: "Tā' (t sound)",
+          meaningAr: "التاء (صوت 't')",
           meaningFr: "Tā' (son 't')",
         },
         {
           arabic: "ث",
           transliteration: "thā'",
           meaning: "Thā' (th as in 'think')",
+          meaningAr: "الثاء (صوت 'th')",
           meaningFr: "Thā' ('th' comme dans l'anglais 'think')",
         },
         {
           arabic: "أَب",
           transliteration: "ab",
           meaning: "father",
+          meaningAr: "أب",
           meaningFr: "père",
         },
         {
           arabic: "بَاب",
           transliteration: "bāb",
           meaning: "door",
+          meaningAr: "باب",
           meaningFr: "porte",
         },
         {
           arabic: "بَيْت",
           transliteration: "bayt",
           meaning: "house",
+          meaningAr: "بيت",
           meaningFr: "maison",
         },
       ],
@@ -135,6 +162,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الحروف ٥-٧: الجيم، الحاء، الخاء",
     titleFr: "Lettres 5-7 : Jīm, Ḥā', Khā'",
     description: "Learn the second group of letters that share a common shape",
+    descriptionAr: "تعلم المجموعة الثانية من الحروف التي تشترك في شكل مشترك",
     descriptionFr:
       "Apprenez le deuxième groupe de lettres partageant une forme commune",
     objectives: [
@@ -142,6 +170,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Distinguish between these similar-looking letters",
       "Pronounce the throat sounds Ḥā' and Khā'",
       "Write each letter in isolated form",
+    ],
+    objectivesAr: [
+      "اعترف بالحروف الجيم (ج)، الحاء (ح)، والخاء (خ)",
+      "ميز بين هذه الحروف المتشابهة",
+      "نطق أصوات الحلق الحاء والخاء",
+      "اكتب كل حرف في صيغته المنعزلة",
     ],
     objectivesFr: [
       "Reconnaître les lettres Jīm (ج), Ḥā' (ح) et Khā' (خ)",
@@ -156,25 +190,34 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The 'J-Ḥ-Kh' Family: ج ح خ",
+          titleAr: "عائلة 'J-Ḥ-Kh': ج ح خ",
           titleFr: "La famille 'J-Ḥ-Kh' : ج ح خ",
           content:
             "Just like ب-ت-ث, these three letters share the same base shape - like a 'hook' or 'teacup'. The dots tell them apart:\n• Jīm (ج) = ONE dot BELOW = 'j' sound\n• Ḥā' (ح) = NO dots = deep throat 'h'\n• Khā' (خ) = ONE dot ABOVE = 'kh' sound (like 'Bach')",
+          contentAr:
+            "مثل ب-ت-ث، هذه الأحرف الثلاثة تشترك في نفس الشكل الأساسي - مثل 'خطاف' أو 'كوب شاي'. النقاط هي التي تميزها:\n• الجيم (ج) = نقطة واحدة تحت = صوت 'j'\n• الحاء (ح) = بدون نقاط = 'h' عميق من الحلق\n• الخاء (خ) = نقطة واحدة فوق = صوت 'kh' (مثل 'Bach')",
           contentFr:
             "Comme ب-ت-ث, ces trois lettres partagent la même forme de base - comme un 'crochet' ou une 'tasse'. Les points les distinguent :\n• Jīm (ج) = UN point EN DESSOUS = son 'j'\n• Ḥā' (ح) = PAS de points = 'h' profond de la gorge\n• Khā' (خ) = UN point AU-DESSUS = son 'kh' (comme dans 'Bach')",
         },
         {
           title: "Special Throat Sounds",
+          titleAr: "أصوات الحلق الخاصة",
           titleFr: "Sons de gorge spéciaux",
           content:
             "Ḥā' (ح) is a 'breathy h' from deep in the throat - imagine breathing on your glasses to clean them, but more forceful.\n\nKhā' (خ) sounds like the 'ch' in Scottish 'loch' or German 'Bach' - a scraping sound in the back of the throat. If you can gargle, you can make this sound!",
+          contentAr:
+            "الحاء (ح) هي 'h' مزفزفة من عمق الحلق - تخيل أنك تنفخ على نظارتك لتنظيفها، لكن بقوة أكبر.\n\nالخاء (خ) تبدو مثل 'ch' في الاسكتلندية 'loch' أو الألمانية 'Bach' - صوت خشن في مؤخرة الحلق. إذا كنت تستطيع الغرغرة، فيمكنك إصدار هذا الصوت!",
           contentFr:
             "Ḥā' (ح) est un 'h soufflé' du fond de la gorge - imaginez souffler sur vos lunettes pour les nettoyer, mais plus fort.\n\nKhā' (خ) ressemble au 'ch' de l'écossais 'loch' ou de l'allemand 'Bach' - un son raclé au fond de la gorge. Si vous pouvez vous gargariser, vous pouvez faire ce son !",
         },
         {
           title: "Memory Tips",
+          titleAr: "نصائح التذكر",
           titleFr: "Astuces mnémotechniques",
           content:
             "• Jīm (ج): J for 'Just one dot below'\n• Ḥā' (ح): 'Plain' with no dots (ح looks like an empty cup)\n• Khā' (خ): 'Kiss' on top = dot above (like a cherry on top)",
+          contentAr:
+            "• الجيم (ج): J لـ 'Just one dot below' (فقط نقطة واحدة تحت)\n• الحاء (ح): 'عادي' بدون نقاط (ح يشبه كوب فارغ)\n• الخاء (خ): 'قبلة' في الأعلى = نقطة فوق (مثل الكرز فوق الكعكة)",
           contentFr:
             "• Jīm (ج) : J pour 'Juste un point en dessous'\n• Ḥā' (ح) : 'Plaine' sans points (ح ressemble à une tasse vide)\n• Khā' (خ) : 'Kx' au sommet = point au-dessus (comme une cerise sur un gâteau)",
         },
@@ -184,36 +227,42 @@ export const PHASE_1_LESSONS: Lesson[] = [
           arabic: "ج",
           transliteration: "jīm",
           meaning: "Jīm (j sound)",
+          meaningAr: "الجيم (صوت 'j')",
           meaningFr: "Jīm (son 'j')",
         },
         {
           arabic: "ح",
           transliteration: "ḥā'",
           meaning: "Ḥā' (deep h sound)",
+          meaningAr: "الحاء (صوت 'h' عميق)",
           meaningFr: "Ḥā' (son 'h' profond)",
         },
         {
           arabic: "خ",
           transliteration: "khā'",
           meaning: "Khā' (kh as in 'Bach')",
+          meaningAr: "الخاء (صوت 'kh')",
           meaningFr: "Khā' ('kh' comme dans 'Bach')",
         },
         {
           arabic: "جَمَل",
           transliteration: "jamal",
           meaning: "camel",
+          meaningAr: "جمل",
           meaningFr: "chameau",
         },
         {
           arabic: "حُب",
           transliteration: "ḥubb",
           meaning: "love",
+          meaningAr: "حب",
           meaningFr: "amour",
         },
         {
           arabic: "خُبْز",
           transliteration: "khubz",
           meaning: "bread",
+          meaningAr: "خبز",
           meaningFr: "pain",
         },
       ],
@@ -230,6 +279,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleFr: "Lettres 8-11 : Dāl, Dhāl, Rā', Zāy",
     description:
       "Learn the non-connecting letters - letters that don't connect forward",
+    descriptionAr:
+      "تعلم الحروف غير المتصلة - الحروف التي لا تتصل للأمام",
     descriptionFr:
       "Apprenez les lettres non connectées - lettres qui ne se lient pas vers l'avant",
     objectives: [
@@ -237,6 +288,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Understand why these letters never connect to the following letter",
       "Pronounce the 'th' sound in Dhāl (like 'the')",
       "Write these non-connecting letters",
+    ],
+    objectivesAr: [
+      "اعترف بالدال (د)، الذال (ذ)، الراء (ر)، والزاي (ز)",
+      "افهم لماذا هذه الحروف لا تتصل أبدًا بالحرف التالي",
+      "نطق صوت 'th' في الذال (مثل 'the')",
+      "اكتب هذه الحروف غير المتصلة",
     ],
     objectivesFr: [
       "Reconnaître les lettres Dāl (د), Dhāl (ذ), Rā' (ر) et Zāy (ز)",
@@ -251,43 +308,53 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Non-Connecting Letters",
+          titleAr: "الحروف غير المتصلة",
           titleFr: "Lettres non connectées",
           content:
             "These four letters are special - they NEVER connect to the letter after them (though they can connect to what comes before). When you write them, you must lift your pen.\n\nThink of them as 'independent' letters that like their space!",
+          contentAr:
+            "هذه الأربعة أحرف خاصة - لا تتصل أبدًا بالحرف الذي يليها (على الرغم من أنها يمكن أن تتصل بما يسبقها). عندما تكتبها، يجب أن ترفع قلمك.\n\nفكر فيها كحروف 'مستقلة' تحب مساحتها!",
           contentFr:
             "Ces quatre lettres sont spéciales - elles ne se connectent JAMAIS à la lettre qui suit (mais elles peuvent se connecter à ce qui précède). Quand vous les écrivez, vous devez lever votre stylo.\n\nConsidérez-les comme des lettres 'indépendantes' qui aiment leur espace !",
         },
         {
           title: "The 'D-Dh' Pair: د ذ",
+          titleAr: "زوج 'D-Dh': د ذ",
           titleFr: "La paire 'D-Dh' : د ذ",
           content:
             "• Dāl (د) = No dot = 'd' sound (like 'door')\n• Dhāl (ذ) = ONE dot above = 'dh/th' sound (like 'the', 'that', 'mother')\n\nNote: Dhāl (ذ) sounds different from Thā' (ث). Dhāl = 'the', Thā' = 'think'",
+          contentAr:
+            "• الدال (د) = بدون نقطة = صوت 'd' (مثل 'door')\n• الذال (ذ) = نقطة واحدة فوق = صوت 'dh/th' (مثل 'the'، 'that'، 'mother')\n\nملاحظة: الذال (ذ) تبدو مختلفة عن الثاء (ث). الذال = 'the'، الثاء = 'think'",
           contentFr:
             "• Dāl (د) = Pas de point = son 'd' (comme 'dormir')\n• Dhāl (ذ) = UN point au-dessus = son 'dh/th' (comme l'anglais 'the', 'that', 'mother')\n\nNote : Dhāl (ذ) se prononce différemment de Thā' (ث). Dhāl = 'the', Thā' = 'think'",
         },
         {
           title: "The 'R-Z' Pair: ر ز",
+          titleAr: "زوج 'R-Z': ر ز",
           titleFr: "La paire 'R-Z' : ر ز",
           content:
             "• Rā' (ر) = No dot = rolled 'r' sound (Spanish-style)\n• Zāy (ز) = ONE dot above = 'z' sound\n\nThe Arabic 'r' is rolled/trilled like in Spanish or Italian. Practice saying 'butter' with a rolled r!",
+          contentAr:
+            "• الراء (ر) = بدون نقطة = صوت 'r' مكرر (أسلوب إسباني)\n• الزاي (ز) = نقطة واحدة فوق = صوت 'z'\n\nالحرف 'r' العربي مكرر/مرتعش مثل الإسباني أو الإيطالي. تدرب على قول 'butter' بـ r مكرر!",
           contentFr:
             "• Rā' (ر) = Pas de point = son 'r' roulé (style espagnol)\n• Zāy (ز) = UN point au-dessus = son 'z'\n\nLe 'r' arabe est roulé/trillé comme en espagnol ou en italien. Entraînez-vous à dire 'beurre' avec un r roulé !",
         },
       ],
       vocabulary: [
-        { arabic: "د", transliteration: "dāl", meaning: "Dāl (d sound)", meaningFr: "Dāl (son 'd')" },
+        { arabic: "د", transliteration: "dāl", meaning: "Dāl (d sound)", meaningAr: "الدال (صوت 'd')", meaningFr: "Dāl (son 'd')" },
         {
           arabic: "ذ",
           transliteration: "dhāl",
           meaning: "Dhāl (dh as in 'the')",
+          meaningAr: "الذال (صوت 'dh' مثل 'the')",
           meaningFr: "Dhāl ('dh' comme dans l'anglais 'the')",
         },
-        { arabic: "ر", transliteration: "rā'", meaning: "Rā' (rolled r)", meaningFr: "Rā' ('r' roulé)" },
-        { arabic: "ز", transliteration: "zāy", meaning: "Zāy (z sound)", meaningFr: "Zāy (son 'z')" },
-        { arabic: "دَار", transliteration: "dār", meaning: "house/home", meaningFr: "maison/foyer" },
-        { arabic: "ذَهَب", transliteration: "dhahab", meaning: "gold", meaningFr: "or" },
-        { arabic: "رَجُل", transliteration: "rajul", meaning: "man", meaningFr: "homme" },
-        { arabic: "زَهْرَة", transliteration: "zahra", meaning: "flower", meaningFr: "fleur" },
+        { arabic: "ر", transliteration: "rā'", meaning: "Rā' (rolled r)", meaningAr: "الراء (صوت 'r' مكرر)", meaningFr: "Rā' ('r' roulé)" },
+        { arabic: "ز", transliteration: "zāy", meaning: "Zāy (z sound)", meaningAr: "الزاي (صوت 'z')", meaningFr: "Zāy (son 'z')" },
+        { arabic: "دَار", transliteration: "dār", meaning: "house/home", meaningAr: "منزل/بيت", meaningFr: "maison/foyer" },
+        { arabic: "ذَهَب", transliteration: "dhahab", meaning: "gold", meaningAr: "ذهب", meaningFr: "or" },
+        { arabic: "رَجُل", transliteration: "rajul", meaning: "man", meaningAr: "رجل", meaningFr: "homme" },
+        { arabic: "زَهْرَة", transliteration: "zahra", meaning: "flower", meaningAr: "زهرة", meaningFr: "fleur" },
       ],
     },
     exerciseCount: 16,
@@ -302,6 +369,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleFr: "Lettres 12-14 : Sīn, Shīn, Ṣād",
     description:
       "Learn the 'S' letters with their distinctive three-tooth shape",
+    descriptionAr:
+      "تعلم حروف 'S' بشكلها المميز ذو الأسنان الثلاثة",
     descriptionFr:
       "Apprenez les lettres 'S' avec leur forme distinctive à trois dents",
     objectives: [
@@ -309,6 +378,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Write the three-tooth pattern of Sīn/Shīn",
       "Understand emphatic consonants (Ṣād)",
       "Pronounce the heavy 'ṣ' sound",
+    ],
+    objectivesAr: [
+      "اعترف بالسين (س)، الشين (ش)، والصاد (ص)",
+      "اكتب نمط الأسنان الثلاثة للسين والشين",
+      "افهم الحروف الممدودة (الصاد)",
+      "نطق الصوت الثقيل 'ṣ'"
     ],
     objectivesFr: [
       "Reconnaître Sīn (س), Shīn (ش) et Ṣād (ص)",
@@ -323,27 +398,36 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Three-Tooth Letters: س ش",
+          titleAr: "حروف الأسنان الثلاثة: س ش",
           content:
             "Sīn (س) and Shīn (ش) have a distinctive shape with three 'teeth' like a comb:\n• Sīn (س) = NO dots = 's' sound (like 'sun')\n• Shīn (ش) = THREE dots above = 'sh' sound (like 'ship')\n\nTip: Shīn has 3 teeth AND 3 dots!",
+          contentAr:
+            "السين (س) والشين (ش) لهما شكل مميز بثلاث 'أسنان' مثل مشط:\n• السين (س) = بدون نقاط = صوت 's' (مثل 'sun')\n• الشين (ش) = ثلاث نقاط فوق = صوت 'sh' (مثل 'ship')\n\nنصيحة: الشين بها 3 أسنان و 3 نقاط!",
         },
         {
           title: "Introducing Emphatic Letters: Ṣād (ص)",
+          titleAr: "تقديم الحروف الممدودة: الصاد (ص)",
           content:
             "Ṣād (ص) is your first 'emphatic' letter. Arabic has sounds that don't exist in English - emphatic letters are pronounced with the tongue pressed against the roof of the mouth, creating a 'heavier' sound.\n\nṢād is a 'heavy s' - imagine saying 's' while your tongue is pressed flat. Your mouth feels more full.",
+          contentAr:
+            "الصاد (ص) هو أول حرف 'ممدود' لك. اللغة العربية تحتوي على أصوات غير موجودة في الإنجليزية - الحروف الممدودة تُنطق بضغط اللسان على سقف الفم، مما يخلق صوتًا 'أثقل'.\n\nالصاد هي 's' ثقيلة - تخيل نطق 's' بينما لسانك مضغوط بشكل مسطح. يشعر فمك بأنه أكثر امتلاءً.",
         },
         {
           title: "Why Emphatics Matter",
+          titleAr: "لماذا الحروف الممدودة مهمة",
           content:
             "Emphatic letters change the meaning of words! For example:\n• سَيْف (sayf) = sword (regular s)\n• صَيْف (ṣayf) = summer (emphatic s)\n\nArabics sometimes call this language 'لُغَة الضّاد' (the language of Ḍād) because emphatic sounds are so distinctive!",
+          contentAr:
+            "الحروف الممدودة تغير معنى الكلمات! على سبيل المثال:\n• سَيْف (sayf) = سيف (s عادي)\n• صَيْف (ṣayf) = صيف (s ممدود)\n\nيُطلق العرب على هذه اللغة أحيانًا 'لُغَة الضّاد' (لغة الضاد) لأن الأصوات الممدودة مميزة جدًا!",
         },
       ],
       vocabulary: [
-        { arabic: "س", transliteration: "sīn", meaning: "Sīn (s sound)" },
-        { arabic: "ش", transliteration: "shīn", meaning: "Shīn (sh sound)" },
-        { arabic: "ص", transliteration: "ṣād", meaning: "Ṣād (emphatic s)" },
-        { arabic: "سَمَاء", transliteration: "samā'", meaning: "sky" },
-        { arabic: "شَمْس", transliteration: "shams", meaning: "sun" },
-        { arabic: "صَبَاح", transliteration: "ṣabāḥ", meaning: "morning" },
+        { arabic: "س", transliteration: "sīn", meaning: "Sīn (s sound)", meaningAr: "السين (صوت 's')" },
+        { arabic: "ش", transliteration: "shīn", meaning: "Shīn (sh sound)", meaningAr: "الشين (صوت 'sh')" },
+        { arabic: "ص", transliteration: "ṣād", meaning: "Ṣād (emphatic s)", meaningAr: "الصاد (صوت 's' ممدود)" },
+        { arabic: "سَمَاء", transliteration: "samā'", meaning: "sky", meaningAr: "سماء" },
+        { arabic: "شَمْس", transliteration: "shams", meaning: "sun", meaningAr: "شمس" },
+        { arabic: "صَبَاح", transliteration: "ṣabāḥ", meaning: "morning", meaningAr: "صباح" },
       ],
     },
     exerciseCount: 16,
@@ -358,6 +442,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleFr: "Lettres 15-17 : Ḍād, Ṭā', Ẓā'",
     description:
       "Master the remaining emphatic letters - the signature sounds of Arabic",
+    descriptionAr:
+      "احتقن الحروف الممدودة المتبقية - الأصوات المميزة للعربية",
     descriptionFr:
       "Maîtrisez les lettres emphatiques restantes - les sons caractéristiques de l'arabe",
     objectives: [
@@ -365,6 +451,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Pronounce all emphatic consonants confidently",
       "Distinguish between regular and emphatic pairs",
       "Understand why Arabic is called 'the language of Ḍād'",
+    ],
+    objectivesAr: [
+      "اعترف بالضاد (ض)، الطاء (ط)، والظاء (ظ)",
+      "نطق جميع الحروف الممدودة بثقة",
+      "ميز بين الأزواج العادية والممدودة",
+      "افهم لماذا تسمى اللغة العربية 'لغة الضاد'"
     ],
     objectivesFr: [
       "Reconnaître Ḍād (ض), Ṭā' (ط) et Ẓā' (ظ)",
@@ -379,27 +471,36 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "The Complete Emphatic Set",
+          titleAr: "المجموعة الممدودة الكاملة",
           content:
             "You're learning the sounds that make Arabic unique! These three letters complete the emphatic consonant family:\n• Ḍād (ض) = emphatic 'd' (NO English equivalent!)\n• Ṭā' (ط) = emphatic 't' (heavy 't')\n• Ẓā' (ظ) = emphatic 'dh/z' (heavy 'th' like 'the')",
+          contentAr:
+            "أنت تتعلم الأصوات التي تجعل العربية فريدة! هذه الأحرف الثلاثة تكمل عائلة الحروف الممدودة:\n• الضاد (ض) = 'd' ممدود (بلا مكافئ إنجليزي!)\n• الطاء (ط) = 't' ممدود ('t' ثقيلة)\n• الظاء (ظ) = 'dh/z' ممدود ('th' ثقيلة مثل 'the')",
         },
         {
           title: "Ḍād - The Arabic Letter",
+          titleAr: "الضاد - حرف عربي",
           content:
             "Ḍād (ض) is so unique that Arabic is called 'لُغَة الضّاد' (lughat aḍ-ḍād - the language of Ḍād). This sound exists ONLY in Arabic!\n\nTo pronounce it: Say 'd' but press your tongue against your upper teeth while pushing air from your throat. It sounds 'thick' and 'heavy'.",
+          contentAr:
+            "الضاد (ض) فريدة جدًا لدرجة أن اللغة العربية تُسمى 'لُغَة الضّاد' (لغة الضاد). هذا الصوت موجود فقط في العربية!\n\nللنطق به: قل 'd' لكن اضغط لسانك على أسنانك العلوية بينما تدفع الهواء من حلقك. يبدو 'سميك' و 'ثقيل'.",
         },
         {
           title: "Emphatic Pairs Comparison",
+          titleAr: "مقارنة الأزواج الممدودة",
           content:
             "Regular → Emphatic:\n• ت (t) → ط (ṭ): thin t → thick t\n• د (d) → ض (ḍ): thin d → thick d\n• ذ (dh) → ظ (ẓ): thin th → thick th\n• س (s) → ص (ṣ): thin s → thick s\n\nEmphatics make surrounding vowels sound 'darker' too!",
+          contentAr:
+            "عادي → ممدود:\n• ت (t) → ط (ṭ): t رقيقة → t سميكة\n• د (d) → ض (ḍ): d رقيقة → d سميكة\n• ذ (dh) → ظ (ẓ): th رقيقة → th سميكة\n• س (s) → ص (ṣ): s رقيقة → s سميكة\n\nالحروف الممدودة تجعل الحروف الصوتية المحيطة تبدو 'أغمق' أيضًا!",
         },
       ],
       vocabulary: [
-        { arabic: "ض", transliteration: "ḍād", meaning: "Ḍād (emphatic d)" },
-        { arabic: "ط", transliteration: "ṭā'", meaning: "Ṭā' (emphatic t)" },
-        { arabic: "ظ", transliteration: "ẓā'", meaning: "Ẓā' (emphatic dh/z)" },
-        { arabic: "ضَوْء", transliteration: "ḍaw'", meaning: "light" },
-        { arabic: "طَعَام", transliteration: "ṭa'ām", meaning: "food" },
-        { arabic: "ظُهْر", transliteration: "ẓuhr", meaning: "noon" },
+        { arabic: "ض", transliteration: "ḍād", meaning: "Ḍād (emphatic d)", meaningAr: "الضاد (صوت 'd' ممدود)" },
+        { arabic: "ط", transliteration: "ṭā'", meaning: "Ṭā' (emphatic t)", meaningAr: "الطاء (صوت 't' ممدود)" },
+        { arabic: "ظ", transliteration: "ẓā'", meaning: "Ẓā' (emphatic dh/z)", meaningAr: "الظاء (صوت 'dh' ممدود)" },
+        { arabic: "ضَوْء", transliteration: "ḍaw'", meaning: "light", meaningAr: "ضوء" },
+        { arabic: "طَعَام", transliteration: "ṭa'ām", meaning: "food", meaningAr: "طعام" },
+        { arabic: "ظُهْر", transliteration: "ẓuhr", meaning: "noon", meaningAr: "ظهر" },
       ],
     },
     exerciseCount: 16,
@@ -413,12 +514,19 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الحروف ١٨-٢٠: العين، الغين، الفاء",
     titleFr: "Lettres 18-20 : 'Ayn, Ghayn, Fā'",
     description: "Learn the distinctive throat sounds and the letter Fā'",
+    descriptionAr: "تعلم أصوات الحلق المميزة وحرف الفاء",
     descriptionFr: "Apprenez les sons gutturaux distinctifs et la lettre Fā'",
     objectives: [
       "Recognize 'Ayn (ع), Ghayn (غ), and Fā' (ف)",
       "Master the pharyngeal sound 'Ayn",
       "Pronounce Ghayn (like French 'r')",
       "Write the distinctive eye-shaped letters",
+    ],
+    objectivesAr: [
+      "اعترف بالعين (ع)، الغين (غ)، والفاء (ف)",
+      "احتقن صوت الحلق العين",
+      "نطق الغين (مثل الفرنسية 'r')",
+      "اكتب الحروف المميزة على شكل عين",
     ],
     objectivesFr: [
       "Reconnaître 'Ayn (ع), Ghayn (غ) et Fā' (ف)",
@@ -433,18 +541,27 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "'Ayn - The Most Difficult Sound",
+          titleAr: "العين - الصوت الأصعب",
           content:
             "'Ayn (ع) is often the hardest letter for non-native speakers. It's a 'pharyngeal' consonant - produced by constricting your throat.\n\nHow to pronounce: Imagine you're choking (gently!), or gagging. The sound comes from squeezing the back of your throat. It's like saying 'ah' while your throat is tight.",
+          contentAr:
+            "العين (ع) غالبًا ما تكون أصعب حرف للمتحدثين غير الأصليين. إنها حرف 'حلقي' - ينتج عن تضييق حلقك.\n\nكيفية النطق به: تخيل أنك تختنق (برفق!)، أو تتقيأ. الصوت يأتي من الضغط على مؤخرة حلقك. إنه مثل قول 'ah' بينما حلقك مشدود.",
         },
         {
           title: "Ghayn - The Gargling Sound",
+          titleAr: "الغين - صوت الغرغرة",
           content:
             "Ghayn (غ) is easier! It sounds like:\n• The French 'r' in 'Paris'\n• Gargling water in your throat\n• The 'ch' in 'Bach' but voiced\n\nGhayn and 'Ayn share the same shape - Ghayn just has a dot above.",
+          contentAr:
+            "الغين (غ) أسهل! تبدو مثل:\n• الفرنسية 'r' في 'Paris'\n• غرغرة الماء في حلقك\n• 'ch' في 'Bach' لكن بصوت مجهور\n\nالغين والعين تشتركان في نفس الشكل - الغين فقط لديها نقطة فوق.",
         },
         {
           title: "Fā' - A Familiar Friend",
+          titleAr: "الفاء - صديق مألوف",
           content:
             "Fā' (ف) is easy - it's just like English 'f'! It has a distinctive loop shape with one dot above.\n\nFun fact: Fā' looks like a lowercase 'q' with a dot - an easy visual reminder!",
+          contentAr:
+            "الفاء (ف) سهلة - إنها تمامًا مثل الإنجليزية 'f'! لديها شكل حلقة مميز بنقطة فوق.\n\nحقيقة مرحة: الفاء تشبه حرف 'q' صغير بنقطة - تذكير بصري سهل!",
         },
       ],
       vocabulary: [
@@ -452,16 +569,18 @@ export const PHASE_1_LESSONS: Lesson[] = [
           arabic: "ع",
           transliteration: "'ayn",
           meaning: "'Ayn (throat constriction)",
+          meaningAr: "العين (تضييق الحلق)",
         },
         {
           arabic: "غ",
           transliteration: "ghayn",
           meaning: "Ghayn (French r / gargle)",
+          meaningAr: "الغين (صوت الفرنسية r أو الغرغرة)",
         },
-        { arabic: "ف", transliteration: "fā'", meaning: "Fā' (f sound)" },
-        { arabic: "عَيْن", transliteration: "'ayn", meaning: "eye" },
-        { arabic: "غَابَة", transliteration: "ghāba", meaning: "forest" },
-        { arabic: "فَم", transliteration: "fam", meaning: "mouth" },
+        { arabic: "ف", transliteration: "fā'", meaning: "Fā' (f sound)", meaningAr: "الفاء (صوت f)" },
+        { arabic: "عَيْن", transliteration: "'ayn", meaning: "eye", meaningAr: "عين" },
+        { arabic: "غَابَة", transliteration: "ghāba", meaning: "forest", meaningAr: "غابة" },
+        { arabic: "فَم", transliteration: "fam", meaning: "mouth", meaningAr: "فم" },
       ],
     },
     exerciseCount: 17,
@@ -475,6 +594,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الحروف ٢١-٢٤: القاف، الكاف، اللام، الميم",
     titleFr: "Lettres 21-24 : Qāf, Kāf, Lām, Mīm",
     description: "Learn common consonants including the distinctive Qāf",
+    descriptionAr: "تعلم الحروف الساكنة الشائعة بما في ذلك القاف المميز",
     descriptionFr:
       "Apprenez les consonnes courantes, y compris le distinctif Qāf",
     objectives: [
@@ -482,6 +602,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Distinguish between Qāf and Kāf sounds",
       "Write the tall vertical stroke of Lām",
       "Connect these letters in simple words",
+    ],
+    objectivesAr: [
+      "اعترف بالقاف (ق)، الكاف (ك)، اللام (ل)، والميم (م)",
+      "ميز بين أصوات القاف والكاف",
+      "اكتب الخط العمودي الطويل للام",
+      "وصل هذه الحروف في كلمات بسيطة",
     ],
     objectivesFr: [
       "Reconnaître Qāf (ق), Kāf (ك), Lām (ل) et Mīm (م)",
@@ -496,29 +622,38 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Qāf vs. Kāf",
+          titleAr: "القاف مقابل الكاف",
           content:
             "• Qāf (ق) = Deep 'k' from the back of the throat (like saying 'k' while gargling)\n• Kāf (ك) = Regular 'k' like English\n\nQāf is a 'uvular' sound - the sound originates further back than regular 'k'. Many Arabic dialects pronounce Qāf as 'g' or even as a glottal stop!",
+          contentAr:
+            "• القاف (ق) = 'k' عميق من مؤخرة الحلق (مثل قول 'k' بينما تغرغر)\n• الكاف (ك) = 'k' عادي مثل الإنجليزية\n\nالقاف صوت 'لهوي' - الصوت ينشأ أعمق من 'k' العادي. تنطق العديد من اللهجات العربية القاف كـ 'g' أو حتى كنقرة حنجرية!",
         },
         {
           title: "Lām - The Tall One",
+          titleAr: "اللام - الحرف الطويل",
           content:
             "Lām (ل) is one of the tallest letters in Arabic. It looks like Alif (ا) but with a small hook at the bottom.\n\nImportant: Lām appears in 'الـ' (al-), the Arabic word for 'the'. You'll see it constantly!",
+          contentAr:
+            "اللام (ل) هو أحد أطول الحروف في العربية. يبدو مثل الألف (ا) لكن مع خطاف صغير في الأسفل.\n\nمهم: تظهر اللام في 'الـ' (al-)، كلمة العربية ل 'the'. ستراها باستمرار!",
         },
         {
           title: "Mīm - Round and Friendly",
+          titleAr: "الميم - مستدير وودود",
           content:
             "Mīm (م) is a round letter that looks like a small circle with a tail. It's one of the most common letters in Arabic.\n\nEasy to remember: Mīm looks like a little 'm' or a round marble!",
+          contentAr:
+            "الميم (م) حرف مستدير يبدو مثل دائرة صغيرة بذيل. إنه أحد أكثر الحروف شيوعًا في العربية.\n\nسهل التذكر: الميم تبدو مثل 'm' صغيرة أو رخام مستدير!",
         },
       ],
       vocabulary: [
-        { arabic: "ق", transliteration: "qāf", meaning: "Qāf (deep k)" },
-        { arabic: "ك", transliteration: "kāf", meaning: "Kāf (k sound)" },
-        { arabic: "ل", transliteration: "lām", meaning: "Lām (l sound)" },
-        { arabic: "م", transliteration: "mīm", meaning: "Mīm (m sound)" },
-        { arabic: "قَمَر", transliteration: "qamar", meaning: "moon" },
-        { arabic: "كِتَاب", transliteration: "kitāb", meaning: "book" },
-        { arabic: "لَيْل", transliteration: "layl", meaning: "night" },
-        { arabic: "مَاء", transliteration: "mā'", meaning: "water" },
+        { arabic: "ق", transliteration: "qāf", meaning: "Qāf (deep k)", meaningAr: "القاف (صوت 'k' عميق)" },
+        { arabic: "ك", transliteration: "kāf", meaning: "Kāf (k sound)", meaningAr: "الكاف (صوت 'k')" },
+        { arabic: "ل", transliteration: "lām", meaning: "Lām (l sound)", meaningAr: "اللام (صوت 'l')" },
+        { arabic: "م", transliteration: "mīm", meaning: "Mīm (m sound)", meaningAr: "الميم (صوت 'm')" },
+        { arabic: "قَمَر", transliteration: "qamar", meaning: "moon", meaningAr: "قمر" },
+        { arabic: "كِتَاب", transliteration: "kitāb", meaning: "book", meaningAr: "كتاب" },
+        { arabic: "لَيْل", transliteration: "layl", meaning: "night", meaningAr: "ليل" },
+        { arabic: "مَاء", transliteration: "mā'", meaning: "water", meaningAr: "ماء" },
       ],
     },
     exerciseCount: 18,
@@ -532,6 +667,7 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الحروف ٢٥-٢٨: النون، الهاء، الواو، الياء",
     titleFr: "Lettres 25-28 : Nūn, Hā', Wāw, Yā'",
     description: "Complete the alphabet! Learn the final four letters",
+    descriptionAr: "أكمل الأبجدية! تعلم الأحرف الأربعة الأخيرة",
     descriptionFr:
       "Complétez l'alphabet ! Apprenez les quatre dernières lettres",
     objectives: [
@@ -539,6 +675,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Understand Wāw and Yā' as both consonants and vowels",
       "Write all 28 letters from memory",
       "Celebrate completing the alphabet!",
+    ],
+    objectivesAr: [
+      "اعترف بالنون (ن)، الهاء (ه)، الواو (و)، والياء (ي)",
+      "افهم الواو والياء كحروف ساكنة وحروف صوتية",
+      "اكتب جميع الأحرف الـ 28 من الذاكرة",
+      "احتفل بإكمال الأبجدية!",
     ],
     objectivesFr: [
       "Reconnaître Nūn (ن), Hā' (ه), Wāw (و) et Yā' (ي)",
@@ -553,34 +695,46 @@ export const PHASE_1_LESSONS: Lesson[] = [
       theory: [
         {
           title: "Nūn - The Dot Bowl",
+          titleAr: "النون - وعاء النقطة",
           content:
             "Nūn (ن) looks like a small bowl with a dot above. It makes the 'n' sound.\n\nNūn is a 'sun letter' (حروف شمسية) - when 'ال' comes before it, the 'l' changes to 'n'. We'll learn more about this later!",
+          contentAr:
+            "النون (ن) تبدو مثل وعاء صغير بنقطة فوقه. ينتج عنها صوت 'n'.\n\nالنون حرف 'شمسي' (حروف شمسية) - عندما يأتي 'ال' قبله، يتغير 'l' إلى 'n'. سنتعلم المزيد عن هذا لاحقًا!",
         },
         {
           title: "Hā' - The Breathy H",
+          titleAr: "الهاء - الـ H المزفزفة",
           content:
             "Hā' (ه) is different from Ḥā' (ح). It's a light, breathy 'h' - like English 'h' in 'hello'.\n\nHā' has many forms depending on position - in the middle of a word it looks like a small 'o' or '∞' shape!",
+          contentAr:
+            "الهاء (ه) مختلفة عن الحاء (ح). إنها 'h' خفيفة ومزفزفة - مثل الإنجليزية 'h' في 'hello'.\n\nللهاء أشكال كثيرة تبعًا للموضع - في منتصف الكلمة تبدو مثل 'o' صغيرة أو شكل '∞'!",
         },
         {
           title: "The Semi-Vowels: Wāw and Yā'",
+          titleAr: "شبه الحروف الصوتية: الواو والياء",
           content:
             "These two letters are special - they can be consonants OR vowels!\n\n• Wāw (و): As consonant = 'w' (like 'water'). As vowel = long 'ū' (like 'boot')\n• Yā' (ي): As consonant = 'y' (like 'yes'). As vowel = long 'ī' (like 'see')\n\nNon-connecting: Wāw never connects forward (like د ر ز).",
+          contentAr:
+            "هذان الحرفان خاصان - يمكن أن يكونا حروف ساكنة أو صوتية!\n\n• الواو (و): كحرف ساكن = 'w' (مثل 'water'). كحرف صوتي = 'ū' طويل (مثل 'boot')\n• الياء (ي): كحرف ساكن = 'y' (مثل 'yes'). كحرف صوتي = 'ī' طويل (مثل 'see')\n\nغير متصل: الواو لا تتصل أبدًا للأمام (مثل د ر ز).",
         },
         {
           title: "🎉 Congratulations!",
+          titleAr: "🎉 مبروك!",
           content:
             "You've learned all 28 letters of the Arabic alphabet! This is a HUGE achievement. The alphabet is the foundation of everything - and you've mastered it!",
+          contentAr:
+            "لقد تعلمت جميع الـ 28 حرفًا من الأبجدية العربية! هذا إنجاز ضخم. الأبجدية هي أساس كل شيء - وقد أتقنتها!",
         },
       ],
       vocabulary: [
-        { arabic: "ن", transliteration: "nūn", meaning: "Nūn (n sound)" },
-        { arabic: "ه", transliteration: "hā'", meaning: "Hā' (light h)" },
-        { arabic: "و", transliteration: "wāw", meaning: "Wāw (w/ū sound)" },
-        { arabic: "ي", transliteration: "yā'", meaning: "Yā' (y/ī sound)" },
-        { arabic: "نُور", transliteration: "nūr", meaning: "light" },
-        { arabic: "هُوَ", transliteration: "huwa", meaning: "he" },
-        { arabic: "وَرْد", transliteration: "ward", meaning: "rose" },
-        { arabic: "يَد", transliteration: "yad", meaning: "hand" },
+        { arabic: "ن", transliteration: "nūn", meaning: "Nūn (n sound)", meaningAr: "النون (صوت 'n')" },
+        { arabic: "ه", transliteration: "hā'", meaning: "Hā' (light h)", meaningAr: "الهاء (صوت 'h' خفيف)" },
+        { arabic: "و", transliteration: "wāw", meaning: "Wāw (w/ū sound)", meaningAr: "الواو (صوت 'w' أو 'ū')" },
+        { arabic: "ي", transliteration: "yā'", meaning: "Yā' (y/ī sound)", meaningAr: "الياء (صوت 'y' أو 'ī')" },
+        { arabic: "نُور", transliteration: "nūr", meaning: "light", meaningAr: "نور" },
+        { arabic: "هُوَ", transliteration: "huwa", meaning: "he", meaningAr: "هو" },
+        { arabic: "وَرْد", transliteration: "ward", meaning: "rose", meaningAr: "وردة" },
+        { arabic: "يَد", transliteration: "yad", meaning: "hand", meaningAr: "يد" },
       ],
     },
     exerciseCount: 20,
@@ -596,6 +750,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مقدمة",
     titleFr: "Formes des lettres : Introduction",
     description: "Learn how Arabic letters change shape based on position",
+    descriptionAr:
+      "تعلم كيف تتغير أشكال الحروف العربية بناءً على موضعها",
     descriptionFr:
       "Apprenez comment les lettres arabes changent de forme selon leur position",
     objectives: [
@@ -603,6 +759,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Identify isolated, initial, medial, and final forms",
       "Recognize connecting vs. non-connecting letters",
       "Practice reading letters in different positions",
+    ],
+    objectivesAr: [
+      "افهم الأشكال الأربعة للحروف العربية",
+      "حدد الأشكال المنعزلة والأولية والوسطية والنهائية",
+      "اعترف بالحروف المتصلة مقابل غير المتصلة",
+      "تدرب على قراءة الحروف في مواضع مختلفة",
     ],
     objectivesFr: [
       "Comprendre les quatre formes des lettres arabes",
@@ -648,6 +810,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ب ت ث ن ي",
     titleFr: "Formes des lettres : Groupe ب ت ث ن ي",
     description: "Master the forms of letters with similar base shapes",
+    descriptionAr:
+      "احتقن أشكال الحروف ذات الأشكال الأساسية المتشابهة",
     descriptionFr:
       "Maîtrisez les formes des lettres ayant des formes de base similaires",
     objectives: [
@@ -655,6 +819,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Recognize these letters in any position",
       "Practice connecting these letters",
       "Read simple words using these letters",
+    ],
+    objectivesAr: [
+      "اكتب ب ت ث ن ي في جميع الأشكال الأربعة",
+      "اعترف بهذه الحروف في أي موضع",
+      "تدرب على وصل هذه الحروف",
+      "اقرأ كلمات بسيطة باستخدام هذه الحروف",
     ],
     objectivesFr: [
       "Écrire ب ت ث ن ي dans les quatre formes",
@@ -706,6 +876,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ج ح خ",
     titleFr: "Formes des lettres : Groupe ج ح خ",
     description: "Master the hook-shaped letters in all positions",
+    descriptionAr:
+      "احتقن الحروف على شكل خطاف في جميع المواضع",
     descriptionFr:
       "Maîtrisez les lettres en forme de crochet dans toutes les positions",
     objectives: [
@@ -713,6 +885,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Understand how the 'hook' shape changes",
       "Practice reading and writing words",
       "Build speed in recognizing these letters",
+    ],
+    objectivesAr: [
+      "اكتب ج ح خ في أشكالها الأربعة",
+      "افهم كيف يتغير شكل 'الخطاف'",
+      "تدرب على قراءة وكتابة الكلمات",
+      "ابني سرعة في التعرف على هذه الحروف",
     ],
     objectivesFr: [
       "Écrire ج ح خ sous leurs quatre formes",
@@ -765,6 +943,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة س ش ص ض",
     titleFr: "Formes des lettres : Groupe س ش ص ض",
     description: "Master the 'tooth' letters and their emphatic variants",
+    descriptionAr:
+      "احتقن حروف 'الأسنان' ومتغيراتها الممدودة",
     descriptionFr:
       "Maîtrisez les lettres 'à dents' et leurs variantes emphatiques",
     objectives: [
@@ -772,6 +952,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Understand how teeth simplify in connected forms",
       "Distinguish between س/ش and ص/ض shapes",
       "Practice word reading with these letters",
+    ],
+    objectivesAr: [
+      "اكتب س ش ص ض في أشكالها الأربعة",
+      "افهم كيف تتبسط الأسنان في الأشكال المتصلة",
+      "ميز بين أشكال س/ش و ص/ض",
+      "تدرب على قراءة الكلمات باستخدام هذه الحروف",
     ],
     objectivesFr: [
       "Écrire س ش ص ض sous leurs quatre formes",
@@ -819,6 +1005,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ع غ ف ق",
     titleFr: "Formes des lettres : Groupe ع غ ف ق",
     description: "Master the eye-shaped and loop letters",
+    descriptionAr:
+      "احتقن الحروف على شكل عين والحروف الحلقية",
     descriptionFr:
       "Maîtrisez les lettres en forme d'œil et les lettres bouclées",
     objectives: [
@@ -826,6 +1014,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Recognize the 'eye' shape of ع غ",
       "Understand the different loops of ف ق",
       "Practice reading complex words",
+    ],
+    objectivesAr: [
+      "اكتب ع غ ف ق في أشكالها الأربعة",
+      "اعترف بشكل 'العين' من ع غ",
+      "افهم الحلقات المختلفة من ف ق",
+      "تدرب على قراءة الكلمات المعقدة",
     ],
     objectivesFr: [
       "Écrire ع غ ف ق sous leurs quatre formes",
@@ -878,12 +1072,20 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "أشكال الحروف: مجموعة ك ل م ه",
     titleFr: "Formes des lettres : Groupe ك ل م ه",
     description: "Master the remaining connecting letters",
+    descriptionAr:
+      "احتقن الحروف المتصلة المتبقية",
     descriptionFr: "Maîtrisez les lettres connectées restantes",
     objectives: [
       "Write ك ل م ه in all four forms",
       "Understand Hā's many forms",
       "Practice Lām-Alif combination",
       "Read words with all letter forms",
+    ],
+    objectivesAr: [
+      "اكتب ك ل م ه في أشكالها الأربعة",
+      "افهم أشكال الهاء العديدة",
+      "تدرب على مجموعة Lām-Alif",
+      "اقرأ الكلمات بجميع أشكال الحروف",
     ],
     objectivesFr: [
       "Écrire ك ل م ه sous leurs quatre formes",
@@ -941,12 +1143,20 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "الحركات القصيرة: الفتحة والكسرة والضمة",
     titleFr: "Voyelles courtes : Fatḥa, Kasra, Ḍamma",
     description: "Learn the three short vowel marks (harakat)",
+    descriptionAr:
+      "تعلم علامات الحروف الصوتية القصيرة الثلاثة (حرakat)",
     descriptionFr: "Apprenez les trois signes de voyelles courtes (harakat)",
     objectives: [
       "Recognize Fatḥa (َ), Kasra (ِ), and Ḍamma (ُ)",
       "Pronounce each vowel sound correctly",
       "Read letters with vowel marks",
       "Understand vowel placement above/below letters",
+    ],
+    objectivesAr: [
+      "اعترف بـ Fatḥa (َ)، Kasra (ِ)، و Ḍamma (ُ)",
+      "نطق كل صوت حرف صوتي بشكل صحيح",
+      "اقرأ الحروف بعلامات الحروف الصوتية",
+      "افهم موضع الحروف الصوتية فوق/تحت الحروف",
     ],
     objectivesFr: [
       "Reconnaître Fatḥa (َ), Kasra (ِ) et Ḍamma (ُ)",
@@ -1001,6 +1211,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "السكون والشدة",
     titleFr: "Sukūn et Shadda",
     description: "Learn marks for no vowel (sukūn) and doubling (shadda)",
+    descriptionAr:
+      "تعلم علامات عدم وجود حرف صوتي (sukūn) والتضعيف (shadda)",
     descriptionFr:
       "Apprenez les signes d'absence de voyelle (sukūn) et de redoublement (shadda)",
     objectives: [
@@ -1008,6 +1220,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Understand consonant clusters with sukūn",
       "Pronounce doubled consonants correctly",
       "Read words with all diacritical marks",
+    ],
+    objectivesAr: [
+      "اعترف بـ Sukūn (ْ) و Shadda (ّ)",
+      "افهم مجموعات الحروف الساكنة مع sukūn",
+      "نطق الحروف الساكنة المضعفة بشكل صحيح",
+      "اقرأ الكلمات بجميع علامات الترقيم",
     ],
     objectivesFr: [
       "Reconnaître Sukūn (ْ) et Shadda (ّ)",
@@ -1073,12 +1291,20 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "التنوين",
     titleFr: "Tanwīn (Nounation)",
     description: "Learn the 'n' sound endings for indefinite nouns",
+    descriptionAr:
+      "تعلم صوت 'n' النهائي للأسماء غير المحددة",
     descriptionFr: "Apprenez les terminaisons en 'n' pour les noms indéfinis",
     objectives: [
       "Recognize the three tanwīn marks",
       "Understand tanwīn indicates indefiniteness",
       "Pronounce tanwīn correctly",
       "Distinguish tanwīn from regular nūn",
+    ],
+    objectivesAr: [
+      "اعترف بالثلاث علامات tanwīn",
+      "افهم أن tanwīn يشير إلى عدم التحديد",
+      "نطق tanwīn بشكل صحيح",
+      "ميز tanwīn عن nūn العادي",
     ],
     objectivesFr: [
       "Reconnaître les trois signes de tanwīn",
@@ -1133,6 +1359,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "حروف المد: الألف والواو والياء",
     titleFr: "Voyelles longues : Alif, Wāw, Yā'",
     description: "Master the long vowel sounds using vowel letters",
+    descriptionAr:
+      "احتقن أصوات الحروف الصوتية الطويلة باستخدام حروف الحروف الصوتية",
     descriptionFr:
       "Maîtrisez les sons des voyelles longues à l'aide des lettres voyelles",
     objectives: [
@@ -1140,6 +1368,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Distinguish short vs. long vowel sounds",
       "Read words with long vowels correctly",
       "Practice vowel length in pronunciation",
+    ],
+    objectivesAr: [
+      "افهم كيف تمثل ا و ي الحروف الصوتية الطويلة",
+      "ميز بين أصوات الحروف الصوتية القصيرة والطويلة",
+      "اقرأ الكلمات بالحروف الصوتية الطويلة بشكل صحيح",
+      "تدرب على طول الحروف الصوتية في النطق",
     ],
     objectivesFr: [
       "Comprendre comment ا و ي représentent les voyelles longues",
@@ -1202,6 +1436,8 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "القراءة: كلمات من حرفين",
     titleFr: "Lecture : Mots de deux lettres",
     description: "Practice reading simple two-letter Arabic words",
+    descriptionAr:
+      "تدرب على قراءة كلمات عربية بسيطة من حرفين",
     descriptionFr:
       "Entraînez-vous à lire des mots arabes simples de deux lettres",
     objectives: [
@@ -1209,6 +1445,12 @@ export const PHASE_1_LESSONS: Lesson[] = [
       "Apply letter forms knowledge",
       "Use vowel marks for correct pronunciation",
       "Build reading confidence",
+    ],
+    objectivesAr: [
+      "اقرأ كلمات من حرفين بسهولة",
+      "طبق معرفة أشكال الحروف",
+      "استخدم علامات الحروف الصوتية للنطق الصحيح",
+      "ابني ثقة القراءة",
     ],
     objectivesFr: [
       "Lire couramment les mots de deux lettres",
@@ -1260,12 +1502,20 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "القراءة: كلمات من ثلاثة حروف",
     titleFr: "Lecture : Mots de trois lettres",
     description: "Practice reading three-letter root words",
+    descriptionAr:
+      "تدرب على قراءة كلمات جذرية من ثلاثة أحرف",
     descriptionFr: "Entraînez-vous à lire des mots racines de trois lettres",
     objectives: [
       "Read three-letter words fluently",
       "Understand the concept of Arabic roots",
       "Recognize common word patterns",
       "Improve reading speed",
+    ],
+    objectivesAr: [
+      "اقرأ كلمات من ثلاثة أحرف بسهولة",
+      "افهم مفهوم الجذور العربية",
+      "اعترف بأنماط الكلمات الشائعة",
+      "حسّن سرعة القراءة",
     ],
     objectivesFr: [
       "Lire couramment les mots de trois lettres",
@@ -1315,12 +1565,20 @@ export const PHASE_1_LESSONS: Lesson[] = [
     titleAr: "القراءة: كلمات شائعة",
     titleFr: "Lecture : Mots courants",
     description: "Learn to read the most frequent Arabic words",
+    descriptionAr:
+      "تعلم قراءة أكثر الكلمات العربية شيوعًا",
     descriptionFr: "Apprenez à lire les mots arabes les plus fréquents",
     objectives: [
       "Read the 20 most common Arabic words",
       "Recognize high-frequency vocabulary",
       "Practice reading without vowel marks",
       "Build practical reading skills",
+    ],
+    objectivesAr: [
+      "اقرأ أكثر 20 كلمة عربية شيوعًا",
+      "اعترف بالمفردات عالية التكرار",
+      "تدرب على القراءة بدون علامات الحروف الصوتية",
+      "ابني مهارات القراءة العملية",
     ],
     objectivesFr: [
       "Lire les 20 mots arabes les plus courants",
