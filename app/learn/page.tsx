@@ -12,6 +12,7 @@ import {
   Play,
   Star,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -26,6 +27,7 @@ import { CURRICULUM } from "@/data/curriculum";
 export default function LearnPage() {
   const [mounted, setMounted] = useState(false);
   const { getPhaseProgress, getLessonProgress } = useProgressStore();
+  const t = useTranslations();
 
   useEffect(() => {
     setMounted(true);
@@ -51,11 +53,10 @@ export default function LearnPage() {
             {/* Header */}
             <div>
               <h1 className="font-heading text-3xl font-bold text-foreground">
-                Learning Path
+                {t("learn.title")}
               </h1>
               <p className="text-muted-foreground">
-                Your complete journey to mastering Arabic, from alphabet to
-                advanced literature.
+                {t("learn.description")}
               </p>
             </div>
 
@@ -65,10 +66,10 @@ export default function LearnPage() {
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <h2 className="text-xl font-semibold text-foreground">
-                      Overall Progress
+                      {t("learn.overallProgress")}
                     </h2>
                     <p className="text-sm text-muted-foreground">
-                      Keep going! You&apos;re making great progress.
+                      {t("learn.keepGoing")}
                     </p>
                   </div>
                   <div className="flex items-center gap-6">
@@ -85,7 +86,7 @@ export default function LearnPage() {
                         )}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        Lessons Done
+                        {t("learn.lessonsDone")}
                       </p>
                     </div>
                     <div className="text-center">
@@ -96,7 +97,7 @@ export default function LearnPage() {
                         )}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        Total Lessons
+                        {t("learn.totalLessons")}
                       </p>
                     </div>
                   </div>
@@ -157,7 +158,7 @@ export default function LearnPage() {
                         <div className="flex items-center gap-4">
                           <div className="text-right">
                             <p className="text-sm text-muted-foreground">
-                              Progress
+                              {t("learn.progress")}
                             </p>
                             <p className="text-2xl font-bold text-foreground">
                               {phaseProgress}%
@@ -181,7 +182,7 @@ export default function LearnPage() {
                       <div className="mt-4 flex flex-wrap gap-4 text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <BookOpen className="h-4 w-4" />
-                          {phase.totalLessons} lessons
+                          {phase.totalLessons} {t("common.lessons")}
                         </span>
                         <span className="flex items-center gap-1">
                           <Clock className="h-4 w-4" />
@@ -278,7 +279,7 @@ export default function LearnPage() {
                                         className="h-6 gap-1 text-xs"
                                       >
                                         <Play className="h-3 w-3" />
-                                        Start
+                                        {t("learn.start")}
                                       </Badge>
                                     )}
                                     {isCompleted && (

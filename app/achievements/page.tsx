@@ -19,192 +19,7 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { useGamificationStore } from "@/stores/useGamificationStore";
-
-// Achievement categories
-const ACHIEVEMENT_CATEGORIES = [
-  { id: "learning", label: "Learning", icon: BookOpen },
-  { id: "streaks", label: "Streaks", icon: Flame },
-  { id: "mastery", label: "Mastery", icon: Crown },
-  { id: "social", label: "Social", icon: Trophy },
-];
-
-// All achievements data
-const ALL_ACHIEVEMENTS = [
-  // Learning achievements
-  {
-    id: "first-letter",
-    category: "learning",
-    icon: "✨",
-    title: "First Letter",
-    titleAr: "الحرف الأول",
-    description: "Learn your first Arabic letter",
-    xpReward: 50,
-    rarity: "common",
-  },
-  {
-    id: "alphabet-master",
-    category: "learning",
-    icon: "🔤",
-    title: "Alphabet Master",
-    titleAr: "سيد الأبجدية",
-    description: "Learn all 28 Arabic letters",
-    xpReward: 200,
-    rarity: "rare",
-  },
-  {
-    id: "harakat-hero",
-    category: "learning",
-    icon: "📝",
-    title: "Harakat Hero",
-    titleAr: "بطل الحركات",
-    description: "Master all vowel marks (harakat)",
-    xpReward: 150,
-    rarity: "uncommon",
-  },
-  {
-    id: "phase-1-complete",
-    category: "learning",
-    icon: "🎯",
-    title: "Foundation Builder",
-    titleAr: "باني الأساس",
-    description: "Complete Phase 1: Foundations",
-    xpReward: 500,
-    rarity: "rare",
-  },
-  {
-    id: "phase-2-complete",
-    category: "learning",
-    icon: "📚",
-    title: "Vocabulary Virtuoso",
-    titleAr: "بارع المفردات",
-    description: "Complete Phase 2: Beginner Vocabulary",
-    xpReward: 750,
-    rarity: "epic",
-  },
-  {
-    id: "polyglot",
-    category: "learning",
-    icon: "🌍",
-    title: "Polyglot",
-    titleAr: "متعدد اللغات",
-    description: "Complete all 5 learning phases",
-    xpReward: 2000,
-    rarity: "legendary",
-  },
-  // Streak achievements
-  {
-    id: "streak-3",
-    category: "streaks",
-    icon: "🔥",
-    title: "Getting Warm",
-    titleAr: "بداية الحماس",
-    description: "Maintain a 3-day learning streak",
-    xpReward: 30,
-    rarity: "common",
-  },
-  {
-    id: "streak-7",
-    category: "streaks",
-    icon: "🔥",
-    title: "Week Warrior",
-    titleAr: "محارب الأسبوع",
-    description: "Maintain a 7-day learning streak",
-    xpReward: 100,
-    rarity: "uncommon",
-  },
-  {
-    id: "streak-30",
-    category: "streaks",
-    icon: "🔥",
-    title: "Month Master",
-    titleAr: "سيد الشهر",
-    description: "Maintain a 30-day learning streak",
-    xpReward: 500,
-    rarity: "rare",
-  },
-  {
-    id: "streak-100",
-    category: "streaks",
-    icon: "💎",
-    title: "Century Legend",
-    titleAr: "أسطورة المئة",
-    description: "Maintain a 100-day learning streak",
-    xpReward: 1500,
-    rarity: "legendary",
-  },
-  // Mastery achievements
-  {
-    id: "perfect-lesson",
-    category: "mastery",
-    icon: "⭐",
-    title: "Perfect Score",
-    titleAr: "درجة كاملة",
-    description: "Get 100% on any lesson quiz",
-    xpReward: 100,
-    rarity: "uncommon",
-  },
-  {
-    id: "speed-learner",
-    category: "mastery",
-    icon: "⚡",
-    title: "Speed Learner",
-    titleAr: "متعلم سريع",
-    description: "Complete 5 lessons in one day",
-    xpReward: 200,
-    rarity: "rare",
-  },
-  {
-    id: "no-mistakes",
-    category: "mastery",
-    icon: "💯",
-    title: "Flawless",
-    titleAr: "بلا أخطاء",
-    description: "Complete 10 exercises without any mistakes",
-    xpReward: 300,
-    rarity: "epic",
-  },
-  {
-    id: "master-calligrapher",
-    category: "mastery",
-    icon: "🖌️",
-    title: "Master Calligrapher",
-    titleAr: "خطاط ماهر",
-    description: "Practice writing for 10 hours total",
-    xpReward: 500,
-    rarity: "legendary",
-  },
-  // Social achievements
-  {
-    id: "first-friend",
-    category: "social",
-    icon: "🤝",
-    title: "Making Friends",
-    titleAr: "صداقة جديدة",
-    description: "Add your first study buddy",
-    xpReward: 50,
-    rarity: "common",
-  },
-  {
-    id: "leaderboard-top10",
-    category: "social",
-    icon: "🏆",
-    title: "Rising Star",
-    titleAr: "نجم صاعد",
-    description: "Reach top 10 on the weekly leaderboard",
-    xpReward: 300,
-    rarity: "rare",
-  },
-  {
-    id: "leaderboard-1",
-    category: "social",
-    icon: "👑",
-    title: "Champion",
-    titleAr: "البطل",
-    description: "Reach #1 on the weekly leaderboard",
-    xpReward: 1000,
-    rarity: "legendary",
-  },
-];
+import { useTranslations } from "next-intl";
 
 // Rarity colors
 const RARITY_COLORS = {
@@ -215,14 +30,6 @@ const RARITY_COLORS = {
   legendary: "from-gold to-gold-dark",
 };
 
-const RARITY_LABELS = {
-  common: "Common",
-  uncommon: "Uncommon",
-  rare: "Rare",
-  epic: "Epic",
-  legendary: "Legendary",
-};
-
 /**
  * Achievements page - Display all achievements and progress
  */
@@ -230,6 +37,193 @@ export default function AchievementsPage() {
   const [mounted, setMounted] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const { unlockedAchievements, stats } = useGamificationStore();
+  const t = useTranslations();
+
+  // Achievement categories
+  const ACHIEVEMENT_CATEGORIES = [
+    { id: "learning", label: t("achievements.categories.learning"), icon: BookOpen },
+    { id: "streaks", label: t("achievements.categories.streaks"), icon: Flame },
+    { id: "mastery", label: t("achievements.categories.mastery"), icon: Crown },
+    { id: "social", label: t("achievements.categories.social"), icon: Trophy },
+  ];
+
+  // All achievements data
+  const ALL_ACHIEVEMENTS = [
+    // Learning achievements
+    {
+      id: "first-letter",
+      category: "learning",
+      icon: "✨",
+      title: t("achievements.list.firstLetter"),
+      titleAr: t("achievements.list.firstLetterAr"),
+      description: t("achievements.list.firstLetterDesc"),
+      xpReward: 50,
+      rarity: "common",
+    },
+    {
+      id: "alphabet-master",
+      category: "learning",
+      icon: "🔤",
+      title: t("achievements.list.alphabetMaster"),
+      titleAr: t("achievements.list.alphabetMasterAr"),
+      description: t("achievements.list.alphabetMasterDesc"),
+      xpReward: 200,
+      rarity: "rare",
+    },
+    {
+      id: "harakat-hero",
+      category: "learning",
+      icon: "📝",
+      title: t("achievements.list.harakatHero"),
+      titleAr: t("achievements.list.harakatHeroAr"),
+      description: t("achievements.list.harakatHeroDesc"),
+      xpReward: 150,
+      rarity: "uncommon",
+    },
+    {
+      id: "phase-1-complete",
+      category: "learning",
+      icon: "🎯",
+      title: t("achievements.list.foundationBuilder"),
+      titleAr: t("achievements.list.foundationBuilderAr"),
+      description: t("achievements.list.foundationBuilderDesc"),
+      xpReward: 500,
+      rarity: "rare",
+    },
+    {
+      id: "phase-2-complete",
+      category: "learning",
+      icon: "📚",
+      title: t("achievements.list.vocabularyVirtuoso"),
+      titleAr: t("achievements.list.vocabularyVirtuosoAr"),
+      description: t("achievements.list.vocabularyVirtuosoDesc"),
+      xpReward: 750,
+      rarity: "epic",
+    },
+    {
+      id: "polyglot",
+      category: "learning",
+      icon: "🌍",
+      title: t("achievements.list.polyglot"),
+      titleAr: t("achievements.list.polyglotAr"),
+      description: t("achievements.list.polyglotDesc"),
+      xpReward: 2000,
+      rarity: "legendary",
+    },
+    // Streak achievements
+    {
+      id: "streak-3",
+      category: "streaks",
+      icon: "🔥",
+      title: t("achievements.list.gettingWarm"),
+      titleAr: t("achievements.list.gettingWarmAr"),
+      description: t("achievements.list.gettingWarmDesc"),
+      xpReward: 30,
+      rarity: "common",
+    },
+    {
+      id: "streak-7",
+      category: "streaks",
+      icon: "🔥",
+      title: t("achievements.list.weekWarrior"),
+      titleAr: t("achievements.list.weekWarriorAr"),
+      description: t("achievements.list.weekWarriorDesc"),
+      xpReward: 100,
+      rarity: "uncommon",
+    },
+    {
+      id: "streak-30",
+      category: "streaks",
+      icon: "🔥",
+      title: t("achievements.list.monthMaster"),
+      titleAr: t("achievements.list.monthMasterAr"),
+      description: t("achievements.list.monthMasterDesc"),
+      xpReward: 500,
+      rarity: "rare",
+    },
+    {
+      id: "streak-100",
+      category: "streaks",
+      icon: "💎",
+      title: t("achievements.list.centuryLegend"),
+      titleAr: t("achievements.list.centuryLegendAr"),
+      description: t("achievements.list.centuryLegendDesc"),
+      xpReward: 1500,
+      rarity: "legendary",
+    },
+    // Mastery achievements
+    {
+      id: "perfect-lesson",
+      category: "mastery",
+      icon: "⭐",
+      title: t("achievements.list.perfectScore"),
+      titleAr: t("achievements.list.perfectScoreAr"),
+      description: t("achievements.list.perfectScoreDesc"),
+      xpReward: 100,
+      rarity: "uncommon",
+    },
+    {
+      id: "speed-learner",
+      category: "mastery",
+      icon: "⚡",
+      title: t("achievements.list.speedLearner"),
+      titleAr: t("achievements.list.speedLearnerAr"),
+      description: t("achievements.list.speedLearnerDesc"),
+      xpReward: 200,
+      rarity: "rare",
+    },
+    {
+      id: "no-mistakes",
+      category: "mastery",
+      icon: "💯",
+      title: t("achievements.list.flawless"),
+      titleAr: t("achievements.list.flawlessAr"),
+      description: t("achievements.list.flawlessDesc"),
+      xpReward: 300,
+      rarity: "epic",
+    },
+    {
+      id: "master-calligrapher",
+      category: "mastery",
+      icon: "🖌️",
+      title: t("achievements.list.masterCalligrapher"),
+      titleAr: t("achievements.list.masterCalligrapherAr"),
+      description: t("achievements.list.masterCalligrapherDesc"),
+      xpReward: 500,
+      rarity: "legendary",
+    },
+    // Social achievements
+    {
+      id: "first-friend",
+      category: "social",
+      icon: "🤝",
+      title: t("achievements.list.makingFriends"),
+      titleAr: t("achievements.list.makingFriendsAr"),
+      description: t("achievements.list.makingFriendsDesc"),
+      xpReward: 50,
+      rarity: "common",
+    },
+    {
+      id: "leaderboard-top10",
+      category: "social",
+      icon: "🏆",
+      title: t("achievements.list.risingStar"),
+      titleAr: t("achievements.list.risingStarAr"),
+      description: t("achievements.list.risingStarDesc"),
+      xpReward: 300,
+      rarity: "rare",
+    },
+    {
+      id: "leaderboard-1",
+      category: "social",
+      icon: "👑",
+      title: t("achievements.list.champion"),
+      titleAr: t("achievements.list.championAr"),
+      description: t("achievements.list.championDesc"),
+      xpReward: 1000,
+      rarity: "legendary",
+    },
+  ];
 
   useEffect(() => {
     setMounted(true);
@@ -271,10 +265,10 @@ export default function AchievementsPage() {
             {/* Header */}
             <div>
               <h1 className="font-heading text-3xl font-bold text-foreground">
-                Achievements
+                {t("achievements.title")}
               </h1>
               <p className="text-muted-foreground">
-                Track your accomplishments and earn rewards
+                {t("achievements.description")}
               </p>
             </div>
 
@@ -290,7 +284,7 @@ export default function AchievementsPage() {
                       {unlockedCount} / {totalAchievements}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      Achievements Unlocked
+                      {t("achievements.unlocked")}
                     </p>
                   </div>
                 </CardContent>
@@ -305,7 +299,7 @@ export default function AchievementsPage() {
                     <p className="text-2xl font-bold text-foreground">
                       {totalXPFromAchievements.toLocaleString()}
                     </p>
-                    <p className="text-sm text-muted-foreground">XP from Achievements</p>
+                    <p className="text-sm text-muted-foreground">{t("achievements.xpFromAchievements")}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -313,7 +307,7 @@ export default function AchievementsPage() {
               <Card className="border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
-                    <p className="text-sm text-muted-foreground">Completion</p>
+                    <p className="text-sm text-muted-foreground">{t("achievements.completion")}</p>
                     <p className="font-bold text-foreground">
                       {Math.round((unlockedCount / totalAchievements) * 100)}%
                     </p>
@@ -329,7 +323,7 @@ export default function AchievementsPage() {
             {/* Category Tabs */}
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
               <TabsList>
-                <TabsTrigger value="all">All</TabsTrigger>
+                <TabsTrigger value="all">{t("achievements.categories.all")}</TabsTrigger>
                 {ACHIEVEMENT_CATEGORIES.map((cat) => (
                   <TabsTrigger key={cat.id} value={cat.id} className="gap-2">
                     <cat.icon className="h-4 w-4" />
@@ -401,11 +395,7 @@ export default function AchievementsPage() {
                                   variant="secondary"
                                   className="text-xs capitalize"
                                 >
-                                  {
-                                    RARITY_LABELS[
-                                      achievement.rarity as keyof typeof RARITY_LABELS
-                                    ]
-                                  }
+                                  {t(`achievements.rarity.${achievement.rarity}`)}
                                 </Badge>
                                 <span className="flex items-center gap-1 text-sm text-gold">
                                   <Star className="h-4 w-4 fill-gold" />

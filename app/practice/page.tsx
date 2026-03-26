@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import {
   BookOpen,
@@ -28,71 +29,72 @@ import { cn } from "@/lib/utils";
 // Type for letter from ARABIC_ALPHABET
 type ArabicLetter = (typeof ARABIC_ALPHABET)[number];
 
-// Practice modes
-const PRACTICE_MODES = [
-  {
-    id: "alphabet",
-    icon: "أ",
-    title: "Alphabet Practice",
-    titleAr: "تدريب الأبجدية",
-    description: "Review and practice all 28 Arabic letters",
-    exercises: 28,
-    difficulty: "Beginner",
-  },
-  {
-    id: "vowels",
-    icon: "◌َ",
-    title: "Vowel Marks",
-    titleAr: "الحركات",
-    description: "Practice diacritical marks (harakat)",
-    exercises: 8,
-    difficulty: "Beginner",
-  },
-  {
-    id: "numbers",
-    icon: "٣",
-    title: "Numbers",
-    titleAr: "الأرقام",
-    description: "Learn Arabic numerals 0-100",
-    exercises: 11,
-    difficulty: "Beginner",
-  },
-  {
-    id: "vocabulary",
-    icon: "📚",
-    title: "Vocabulary",
-    titleAr: "المفردات",
-    description: "Build your Arabic word bank",
-    exercises: 100,
-    difficulty: "All Levels",
-  },
-  {
-    id: "listening",
-    icon: "🎧",
-    title: "Listening",
-    titleAr: "الاستماع",
-    description: "Train your Arabic ear",
-    exercises: 50,
-    difficulty: "All Levels",
-  },
-  {
-    id: "writing",
-    icon: "✏️",
-    title: "Writing",
-    titleAr: "الكتابة",
-    description: "Practice Arabic handwriting",
-    exercises: "∞",
-    difficulty: "All Levels",
-  },
-];
-
 /**
  * Practice page - Free practice mode for drilling skills
  */
 export default function PracticePage() {
+  const t = useTranslations();
   const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState("alphabet");
   const [selectedLetter, setSelectedLetter] = useState<ArabicLetter | null>(null);
+
+  // Practice modes with translations
+  const PRACTICE_MODES = [
+    {
+      id: "alphabet",
+      icon: "أ",
+      title: t("practice.modes.alphabet"),
+      titleAr: "تدريب الأبجدية",
+      description: t("practice.modes.alphabetDesc"),
+      exercises: 28,
+      difficulty: t("practice.difficulty.beginner"),
+    },
+    {
+      id: "vowels",
+      icon: "◌َ",
+      title: t("practice.modes.vowels"),
+      titleAr: "الحركات",
+      description: t("practice.modes.vowelsDesc"),
+      exercises: 8,
+      difficulty: t("practice.difficulty.beginner"),
+    },
+    {
+      id: "numbers",
+      icon: "٣",
+      title: t("practice.modes.numbers"),
+      titleAr: "الأرقام",
+      description: t("practice.modes.numbersDesc"),
+      exercises: 11,
+      difficulty: t("practice.difficulty.beginner"),
+    },
+    {
+      id: "vocabulary",
+      icon: "📚",
+      title: t("practice.modes.vocabulary"),
+      titleAr: "المفردات",
+      description: t("practice.modes.vocabularyDesc"),
+      exercises: 100,
+      difficulty: t("practice.difficulty.allLevels"),
+    },
+    {
+      id: "listening",
+      icon: "🎧",
+      title: t("practice.modes.listening"),
+      titleAr: "الاستماع",
+      description: t("practice.modes.listeningDesc"),
+      exercises: 50,
+      difficulty: t("practice.difficulty.allLevels"),
+    },
+    {
+      id: "writing",
+      icon: "✏️",
+      title: t("practice.modes.writing"),
+      titleAr: "الكتابة",
+      description: t("practice.modes.writingDesc"),
+      exercises: "∞",
+      difficulty: t("practice.difficulty.allLevels"),
+    },
+  ];
 
   useEffect(() => {
     setMounted(true);
@@ -119,10 +121,10 @@ export default function PracticePage() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h1 className="font-heading text-3xl font-bold text-foreground">
-                  Practice Mode
+                  {t("practice.title")}
                 </h1>
                 <p className="text-muted-foreground">
-                  Drill your skills and reinforce what you&apos;ve learned
+                  {t("practice.description")}
                 </p>
               </div>
               <Button
@@ -131,7 +133,7 @@ export default function PracticePage() {
               >
                 <Link href="/practice/daily-challenge">
                   <Sparkles className="h-4 w-4" />
-                  Daily Challenge
+                  {t("practice.dailyChallenge")}
                 </Link>
               </Button>
             </div>
@@ -163,7 +165,7 @@ export default function PracticePage() {
                         </p>
                         <div className="mt-2 flex items-center gap-2">
                           <Badge variant="secondary" className="text-xs">
-                            {mode.exercises} exercises
+                            {mode.exercises} {t("practice.exercises")}
                           </Badge>
                           <Badge variant="outline" className="text-xs">
                             {mode.difficulty}
@@ -186,7 +188,7 @@ export default function PracticePage() {
                   </span>
                   <Button variant="ghost" size="sm" className="gap-2">
                     <RefreshCw className="h-4 w-4" />
-                    Shuffle
+                    {t("practice.shuffle")}
                   </Button>
                 </CardTitle>
               </CardHeader>
@@ -227,7 +229,7 @@ export default function PracticePage() {
 
                             <div className="mt-4">
                               <p className="mb-2 text-sm font-medium text-muted-foreground">
-                                Letter Forms:
+                                {t("practice.letterForms")}
                               </p>
                               <div className="flex flex-wrap justify-center gap-4 sm:justify-start">
                                 {[
@@ -253,7 +255,7 @@ export default function PracticePage() {
 
                             <Button className="mt-4 gap-2 bg-gold text-background hover:bg-gold-dark">
                               <Volume2 className="h-4 w-4" />
-                              Play Pronunciation
+                              {t("practice.playPronunciation")}
                             </Button>
                           </div>
                         </div>
@@ -336,11 +338,11 @@ export default function PracticePage() {
                       {PRACTICE_MODES.find((m) => m.id === activeTab)?.title}
                     </h3>
                     <p className="mt-2 text-muted-foreground">
-                      This practice mode will be available soon.
+                      {t("practice.comingSoon")}
                     </p>
                     <Button className="mt-6 gap-2 bg-gold text-background hover:bg-gold-dark">
                       <Play className="h-4 w-4" />
-                      Start Practice
+                      {t("practice.startPractice")}
                     </Button>
                   </div>
                 )}
@@ -357,7 +359,7 @@ export default function PracticePage() {
                   <div>
                     <p className="text-2xl font-bold text-foreground">2h 45m</p>
                     <p className="text-sm text-muted-foreground">
-                      Total Practice Time
+                      {t("practice.stats.totalTime")}
                     </p>
                   </div>
                 </CardContent>
@@ -371,7 +373,7 @@ export default function PracticePage() {
                   <div>
                     <p className="text-2xl font-bold text-foreground">156</p>
                     <p className="text-sm text-muted-foreground">
-                      Exercises Completed
+                      {t("practice.stats.completed")}
                     </p>
                   </div>
                 </CardContent>
@@ -385,7 +387,7 @@ export default function PracticePage() {
                   <div>
                     <p className="text-2xl font-bold text-foreground">85%</p>
                     <p className="text-sm text-muted-foreground">
-                      Average Accuracy
+                      {t("practice.stats.accuracy")}
                     </p>
                   </div>
                 </CardContent>
