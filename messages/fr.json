@@ -686,6 +686,8 @@
   },
   "cookies": {
     "title": "Politique Relative aux Cookies",
+    "subtitle": "Découvrez comment nous utilisons les cookies et gérez vos préférences.",
+    "lastUpdated": "Dernière mise à jour",
     "description": "Dernière mise à jour",
     "introduction": "Introduction",
     "whatAreCookies": "Qu'est-ce que les Cookies?",
@@ -698,6 +700,37 @@
     "managingCookies": "Gestion des Cookies",
     "thirdPartyCookies": "Cookies Tiers",
     "contact": "Nous Contacter",
-    "effective": "Date d'Entrée en Vigueur"
+    "effective": "Date d'Entrée en Vigueur",
+    "managePreferences": "Gérez Vos Préférences",
+    "required": "Requis",
+    "saveTitle": "Enregistrez vos préférences",
+    "saveDescription": "Vos préférences seront enregistrées et appliquées immédiatement.",
+    "rejectAll": "Tout Refuser",
+    "savePreferences": "Enregistrer les Préférences",
+    "howToDelete": "Comment Supprimer les Cookies",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions de Service"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "subtitle": "Votre vie privée nous importe. Découvrez comment nous collectons, utilisons et protégeons vos données.",
+    "lastUpdated": "Dernière mise à jour",
+    "quickNav": "Navigation Rapide",
+    "questions": "Questions sur la confidentialité?",
+    "contactDescription": "Contactez notre équipe de confidentialité pour toute préoccupation ou demande de données.",
+    "contactUs": "Nous Contacter",
+    "terms": "Conditions de Service",
+    "cookies": "Politique de Cookies"
+  },
+  "terms": {
+    "title": "Conditions de Service",
+    "subtitle": "Veuillez lire attentivement ces conditions avant d'utiliser ArabicMaster Pro.",
+    "lastUpdated": "Dernière mise à jour",
+    "quickNav": "Navigation Rapide",
+    "questions": "Questions sur ces conditions?",
+    "contactDescription": "Notre équipe juridique est là pour clarifier toute préoccupation.",
+    "contactUs": "Nous Contacter",
+    "privacy": "Politique de Confidentialité",
+    "cookies": "Politique de Cookies"
   }
 }

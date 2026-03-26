@@ -686,6 +686,8 @@
   },
   "cookies": {
     "title": "Cookie Policy",
+    "subtitle": "Learn how we use cookies and manage your preferences.",
+    "lastUpdated": "Last updated",
     "description": "Last updated",
     "introduction": "Introduction",
     "whatAreCookies": "What Are Cookies?",
@@ -698,6 +700,37 @@
     "managingCookies": "Managing Cookies",
     "thirdPartyCookies": "Third-Party Cookies",
     "contact": "Contact Us",
-    "effective": "Effective Date"
+    "effective": "Effective Date",
+    "managePreferences": "Manage Your Preferences",
+    "required": "Required",
+    "saveTitle": "Save your preferences",
+    "saveDescription": "Your preferences will be saved and applied immediately.",
+    "rejectAll": "Reject All",
+    "savePreferences": "Save Preferences",
+    "howToDelete": "How to Delete Cookies",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy matters to us. Learn how we collect, use, and protect your data.",
+    "lastUpdated": "Last updated",
+    "quickNav": "Quick Navigation",
+    "questions": "Questions about privacy?",
+    "contactDescription": "Contact our privacy team for any concerns or data requests.",
+    "contactUs": "Contact Us",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "subtitle": "Please read these terms carefully before using ArabicMaster Pro.",
+    "lastUpdated": "Last updated",
+    "quickNav": "Quick Navigation",
+    "questions": "Questions about these terms?",
+    "contactDescription": "Our legal team is happy to help clarify any concerns.",
+    "contactUs": "Contact Us",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy"
   }
 }

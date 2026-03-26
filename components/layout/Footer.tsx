@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/i18n/config";
+import Link from "next/link";
 import { Heart, Github, Twitter, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -21,6 +21,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   // Footer links configuration with translation keys
+  // Use existing pages where available, create new pages for support/legal
   const footerLinks = {
     learn: [
       { href: "/learn/phase/1", labelKey: "foundations" },
@@ -31,9 +32,9 @@ export function Footer() {
     ],
     resources: [
       { href: "/practice", labelKey: "practice" },
-      { href: "/vocabulary", labelKey: "vocabulary" },
-      { href: "/grammar", labelKey: "grammarReference" },
-      { href: "/alphabet", labelKey: "alphabetGuide" },
+      { href: "/practice/vocabulary", labelKey: "vocabulary" },
+      { href: "/learn/phase/1", labelKey: "grammarReference" },
+      { href: "/practice", labelKey: "alphabetGuide" },
     ],
     support: [
       { href: "/help", labelKey: "helpCenter" },
