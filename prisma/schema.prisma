@@ -22,6 +22,9 @@ model User {
   image         String?
   password      String?   // For email/password auth (hashed with bcrypt)
   role          Role      @default(USER)
+  banned        Boolean   @default(false)
+  banReason     String?
+  lastLogin     DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
