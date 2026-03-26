@@ -10,6 +10,6 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: process.env.DATABASE_URL || "postgresql://arabicmaster:arabicmaster_secret@localhost:5437/arabicmaster?schema=public",
+    url: process.env.DATABASE_URL || "postgresql://arabicmaster:arabicmaster_secret@localhost:5432/arabicmaster?schema=public",
   },
 });

@@ -19,7 +19,7 @@ import "dotenv/config";
 
 // Create Prisma client for seeding
 const adapter = new PrismaPg({
-  connectionString: process.env.DATABASE_URL || "postgresql://arabicmaster:arabicmaster_secret@localhost:5437/arabicmaster?schema=public",
+  connectionString: process.env.DATABASE_URL || "postgresql://arabicmaster:arabicmaster_secret@localhost:5432/arabicmaster?schema=public",
 });
 const prisma = new PrismaClient({ adapter });
 
