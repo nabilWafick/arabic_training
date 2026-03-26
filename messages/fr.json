@@ -238,5 +238,86 @@
     "description": "Maîtrisez la langue arabe avec notre plateforme d'apprentissage complète et alimentée par l'IA. De l'alphabet à la littérature avancée.",
     "copyright": "ArabicMaster Pro. Créé avec",
     "forArabicLearners": "pour les apprenants de l'arabe."
+  },
+  "home": {
+    "greeting": "Bienvenue sur ArabicMaster",
+    "heroTitle": "Maîtrisez la",
+    "heroTitleHighlight": "Langue Arabe",
+    "heroSubtitle": "avec l'Apprentissage Alimenté par l'IA",
+    "heroDescription": "De l'alphabet à la littérature avancée. Apprenez l'arabe standard moderne avec des exercices personnalisés, de la gamification et des retours instantanés alimentés par une IA de pointe.",
+    "startLearningFree": "Commencer Gratuitement",
+    "browseCurriculum": "Parcourir le Programme",
+    "stats": {
+      "letters": "Lettres Arabes",
+      "exercises": "Exercices",
+      "phases": "Phases d'Apprentissage",
+      "aiExercises": "Exercices IA"
+    },
+    "features": {
+      "badge": "Fonctionnalités",
+      "title": "Tout ce Dont Vous Avez Besoin pour Maîtriser l'Arabe",
+      "description": "Notre plateforme complète combine les méthodes d'enseignement traditionnelles avec la technologie IA moderne pour une expérience d'apprentissage inégalée.",
+      "progressivePhases": {
+        "title": "5 Phases Progressives",
+        "description": "Du débutant absolu à la maîtrise experte, avec des leçons structurées et une progression claire."
+      },
+      "aiPowered": {
+        "title": "Apprentissage Alimenté par l'IA",
+        "description": "Exercices personnalisés et retours instantanés alimentés par une technologie IA avancée."
+      },
+      "gamification": {
+        "title": "Gamification",
+        "description": "Gagnez des XP, débloquez des succès, maintenez des séries et compétitionnez sur les classements."
+      },
+      "audio": {
+        "title": "Audio et Prononciation",
+        "description": "Prononciation native avec synthèse vocale et exercices de compréhension auditive."
+      },
+      "writing": {
+        "title": "Pratique de l'Écriture",
+        "description": "Canevas d'écriture interactif pour pratiquer la calligraphie arabe et les formes de lettres."
+      },
+      "multilingual": {
+        "title": "Multilingue",
+        "description": "Disponible en anglais, français et arabe avec support RTL complet."
+      }
+    },
+    "curriculum": {
+      "badge": "Programme",
+      "title": "5 Phases d'Apprentissage Progressives",
+      "description": "Un parcours soigneusement structuré du débutant complet à la compétence avancée, avec des jalons clairs et des objectifs réalisables.",
+      "phase": "Phase",
+      "lessons": "leçons"
+    },
+    "gamificationSection": {
+      "badge": "Gamification",
+      "title": "Apprenez en Vous Amusant",
+      "description": "Restez motivé avec notre système de gamification complet. Gagnez des XP, montez de niveau, débloquez des succès et compétitionnez avec des apprenants du monde entier.",
+      "xpLevels": {
+        "title": "XP et Niveaux",
+        "description": "Gagnez des points d'expérience pour chaque exercice et leçon. Regardez votre niveau grandir au fur et à mesure de votre progression."
+      },
+      "streaks": {
+        "title": "Séries Quotidiennes",
+        "description": "Maintenez votre série d'apprentissage et gagnez des multiplicateurs de XP bonus pour une pratique régulière."
+      },
+      "achievements": {
+        "title": "Succès",
+        "description": "Débloquez des badges et des succès en atteignant des jalons dans votre parcours d'arabe."
+      },
+      "challenges": {
+        "title": "Défis Quotidiens",
+        "description": "Complétez des défis quotidiens générés par l'IA pour des récompenses supplémentaires et une pratique variée."
+      },
+      "level": "Niveau",
+      "dayStreak": "Série de Jours",
+      "xpBonus": "Bonus XP Actif",
+      "recentAchievements": "Succès Récents"
+    },
+    "cta": {
+      "title": "Commencez Votre Parcours d'Arabe Aujourd'hui",
+      "description": "Rejoignez des milliers d'apprenants maîtrisant l'arabe avec ArabicMaster Pro. Aucune carte de crédit requise. Commencez gratuitement et libérez votre potentiel.",
+      "startNow": "Commencer Maintenant"
+    }
   }
 }

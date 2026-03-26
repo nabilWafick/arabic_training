@@ -238,5 +238,86 @@
     "description": "Master the Arabic language with our comprehensive, AI-powered learning platform. From alphabet to advanced literature.",
     "copyright": "ArabicMaster Pro. Made with",
     "forArabicLearners": "for Arabic learners."
+  },
+  "home": {
+    "greeting": "Welcome to ArabicMaster",
+    "heroTitle": "Master the",
+    "heroTitleHighlight": "Arabic Language",
+    "heroSubtitle": "with AI-Powered Learning",
+    "heroDescription": "From alphabet to advanced literature. Learn Modern Standard Arabic with personalized exercises, gamification, and instant feedback powered by cutting-edge AI.",
+    "startLearningFree": "Start Learning Free",
+    "browseCurriculum": "Browse Curriculum",
+    "stats": {
+      "letters": "Arabic Letters",
+      "exercises": "Exercises",
+      "phases": "Learning Phases",
+      "aiExercises": "AI Exercises"
+    },
+    "features": {
+      "badge": "Features",
+      "title": "Everything You Need to Master Arabic",
+      "description": "Our comprehensive platform combines traditional teaching methods with modern AI technology for an unparalleled learning experience.",
+      "progressivePhases": {
+        "title": "5 Progressive Phases",
+        "description": "From absolute beginner to expert mastery, with structured lessons and clear progression."
+      },
+      "aiPowered": {
+        "title": "AI-Powered Learning",
+        "description": "Personalized exercises and instant feedback powered by advanced AI technology."
+      },
+      "gamification": {
+        "title": "Gamification",
+        "description": "Earn XP, unlock achievements, maintain streaks, and compete on leaderboards."
+      },
+      "audio": {
+        "title": "Audio & Pronunciation",
+        "description": "Native pronunciation with text-to-speech and listening comprehension exercises."
+      },
+      "writing": {
+        "title": "Writing Practice",
+        "description": "Interactive writing canvas to practice Arabic calligraphy and letter forms."
+      },
+      "multilingual": {
+        "title": "Multilingual",
+        "description": "Available in English, French, and Arabic with full RTL support."
+      }
+    },
+    "curriculum": {
+      "badge": "Curriculum",
+      "title": "5 Progressive Learning Phases",
+      "description": "A carefully structured journey from complete beginner to advanced proficiency, with clear milestones and achievable goals.",
+      "phase": "Phase",
+      "lessons": "lessons"
+    },
+    "gamificationSection": {
+      "badge": "Gamification",
+      "title": "Learn While Having Fun",
+      "description": "Stay motivated with our comprehensive gamification system. Earn XP, level up, unlock achievements, and compete with learners worldwide.",
+      "xpLevels": {
+        "title": "XP & Levels",
+        "description": "Earn experience points for every exercise and lesson. Watch your level grow as you progress."
+      },
+      "streaks": {
+        "title": "Daily Streaks",
+        "description": "Maintain your learning streak and earn bonus XP multipliers for consistent practice."
+      },
+      "achievements": {
+        "title": "Achievements",
+        "description": "Unlock badges and achievements as you reach milestones in your Arabic journey."
+      },
+      "challenges": {
+        "title": "Daily Challenges",
+        "description": "Complete AI-generated daily challenges for extra rewards and varied practice."
+      },
+      "level": "Level",
+      "dayStreak": "Day Streak",
+      "xpBonus": "XP Bonus Active",
+      "recentAchievements": "Recent Achievements"
+    },
+    "cta": {
+      "title": "Begin Your Arabic Journey Today",
+      "description": "Join thousands of learners mastering Arabic with ArabicMaster Pro. No credit card required. Start for free and unlock your potential.",
+      "startNow": "Start Learning Now"
+    }
   }
 }

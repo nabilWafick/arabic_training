@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   BookOpen,
@@ -12,6 +14,7 @@ import {
   Headphones,
   PenTool,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,61 +22,57 @@ import { Navbar, Footer } from "@/components/layout";
 import { CURRICULUM } from "@/data/curriculum";
 
 /**
- * Features list for the landing page
- */
-const features = [
-  {
-    icon: BookOpen,
-    title: "5 Progressive Phases",
-    description:
-      "From absolute beginner to expert mastery, with structured lessons and clear progression.",
-  },
-  {
-    icon: Sparkles,
-    title: "AI-Powered Learning",
-    description:
-      "Personalized exercises and instant feedback powered by advanced AI technology.",
-  },
-  {
-    icon: Trophy,
-    title: "Gamification",
-    description:
-      "Earn XP, unlock achievements, maintain streaks, and compete on leaderboards.",
-  },
-  {
-    icon: Headphones,
-    title: "Audio & Pronunciation",
-    description:
-      "Native pronunciation with text-to-speech and listening comprehension exercises.",
-  },
-  {
-    icon: PenTool,
-    title: "Writing Practice",
-    description:
-      "Interactive writing canvas to practice Arabic calligraphy and letter forms.",
-  },
-  {
-    icon: Globe,
-    title: "Multilingual",
-    description:
-      "Available in English, French, and Arabic with full RTL support.",
-  },
-];
-
-/**
- * Statistics for social proof
- */
-const stats = [
-  { value: "28", label: "Arabic Letters" },
-  { value: "500+", label: "Exercises" },
-  { value: "5", label: "Learning Phases" },
-  { value: "∞", label: "AI Exercises" },
-];
-
-/**
  * Home page - Landing page for ArabicMaster Pro
  */
 export default function Home() {
+  const t = useTranslations();
+  
+  /**
+   * Features list for the landing page
+   */
+  const features = [
+    {
+      icon: BookOpen,
+      title: t("home.features.progressivePhases.title"),
+      description: t("home.features.progressivePhases.description"),
+    },
+    {
+      icon: Sparkles,
+      title: t("home.features.aiPowered.title"),
+      description: t("home.features.aiPowered.description"),
+    },
+    {
+      icon: Trophy,
+      title: t("home.features.gamification.title"),
+      description: t("home.features.gamification.description"),
+    },
+    {
+      icon: Headphones,
+      title: t("home.features.audio.title"),
+      description: t("home.features.audio.description"),
+    },
+    {
+      icon: PenTool,
+      title: t("home.features.writing.title"),
+      description: t("home.features.writing.description"),
+    },
+    {
+      icon: Globe,
+      title: t("home.features.multilingual.title"),
+      description: t("home.features.multilingual.description"),
+    },
+  ];
+
+  /**
+   * Statistics for social proof
+   */
+  const stats = [
+    { value: "28", label: t("home.stats.letters") },
+    { value: "500+", label: t("home.stats.exercises") },
+    { value: "5", label: t("home.stats.phases") },
+    { value: "∞", label: t("home.stats.aiExercises") },
+  ];
+  
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
@@ -89,22 +88,20 @@ export default function Home() {
               {/* Arabic greeting */}
               <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2 text-gold">
                 <span className="font-arabic text-lg">مرحباً بك</span>
-                <span className="text-sm">Welcome to ArabicMaster</span>
+                <span className="text-sm">{t("home.greeting")}</span>
               </div>
               
               {/* Main heading */}
               <h1 className="font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Master the{" "}
-                <span className="text-gold-gradient">Arabic Language</span>
+                {t("home.heroTitle")}{" "}
+                <span className="text-gold-gradient">{t("home.heroTitleHighlight")}</span>
                 <br />
-                with AI-Powered Learning
+                {t("home.heroSubtitle")}
               </h1>
               
               {/* Subheading */}
               <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-                From alphabet to advanced literature. Learn Modern Standard Arabic
-                with personalized exercises, gamification, and instant feedback
-                powered by cutting-edge AI.
+                {t("home.heroDescription")}
               </p>
               
               {/* CTA buttons */}
@@ -116,7 +113,7 @@ export default function Home() {
                 >
                   <Link href="/dashboard">
                     <GraduationCap className="h-5 w-5" />
-                    Start Learning Free
+                    {t("home.startLearningFree")}
                     <ChevronRight className="h-5 w-5" />
                   </Link>
                 </Button>
@@ -128,7 +125,7 @@ export default function Home() {
                 >
                   <Link href="/learn">
                     <BookOpen className="h-5 w-5" />
-                    Browse Curriculum
+                    {t("home.browseCurriculum")}
                   </Link>
                 </Button>
               </div>
@@ -155,14 +152,13 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <Badge variant="secondary" className="mb-4">
-                Features
+                {t("home.features.badge")}
               </Badge>
               <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-                Everything You Need to Master Arabic
+                {t("home.features.title")}
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Our comprehensive platform combines traditional teaching methods
-                with modern AI technology for an unparalleled learning experience.
+                {t("home.features.description")}
               </p>
             </div>
             
@@ -194,14 +190,13 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <Badge className="mb-4 bg-gold text-navy">
-                Curriculum
+                {t("home.curriculum.badge")}
               </Badge>
               <h2 className="font-heading text-3xl font-bold sm:text-4xl">
-                5 Progressive Learning Phases
+                {t("home.curriculum.title")}
               </h2>
               <p className="mt-4 text-lg text-cream/70">
-                A carefully structured journey from complete beginner to advanced
-                proficiency, with clear milestones and achievable goals.
+                {t("home.curriculum.description")}
               </p>
             </div>
             
@@ -221,13 +216,13 @@ export default function Home() {
                         {phase.icon}
                       </div>
                       <h3 className="font-heading text-lg font-semibold text-cream">
-                        Phase {phase.id}
+                        {t("home.curriculum.phase")} {phase.id}
                       </h3>
                       <p className="mt-1 font-arabic text-gold">{phase.titleAr}</p>
                       <p className="mt-2 text-sm text-cream/60">{phase.title}</p>
                       <div className="mt-4 flex items-center justify-between text-xs">
                         <span className="text-cream/50">
-                          {phase.totalLessons} lessons
+                          {phase.totalLessons} {t("home.curriculum.lessons")}
                         </span>
                         <span className="text-cream/50">{phase.duration}</span>
                       </div>
@@ -245,15 +240,13 @@ export default function Home() {
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
                 <Badge variant="secondary" className="mb-4">
-                  Gamification
+                  {t("home.gamificationSection.badge")}
                 </Badge>
                 <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-                  Learn While Having Fun
+                  {t("home.gamificationSection.title")}
                 </h2>
                 <p className="mt-4 text-lg text-muted-foreground">
-                  Stay motivated with our comprehensive gamification system.
-                  Earn XP, level up, unlock achievements, and compete with
-                  learners worldwide.
+                  {t("home.gamificationSection.description")}
                 </p>
                 
                 <div className="mt-8 space-y-6">
@@ -262,10 +255,9 @@ export default function Home() {
                       <Star className="h-5 w-5 text-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">XP & Levels</h3>
+                      <h3 className="font-semibold text-foreground">{t("home.gamificationSection.xpLevels.title")}</h3>
                       <p className="text-sm text-muted-foreground">
-                        Earn experience points for every exercise and lesson.
-                        Watch your level grow as you progress.
+                        {t("home.gamificationSection.xpLevels.description")}
                       </p>
                     </div>
                   </div>
@@ -276,11 +268,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">
-                        Daily Streaks
+                        {t("home.gamificationSection.streaks.title")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Maintain your learning streak and earn bonus XP
-                        multipliers for consistent practice.
+                        {t("home.gamificationSection.streaks.description")}
                       </p>
                     </div>
                   </div>
@@ -291,11 +282,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">
-                        Achievements
+                        {t("home.gamificationSection.achievements.title")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Unlock badges and achievements as you reach milestones
-                        in your Arabic journey.
+                        {t("home.gamificationSection.achievements.description")}
                       </p>
                     </div>
                   </div>
@@ -306,11 +296,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">
-                        Daily Challenges
+                        {t("home.gamificationSection.challenges.title")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Complete AI-generated daily challenges for extra rewards
-                        and varied practice.
+                        {t("home.gamificationSection.challenges.description")}
                       </p>
                     </div>
                   </div>
@@ -327,7 +316,7 @@ export default function Home() {
                         7
                       </div>
                       <div className="flex-1">
-                        <p className="font-semibold">Level 7</p>
+                        <p className="font-semibold">{t("home.gamificationSection.level")} 7</p>
                         <div className="mt-1 h-2 overflow-hidden rounded-full bg-muted">
                           <div className="h-full w-3/4 bg-gold" />
                         </div>
@@ -342,9 +331,9 @@ export default function Home() {
                       <div className="flex items-center gap-3">
                         <Flame className="h-8 w-8 text-orange-500" />
                         <div>
-                          <p className="font-semibold">14 Day Streak</p>
+                          <p className="font-semibold">14 {t("home.gamificationSection.dayStreak")}</p>
                           <p className="text-xs text-muted-foreground">
-                            1.5x XP Bonus Active
+                            {t("home.gamificationSection.xpBonus")}
                           </p>
                         </div>
                       </div>
@@ -354,7 +343,7 @@ export default function Home() {
                     {/* Recent achievements */}
                     <div>
                       <p className="mb-3 text-sm font-medium text-muted-foreground">
-                        Recent Achievements
+                        {t("home.gamificationSection.recentAchievements")}
                       </p>
                       <div className="flex gap-3">
                         {["🎯", "📚", "🌟", "🔥"].map((emoji, i) => (
@@ -385,11 +374,10 @@ export default function Home() {
         <section className="bg-gradient-to-br from-gold/10 via-cream to-gold/5 py-20 lg:py-28">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              Begin Your Arabic Journey Today
+              {t("home.cta.title")}
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              Join thousands of learners mastering Arabic with ArabicMaster Pro.
-              No credit card required. Start for free and unlock your potential.
+              {t("home.cta.description")}
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -398,7 +386,7 @@ export default function Home() {
                 asChild
               >
                 <Link href="/dashboard">
-                  Start Learning Now
+                  {t("home.cta.startNow")}
                   <ChevronRight className="h-5 w-5" />
                 </Link>
               </Button>
