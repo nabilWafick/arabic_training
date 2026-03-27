@@ -732,5 +732,17 @@
     "contactUs": "Nous Contacter",
     "privacy": "Politique de Confidentialité",
     "cookies": "Politique de Cookies"
+  },
+  "vocabulary": {
+    "greetings": "Salutations",
+    "numbers": "Nombres",
+    "family": "Famille",
+    "food": "Nourriture",
+    "animals": "Animaux",
+    "colors": "Couleurs",
+    "body": "Parties du Corps",
+    "clothing": "Vêtements",
+    "house": "Maison",
+    "nature": "Nature"
   }
 }

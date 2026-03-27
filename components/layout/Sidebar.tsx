@@ -141,11 +141,11 @@ export function Sidebar() {
   return (
     <aside
       className={cn(
-        "hidden h-[calc(100vh-4rem)] shrink-0 border-r border-sidebar-border bg-sidebar transition-all duration-300 lg:block",
+        "hidden shrink-0 border-r border-sidebar-border bg-sidebar transition-all duration-300 lg:block lg:flex lg:flex-col",
         isCollapsed ? "w-16" : "w-64"
       )}
     >
-      <div className="flex h-full flex-col">
+      <div className="flex flex-1 flex-col min-h-0">
         {/* Collapse toggle */}
         <div className="flex items-center justify-end border-b border-sidebar-border p-2">
           <Button
