@@ -408,7 +408,28 @@
     "dailyChallengeDesc": "Complete today's mixed exercises for bonus XP",
     "startChallenge": "Start Challenge",
     "matchPairs": "Match the Arabic words with their English translations",
-    "completed": "You completed this practice session!"
+    "completed": "You completed this practice session!",
+    "listening": "Listening...",
+    "youSaid": "You said:",
+    "overallScore": "Overall Score",
+    "accuracy": "Accuracy",
+    "clarity": "Clarity",
+    "timing": "Timing",
+    "expected": "Expected:",
+    "speechNotSupported": "Speech recognition is not supported in your browser",
+    "tryChrome": "Please try using Chrome or Edge for speech recognition",
+    "noSpeechDetected": "No speech detected. Please try again.",
+    "microphoneError": "Microphone error. Please check your settings.",
+    "pronunciation": {
+      "excellent": "Excellent pronunciation!",
+      "good": "Good pronunciation! Keep practicing.",
+      "improving": "Getting better! Focus on clarity.",
+      "tryAgain": "Try speaking more slowly and clearly."
+    },
+    "tryAgain": "Try Again",
+    "speakNow": "Speak now...",
+    "speakClearly": "Speak clearly and at a natural pace",
+    "recordingTip": "Tip: Speak in a quiet environment for best results"
   },
   "achievements": {
     "title": "Achievements",

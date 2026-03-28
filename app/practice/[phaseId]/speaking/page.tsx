@@ -2,11 +2,11 @@
 
 /**
  * Phase Speaking Practice Page
- * Pronunciation exercises with audio recording,
- * AI feedback, and speech-to-text based on phase level
+ * Enhanced with real speech recognition, pronunciation scoring,
+ * and detailed feedback using Web Speech API
  */
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, notFound } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -14,18 +14,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronLeft,
   Mic2,
-  MicOff,
-  Play,
-  Square,
   Volume2,
   CheckCircle2,
-  XCircle,
   ArrowRight,
   Star,
   RefreshCw,
   Lightbulb,
   Sparkles,
   AlertCircle,
+  AlertTriangle,
   Loader2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,6 +33,9 @@ import { cn } from '@/lib/utils';
 import { useGamificationStore } from '@/stores/useGamificationStore';
 import { useProgressStore } from '@/stores/useProgressStore';
 import { useAudioStore } from '@/stores/useAudioStore';
+import { useSpeechRecognition, isSpeechRecognitionSupported } from '@/hooks/useSpeechRecognition';
+import { calculatePronunciationScore, type PronunciationScore } from '@/lib/pronunciation/scoring';
+import { PronunciationFeedbackDisplay } from '@/components/practice/PronunciationFeedback';
 
 // Phase configuration
 const PHASES = [
@@ -60,11 +60,10 @@ interface SpeakingExercise {
   difficulty: 'easy' | 'medium' | 'hard';
 }
 
-// Generate exercises by phase
+// Generate exercises by phase (keeping existing exercise data)
 function getExercisesForPhase(phaseId: number): SpeakingExercise[] {
   switch (phaseId) {
     case 1:
-      // Phase 1: Letter and sound pronunciation
       return [
         { id: 'lp-1', type: 'letter-pronunciation', prompt: 'Say the letter', promptAr: 'انطق الحرف', targetText: 'أ', transliteration: 'Alif', hint: 'Open throat sound', difficulty: 'easy' },
         { id: 'lp-2', type: 'letter-pronunciation', prompt: 'Say the letter', promptAr: 'انطق الحرف', targetText: 'ب', transliteration: 'Baa', hint: 'Like English "B"', difficulty: 'easy' },
@@ -75,9 +74,7 @@ function getExercisesForPhase(phaseId: number): SpeakingExercise[] {
         { id: 'wp-2', type: 'word-pronunciation', prompt: 'Say the word', promptAr: 'انطق الكلمة', targetText: 'كِتَاب', transliteration: 'kitaab', hint: 'Book', difficulty: 'easy' },
         { id: 'wp-3', type: 'word-pronunciation', prompt: 'Say the numbers', promptAr: 'انطق الأرقام', targetText: 'وَاحِد، اِثْنَان، ثَلَاثَة', transliteration: 'waahid, ithnaan, thalaatha', hint: '1, 2, 3', difficulty: 'medium' },
       ];
-      
     case 2:
-      // Phase 2: Word and greeting pronunciation
       return [
         { id: 'wp-1', type: 'word-pronunciation', prompt: 'Say the greeting', promptAr: 'قل التحية', targetText: 'السَّلَامُ عَلَيْكُم', transliteration: 'as-salaamu alaykum', hint: 'Peace be upon you', difficulty: 'easy' },
         { id: 'wp-2', type: 'word-pronunciation', prompt: 'Say the response', promptAr: 'قل الرد', targetText: 'وَعَلَيْكُمُ السَّلَام', transliteration: 'wa alaykum as-salaam', hint: 'And upon you peace', difficulty: 'easy' },
@@ -87,9 +84,7 @@ function getExercisesForPhase(phaseId: number): SpeakingExercise[] {
         { id: 'sr-1', type: 'sentence-reading', prompt: 'Read the sentence', promptAr: 'اقرأ الجملة', targetText: 'أَنَا مِنْ مِصْر', transliteration: 'ana min misr', hint: 'I am from Egypt', difficulty: 'medium' },
         { id: 'sr-2', type: 'sentence-reading', prompt: 'Read the sentence', promptAr: 'اقرأ الجملة', targetText: 'كَيْفَ حَالُكَ؟', transliteration: 'kayfa haaluk?', hint: 'How are you?', difficulty: 'easy' },
       ];
-      
     case 3:
-      // Phase 3: Sentence and question practice
       return [
         { id: 'sr-1', type: 'sentence-reading', prompt: 'Read the sentence', promptAr: 'اقرأ الجملة', targetText: 'ذَهَبْتُ إِلَى المَدْرَسَة', transliteration: 'dhahabtu ilaa al-madrasa', hint: 'I went to school', difficulty: 'medium' },
         { id: 'sr-2', type: 'sentence-reading', prompt: 'Ask the question', promptAr: 'اسأل السؤال', targetText: 'مَاذَا تُرِيد؟', transliteration: 'maadha turiid?', hint: 'What do you want?', difficulty: 'medium' },
@@ -98,9 +93,7 @@ function getExercisesForPhase(phaseId: number): SpeakingExercise[] {
         { id: 'sr-5', type: 'sentence-reading', prompt: 'Express an opinion', promptAr: 'عبّر عن رأيك', targetText: 'أَعْتَقِدُ أَنَّ...', transliteration: 'a3taqidu anna...', hint: 'I think that...', difficulty: 'hard' },
         { id: 'sr-6', type: 'sentence-reading', prompt: 'Conjugate the verb', promptAr: 'صرّف الفعل', targetText: 'أَكْتُبُ، تَكْتُبُ، يَكْتُبُ', transliteration: 'aktubu, taktubu, yaktubu', hint: 'I write, you write, he writes', difficulty: 'hard' },
       ];
-      
     case 4:
-      // Phase 4: Conversation and expression
       return [
         { id: 'sr-1', type: 'sentence-reading', prompt: 'Express your feeling', promptAr: 'عبّر عن شعورك', targetText: 'أَنَا سَعِيدٌ جِدّاً', transliteration: 'ana sa3iidun jiddan', hint: 'I am very happy', difficulty: 'easy' },
         { id: 'sr-2', type: 'sentence-reading', prompt: 'Make a request', promptAr: 'قدّم طلباً', targetText: 'هَلْ يُمْكِنُكَ مُسَاعَدَتِي؟', transliteration: 'hal yumkinuka musaa3adatii?', hint: 'Can you help me?', difficulty: 'medium' },
@@ -108,9 +101,7 @@ function getExercisesForPhase(phaseId: number): SpeakingExercise[] {
         { id: 'fs-1', type: 'free-speech', prompt: 'Describe your day', promptAr: 'صف يومك', targetText: 'اِسْتَيْقَظْتُ فِي الصَّبَاح...', transliteration: 'istayqadhtu fii as-sabaah...', hint: 'I woke up in the morning...', difficulty: 'hard' },
         { id: 'fs-2', type: 'free-speech', prompt: 'Order at a restaurant', promptAr: 'اطلب في المطعم', targetText: 'أُرِيدُ... مِنْ فَضْلِك', transliteration: 'uriidu... min fadlik', hint: 'I want... please', difficulty: 'medium' },
       ];
-      
     case 5:
-      // Phase 5: Formal speech and presentations
       return [
         { id: 'sr-1', type: 'sentence-reading', prompt: 'Give a formal introduction', promptAr: 'قدّم مقدمة رسمية', targetText: 'السَّادَة الحُضُور، أَوَدُّ أَنْ أُقَدِّمَ...', transliteration: 'as-saadatu al-huduur, awaddu an uqaddima...', hint: 'Ladies and gentlemen, I would like to present...', difficulty: 'hard' },
         { id: 'sr-2', type: 'sentence-reading', prompt: 'Say the proverb', promptAr: 'قل المثل', targetText: 'العِلْمُ نُورٌ وَالجَهْلُ ظَلَام', transliteration: 'al-3ilmu nuurun wa-al-jahlu dhalam', hint: 'Knowledge is light and ignorance is darkness', difficulty: 'medium' },
@@ -118,7 +109,6 @@ function getExercisesForPhase(phaseId: number): SpeakingExercise[] {
         { id: 'fs-1', type: 'free-speech', prompt: 'Debate a topic', promptAr: 'ناقش موضوعاً', targetText: 'فِي رَأْيِي، أَعْتَقِدُ أَنَّ...', transliteration: 'fii ra2yii, a3taqidu anna...', hint: 'In my opinion, I believe that...', difficulty: 'hard' },
         { id: 'fs-2', type: 'free-speech', prompt: 'Tell a short story', promptAr: 'احكِ قصة قصيرة', targetText: 'كَانَ يَا مَا كَان...', transliteration: 'kaana yaa maa kaan...', hint: 'Once upon a time...', difficulty: 'hard' },
       ];
-      
     default:
       return [];
   }
@@ -129,7 +119,7 @@ export default function PhaseSpeakingPage() {
   const phaseId = parseInt(params.phaseId as string);
   const t = useTranslations();
   
-  const { updatePracticeProgress, getPracticeProgress } = useProgressStore();
+  const { updatePracticeProgress } = useProgressStore();
   const { addXP, incrementStat } = useGamificationStore();
   const { speak, isPlaying, stop } = useAudioStore();
   
@@ -141,52 +131,79 @@ export default function PhaseSpeakingPage() {
   const phase = PHASES[phaseId - 1];
   const exercises = getExercisesForPhase(phaseId);
   
-  // Get current practice progress for display
-  const practiceStats = getPracticeProgress(phaseId, 'speaking');
-  
+  // State
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isRecording, setIsRecording] = useState(false);
-  const [hasRecorded, setHasRecorded] = useState(false);
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [feedback, setFeedback] = useState<'good' | 'needs-work' | null>(null);
+  const [pronunciationScore, setPronunciationScore] = useState<PronunciationScore | null>(null);
   const [showHint, setShowHint] = useState(false);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
-  const [micPermission, setMicPermission] = useState<'granted' | 'denied' | 'prompt'>('prompt');
-  
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const audioChunksRef = useRef<Blob[]>([]);
+  const [hasAttempted, setHasAttempted] = useState(false);
   
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex) / exercises.length) * 100;
   
-  // Check microphone permission
+  // Check browser support
+  const [speechSupported, setSpeechSupported] = useState(false);
   useEffect(() => {
-    if (typeof navigator !== 'undefined' && navigator.permissions) {
-      navigator.permissions.query({ name: 'microphone' as PermissionName })
-        .then(result => {
-          setMicPermission(result.state as 'granted' | 'denied' | 'prompt');
-          result.onchange = () => {
-            setMicPermission(result.state as 'granted' | 'denied' | 'prompt');
-          };
-        })
-        .catch(() => {
-          // Permission API not supported, try to get access
-          setMicPermission('prompt');
-        });
-    }
+    setSpeechSupported(isSpeechRecognitionSupported());
   }, []);
+  
+  // Speech recognition hook
+  const handleSpeechResult = useCallback((result: { transcript: string; confidence: number }) => {
+    // Calculate pronunciation score
+    const scoreResult = calculatePronunciationScore(
+      currentExercise.targetText,
+      result.transcript,
+      result.confidence,
+      phaseId as 1 | 2 | 3 | 4 | 5
+    );
+    
+    setPronunciationScore(scoreResult);
+    setHasAttempted(true);
+    
+    // Award XP based on score
+    const isGood = scoreResult.overall >= 70;
+    if (isGood) {
+      const baseXP = currentExercise.difficulty === 'easy' ? 10 : currentExercise.difficulty === 'medium' ? 15 : 20;
+      const bonusXP = Math.floor((scoreResult.overall - 70) / 10) * 5;
+      const totalXP = baseXP + bonusXP;
+      
+      setScore(s => s + totalXP);
+      setStreak(s => s + 1);
+      setCorrectCount(c => c + 1);
+      addXP(totalXP);
+      incrementStat('exercisesCompleted');
+    } else {
+      setStreak(0);
+    }
+  }, [currentExercise, phaseId, addXP, incrementStat]);
+  
+  const {
+    isListening,
+    transcript,
+    interimTranscript,
+    confidence,
+    error,
+    isSupported,
+    startListening,
+    stopListening,
+    resetTranscript,
+  } = useSpeechRecognition({
+    language: 'ar-SA',
+    continuous: false,
+    interimResults: true,
+    onResult: handleSpeechResult,
+  });
   
   // Reset state on exercise change
   useEffect(() => {
-    setHasRecorded(false);
-    setFeedback(null);
+    setPronunciationScore(null);
     setShowHint(false);
-    setIsRecording(false);
-    setIsProcessing(false);
-  }, [currentIndex]);
+    setHasAttempted(false);
+    resetTranscript();
+  }, [currentIndex, resetTranscript]);
   
   const handlePlayTarget = () => {
     if (isPlaying) {
@@ -196,70 +213,16 @@ export default function PhaseSpeakingPage() {
     }
   };
   
-  const startRecording = async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      setMicPermission('granted');
-      
-      const mediaRecorder = new MediaRecorder(stream);
-      mediaRecorderRef.current = mediaRecorder;
-      audioChunksRef.current = [];
-      
-      mediaRecorder.ondataavailable = (event) => {
-        audioChunksRef.current.push(event.data);
-      };
-      
-      mediaRecorder.onstop = () => {
-        // Clean up stream
-        stream.getTracks().forEach(track => track.stop());
-        processRecording();
-      };
-      
-      mediaRecorder.start();
-      setIsRecording(true);
-    } catch (error) {
-      console.error('Error accessing microphone:', error);
-      setMicPermission('denied');
-    }
-  };
-  
-  const stopRecording = () => {
-    if (mediaRecorderRef.current && isRecording) {
-      mediaRecorderRef.current.stop();
-      setIsRecording(false);
-    }
-  };
-  
-  const processRecording = () => {
-    setIsProcessing(true);
-    setHasRecorded(true);
-    
-    // Simulate AI processing (in production, this would send audio to speech recognition API)
-    setTimeout(() => {
-      // Randomly determine feedback for demo (in production, use actual speech recognition)
-      const isGood = Math.random() > 0.3;
-      setFeedback(isGood ? 'good' : 'needs-work');
-      
-      if (isGood) {
-        const xp = currentExercise.difficulty === 'easy' ? 10 : currentExercise.difficulty === 'medium' ? 15 : 20;
-        setScore(s => s + xp);
-        setStreak(s => s + 1);
-        setCorrectCount(c => c + 1);
-        addXP(xp);
-        incrementStat('exercisesCompleted');
-      } else {
-        setStreak(0);
-      }
-      
-      setIsProcessing(false);
-    }, 1500);
+  const handleStartListening = () => {
+    setPronunciationScore(null);
+    resetTranscript();
+    startListening();
   };
   
   const handleNext = () => {
     if (currentIndex < exercises.length - 1) {
       setCurrentIndex(i => i + 1);
     } else {
-      // Save practice progress when completing the session
       const finalScore = Math.round((correctCount / exercises.length) * 100);
       updatePracticeProgress(phaseId, 'speaking', exercises.length, finalScore);
       setCompleted(true);
@@ -267,8 +230,9 @@ export default function PhaseSpeakingPage() {
   };
   
   const handleRetry = () => {
-    setHasRecorded(false);
-    setFeedback(null);
+    setPronunciationScore(null);
+    setHasAttempted(false);
+    resetTranscript();
   };
   
   const handleReset = () => {
@@ -277,8 +241,9 @@ export default function PhaseSpeakingPage() {
     setStreak(0);
     setCorrectCount(0);
     setCompleted(false);
-    setHasRecorded(false);
-    setFeedback(null);
+    setPronunciationScore(null);
+    setHasAttempted(false);
+    resetTranscript();
   };
   
   // Completion screen
@@ -307,7 +272,7 @@ export default function PhaseSpeakingPage() {
                 {t('common.congratulations')}! 🎤
               </h2>
               <p className="text-muted-foreground mb-6">
-                {t('practice.modes.listeningDesc')}
+                {t('practice.completed')}
               </p>
               
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -318,19 +283,19 @@ export default function PhaseSpeakingPage() {
                 </div>
                 <div className="bg-muted/50 rounded-xl p-4">
                   <CheckCircle2 className="w-8 h-8 mx-auto mb-2 text-green-500" />
-                  <div className="text-2xl font-bold">{exercises.length}</div>
-                  <div className="text-xs text-muted-foreground">{t('practice.exercises')}</div>
+                  <div className="text-2xl font-bold">{correctCount}/{exercises.length}</div>
+                  <div className="text-xs text-muted-foreground">{t('practice.stats.accuracy')}</div>
                 </div>
               </div>
               
               <div className="flex gap-3">
                 <Button variant="outline" onClick={handleReset} className="flex-1">
                   <RefreshCw className="w-4 h-4 mr-2" />
-                  {t('common.retry')}
+                  {t('practice.tryAgain')}
                 </Button>
                 <Link href={`/practice/${phaseId}`} className="flex-1">
                   <Button className="w-full" style={{ backgroundColor: phase.color }}>
-                    {t('common.continue')}
+                    {t('common.done')}
                   </Button>
                 </Link>
               </div>
@@ -340,50 +305,83 @@ export default function PhaseSpeakingPage() {
       </div>
     );
   }
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white dark:from-slate-900 dark:to-slate-800">
-      {/* Header */}
-      <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
+  
+  // Speech not supported warning
+  if (!speechSupported) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
+        <Card className="max-w-md text-center">
+          <CardContent className="p-8">
+            <AlertTriangle className="w-16 h-16 mx-auto mb-4 text-amber-500" />
+            <h2 className="text-xl font-bold mb-2">{t('practice.speechNotSupported')}</h2>
+            <p className="text-muted-foreground mb-6">{t('practice.tryChrome')}</p>
             <Link href={`/practice/${phaseId}`}>
-              <Button variant="ghost" size="sm">
-                <ChevronLeft className="w-4 h-4 mr-1" />
+              <Button>
+                <ChevronLeft className="w-4 h-4 mr-2" />
                 {t('common.back')}
               </Button>
             </Link>
-            
-            <div className="flex items-center gap-4">
-              <Badge variant="secondary" className="gap-1">
-                <Star className="w-3 h-3" />
-                {score} XP
-              </Badge>
-              
-              {streak > 0 && (
-                <Badge variant="secondary" className="gap-1 bg-orange-500/10 text-orange-600">
-                  🔥 {streak}
-                </Badge>
-              )}
-            </div>
-          </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white dark:from-slate-900 dark:to-slate-800">
+      <div className="max-w-2xl mx-auto p-4 pb-24">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-6">
+          <Link href={`/practice/${phaseId}`}>
+            <Button variant="ghost" size="sm">
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              {t('common.back')}
+            </Button>
+          </Link>
           
-          {/* Progress bar */}
-          <div className="mt-2">
-            <Progress value={progress} className="h-2" />
-            <div className="flex justify-between text-xs text-muted-foreground mt-1">
-              <span>{currentIndex + 1} / {exercises.length}</span>
-              <span>{Math.round(progress)}%</span>
-            </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-muted-foreground">
+              {currentIndex + 1}/{exercises.length}
+            </span>
+            <Badge 
+              className="text-white"
+              style={{ backgroundColor: phase.color }}
+            >
+              {phase.name}
+            </Badge>
           </div>
         </div>
-      </div>
-      
-      {/* Exercise content */}
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
+        
+        {/* Progress bar */}
+        <div className="mb-6">
+          <Progress value={progress} className="h-2" />
+        </div>
+        
+        {/* Score display */}
+        <div className="flex justify-between items-center mb-6 px-2">
+          <div className="flex items-center gap-2">
+            <Star className="w-5 h-5 text-amber-500" />
+            <span className="font-bold">{score} XP</span>
+          </div>
+          {streak > 0 && (
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              className="flex items-center gap-1 px-3 py-1 rounded-full"
+              style={{ backgroundColor: `${phase.color}20` }}
+            >
+              <Sparkles className="w-4 h-4" style={{ color: phase.color }} />
+              <span className="text-sm font-medium" style={{ color: phase.color }}>
+                {streak} {t('practice.stats.streak')}
+              </span>
+            </motion.div>
+          )}
+        </div>
+        
+        {/* Exercise Card */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentIndex}
+            key={currentExercise.id}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
@@ -451,112 +449,63 @@ export default function PhaseSpeakingPage() {
                     </div>
                   )}
                   
-                  {/* Microphone permission warning */}
-                  {micPermission === 'denied' && (
-                    <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 flex items-center gap-3">
-                      <AlertCircle className="w-5 h-5 text-red-500" />
-                      <div>
-                        <p className="font-medium text-red-700 dark:text-red-400">
-                          {t('common.microphoneRequired')}
-                        </p>
-                        <p className="text-sm text-red-600 dark:text-red-500">
-                          {t('common.enableMicrophone')}
-                        </p>
-                      </div>
-                    </div>
+                  {/* Recording tip */}
+                  {!hasAttempted && !isListening && (
+                    <p className="text-center text-sm text-muted-foreground">
+                      {t('practice.recordingTip')}
+                    </p>
                   )}
                   
                   {/* Recording controls */}
-                  {!hasRecorded && (
+                  {!hasAttempted && !pronunciationScore && (
                     <div className="flex flex-col items-center gap-4">
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={isRecording ? stopRecording : startRecording}
-                        disabled={micPermission === 'denied'}
+                        onClick={isListening ? stopListening : handleStartListening}
                         className={cn(
                           'w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-colors',
-                          isRecording 
-                            ? 'bg-red-500 animate-pulse' 
-                            : 'bg-gradient-to-br',
-                          !isRecording && micPermission !== 'denied' && 'from-primary to-primary/80'
+                          isListening && 'bg-red-500 animate-pulse'
                         )}
-                        style={!isRecording && micPermission !== 'denied' ? { 
+                        style={!isListening ? { 
                           background: `linear-gradient(135deg, ${phase.color}, ${phase.color}cc)` 
                         } : undefined}
                       >
-                        {isRecording ? (
-                          <Square className="w-10 h-10 text-white" />
-                        ) : (
-                          <Mic2 className="w-10 h-10 text-white" />
-                        )}
+                        <Mic2 className="w-10 h-10 text-white" />
                       </motion.button>
                       
                       <p className="text-sm text-muted-foreground">
-                        {isRecording 
-                          ? t('common.clickToStop')
-                          : t('common.clickToRecord')
+                        {isListening 
+                          ? t('practice.speakNow')
+                          : t('practice.speakClearly')
                         }
                       </p>
                     </div>
                   )}
                   
-                  {/* Processing indicator */}
-                  {isProcessing && (
-                    <div className="flex flex-col items-center gap-3">
-                      <Loader2 className="w-12 h-12 animate-spin text-primary" />
-                      <p className="text-muted-foreground">{t('common.processing')}...</p>
+                  {/* Pronunciation feedback display */}
+                  <PronunciationFeedbackDisplay
+                    score={pronunciationScore}
+                    isListening={isListening}
+                    transcript={transcript || interimTranscript}
+                    expected={currentExercise.targetText}
+                  />
+                  
+                  {/* Error message */}
+                  {error && (
+                    <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 flex items-center gap-3">
+                      <AlertCircle className="w-5 h-5 text-red-500 shrink-0" />
+                      <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
                     </div>
                   )}
                   
-                  {/* Feedback */}
-                  <AnimatePresence>
-                    {feedback && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className={cn(
-                          'rounded-lg p-4 flex items-center gap-3',
-                          feedback === 'good' ? 'bg-green-50 dark:bg-green-900/20' : 'bg-amber-50 dark:bg-amber-900/20'
-                        )}
-                      >
-                        {feedback === 'good' ? (
-                          <>
-                            <CheckCircle2 className="w-6 h-6 text-green-500" />
-                            <div>
-                              <div className="font-medium text-green-700 dark:text-green-400">
-                                {t('common.greatPronunciation')}! 🎉
-                              </div>
-                              <div className="text-sm text-green-600 dark:text-green-500">
-                                +{currentExercise.difficulty === 'easy' ? 10 : 
-                                   currentExercise.difficulty === 'medium' ? 15 : 20} XP
-                              </div>
-                            </div>
-                          </>
-                        ) : (
-                          <>
-                            <AlertCircle className="w-6 h-6 text-amber-500" />
-                            <div>
-                              <div className="font-medium text-amber-700 dark:text-amber-400">
-                                {t('common.keepPracticing')}
-                              </div>
-                              <div className="text-sm text-amber-600 dark:text-amber-500">
-                                {t('common.listenAndTryAgain')}
-                              </div>
-                            </div>
-                          </>
-                        )}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                  
                   {/* Action buttons */}
-                  {hasRecorded && !isProcessing && (
+                  {hasAttempted && pronunciationScore && (
                     <div className="flex gap-3">
-                      {feedback === 'needs-work' && (
+                      {pronunciationScore.overall < 70 && (
                         <Button variant="outline" onClick={handleRetry} className="flex-1">
                           <RefreshCw className="w-4 h-4 mr-2" />
-                          {t('common.tryAgain')}
+                          {t('practice.tryAgain')}
                         </Button>
                       )}
                       <Button 
@@ -572,7 +521,7 @@ export default function PhaseSpeakingPage() {
                         ) : (
                           <>
                             <Sparkles className="w-4 h-4 mr-2" />
-                            {t('common.finish')}
+                            {t('common.done')}
                           </>
                         )}
                       </Button>

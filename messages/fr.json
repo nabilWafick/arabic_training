@@ -408,7 +408,28 @@
     "dailyChallengeDesc": "Complétez les exercices mixtes du jour pour des XP bonus",
     "startChallenge": "Commencer le Défi",
     "matchPairs": "Associez les mots arabes à leurs traductions anglaises",
-    "completed": "Vous avez terminé cette session de pratique !"
+    "completed": "Vous avez terminé cette session de pratique !",
+    "listening": "Écoute en cours...",
+    "youSaid": "Vous avez dit :",
+    "overallScore": "Score global",
+    "accuracy": "Précision",
+    "clarity": "Clarté",
+    "timing": "Rythme",
+    "expected": "Attendu :",
+    "speechNotSupported": "La reconnaissance vocale n'est pas prise en charge par votre navigateur",
+    "tryChrome": "Veuillez utiliser Chrome ou Edge pour la reconnaissance vocale",
+    "noSpeechDetected": "Aucune parole détectée. Veuillez réessayer.",
+    "microphoneError": "Erreur de microphone. Veuillez vérifier vos paramètres.",
+    "pronunciation": {
+      "excellent": "Excellente prononciation !",
+      "good": "Bonne prononciation ! Continuez à pratiquer.",
+      "improving": "Vous vous améliorez ! Concentrez-vous sur la clarté.",
+      "tryAgain": "Essayez de parler plus lentement et clairement."
+    },
+    "tryAgain": "Réessayer",
+    "speakNow": "Parlez maintenant...",
+    "speakClearly": "Parlez clairement et à un rythme naturel",
+    "recordingTip": "Conseil : Parlez dans un environnement calme pour de meilleurs résultats"
   },
   "achievements": {
     "title": "Succès",
