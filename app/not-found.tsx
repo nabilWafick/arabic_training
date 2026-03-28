@@ -1,9 +1,63 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Home, BookOpen, BarChart3 } from 'lucide-react';
 
+// Static translations for root-level 404 page
+const translations = {
+  en: {
+    heading: '404',
+    title: 'Page Not Found',
+    description: 'Sorry, the page you are looking for is not available. We could not find the requested content.',
+    buttons: {
+      home: 'Go to Homepage',
+      learn: 'Start Learning',
+      dashboard: 'Dashboard'
+    },
+    contact: 'Or contact us if you think this is a mistake'
+  },
+  fr: {
+    heading: '404',
+    title: 'Page non trouvée',
+    description: 'Désolé, la page que vous recherchez n\'est pas disponible. Nous n\'avons pas pu trouver le contenu demandé.',
+    buttons: {
+      home: 'Aller à la page d\'accueil',
+      learn: 'Commencer à apprendre',
+      dashboard: 'Tableau de bord'
+    },
+    contact: 'Ou contactez-nous si vous pensez que c\'est une erreur'
+  },
+  ar: {
+    heading: '404',
+    title: 'الصفحة غير موجودة',
+    description: 'عذراً، الصفحة التي تبحث عنها غير متوفرة. لم نتمكن من العثور على المحتوى المطلوب.',
+    buttons: {
+      home: 'العودة للصفحة الرئيسية',
+      learn: 'ابدأ التعلم',
+      dashboard: 'لوحة التحكم'
+    },
+    contact: 'أو اتصل بنا إذا كنت تعتقد أن هذا خطأ'
+  }
+};
+
 export default function NotFound() {
+  const [locale, setLocale] = useState<'en' | 'fr' | 'ar'>('en');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    // Detect locale from browser language
+    const browserLang = navigator.language.split('-')[0];
+    if (['en', 'fr', 'ar'].includes(browserLang)) {
+      setLocale(browserLang as 'en' | 'fr' | 'ar');
+    }
+  }, []);
+
+  const t = translations[locale];
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f8f3ea] via-white to-[#f8f3ea] p-4">
       {/* Animated background orbs */}
@@ -16,23 +70,20 @@ export default function NotFound() {
             {/* 404 Text with animation */}
             <div className="mb-4">
               <div className="text-8xl font-bold bg-gradient-to-r from-[#c9a85c] to-[#0d1b2a] bg-clip-text text-transparent animate-bounce">
-                404
+                {t.heading}
               </div>
             </div>
 
-            {/* Arabic text */}
+            {/* Title and subtitle */}
             <div className="mb-8">
               <h1 className="text-3xl md:text-4xl font-bold text-[#0d1b2a] mb-3">
-                الصفحة غير موجودة
+                {t.title}
               </h1>
-              <p className="text-gray-600 text-lg font-medium">
-                Page Not Found
-              </p>
             </div>
 
             {/* Description */}
             <p className="text-gray-500 mb-8 leading-relaxed">
-              عذراً، الصفحة التي تبحث عنها غير متوفرة. لم نتمكن من العثور على المحتوى المطلوب.
+              {t.description}
             </p>
 
             {/* Action buttons */}
@@ -43,7 +94,7 @@ export default function NotFound() {
                   size="lg"
                 >
                   <Home className="w-5 h-5 mr-2" />
-                  العودة للصفحة الرئيسية
+                  {t.buttons.home}
                 </Button>
               </Link>
 
@@ -54,7 +105,7 @@ export default function NotFound() {
                   size="lg"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
-                  ابدأ التعلم
+                  {t.buttons.learn}
                 </Button>
               </Link>
 
@@ -65,7 +116,7 @@ export default function NotFound() {
                   size="lg"
                 >
                   <BarChart3 className="w-5 h-5 mr-2" />
-                  لوحة التحكم
+                  {t.buttons.dashboard}
                 </Button>
               </Link>
             </div>
@@ -73,7 +124,7 @@ export default function NotFound() {
             {/* Decorative element */}
             <div className="mt-8 pt-6 border-t border-gray-200">
               <p className="text-sm text-gray-400">
-                أو اتصل بنا إذا كنت تعتقد أن هذا خطأ
+                {t.contact}
               </p>
             </div>
           </CardContent>

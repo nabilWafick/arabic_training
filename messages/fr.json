@@ -901,5 +901,33 @@
       "privacy": "Politique de Confidentialité",
       "cookies": "Politique de Cookies"
     }
+  },
+  "notFound": {
+    "title": "Page Non Trouvée",
+    "heading": "404",
+    "description": "Désolé, la page que vous recherchez n'est pas disponible. Nous n'avons pas pu trouver le contenu demandé.",
+    "buttons": {
+      "home": "Aller à l'accueil",
+      "learn": "Commencer l'apprentissage",
+      "dashboard": "Tableau de bord"
+    },
+    "contact": "Ou contactez-nous si vous pensez que c'est une erreur"
+  },
+  "error": {
+    "title": "Une Erreur Inattendue S'est Produite",
+    "subtitle": "Une erreur inattendue s'est produite",
+    "errorMessage": "Message d'erreur :",
+    "technicalDetails": "Détails Techniques",
+    "copyError": "Copier les Infos d'Erreur",
+    "copied": "Copié!",
+    "retry": "Réessayer",
+    "whatToDo": "Que pouvez-vous faire ?",
+    "suggestions": [
+      "Essayez de rafraîchir la page",
+      "Effacez le cache et les cookies",
+      "Essayez un navigateur différent",
+      "Signalez le problème s'il persiste"
+    ],
+    "goHome": "Aller à l'accueil"
   }
 }

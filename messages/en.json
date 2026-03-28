@@ -901,5 +901,33 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "heading": "404",
+    "description": "Sorry, the page you are looking for is not available. We could not find the requested content.",
+    "buttons": {
+      "home": "Go to Homepage",
+      "learn": "Start Learning",
+      "dashboard": "Dashboard"
+    },
+    "contact": "Or contact us if you think this is a mistake"
+  },
+  "error": {
+    "title": "An Unexpected Error Occurred",
+    "subtitle": "An unexpected error occurred",
+    "errorMessage": "Error Message:",
+    "technicalDetails": "Technical Details",
+    "copyError": "Copy Error Info",
+    "copied": "Copied!",
+    "retry": "Try Again",
+    "whatToDo": "What can you do?",
+    "suggestions": [
+      "Try refreshing the page",
+      "Clear cache and cookies",
+      "Try a different browser",
+      "Report the issue if it persists"
+    ],
+    "goHome": "Go to Homepage"
   }
 }

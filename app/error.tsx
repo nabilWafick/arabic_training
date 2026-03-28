@@ -6,6 +6,61 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { AlertCircle, Copy, RotateCcw, Home, ChevronDown } from 'lucide-react';
 
+// Static translations for error page
+const translations = {
+  en: {
+    title: 'An Unexpected Error Occurred',
+    subtitle: 'An unexpected error occurred',
+    errorMessage: 'Error Message:',
+    technicalDetails: 'Technical Details',
+    copyError: 'Copy Error Info',
+    copied: 'Copied!',
+    retry: 'Try Again',
+    whatToDo: 'What can you do?',
+    suggestions: [
+      'Try refreshing the page',
+      'Clear cache and cookies',
+      'Try a different browser',
+      'Report the issue if it persists'
+    ],
+    goHome: 'Go to Homepage'
+  },
+  fr: {
+    title: 'Une erreur inattendue s\'est produite',
+    subtitle: 'Une erreur inattendue s\'est produite',
+    errorMessage: 'Message d\'erreur:',
+    technicalDetails: 'Détails techniques',
+    copyError: 'Copier les informations d\'erreur',
+    copied: 'Copié!',
+    retry: 'Réessayer',
+    whatToDo: 'Que pouvez-vous faire?',
+    suggestions: [
+      'Essayez de rafraîchir la page',
+      'Effacez le cache et les cookies',
+      'Essayez un navigateur différent',
+      'Signalez le problème s\'il persiste'
+    ],
+    goHome: 'Aller à la page d\'accueil'
+  },
+  ar: {
+    title: 'حدث خطأ غير متوقع',
+    subtitle: 'حدث خطأ غير متوقع',
+    errorMessage: 'رسالة الخطأ:',
+    technicalDetails: 'التفاصيل التقنية',
+    copyError: 'نسخ معلومات الخطأ',
+    copied: 'تم النسخ!',
+    retry: 'حاول مجددا',
+    whatToDo: 'ماذا يمكنك أن تفعل؟',
+    suggestions: [
+      'حاول تحديث الصفحة',
+      'امسح ذاكرة التخزين المؤقت والملفات',
+      'حاول من متصفح مختلف',
+      'أبلغ عن المشكلة إذا استمرت'
+    ],
+    goHome: 'الصفحة الرئيسية'
+  }
+};
+
 interface ErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
@@ -15,8 +70,15 @@ export default function Error({ error, reset }: ErrorProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [copied, setCopied] = useState(false);
   const [errorInfo, setErrorInfo] = useState('');
+  const [locale, setLocale] = useState<'en' | 'fr' | 'ar'>('en');
 
   useEffect(() => {
+    // Detect locale from browser language
+    const browserLang = navigator.language.split('-')[0];
+    if (['en', 'fr', 'ar'].includes(browserLang)) {
+      setLocale(browserLang as 'en' | 'fr' | 'ar');
+    }
+
     // Format error information
     const info = `
 Error: ${error.message}
@@ -37,6 +99,8 @@ Timestamp: ${new Date().toISOString()}
     }
   };
 
+  const t = translations[locale];
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f8f3ea] via-white to-[#f8f3ea] p-4">
       {/* Animated background orbs */}
@@ -52,10 +116,10 @@ Timestamp: ${new Date().toISOString()}
               </div>
               <div>
                 <CardTitle className="text-2xl text-[#0d1b2a]">
-                  خطأ غير متوقع
+                  {t.title}
                 </CardTitle>
                 <p className="text-sm text-gray-600 mt-1">
-                  An unexpected error occurred
+                  {t.subtitle}
                 </p>
               </div>
             </div>
@@ -65,7 +129,7 @@ Timestamp: ${new Date().toISOString()}
             {/* Error message */}
             <div className="bg-red-50 border border-red-200 rounded-lg p-4">
               <p className="text-sm font-semibold text-red-900 mb-2">
-                Error Message:
+                {t.errorMessage}
               </p>
               <p className="text-sm text-red-800 break-words font-mono">
                 {error.message || 'An unknown error occurred'}
@@ -81,7 +145,7 @@ Timestamp: ${new Date().toISOString()}
                 <ChevronDown 
                   className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
                 />
-                Technical Details
+                {t.technicalDetails}
               </button>
 
               {isExpanded && (
@@ -107,7 +171,7 @@ Timestamp: ${new Date().toISOString()}
                 size="lg"
               >
                 <Copy className="w-4 h-4 mr-2" />
-                {copied ? 'تم النسخ' : 'نسخ معلومات الخطأ'}
+                {copied ? t.copied : t.copyError}
               </Button>
 
               <Button
@@ -116,20 +180,19 @@ Timestamp: ${new Date().toISOString()}
                 size="lg"
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
-                حاول مجدداً
+                {t.retry}
               </Button>
             </div>
 
             {/* Additional help */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <p className="text-sm text-blue-800 mb-3">
-                <span className="font-semibold">ماذا يمكنك أن تفعل؟</span>
+                <span className="font-semibold">{t.whatToDo}</span>
               </p>
               <ul className="text-sm text-blue-700 space-y-2">
-                <li>• جرّب تحديث الصفحة</li>
-                <li>• امسح ذاكرة التخزين المؤقت والملفات</li>
-                <li>• حاول من متصفح مختلف</li>
-                <li>• أبلغنا عن المشكلة إذا استمرت</li>
+                {t.suggestions.map((suggestion, idx) => (
+                  <li key={idx}>• {suggestion}</li>
+                ))}
               </ul>
             </div>
 
@@ -142,7 +205,7 @@ Timestamp: ${new Date().toISOString()}
                   size="lg"
                 >
                   <Home className="w-4 h-4 mr-2" />
-                  الصفحة الرئيسية
+                  {t.goHome}
                 </Button>
               </Link>
             </div>
