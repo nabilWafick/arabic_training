@@ -656,34 +656,6 @@
       "Excellent"
     ]
   },
-  "privacy": {
-    "title": "Politique de Confidentialité",
-    "description": "Dernière mise à jour",
-    "introduction": "Introduction",
-    "dataCollection": "Collecte de Données",
-    "dataUsage": "Comment Nous Utilisons Vos Données",
-    "dataProtection": "Protection des Données",
-    "cookies": "Cookies",
-    "thirdParty": "Services Tiers",
-    "userRights": "Vos Droits",
-    "contact": "Nous Contacter",
-    "changes": "Modifications de Cette Politique",
-    "effective": "Date d'Entrée en Vigueur"
-  },
-  "terms": {
-    "title": "Conditions de Service",
-    "description": "Dernière mise à jour",
-    "agreement": "Termes et Conditions",
-    "userResponsibilities": "Responsabilités de l'Utilisateur",
-    "intellectualProperty": "Propriété Intellectuelle",
-    "disclaimer": "Avertissement",
-    "limitationLiability": "Limitation de Responsabilité",
-    "termination": "Résiliation",
-    "governing": "Droit Applicable",
-    "contact": "Nous Contacter",
-    "changes": "Modifications des Conditions",
-    "effective": "Date d'Entrée en Vigueur"
-  },
   "cookies": {
     "title": "Politique Relative aux Cookies",
     "subtitle": "Découvrez comment nous utilisons les cookies et gérez vos préférences.",

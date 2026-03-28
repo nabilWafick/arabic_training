@@ -90,9 +90,10 @@ export function Sidebar() {
   /**
    * Render a navigation item with optional tooltip when collapsed
    */
-  const renderNavItem = (item: NavItem) => {
+  const renderNavItem = (item: NavItem, globalIndex: number) => {
     const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
     const Icon = item.icon;
+    const uniqueKey = `nav-item-${globalIndex}`;
     
     const linkContent = (
       <Link
@@ -121,7 +122,7 @@ export function Sidebar() {
     
     if (isCollapsed) {
       return (
-        <Tooltip key={item.href} delayDuration={0}>
+        <Tooltip key={uniqueKey} delayDuration={0}>
           <TooltipTrigger asChild>{linkContent}</TooltipTrigger>
           <TooltipContent side="right" className="flex items-center gap-2">
             {t(item.key)}
@@ -135,7 +136,7 @@ export function Sidebar() {
       );
     }
     
-    return <div key={item.href}>{linkContent}</div>;
+    return <div key={uniqueKey}>{linkContent}</div>;
   };
   
   return (
@@ -165,7 +166,7 @@ export function Sidebar() {
         <ScrollArea className="flex-1 px-3 py-4">
           {/* Main Navigation */}
           <div className="space-y-1">
-            {mainNavItems.map(renderNavItem)}
+            {mainNavItems.map((item, idx) => renderNavItem(item, idx))}
           </div>
           
           {/* Learning Phases */}
@@ -222,7 +223,7 @@ export function Sidebar() {
                 {t('practiceSection')}
               </h3>
               <div className="space-y-1">
-                {practiceItems.map(renderNavItem)}
+                {practiceItems.map((item, idx) => renderNavItem(item, mainNavItems.length + idx))}
               </div>
             </div>
           )}
@@ -266,7 +267,7 @@ export function Sidebar() {
         
         {/* Secondary Navigation */}
         <div className="border-t border-sidebar-border p-3">
-          <div className="space-y-1">{secondaryNavItems.map(renderNavItem)}</div>
+          <div className="space-y-1">{secondaryNavItems.map((item, idx) => renderNavItem(item, mainNavItems.length + practiceItems.length + idx))}</div>
         </div>
       </div>
     </aside>

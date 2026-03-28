@@ -656,34 +656,6 @@
       "ممتاز"
     ]
   },
-  "privacy": {
-    "title": "سياسة الخصوصية",
-    "description": "آخر تحديث",
-    "introduction": "المقدمة",
-    "dataCollection": "جمع البيانات",
-    "dataUsage": "كيف نستخدم بياناتك",
-    "dataProtection": "حماية البيانات",
-    "cookies": "ملفات تعريف الارتباط",
-    "thirdParty": "الخدمات الخارجية",
-    "userRights": "حقوقك",
-    "contact": "اتصل بنا",
-    "changes": "التغييرات على هذه السياسة",
-    "effective": "تاريخ السريان"
-  },
-  "terms": {
-    "title": "شروط الخدمة",
-    "description": "آخر تحديث",
-    "agreement": "الشروط والأحكام",
-    "userResponsibilities": "مسؤولياتك",
-    "intellectualProperty": "الملكية الفكرية",
-    "disclaimer": "تنصل",
-    "limitationLiability": "تحديد المسؤولية",
-    "termination": "الإنهاء",
-    "governing": "القانون الحاكم",
-    "contact": "اتصل بنا",
-    "changes": "التغييرات على الشروط",
-    "effective": "تاريخ السريان"
-  },
   "cookies": {
     "title": "سياسة ملفات تعريف الارتباط",
     "subtitle": "تعرف على كيفية استخدامنا لملفات تعريف الارتباط وإدارة تفضيلاتك.",
