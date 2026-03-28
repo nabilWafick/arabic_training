@@ -185,7 +185,7 @@ export default function PhaseWritingPage() {
   const phaseId = parseInt(params.phaseId as string);
   const t = useTranslations();
   
-  const { currentPhaseId } = useProgressStore();
+  const { currentPhaseId, updatePracticeProgress, getPracticeProgress } = useProgressStore();
   const { addXP, incrementStat } = useGamificationStore();
   const { speak } = useAudioStore();
   
@@ -197,6 +197,9 @@ export default function PhaseWritingPage() {
   const phase = PHASES[phaseId - 1];
   const exercises = getExercisesForPhase(phaseId);
   
+  // Get current practice progress for display
+  const practiceStats = getPracticeProgress(phaseId, 'writing');
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userInput, setUserInput] = useState('');
   const [showHint, setShowHint] = useState(false);
@@ -205,6 +208,7 @@ export default function PhaseWritingPage() {
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [completed, setCompleted] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
   
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex) / exercises.length) * 100;
@@ -230,6 +234,7 @@ export default function PhaseWritingPage() {
         setIsCorrect(true);
         setScore(s => s + 15);
         setStreak(s => s + 1);
+        setCorrectCount(c => c + 1);
         addXP(15);
         incrementStat('exercisesCompleted');
       } else {
@@ -247,6 +252,7 @@ export default function PhaseWritingPage() {
                      currentExercise.difficulty === 'medium' ? 15 : 20;
       setScore(s => s + xpGain);
       setStreak(s => s + 1);
+      setCorrectCount(c => c + 1);
       addXP(xpGain);
       incrementStat('exercisesCompleted');
     } else {
@@ -258,6 +264,9 @@ export default function PhaseWritingPage() {
     if (currentIndex < exercises.length - 1) {
       setCurrentIndex(i => i + 1);
     } else {
+      // Save practice progress when completing the session
+      const finalScore = Math.round((correctCount / exercises.length) * 100);
+      updatePracticeProgress(phaseId, 'writing', exercises.length, finalScore);
       setCompleted(true);
     }
   };
@@ -272,6 +281,7 @@ export default function PhaseWritingPage() {
     setCurrentIndex(0);
     setScore(0);
     setStreak(0);
+    setCorrectCount(0);
     setCompleted(false);
     setUserInput('');
     setShowHint(false);

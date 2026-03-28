@@ -12,6 +12,31 @@ import type {
 // PROGRESS STORE
 // ============================================
 
+// Practice type definitions
+export type PracticeType = 'writing' | 'listening' | 'speaking' | 'vocabulary';
+
+export interface PracticeStats {
+  completed: number;
+  bestScore: number;
+  lastPracticed: string | null;
+}
+
+export type PracticeProgressRecord = Record<PracticeType, PracticeStats>;
+export type PhasePracticeProgress = Record<number, PracticeProgressRecord>;
+
+const defaultPracticeStats = (): PracticeStats => ({
+  completed: 0,
+  bestScore: 0,
+  lastPracticed: null,
+});
+
+const defaultPracticeProgressForPhase = (): PracticeProgressRecord => ({
+  writing: defaultPracticeStats(),
+  listening: defaultPracticeStats(),
+  speaking: defaultPracticeStats(),
+  vocabulary: defaultPracticeStats(),
+});
+
 interface ProgressState {
   // State
   phases: Record<number, PhaseProgress>;
@@ -20,6 +45,9 @@ interface ProgressState {
   currentLessonId: string | null;
   isLoading: boolean;
   lastSynced: string | null;
+  
+  // Practice-specific progress state
+  practiceProgress: PhasePracticeProgress;
 
   // Actions
   initProgress: () => void;
@@ -33,6 +61,15 @@ interface ProgressState {
   getOverallProgress: () => number;
   resetProgress: () => void;
   syncWithServer: () => Promise<void>;
+  
+  // Practice-specific actions
+  updatePracticeProgress: (
+    phaseId: number, 
+    type: PracticeType, 
+    exercisesCompleted: number, 
+    score: number
+  ) => void;
+  getPracticeProgress: (phaseId: number, type: PracticeType) => PracticeStats;
 }
 
 const defaultPhaseProgress = (phaseId: number): PhaseProgress => ({
@@ -71,20 +108,43 @@ export const useProgressStore = create<ProgressState>()(
       currentLessonId: null,
       isLoading: false,
       lastSynced: null,
+      
+      // Practice progress for all 5 phases
+      practiceProgress: {
+        1: defaultPracticeProgressForPhase(),
+        2: defaultPracticeProgressForPhase(),
+        3: defaultPracticeProgressForPhase(),
+        4: defaultPracticeProgressForPhase(),
+        5: defaultPracticeProgressForPhase(),
+      },
 
       // Initialize progress (called on app load)
       initProgress: () => {
-        const { phases } = get();
+        const { phases, practiceProgress } = get();
+        const updates: Partial<ProgressState> = {};
+        
         if (Object.keys(phases).length === 0) {
-          set({
-            phases: {
-              1: defaultPhaseProgress(1),
-              2: defaultPhaseProgress(2),
-              3: defaultPhaseProgress(3),
-              4: defaultPhaseProgress(4),
-              5: defaultPhaseProgress(5),
-            },
-          });
+          updates.phases = {
+            1: defaultPhaseProgress(1),
+            2: defaultPhaseProgress(2),
+            3: defaultPhaseProgress(3),
+            4: defaultPhaseProgress(4),
+            5: defaultPhaseProgress(5),
+          };
+        }
+        
+        if (!practiceProgress || Object.keys(practiceProgress).length === 0) {
+          updates.practiceProgress = {
+            1: defaultPracticeProgressForPhase(),
+            2: defaultPracticeProgressForPhase(),
+            3: defaultPracticeProgressForPhase(),
+            4: defaultPracticeProgressForPhase(),
+            5: defaultPracticeProgressForPhase(),
+          };
+        }
+        
+        if (Object.keys(updates).length > 0) {
+          set(updates);
         }
       },
 
@@ -207,6 +267,48 @@ export const useProgressStore = create<ProgressState>()(
         return Math.round(totalProgress / phaseProgresses.length);
       },
 
+      // Update practice progress for a specific type
+      updatePracticeProgress: (
+        phaseId: number, 
+        type: PracticeType, 
+        exercisesCompleted: number, 
+        score: number
+      ) => {
+        const { practiceProgress } = get();
+        
+        // Ensure the phase exists
+        const phaseProgress = practiceProgress[phaseId] || defaultPracticeProgressForPhase();
+        const currentStats = phaseProgress[type] || defaultPracticeStats();
+        
+        const updatedStats: PracticeStats = {
+          completed: currentStats.completed + exercisesCompleted,
+          bestScore: Math.max(currentStats.bestScore, score),
+          lastPracticed: new Date().toISOString(),
+        };
+        
+        set({
+          practiceProgress: {
+            ...practiceProgress,
+            [phaseId]: {
+              ...phaseProgress,
+              [type]: updatedStats,
+            },
+          },
+        });
+      },
+
+      // Get practice progress for a specific phase and type
+      getPracticeProgress: (phaseId: number, type: PracticeType): PracticeStats => {
+        const { practiceProgress } = get();
+        const phaseData = practiceProgress[phaseId];
+        
+        if (!phaseData || !phaseData[type]) {
+          return defaultPracticeStats();
+        }
+        
+        return phaseData[type];
+      },
+
       // Reset all progress
       resetProgress: () => {
         set({
@@ -220,6 +322,13 @@ export const useProgressStore = create<ProgressState>()(
           currentPhaseId: 1,
           currentLessonId: null,
           lastSynced: null,
+          practiceProgress: {
+            1: defaultPracticeProgressForPhase(),
+            2: defaultPracticeProgressForPhase(),
+            3: defaultPracticeProgressForPhase(),
+            4: defaultPracticeProgressForPhase(),
+            5: defaultPracticeProgressForPhase(),
+          },
         });
       },
 
@@ -248,6 +357,7 @@ export const useProgressStore = create<ProgressState>()(
         currentPhaseId: state.currentPhaseId,
         currentLessonId: state.currentLessonId,
         lastSynced: state.lastSynced,
+        practiceProgress: state.practiceProgress,
       }),
     }
   )

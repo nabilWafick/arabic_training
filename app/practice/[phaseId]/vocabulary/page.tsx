@@ -6,11 +6,11 @@
  * Content varies based on the learning phase
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, notFound } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   ChevronLeft,
   BookOpen,
@@ -25,16 +25,24 @@ import {
   Sparkles,
   Eye,
   Grid3X3,
-  Layers
+  Layers,
+  Loader2,
+  Cpu,
+  Database
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { useProgressStore } from '@/stores/useProgressStore';
 import { useGamificationStore } from '@/stores/useGamificationStore';
 import { useAudioStore } from '@/stores/useAudioStore';
+import { useAIExercises, type VocabExercise } from '@/hooks/useAIExercises';
+import type { PhaseId, DifficultyLevel } from '@/data/practice/types';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 // Phase configuration
 const PHASES = [
@@ -45,7 +53,7 @@ const PHASES = [
   { id: 5, name: 'Advanced Fluency', color: '#e74c3c', icon: 'ه' },
 ];
 
-// Vocabulary item structure
+// Vocabulary item structure (compatible with VocabExercise from hook)
 interface VocabItem {
   id: string;
   arabic: string;
@@ -53,7 +61,9 @@ interface VocabItem {
   english: string;
   french: string;
   category: string;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: DifficultyLevel;
+  hint?: string;
+  explanation?: string;
 }
 
 // Get vocabulary by phase
@@ -147,7 +157,24 @@ export default function PhaseVocabularyPage() {
   }
   
   const phase = PHASES[phaseId - 1];
-  const vocabulary = getVocabularyForPhase(phaseId);
+  const staticVocabulary = getVocabularyForPhase(phaseId);
+  
+  // AI Exercises Hook - dynamically generate exercises with fallback
+  const {
+    exercises: aiVocabulary,
+    isLoading: isAILoading,
+    error: aiError,
+    isAIGenerated,
+    useAI,
+    toggleAI,
+    regenerate,
+  } = useAIExercises(phaseId as PhaseId, 'vocabulary', staticVocabulary as VocabExercise[], {
+    count: 10,
+    autoGenerate: false, // User must enable AI mode
+  });
+  
+  // Use AI vocabulary when enabled, static otherwise
+  const vocabulary = useAI ? (aiVocabulary as VocabItem[]) : staticVocabulary;
   
   const [mode, setMode] = useState<PracticeMode>('flashcard');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -277,7 +304,13 @@ export default function PhaseVocabularyPage() {
   };
   
   const handleShuffle = () => {
-    setShuffledVocab([...vocabulary].sort(() => Math.random() - 0.5));
+    if (useAI) {
+      // Regenerate AI exercises
+      regenerate();
+    } else {
+      // Shuffle static vocabulary
+      setShuffledVocab([...vocabulary].sort(() => Math.random() - 0.5));
+    }
     setCurrentIndex(0);
     setFlipped(false);
     setSelectedAnswer(null);
@@ -369,6 +402,48 @@ export default function PhaseVocabularyPage() {
             </Link>
             
             <div className="flex items-center gap-2">
+              {/* AI Toggle */}
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex items-center gap-2 px-2 py-1 rounded-lg bg-muted/50">
+                      <Database className={cn(
+                        "w-4 h-4 transition-colors",
+                        !useAI ? "text-primary" : "text-muted-foreground"
+                      )} />
+                      <Switch
+                        id="ai-mode"
+                        checked={useAI}
+                        onCheckedChange={toggleAI}
+                        disabled={isAILoading}
+                        className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-purple-500 data-[state=checked]:to-pink-500"
+                      />
+                      {isAILoading ? (
+                        <Loader2 className="w-4 h-4 animate-spin text-purple-500" />
+                      ) : (
+                        <Cpu className={cn(
+                          "w-4 h-4 transition-colors",
+                          useAI ? "text-purple-500" : "text-muted-foreground"
+                        )} />
+                      )}
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">
+                    <p className="text-sm">
+                      {useAI 
+                        ? isAIGenerated 
+                          ? '✨ AI-generated exercises' 
+                          : 'Loading AI exercises...'
+                        : 'Switch to AI-generated exercises'
+                      }
+                    </p>
+                    {aiError && (
+                      <p className="text-xs text-red-400 mt-1">{aiError}</p>
+                    )}
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              
               {/* Mode selector */}
               <div className="flex bg-muted rounded-lg p-1">
                 <Button
@@ -427,6 +502,20 @@ export default function PhaseVocabularyPage() {
       <div className="container mx-auto px-4 py-8 max-w-2xl">
         {mode === 'flashcard' && currentVocab && (
           <div className="flex flex-col items-center">
+            {/* AI Status Badge */}
+            {isAIGenerated && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-4"
+              >
+                <Badge variant="secondary" className="gap-1 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-600 border-purple-200">
+                  <Sparkles className="w-3 h-3" />
+                  AI Generated
+                </Badge>
+              </motion.div>
+            )}
+            
             {/* Flashcard */}
             <motion.div
               className="w-full max-w-sm aspect-[3/4] cursor-pointer perspective-1000"
@@ -494,9 +583,15 @@ export default function PhaseVocabularyPage() {
             
             {/* Controls */}
             <div className="flex gap-3 mt-8">
-              <Button variant="outline" onClick={handleShuffle}>
-                <Shuffle className="w-4 h-4 mr-2" />
-                {t('practice.shuffle')}
+              <Button variant="outline" onClick={handleShuffle} disabled={isAILoading}>
+                {isAILoading ? (
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                ) : useAI ? (
+                  <Sparkles className="w-4 h-4 mr-2" />
+                ) : (
+                  <Shuffle className="w-4 h-4 mr-2" />
+                )}
+                {useAI ? (isAILoading ? 'Generating...' : 'New AI Words') : t('practice.shuffle')}
               </Button>
               <Button onClick={handleNext} style={{ backgroundColor: phase.color }}>
                 {t('common.next')}
