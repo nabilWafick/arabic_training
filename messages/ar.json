@@ -63,7 +63,21 @@
     "minutes": "دقائق",
     "showMore": "عرض المزيد",
     "showLess": "عرض أقل",
-    "relatedLinks": "الروابط ذات الصلة"
+    "relatedLinks": "الروابط ذات الصلة",
+    "clickToFlip": "انقر للقلب",
+    "showAnswer": "إظهار الإجابة",
+    "hide": "إخفاء",
+    "matched": "مطابق",
+    "playAgain": "العب مرة أخرى",
+    "clickToStop": "انقر لإيقاف التسجيل",
+    "clickToRecord": "انقر لبدء التسجيل",
+    "processing": "جارِ المعالجة",
+    "microphoneRequired": "مطلوب الوصول إلى الميكروفون",
+    "enableMicrophone": "يرجى تفعيل الوصول إلى الميكروفون في إعدادات المتصفح",
+    "greatPronunciation": "نطق ممتاز",
+    "keepPracticing": "استمر في الممارسة",
+    "listenAndTryAgain": "استمع للصوت وحاول مرة أخرى",
+    "earned": "مكتسبة"
   },
   "dashboard": {
     "title": "لوحة التحكم",
@@ -373,12 +387,28 @@
     "stats": {
       "totalTime": "إجمالي وقت التدريب",
       "completed": "التمارين المكتملة",
-      "accuracy": "متوسط الدقة"
+      "accuracy": "متوسط الدقة",
+      "streak": "السلسلة",
+      "bestStreak": "أفضل سلسلة",
+      "lessonsCompleted": "الدروس المكتملة"
     },
     "difficulty": {
       "beginner": "مبتدئ",
-      "allLevels": "جميع المستويات"
-    }
+      "allLevels": "جميع المستويات",
+      "easy": "سهل",
+      "medium": "متوسط",
+      "hard": "صعب"
+    },
+    "selectPhase": "اختر مرحلة التدريب",
+    "currentPhase": "المرحلة الحالية",
+    "current": "الحالية",
+    "progress": "التقدم",
+    "viewLessons": "عرض الدروس",
+    "startSession": "بدء جلسة التدريب",
+    "dailyChallengeDesc": "أكمل تمارين اليوم المختلطة للحصول على نقاط إضافية",
+    "startChallenge": "ابدأ التحدي",
+    "matchPairs": "قم بمطابقة الكلمات العربية مع ترجماتها الإنجليزية",
+    "completed": "لقد أكملت جلسة التدريب هذه!"
   },
   "achievements": {
     "title": "الإنجازات",
@@ -585,7 +615,15 @@
     "browseTopics": "تصفح مواضيع المساعدة",
     "noResults": "لم يتم العثور على مقالات مساعدة",
     "contact": "هل لم تجد ما تبحث عنه؟",
-    "contactUs": "اتصل بنا للحصول على الدعم"
+    "contactUs": "اتصل بنا للحصول على الدعم",
+    "categories": {
+      "gamification": "التلعيب",
+      "gamificationDesc": "نقاط الخبرة والمستويات والمكافآت",
+      "audio": "الصوت",
+      "audioDesc": "إعدادات النطق والقراءة",
+      "account": "الحساب",
+      "accountDesc": "إعدادات الملف الشخصي والمزامنة"
+    }
   },
   "faq": {
     "title": "الأسئلة الشائعة",

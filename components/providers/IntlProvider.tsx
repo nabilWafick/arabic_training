@@ -35,7 +35,7 @@ export function IntlProvider({ children }: { children: React.ReactNode }) {
   const currentMessages = messages[locale] || messages.fr;
 
   return (
-    <NextIntlClientProvider locale={locale} messages={currentMessages}>
+    <NextIntlClientProvider locale={locale} messages={currentMessages} timeZone="UTC">
       {children}
     </NextIntlClientProvider>
   );

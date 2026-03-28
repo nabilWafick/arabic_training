@@ -63,7 +63,21 @@
     "minutes": "minutes",
     "showMore": "Show More",
     "showLess": "Show Less",
-    "relatedLinks": "Related Links"
+    "relatedLinks": "Related Links",
+    "clickToFlip": "Click to flip",
+    "showAnswer": "Show Answer",
+    "hide": "Hide",
+    "matched": "matched",
+    "playAgain": "Play Again",
+    "clickToStop": "Click to stop recording",
+    "clickToRecord": "Click to start recording",
+    "processing": "Processing",
+    "microphoneRequired": "Microphone Access Required",
+    "enableMicrophone": "Please enable microphone access in your browser settings",
+    "greatPronunciation": "Great pronunciation",
+    "keepPracticing": "Keep practicing",
+    "listenAndTryAgain": "Listen to the audio and try again",
+    "earned": "earned"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -373,12 +387,28 @@
     "stats": {
       "totalTime": "Total Practice Time",
       "completed": "Exercises Completed",
-      "accuracy": "Average Accuracy"
+      "accuracy": "Average Accuracy",
+      "streak": "Streak",
+      "bestStreak": "Best Streak",
+      "lessonsCompleted": "Lessons Done"
     },
     "difficulty": {
       "beginner": "Beginner",
-      "allLevels": "All Levels"
-    }
+      "allLevels": "All Levels",
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "selectPhase": "Select Practice Phase",
+    "currentPhase": "Current Phase",
+    "current": "Current",
+    "progress": "Progress",
+    "viewLessons": "View Lessons",
+    "startSession": "Start Practice Session",
+    "dailyChallengeDesc": "Complete today's mixed exercises for bonus XP",
+    "startChallenge": "Start Challenge",
+    "matchPairs": "Match the Arabic words with their English translations",
+    "completed": "You completed this practice session!"
   },
   "achievements": {
     "title": "Achievements",

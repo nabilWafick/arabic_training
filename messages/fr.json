@@ -63,7 +63,21 @@
     "minutes": "minutes",
     "showMore": "Afficher plus",
     "showLess": "Afficher moins",
-    "relatedLinks": "Liens Connexes"
+    "relatedLinks": "Liens Connexes",
+    "clickToFlip": "Cliquez pour retourner",
+    "showAnswer": "Afficher la réponse",
+    "hide": "Masquer",
+    "matched": "correspondant",
+    "playAgain": "Rejouer",
+    "clickToStop": "Cliquez pour arrêter l'enregistrement",
+    "clickToRecord": "Cliquez pour commencer l'enregistrement",
+    "processing": "Traitement en cours",
+    "microphoneRequired": "Accès au microphone requis",
+    "enableMicrophone": "Veuillez activer l'accès au microphone dans les paramètres de votre navigateur",
+    "greatPronunciation": "Excellente prononciation",
+    "keepPracticing": "Continuez à pratiquer",
+    "listenAndTryAgain": "Écoutez l'audio et réessayez",
+    "earned": "gagnés"
   },
   "dashboard": {
     "title": "Tableau de bord",
@@ -373,12 +387,28 @@
     "stats": {
       "totalTime": "Temps Total de Pratique",
       "completed": "Exercices Complétés",
-      "accuracy": "Précision Moyenne"
+      "accuracy": "Précision Moyenne",
+      "streak": "Série",
+      "bestStreak": "Meilleure Série",
+      "lessonsCompleted": "Leçons Terminées"
     },
     "difficulty": {
       "beginner": "Débutant",
-      "allLevels": "Tous Niveaux"
-    }
+      "allLevels": "Tous Niveaux",
+      "easy": "Facile",
+      "medium": "Moyen",
+      "hard": "Difficile"
+    },
+    "selectPhase": "Sélectionner la Phase de Pratique",
+    "currentPhase": "Phase Actuelle",
+    "current": "Actuel",
+    "progress": "Progression",
+    "viewLessons": "Voir les Leçons",
+    "startSession": "Démarrer la Session",
+    "dailyChallengeDesc": "Complétez les exercices mixtes du jour pour des XP bonus",
+    "startChallenge": "Commencer le Défi",
+    "matchPairs": "Associez les mots arabes à leurs traductions anglaises",
+    "completed": "Vous avez terminé cette session de pratique !"
   },
   "achievements": {
     "title": "Succès",
@@ -585,7 +615,15 @@
     "browseTopics": "Parcourir les Rubriques d'Aide",
     "noResults": "Aucun article d'aide trouvé",
     "contact": "Vous ne trouvez pas ce que vous cherchez?",
-    "contactUs": "Contactez-nous pour obtenir de l'aide"
+    "contactUs": "Contactez-nous pour obtenir de l'aide",
+    "categories": {
+      "gamification": "Gamification",
+      "gamificationDesc": "Points XP, niveaux et récompenses",
+      "audio": "Audio",
+      "audioDesc": "Paramètres de prononciation et lecture",
+      "account": "Compte",
+      "accountDesc": "Paramètres du profil et synchronisation"
+    }
   },
   "faq": {
     "title": "Questions Fréquemment Posées",
