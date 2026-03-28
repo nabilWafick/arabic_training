@@ -62,7 +62,8 @@
     "more": "more",
     "minutes": "minutes",
     "showMore": "Show More",
-    "showLess": "Show Less"
+    "showLess": "Show Less",
+    "relatedLinks": "Related Links"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -210,19 +211,16 @@
     "trackYourJourney": "Track your Arabic learning journey"
   },
   "vocabulary": {
-    "title": "Vocabulary Reference",
-    "description": "Browse and search the complete Arabic vocabulary database",
-    "search": "Search vocabulary...",
-    "filter": "Filter by phase",
-    "allPhases": "All Phases",
-    "noResults": "No vocabulary words found",
-    "word": "Word",
-    "transliteration": "Transliteration",
-    "meaning": "Meaning",
-    "example": "Example",
-    "phase": "Phase",
-    "difficulty": "Difficulty",
-    "total": "Total Words"
+    "greetings": "Greetings",
+    "numbers": "Numbers",
+    "family": "Family",
+    "food": "Food",
+    "animals": "Animals",
+    "colors": "Colors",
+    "body": "Body Parts",
+    "clothing": "Clothing",
+    "house": "House",
+    "nature": "Nature"
   },
   "footer": {
     "learn": "Learn",
@@ -658,91 +656,242 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "description": "Last updated",
-    "introduction": "Introduction",
-    "dataCollection": "Data Collection",
-    "dataUsage": "How We Use Your Data",
-    "dataProtection": "Data Protection",
-    "cookies": "Cookies",
-    "thirdParty": "Third-Party Services",
-    "userRights": "Your Rights",
-    "contact": "Contact Us",
-    "changes": "Changes to This Policy",
-    "effective": "Effective Date"
-  },
-  "terms": {
-    "title": "Terms of Service",
-    "description": "Last updated",
-    "agreement": "Terms and Conditions",
-    "userResponsibilities": "User Responsibilities",
-    "intellectualProperty": "Intellectual Property",
-    "disclaimer": "Disclaimer",
-    "limitationLiability": "Limitation of Liability",
-    "termination": "Termination",
-    "governing": "Governing Law",
-    "contact": "Contact Us",
-    "changes": "Changes to Terms",
-    "effective": "Effective Date"
-  },
-  "cookies": {
-    "title": "Cookie Policy",
-    "subtitle": "Learn how we use cookies and manage your preferences.",
-    "lastUpdated": "Last updated",
-    "description": "Last updated",
-    "introduction": "Introduction",
-    "whatAreCookies": "What Are Cookies?",
-    "howWeUseCookies": "How We Use Cookies",
-    "typesOfCookies": "Types of Cookies",
-    "essential": "Essential Cookies",
-    "analytics": "Analytics Cookies",
-    "marketing": "Marketing Cookies",
-    "preferences": "Preference Cookies",
-    "managingCookies": "Managing Cookies",
-    "thirdPartyCookies": "Third-Party Cookies",
-    "contact": "Contact Us",
-    "effective": "Effective Date",
-    "managePreferences": "Manage Your Preferences",
-    "required": "Required",
-    "saveTitle": "Save your preferences",
-    "saveDescription": "Your preferences will be saved and applied immediately.",
-    "rejectAll": "Reject All",
-    "savePreferences": "Save Preferences",
-    "howToDelete": "How to Delete Cookies",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
-  },
-  "privacy": {
-    "title": "Privacy Policy",
     "subtitle": "Your privacy matters to us. Learn how we collect, use, and protect your data.",
     "lastUpdated": "Last updated",
+    "lastUpdatedDate": "March 2024",
     "quickNav": "Quick Navigation",
-    "questions": "Questions about privacy?",
-    "contactDescription": "Contact our privacy team for any concerns or data requests.",
-    "contactUs": "Contact Us",
-    "terms": "Terms of Service",
-    "cookies": "Cookie Policy"
+    "sections": {
+      "collect": {
+        "title": "Information We Collect",
+        "titleAr": "المعلومات التي نجمعها",
+        "items": [
+          "Account Information: When you create an account, we collect your email address, username, and password (encrypted).",
+          "Learning Data: We track your progress, completed lessons, exercise results, and learning patterns to personalize your experience.",
+          "Usage Data: We collect information about how you interact with our platform, including pages visited, time spent, and features used.",
+          "Device Information: Basic device and browser information to ensure compatibility and security."
+        ]
+      },
+      "use": {
+        "title": "How We Use Your Information",
+        "titleAr": "كيف نستخدم معلوماتك",
+        "items": [
+          "Personalization: Adapt lessons and exercises to your learning level and style.",
+          "Progress Tracking: Save and sync your learning progress across devices.",
+          "Improvement: Analyze usage patterns to improve our platform and content.",
+          "Communication: Send important updates about your account and new features (with your consent).",
+          "Support: Respond to your questions and provide customer support."
+        ]
+      },
+      "protect": {
+        "title": "How We Protect Your Data",
+        "titleAr": "كيف نحمي بياناتك",
+        "items": [
+          "Encryption: All data is encrypted in transit (TLS) and at rest (AES-256).",
+          "Secure Infrastructure: We use industry-standard cloud security practices.",
+          "Access Control: Strict internal access controls limit who can view your data.",
+          "Regular Audits: We conduct regular security audits and penetration testing.",
+          "No Sale of Data: We never sell your personal information to third parties."
+        ]
+      },
+      "rights": {
+        "title": "Your Rights",
+        "titleAr": "حقوقك",
+        "items": [
+          "Access: Request a copy of all personal data we hold about you.",
+          "Correction: Update or correct any inaccurate information.",
+          "Deletion: Request deletion of your account and associated data.",
+          "Portability: Export your learning data in a standard format.",
+          "Opt-out: Unsubscribe from marketing communications at any time."
+        ]
+      },
+      "transfers": {
+        "title": "International Data Transfers",
+        "titleAr": "نقل البيانات الدولية",
+        "items": [
+          "Our servers are located in secure data centers in Europe and North America.",
+          "We comply with GDPR, CCPA, and other applicable data protection regulations.",
+          "Data may be transferred internationally with appropriate safeguards in place.",
+          "We use Standard Contractual Clauses for transfers outside the EU/EEA."
+        ]
+      }
+    },
+    "contact": {
+      "title": "Questions about privacy?",
+      "description": "Contact our privacy team for any concerns or data requests.",
+      "button": "Contact Us"
+    },
+    "links": {
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    }
   },
   "terms": {
     "title": "Terms of Service",
     "subtitle": "Please read these terms carefully before using ArabicMaster Pro.",
     "lastUpdated": "Last updated",
+    "lastUpdatedDate": "March 2024",
     "quickNav": "Quick Navigation",
-    "questions": "Questions about these terms?",
-    "contactDescription": "Our legal team is happy to help clarify any concerns.",
-    "contactUs": "Contact Us",
-    "privacy": "Privacy Policy",
-    "cookies": "Cookie Policy"
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "titleAr": "قبول الشروط",
+        "items": [
+          "By accessing or using ArabicMaster Pro, you agree to be bound by these Terms of Service.",
+          "If you do not agree to these terms, please do not use our platform.",
+          "We may update these terms from time to time. Continued use constitutes acceptance of changes.",
+          "Users must be at least 13 years old to create an account."
+        ]
+      },
+      "responsibilities": {
+        "title": "Account Responsibilities",
+        "titleAr": "مسؤوليات الحساب",
+        "items": [
+          "You are responsible for maintaining the confidentiality of your account credentials.",
+          "You must provide accurate and complete information when creating an account.",
+          "You are responsible for all activities that occur under your account.",
+          "Notify us immediately if you suspect unauthorized access to your account.",
+          "One account per person - sharing accounts is not permitted."
+        ]
+      },
+      "acceptable": {
+        "title": "Acceptable Use",
+        "titleAr": "الاستخدام المقبول",
+        "items": [
+          "Use the platform only for lawful purposes and personal learning.",
+          "Do not attempt to circumvent security measures or access restricted areas.",
+          "Do not use automated tools to scrape or collect content without permission.",
+          "Respect other users and maintain a positive learning environment.",
+          "Do not share, resell, or redistribute course content without authorization."
+        ]
+      },
+      "prohibited": {
+        "title": "Prohibited Activities",
+        "titleAr": "الأنشطة المحظورة",
+        "items": [
+          "Harassment, bullying, or discrimination against other users.",
+          "Posting malicious content, spam, or inappropriate material.",
+          "Attempting to hack, disrupt, or compromise platform security.",
+          "Creating multiple accounts to abuse free features or promotions.",
+          "Using the platform for commercial purposes without authorization.",
+          "Impersonating other users or platform staff."
+        ]
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "titleAr": "الملكية الفكرية",
+        "items": [
+          "All content on ArabicMaster Pro is protected by copyright and intellectual property laws.",
+          "You are granted a limited, non-exclusive license to access content for personal learning.",
+          "You may not copy, modify, distribute, or create derivative works without permission.",
+          "User-generated content remains your property, but you grant us a license to use it on the platform.",
+          "Report any copyright infringement to our legal team promptly."
+        ]
+      },
+      "termination": {
+        "title": "Termination",
+        "titleAr": "الإنهاء",
+        "items": [
+          "We may suspend or terminate your account for violation of these terms.",
+          "You may delete your account at any time through your account settings.",
+          "Upon termination, your access to the platform and content will be revoked.",
+          "Some data may be retained as required by law or for legitimate business purposes.",
+          "Termination does not affect any rights or obligations that arose before termination."
+        ]
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "titleAr": "تحديد المسؤولية",
+        "items": [
+          "ArabicMaster Pro is provided 'as is' without warranties of any kind.",
+          "We are not liable for any indirect, incidental, or consequential damages.",
+          "Our total liability is limited to the amount you paid for the service.",
+          "We do not guarantee uninterrupted or error-free service.",
+          "You use the platform at your own risk and discretion."
+        ]
+      }
+    },
+    "contact": {
+      "title": "Questions about these terms?",
+      "description": "Our legal team is happy to help clarify any concerns.",
+      "button": "Contact Us"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    }
   },
-  "vocabulary": {
-    "greetings": "Greetings",
-    "numbers": "Numbers",
-    "family": "Family",
-    "food": "Food",
-    "animals": "Animals",
-    "colors": "Colors",
-    "body": "Body Parts",
-    "clothing": "Clothing",
-    "house": "House",
-    "nature": "Nature"
+  "cookies": {
+    "title": "Cookie Policy",
+    "subtitle": "Learn how we use cookies and manage your preferences.",
+    "lastUpdated": "Last updated",
+    "lastUpdatedDate": "March 2024",
+    "quickNav": "Quick Navigation",
+    "intro": "Cookies are small text files stored on your device when you visit websites. They help websites remember your preferences, keep you logged in, and understand how you use the site. We use cookies to provide you with the best possible learning experience on ArabicMaster Pro.",
+    "sections": {
+      "essential": {
+        "title": "Essential Cookies",
+        "titleAr": "ملفات تعريف الارتباط الضرورية",
+        "description": "Required for the platform to function. These cannot be disabled.",
+        "items": [
+          "Session cookies - Keep you logged in during your visit",
+          "Security tokens - Protect against CSRF attacks",
+          "Load balancing - Ensure optimal performance",
+          "Cookie consent - Remember your cookie preferences"
+        ]
+      },
+      "functional": {
+        "title": "Functional Cookies",
+        "titleAr": "ملفات تعريف الارتباط الوظيفية",
+        "description": "Enable personalized features and remember your preferences.",
+        "items": [
+          "Language preference - Remember your selected language",
+          "Theme preference - Light/dark mode settings",
+          "Audio settings - Volume and playback preferences",
+          "UI customization - Dashboard layout preferences"
+        ]
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "titleAr": "ملفات تعريف الارتباط التحليلية",
+        "description": "Help us understand how you use our platform to improve it.",
+        "items": [
+          "Google Analytics - Track page views and user journeys",
+          "Learning analytics - Understand which lessons are most effective",
+          "Performance metrics - Monitor platform speed and reliability",
+          "Error tracking - Identify and fix bugs faster"
+        ]
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "titleAr": "ملفات تعريف الارتباط التسويقية",
+        "description": "Used to show you relevant content and measure ad effectiveness.",
+        "items": [
+          "Advertising IDs - Show relevant learning promotions",
+          "Social media pixels - Share progress on social platforms",
+          "Attribution tracking - Understand how you found us",
+          "Remarketing tags - Remind you about ArabicMaster Pro"
+        ]
+      }
+    },
+    "preferences": {
+      "title": "Manage Your Preferences",
+      "saveTitle": "Save your preferences",
+      "saveDescription": "Your preferences will be saved and applied immediately.",
+      "required": "Required",
+      "rejectAll": "Reject All",
+      "saveBtn": "Save Preferences"
+    },
+    "delete": {
+      "title": "How to Delete Cookies",
+      "description": "You can delete cookies from your browser at any time. Here's how:",
+      "chrome": "Chrome: Ctrl+Shift+Delete",
+      "firefox": "Firefox: Ctrl+Shift+Delete",
+      "safari": "Safari: ⌘+, → Privacy",
+      "edge": "Edge: Ctrl+Shift+Delete"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
   }
 }

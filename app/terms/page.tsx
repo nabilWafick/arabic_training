@@ -5,15 +5,14 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import {
   FileText,
-  Scale,
-  UserX,
-  AlertTriangle,
+  AlertCircle,
+  CheckCircle,
+  XCircle,
   Copyright,
   Gavel,
+  AlertTriangle,
   ChevronRight,
-  BookOpen,
   Mail,
-  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,122 +20,65 @@ import { Badge } from "@/components/ui/badge";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { cn } from "@/lib/utils";
 
-/**
- * Terms of service section structure
- */
-interface TermsSection {
+interface PolicySection {
   id: string;
   icon: React.ElementType;
-  title: string;
-  titleAr: string;
-  content: string[];
+  titleKey: string;
+  itemsKey: string;
 }
 
 /**
- * Terms of Service page
+ * Terms of Service page with full i18n support
  */
 export default function TermsPage() {
   const t = useTranslations();
   const [mounted, setMounted] = useState(false);
-  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<string | null>("acceptance");
 
-  // Terms sections
-  const termsSections: TermsSection[] = [
+  const policySections: PolicySection[] = [
     {
       id: "acceptance",
-      icon: CheckCircle2,
-      title: "Acceptance of Terms",
-      titleAr: "قبول الشروط",
-      content: [
-        "By accessing or using ArabicMaster Pro, you agree to be bound by these Terms of Service.",
-        "If you do not agree to these terms, please do not use our platform.",
-        "We may update these terms from time to time. Continued use constitutes acceptance of changes.",
-        "Users must be at least 13 years old to create an account.",
-      ],
+      icon: CheckCircle,
+      titleKey: "terms.sections.acceptance.title",
+      itemsKey: "terms.sections.acceptance.items",
     },
     {
-      id: "account",
-      icon: BookOpen,
-      title: "Account Responsibilities",
-      titleAr: "مسؤوليات الحساب",
-      content: [
-        "You are responsible for maintaining the confidentiality of your account credentials.",
-        "You must provide accurate and complete information when creating an account.",
-        "You are responsible for all activities that occur under your account.",
-        "Notify us immediately if you suspect unauthorized access to your account.",
-        "One account per person - sharing accounts is not permitted.",
-      ],
+      id: "responsibilities",
+      icon: AlertCircle,
+      titleKey: "terms.sections.responsibilities.title",
+      itemsKey: "terms.sections.responsibilities.items",
     },
     {
-      id: "usage",
-      icon: Scale,
-      title: "Acceptable Use",
-      titleAr: "الاستخدام المقبول",
-      content: [
-        "Use the platform only for lawful purposes and personal learning.",
-        "Do not attempt to circumvent security measures or access restricted areas.",
-        "Do not use automated tools to scrape or collect content without permission.",
-        "Respect other users and maintain a positive learning environment.",
-        "Do not share, resell, or redistribute course content without authorization.",
-      ],
+      id: "acceptable",
+      icon: CheckCircle,
+      titleKey: "terms.sections.acceptable.title",
+      itemsKey: "terms.sections.acceptable.items",
     },
     {
       id: "prohibited",
-      icon: UserX,
-      title: "Prohibited Activities",
-      titleAr: "الأنشطة المحظورة",
-      content: [
-        "Harassment, bullying, or discrimination against other users.",
-        "Posting malicious content, spam, or inappropriate material.",
-        "Attempting to hack, disrupt, or compromise platform security.",
-        "Creating multiple accounts to abuse free features or promotions.",
-        "Using the platform for commercial purposes without authorization.",
-        "Impersonating other users or platform staff.",
-      ],
+      icon: XCircle,
+      titleKey: "terms.sections.prohibited.title",
+      itemsKey: "terms.sections.prohibited.items",
     },
     {
       id: "intellectual",
       icon: Copyright,
-      title: "Intellectual Property",
-      titleAr: "الملكية الفكرية",
-      content: [
-        "All content on ArabicMaster Pro is protected by copyright and intellectual property laws.",
-        "You are granted a limited, non-exclusive license to access content for personal learning.",
-        "You may not copy, modify, distribute, or create derivative works without permission.",
-        "User-generated content remains your property, but you grant us a license to use it on the platform.",
-        "Report any copyright infringement to our legal team promptly.",
-      ],
+      titleKey: "terms.sections.intellectual.title",
+      itemsKey: "terms.sections.intellectual.items",
     },
     {
       id: "termination",
       icon: AlertTriangle,
-      title: "Termination",
-      titleAr: "الإنهاء",
-      content: [
-        "We may suspend or terminate your account for violation of these terms.",
-        "You may delete your account at any time through your account settings.",
-        "Upon termination, your access to the platform and content will be revoked.",
-        "Some data may be retained as required by law or for legitimate business purposes.",
-        "Termination does not affect any rights or obligations that arose before termination.",
-      ],
+      titleKey: "terms.sections.termination.title",
+      itemsKey: "terms.sections.termination.items",
     },
     {
       id: "liability",
       icon: Gavel,
-      title: "Limitation of Liability",
-      titleAr: "حدود المسؤولية",
-      content: [
-        "ArabicMaster Pro is provided 'as is' without warranties of any kind.",
-        "We are not liable for any indirect, incidental, or consequential damages.",
-        "Our total liability is limited to the amount you paid for the service.",
-        "We do not guarantee uninterrupted or error-free service.",
-        "You use the platform at your own risk and discretion.",
-      ],
+      titleKey: "terms.sections.liability.title",
+      itemsKey: "terms.sections.liability.items",
     },
   ];
-
-  // Last updated date
-  const lastUpdated = "March 2024";
 
   useEffect(() => {
     setMounted(true);
@@ -145,158 +87,202 @@ export default function TermsPage() {
   if (!mounted) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-gold border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-teal-500 border-t-transparent" />
       </div>
     );
   }
 
-  return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <Navbar />
+  const getItems = (key: string): string[] => {
+    try {
+      const raw = t.raw(key);
+      return Array.isArray(raw) ? raw : [];
+    } catch {
+      return [];
+    }
+  };
 
+  return (
+    <div className="flex min-h-screen flex-col bg-cream">
+      <Navbar />
       <div className="flex flex-1">
         <Sidebar />
-
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1">
           {/* Hero Section */}
-          <div className="relative overflow-hidden bg-gradient-to-br from-teal/10 via-background to-gold/10 px-6 py-16">
-            <div className="relative mx-auto max-w-4xl text-center">
-              <div className="mb-6 inline-flex items-center justify-center rounded-full bg-teal/20 p-4">
-                <Scale className="h-10 w-10 text-teal" />
+          <div className="bg-gradient-to-br from-teal-500/10 via-cream to-navy/5 px-4 py-12 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl">
+              <div className="flex items-center gap-3 mb-4">
+                <FileText className="h-8 w-8 text-teal-500" />
+                <Badge variant="outline" className="border-teal-500/30 bg-teal-500/5 text-teal-500">
+                  {t("terms.title")}
+                </Badge>
               </div>
-
-              <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">
-                {t("terms.title") || "Terms of Service"}
+              <h1 className="text-4xl font-bold text-navy mb-4">
+                {t("terms.title")}
               </h1>
-              <p className="mt-2 font-arabic text-2xl text-teal">شروط الخدمة</p>
-              <p className="mt-4 text-lg text-muted-foreground">
-                {t("terms.subtitle") || "Please read these terms carefully before using ArabicMaster Pro."}
+              <p className="text-lg text-navy/70 max-w-2xl">
+                {t("terms.subtitle")}
               </p>
-              <Badge variant="secondary" className="mt-4">
-                <FileText className="mr-2 h-3 w-3" />
-                {t("terms.lastUpdated") || "Last updated"}: {lastUpdated}
-              </Badge>
+              <p className="text-sm text-navy/50 mt-4">
+                {t("terms.lastUpdated")}: {t("terms.lastUpdatedDate")}
+              </p>
             </div>
           </div>
 
-          {/* Terms Content */}
-          <div className="mx-auto max-w-4xl px-6 py-12">
-            {/* Quick Navigation */}
-            <Card className="mb-8 border-border/50">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg">
-                  {t("terms.quickNav") || "Quick Navigation"}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {termsSections.map((section) => {
-                    const Icon = section.icon;
-                    return (
-                      <Button
-                        key={section.id}
-                        variant="outline"
-                        size="sm"
-                        className={cn(
-                          "gap-2 transition-all",
-                          activeSection === section.id && "border-teal bg-teal/10 text-teal"
-                        )}
-                        onClick={() => {
-                          setActiveSection(section.id);
-                          document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth" });
-                        }}
-                      >
-                        <Icon className="h-4 w-4" />
-                        {section.title}
-                      </Button>
-                    );
-                  })}
+          {/* Content Section */}
+          <div className="px-4 py-12 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl">
+              <div className="grid gap-12 lg:grid-cols-4">
+                {/* Sidebar Navigation */}
+                <div className="lg:col-span-1">
+                  <div className="sticky top-4">
+                    <h3 className="font-semibold text-navy mb-4">
+                      {t("terms.quickNav")}
+                    </h3>
+                    <nav className="space-y-2">
+                      {policySections.map((section) => (
+                        <button
+                          key={section.id}
+                          onClick={() => setActiveSection(section.id)}
+                          className={cn(
+                            "block w-full text-left px-3 py-2 rounded-lg transition-colors duration-200",
+                            activeSection === section.id
+                              ? "bg-teal-500/20 text-teal-500 font-medium"
+                              : "text-navy/60 hover:text-teal-500 hover:bg-teal-500/10"
+                          )}
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm">
+                              {t(section.titleKey)}
+                            </span>
+                            {activeSection === section.id && (
+                              <ChevronRight className="h-4 w-4" />
+                            )}
+                          </div>
+                        </button>
+                      ))}
+                    </nav>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
 
-            {/* Terms Sections */}
-            <div className="space-y-8">
-              {termsSections.map((section, index) => {
-                const Icon = section.icon;
-                return (
-                  <Card
-                    key={section.id}
-                    id={section.id}
-                    className="border-border/50 transition-all hover:border-teal/30"
-                  >
+                {/* Main Content */}
+                <div className="lg:col-span-3">
+                  <div className="space-y-8">
+                    {policySections.map((section, index) => {
+                      const Icon = section.icon;
+                      const items = getItems(section.itemsKey);
+
+                      return (
+                        <div
+                          key={section.id}
+                          className={cn(
+                            "scroll-mt-20 transition-opacity duration-300",
+                            activeSection === section.id ? "opacity-100" : "opacity-75"
+                          )}
+                          id={section.id}
+                        >
+                          <Card className="border-teal-500/20 bg-white/50 backdrop-blur-sm hover:border-teal-500/40 transition-colors">
+                            <CardHeader>
+                              <div className="flex items-start gap-4">
+                                <div className="rounded-lg bg-teal-500/10 p-3">
+                                  <Icon className="h-6 w-6 text-teal-500" />
+                                </div>
+                                <div className="flex-1">
+                                  <CardTitle className="text-2xl text-navy">
+                                    {t(section.titleKey)}
+                                  </CardTitle>
+                                </div>
+                              </div>
+                            </CardHeader>
+                            <CardContent>
+                              <ul className="space-y-3">
+                                {items.map((item, idx) => (
+                                  <li
+                                    key={idx}
+                                    className="flex gap-3 text-navy/80"
+                                    style={{
+                                      animation: `slideIn 0.5s ease-out ${idx * 0.1}s both`,
+                                    }}
+                                  >
+                                    <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-teal-500/60" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Contact Section */}
+                  <Card className="mt-12 border-teal-500/30 bg-gradient-to-br from-teal-500/5 to-transparent">
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal/10">
-                          <Icon className="h-5 w-5 text-teal" />
+                      <div className="flex items-start gap-4">
+                        <div className="rounded-lg bg-teal-500/20 p-3">
+                          <Mail className="h-6 w-6 text-teal-500" />
                         </div>
                         <div>
-                          <span className="text-muted-foreground">{index + 1}.</span>{" "}
-                          {section.title}
-                          <p className="font-arabic mt-1 text-sm font-normal text-gold/80">
-                            {section.titleAr}
+                          <CardTitle>{t("terms.contact.title")}</CardTitle>
+                          <p className="text-sm text-navy/60 mt-1">
+                            {t("terms.contact.description")}
                           </p>
                         </div>
-                      </CardTitle>
+                      </div>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-3">
-                        {section.content.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-teal" />
-                            <span className="text-muted-foreground">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <Link href="/contact">
+                        <Button className="bg-teal-500 hover:bg-teal-600 text-white">
+                          {t("terms.contact.button")}
+                        </Button>
+                      </Link>
                     </CardContent>
                   </Card>
-                );
-              })}
-            </div>
 
-            {/* Contact Section */}
-            <Card className="mt-12 border-teal/30 bg-gradient-to-r from-teal/10 via-background to-gold/10">
-              <CardContent className="flex flex-col items-center gap-6 p-8 md:flex-row">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-teal/20">
-                  <Mail className="h-8 w-8 text-teal" />
+                  {/* Related Links */}
+                  <div className="mt-12 pt-8 border-t border-teal-500/20">
+                    <h3 className="font-semibold text-navy mb-4">
+                      {t("common.relatedLinks")}
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      <Link href="/privacy">
+                        <Button
+                          variant="outline"
+                          className="border-teal-500/30 hover:bg-teal-500/10"
+                        >
+                          {t("terms.links.privacy")}
+                        </Button>
+                      </Link>
+                      <Link href="/cookies">
+                        <Button
+                          variant="outline"
+                          className="border-teal-500/30 hover:bg-teal-500/10"
+                        >
+                          {t("terms.links.cookies")}
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-bold text-foreground">
-                    {t("terms.questions") || "Questions about these terms?"}
-                  </h3>
-                  <p className="mt-1 text-muted-foreground">
-                    {t("terms.contactDescription") || "Our legal team is happy to help clarify any concerns."}
-                  </p>
-                </div>
-                <Button className="gap-2 bg-teal text-white hover:bg-teal/80" asChild>
-                  <Link href="/contact">
-                    <Mail className="h-4 w-4" />
-                    {t("terms.contactUs") || "Contact Us"}
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Related Links */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Button variant="ghost" className="gap-2" asChild>
-                <Link href="/privacy">
-                  <FileText className="h-4 w-4" />
-                  {t("terms.privacy") || "Privacy Policy"}
-                </Link>
-              </Button>
-              <Button variant="ghost" className="gap-2" asChild>
-                <Link href="/cookies">
-                  <FileText className="h-4 w-4" />
-                  {t("terms.cookies") || "Cookie Policy"}
-                </Link>
-              </Button>
+              </div>
             </div>
           </div>
         </main>
       </div>
-
       <Footer />
+
+      <style>{`
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateX(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </div>
   );
 }

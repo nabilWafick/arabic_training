@@ -62,7 +62,8 @@
     "more": "plus",
     "minutes": "minutes",
     "showMore": "Afficher plus",
-    "showLess": "Afficher moins"
+    "showLess": "Afficher moins",
+    "relatedLinks": "Liens Connexes"
   },
   "dashboard": {
     "title": "Tableau de bord",
@@ -210,19 +211,16 @@
     "trackYourJourney": "Suivez votre parcours d'apprentissage de l'arabe"
   },
   "vocabulary": {
-    "title": "Référence Vocabulaire",
-    "description": "Parcourez et recherchez la base de données de vocabulaire arabe complet",
-    "search": "Rechercher le vocabulaire...",
-    "filter": "Filtrer par phase",
-    "allPhases": "Toutes les phases",
-    "noResults": "Aucun mot trouvé",
-    "word": "Mot",
-    "transliteration": "Translittération",
-    "meaning": "Signification",
-    "example": "Exemple",
-    "phase": "Phase",
-    "difficulty": "Difficulté",
-    "total": "Nombre total de mots"
+    "greetings": "Salutations",
+    "numbers": "Nombres",
+    "family": "Famille",
+    "food": "Nourriture",
+    "animals": "Animaux",
+    "colors": "Couleurs",
+    "body": "Parties du Corps",
+    "clothing": "Vêtements",
+    "house": "Maison",
+    "nature": "Nature"
   },
   "footer": {
     "learn": "Apprendre",
@@ -657,64 +655,243 @@
     ]
   },
   "cookies": {
-    "title": "Politique Relative aux Cookies",
+    "title": "Politique de Cookies",
     "subtitle": "Découvrez comment nous utilisons les cookies et gérez vos préférences.",
     "lastUpdated": "Dernière mise à jour",
-    "description": "Dernière mise à jour",
-    "introduction": "Introduction",
-    "whatAreCookies": "Qu'est-ce que les Cookies?",
-    "howWeUseCookies": "Comment Nous Utilisons les Cookies",
-    "typesOfCookies": "Types de Cookies",
-    "essential": "Cookies Essentiels",
-    "analytics": "Cookies d'Analytics",
-    "marketing": "Cookies de Marketing",
-    "preferences": "Cookies de Préférence",
-    "managingCookies": "Gestion des Cookies",
-    "thirdPartyCookies": "Cookies Tiers",
-    "contact": "Nous Contacter",
-    "effective": "Date d'Entrée en Vigueur",
-    "managePreferences": "Gérez Vos Préférences",
-    "required": "Requis",
-    "saveTitle": "Enregistrez vos préférences",
-    "saveDescription": "Vos préférences seront enregistrées et appliquées immédiatement.",
-    "rejectAll": "Tout Refuser",
-    "savePreferences": "Enregistrer les Préférences",
-    "howToDelete": "Comment Supprimer les Cookies",
-    "privacy": "Politique de Confidentialité",
-    "terms": "Conditions de Service"
+    "lastUpdatedDate": "Mars 2024",
+    "quickNav": "Navigation Rapide",
+    "intro": "Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez des sites Web. Ils aident les sites Web à mémoriser vos préférences, à vous maintenir connecté et à comprendre comment vous utilisez le site. Nous utilisons des cookies pour vous offrir la meilleure expérience d'apprentissage possible sur ArabicMaster Pro.",
+    "sections": {
+      "essential": {
+        "title": "Cookies essentiels",
+        "titleAr": "ملفات تعريف الارتباط الضرورية",
+        "description": "Requis pour le fonctionnement de la plateforme. Ceux-ci ne peuvent pas être désactivés.",
+        "items": [
+          "Cookies de session - Vous maintiennent connecté pendant votre visite",
+          "Jetons de sécurité - Protègent contre les attaques CSRF",
+          "Équilibrage de charge - Assurer les performances optimales",
+          "Consentement aux cookies - Mémorisez vos préférences de cookies"
+        ]
+      },
+      "functional": {
+        "title": "Cookies fonctionnels",
+        "titleAr": "ملفات تعريف الارتباط الوظيفية",
+        "description": "Activez les fonctionnalités personnalisées et mémorisez vos préférences.",
+        "items": [
+          "Préférence de langue - Mémorisez votre langue sélectionnée",
+          "Préférence de thème - Paramètres du mode clair/sombre",
+          "Paramètres audio - Préférences de volume et de lecture",
+          "Personnalisation de l'interface - Préférences de disposition du tableau de bord"
+        ]
+      },
+      "analytics": {
+        "title": "Cookies analytiques",
+        "titleAr": "ملفات تعريف الارتباط التحليلية",
+        "description": "Nous aider à comprendre comment vous utilisez notre plateforme pour l'améliorer.",
+        "items": [
+          "Google Analytics - Suivre les pages vues et les parcours des utilisateurs",
+          "Analytique d'apprentissage - Comprendre quelles leçons sont les plus efficaces",
+          "Métriques de performance - Surveiller la vitesse et la fiabilité de la plateforme",
+          "Suivi des erreurs - Identifier et corriger les bogues plus rapidement"
+        ]
+      },
+      "marketing": {
+        "title": "Cookies marketing",
+        "titleAr": "ملفات تعريف الارتباط التسويقية",
+        "description": "Utilisé pour vous montrer du contenu pertinent et mesurer l'efficacité des publicités.",
+        "items": [
+          "Identifiants publicitaires - Afficher les promotions d'apprentissage pertinentes",
+          "Pixels de médias sociaux - Partager la progression sur les réseaux sociaux",
+          "Suivi d'attribution - Comprendre comment vous nous avez trouvé",
+          "Balises de remarketing - Vous rappeler ArabicMaster Pro"
+        ]
+      }
+    },
+    "preferences": {
+      "title": "Gérez vos préférences",
+      "saveTitle": "Enregistrez vos préférences",
+      "saveDescription": "Vos préférences seront enregistrées et appliquées immédiatement.",
+      "required": "Requis",
+      "rejectAll": "Tout Rejeter",
+      "saveBtn": "Enregistrer les préférences"
+    },
+    "delete": {
+      "title": "Comment supprimer les cookies",
+      "description": "Vous pouvez supprimer les cookies de votre navigateur à tout moment. Voici comment :",
+      "chrome": "Chrome : Ctrl+Maj+Suppr",
+      "firefox": "Firefox : Ctrl+Maj+Suppr",
+      "safari": "Safari : ⌘+, → Confidentialité",
+      "edge": "Edge : Ctrl+Maj+Suppr"
+    },
+    "links": {
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation"
+    }
   },
   "privacy": {
     "title": "Politique de Confidentialité",
-    "subtitle": "Votre vie privée nous importe. Découvrez comment nous collectons, utilisons et protégeons vos données.",
+    "subtitle": "Votre confidentialité nous importe. Découvrez comment nous collectons, utilisons et protégeons vos données.",
     "lastUpdated": "Dernière mise à jour",
+    "lastUpdatedDate": "Mars 2024",
     "quickNav": "Navigation Rapide",
-    "questions": "Questions sur la confidentialité?",
-    "contactDescription": "Contactez notre équipe de confidentialité pour toute préoccupation ou demande de données.",
-    "contactUs": "Nous Contacter",
-    "terms": "Conditions de Service",
-    "cookies": "Politique de Cookies"
+    "sections": {
+      "collect": {
+        "title": "Informations que nous collectons",
+        "titleAr": "المعلومات التي نجمعها",
+        "items": [
+          "Informations de compte : Lorsque vous créez un compte, nous collectons votre adresse e-mail, nom d'utilisateur et mot de passe (chiffré).",
+          "Données d'apprentissage : Nous suivons votre progression, les leçons complétées, les résultats des exercices et vos habitudes d'apprentissage pour personnaliser votre expérience.",
+          "Données d'utilisation : Nous collectons des informations sur la façon dont vous interagissez avec notre plateforme, notamment les pages visitées, le temps passé et les fonctionnalités utilisées.",
+          "Informations d'appareil : Les informations de base sur votre appareil et navigateur pour assurer la compatibilité et la sécurité."
+        ]
+      },
+      "use": {
+        "title": "Comment nous utilisons vos informations",
+        "titleAr": "كيف نستخدم معلوماتك",
+        "items": [
+          "Personnalisation : Adapter les leçons et exercices à votre niveau et style d'apprentissage.",
+          "Suivi de la progression : Enregistrer et synchroniser votre progression sur plusieurs appareils.",
+          "Amélioration : Analyser les schémas d'utilisation pour améliorer notre plateforme et notre contenu.",
+          "Communication : Envoyer des mises à jour importantes sur votre compte et les nouvelles fonctionnalités (avec votre consentement).",
+          "Support : Répondre à vos questions et fournir un support client."
+        ]
+      },
+      "protect": {
+        "title": "Comment nous protégeons vos données",
+        "titleAr": "كيف نحمي بياناتك",
+        "items": [
+          "Chiffrement : Toutes les données sont chiffrées en transit (TLS) et au repos (AES-256).",
+          "Infrastructure sécurisée : Nous utilisons des pratiques de sécurité cloud conformes aux normes de l'industrie.",
+          "Contrôle d'accès : Des contrôles d'accès stricts limitent qui peut consulter vos données.",
+          "Audits réguliers : Nous effectuons des audits de sécurité réguliers et des tests de pénétration.",
+          "Pas de vente de données : Nous ne vendons jamais vos informations personnelles à des tiers."
+        ]
+      },
+      "rights": {
+        "title": "Vos droits",
+        "titleAr": "حقوقك",
+        "items": [
+          "Accès : Demandez une copie de toutes les données personnelles que nous détenons à votre sujet.",
+          "Correction : Mettez à jour ou corrigez toute information inexacte.",
+          "Suppression : Demandez la suppression de votre compte et de vos données associées.",
+          "Portabilité : Exportez vos données d'apprentissage dans un format standard.",
+          "Retrait : Désinscrivez-vous des communications marketing à tout moment."
+        ]
+      },
+      "transfers": {
+        "title": "Transferts internationaux de données",
+        "titleAr": "نقل البيانات الدولية",
+        "items": [
+          "Nos serveurs sont situés dans des centres de données sécurisés en Europe et en Amérique du Nord.",
+          "Nous respectons le RGPD, la CCPA et d'autres réglementations applicables sur la protection des données.",
+          "Les données peuvent être transférées internationalement avec les garanties appropriées en place.",
+          "Nous utilisons des clauses contractuelles types pour les transferts en dehors de l'UE/EEE."
+        ]
+      }
+    },
+    "contact": {
+      "title": "Des questions sur la confidentialité ?",
+      "description": "Contactez notre équipe de confidentialité pour toute préoccupation ou demande de données.",
+      "button": "Nous Contacter"
+    },
+    "links": {
+      "terms": "Conditions d'Utilisation",
+      "cookies": "Politique de Cookies"
+    }
   },
   "terms": {
-    "title": "Conditions de Service",
+    "title": "Conditions d'Utilisation",
     "subtitle": "Veuillez lire attentivement ces conditions avant d'utiliser ArabicMaster Pro.",
     "lastUpdated": "Dernière mise à jour",
+    "lastUpdatedDate": "Mars 2024",
     "quickNav": "Navigation Rapide",
-    "questions": "Questions sur ces conditions?",
-    "contactDescription": "Notre équipe juridique est là pour clarifier toute préoccupation.",
-    "contactUs": "Nous Contacter",
-    "privacy": "Politique de Confidentialité",
-    "cookies": "Politique de Cookies"
-  },
-  "vocabulary": {
-    "greetings": "Salutations",
-    "numbers": "Nombres",
-    "family": "Famille",
-    "food": "Nourriture",
-    "animals": "Animaux",
-    "colors": "Couleurs",
-    "body": "Parties du Corps",
-    "clothing": "Vêtements",
-    "house": "Maison",
-    "nature": "Nature"
+    "sections": {
+      "acceptance": {
+        "title": "Acceptation des conditions",
+        "titleAr": "قبول الشروط",
+        "items": [
+          "En accédant à ou en utilisant ArabicMaster Pro, vous acceptez d'être lié par ces conditions d'utilisation.",
+          "Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre plateforme.",
+          "Nous pouvons mettre à jour ces conditions de temps en temps. L'utilisation continue constitue l'acceptation des modifications.",
+          "Les utilisateurs doivent être âgés d'au moins 13 ans pour créer un compte."
+        ]
+      },
+      "responsibilities": {
+        "title": "Responsabilités du compte",
+        "titleAr": "مسؤوليات الحساب",
+        "items": [
+          "Vous êtes responsable de maintenir la confidentialité de vos identifiants de compte.",
+          "Vous devez fournir des informations exactes et complètes lors de la création d'un compte.",
+          "Vous êtes responsable de toutes les activités qui se produisent sur votre compte.",
+          "Notifiez-nous immédiatement si vous soupçonnez un accès non autorisé à votre compte.",
+          "Un compte par personne - le partage de comptes n'est pas autorisé."
+        ]
+      },
+      "acceptable": {
+        "title": "Utilisation acceptable",
+        "titleAr": "الاستخدام المقبول",
+        "items": [
+          "Utilisez la plateforme uniquement à des fins légales et pour l'apprentissage personnel.",
+          "N'essayez pas de contourner les mesures de sécurité ou d'accéder à des zones restreintes.",
+          "N'utilisez pas d'outils automatisés pour extraire ou collecter du contenu sans autorisation.",
+          "Respectez les autres utilisateurs et maintenez un environnement d'apprentissage positif.",
+          "Ne partagez pas, revendez pas ou ne redistribuez pas le contenu du cours sans autorisation."
+        ]
+      },
+      "prohibited": {
+        "title": "Activités interdites",
+        "titleAr": "الأنشطة المحظورة",
+        "items": [
+          "Harcèlement, intimidation ou discrimination envers d'autres utilisateurs.",
+          "Publication de contenu malveillant, de spam ou de matériel inapproprié.",
+          "Tentative de piratage, de perturbation ou de compromission de la sécurité de la plateforme.",
+          "Création de plusieurs comptes pour abuser des fonctionnalités gratuites ou des promotions.",
+          "Utilisation de la plateforme à des fins commerciales sans autorisation.",
+          "Usurpation d'identité d'autres utilisateurs ou du personnel de la plateforme."
+        ]
+      },
+      "intellectual": {
+        "title": "Propriété Intellectuelle",
+        "titleAr": "الملكية الفكرية",
+        "items": [
+          "Tout le contenu sur ArabicMaster Pro est protégé par les droits d'auteur et les lois sur la propriété intellectuelle.",
+          "Vous disposez d'une licence limitée et non exclusive pour accéder au contenu à des fins d'apprentissage personnel.",
+          "Vous ne pouvez pas copier, modifier, distribuer ou créer des œuvres dérivées sans autorisation.",
+          "Le contenu généré par les utilisateurs vous appartient, mais vous nous accordez une licence pour l'utiliser sur la plateforme.",
+          "Signalez tout cas de violation des droits d'auteur à notre équipe juridique rapidement."
+        ]
+      },
+      "termination": {
+        "title": "Résiliation",
+        "titleAr": "الإنهاء",
+        "items": [
+          "Nous pouvons suspendre ou résilier votre compte en cas de violation de ces conditions.",
+          "Vous pouvez supprimer votre compte à tout moment via les paramètres de votre compte.",
+          "À la résiliation, votre accès à la plateforme et au contenu sera révoqué.",
+          "Certaines données peuvent être conservées selon les exigences légales ou à des fins commerciales légitimes.",
+          "La résiliation n'affecte pas les droits ou obligations qui ont découlé avant la résiliation."
+        ]
+      },
+      "liability": {
+        "title": "Limitation de responsabilité",
+        "titleAr": "تحديد المسؤولية",
+        "items": [
+          "ArabicMaster Pro est fourni 'tel quel' sans garanties d'aucune sorte.",
+          "Nous ne sommes pas responsables des dommages indirects, accessoires ou consécutifs.",
+          "Notre responsabilité totale est limitée au montant que vous avez payé pour le service.",
+          "Nous ne garantissons pas un service sans interruption ou sans erreur.",
+          "Vous utilisez la plateforme à vos risques et périls."
+        ]
+      }
+    },
+    "contact": {
+      "title": "Des questions sur ces conditions ?",
+      "description": "Notre équipe juridique est heureuse de clarifier vos préoccupations.",
+      "button": "Nous Contacter"
+    },
+    "links": {
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Politique de Cookies"
+    }
   }
 }

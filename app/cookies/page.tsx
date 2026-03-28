@@ -8,124 +8,71 @@ import {
   Settings,
   BarChart3,
   Target,
-  Shield,
-  Trash2,
-  ChevronRight,
+  Zap,
   Info,
-  FileText,
-  ToggleLeft,
-  ToggleRight,
+  ChevronRight,
+  Mail,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Switch } from "@/components/ui/switch";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { cn } from "@/lib/utils";
 
-/**
- * Cookie category structure
- */
 interface CookieCategory {
   id: string;
   icon: React.ElementType;
-  title: string;
-  titleAr: string;
-  description: string;
-  cookies: string[];
-  required: boolean;
+  titleKey: string;
+  descKey: string;
+  itemsKey: string;
+  required?: boolean;
 }
 
 /**
- * Cookie Policy page with interactive cookie settings
+ * Cookie Policy page with full i18n support
  */
 export default function CookiesPage() {
   const t = useTranslations();
   const [mounted, setMounted] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>("essential");
   const [cookiePreferences, setCookiePreferences] = useState({
     essential: true,
-    functional: true,
+    functional: false,
     analytics: false,
     marketing: false,
   });
 
-  // Cookie categories
   const cookieCategories: CookieCategory[] = [
     {
       id: "essential",
-      icon: Shield,
-      title: "Essential Cookies",
-      titleAr: "ملفات تعريف الارتباط الأساسية",
-      description: "Required for the platform to function. These cannot be disabled.",
-      cookies: [
-        "Session cookies - Keep you logged in during your visit",
-        "Security tokens - Protect against CSRF attacks",
-        "Load balancing - Ensure optimal performance",
-        "Cookie consent - Remember your cookie preferences",
-      ],
+      icon: Zap,
+      titleKey: "cookies.sections.essential.title",
+      descKey: "cookies.sections.essential.description",
+      itemsKey: "cookies.sections.essential.items",
       required: true,
     },
     {
       id: "functional",
       icon: Settings,
-      title: "Functional Cookies",
-      titleAr: "ملفات تعريف الارتباط الوظيفية",
-      description: "Enable personalized features and remember your preferences.",
-      cookies: [
-        "Language preference - Remember your selected language",
-        "Theme preference - Light/dark mode settings",
-        "Audio settings - Volume and playback preferences",
-        "UI customization - Dashboard layout preferences",
-      ],
-      required: false,
+      titleKey: "cookies.sections.functional.title",
+      descKey: "cookies.sections.functional.description",
+      itemsKey: "cookies.sections.functional.items",
     },
     {
       id: "analytics",
       icon: BarChart3,
-      title: "Analytics Cookies",
-      titleAr: "ملفات تعريف الارتباط التحليلية",
-      description: "Help us understand how you use our platform to improve it.",
-      cookies: [
-        "Google Analytics - Track page views and user journeys",
-        "Learning analytics - Understand which lessons are most effective",
-        "Performance metrics - Monitor platform speed and reliability",
-        "Error tracking - Identify and fix bugs faster",
-      ],
-      required: false,
+      titleKey: "cookies.sections.analytics.title",
+      descKey: "cookies.sections.analytics.description",
+      itemsKey: "cookies.sections.analytics.items",
     },
     {
       id: "marketing",
       icon: Target,
-      title: "Marketing Cookies",
-      titleAr: "ملفات تعريف الارتباط التسويقية",
-      description: "Used to show you relevant content and measure ad effectiveness.",
-      cookies: [
-        "Advertising IDs - Show relevant learning promotions",
-        "Social media pixels - Share progress on social platforms",
-        "Attribution tracking - Understand how you found us",
-        "Remarketing tags - Remind you about ArabicMaster Pro",
-      ],
-      required: false,
+      titleKey: "cookies.sections.marketing.title",
+      descKey: "cookies.sections.marketing.description",
+      itemsKey: "cookies.sections.marketing.items",
     },
   ];
-
-  // Last updated date
-  const lastUpdated = "March 2024";
-
-  // Toggle cookie preference
-  const toggleCookiePreference = (category: string) => {
-    if (category === "essential") return; // Essential cookies cannot be disabled
-    setCookiePreferences((prev) => ({
-      ...prev,
-      [category]: !prev[category as keyof typeof prev],
-    }));
-  };
-
-  // Save preferences (mock)
-  const savePreferences = () => {
-    console.log("Saving cookie preferences:", cookiePreferences);
-    // In a real app, save to localStorage and update consent
-  };
 
   useEffect(() => {
     setMounted(true);
@@ -134,230 +81,293 @@ export default function CookiesPage() {
   if (!mounted) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-gold border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-rust-500 border-t-transparent" />
       </div>
     );
   }
 
-  return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <Navbar />
+  const getItems = (key: string): string[] => {
+    try {
+      const raw = t.raw(key);
+      return Array.isArray(raw) ? raw : [];
+    } catch {
+      return [];
+    }
+  };
 
+  const handlePreferenceChange = (category: string) => {
+    if (category !== "essential") {
+      setCookiePreferences({
+        ...cookiePreferences,
+        [category]: !cookiePreferences[category as keyof typeof cookiePreferences],
+      });
+    }
+  };
+
+  const handleSavePreferences = () => {
+    localStorage.setItem("cookiePreferences", JSON.stringify(cookiePreferences));
+    // Show toast notification
+    alert(t("cookies.preferences.saveDescription"));
+  };
+
+  return (
+    <div className="flex min-h-screen flex-col bg-cream">
+      <Navbar />
       <div className="flex flex-1">
         <Sidebar />
-
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1">
           {/* Hero Section */}
-          <div className="relative overflow-hidden bg-gradient-to-br from-rust/10 via-background to-gold/10 px-6 py-16">
-            <div className="relative mx-auto max-w-4xl text-center">
-              <div className="mb-6 inline-flex items-center justify-center rounded-full bg-rust/20 p-4">
-                <Cookie className="h-10 w-10 text-rust" />
+          <div className="bg-gradient-to-br from-rust-500/10 via-cream to-navy/5 px-4 py-12 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Cookie className="h-8 w-8 text-rust-500" />
+                <Badge variant="outline" className="border-rust-500/30 bg-rust-500/5 text-rust-500">
+                  {t("cookies.title")}
+                </Badge>
               </div>
-
-              <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">
-                {t("cookies.title") || "Cookie Policy"}
+              <h1 className="text-4xl font-bold text-navy mb-4">
+                {t("cookies.title")}
               </h1>
-              <p className="mt-2 font-arabic text-2xl text-rust">سياسة ملفات تعريف الارتباط</p>
-              <p className="mt-4 text-lg text-muted-foreground">
-                {t("cookies.subtitle") || "Learn how we use cookies and manage your preferences."}
+              <p className="text-lg text-navy/70 max-w-2xl">
+                {t("cookies.subtitle")}
               </p>
-              <Badge variant="secondary" className="mt-4">
-                <FileText className="mr-2 h-3 w-3" />
-                {t("cookies.lastUpdated") || "Last updated"}: {lastUpdated}
-              </Badge>
+              <p className="text-sm text-navy/50 mt-4">
+                {t("cookies.lastUpdated")}: {t("cookies.lastUpdatedDate")}
+              </p>
             </div>
           </div>
 
-          {/* Cookie Settings */}
-          <div className="mx-auto max-w-4xl px-6 py-12">
-            {/* What are cookies */}
-            <Card className="mb-8 border-border/50">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Info className="h-5 w-5 text-gold" />
-                  {t("cookies.whatAreCookies") || "What are cookies?"}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Cookies are small text files stored on your device when you visit websites.
-                  They help websites remember your preferences, keep you logged in, and understand
-                  how you use the site. We use cookies to provide you with the best possible
-                  learning experience on ArabicMaster Pro.
-                </p>
-              </CardContent>
-            </Card>
+          {/* Content Section */}
+          <div className="px-4 py-12 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl">
+              {/* Introduction */}
+              <Card className="mb-12 border-rust-500/20 bg-white/50 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-lg bg-rust-500/10 p-3">
+                      <Info className="h-6 w-6 text-rust-500" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle>{t("cookies.title")}</CardTitle>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-navy/80">
+                    {t("cookies.intro")}
+                  </p>
+                </CardContent>
+              </Card>
 
-            {/* Cookie Categories */}
-            <h2 className="mb-6 text-2xl font-bold text-foreground">
-              {t("cookies.managePreferences") || "Manage Your Preferences"}
-            </h2>
-
-            <div className="space-y-6">
-              {cookieCategories.map((category) => {
-                const Icon = category.icon;
-                const isEnabled =
-                  cookiePreferences[category.id as keyof typeof cookiePreferences];
-
-                return (
-                  <Card
-                    key={category.id}
-                    className={cn(
-                      "border-border/50 transition-all",
-                      isEnabled && "border-rust/30 bg-rust/5"
-                    )}
-                  >
-                    <CardHeader className="pb-3">
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="flex items-center gap-3">
-                          <div
-                            className={cn(
-                              "flex h-10 w-10 items-center justify-center rounded-lg",
-                              isEnabled ? "bg-rust/20" : "bg-muted"
-                            )}
-                          >
-                            <Icon
-                              className={cn(
-                                "h-5 w-5",
-                                isEnabled ? "text-rust" : "text-muted-foreground"
-                              )}
-                            />
-                          </div>
-                          <div>
-                            {category.title}
-                            <p className="font-arabic mt-1 text-sm font-normal text-gold/80">
-                              {category.titleAr}
-                            </p>
-                          </div>
-                        </CardTitle>
-
-                        <div className="flex items-center gap-2">
-                          {category.required && (
-                            <Badge variant="outline" className="text-xs">
-                              {t("cookies.required") || "Required"}
-                            </Badge>
+              <div className="grid gap-12 lg:grid-cols-4">
+                {/* Sidebar Navigation */}
+                <div className="lg:col-span-1">
+                  <div className="sticky top-4">
+                    <h3 className="font-semibold text-navy mb-4">
+                      {t("cookies.quickNav")}
+                    </h3>
+                    <nav className="space-y-2">
+                      {cookieCategories.map((category) => (
+                        <button
+                          key={category.id}
+                          onClick={() => setActiveSection(category.id)}
+                          className={cn(
+                            "block w-full text-left px-3 py-2 rounded-lg transition-colors duration-200",
+                            activeSection === category.id
+                              ? "bg-rust-500/20 text-rust-500 font-medium"
+                              : "text-navy/60 hover:text-rust-500 hover:bg-rust-500/10"
                           )}
-                          <Switch
-                            checked={isEnabled}
-                            onCheckedChange={() => toggleCookiePreference(category.id)}
-                            disabled={category.required}
-                            className={cn(
-                              category.required && "cursor-not-allowed opacity-50"
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm">
+                              {t(category.titleKey)}
+                            </span>
+                            {activeSection === category.id && (
+                              <ChevronRight className="h-4 w-4" />
                             )}
-                          />
+                          </div>
+                        </button>
+                      ))}
+                    </nav>
+                  </div>
+                </div>
+
+                {/* Main Content */}
+                <div className="lg:col-span-3">
+                  <div className="space-y-8">
+                    {cookieCategories.map((category, index) => {
+                      const Icon = category.icon;
+                      const items = getItems(category.itemsKey);
+
+                      return (
+                        <div
+                          key={category.id}
+                          className={cn(
+                            "scroll-mt-20 transition-opacity duration-300",
+                            activeSection === category.id ? "opacity-100" : "opacity-75"
+                          )}
+                          id={category.id}
+                        >
+                          <Card className="border-rust-500/20 bg-white/50 backdrop-blur-sm hover:border-rust-500/40 transition-colors">
+                            <CardHeader>
+                              <div className="flex items-start justify-between gap-4">
+                                <div className="flex items-start gap-4 flex-1">
+                                  <div className="rounded-lg bg-rust-500/10 p-3">
+                                    <Icon className="h-6 w-6 text-rust-500" />
+                                  </div>
+                                  <div className="flex-1">
+                                    <CardTitle className="text-2xl text-navy">
+                                      {t(category.titleKey)}
+                                    </CardTitle>
+                                    <p className="text-sm text-navy/60 mt-2">
+                                      {t(category.descKey)}
+                                    </p>
+                                  </div>
+                                </div>
+                                {category.required ? (
+                                  <Badge className="bg-rust-500/20 text-rust-500 border-0">
+                                    {t("cookies.preferences.required")}
+                                  </Badge>
+                                ) : (
+                                  <input
+                                    type="checkbox"
+                                    checked={
+                                      cookiePreferences[
+                                        category.id as keyof typeof cookiePreferences
+                                      ]
+                                    }
+                                    onChange={() =>
+                                      handlePreferenceChange(category.id)
+                                    }
+                                    className="h-5 w-5 cursor-pointer accent-rust-500"
+                                  />
+                                )}
+                              </div>
+                            </CardHeader>
+                            <CardContent>
+                              <ul className="space-y-3">
+                                {items.map((item, idx) => (
+                                  <li
+                                    key={idx}
+                                    className="flex gap-3 text-navy/80"
+                                    style={{
+                                      animation: `slideIn 0.5s ease-out ${idx * 0.1}s both`,
+                                    }}
+                                  >
+                                    <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-rust-500/60" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </CardContent>
+                          </Card>
                         </div>
-                      </div>
-                      <CardDescription className="mt-2">
-                        {category.description}
-                      </CardDescription>
+                      );
+                    })}
+                  </div>
+
+                  {/* Delete Cookies Section */}
+                  <Card className="mt-12 border-rust-500/30 bg-gradient-to-br from-rust-500/5 to-transparent">
+                    <CardHeader>
+                      <CardTitle>{t("cookies.delete.title")}</CardTitle>
+                      <p className="text-sm text-navy/60 mt-2">
+                        {t("cookies.delete.description")}
+                      </p>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2">
-                        {category.cookies.map((cookie, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <ChevronRight
-                              className={cn(
-                                "mt-1 h-4 w-4 shrink-0",
-                                isEnabled ? "text-rust" : "text-muted-foreground"
-                              )}
-                            />
-                            <span className="text-sm text-muted-foreground">{cookie}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="space-y-3 text-navy/80">
+                        <p>
+                          <strong>Chrome:</strong> {t("cookies.delete.chrome")}
+                        </p>
+                        <p>
+                          <strong>Firefox:</strong> {t("cookies.delete.firefox")}
+                        </p>
+                        <p>
+                          <strong>Safari:</strong> {t("cookies.delete.safari")}
+                        </p>
+                        <p>
+                          <strong>Edge:</strong> {t("cookies.delete.edge")}
+                        </p>
+                      </div>
                     </CardContent>
                   </Card>
-                );
-              })}
-            </div>
 
-            {/* Save Preferences */}
-            <Card className="mt-8 border-rust/30 bg-gradient-to-r from-rust/10 via-background to-gold/10">
-              <CardContent className="flex flex-col items-center gap-6 p-8 md:flex-row">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-rust/20">
-                  <Settings className="h-8 w-8 text-rust" />
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-bold text-foreground">
-                    {t("cookies.saveTitle") || "Save your preferences"}
-                  </h3>
-                  <p className="mt-1 text-muted-foreground">
-                    {t("cookies.saveDescription") || "Your preferences will be saved and applied immediately."}
-                  </p>
-                </div>
-                <div className="flex gap-3">
-                  <Button variant="outline" className="gap-2" onClick={() => {
-                    setCookiePreferences({
-                      essential: true,
-                      functional: false,
-                      analytics: false,
-                      marketing: false,
-                    });
-                  }}>
-                    <Trash2 className="h-4 w-4" />
-                    {t("cookies.rejectAll") || "Reject All"}
-                  </Button>
-                  <Button className="gap-2 bg-rust text-white hover:bg-rust/80" onClick={savePreferences}>
-                    <ToggleRight className="h-4 w-4" />
-                    {t("cookies.savePreferences") || "Save Preferences"}
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+                  {/* Preferences Section */}
+                  <Card className="mt-12 border-rust-500/30 bg-gradient-to-br from-rust-500/5 to-transparent">
+                    <CardHeader>
+                      <CardTitle>{t("cookies.preferences.title")}</CardTitle>
+                      <p className="text-sm text-navy/60 mt-2">
+                        {t("cookies.preferences.saveDescription")}
+                      </p>
+                    </CardHeader>
+                    <CardContent className="flex gap-3">
+                      <Button
+                        onClick={handleSavePreferences}
+                        className="bg-rust-500 hover:bg-rust-600 text-white"
+                      >
+                        {t("cookies.preferences.saveBtn")}
+                      </Button>
+                      <Button
+                        onClick={() =>
+                          setCookiePreferences({
+                            essential: true,
+                            functional: false,
+                            analytics: false,
+                            marketing: false,
+                          })
+                        }
+                        variant="outline"
+                        className="border-rust-500/30"
+                      >
+                        {t("cookies.preferences.rejectAll")}
+                      </Button>
+                    </CardContent>
+                  </Card>
 
-            {/* How to Delete Cookies */}
-            <Card className="mt-8 border-border/50">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Trash2 className="h-5 w-5 text-rust" />
-                  {t("cookies.howToDelete") || "How to Delete Cookies"}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  You can delete cookies from your browser at any time. Here's how:
-                </p>
-                <div className="grid gap-3 md:grid-cols-2">
-                  {[
-                    { browser: "Chrome", shortcut: "Ctrl+Shift+Delete" },
-                    { browser: "Firefox", shortcut: "Ctrl+Shift+Delete" },
-                    { browser: "Safari", shortcut: "⌘+,  → Privacy" },
-                    { browser: "Edge", shortcut: "Ctrl+Shift+Delete" },
-                  ].map((item) => (
-                    <div
-                      key={item.browser}
-                      className="flex items-center justify-between rounded-lg border border-border p-3"
-                    >
-                      <span className="font-medium">{item.browser}</span>
-                      <Badge variant="secondary" className="font-mono text-xs">
-                        {item.shortcut}
-                      </Badge>
+                  {/* Related Links */}
+                  <div className="mt-12 pt-8 border-t border-rust-500/20">
+                    <h3 className="font-semibold text-navy mb-4">
+                      {t("common.relatedLinks")}
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      <Link href="/privacy">
+                        <Button
+                          variant="outline"
+                          className="border-rust-500/30 hover:bg-rust-500/10"
+                        >
+                          {t("cookies.links.privacy")}
+                        </Button>
+                      </Link>
+                      <Link href="/terms">
+                        <Button
+                          variant="outline"
+                          className="border-rust-500/30 hover:bg-rust-500/10"
+                        >
+                          {t("cookies.links.terms")}
+                        </Button>
+                      </Link>
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Related Links */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Button variant="ghost" className="gap-2" asChild>
-                <Link href="/privacy">
-                  <FileText className="h-4 w-4" />
-                  {t("cookies.privacy") || "Privacy Policy"}
-                </Link>
-              </Button>
-              <Button variant="ghost" className="gap-2" asChild>
-                <Link href="/terms">
-                  <FileText className="h-4 w-4" />
-                  {t("cookies.terms") || "Terms of Service"}
-                </Link>
-              </Button>
+              </div>
             </div>
           </div>
         </main>
       </div>
-
       <Footer />
+
+      <style>{`
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateX(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </div>
   );
 }
