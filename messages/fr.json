@@ -622,7 +622,13 @@
       "audio": "Audio",
       "audioDesc": "Paramètres de prononciation et lecture",
       "account": "Compte",
-      "accountDesc": "Paramètres du profil et synchronisation"
+      "accountDesc": "Paramètres du profil et synchronisation",
+      "practice": "Pratique & Exercices",
+      "practiceDesc": "Modes de pratique, exercices et progression",
+      "gettingStarted": "Premiers Pas",
+      "gettingStartedDesc": "Apprenez les bases d'ArabicMaster Pro",
+      "learning": "Apprendre l'Arabe",
+      "learningDesc": "Conseils et guides pour un apprentissage efficace"
     }
   },
   "faq": {

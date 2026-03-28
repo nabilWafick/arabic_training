@@ -33,6 +33,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+import { useProgressStore } from '@/stores/useProgressStore';
 import { useGamificationStore } from '@/stores/useGamificationStore';
 import { useAudioStore } from '@/stores/useAudioStore';
 
@@ -129,6 +130,7 @@ export default function PhaseListeningPage() {
   const phaseId = parseInt(params.phaseId as string);
   const t = useTranslations();
   
+  const { updatePracticeProgress, getPracticeProgress } = useProgressStore();
   const { addXP, incrementStat } = useGamificationStore();
   const { speak, isPlaying, stop } = useAudioStore();
   
@@ -149,6 +151,7 @@ export default function PhaseListeningPage() {
   const [streak, setStreak] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [playCount, setPlayCount] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
   
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex) / exercises.length) * 100;
@@ -182,6 +185,7 @@ export default function PhaseListeningPage() {
       const xp = currentExercise.difficulty === 'easy' ? 10 : currentExercise.difficulty === 'medium' ? 15 : 20;
       setScore(s => s + xp);
       setStreak(s => s + 1);
+      setCorrectCount(c => c + 1);
       addXP(xp);
       incrementStat('exercisesCompleted');
     } else {
@@ -203,6 +207,7 @@ export default function PhaseListeningPage() {
       const xp = currentExercise.difficulty === 'easy' ? 10 : currentExercise.difficulty === 'medium' ? 15 : 20;
       setScore(s => s + xp);
       setStreak(s => s + 1);
+      setCorrectCount(c => c + 1);
       addXP(xp);
       incrementStat('exercisesCompleted');
     } else {
@@ -214,6 +219,9 @@ export default function PhaseListeningPage() {
     if (currentIndex < exercises.length - 1) {
       setCurrentIndex(i => i + 1);
     } else {
+      // Save practice progress when completing the session
+      const scorePercentage = Math.round((correctCount / exercises.length) * 100);
+      updatePracticeProgress(phaseId, 'listening', exercises.length, scorePercentage);
       setCompleted(true);
     }
   };
@@ -222,6 +230,7 @@ export default function PhaseListeningPage() {
     setCurrentIndex(0);
     setScore(0);
     setStreak(0);
+    setCorrectCount(0);
     setCompleted(false);
     setUserInput('');
     setSelectedAnswer(null);

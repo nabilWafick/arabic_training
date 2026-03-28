@@ -34,6 +34,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { useGamificationStore } from '@/stores/useGamificationStore';
+import { useProgressStore } from '@/stores/useProgressStore';
 import { useAudioStore } from '@/stores/useAudioStore';
 
 // Phase configuration
@@ -128,6 +129,7 @@ export default function PhaseSpeakingPage() {
   const phaseId = parseInt(params.phaseId as string);
   const t = useTranslations();
   
+  const { updatePracticeProgress, getPracticeProgress } = useProgressStore();
   const { addXP, incrementStat } = useGamificationStore();
   const { speak, isPlaying, stop } = useAudioStore();
   
@@ -139,6 +141,9 @@ export default function PhaseSpeakingPage() {
   const phase = PHASES[phaseId - 1];
   const exercises = getExercisesForPhase(phaseId);
   
+  // Get current practice progress for display
+  const practiceStats = getPracticeProgress(phaseId, 'speaking');
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
   const [hasRecorded, setHasRecorded] = useState(false);
@@ -148,6 +153,7 @@ export default function PhaseSpeakingPage() {
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [completed, setCompleted] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
   const [micPermission, setMicPermission] = useState<'granted' | 'denied' | 'prompt'>('prompt');
   
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -238,6 +244,7 @@ export default function PhaseSpeakingPage() {
         const xp = currentExercise.difficulty === 'easy' ? 10 : currentExercise.difficulty === 'medium' ? 15 : 20;
         setScore(s => s + xp);
         setStreak(s => s + 1);
+        setCorrectCount(c => c + 1);
         addXP(xp);
         incrementStat('exercisesCompleted');
       } else {
@@ -252,6 +259,9 @@ export default function PhaseSpeakingPage() {
     if (currentIndex < exercises.length - 1) {
       setCurrentIndex(i => i + 1);
     } else {
+      // Save practice progress when completing the session
+      const finalScore = Math.round((correctCount / exercises.length) * 100);
+      updatePracticeProgress(phaseId, 'speaking', exercises.length, finalScore);
       setCompleted(true);
     }
   };
@@ -265,6 +275,7 @@ export default function PhaseSpeakingPage() {
     setCurrentIndex(0);
     setScore(0);
     setStreak(0);
+    setCorrectCount(0);
     setCompleted(false);
     setHasRecorded(false);
     setFeedback(null);

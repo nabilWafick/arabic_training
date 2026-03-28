@@ -35,13 +35,12 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
-import { useProgressStore } from '@/stores/useProgressStore';
 import { useGamificationStore } from '@/stores/useGamificationStore';
 import { useAudioStore } from '@/stores/useAudioStore';
+import { useProgressStore } from '@/stores/useProgressStore';
 import { useAIExercises, type VocabExercise } from '@/hooks/useAIExercises';
 import type { PhaseId, DifficultyLevel } from '@/data/practice/types';
 import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 // Phase configuration
@@ -150,6 +149,7 @@ export default function PhaseVocabularyPage() {
   
   const { addXP, incrementStat } = useGamificationStore();
   const { speak } = useAudioStore();
+  const { updatePracticeProgress } = useProgressStore();
   
   // Validate phase ID
   if (isNaN(phaseId) || phaseId < 1 || phaseId > 5) {
@@ -183,6 +183,7 @@ export default function PhaseVocabularyPage() {
   const [streak, setStreak] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [shuffledVocab, setShuffledVocab] = useState<VocabItem[]>([]);
+  const [correctCount, setCorrectCount] = useState(0);
   
   // Quiz state
   const [quizOptions, setQuizOptions] = useState<string[]>([]);
@@ -225,6 +226,16 @@ export default function PhaseVocabularyPage() {
     }
   }, [mode, shuffledVocab]);
   
+  // Check if matching game is completed and update progress
+  useEffect(() => {
+    if (mode === 'matching' && matchedPairs > 0 && matchedPairs === Math.min(6, shuffledVocab.length)) {
+      // Save practice progress when matching game completes
+      const totalExercises = vocabulary.length;
+      const finalScore = Math.round((correctCount / totalExercises) * 100);
+      updatePracticeProgress(phaseId, 'vocabulary', totalExercises, finalScore);
+    }
+  }, [matchedPairs, mode, shuffledVocab.length, correctCount, vocabulary.length, phaseId, updatePracticeProgress]);
+  
   const currentVocab = shuffledVocab[currentIndex];
   const progress = ((currentIndex) / shuffledVocab.length) * 100;
   
@@ -243,6 +254,10 @@ export default function PhaseVocabularyPage() {
       setSelectedAnswer(null);
       setIsCorrect(null);
     } else {
+      // Save practice progress when completing the session
+      const totalExercises = vocabulary.length;
+      const finalScore = Math.round((correctCount / totalExercises) * 100);
+      updatePracticeProgress(phaseId, 'vocabulary', totalExercises, finalScore);
       setCompleted(true);
     }
   };
@@ -258,6 +273,7 @@ export default function PhaseVocabularyPage() {
       const xp = currentVocab.difficulty === 'easy' ? 10 : currentVocab.difficulty === 'medium' ? 15 : 20;
       setScore(s => s + xp);
       setStreak(s => s + 1);
+      setCorrectCount(c => c + 1);
       addXP(xp);
       incrementStat('exercisesCompleted');
     } else {
@@ -291,6 +307,7 @@ export default function PhaseVocabularyPage() {
         ));
         setMatchedPairs(p => p + 1);
         setScore(s => s + 15);
+        setCorrectCount(c => c + 1);
         addXP(15);
         incrementStat('exercisesCompleted');
       } else {
@@ -325,6 +342,7 @@ export default function PhaseVocabularyPage() {
     setFlipped(false);
     setSelectedAnswer(null);
     setIsCorrect(null);
+    setCorrectCount(0);
     handleShuffle();
   };
   
