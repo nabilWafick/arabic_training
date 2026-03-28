@@ -603,29 +603,37 @@
   },
   "contact": {
     "title": "Nous Contacter",
-    "description": "Communiquez avec notre équipe d'assistance",
-    "form": {
-      "name": "Nom Complet",
-      "email": "Adresse E-mail",
-      "subject": "Sujet",
-      "message": "Message",
-      "category": "Catégorie",
-      "categorySelect": "Sélectionnez une catégorie...",
-      "categoryFeedback": "Commentaires",
-      "categoryBugReport": "Signaler un Bug",
-      "categoryFeature": "Demande de Fonctionnalité",
-      "categorySupport": "Support Technique",
-      "categoryOther": "Autre",
-      "submit": "Envoyer le Message",
-      "sending": "Envoi en cours...",
-      "success": "Message envoyé avec succès! Nous vous répondrons bientôt.",
-      "error": "Échec de l'envoi du message. Veuillez réessayer."
+    "subtitle": "Nous aimerions avoir de vos nouvelles. Envoyez-nous un message et nous vous répondrons dès que possible.",
+    "sendMessage": "Envoyez-nous un message",
+    "whatBringsYou": "Pourquoi nous contactez-vous?",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "De quoi s'agit-il?",
+    "message": "Message",
+    "messagePlaceholder": "Dites-nous plus...",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "thankYou": "Merci!",
+    "responseMessage": "Nous avons reçu votre message et nous vous répondrons bientôt.",
+    "sendAnother": "Envoyer un autre message",
+    "quickLinks": "Liens rapides",
+    "helpCenter": "Centre d'aide",
+    "faq": "FAQ",
+    "feedback": "Donner un avis",
+    "infoCards": {
+      "email": "Email",
+      "responseTime": "Temps de Réponse",
+      "responseTimeDesc": "Généralement dans les 24 heures",
+      "languages": "Langues"
     },
-    "info": {
-      "email": "E-mail",
-      "phone": "Téléphone",
-      "address": "Adresse",
-      "hours": "Heures de Support"
+    "reasons": {
+      "help": "Aide Générale",
+      "bug": "Signaler un Bug",
+      "feedback": "Demande de Fonctionnalité",
+      "partnership": "Partenariat"
     }
   },
   "feedback": {

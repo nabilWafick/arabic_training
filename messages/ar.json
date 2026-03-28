@@ -602,30 +602,38 @@
     "contactSupport": "اتصل بفريق الدعم الخاص بنا"
   },
   "contact": {
-    "title": "اتصل بنا",
-    "description": "تواصل مع فريق الدعم لدينا",
-    "form": {
-      "name": "الاسم الكامل",
-      "email": "عنوان البريد الإلكتروني",
-      "subject": "الموضوع",
-      "message": "الرسالة",
-      "category": "الفئة",
-      "categorySelect": "اختر فئة...",
-      "categoryFeedback": "التعليقات",
-      "categoryBugReport": "الإبلاغ عن خلل",
-      "categoryFeature": "طلب ميزة",
-      "categorySupport": "الدعم الفني",
-      "categoryOther": "آخر",
-      "submit": "إرسال الرسالة",
-      "sending": "جاري الإرسال...",
-      "success": "تم إرسال الرسالة بنجاح! سنرد عليك قريباً.",
-      "error": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
-    },
-    "info": {
+    "title": "تواصل معنا",
+    "subtitle": "نحب أن نسمع منك. أرسل لنا رسالة وسنرد عليك في أقرب وقت ممكن.",
+    "sendMessage": "أرسل لنا رسالة",
+    "whatBringsYou": "ما الذي يجلبك هنا؟",
+    "name": "الاسم",
+    "namePlaceholder": "اسمك",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "بريدك@البريد.com",
+    "subject": "الموضوع",
+    "subjectPlaceholder": "ما هو الموضوع؟",
+    "message": "الرسالة",
+    "messagePlaceholder": "أخبرنا المزيد...",
+    "send": "إرسال الرسالة",
+    "sending": "جاري الإرسال...",
+    "thankYou": "شكراً لك!",
+    "responseMessage": "تم استقبال رسالتك وسنرد عليك قريباً.",
+    "sendAnother": "إرسال رسالة أخرى",
+    "quickLinks": "الروابط السريعة",
+    "helpCenter": "مركز المساعدة",
+    "faq": "الأسئلة الشائعة",
+    "feedback": "أرسل ملاحظاتك",
+    "infoCards": {
       "email": "البريد الإلكتروني",
-      "phone": "الهاتف",
-      "address": "العنوان",
-      "hours": "ساعات الدعم"
+      "responseTime": "وقت الاستجابة",
+      "responseTimeDesc": "عادة ما يكون خلال 24 ساعة",
+      "languages": "اللغات"
+    },
+    "reasons": {
+      "help": "مساعدة عامة",
+      "bug": "الإبلاغ عن خطأ",
+      "feedback": "طلب ميزة",
+      "partnership": "شراكة"
     }
   },
   "feedback": {

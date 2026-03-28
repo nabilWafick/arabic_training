@@ -81,7 +81,7 @@ export default function CookiesPage() {
   if (!mounted) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-rust-500 border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-gold border-t-transparent" />
       </div>
     );
   }
@@ -117,11 +117,11 @@ export default function CookiesPage() {
         <Sidebar />
         <main className="flex-1">
           {/* Hero Section */}
-          <div className="bg-gradient-to-br from-rust-500/10 via-cream to-navy/5 px-4 py-12 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-gold/10 via-cream to-navy/5 px-4 py-12 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-6xl">
               <div className="flex items-center gap-3 mb-4">
-                <Cookie className="h-8 w-8 text-rust-500" />
-                <Badge variant="outline" className="border-rust-500/30 bg-rust-500/5 text-rust-500">
+                <Cookie className="h-8 w-8 text-gold" />
+                <Badge variant="outline" className="border-gold/30 bg-gold/5 text-gold">
                   {t("cookies.title")}
                 </Badge>
               </div>
@@ -141,11 +141,11 @@ export default function CookiesPage() {
           <div className="px-4 py-12 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-6xl">
               {/* Introduction */}
-              <Card className="mb-12 border-rust-500/20 bg-white/50 backdrop-blur-sm">
+              <Card className="mb-12 border-gold/20 bg-white/50 backdrop-blur-sm">
                 <CardHeader>
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-rust-500/10 p-3">
-                      <Info className="h-6 w-6 text-rust-500" />
+                    <div className="rounded-lg bg-gold/10 p-3">
+                      <Info className="h-6 w-6 text-gold" />
                     </div>
                     <div className="flex-1">
                       <CardTitle>{t("cookies.title")}</CardTitle>
@@ -174,8 +174,8 @@ export default function CookiesPage() {
                           className={cn(
                             "block w-full text-left px-3 py-2 rounded-lg transition-colors duration-200",
                             activeSection === category.id
-                              ? "bg-rust-500/20 text-rust-500 font-medium"
-                              : "text-navy/60 hover:text-rust-500 hover:bg-rust-500/10"
+                              ? "bg-gold/20 text-gold font-medium"
+                              : "text-navy/60 hover:text-gold hover:bg-gold/10"
                           )}
                         >
                           <div className="flex items-center justify-between">
@@ -208,12 +208,12 @@ export default function CookiesPage() {
                           )}
                           id={category.id}
                         >
-                          <Card className="border-rust-500/20 bg-white/50 backdrop-blur-sm hover:border-rust-500/40 transition-colors">
+                          <Card className="border-gold/20 bg-white/50 backdrop-blur-sm hover:border-gold/40 transition-colors">
                             <CardHeader>
                               <div className="flex items-start justify-between gap-4">
                                 <div className="flex items-start gap-4 flex-1">
-                                  <div className="rounded-lg bg-rust-500/10 p-3">
-                                    <Icon className="h-6 w-6 text-rust-500" />
+                                  <div className="rounded-lg bg-gold/10 p-3">
+                                    <Icon className="h-6 w-6 text-gold" />
                                   </div>
                                   <div className="flex-1">
                                     <CardTitle className="text-2xl text-navy">
@@ -225,7 +225,7 @@ export default function CookiesPage() {
                                   </div>
                                 </div>
                                 {category.required ? (
-                                  <Badge className="bg-rust-500/20 text-rust-500 border-0">
+                                  <Badge className="bg-gold/20 text-gold border-0">
                                     {t("cookies.preferences.required")}
                                   </Badge>
                                 ) : (
@@ -239,7 +239,7 @@ export default function CookiesPage() {
                                     onChange={() =>
                                       handlePreferenceChange(category.id)
                                     }
-                                    className="h-5 w-5 cursor-pointer accent-rust-500"
+                                    className="h-5 w-5 cursor-pointer accent-gold"
                                   />
                                 )}
                               </div>
@@ -254,7 +254,7 @@ export default function CookiesPage() {
                                       animation: `slideIn 0.5s ease-out ${idx * 0.1}s both`,
                                     }}
                                   >
-                                    <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-rust-500/60" />
+                                    <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold/60" />
                                     <span>{item}</span>
                                   </li>
                                 ))}
@@ -267,7 +267,7 @@ export default function CookiesPage() {
                   </div>
 
                   {/* Delete Cookies Section */}
-                  <Card className="mt-12 border-rust-500/30 bg-gradient-to-br from-rust-500/5 to-transparent">
+                  <Card className="mt-12 border-gold/30 bg-gradient-to-br from-gold/5 to-transparent">
                     <CardHeader>
                       <CardTitle>{t("cookies.delete.title")}</CardTitle>
                       <p className="text-sm text-navy/60 mt-2">
@@ -293,7 +293,7 @@ export default function CookiesPage() {
                   </Card>
 
                   {/* Preferences Section */}
-                  <Card className="mt-12 border-rust-500/30 bg-gradient-to-br from-rust-500/5 to-transparent">
+                  <Card className="mt-12 border-gold/30 bg-gradient-to-br from-gold/5 to-transparent">
                     <CardHeader>
                       <CardTitle>{t("cookies.preferences.title")}</CardTitle>
                       <p className="text-sm text-navy/60 mt-2">
@@ -303,7 +303,7 @@ export default function CookiesPage() {
                     <CardContent className="flex gap-3">
                       <Button
                         onClick={handleSavePreferences}
-                        className="bg-rust-500 hover:bg-rust-600 text-white"
+                        className="bg-gold hover:bg-rust-600 text-white"
                       >
                         {t("cookies.preferences.saveBtn")}
                       </Button>
@@ -317,7 +317,7 @@ export default function CookiesPage() {
                           })
                         }
                         variant="outline"
-                        className="border-rust-500/30"
+                        className="border-gold/30"
                       >
                         {t("cookies.preferences.rejectAll")}
                       </Button>
@@ -325,7 +325,7 @@ export default function CookiesPage() {
                   </Card>
 
                   {/* Related Links */}
-                  <div className="mt-12 pt-8 border-t border-rust-500/20">
+                  <div className="mt-12 pt-8 border-t border-gold/20">
                     <h3 className="font-semibold text-navy mb-4">
                       {t("common.relatedLinks")}
                     </h3>
@@ -333,7 +333,7 @@ export default function CookiesPage() {
                       <Link href="/privacy">
                         <Button
                           variant="outline"
-                          className="border-rust-500/30 hover:bg-rust-500/10"
+                          className="border-gold/30 hover:bg-gold/10"
                         >
                           {t("cookies.links.privacy")}
                         </Button>
@@ -341,7 +341,7 @@ export default function CookiesPage() {
                       <Link href="/terms">
                         <Button
                           variant="outline"
-                          className="border-rust-500/30 hover:bg-rust-500/10"
+                          className="border-gold/30 hover:bg-gold/10"
                         >
                           {t("cookies.links.terms")}
                         </Button>
