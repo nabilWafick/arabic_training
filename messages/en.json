@@ -1058,5 +1058,32 @@
     "noConversations": "No conversations yet",
     "clearAll": "Clear All History",
     "errorMessage": "Sorry, I encountered an error. Please try again."
+  },
+  "review": {
+    "title": "Vocabulary Review",
+    "dueToday": "Due Today",
+    "retention": "Retention Rate",
+    "stats": "Learning Stats",
+    "mastered": "Mastered",
+    "learning": "Learning",
+    "new": "New",
+    "total": "Total Vocabulary",
+    "words": "words",
+    "startReview": "Start Review",
+    "allDone": "All Caught Up!",
+    "comeBackLater": "Great job! Come back later for more reviews.",
+    "nextReview": "Next reviews",
+    "tomorrow": "tomorrow",
+    "endSession": "End",
+    "howWell": "How well did you remember?",
+    "forgot": "Forgot",
+    "hard": "Hard",
+    "easy": "Easy",
+    "sessionComplete": "Session Complete!",
+    "greatJob": "Great work on your review session.",
+    "reviewed": "Reviewed",
+    "accuracy": "Accuracy",
+    "minutes": "Minutes",
+    "reviewMore": "Review More"
   }
 }

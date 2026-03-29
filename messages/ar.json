@@ -1072,5 +1072,32 @@
     "noConversations": "لا توجد محادثات بعد",
     "clearAll": "مسح كل السجل",
     "errorMessage": "عذراً، حدث خطأ. يرجى المحاولة مرة أخرى."
+  },
+  "review": {
+    "title": "مراجعة المفردات",
+    "dueToday": "للمراجعة اليوم",
+    "retention": "معدل الاحتفاظ",
+    "stats": "إحصائيات التعلم",
+    "mastered": "متقن",
+    "learning": "قيد التعلم",
+    "new": "جديد",
+    "total": "إجمالي المفردات",
+    "words": "كلمات",
+    "startReview": "ابدأ المراجعة",
+    "allDone": "أنهيت كل شيء!",
+    "comeBackLater": "عمل رائع! عد لاحقاً لمزيد من المراجعات.",
+    "nextReview": "المراجعات القادمة",
+    "tomorrow": "غداً",
+    "endSession": "إنهاء",
+    "howWell": "كم تذكرت جيداً؟",
+    "forgot": "نسيت",
+    "hard": "صعب",
+    "easy": "سهل",
+    "sessionComplete": "انتهت الجلسة!",
+    "greatJob": "عمل ممتاز في المراجعة.",
+    "reviewed": "تمت المراجعة",
+    "accuracy": "الدقة",
+    "minutes": "دقائق",
+    "reviewMore": "راجع المزيد"
   }
 }

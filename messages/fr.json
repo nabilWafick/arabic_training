@@ -1071,5 +1071,32 @@
     "noConversations": "Pas encore de conversations",
     "clearAll": "Effacer tout l'historique",
     "errorMessage": "Désolé, j'ai rencontré une erreur. Veuillez réessayer."
+  },
+  "review": {
+    "title": "Révision du vocabulaire",
+    "dueToday": "À réviser",
+    "retention": "Taux de rétention",
+    "stats": "Statistiques",
+    "mastered": "Maîtrisé",
+    "learning": "En cours",
+    "new": "Nouveau",
+    "total": "Vocabulaire total",
+    "words": "mots",
+    "startReview": "Commencer la révision",
+    "allDone": "Tout est fait !",
+    "comeBackLater": "Excellent ! Revenez plus tard pour plus de révisions.",
+    "nextReview": "Prochaines révisions",
+    "tomorrow": "demain",
+    "endSession": "Terminer",
+    "howWell": "À quel point vous souvenez-vous ?",
+    "forgot": "Oublié",
+    "hard": "Difficile",
+    "easy": "Facile",
+    "sessionComplete": "Session terminée !",
+    "greatJob": "Excellent travail sur votre révision.",
+    "reviewed": "Révisé",
+    "accuracy": "Précision",
+    "minutes": "Minutes",
+    "reviewMore": "Réviser plus"
   }
 }
