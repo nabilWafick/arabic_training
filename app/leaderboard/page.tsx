@@ -16,17 +16,17 @@ import { useGamificationStore } from '@/stores/useGamificationStore';
 export default function LeaderboardPage() {
   const t = useTranslations('leaderboard');
   const [activeTab, setActiveTab] = useState<'global' | 'weekly' | 'friends'>('weekly');
-  const { getLeaderboard, getUserRank, getWeeklyResetTime } = useLeaderboardStore();
-  const { xp, level } = useGamificationStore();
+  const { globalLeaderboard, weeklyLeaderboard, friendsLeaderboard, userRank, weekStartDate } = useLeaderboardStore();
+  const { stats } = useGamificationStore();
+  const { xp } = stats;
 
-  const leaderboard = getLeaderboard(activeTab);
-  const userRank = getUserRank();
-  const userLeague = Object.values(LEAGUES).find(
+  const leaderboard = activeTab === 'global' ? globalLeaderboard : activeTab === 'weekly' ? weeklyLeaderboard : friendsLeaderboard;
+  const currentUserLeague = Object.values(LEAGUES).find(
     (league) => xp >= league.minXP && xp <= league.maxXP
   );
   const nextLeague = Object.values(LEAGUES).find((league) => league.minXP > xp);
   const progressToNext = nextLeague
-    ? ((xp - (userLeague?.minXP || 0)) / (nextLeague.minXP - (userLeague?.minXP || 0))) * 100
+    ? ((xp - (currentUserLeague?.minXP || 0)) / (nextLeague.minXP - (currentUserLeague?.minXP || 0))) * 100
     : 100;
 
   return (
@@ -65,17 +65,17 @@ export default function LeaderboardPage() {
               <div
                 className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl font-black shadow-2xl"
                 style={{
-                  backgroundColor: userLeague?.color || '#CD7F32',
-                  boxShadow: `0 0 40px ${userLeague?.color}40`
+                  backgroundColor: currentUserLeague?.color || '#CD7F32',
+                  boxShadow: `0 0 40px ${currentUserLeague?.color}40`
                 }}
               >
-                {userLeague?.icon}
+                {currentUserLeague?.icon}
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <Crown className="w-5 h-5 text-amber-400" />
                   <span className="text-2xl font-black tracking-tight">
-                    {userLeague?.name || 'Bronze'} {t('league')}
+                    {currentUserLeague?.name || 'Bronze'} {t('league')}
                   </span>
                 </div>
                 <div className="text-slate-400">
@@ -164,11 +164,11 @@ export default function LeaderboardPage() {
                   <div
                     className="text-xs font-bold mt-2 px-3 py-1 rounded-full inline-block"
                     style={{
-                      backgroundColor: `${user.league.color}20`,
-                      color: user.league.color
+                      backgroundColor: `${LEAGUES[user.league].color}20`,
+                      color: LEAGUES[user.league].color
                     }}
                   >
-                    {user.league.name}
+                    {LEAGUES[user.league].name}
                   </div>
                 </motion.div>
               );
@@ -198,11 +198,11 @@ export default function LeaderboardPage() {
                   <div
                     className="text-xs font-bold px-2 py-1 rounded-md inline-block"
                     style={{
-                      backgroundColor: `${user.league.color}20`,
-                      color: user.league.color
+                      backgroundColor: `${LEAGUES[user.league].color}20`,
+                      color: LEAGUES[user.league].color
                     }}
                   >
-                    {user.league.name}
+                    {LEAGUES[user.league].name}
                   </div>
                 </div>
                 
@@ -211,10 +211,10 @@ export default function LeaderboardPage() {
                   <div className="text-xs text-slate-400">XP</div>
                 </div>
                 
-                {user.rankChange !== 0 && (
-                  <div className={`flex items-center gap-1 ${user.rankChange > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
-                    {user.rankChange > 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
-                    <span className="text-sm font-bold">{Math.abs(user.rankChange)}</span>
+                {user.previousRank ? user.rank - user.previousRank : 0 !== 0 && (
+                  <div className={`flex items-center gap-1 ${user.previousRank ? user.rank - user.previousRank : 0 > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                    {user.previousRank ? user.rank - user.previousRank : 0 > 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
+                    <span className="text-sm font-bold">{Math.abs(user.previousRank ? user.rank - user.previousRank : 0)}</span>
                   </div>
                 )}
               </motion.div>
@@ -233,7 +233,7 @@ export default function LeaderboardPage() {
             <div className="inline-flex items-center gap-2 bg-slate-800/50 px-6 py-3 rounded-full border border-slate-700/50 backdrop-blur-sm">
               <Flame className="w-4 h-4 text-amber-400" />
               <span className="text-slate-300">
-                {t('weeklyReset')}: <span className="font-bold text-white">{getWeeklyResetTime()}</span>
+                {t('weeklyReset')}: <span className="font-bold text-white">Monday 00:00</span>
               </span>
             </div>
           </motion.div>

@@ -1085,5 +1085,48 @@
     "accuracy": "Accuracy",
     "minutes": "Minutes",
     "reviewMore": "Review More"
+  },
+  "leaderboard": {
+    "title": "Leaderboards",
+    "subtitle": "Compete with learners worldwide",
+    "global": "Global",
+    "weekly": "This Week",
+    "friends": "Friends",
+    "yourRank": "Your Rank",
+    "league": "League",
+    "weeklyReset": "Weekly Reset",
+    "toNextLeague": "to next league"
+  },
+  "certification": {
+    "title": "Assessments & Certificates",
+    "subtitle": "Validate your Arabic proficiency",
+    "cefrProgress": "Your CEFR Journey",
+    "certificates": "Your Certificates",
+    "phaseExam": "Phase {phase} Exam",
+    "takeExam": "Take Exam",
+    "passed": "Passed",
+    "score": "Score",
+    "minutes": "minutes",
+    "questions": "questions",
+    "passingScore": "Passing Score",
+    "downloadPdf": "Download Certificate",
+    "completed": "Completed",
+    "verificationCode": "Verification Code"
+  },
+  "culture": {
+    "title": "Cultural Insights",
+    "subtitle": "Explore the rich tapestry of Arab culture",
+    "explore": "Explore"
+  },
+  "adaptive": {
+    "title": "Personalized Learning",
+    "subtitle": "AI-powered personalization",
+    "weakAreas": "Areas to Improve",
+    "recommendations": "Recommended for You"
+  },
+  "community": {
+    "title": "Community",
+    "subtitle": "Connect with learners worldwide",
+    "createGroup": "Create Study Group"
   }
 }

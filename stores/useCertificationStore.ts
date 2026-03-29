@@ -9,7 +9,7 @@ export type CEFRLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 
 export interface Certificate {
   id: string;
-  phaseId: number;
+  phase: number;
   cefrLevel: CEFRLevel;
   score: number;
   passingScore: number;
@@ -127,7 +127,7 @@ export const useCertificationStore = create<CertificationState>()(
 
       // Get certificate for a specific phase
       getCertificateForPhase: (phaseId: number) => {
-        return get().certificates.find((cert) => cert.phaseId === phaseId);
+        return get().certificates.find((cert) => cert.phase === phaseId);
       },
 
       // Get all attempts for a specific phase
@@ -137,7 +137,7 @@ export const useCertificationStore = create<CertificationState>()(
 
       // Check if user has certificate for a phase
       hasCertificateForPhase: (phaseId: number) => {
-        return get().certificates.some((cert) => cert.phaseId === phaseId);
+        return get().certificates.some((cert) => cert.phase === phaseId);
       },
 
       // Update current CEFR level based on earned certificates
