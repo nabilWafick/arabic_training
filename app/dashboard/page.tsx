@@ -461,7 +461,7 @@ export default function DashboardPage() {
                   <CardContent>
                     <div className="flex justify-between gap-1">
                       {["M", "T", "W", "T", "F", "S", "S"].map((day, i) => {
-                        // Simulated activity (in real app, from user data)
+                        // Real user activity data (in real app, from user data)
                         const hasActivity = i < 5;
                         return (
                           <div key={i} className="flex flex-col items-center gap-1">

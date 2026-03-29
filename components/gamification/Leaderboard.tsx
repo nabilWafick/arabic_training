@@ -44,19 +44,9 @@ interface LeaderboardProps {
 
 /**
  * Mock data for demo purposes
+ * TODO: Replace with real API call to fetch leaderboard data from database
  */
-const MOCK_LEADERBOARD: LeaderboardEntry[] = [
-  { rank: 1, userId: "1", name: "أحمد محمد", xp: 15420, level: 12, streak: 45 },
-  { rank: 2, userId: "2", name: "Sarah Johnson", xp: 14200, level: 11, streak: 32 },
-  { rank: 3, userId: "3", name: "محمد علي", xp: 13850, level: 11, streak: 28 },
-  { rank: 4, userId: "4", name: "Emma Wilson", xp: 12100, level: 10, streak: 21 },
-  { rank: 5, userId: "5", name: "فاطمة حسن", xp: 11450, level: 10, streak: 19 },
-  { rank: 6, userId: "6", name: "James Brown", xp: 10200, level: 9, streak: 15 },
-  { rank: 7, userId: "7", name: "ليلى أحمد", xp: 9800, level: 9, streak: 14 },
-  { rank: 8, userId: "8", name: "Michael Chen", xp: 8900, level: 8, streak: 12 },
-  { rank: 9, userId: "9", name: "نور الدين", xp: 8500, level: 8, streak: 10 },
-  { rank: 10, userId: "10", name: "Lisa Taylor", xp: 7800, level: 7, streak: 8 },
-];
+const DEFAULT_LEADERBOARD: LeaderboardEntry[] = [];
 
 /**
  * Get rank icon based on position
@@ -92,20 +82,50 @@ function getRankClass(rank: number) {
 
 /**
  * Display leaderboard with rankings
- * Shows top learners by XP, level, or streak
+ * Shows top learners by XP, level, or streak fetched from database
  */
 export function Leaderboard({
-  entries = MOCK_LEADERBOARD,
-  currentUserId,
-  isLoading = false,
-  showTabs = true,
-  maxEntries = 10,
-  className,
+   entries = undefined,
+   currentUserId,
+   isLoading = false,
+   showTabs = true,
+   maxEntries = 10,
+   className,
 }: LeaderboardProps) {
-  const [activeTab, setActiveTab] = useState("weekly");
+   const [activeTab, setActiveTab] = useState("weekly");
+   const [leaderboardData, setLeaderboardData] = useState<LeaderboardEntry[]>([]);
+   const [dataLoading, setDataLoading] = useState(true);
+
+   // Fetch REAL leaderboard data from API
+   useEffect(() => {
+     const fetchLeaderboard = async () => {
+       try {
+         setDataLoading(true);
+         const response = await fetch(`/api/leaderboard?period=${activeTab}&limit=${maxEntries}`);
+         if (response.ok) {
+           const data = await response.json();
+           setLeaderboardData(data.entries || []);
+         } else {
+           // Fallback to provided entries if API fails
+           setLeaderboardData(entries || DEFAULT_LEADERBOARD);
+         }
+       } catch (error) {
+         console.error('Error fetching leaderboard:', error);
+         // Use provided entries or empty if neither works
+         setLeaderboardData(entries || DEFAULT_LEADERBOARD);
+       } finally {
+         setDataLoading(false);
+       }
+     };
+
+     fetchLeaderboard();
+   }, [activeTab, maxEntries, entries]);
+   
+  // Use fetched data or provided entries
+   const displayData = leaderboardData.length > 0 ? leaderboardData : entries;
   
   // Mark current user
-  const leaderboardWithUser = entries
+  const leaderboardWithUser = (displayData || [])
     .slice(0, maxEntries)
     .map((entry) => ({
       ...entry,
@@ -113,7 +133,7 @@ export function Leaderboard({
     }));
   
   // Find current user if not in top entries
-  const currentUserEntry = entries.find((e) => e.userId === currentUserId);
+  const currentUserEntry = (displayData || []).find((e) => e.userId === currentUserId);
   const isCurrentUserInTop =
     currentUserEntry && currentUserEntry.rank <= maxEntries;
   
@@ -125,7 +145,7 @@ export function Leaderboard({
           <span>Leaderboard</span>
           <Badge variant="secondary" className="ml-auto">
             <Users className="mr-1 h-3 w-3" />
-            {entries.length} learners
+            {(displayData || []).length} learners
           </Badge>
         </CardTitle>
       </CardHeader>
