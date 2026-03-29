@@ -1039,5 +1039,24 @@
       "november": "November",
       "december": "December"
     }
+  },
+  "chat": {
+    "title": "Arabic Tutor",
+    "subtitle": "AI Language Assistant",
+    "welcome": "مرحباً! Welcome!",
+    "welcomeDescription": "I am your personal Arabic tutor. Ask me anything about Arabic language, grammar, vocabulary, or culture. I can also practice conversations with you!",
+    "inputPlaceholder": "Ask anything about Arabic...",
+    "helperText": "Press Enter to send, Shift+Enter for new line",
+    "suggestions": {
+      "teach": "Teach me basic greetings",
+      "practice": "Practice a conversation",
+      "explain": "Explain Arabic grammar",
+      "help": "Help me with pronunciation"
+    },
+    "history": "Chat History",
+    "newChat": "New Conversation",
+    "noConversations": "No conversations yet",
+    "clearAll": "Clear All History",
+    "errorMessage": "Sorry, I encountered an error. Please try again."
   }
 }

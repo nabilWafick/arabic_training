@@ -1053,5 +1053,23 @@
       "november": "Novembre",
       "december": "Décembre"
     }
+  },
+  "chat": {
+    "title": "Tuteur d'arabe",
+    "subtitle": "Assistant linguistique IA",
+    "welcome": "مرحباً! Bienvenue !",
+    "inputPlaceholder": "Posez une question sur l'arabe...",
+    "helperText": "Appuyez sur Entrée pour envoyer, Shift+Entrée pour nouvelle ligne",
+    "suggestions": {
+      "teach": "Apprends-moi les salutations",
+      "practice": "Pratiquons une conversation",
+      "explain": "Explique la grammaire arabe",
+      "help": "Aide-moi avec la prononciation"
+    },
+    "history": "Historique",
+    "newChat": "Nouvelle conversation",
+    "noConversations": "Pas encore de conversations",
+    "clearAll": "Effacer tout l'historique",
+    "errorMessage": "Désolé, j'ai rencontré une erreur. Veuillez réessayer."
   }
 }
