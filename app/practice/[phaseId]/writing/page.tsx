@@ -4,6 +4,7 @@
  * Phase Writing Practice Page
  * Interactive writing exercises with letter tracing, 
  * word formation, and sentence construction based on phase
+ * Now with AI-powered exercise generation!
  */
 
 import { useState, useEffect } from 'react';
@@ -24,18 +25,22 @@ import {
   Trophy,
   Sparkles,
   Eye,
-  EyeOff
+  EyeOff,
+  Brain,
+  Zap
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
 import { useProgressStore } from '@/stores/useProgressStore';
 import { useGamificationStore } from '@/stores/useGamificationStore';
 import { useAudioStore } from '@/stores/useAudioStore';
 import { ARABIC_ALPHABET } from '@/data/curriculum';
+import { AIPracticeExercise } from '@/components/practice/AIPracticeExercise';
 
 // Phase configuration
 const PHASES = [

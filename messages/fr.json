@@ -1098,5 +1098,66 @@
     "accuracy": "Précision",
     "minutes": "Minutes",
     "reviewMore": "Réviser plus"
+  },
+  "leaderboard": {
+    "title": "Classements",
+    "subtitle": "Compétitionne avec des apprenants du monde entier",
+    "global": "Mondial",
+    "weekly": "Cette Semaine",
+    "friends": "Amis",
+    "yourRank": "Votre Rang",
+    "league": "Ligue",
+    "weeklyReset": "Réinitialisation Hebdomadaire",
+    "toNextLeague": "jusqu'à la prochaine ligue"
+  },
+  "certification": {
+    "title": "Évaluations & Certificats",
+    "subtitle": "Validez votre maîtrise de l'arabe",
+    "cefrProgress": "Votre Parcours CECRL",
+    "certificates": "Vos Certificats",
+    "phaseExam": "Examen Phase {phase}",
+    "takeExam": "Passer l'Examen",
+    "passed": "Réussi",
+    "score": "Score",
+    "minutes": "minutes",
+    "questions": "questions",
+    "passingScore": "Score de Passage",
+    "downloadPdf": "Télécharger le Certificat",
+    "completed": "Terminé",
+    "verificationCode": "Code de Vérification"
+  },
+  "culture": {
+    "title": "Perspectives Culturelles",
+    "subtitle": "Explorez la riche tapisserie de la culture arabe",
+    "explore": "Explorer"
+  },
+  "adaptive": {
+    "title": "Apprentissage Personnalisé",
+    "subtitle": "Personnalisation basée sur l'IA",
+    "weakAreas": "Domaines à Améliorer",
+    "recommendations": "Recommandé pour Vous"
+  },
+  "community": {
+    "title": "Communauté",
+    "subtitle": "Connectez-vous avec des apprenants du monde entier",
+    "createGroup": "Créer un Groupe d'Étude"
+  },
+  "audio": {
+    "title": "Paramètres Audio",
+    "voiceType": "Type de Voix",
+    "male": "Homme",
+    "female": "Femme",
+    "speechRate": "Vitesse de Parole",
+    "accent": "Accent",
+    "accents": {
+      "msa": "Arabe Standard Moderne",
+      "egyptian": "Égyptien",
+      "levantine": "Levantin",
+      "gulf": "Golfe"
+    },
+    "backgroundMusic": "Musique de Fond",
+    "volume": "Volume",
+    "testVoice": "Tester la Voix",
+    "preview": "Aperçu"
   }
 }

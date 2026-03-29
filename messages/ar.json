@@ -1099,5 +1099,66 @@
     "accuracy": "الدقة",
     "minutes": "دقائق",
     "reviewMore": "راجع المزيد"
+  },
+  "leaderboard": {
+    "title": "لوحات المتصدرين",
+    "subtitle": "تنافس مع المتعلمين حول العالم",
+    "global": "عالمي",
+    "weekly": "هذا الأسبوع",
+    "friends": "الأصدقاء",
+    "yourRank": "ترتيبك",
+    "league": "الدوري",
+    "weeklyReset": "إعادة التعيين الأسبوعية",
+    "toNextLeague": "إلى الدوري التالي"
+  },
+  "certification": {
+    "title": "التقييمات والشهادات",
+    "subtitle": "تحقق من إتقانك للغة العربية",
+    "cefrProgress": "رحلتك في CEFR",
+    "certificates": "شهاداتك",
+    "phaseExam": "امتحان المرحلة {phase}",
+    "takeExam": "خذ الامتحان",
+    "passed": "نجح",
+    "score": "النتيجة",
+    "minutes": "دقائق",
+    "questions": "أسئلة",
+    "passingScore": "درجة النجاح",
+    "downloadPdf": "تحميل الشهادة",
+    "completed": "مكتمل",
+    "verificationCode": "رمز التحقق"
+  },
+  "culture": {
+    "title": "الرؤى الثقافية",
+    "subtitle": "استكشف نسيج الثقافة العربية الغني",
+    "explore": "استكشف"
+  },
+  "adaptive": {
+    "title": "التعلم الشخصي",
+    "subtitle": "التخصيص المدعوم بالذكاء الاصطناعي",
+    "weakAreas": "مجالات التحسين",
+    "recommendations": "موصى به لك"
+  },
+  "community": {
+    "title": "المجتمع",
+    "subtitle": "تواصل مع المتعلمين حول العالم",
+    "createGroup": "إنشاء مجموعة دراسية"
+  },
+  "audio": {
+    "title": "إعدادات الصوت",
+    "voiceType": "نوع الصوت",
+    "male": "ذكر",
+    "female": "أنثى",
+    "speechRate": "سرعة الكلام",
+    "accent": "اللهجة",
+    "accents": {
+      "msa": "العربية الفصحى الحديثة",
+      "egyptian": "مصري",
+      "levantine": "شامي",
+      "gulf": "خليجي"
+    },
+    "backgroundMusic": "موسيقى الخلفية",
+    "volume": "مستوى الصوت",
+    "testVoice": "اختبار الصوت",
+    "preview": "معاينة"
   }
 }

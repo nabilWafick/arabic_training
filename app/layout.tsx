@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Crimson_Pro, Amiri } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { IntlProvider } from "@/components/providers/IntlProvider";
+import { Toaster } from "sonner";
+import { AchievementMonitor } from "@/components/gamification/AchievementMonitor";
+import { GoalsTracker } from "@/components/goals/GoalsTracker";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -85,6 +88,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <IntlProvider>
           <TooltipProvider delayDuration={300}>
+            <Toaster position="top-right" richColors />
+            <AchievementMonitor />
+            <GoalsTracker />
             {children}
           </TooltipProvider>
         </IntlProvider>
