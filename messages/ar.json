@@ -1125,7 +1125,10 @@
     "passingScore": "درجة النجاح",
     "downloadPdf": "تحميل الشهادة",
     "completed": "مكتمل",
-    "verificationCode": "رمز التحقق"
+    "verificationCode": "رمز التحقق",
+    "noCertificates": "لم تحصل على أي شهادات حتى الآن",
+    "takeExamToEarn": "اجتز الامتحانات لكسب الشهادات",
+    "availableExams": "الامتحانات المتاحة"
   },
   "culture": {
     "title": "الرؤى الثقافية",

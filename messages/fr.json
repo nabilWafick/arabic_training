@@ -1124,7 +1124,10 @@
     "passingScore": "Score de Passage",
     "downloadPdf": "Télécharger le Certificat",
     "completed": "Terminé",
-    "verificationCode": "Code de Vérification"
+    "verificationCode": "Code de Vérification",
+    "noCertificates": "Aucun certificat gagné pour le moment",
+    "takeExamToEarn": "Passez les examens pour gagner des certificats",
+    "availableExams": "Examens Disponibles"
   },
   "culture": {
     "title": "Perspectives Culturelles",

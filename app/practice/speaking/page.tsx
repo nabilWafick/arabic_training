@@ -3,15 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-  Mic,
-  MicOff,
-  Volume2,
-  Play,
   ChevronLeft,
-  ChevronRight,
-  RefreshCw,
-  CheckCircle2,
-  AlertCircle,
+  Trophy,
+  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,87 +13,55 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Navbar, Sidebar, Footer } from "@/components/layout";
 import { useGamificationStore } from "@/stores/useGamificationStore";
-import { useAudioStore } from "@/stores/useAudioStore";
 import { useTranslations } from "next-intl";
 import { ARABIC_ALPHABET } from "@/data/curriculum";
+import EnhancedSpeechRecorder, { RecordingResult } from "@/components/practice/EnhancedSpeechRecorder";
 
 /**
- * Speaking Practice Page - Pronunciation practice with audio feedback
- * Users record their pronunciation and compare with reference audio
+ * Speaking Practice Page - Enhanced with real speech recording
  */
 export default function SpeakingPracticePage() {
   const [mounted, setMounted] = useState(false);
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
-  const [isRecording, setIsRecording] = useState(false);
-  const [hasRecording, setHasRecording] = useState(false);
-  const [isPlayingRecording, setIsPlayingRecording] = useState(false);
-  const [score, setScore] = useState(0);
-  const [showFeedback, setShowFeedback] = useState(false);
+  const [completedCount, setCompletedCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { addXP } = useGamificationStore();
-  const { speak, isPlaying: isPlayingReference, loadVoices } = useAudioStore();
   const t = useTranslations();
 
   const currentLetter = ARABIC_ALPHABET[currentLetterIndex];
 
   useEffect(() => {
     setMounted(true);
-    // Initialize speech synthesis voices
-    loadVoices();
-  }, [loadVoices]);
+  }, []);
 
-  const playReference = () => {
-    // Use Web Speech API to pronounce the Arabic letter
-    speak(currentLetter.letter, 'ar-SA');
-  };
-
-  const startRecording = () => {
-    setIsRecording(true);
-    setHasRecording(false);
-    setShowFeedback(false);
-    // Simulate recording (would use MediaRecorder API in production)
-  };
-
-  const stopRecording = () => {
-    setIsRecording(false);
-    setHasRecording(true);
-    // Simulate analysis delay
-    setTimeout(() => {
-      setShowFeedback(true);
-      // Random score between 70-100 for demo
-      const randomScore = Math.floor(Math.random() * 31) + 70;
-      setScore(randomScore);
-      if (randomScore >= 80) {
+  const handleRecordingComplete = async (result: RecordingResult) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Award XP based on score
+      if (result.similarityScore >= 80) {
         addXP(15, "Great pronunciation!");
+      } else if (result.similarityScore >= 70) {
+        addXP(10, "Good pronunciation practice!");
       } else {
-        addXP(5, "Pronunciation practice");
+        addXP(5, "Speaking practice");
       }
-    }, 1500);
-  };
 
-  const playRecording = () => {
-    setIsPlayingRecording(true);
-    setTimeout(() => setIsPlayingRecording(false), 1000);
-  };
-
-  const nextLetter = () => {
-    if (currentLetterIndex < ARABIC_ALPHABET.length - 1) {
-      setCurrentLetterIndex((prev) => prev + 1);
-      setHasRecording(false);
-      setShowFeedback(false);
+      // Move to next letter after a brief delay
+      setTimeout(() => {
+        if (currentLetterIndex < ARABIC_ALPHABET.length - 1) {
+          setCurrentLetterIndex((prev) => prev + 1);
+          setCompletedCount((prev) => prev + 1);
+        } else {
+          // Completed all letters
+          setCompletedCount((prev) => prev + 1);
+        }
+        setIsSubmitting(false);
+      }, 1500);
+    } catch (error) {
+      console.error('Error processing recording:', error);
+      setIsSubmitting(false);
     }
-  };
-
-  const prevLetter = () => {
-    if (currentLetterIndex > 0) {
-      setCurrentLetterIndex((prev) => prev - 1);
-      setHasRecording(false);
-      setShowFeedback(false);
-    }
-  };
-
-  const resetRecording = () => {
-    setHasRecording(false);
-    setShowFeedback(false);
   };
 
   if (!mounted) {
@@ -110,6 +72,8 @@ export default function SpeakingPracticePage() {
     );
   }
 
+  const progress = ((completedCount) / ARABIC_ALPHABET.length) * 100;
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
@@ -118,7 +82,7 @@ export default function SpeakingPracticePage() {
         <Sidebar />
 
         <main className="flex-1 overflow-auto p-6 lg:p-8">
-          <div className="mx-auto max-w-3xl space-y-8">
+          <div className="mx-auto max-w-4xl space-y-8">
             {/* Header */}
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
@@ -131,193 +95,93 @@ export default function SpeakingPracticePage() {
                   </h1>
                 </div>
                 <p className="mt-1 text-muted-foreground">
-                  {t("learning.practiceYourPronunciation")}
+                  Master Arabic pronunciation with real-time feedback
                 </p>
               </div>
               <Badge variant="secondary" className="text-lg">
-                {currentLetterIndex + 1} / {ARABIC_ALPHABET.length}
+                {completedCount + 1} / {ARABIC_ALPHABET.length}
               </Badge>
             </div>
 
-            {/* Progress */}
-            <Progress
-              value={(currentLetterIndex / ARABIC_ALPHABET.length) * 100}
-              className="h-2"
-            />
+            {/* Progress Bar */}
+            <div className="space-y-2">
+              <Progress
+                value={progress}
+                className="h-3"
+              />
+              <p className="text-xs text-muted-foreground text-right">
+                {Math.round(progress)}% Complete
+              </p>
+            </div>
 
-            {/* Main Content */}
-            <div className="grid gap-6 lg:grid-cols-2">
-              {/* Letter Display */}
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
               <Card className="border-border/50">
-                <CardHeader className="text-center">
-                  <CardTitle>{t("learning.pronounceThisLetter")}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col items-center gap-6">
-                  <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-gold/10">
-                    <span className="font-arabic text-9xl text-gold">
-                      {currentLetter.letter}
-                    </span>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-5 w-5 text-gold" />
+                    <div>
+                      <p className="text-xs text-muted-foreground">Letters Completed</p>
+                      <p className="text-2xl font-bold">{completedCount}</p>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <p className="text-xl font-semibold">{currentLetter.name}</p>
-                    <p className="text-muted-foreground">
-                      {t("learning.pronunciation")}: {currentLetter.transliteration}
-                    </p>
-                  </div>
-
-                  {/* Play Reference */}
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="gap-2"
-                    onClick={playReference}
-                  >
-                    {isPlayingReference ? (
-                      <>
-                        <Volume2 className="h-5 w-5 animate-pulse text-gold" />
-                        {t("learning.playing")}...
-                      </>
-                    ) : (
-                      <>
-                        <Play className="h-5 w-5" />
-                        {t("learning.listenToReference")}
-                      </>
-                    )}
-                  </Button>
                 </CardContent>
               </Card>
-
-              {/* Recording Controls */}
               <Card className="border-border/50">
-                <CardHeader className="text-center">
-                  <CardTitle className="flex items-center justify-center gap-2">
-                    <Mic className="h-5 w-5 text-gold" />
-                    {t("learning.yourPronunciation")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col items-center gap-6">
-                  {/* Recording Button */}
-                  <div className="relative">
-                    <button
-                      onClick={isRecording ? stopRecording : startRecording}
-                      className={`flex h-32 w-32 items-center justify-center rounded-full transition-all ${
-                        isRecording
-                          ? "bg-red-500 text-white animate-pulse"
-                          : "bg-gold/20 text-gold hover:bg-gold/30"
-                      }`}
-                    >
-                      {isRecording ? (
-                        <MicOff className="h-16 w-16" />
-                      ) : (
-                        <Mic className="h-16 w-16" />
-                      )}
-                    </button>
-                    {isRecording && (
-                      <div className="absolute -inset-2 rounded-full border-4 border-red-500 animate-ping opacity-50" />
-                    )}
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-2">
+                    <Trophy className="h-5 w-5 text-amber-500" />
+                    <div>
+                      <p className="text-xs text-muted-foreground">XP Earned</p>
+                      <p className="text-2xl font-bold">{completedCount * 10}</p>
+                    </div>
                   </div>
+                </CardContent>
+              </Card>
+              {currentLetterIndex < ARABIC_ALPHABET.length && (
+                <Card className="border-border/50 md:col-span-1">
+                  <CardContent className="pt-6">
+                    <div className="text-center">
+                      <p className="text-xs text-muted-foreground">Current Letter</p>
+                      <p className="font-arabic text-4xl font-bold text-gold">
+                        {currentLetter.letter}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+            </div>
 
-                  <p className="text-center text-muted-foreground">
-                    {isRecording
-                      ? t("learning.recording") + "... " + t("learning.tapToStop")
-                      : hasRecording
-                      ? t("learning.recordingComplete")
-                      : t("learning.tapToRecord")}
+            {/* Recording Component */}
+            {currentLetterIndex < ARABIC_ALPHABET.length ? (
+              <EnhancedSpeechRecorder
+                targetText={currentLetter.transliteration}
+                targetTextAr={currentLetter.letter}
+                onRecordingComplete={handleRecordingComplete}
+                isSubmitting={isSubmitting}
+                language="ar"
+                difficulty="easy"
+              />
+            ) : (
+              /* Completion State */
+              <Card className="border-border/50 overflow-hidden">
+                <div className="bg-gradient-to-r from-emerald-500/10 to-green-500/10 p-12 text-center">
+                  <Trophy className="h-16 w-16 mx-auto mb-4 text-amber-500" />
+                  <h2 className="text-3xl font-bold mb-2">Congratulations!</h2>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    You've completed all {ARABIC_ALPHABET.length} letters
                   </p>
-
-                  {/* Playback Controls */}
-                  {hasRecording && (
-                    <div className="flex gap-3">
-                      <Button variant="outline" size="sm" onClick={playRecording}>
-                        {isPlayingRecording ? (
-                          <>
-                            <Volume2 className="mr-2 h-4 w-4 animate-pulse" />
-                            {t("learning.playing")}...
-                          </>
-                        ) : (
-                          <>
-                            <Play className="mr-2 h-4 w-4" />
-                            {t("learning.playRecording")}
-                          </>
-                        )}
-                      </Button>
-                      <Button variant="ghost" size="sm" onClick={resetRecording}>
-                        <RefreshCw className="mr-2 h-4 w-4" />
-                        {t("learning.recordAgain")}
-                      </Button>
-                    </div>
-                  )}
-
-                  {/* Feedback */}
-                  {showFeedback && (
-                    <div
-                      className={`w-full rounded-lg p-4 text-center ${
-                        score >= 80
-                          ? "bg-green-500/10"
-                          : score >= 60
-                          ? "bg-yellow-500/10"
-                          : "bg-red-500/10"
-                      }`}
-                    >
-                      <div className="flex items-center justify-center gap-2">
-                        {score >= 80 ? (
-                          <CheckCircle2 className="h-6 w-6 text-green-500" />
-                        ) : (
-                          <AlertCircle className="h-6 w-6 text-yellow-500" />
-                        )}
-                        <span className="text-lg font-semibold">
-                          {t("learning.pronunciationScore")}: {score}%
-                        </span>
-                      </div>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        {score >= 80
-                          ? t("gamification.excellentProgress")
-                          : score >= 60
-                          ? t("learning.goodTryAgain")
-                          : t("learning.keepPracticing")}
-                      </p>
-                      <p className="mt-1 text-xs text-gold">
-                        +{score >= 80 ? 15 : 5} XP
-                      </p>
-                    </div>
-                  )}
-                </CardContent>
+                  <p className="text-2xl font-bold text-gold mb-8">
+                    +{completedCount * 10} XP Earned
+                  </p>
+                  <Link href="/practice">
+                    <Button className="bg-gradient-to-r from-gold to-gold/80">
+                      Back to Practice
+                    </Button>
+                  </Link>
+                </div>
               </Card>
-            </div>
-
-            {/* Navigation */}
-            <div className="flex justify-between">
-              <Button
-                variant="outline"
-                onClick={prevLetter}
-                disabled={currentLetterIndex === 0}
-              >
-                <ChevronLeft className="mr-2 h-4 w-4" />
-                {t("common.previous")}
-              </Button>
-              <Button
-                className="bg-gold text-background hover:bg-gold-dark"
-                onClick={nextLetter}
-                disabled={currentLetterIndex === ARABIC_ALPHABET.length - 1}
-              >
-                {t("common.next")}
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-
-            {/* Tips Card */}
-            <Card className="border-border/50 bg-gold/5">
-              <CardContent className="py-4">
-                <h3 className="font-semibold text-foreground">
-                  💡 {t("learning.pronunciationTips")}
-                </h3>
-                <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                  <li>• {t("learning.tip1")}</li>
-                  <li>• {t("learning.tip2")}</li>
-                  <li>• {t("learning.tip3")}</li>
-                </ul>
-              </CardContent>
-            </Card>
+            )}
           </div>
         </main>
       </div>
