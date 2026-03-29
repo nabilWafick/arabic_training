@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { UserStats, Achievement, LevelInfo, XPGain } from '@/types';
+import { celebrate } from '@/lib/confetti';
 
 // ============================================
 // GAMIFICATION STORE
@@ -68,6 +69,7 @@ export const useGamificationStore = create<GamificationState>()(
       // Add XP
       addXP: (amount: number, reason?: string) => {
         const { stats, xpHistory } = get();
+        const oldLevel = stats.level;
         const newXP = stats.xp + amount;
         const newLevel = calculateLevel(newXP);
         
@@ -85,6 +87,11 @@ export const useGamificationStore = create<GamificationState>()(
           },
           xpHistory: [...xpHistory.slice(-49), xpGain], // Keep last 50 entries
         });
+        
+        // Level up celebration!
+        if (newLevel > oldLevel && typeof window !== 'undefined') {
+          celebrate('levelUp');
+        }
       },
 
       // Check if streak is still active (called on app load)
@@ -155,10 +162,13 @@ export const useGamificationStore = create<GamificationState>()(
         // Bonus XP for streaks
         if (newStreak === 7) {
           get().addXP(150, '7-day streak bonus! 🔥');
+          if (typeof window !== 'undefined') celebrate('streak');
         } else if (newStreak === 30) {
           get().addXP(500, '30-day streak bonus! 🏆');
+          if (typeof window !== 'undefined') celebrate('milestone');
         } else if (newStreak % 100 === 0) {
           get().addXP(1000, `${newStreak}-day streak milestone! 🌟`);
+          if (typeof window !== 'undefined') celebrate('milestone');
         }
       },
 
@@ -177,6 +187,11 @@ export const useGamificationStore = create<GamificationState>()(
 
         // Add XP reward
         get().addXP(achievement.xpReward, `Achievement: ${achievement.nameEn}`);
+        
+        // Celebrate with confetti!
+        if (typeof window !== 'undefined') {
+          celebrate('achievement');
+        }
       },
 
       // Clear recent achievement (after showing notification)
